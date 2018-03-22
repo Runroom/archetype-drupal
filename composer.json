@@ -1,14 +1,7 @@
     {
-    "name": "drupal-composer/drupal-project",
-    "description": "runroom drupal archetype",
+    "name": "runroom/symfony_archetype",
+    "license": "proprietary",
     "type": "project",
-    "license": "GPL-2.0+",
-    "authors": [
-        {
-            "name": "",
-            "role": ""
-        }
-    ],
     "repositories": [
         {
             "type": "composer",
