@@ -1,13 +1,13 @@
-uuid: a1de4172-39ef-48fc-af58-63656eef5558
+uuid: cd354986-e725-4e4a-9536-2e2de605f908
 langcode: en
 status: true
 dependencies:
   theme:
-    - stark
+    - runroom
 _core:
-  default_config_hash: PffmQ-ABSz5tFjWmVsR7NesunDnEivvopnJnBjl8KNE
-id: stark_local_actions
-theme: stark
+  default_config_hash: ik4PTMlBD0MWansnSMpSXq5SUlWRJ1IVVt6C7AIbQmc
+id: runroom_local_actions
+theme: runroom
 region: content
 weight: -10
 provider: null

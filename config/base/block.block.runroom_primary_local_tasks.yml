@@ -1,0 +1,22 @@
+uuid: 41cda86c-3dc0-47ee-b8b6-80842a5ba2be
+langcode: en
+status: true
+dependencies:
+  theme:
+    - runroom
+_core:
+  default_config_hash: CyX_aDKAka2_eihevNLscCHDYrzDgIqwWzFVEFRKIww
+id: runroom_primary_local_tasks
+theme: runroom
+region: header
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: false
+visibility: {  }
