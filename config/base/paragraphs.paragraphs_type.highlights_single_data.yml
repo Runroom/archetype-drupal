@@ -1,7 +1,0 @@
-uuid: 1fee6527-502d-4242-943e-ece9d0065839
-langcode: es
-status: true
-dependencies: {  }
-id: highlights_single_data
-label: 'Dato destacado'
-behavior_plugins: {  }

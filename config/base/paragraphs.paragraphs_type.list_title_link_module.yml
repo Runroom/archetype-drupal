@@ -1,9 +1,0 @@
-uuid: 3aabda8a-37b2-48a7-afd9-f40278c1674f
-langcode: es
-status: true
-dependencies: {  }
-id: list_title_link_module
-label: 'Titulo + Listado + Enlace'
-icon_uuid: null
-description: ''
-behavior_plugins: {  }

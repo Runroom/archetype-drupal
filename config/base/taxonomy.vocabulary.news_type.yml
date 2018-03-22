@@ -1,9 +1,0 @@
-uuid: 6a05d84f-f98a-4cfa-b5e9-b92423b0796c
-langcode: es
-status: true
-dependencies: {  }
-name: 'News Type'
-vid: news_type
-description: 'Tipo de Noticia/Nota de prensa'
-hierarchy: 0
-weight: 0

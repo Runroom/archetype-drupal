@@ -1,8 +1,0 @@
-display:
-  default:
-    display_options:
-      empty:
-        area:
-          content:
-            value: "<p>No article has been published.</p>\r\n"
-            format: ckeditor

@@ -1,8 +1,0 @@
-uuid: 84122092-6a43-4f79-8905-b8b97277e8e3
-langcode: es
-status: true
-dependencies: {  }
-id: node__list_image_page
-label: 'Content: Plantilla Listado Cabecera Imagen'
-tags:
-  title: '[node:title] | HI Partners'

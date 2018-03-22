@@ -1,9 +1,0 @@
-uuid: 0b73c024-26da-474e-896c-5d67a22f63a8
-langcode: en
-status: true
-dependencies: {  }
-name: 'Hotel Operator'
-vid: hotel_operator
-description: 'Operador al que pertenece el tipo de contenido Hotel'
-hierarchy: 0
-weight: 0
