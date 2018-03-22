@@ -1,7 +1,0 @@
-hipartners_general.styleguide:
-  path: '/styleguide'
-  defaults:
-    _controller: 'Drupal\hipartners_general\Controller\StyleguideController::show'
-    _title: 'Styleguide'
-  requirements:
-    _permission: 'access content'
