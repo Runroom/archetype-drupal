@@ -33,6 +33,7 @@ Vagrant.configure('2') do |config|
             config_dir: '/vagrant/drupal-vm',
             drupalvm_env: 'vagrant'
         }
+        ansible.galaxy_command = 'ansible-galaxy install --role-file=%{role_file} --roles-path=%{roles_path}'
         ansible.galaxy_role_file = 'drupal-vm/provisioning/requirements.yml'
         ansible.galaxy_roles_path = 'drupal-vm/provisioning/requirements'
     end
