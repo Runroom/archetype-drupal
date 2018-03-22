@@ -12,22 +12,23 @@ drupal_build_makefile: false
 drupal_build_composer_project: false
 drupal_build_composer: false
 drupal_composer_path: false
-drupal_composer_install_dir: "/vagrant"
+drupal_composer_install_dir: /vagrant
 drupal_core_path: "{{ drupal_composer_install_dir }}/web"
 drupal_composer_dependencies: []
 
 # Drupal install settings.
-drupal_site_name: "Hi Partners"
-drupal_install_site: false
+drupal_site_name: Archetype Drupal
+drupal_install_site: true
+drupal_install_profile: minimal
 
 # Other overrides.
 php_version: "7.1"
 
 installed_extras:
   - adminer
-  - drupal
   - drupalconsole
   - drush
+  - drupal
   - mailhog
   - nodejs
   - pimpmylog
