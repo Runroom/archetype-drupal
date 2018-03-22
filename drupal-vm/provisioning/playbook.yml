@@ -102,9 +102,6 @@
     # Roles for security and stability on production.
     - { role: geerlingguy.security, when: extra_security_enabled }
 
-    # Custom roles
-    - { role: yarn }
-
   tasks:
     - include: tasks/sshd.yml
     - include: tasks/extras.yml
@@ -114,6 +111,7 @@
       tags: ['database']
 
     - include: tasks/drush-aliases.yml
+      when: configure_drush_aliases
 
     - include: tasks/cron.yml
       tags: ['cron']
