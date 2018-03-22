@@ -26,8 +26,8 @@
         "drupal/eu_cookie_compliance": "1.0-beta12",
         "drupal/field_group": "1.0.0",
         "drupal/metatag": "1.4.0",
-        "drupal/paragraphs": "1.2.0",
         "drupal/pathauto": "1.1.0",
+        "drupal/paragraphs": "1.2.0",
         "drupal/redirect": "1.1.0",
         "drupal/twig_tweak": "1.9.0",
         "drupal/xmlsitemap": "1.0-alpha2",
@@ -36,14 +36,8 @@
         "webmozart/path-util": "2.3.0"
     },
     "require-dev": {
-        "drupal/devel": "1.0-rc2",
-        "behat/mink": "^1.7",
-        "behat/mink-goutte-driver": "^1.2",
-        "jcalderonzumba/gastonjs": "^1.0",
-        "jcalderonzumba/mink-phantomjs-driver": "^0.3",
-        "mikey179/vfsstream": "^1.2",
-        "phpunit/phpunit": "^4.8",
-        "symfony/css-selector": "^2.8"
+        "drupal/devel": "1.2.0",
+        "webflo/drupal-core-require-dev": "8.5.0"
     },
     "conflict": {
         "drupal/drupal": "*"
