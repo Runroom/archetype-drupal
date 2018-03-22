@@ -1,0 +1,19 @@
+uuid: 8e179a6e-fa6e-4ff4-a5ac-ecdfd94416be
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_key
+    - taxonomy.vocabulary.custom_block_available
+id: taxonomy_term.custom_block_available.field_key
+field_name: field_key
+entity_type: taxonomy_term
+bundle: custom_block_available
+label: Key
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

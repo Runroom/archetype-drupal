@@ -1,0 +1,26 @@
+{% if list and node and list|length > 1 %}
+
+    {% if list|length > 1 %}
+        <div class="custom-select js-custom-select">
+            {% for li in list %}
+                {% if li.active %}
+                    <h2 class="{{ li.active ? 'header' : '' }}">{{ li.title }}</h2>
+                {% endif %}
+            {% endfor %}
+            <ul class="custom-select-dropdown">
+                {% for li in list %}
+                <li class="item {{ li.active ? 'selected' : '' }}"><a class="js-custom-select-trigger" href="{{ li.url }}">{{ li.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% else %}
+        {% set firstElem = list|first %}
+        <h2 class="t-h2">{{ firstElem.title }}</h2>
+    {% endif %}
+
+    {{ node }}
+{% else %}
+
+    <p>{{ 'There are no results.'|t }}</p>
+
+{% endif %}

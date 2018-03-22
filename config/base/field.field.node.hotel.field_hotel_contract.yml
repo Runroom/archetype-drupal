@@ -1,0 +1,28 @@
+uuid: 63ffc5a4-6265-4887-94c0-900693477196
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hotel_contract
+    - node.type.hotel
+    - taxonomy.vocabulary.hotel_contract
+id: node.hotel.field_hotel_contract
+field_name: field_hotel_contract
+entity_type: node
+bundle: hotel
+label: 'Tipo de Contrato'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      hotel_contract: hotel_contract
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

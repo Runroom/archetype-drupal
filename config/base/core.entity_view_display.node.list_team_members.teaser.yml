@@ -1,0 +1,22 @@
+uuid: b20a094a-25ab-4007-a057-d8abf3b4b234
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.list_team_members
+  module:
+    - user
+id: node.list_team_members.teaser
+targetEntityType: node
+bundle: list_team_members
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_header_title: true
+  field_overwrite_metatags: true
+  field_team_members: true
+  langcode: true

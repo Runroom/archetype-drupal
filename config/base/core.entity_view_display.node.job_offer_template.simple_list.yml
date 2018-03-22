@@ -1,0 +1,36 @@
+uuid: 9d8d1c5b-2392-4421-9fc4-87c7989ea351
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.simple_list
+    - field.field.node.job_offer_template.field_cta_text
+    - field.field.node.job_offer_template.field_form
+    - field.field.node.job_offer_template.field_header_subtitle
+    - field.field.node.job_offer_template.field_header_title
+    - field.field.node.job_offer_template.field_modules_list
+    - field.field.node.job_offer_template.field_overwrite_metatags
+    - node.type.job_offer_template
+  module:
+    - user
+id: node.job_offer_template.simple_list
+targetEntityType: node
+bundle: job_offer_template
+mode: simple_list
+content:
+  field_header_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_cta_text: true
+  field_form: true
+  field_header_subtitle: true
+  field_modules_list: true
+  field_overwrite_metatags: true
+  langcode: true
+  links: true

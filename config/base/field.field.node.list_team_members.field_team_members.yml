@@ -1,0 +1,28 @@
+uuid: 597ebdee-3a40-4678-a468-39fc95995afa
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_team_members
+    - node.type.list_team_members
+    - node.type.management_team_member
+id: node.list_team_members.field_team_members
+field_name: field_team_members
+entity_type: node
+bundle: list_team_members
+label: 'Miembros Equipo Directivo'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      management_team_member: management_team_member
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

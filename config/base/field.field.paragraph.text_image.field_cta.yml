@@ -1,0 +1,23 @@
+uuid: f0616445-2423-4295-80f0-1c5e4f056de2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta
+    - paragraphs.paragraphs_type.text_image
+  module:
+    - link
+id: paragraph.text_image.field_cta
+field_name: field_cta
+entity_type: paragraph
+bundle: text_image
+label: Enlace
+description: "<br>\r\n<strong>NOTA: Dejar en blanco URL y LINK TEXT para no mostrar ningún enlace en este módulo</strong>"
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

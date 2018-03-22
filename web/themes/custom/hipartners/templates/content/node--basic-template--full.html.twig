@@ -1,0 +1,59 @@
+{% set image = file_url(content.field_background_image.0['#item'].entity.uri.value) %}
+
+{% if image != '/' %}
+    {% if content.field_sidebar_show[0]['#markup'] == 'On' and menu_belongs_id %}
+        {% set hasbgimage = 'has-imagesidebar parallax' %}
+    {% else %}
+        {% set hasbgimage = 'has-image parallax' %}
+    {% endif %}
+    {% set structure = 'no-card' %}
+{% else %}
+    {% set structure = 'basic' %}
+{% endif %}
+
+{% extends directory ~ '/templates/layout/hero/hero-page-' ~ structure ~ '.html.twig' %}
+
+{% block attributes %}
+    {{ attributes.addClass('basic-template') }}
+{% endblock %}
+
+{% if hasbgimage %}
+    {% block bgimage %}{{ hasbgimage }}{% endblock %}
+{% endif %}
+
+{% block heroCopies %}
+    {% if content.field_sidebar_show[0]['#markup'] == 'On' and menu_belongs_id %}
+        <div class="Sidemenu-mobile">
+            {{ drupal_block(menu_belongs_id, FALSE) }}
+        </div>
+    {% endif %}
+    <h1 class="t-h1" itemprop="name">{{ content.field_header_title }}</h1>
+{% endblock %}
+
+{% block content %}
+
+    {% if content.field_sidebar_show[0]['#markup'] != 'On' %}
+        <div class="u-wrapper u-flex--justifyCenter u-flex--s768">
+            <div class="main-content u-flex--s768-8 u-flex--s1024-7 u-flex--s1440-6">
+                {{ content.field_modules_list }}
+            </div>
+        </div>
+    {% else %}
+        <div class="with-sidebar u-wrapper u-flex--wrap u-flex--s768">
+            <div class="u-flex--s0-12 u-flex--s1200-1"></div>
+            <div class="sidebar u-flex--s0-12 u-flex--s768-4 u-flex--s1024-3 u-flex--s1440-2">
+                <div class="Sidemenu-desktop">
+                    {% if menu_belongs_id %}
+
+                        {{ drupal_block(menu_belongs_id, FALSE) }}
+
+                    {% endif %}
+                </div>
+            </div>
+            <div class="u-flex--s0-12 u-flex--s768-1"></div>
+            <div class="right-content u-flex--s0-12 u-flex--s768-7 u-flex--s1024-6">
+                {{ content.field_modules_list }}
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,40 @@
+uuid: 75dc1597-8cd4-4350-ad63-76fd340a7941
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.general_meetings.field_modules_list
+    - field.field.node.general_meetings.field_overwrite_metatags
+    - node.type.general_meetings
+  module:
+    - entity_reference_revisions
+    - metatag
+    - user
+id: node.general_meetings.default
+targetEntityType: node
+bundle: general_meetings
+mode: default
+content:
+  field_modules_list:
+    weight: 102
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_overwrite_metatags:
+    weight: 101
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

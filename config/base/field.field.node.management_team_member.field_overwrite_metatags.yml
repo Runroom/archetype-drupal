@@ -1,0 +1,23 @@
+uuid: bfec076c-2d9a-4475-bf2e-9c7621ca3e15
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_overwrite_metatags
+    - node.type.management_team_member
+  module:
+    - metatag
+id: node.management_team_member.field_overwrite_metatags
+field_name: field_overwrite_metatags
+entity_type: node
+bundle: management_team_member
+label: 'Metatags Sobreescritos'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 'a:0:{}'
+default_value_callback: ''
+settings: {  }
+field_type: metatag

@@ -1,0 +1,24 @@
+uuid: be5a632b-4bd9-4f63-a099-8ac72fb2a3e7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.highlights_module_data.field_highlights_single_data
+    - paragraphs.paragraphs_type.highlights_module_data
+  module:
+    - entity_reference_revisions
+id: paragraph.highlights_module_data.default
+targetEntityType: paragraph
+bundle: highlights_module_data
+mode: default
+content:
+  field_highlights_single_data:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

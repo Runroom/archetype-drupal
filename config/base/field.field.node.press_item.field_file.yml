@@ -1,0 +1,27 @@
+uuid: 9d932b95-fde8-4cff-af05-c0643c209ccc
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_file
+    - node.type.press_item
+  module:
+    - file
+id: node.press_item.field_file
+field_name: field_file
+entity_type: node
+bundle: press_item
+label: 'Archivo adjunto'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'news/[date:custom:Y]-[date:custom:m]'
+  file_extensions: pdf
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

@@ -1,0 +1,27 @@
+uuid: eded2b49-c3c1-4e2e-9171-a511d0804402
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_file
+    - node.type.annual_remuneration_report
+  module:
+    - file
+id: node.annual_remuneration_report.field_file
+field_name: field_file
+entity_type: node
+bundle: annual_remuneration_report
+label: 'Archivo adjunto'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: pdf
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

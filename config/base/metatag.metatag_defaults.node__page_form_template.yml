@@ -1,0 +1,10 @@
+uuid: 2b9b97b1-36c1-465b-a47b-22dec65cb53c
+langcode: en
+status: true
+dependencies: {  }
+id: node__page_form_template
+label: 'Content: Plantilla Formulario'
+tags:
+  image_src: '[node:field_background_image]'
+  description: '[node:field_text_intro]'
+  title: '[node:field_header_title] | HI Partners'

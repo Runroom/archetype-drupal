@@ -1,0 +1,21 @@
+uuid: e25d6ef4-ce5c-416d-b8d8-522c29ec6f0f
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_header_small_subtitle
+field_name: field_header_small_subtitle
+entity_type: node
+type: string
+settings:
+  max_length: 168
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

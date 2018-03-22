@@ -1,0 +1,16 @@
+uuid: 2ac51073-3217-4208-9615-0bd8ed1196cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.hotel_contract
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.hotel_contract
+target_entity_type_id: taxonomy_term
+target_bundle: hotel_contract
+default_langcode: current_interface
+language_alterable: true

@@ -1,0 +1,88 @@
+@media print {
+    h1, h2, h3, h4, h5 {
+        color: $c-secondary !important;
+    }
+
+    .logo-print {
+        display: block;
+        margin: 0 auto space();
+    }
+
+    header, footer, .gallery, .hotel-map-wrapper, .Video, .Related, #block-hipartners-local-tasks ul {
+        display: none;
+    }
+
+    .arrow-mobile,
+    .hero-card .desktop-img,
+    .hero-card .mobile-img,
+    .btn,
+    .link,
+    img { display: none; }
+
+    .hero-card { margin-bottom: space(); }
+    .Card .Card-list .Card-listItem { padding: space(.25) 0; }
+
+    section.hero {
+        padding: 0 1.5rem;
+        text-align: left;
+    }
+
+    section.hero .t-h1 { margin-bottom: space(.5); }
+
+    a.detail-list-card .start-room {
+        margin-bottom: space(.25);
+        margin-top: 0;
+    }
+
+    section.hero .t-h1,
+    section.hero .t-h4,
+    section.hero-basic .t-h1,
+    a.detail-list-card .bg-section .t-h5 { color: $c-secondary !important; }
+
+    a.detail-list-card .bg-section { height: auto; }
+
+    a.detail-list-card .bg-section .veil { padding: 0; }
+
+    section.hero-basic {
+        padding: space(0);
+
+        .t-h1 { text-align: left; }
+    }
+
+    .hero-horizontal-card {
+        display: block !important;
+        height: 220px;
+        padding: space() 0;
+    }
+
+    .hero-highlights {
+        background-color: transparent;
+        display: block !important;
+        margin-bottom: 50px;
+        margin-top: 0;
+        padding: 0;
+
+        &-pill {
+            background-color: transparent;
+            display: inline-block !important;
+        }
+
+        .u-flex--s0 {
+            display: block !important;
+        }
+    }
+
+    .Team-list .Team-item .image {
+        padding-top: 0;
+    }
+
+    .Team-profile .Team-profileImage {
+        height: 0;
+    }
+
+    .u-wysiwyg {
+        img {
+            display: block;
+        }
+    }
+}

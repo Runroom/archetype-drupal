@@ -1,0 +1,187 @@
+.hotel-list {
+    .views-element-container,
+    .hotels-element-container {
+        @include marginBottomL;
+
+        & > div {
+            flex-wrap: wrap;
+
+            @include breakpoint($s1024) { display: flex; }
+
+            & > .views-row,
+            & > .hotels-row {
+                margin: 0 0 space(1.5) 0;
+
+                @include breakpoint($s1024) {
+                    margin: 0;
+                    padding: space(2);
+                    padding-bottom: 0;
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+
+a.detail-list-card {
+    display: block;
+    position: relative;
+    text-decoration: none;
+
+    &::before {
+        background-color: $c-squares;
+        content: "";
+        display: none;
+        height: get-rems(240px);
+        left: space(0);
+        margin: auto;
+        opacity: 0;
+        position: absolute;
+        top: space(0);
+        width: 95%;
+        z-index: -1;
+
+        @include transition($type: all, $time: 1s, $ease: cubic-bezier(.4, 0, .2, 1));
+
+        @include breakpoint($s960) { display: block; }
+    }
+
+    .hotels-row:nth-child(even) &::before {
+        @include breakpoint($s768) {
+            transition-delay: .3s;
+        }
+    }
+
+    &.animated::before {
+        left: space(2);
+        opacity: 1;
+        top: space(-1.5);
+    }
+
+    .detail-list-card--bg {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+
+        &::before {
+            content: '';
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 2;
+        }
+    }
+
+    .bg-section {
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        height: 230px;
+        justify-content: flex-end;
+        overflow: hidden;
+        position: relative;
+
+        @include transition($type: all, $time: .3s, $ease: ease-out);
+
+        @include breakpoint($s1024) { height: 265px; }
+
+        .veil {
+            @include veilUp;
+
+            padding: space();
+            position: relative;
+            z-index: 1;
+        }
+
+        .t-h5, .t-h2 {
+            color: $c-white;
+            position: relative;
+        }
+
+        .t-h2 { margin-bottom: 0; }
+    }
+
+    &:hover .bg-section {
+        @include breakpoint($s1024) {
+            transform: translateY(get-rems(-3px));
+        }
+    }
+
+    .t-h4 {
+        display: inline-block;
+        font-weight: 300;
+        margin: 0;
+    }
+
+    .start-room {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: space() 0;
+
+        @include breakpoint($s768) { flex-direction: row; }
+
+        .t-h4, p { color: $c-grey; }
+    }
+
+    .hotel-stars, .hotel-rooms {
+        align-items: center;
+        display: flex;
+    }
+
+    .hotel-rooms {
+        p {
+            font-size: get-rems(15px);
+            margin-left: get-rems(5px);
+            margin-top: -3px;
+        }
+
+        .t-h4 { font-size: space(.5); }
+    }
+
+    .hotel-intro {
+        p {
+            position: relative;
+
+            &:first-child { @include indented-line; }
+            &:last-child { margin-bottom: space(2); }
+        }
+
+        &.animated p {
+            &:first-child {
+                @include indented-line-animated;
+
+                .hotels-row:nth-child(even) &::before {
+                    @include breakpoint($s768) {
+                        transition-delay: .3s;
+                    }
+                }
+            }
+        }
+    }
+
+    .hotel-stars {
+        margin-bottom: 5px;
+
+        .t-h4 {
+            font-size: space(.5);
+            margin-right: 5px;
+        }
+
+        @include breakpoint($s768) {
+            border-right: 1px solid $c-border;
+            margin-bottom: 0;
+            margin-right: space(.75);
+            padding-right: space(.75);
+        }
+    }
+}

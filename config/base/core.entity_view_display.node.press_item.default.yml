@@ -1,0 +1,74 @@
+uuid: af8b9443-394b-41c1-9431-38c329814d22
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.press_item.field_date
+    - field.field.node.press_item.field_file
+    - field.field.node.press_item.field_header_title
+    - field.field.node.press_item.field_modules_list
+    - field.field.node.press_item.field_news_type
+    - field.field.node.press_item.field_overwrite_metatags
+    - node.type.press_item
+  module:
+    - datetime
+    - entity_reference_revisions
+    - file
+    - metatag
+    - user
+id: node.press_item.default
+targetEntityType: node
+bundle: press_item
+mode: default
+content:
+  field_date:
+    weight: 3
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: european
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_file:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_header_title:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_modules_list:
+    weight: 6
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_news_type:
+    weight: 5
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_overwrite_metatags:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+hidden:
+  langcode: true
+  links: true

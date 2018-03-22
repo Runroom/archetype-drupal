@@ -1,0 +1,34 @@
+uuid: 9af49e4d-0790-4180-9d58-38ebb213aa75
+langcode: es
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: hecho_relevante_spanish_english
+label: 'Hecho relevante Spanish & English'
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  b874faef-491a-4a94-bc78-7b2e2ba324ff:
+    id: node_type
+    bundles:
+      regulatory_announcement: regulatory_announcement
+    negate: false
+    context_mapping:
+      node: node
+    uuid: b874faef-491a-4a94-bc78-7b2e2ba324ff
+  69479335-4864-46ea-9f9f-1ff4f44578d4:
+    id: language
+    langcodes:
+      en: en
+      es: es
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: 69479335-4864-46ea-9f9f-1ff4f44578d4
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

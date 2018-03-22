@@ -1,0 +1,160 @@
+uuid: 0afb80d8-878a-40d2-a5e8-c5dba6c19676
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.list_offer_template.field_background_image
+    - field.field.node.list_offer_template.field_header_title
+    - field.field.node.list_offer_template.field_intro
+    - field.field.node.list_offer_template.field_offers
+    - field.field.node.list_offer_template.field_overwrite_metatags
+    - image.style.thumbnail
+    - node.type.list_offer_template
+  module:
+    - field_group
+    - image
+    - metatag
+    - path
+    - text
+third_party_settings:
+  field_group:
+    group_tabs_list:
+      children:
+        - group_hero
+        - group_offers
+      parent_name: ''
+      weight: 20
+      format_type: tabs
+      format_settings:
+        label: 'Listado tabs'
+        direction: horizontal
+        id: ''
+        classes: ''
+      label: 'Listado tabs'
+    group_hero:
+      children:
+        - field_header_title
+        - field_intro
+        - field_background_image
+      parent_name: group_tabs_list
+      weight: 20
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Cabecera
+    group_offers:
+      children:
+        - field_offers
+      parent_name: group_tabs_list
+      weight: 21
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Listado de Ofertas'
+id: node.list_offer_template.default
+targetEntityType: node
+bundle: list_offer_template
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_background_image:
+    weight: 34
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_header_title:
+    weight: 32
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_intro:
+    weight: 33
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_offers:
+    weight: 35
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_overwrite_metatags:
+    weight: 36
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 15
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 16
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }

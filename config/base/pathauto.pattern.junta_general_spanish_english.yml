@@ -1,0 +1,34 @@
+uuid: 4785913e-868c-4973-be42-420c6c63068a
+langcode: es
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: junta_general_spanish_english
+label: 'Junta General Spanish & English'
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  854b4331-490e-4bf3-bd17-8ca629483afc:
+    id: node_type
+    bundles:
+      general_meetings: general_meetings
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 854b4331-490e-4bf3-bd17-8ca629483afc
+  55414747-3776-42ea-b372-88995bf340e2:
+    id: language
+    langcodes:
+      en: en
+      es: es
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: 55414747-3776-42ea-b372-88995bf340e2
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

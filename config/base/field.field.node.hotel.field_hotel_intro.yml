@@ -1,0 +1,35 @@
+uuid: 1c30f9ab-5f04-41d3-9430-02a61803c288
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hotel_intro
+    - node.type.hotel
+  module:
+    - better_formats
+    - text
+third_party_settings:
+  better_formats:
+    allowed_formats_toggle: 1
+    allowed_formats:
+      ckeditor: ckeditor
+      complete: 0
+    default_order_toggle: 0
+    default_order_wrapper:
+      formats:
+        ckeditor:
+          weight: '0'
+        complete:
+          weight: '0'
+id: node.hotel.field_hotel_intro
+field_name: field_hotel_intro
+entity_type: node
+bundle: hotel
+label: Introducción
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

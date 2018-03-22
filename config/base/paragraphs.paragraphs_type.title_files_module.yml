@@ -1,0 +1,9 @@
+uuid: f9eff699-54fe-46a9-b187-63974a338e56
+langcode: es
+status: true
+dependencies: {  }
+id: title_files_module
+label: 'Módulo Título +  Descripción + Enlace/Descarga'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

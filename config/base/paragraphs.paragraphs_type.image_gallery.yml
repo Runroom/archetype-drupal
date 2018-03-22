@@ -1,0 +1,7 @@
+uuid: 05385ff8-66fa-4962-8aee-fcb78decb94f
+langcode: en
+status: true
+dependencies: {  }
+id: image_gallery
+label: 'Módulo Galería Imágenes'
+behavior_plugins: {  }

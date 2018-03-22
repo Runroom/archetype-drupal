@@ -1,0 +1,95 @@
+.Languages {
+    cursor: pointer;
+    position: relative;
+
+    .Languages-current {
+        @include caps;
+        @include transition($type: all, $time: .3s, $ease: ease-in-out);
+
+        background-color: transparent;
+        color: $c-white;
+        display: none;
+        font-size: get-rems(11px);
+        padding: get-rems(3px) space(.25) get-rems(3px) get-rems(8px);
+
+        @include breakpoint($s1200) { display: inline-block; }
+
+        svg {
+            @include transition($type: all, $time: .3s, $ease: ease-in-out);
+
+            fill: $c-white;
+            height: get-rems(10px);
+            margin-left: get-rems(3px);
+            width: get-rems(11px);
+        }
+    }
+
+    .Languages-selector {
+        @include transition($type: all, $time: .3s, $ease: ease-in-out);
+
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        top: 100%;
+        visibility: hidden;
+        width: 100%;
+        z-index: -1;
+
+        &::before {
+            @include transition($type: bottom, $time: .2s, $ease: ease-in-out);
+
+            background-color: $c-white;
+            bottom: 1px;
+            content: '';
+            display: block;
+            height: calc(100% + 36px);
+            left: 0;
+            position: absolute;
+            width: 100%;
+        }
+
+        li {
+            border-left: none;
+            margin-left: 0;
+            padding: get-rems(3px) space(.25) get-rems(3px) get-rems(8px);
+
+            a { @include hoverLink($color: $c-main); }
+        }
+    }
+
+    .Languages-mobile {
+        li {
+            display: inline-block;
+            margin: 0 space(.5);
+            text-align: center;
+
+            @include breakpoint($s1200) { display: none; }
+
+            a {
+                @include caps;
+
+                color: $c-neutro;
+
+                &.is-active { color: $c-white; }
+            }
+        }
+    }
+
+    &.open {
+        .Languages-current {
+            color: $c-main;
+
+            svg {
+                fill: $c-main;
+                transform: rotate(180deg);
+            }
+        }
+
+        .Languages-selector {
+            opacity: 1;
+            visibility: visible;
+
+            &::before { bottom: -3px; }
+        }
+    }
+}

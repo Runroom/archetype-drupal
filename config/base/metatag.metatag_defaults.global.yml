@@ -1,0 +1,10 @@
+uuid: 483726e7-1783-4447-83f6-a5c65c3bf30f
+langcode: es
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: b-qxCu1VLGWjqvXKv4Nt7y2BUo5VSGpEIj8gb6C_PUY
+id: global
+label: Global
+tags:
+  title: '[current-page:title] | HI Partners'

@@ -1,0 +1,63 @@
+uuid: 4b515f58-6c20-45ff-b597-b873b7f91b5d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_highlights_data
+    - node.type.front_template
+    - paragraphs.paragraphs_type.highlights_module_data
+  module:
+    - entity_reference_revisions
+id: node.front_template.field_highlights_data
+field_name: field_highlights_data
+entity_type: node
+bundle: front_template
+label: 'Datos destacados'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      highlights_module_data: highlights_module_data
+    target_bundles_drag_drop:
+      list_title_link_module:
+        weight: 13
+        enabled: false
+      description_load_module:
+        weight: 14
+        enabled: false
+      file_attach_module:
+        weight: 15
+        enabled: false
+      highlights_module_data:
+        enabled: true
+        weight: 16
+      highlights_single_data:
+        weight: 17
+        enabled: false
+      image_gallery:
+        weight: 18
+        enabled: false
+      link_module:
+        weight: 19
+        enabled: false
+      maps_module:
+        weight: 20
+        enabled: false
+      module_video:
+        weight: 21
+        enabled: false
+      text_image:
+        weight: 22
+        enabled: false
+      views_module:
+        weight: 23
+        enabled: false
+      wysiwyg_module:
+        weight: 24
+        enabled: false
+field_type: entity_reference_revisions

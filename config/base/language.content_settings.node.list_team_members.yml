@@ -1,0 +1,16 @@
+uuid: 394a4bb8-7f06-4083-9bcc-83746b678db3
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.list_team_members
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.list_team_members
+target_entity_type_id: node
+target_bundle: list_team_members
+default_langcode: current_interface
+language_alterable: true

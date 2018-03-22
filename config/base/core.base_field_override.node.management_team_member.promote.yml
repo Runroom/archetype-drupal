@@ -1,0 +1,22 @@
+uuid: 17a79677-122d-44a5-85f0-aae9ddbd47c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.management_team_member
+id: node.management_team_member.promote
+field_name: promote
+entity_type: node
+bundle: management_team_member
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

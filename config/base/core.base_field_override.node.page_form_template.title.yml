@@ -1,0 +1,18 @@
+uuid: 1c997ed0-d093-45ca-839f-e1d40e401b9b
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.page_form_template
+id: node.page_form_template.title
+field_name: title
+entity_type: node
+bundle: page_form_template
+label: 'Título Interno'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

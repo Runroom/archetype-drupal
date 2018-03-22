@@ -1,0 +1,13 @@
+uuid: 136cf1a7-217b-4858-81a9-a74919656e4b
+langcode: es
+status: true
+dependencies:
+  module:
+    - tmgmt_local
+_core:
+  default_config_hash: mTOwcDgyzVG2uyMfLShAvIQQLEuWkh8b7VRZjnHbjks
+id: tmgmt_local_task_assign_multiple
+label: 'Assign to...'
+type: tmgmt_local_task
+plugin: tmgmt_local_task_assign_multiple
+configuration: {  }

@@ -1,0 +1,23 @@
+uuid: 162fd56b-92db-4e31-a1e4-804df61117f0
+langcode: es
+status: true
+dependencies:
+  config:
+    - contact.form.form_apply_job
+    - field.storage.contact_message.field_terms
+id: contact_message.form_apply_job.field_terms
+field_name: field_terms
+entity_type: contact_message
+bundle: form_apply_job
+label: 'Política de privacidad'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

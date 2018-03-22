@@ -1,0 +1,15 @@
+uuid: af4c4c31-cd45-4ce1-9a38-176988f4f4ff
+name: 'HI Partners'
+mail: info@hipartners.es
+slogan: ''
+page:
+  403: ''
+  404: /node/49
+  front: /node/75
+admin_compact_mode: false
+weight_select_max: 100
+langcode: es
+default_langcode: es
+_core:
+  default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo
+mail_notification: info@hipartners.es

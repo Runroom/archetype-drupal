@@ -1,0 +1,23 @@
+global-styling:
+  css:
+    theme:
+      css/styles.min.css: { minified: true }
+  js:
+    js/app.min.js: { minified: true }
+
+slider:
+  js:
+    js/slider.min.js: { minified: true }
+
+youtube:
+  js:
+    js/youtube.min.js: { minified: true }
+
+form:
+  js:
+    js/form.min.js: { minified: true }
+
+google.maps:
+  js:
+    https://maps.googleapis.com/maps/api/js?key=***REMOVED***: { type: external, minified: true }
+    js/map.min.js: { minified: true }

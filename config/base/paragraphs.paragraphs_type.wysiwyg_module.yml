@@ -1,0 +1,7 @@
+uuid: 42818f26-ea5f-4adb-920f-95ef12316d2e
+langcode: en
+status: true
+dependencies: {  }
+id: wysiwyg_module
+label: 'Módulo WYSIWYG'
+behavior_plugins: {  }

@@ -1,0 +1,27 @@
+{% import directory ~ '/templates/helpers/macros.html.twig' as macros %}
+
+{% set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    'actualidad-links'
+] %}
+
+{% block paragraph %}
+
+    {% if content.field_view_module[0] is not null %}
+        <section{{ attributes.addClass(classes) }}>
+            <div class="actualidad-links-container u-flex--s768 u-flex--justifyCenter u-wrapper">
+                {% block content %}
+                <div class="content u-flex--s768 u-flex--s768-10 u-flex--wrap">
+                    <div class="actualidad-title u-flex--s768 u-flex--s768-12">
+                        <h2 class="t-h2">{{ content.field_module_title }}</h2>
+                    </div>
+                    {{ content.field_view_module }}
+                </div>
+                {% endblock %}
+            </div>
+        </section>
+    {% endif %}
+
+{% endblock paragraph %}

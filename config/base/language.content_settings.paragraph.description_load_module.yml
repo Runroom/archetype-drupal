@@ -1,0 +1,16 @@
+uuid: 9635c144-25a2-4e09-90ac-b50d54ddda25
+langcode: es
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.description_load_module
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: paragraph.description_load_module
+target_entity_type_id: paragraph
+target_bundle: description_load_module
+default_langcode: current_interface
+language_alterable: true

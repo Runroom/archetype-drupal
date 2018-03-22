@@ -1,0 +1,10 @@
+services:
+  redirect_by_ip.meso_ip_redirect:
+    class: Drupal\redirect_by_ip\StackMiddleware\RedirectByCountry
+    arguments: ["@language_manager", "@config.factory", "@redirect_by_ip.free_geo_ip_locator_service", "@entity_type.manager"]
+    tags:
+      - { name: http_middleware, priority: 210, responder: true }
+
+  redirect_by_ip.free_geo_ip_locator_service:
+    class: Drupal\redirect_by_ip\Services\FreeGeoIpLocatorService
+    arguments: ["@cache.default", "@logger.factory"]

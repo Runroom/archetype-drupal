@@ -1,0 +1,23 @@
+uuid: 994bbe5e-6fe7-4117-929c-01e64d4b66d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_form
+    - node.type.job_offer_template
+id: node.job_offer_template.field_form
+field_name: field_form
+entity_type: node
+bundle: job_offer_template
+label: Formulario
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:contact_form'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

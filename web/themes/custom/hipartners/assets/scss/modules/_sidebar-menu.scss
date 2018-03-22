@@ -1,0 +1,16 @@
+.sidebar {
+    .sidebar-menu {
+        a {
+            cursor: pointer;
+            text-decoration: none;
+
+            &.is-active {
+                text-decoration: underline;
+            }
+        }
+
+        ul li ul {
+            padding-left: space(1);
+        }
+    }
+}

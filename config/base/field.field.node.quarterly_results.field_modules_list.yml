@@ -1,0 +1,68 @@
+uuid: 0fa6a48b-1353-482a-a8be-8e1705968dc2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_modules_list
+    - node.type.quarterly_results
+    - paragraphs.paragraphs_type.title_files_module
+    - paragraphs.paragraphs_type.wysiwyg_module
+  module:
+    - entity_reference_revisions
+id: node.quarterly_results.field_modules_list
+field_name: field_modules_list
+entity_type: node
+bundle: quarterly_results
+label: 'Listado de Módulos'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      title_files_module: title_files_module
+      wysiwyg_module: wysiwyg_module
+    target_bundles_drag_drop:
+      description_load_module:
+        weight: 13
+        enabled: false
+      title_files_module:
+        enabled: true
+        weight: 14
+      file_attach_module:
+        weight: 14
+        enabled: false
+      highlights_module_data:
+        weight: 15
+        enabled: false
+      highlights_single_data:
+        weight: 16
+        enabled: false
+      image_gallery:
+        weight: 17
+        enabled: false
+      link_module:
+        weight: 18
+        enabled: false
+      list_title_link_module:
+        weight: 19
+        enabled: false
+      maps_module:
+        weight: 20
+        enabled: false
+      module_video:
+        weight: 21
+        enabled: false
+      text_image:
+        weight: 22
+        enabled: false
+      views_module:
+        weight: 23
+        enabled: false
+      wysiwyg_module:
+        enabled: true
+        weight: 24
+field_type: entity_reference_revisions

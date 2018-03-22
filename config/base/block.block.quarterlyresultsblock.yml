@@ -1,0 +1,26 @@
+uuid: 6adf3b11-d546-439c-9a6c-dc52a88db4bb
+langcode: es
+status: false
+dependencies:
+  module:
+    - block_visibility_groups
+    - hipartners_general
+  theme:
+    - hipartners
+id: quarterlyresultsblock
+theme: hipartners
+region: content
+weight: 0
+provider: null
+plugin: quarterly_results_block
+settings:
+  id: quarterly_results_block
+  label: 'Quarterly Results Block'
+  provider: hipartners_general
+  label_display: '0'
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

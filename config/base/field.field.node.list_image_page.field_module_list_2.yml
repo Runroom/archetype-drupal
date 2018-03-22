@@ -1,0 +1,66 @@
+uuid: e9ef7894-1016-4cdb-a0e0-774386d209cf
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_module_list_2
+    - node.type.list_image_page
+    - paragraphs.paragraphs_type.file_attach_module
+  module:
+    - entity_reference_revisions
+id: node.list_image_page.field_module_list_2
+field_name: field_module_list_2
+entity_type: node
+bundle: list_image_page
+label: Fichero
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      file_attach_module: file_attach_module
+    target_bundles_drag_drop:
+      description_load_module:
+        weight: 14
+        enabled: false
+      file_attach_module:
+        enabled: true
+        weight: 15
+      highlights_module_data:
+        weight: 16
+        enabled: false
+      highlights_single_data:
+        weight: 17
+        enabled: false
+      image_gallery:
+        weight: 18
+        enabled: false
+      link_module:
+        weight: 19
+        enabled: false
+      list_title_link_module:
+        weight: 20
+        enabled: false
+      maps_module:
+        weight: 21
+        enabled: false
+      module_video:
+        weight: 22
+        enabled: false
+      text_image:
+        weight: 23
+        enabled: false
+      title_files_module:
+        weight: 24
+        enabled: false
+      views_module:
+        weight: 25
+        enabled: false
+      wysiwyg_module:
+        weight: 26
+        enabled: false
+field_type: entity_reference_revisions

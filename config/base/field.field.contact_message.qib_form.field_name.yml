@@ -1,0 +1,19 @@
+uuid: de292f0d-9b41-4dbb-8030-a550f777c34d
+langcode: es
+status: true
+dependencies:
+  config:
+    - contact.form.qib_form
+    - field.storage.contact_message.field_name
+id: contact_message.qib_form.field_name
+field_name: field_name
+entity_type: contact_message
+bundle: qib_form
+label: Nombre
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,23 @@
+uuid: c5dc6d1f-bc79-4232-99c8-f176fd9fee74
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_only_year
+    - node.type.event
+id: node.event.field_only_year
+field_name: field_only_year
+entity_type: node
+bundle: event
+label: 'Mostrar solo el año en el campo Fecha Inicio Evento'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Sí
+  off_label: 'No'
+field_type: boolean

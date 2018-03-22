@@ -1,0 +1,9 @@
+uuid: a3ade091-5c74-4bde-8b15-cda396867605
+langcode: es
+status: true
+dependencies: {  }
+id: list_link_module
+label: 'Listado + Enlace'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

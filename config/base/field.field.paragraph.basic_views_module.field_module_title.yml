@@ -1,0 +1,19 @@
+uuid: 052c2f27-a178-427d-9523-9155f9d5469e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_module_title
+    - paragraphs.paragraphs_type.basic_views_module
+id: paragraph.basic_views_module.field_module_title
+field_name: field_module_title
+entity_type: paragraph
+bundle: basic_views_module
+label: 'Título del listado'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

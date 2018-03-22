@@ -1,0 +1,21 @@
+uuid: 38fb11a7-0c51-495c-9116-a0dac4d296bd
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.quarterly_results
+  module:
+    - user
+id: node.quarterly_results.teaser
+targetEntityType: node
+bundle: quarterly_results
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_modules_list: true
+  field_overwrite_metatags: true
+  langcode: true

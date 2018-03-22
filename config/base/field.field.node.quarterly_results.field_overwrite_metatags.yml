@@ -1,0 +1,23 @@
+uuid: 1e81fd5e-c61f-4147-ad26-ae7e43d77f05
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_overwrite_metatags
+    - node.type.quarterly_results
+  module:
+    - metatag
+id: node.quarterly_results.field_overwrite_metatags
+field_name: field_overwrite_metatags
+entity_type: node
+bundle: quarterly_results
+label: 'Metatags Sobreescritos'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 'a:0:{}'
+default_value_callback: ''
+settings: {  }
+field_type: metatag

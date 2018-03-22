@@ -1,0 +1,319 @@
+.form {
+    margin-top: space(1.5);
+
+    .form-wrapper {
+        margin-bottom: space(1.25);
+        position: relative;
+
+        &:last-child { margin-bottom: space(1.25); }
+
+        svg {
+            display: none;
+            max-width: 25px;
+            position: absolute;
+            right: 0;
+            top: 0;
+
+            g {
+                stroke: $c-error;
+            }
+        }
+    }
+
+    input:not([type="submit"]):not([type="checkbox"]), textarea, select {
+        color: $c-grey;
+        font-size: get-rems(16px);
+        font-weight: 300;
+    }
+
+    input[type="checkbox"] {
+        -webkit-appearance: unset;
+        appearance: unset;
+        height: 0;
+        margin-left: get-rems(5px);
+        width: 0;
+
+        &::before {
+            background-color: $c-white;
+            border: 1px solid $c-white;
+            content: '';
+            display: block;
+            height: get-rems(19px);
+            margin-left: get-rems(-5px);
+            margin-top: space(-.5);
+            outline: 1px solid $c-main;
+            width: get-rems(19px);
+        }
+
+        &:checked::before {
+            background-color: $c-main;
+            border: 4px solid $c-white;
+            outline: 1px solid $c-main;
+        }
+
+        & ~ label {
+            color: $c-secondary;
+            pointer-events: auto;
+        }
+    }
+
+    input[type="checkbox"] ~ label:not(.error) {
+        left: space(1.5);
+        top: 0;
+    }
+
+    .js-form-type-textarea > label {
+        display: none;
+    }
+
+    .js-form-type-textarea label {
+        &.error {
+            bottom: 2px;
+            top: auto;
+        }
+    }
+
+    input:not([type="submit"]):not([type="checkbox"]):not([type="file"]), textarea, select {
+        -webkit-appearance: none;
+        border: none;
+        border-bottom: 1px solid $c-border;
+        border-radius: 0;
+        display: block;
+        padding: 10px 10px 10px 0;
+        width: 100%;
+
+        &:focus {
+            outline: none;
+        }
+
+        &.error {
+            border-bottom: 1px solid $c-error !important;
+        }
+
+        &.error ~ svg {
+            display: block;
+        }
+    }
+
+    textarea {
+        height: get-rems(39px);
+        overflow: auto;
+        resize: none;
+    }
+
+    label {
+        @include caps;
+
+        color: $c-main;
+        font-size: space(.5);
+        left: 0;
+        pointer-events: none;
+        position: absolute;
+        top: 10px;
+        transition: all .2s ease;
+
+        &.error {
+            color: $c-error;
+            font-weight: 400;
+            left: auto;
+            letter-spacing: 0;
+            right: 0;
+            text-align: right;
+            text-transform: none;
+            top: space(.5);
+            transform: scale(1);
+            transform-origin: top left;
+        }
+
+        &.error ~ label:not(.error) { color: $c-error; }
+    }
+
+    input:not([type="submit"]):not([type="checkbox"]), textarea {
+        &:focus ~ label:not(.error), &.focused ~ label:not(.error) {
+            left: 0;
+            top: get-rems(-18px);
+            transform: scale(.8);
+            transform-origin: left;
+        }
+    }
+
+    .select-wrapper {
+        position: relative;
+
+        &::before {
+            background: url("/themes/custom/hipartners/assets/img/Contact-Arrow.svg") no-repeat;
+            content: '';
+            height: 8px;
+            position: absolute;
+            right: 0;
+            top: space(.75);
+            width: 10px;
+        }
+    }
+
+    .select-wrapper select {
+        background-color: $c-white;
+    }
+
+    .select-wrapper ~ label:not(.error) {
+        left: 0;
+        top: get-rems(-18px);
+        transform: scale(.8);
+        transform-origin: left;
+    }
+
+    .bar {
+        display: block;
+        position: relative;
+        width: 100%;
+
+        &::before, &::after {
+            background: $c-border;
+            bottom: 0;
+            content: '';
+            height: 1px;
+            position: absolute;
+            transition: all .2s ease;
+            width: 0;
+        }
+
+        &::before { left: 50%; }
+        &::after { right: 50%; }
+    }
+
+    input:not([type="submit"]):not([type="checkbox"]):focus ~ .bar, textarea:focus ~ .bar {
+        &::before, &::after {
+            width: 50%;
+        }
+    }
+
+    input.error:focus ~ .bar::before, input.error:focus ~ .bar::after {
+        content: none;
+    }
+
+    input:not([type="submit"]):not([type="checkbox"]):focus ~ .highlight, textarea:focus ~ .highlight {
+        animation: inputHighlighter .6s ease;
+    }
+
+    .form-item-subject-0-value {
+        display: none;
+    }
+
+    .field--type-file {
+        margin-bottom: space(2);
+        margin-top: space(2);
+
+        label {
+            @include caps;
+
+            background-color: transparent;
+            color: $c-main;
+            font-size: get-rems(12px);
+            font-weight: 600;
+            letter-spacing: get-rems(4px);
+            margin-top: space(-1.5);
+            padding: space(0);
+            pointer-events: none;
+            text-align: left;
+            text-transform: uppercase;
+
+            &:hover {
+                background-color: $c-mainLight;
+                border-color: $c-mainLight;
+                color: $c-white;
+            }
+        }
+
+        .custom-label {
+            label {
+                background-color: $c-white;
+                border: 1px solid $c-main;
+                color: $c-main;
+                cursor: pointer;
+                display: inline-block;
+                font-size: get-rems(12px);
+                font-weight: 600;
+                letter-spacing: get-rems(4px);
+                margin-top: 0;
+                min-width: space(6);
+                padding: get-rems(7px) space(.75);
+                pointer-events: auto;
+                position: static;
+                text-align: center;
+            }
+        }
+
+        input[type="file"] {
+            max-width: 100%;
+        }
+
+        .status-message { display: none; }
+
+        .form-item .status-message {
+            display: block;
+        }
+
+        .status-message {
+            ul > li {
+                color: $c-error;
+                font-family: $t-default;
+                font-size: space(.5);
+                font-weight: 400;
+                left: auto;
+                letter-spacing: 0;
+                margin-bottom: get-rems(7px);
+                right: 0;
+                text-align: left;
+                text-transform: none;
+                top: space(.5);
+                transform: scale(1);
+                transform-origin: top left;
+            }
+        }
+
+        input[type="submit"].form-submit {
+            @include fluid-type(16px, 17px);
+
+            background: $c-white;
+            border: none;
+            color: $c-secondaryLight;
+            font-weight: 100;
+            line-height: 1.4;
+            text-decoration: underline;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .field--name-field-terms {
+        display: flex;
+        margin-bottom: space(2.5);
+
+        @include breakpoint($s768) {
+            margin-bottom: space(1.25);
+        }
+    }
+
+    .form-item-field-terms-value {
+        display: inline-block;
+        margin-top: get-rems(-4px);
+    }
+
+    .field-link-terms {
+        @include caps;
+
+        color: $c-main;
+        display: inline-block;
+        font-size: space(.5);
+        padding-left: get-rems(7px);
+        width: 90%;
+
+        a {
+            text-decoration: none;
+
+            &:hover { text-decoration: underline; }
+        }
+    }
+}

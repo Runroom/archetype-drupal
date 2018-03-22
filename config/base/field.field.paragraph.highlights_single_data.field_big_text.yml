@@ -1,0 +1,19 @@
+uuid: 5eb74d8c-9b03-4437-9d46-db72e36adf37
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_big_text
+    - paragraphs.paragraphs_type.highlights_single_data
+id: paragraph.highlights_single_data.field_big_text
+field_name: field_big_text
+entity_type: paragraph
+bundle: highlights_single_data
+label: 'Texto grande'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

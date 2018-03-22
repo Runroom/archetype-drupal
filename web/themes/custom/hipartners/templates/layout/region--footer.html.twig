@@ -1,0 +1,10 @@
+<div class="Footer-main">
+    <a class="Footer-mainLogo" itemprop="url" href="{{ path('<front>') }}" title="{{ 'Hi Partners'|t }}" rel="home"><img src="{{ '/' ~ directory ~ '/img/svg/hip-logo-white.svg' }}" alt=""></a>
+    {% if content %}
+        {{ content }}
+    {% endif %}
+</div>
+
+<div class="Footer-copyright">
+    {{ "now"|date("Y") }}{{ (', All rights reserved HiPartners'|t) }}
+</div>

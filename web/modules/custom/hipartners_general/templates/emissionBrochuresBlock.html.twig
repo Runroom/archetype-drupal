@@ -1,0 +1,114 @@
+<section class="emission-brochure">
+
+    <div class="show select-wrap">
+        <h2 class="t-h2">{{ 'Content restricted according the legislation of each country'|t }}</h2>
+        <p>{{ 'Please read this carefully as it applies to all persons who visit this website.'|t }}</p>
+        <p>{{ 'Access to the information and documents on this portion of the website is restricted for regulatory reasons. We request that you complete all fields below in order to access this information. This personal data will not be retained by us and will be requested of you each time you seek to access this restricted information. It must be true and accurate.'|t }}</p>
+
+        <div class="custom-select custom-residence-select js-custom-select">
+            <h2 class="header">{{ 'Please enter your country of residence'|t }}</h2>
+            <ul class="custom-select-dropdown">
+                {% for li in residence %}
+                    <li class="item"><a class="js-custom-select-trigger" href="" data-go-to="{{ li.1 }}">{{ li.0 }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="custom-select custom-physically-select js-custom-select">
+            <h2 class="header">{{ 'I am currently physically present in'|t }}</h2>
+            <ul class="custom-select-dropdown">
+                {% for li in physically %}
+                    <li class="item"><a class="js-custom-select-trigger" href="" data-go-to="{{ li.1 }}">{{ li.0 }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    {# If it is allow (1): GENERAL DISCLAIMER #}
+    <div class="notification general-disclaimer" data-content="1">
+        <p class="t-h4">{{ 'Please read the legal information in order to continue and to access the contents of this section.'|t }}</p>
+        <div class="notification__wrapper">
+            <h3 class="t-h3">{{ 'Legal information and disclaimer'|t }}</h3>
+            <h4 class="t-h4">{{ 'DISCLAIMER - IMPORTANT'|t }}</h4>
+            <div class="notification__text js-notificationtext-target closed">
+                <div class="notification__text__content">
+                    <p>{{ 'This website and the information contained herein are not intended for, and must not be accessed by, or distributed or disseminated to, persons resident or physically present in the United States of America (including its territories and possessions, the “United States”), Canada, Australia, South Africa or Japan or jurisdictions in which access may be unlawful, and do not constitute an offer to sell or the solicitation of an offer to buy or acquire, any shares, rights or other securities of the Company in the United States, Canada, Australia, South Africa or Japan or such other jurisdictions where such offer or solicitation would be unlawful.'|t }}</p>
+                    <p>{{ 'The shares or other securities of the Company referred to on this website have not been and will not be registered under the U.S. Securities Act of 1933, as amended, and may not be offered, sold or exercised in the United States absent registration or an applicable exemption from registration thereunder.'|t }}</p>
+                    <p>{{ 'This website and the information contained herein are directed in each Member State of the European Economic Area which has implemented the Prospectus Directive (each a “Relevant Member State”) to persons who are “qualified investors” within the meaning of Article 2(1)(e) of the Prospectus Directive (“Qualified Investors”). In addition, in the United Kingdom, this website and the information contained herein are directed only at Qualified Investors: (i) who have professional experience in matters relating to investments falling within the definition of “investment professionals” in Article 19(5) the Financial Services and Markets Act 2000 (Financial Promotion) Order 2005 (the “Order”); or (ii) falling within Article 49(2)(a) to (d) of the Order (all such persons together being referred to as “Relevant Persons”). This website and the information contained herein must not be acted on or relied on: (i) in any Relevant Member State other than the United Kingdom, by persons who are not Qualified Investors; and (ii) in the United Kingdom, by persons who are not Relevant Persons. Any investment or investment activity to which this website and the information contained herein relate is available only to: (i) in any Relevant Member State other than the United Kingdom, Qualified Investors; and (ii) in the United Kingdom, Relevant Persons, and will be engaged in only with such persons. For the purposes of this paragraph, the expression “Prospectus Directive” means Directive 2003/71/EC (as amended, including by the 2010 PD Amending Directive) and includes any relevant implementing measure in the Relevant Member State, and the expression “2010 PD Amending Directive” means Directive 2010/73/EU.'|t }}</p>
+                    <p>{{ 'Access to the information and documents contained on the following websites may be illegal in certain jurisdictions, and only certain categories of persons may be authorized to access such information and documents.  All persons residing outside of Spain, the United States, Canada, Australia, South Africa and Japan who wish to have access to the documents contained on this website should first ensure that they are not subject to local laws or regulations that prohibit or restrict their right to access this website, or require registration or approval for any acquisition of securities by them.  No such registration or approval has been obtained outside Spain.   The Company assumes no responsibility if there is a violation of applicable law and regulations by any person.'|t }}</p>
+                    <p>{{ 'I therefore certify that:'|t }}</p>
+                    <ol>
+                        <li>{{ 'I am resident and physically present outside the United States, Canada, Australia, South Africa and Japan;'|t }}</li>
+                        <li>{{ 'I am not resident or physically present in any Relevant Member State, or else I am a Qualified Investor;'|t }}</li>
+                        <li>{{ 'I am not resident or physically present in the United Kingdom, or else I am a Relevant Person; and'|t }}</li>
+                        <li>{{ 'I am resident and physically present (a) in Spain1 or (b) outside Spain2 and each of the jurisdictions referred to in clauses (1) through (3) above and, in that case, I am authorized to access the information and documents on this website without being subject to any legal restriction and without any further action required by the Company.'|t }}</li>
+                    </ol>
+                </div>
+            </div>
+            <a class="notification__trigger js-notificationtext-trigger" href="#">
+                <span class="text t-h4"> {{ 'FULL TEXT'|t }} </span><span class="arrow"></span>
+            </a>
+        </div>
+        <div class="notification__footer">
+            <a class="btn hollow" data-go-to="0" href="{{ url }}"><span>{{ 'NO, I DO NOT AGREE' |t }}</span></a>
+            <a class="btn main" data-go-to="sec-confirmation" href="{{ url }}"><span>{{ 'YES, I AGREE' |t }}</span></a>
+        </div>
+
+        <div class="notification__confirmation" data-content="sec-confirmation">
+            <div class="notification__wrapper">
+                <p>{{ 'I have read and understood the disclaimer, I understand it may affect my rights and obligations and agree to be bound by and comply with all of the restrictions set forth above.'|t }}</p>
+            </div>
+            <div class="notification__footer">
+                <a class="btn hollow" data-go-to="0" href="{{ url }}"><span>{{ 'NO, I DO NOT AGREE' |t }}</span></a>
+                <a class="btn main" data-go-to="content" href="{{ url }}"><span>{{ 'YES, I AGREE' |t }}</span></a>
+            </div>
+        </div>
+    </div>
+
+    {# If it is special allow (2) #}
+    {#<div class="notification special-allow" data-content="2">#}
+        {#<div class="notification__wrapper">#}
+            {#<div class="notification__text js-notificationtext-target">#}
+                {#<p>{{ 'The contents of this section are not accessible to or intended for persons located in the United States, unless they comply with the certificates shown below.'|t }}</p>#}
+                {#<p>{{ 'Please read the certificates carefully in order to confirm that you may continue.'|t }}</p>#}
+                {#<p>{{ 'CERTIFICATES'|t }}</p>#}
+                {#<ul>#}
+                    {#<li>{{ '1. We are a "qualified institutional buyer" (a "QIB") as defined in Rule 144A ("Rule 144A") under the US Securities Act of 1933, as amended (the "US Securities Act"). Further, if we are acting as a fiduciary or agent for one or more investor accounts, (a) each such account is a QIB, (b) we have sole investment discretion with respect to each account, and (c) we have full power and authority to make the representations, warranties, agreements and acknowledgements herein on behalf of each such account.'|t }}</li>#}
+                    {#<li>{{ '2. We acknowledge that the materials relate to a transaction that is not subject to, or is only available in the United States pursuant to an exemption from the registration requirements of the US Securities Act.'|t }}</li>#}
+                {#</ul>#}
+                {#<p>{{ 'If you do not comply with all the certificates, please leave this page.'|t }}</p>#}
+                {#<p>{{ 'If you do comply with the certificates, continue to complete the process by filling in a short form.'|t }}</p>#}
+            {#</div>#}
+            {#<a class="notification__trigger js-notificationtext-target" href="#">#}
+                {#<span class="text t-h4">#}
+                    {#{{ 'FULL TEXT'|t }}#}
+                {#</span>#}
+                {#<span class="arrow"></span>#}
+            {#</a>#}
+        {#</div>#}
+
+        {#<div class="notification__footer">#}
+            {#<a class="btn hollow" data-go-to="0" href="{{ url }}"><span>{{ 'LEAVE' |t }}</span></a>#}
+            {#<a class="btn main" data-go-to="form" href="{{ url }}"><span>{{ 'CONTINUE' |t }}</span></a>#}
+        {#</div>#}
+
+        {#<div class="form">#}
+            {#{{ form }}#}
+            {#<a class="btn hollow" data-go-to="0" href="{{ url }}"><span>{{ 'LEAVE' |t }}</span></a>#}
+            {#<p>{{ 'By clicking “I AGREE” below, you are certifying that the certifications and information provided are accurate, that you would like to access the materials. You agree that the materials you receive are for your own use and will not be distributed to any person outside of your organisation.'|t }}</p>#}
+        {#</div>#}
+    {#</div>#}
+
+    {# If it is not allow (0) #}
+    <div class="notification not-allow" data-content="0">
+        <div class="notification__wrapper">
+            {#<p>{{ 'You have selected'|t }} <span class="dinamic-text"></span></p>#}
+            <p>{{ 'We regret that, due to regulatory restrictions, we are unable to give you access to this section of our website.'|t }}</p>
+            <p>{{ 'Access to this information is limited to persons resident and physically present in Spain1 and to certain persons who are resident or physically present in other jurisdictions outside the United States, Canada, Australia, South Africa and Japan.'|t }}</p>
+        </div>
+    </div>
+
+    <div class="notification content" data-content="content">
+        {{ content }}
+    </div>
+</section>

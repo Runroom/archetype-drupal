@@ -1,0 +1,13 @@
+{% if list and node %}
+    <ul>
+        {% for li in list %}
+            <li><a href="{{ li.url }}">{{ li.title }}</a></li>
+        {% endfor %}
+    </ul>
+
+    {{ node }}
+{% else %}
+
+    <p>No hay resultados</p>
+
+{% endif %}

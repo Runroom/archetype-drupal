@@ -1,0 +1,33 @@
+uuid: 420eb1c2-2fdf-423b-ba3b-f38dec3f972b
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.contacto
+    - field.storage.contact_message.field_custom_subject
+    - taxonomy.vocabulary.subject_contact_form
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: contact_message.contacto.field_custom_subject
+field_name: field_custom_subject
+entity_type: contact_message
+bundle: contacto
+label: Subject
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      subject_contact_form: subject_contact_form
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

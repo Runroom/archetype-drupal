@@ -1,0 +1,33 @@
+uuid: 05a0e854-2e07-4d57-81e3-f331b6789cfb
+langcode: es
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: plantilla_miembro_equipo_spanish
+label: 'Plantilla Miembro Equipo Spanish'
+type: 'canonical_entities:node'
+pattern: 'compania/equipo/[node:field_header_title]'
+selection_criteria:
+  c655a3a9-688c-481f-a08f-07bbc0ecd558:
+    id: node_type
+    bundles:
+      management_team_member: management_team_member
+    negate: false
+    context_mapping:
+      node: node
+    uuid: c655a3a9-688c-481f-a08f-07bbc0ecd558
+  39b3188b-4f46-4a3d-b396-e9c34ed3f6ee:
+    id: language
+    langcodes:
+      es: es
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: 39b3188b-4f46-4a3d-b396-e9c34ed3f6ee
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Idioma

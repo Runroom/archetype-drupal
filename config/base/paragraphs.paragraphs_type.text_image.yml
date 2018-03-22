@@ -1,0 +1,7 @@
+uuid: b552d6c0-1039-4d9a-8054-66fd53335a17
+langcode: en
+status: true
+dependencies: {  }
+id: text_image
+label: 'Módulo Descripción + Imagen'
+behavior_plugins: {  }

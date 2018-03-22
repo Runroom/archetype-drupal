@@ -1,0 +1,9 @@
+uuid: 52c1b9b0-fa85-4645-9b33-a4590d693586
+langcode: en
+status: true
+dependencies: {  }
+name: 'Hotel Category'
+vid: hotel_category
+description: 'Categoría al que pertenece el tipo de contenido Hotel'
+hierarchy: 0
+weight: 0

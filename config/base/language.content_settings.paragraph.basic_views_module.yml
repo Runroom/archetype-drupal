@@ -1,0 +1,16 @@
+uuid: 092c623d-e18c-4177-a809-de2140600f35
+langcode: es
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.basic_views_module
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: paragraph.basic_views_module
+target_entity_type_id: paragraph
+target_bundle: basic_views_module
+default_langcode: current_interface
+language_alterable: true

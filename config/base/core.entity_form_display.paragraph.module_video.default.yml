@@ -1,0 +1,49 @@
+uuid: 42b5c51b-110b-4dc4-9ad6-30a0ebcc97e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.module_video.field_image
+    - field.field.paragraph.module_video.field_module_title
+    - field.field.paragraph.module_video.field_youtube_video
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.module_video
+  module:
+    - image
+    - youtube
+id: paragraph.module_video.default
+targetEntityType: paragraph
+bundle: module_video
+mode: default
+content:
+  field_image:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_module_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_youtube_video:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: youtube
+    region: content
+  translation:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

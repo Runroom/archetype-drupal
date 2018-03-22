@@ -1,0 +1,30 @@
+uuid: f4189f63-e2b3-4646-9d3c-f0027e53a5d8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.highlights_single_data.field_big_text
+    - field.field.paragraph.highlights_single_data.field_small_text
+    - paragraphs.paragraphs_type.highlights_single_data
+id: paragraph.highlights_single_data.default
+targetEntityType: paragraph
+bundle: highlights_single_data
+mode: default
+content:
+  field_big_text:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_small_text:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

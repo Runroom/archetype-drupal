@@ -1,0 +1,19 @@
+uuid: 20cdebda-922f-4015-adab-879044bcdbc1
+langcode: es
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_header_cta
+field_name: field_header_cta
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,19 @@
+uuid: 23b63253-0204-465f-9147-3bb3735308ba
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_file
+    - paragraphs.paragraphs_type.file_attach_module
+id: paragraph.file_attach_module.field_text_file
+field_name: field_text_file
+entity_type: paragraph
+bundle: file_attach_module
+label: Texto
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

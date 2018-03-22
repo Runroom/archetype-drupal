@@ -1,0 +1,34 @@
+uuid: 022548ba-0f78-4df5-a32f-a44a7cb2cf2f
+langcode: es
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: plantilla_listado_cabecera_imagen_spanish_english
+label: 'Plantilla Listado Cabecera Imagen Spanish & English'
+type: 'canonical_entities:node'
+pattern: '[node:menu-link:parents:join-path]/[node:title]'
+selection_criteria:
+  32b194d6-0c8e-4f87-b03e-7239dc26cd72:
+    id: node_type
+    bundles:
+      list_image_page: list_image_page
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 32b194d6-0c8e-4f87-b03e-7239dc26cd72
+  c8f36fa7-7ed2-46cb-8780-e304486bdd27:
+    id: language
+    langcodes:
+      en: en
+      es: es
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: c8f36fa7-7ed2-46cb-8780-e304486bdd27
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

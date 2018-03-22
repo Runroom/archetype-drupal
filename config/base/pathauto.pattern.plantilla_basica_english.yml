@@ -1,0 +1,33 @@
+uuid: 8f69606e-bbea-4db0-b173-9b09d3d67ad5
+langcode: es
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: plantilla_basica_english
+label: 'Plantilla Básica - English'
+type: 'canonical_entities:node'
+pattern: '[node:menu-link:parents:join-path]/[node:field_header_title]'
+selection_criteria:
+  58c694f1-f4df-44d5-8c35-f9f575ce2e63:
+    id: node_type
+    bundles:
+      basic_template: basic_template
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 58c694f1-f4df-44d5-8c35-f9f575ce2e63
+  942ee0a6-4412-48c9-b3a7-4e597e437fb1:
+    id: language
+    langcodes:
+      en: en
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: 942ee0a6-4412-48c9-b3a7-4e597e437fb1
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Idioma

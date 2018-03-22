@@ -1,0 +1,42 @@
+{% extends directory ~ '/templates/layout/hero/hero-page-basic.html.twig' %}
+{% import directory ~ '/templates/helpers/macros.html.twig' as macros %}
+
+{% block attributes %}
+    {{ attributes.addClass('basic-template') }}
+{% endblock %}
+
+{% block heroCopies %}
+    <a class="link back mobile" href="{{ url }}">{{ macros.icon('arrow-lang') }}{{ 'Go to the management team'|t }}</a>
+    <h1 class="t-h1" itemprop="name">{{ content.field_header_title }}</h1>
+{% endblock %}
+
+{% block content %}
+
+    {% set url = path('entity.node.canonical', {'node': '47'}) %}
+
+    <div class="u-wrapper u-flex--s768">
+        <div class="u-flex--s0-12 u-flex--s640-1"></div>
+        <div class="u-flex--s0-12 u-flex--s640-11">
+            <a class="link back desktop" href="{{ url }}">{{ macros.icon('arrow-lang') }}{{ 'Go to the management team' |t }}</a>
+        </div>
+    </div>
+
+    <div class="Team-profile u-wrapper u-flex--wrap u-flex--s640">
+        <div class="u-flex--s0-12 u-flex--s768-1 u-flex--s1024-1"></div>
+        <div class="Team-profileImage u-flex--s0-12 u-flex--s640-5 u-flex--s1024-4">
+            <div class="Team-profileImageWrapper">
+                {{ content.field_image }}
+            </div>
+        </div>
+        <div class="u-flex--s0-12 u-flex--s640-1"></div>
+        <div class="Team-profileInfo u-flex--s0-12 u-flex--s640-6 u-flex--s768-5">
+            <div class="t-h4 title">
+                {{ content.field_position }}
+            </div>
+            <div class="content">
+                {{ content.body }}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

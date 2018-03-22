@@ -1,0 +1,36 @@
+vagrant_hostname: hipartners.local
+vagrant_machine_name: hipartners
+vagrant_ip: 192.168.88.66
+vagrant_synced_folder_default_type: ''
+vagrant_synced_folders:
+  - local_path: .
+    destination: /vagrant
+    type: ''
+    create: true
+
+# Composer project settings.
+drupal_build_makefile: false
+drupal_build_composer_project: false
+drupal_build_composer: false
+drupal_composer_path: false
+drupal_composer_install_dir: "/vagrant"
+drupal_core_path: "{{ drupal_composer_install_dir }}/web"
+drupal_composer_dependencies: []
+
+# Drupal install settings.
+drupal_site_name: "Hi Partners"
+drupal_install_site: false
+
+# Other overrides.
+php_version: "7.1"
+
+installed_extras:
+  - adminer
+  - drupalconsole
+  - drush
+  - mailhog
+  - nodejs
+  - pimpmylog
+  - xdebug
+
+php_memory_limit: "512M"

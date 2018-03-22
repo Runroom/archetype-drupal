@@ -1,0 +1,42 @@
+---
+- name: Do not accept locale environment variables passed over SSH.
+  lineinfile:
+    dest: /etc/ssh/sshd_config
+    regexp: "^AcceptEnv LANG"
+    state: absent
+    validate: "/usr/sbin/sshd -T -f %s"
+
+- name: Allow client to pass PHP and XDEBUG environment variables over SSH.
+  lineinfile:
+    dest: /etc/ssh/sshd_config
+    line: "AcceptEnv {{ item }}"
+    validate: "/usr/sbin/sshd -T -f %s"
+  with_items:
+    - PHP_IDE_CONFIG
+    - XDEBUG_CONFIG
+    - PHP_OPTIONS
+  when: '"xdebug" in installed_extras'
+
+- name: Check if local known_hosts file is present.
+  stat: "path={{ known_hosts_path | default('~/.ssh/known_hosts') }}"
+  register: known_hosts_file
+  connection: local
+  become: no
+
+- name: Copy known_hosts file from host into Drupal VM.
+  copy:
+    src: "{{ known_hosts_path | default('~/.ssh/known_hosts') }}"
+    dest: ~/.ssh/known_hosts
+    mode: 0644
+  become: no
+  when: known_hosts_file.stat.exists
+
+- name: Set SSH home directory.
+  lineinfile:
+    dest: "/home/{{ drupalvm_user }}/.bashrc"
+    state: present
+    create: yes
+    regexp: "^SSH_HOME="
+    line: "SSH_HOME={{ ssh_home }} && [ -e $SSH_HOME ] && cd $SSH_HOME"
+  become: no
+  when: ssh_home is defined

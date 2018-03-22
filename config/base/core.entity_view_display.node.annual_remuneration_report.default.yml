@@ -1,0 +1,49 @@
+uuid: 7b9a2400-5136-431e-b914-b509d4d147fd
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.annual_remuneration_report.field_date
+    - field.field.node.annual_remuneration_report.field_file
+    - field.field.node.annual_remuneration_report.field_overwrite_metatags
+    - node.type.annual_remuneration_report
+  module:
+    - datetime
+    - file
+    - metatag
+    - user
+id: node.annual_remuneration_report.default
+targetEntityType: node
+bundle: annual_remuneration_report
+mode: default
+content:
+  field_date:
+    weight: 102
+    label: hidden
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_file:
+    weight: 101
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_overwrite_metatags:
+    weight: 103
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

@@ -1,0 +1,49 @@
+uuid: 0b77861b-bc16-4113-b6bf-2acc4ad5bed9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.emission_brochures.field_date
+    - field.field.node.emission_brochures.field_file
+    - field.field.node.emission_brochures.field_overwrite_metatags
+    - node.type.emission_brochures
+  module:
+    - datetime
+    - file
+    - metatag
+    - user
+id: node.emission_brochures.default
+targetEntityType: node
+bundle: emission_brochures
+mode: default
+content:
+  field_date:
+    weight: 1
+    label: hidden
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_file:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_overwrite_metatags:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

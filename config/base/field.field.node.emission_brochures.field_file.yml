@@ -1,0 +1,31 @@
+uuid: 80704366-f0f0-48ae-832f-ca7dcd86a3be
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_file
+    - node.type.emission_brochures
+  module:
+    - file
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: node.emission_brochures.field_file
+field_name: field_file
+entity_type: node
+bundle: emission_brochures
+label: 'Archivo adjunto'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'folleto-emision/[date:custom:Y]-[date:custom:m]'
+  file_extensions: pdf
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

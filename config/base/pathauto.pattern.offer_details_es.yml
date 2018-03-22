@@ -1,0 +1,33 @@
+uuid: 2930ea03-af43-48c4-87f2-204223d6b642
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: offer_details_es
+label: 'Plantilla Detalle de Oferta - Spanish'
+type: 'canonical_entities:node'
+pattern: 'oferta/[node:field_header_title]'
+selection_criteria:
+  f6467e32-9cbb-4c39-aab5-b3a298fc4461:
+    id: node_type
+    bundles:
+      job_offer_template: job_offer_template
+    negate: false
+    context_mapping:
+      node: node
+    uuid: f6467e32-9cbb-4c39-aab5-b3a298fc4461
+  25be4bb8-a7e6-4eb9-92d0-ffd597f4f46a:
+    id: language
+    langcodes:
+      es: es
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: 25be4bb8-a7e6-4eb9-92d0-ffd597f4f46a
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

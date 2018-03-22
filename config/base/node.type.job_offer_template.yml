@@ -1,0 +1,18 @@
+uuid: 25076f02-ab3b-4854-b9c0-72b4409145b5
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Plantilla Oferta'
+type: job_offer_template
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

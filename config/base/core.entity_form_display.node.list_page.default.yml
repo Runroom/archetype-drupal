@@ -1,0 +1,134 @@
+uuid: f008e7ec-13e7-4862-b7e2-e2847615d519
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.list_page.field_hotels
+    - field.field.node.list_page.field_list_image
+    - field.field.node.list_page.field_list_subtitle
+    - field.field.node.list_page.field_overwrite_metatags
+    - image.style.thumbnail
+    - node.type.list_page
+  module:
+    - field_group
+    - image
+    - metatag
+    - path
+third_party_settings:
+  field_group:
+    group_tabs_list:
+      children:
+        - group_manual_hotel_list
+      parent_name: ''
+      weight: 10
+      format_type: tabs
+      format_settings:
+        label: 'Listados Tabs'
+        direction: horizontal
+        id: ''
+        classes: ''
+      label: 'Listados Tabs'
+    group_manual_hotel_list:
+      children:
+        - field_hotels
+      parent_name: group_tabs_list
+      weight: 20
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Listado manual Hoteles'
+id: node.list_page.default
+targetEntityType: node
+bundle: list_page
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_hotels:
+    weight: 11
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_list_image:
+    weight: 9
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_list_subtitle:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_overwrite_metatags:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 5
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 6
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }

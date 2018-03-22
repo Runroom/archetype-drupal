@@ -1,0 +1,37 @@
+<div itemscope itemtype="http://schema.org/Brand" class="Header-logo">
+    <meta itemprop="name" content="Hi-partners">
+    <a class="logo" itemprop="url" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home"><img src="{{ '/' ~ directory ~ '/img/svg/hip-logo-white.svg' }}" alt=""></a>
+</div>
+
+<nav class="Header-nav">
+    {{ drupal_menu('main') }}
+    <div class="Header-navLanguages">
+        {% if content %}
+            {{ content }}
+        {% endif %}
+    </div>
+</nav>
+
+<div class="Header-menu">
+    <a href="#" class="Header-hamburgerFlex js-hamburger">
+        <span class="Header-hamburger"></span>
+    </a>
+</div>
+
+<nav class="Header-navMobile is-closed">
+    <div class="Header-navMobile--wrapper">
+        <a class="logo" itemprop="url" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
+            <img src="{{ '/' ~ directory ~ '/img/svg/hip-logo-white.svg' }}" alt="">
+        </a>
+
+        <div class="nav">
+            {{ drupal_menu('main') }}
+        </div>
+
+        <ul class="languages">
+            {% if content %}
+                {{ content }}
+            {% endif %}
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,16 @@
+{% if message_list is not empty %}
+<div class="status-message js-closeMessageStatus">
+    <div class="status-message-box js-messageStatusBox">
+        {% for type, messages in message_list %}
+        <div role="contentinfo" aria-label="{{ status_headings[type] }}"{{ attributes|without('role', 'aria-label')}}>
+            <ul>
+                {% for message in messages %}
+                <li class="text t-h2">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endfor %}
+        <span class="status-message-close js-closeMessageStatus"></span>
+    </div>
+</div>
+{% endif %}

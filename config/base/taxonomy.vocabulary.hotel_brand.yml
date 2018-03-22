@@ -1,0 +1,9 @@
+uuid: 15c4ae6a-3144-434a-af6f-a8ebac23f23a
+langcode: en
+status: true
+dependencies: {  }
+name: 'Hotel Brand'
+vid: hotel_brand
+description: 'Marca al que pertenece el tipo de contenido Hotel'
+hierarchy: 0
+weight: 0

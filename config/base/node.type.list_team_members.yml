@@ -1,0 +1,18 @@
+uuid: e71aa297-6a21-4cdb-a0d5-62de80705487
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Plantilla Listado Miembros de Equipo Directivo'
+type: list_team_members
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

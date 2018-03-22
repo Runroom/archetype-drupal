@@ -1,0 +1,23 @@
+{% set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class, 'gallery'
+] %}
+
+{% block paragraph %}
+    <section{{ attributes.addClass(classes) }}>
+        <div class="u-flex--center u-wrapper">
+            <div class="u-flex--s0-12 u-flex--s768-10">
+                {% block content %}
+
+                {{ content.field_subtitle }}
+
+                <div class="hotel-slider">
+                    {{ content.field_gallery }}
+                </div>
+
+                {% endblock %}
+            </div>
+        </div>
+    </section>
+{% endblock paragraph %}

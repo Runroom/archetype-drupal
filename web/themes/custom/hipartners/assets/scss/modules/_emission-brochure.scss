@@ -1,0 +1,153 @@
+.emission-brochure {
+    padding-bottom: space();
+
+    .select-wrap,
+    .notification,
+    .custom-physically-select {
+        display: none;
+    }
+
+    .notification {
+        margin: space(2) 0 space(1);
+
+        @include breakpoint($s768) {
+            margin: space(2) 0;
+        }
+
+        &__wrapper {
+            background-color: $c-neutroLight;
+            margin-top: space(2);
+            padding: space(1);
+
+            @include breakpoint($s1024) {
+                margin-top: space(2);
+            }
+        }
+
+        &__text {
+            margin-top: space();
+            overflow: hidden;
+
+            @include transition($type: all, $time: .5s, $ease: cubic-bezier(.4, 0, .2, 1));
+
+            &.closed {
+                height: get-rems(300px) !important;
+            }
+
+            p {
+                margin-bottom: space();
+
+                &:nth-last-child(1) {
+                    margin-bottom: 0;
+                }
+            }
+
+            ol {
+                list-style-type: decimal;
+                margin-left: space(.5);
+
+                li {
+                    padding-left: space(.5);
+                }
+            }
+
+            @include breakpoint($s1024) {
+                p {
+                    margin-bottom: space();
+
+                    &:nth-last-child(1) {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        &__trigger {
+            display: block;
+            margin: 1.5rem auto 0;
+            text-align: center;
+            width: get-rems(48px);
+
+            .text {
+                display: none;
+                line-height: 2rem;
+                margin-bottom: 0;
+            }
+
+            .arrow {
+                background-image: url('/themes/custom/hipartners/assets/img/flecha-menu.svg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 35%;
+                display: inline-block;
+                height: get-rems(48px);
+                transform: rotate(180deg);
+                width: get-rems(48px);
+            }
+
+            &.open .arrow {
+                transform: rotate(0deg);
+            }
+
+            @include breakpoint($s768) {
+                width: get-rems(200px);
+
+                .text {
+                    display: inline-block;
+                }
+
+                .arrow {
+                    height: get-rems(32px);
+                    vertical-align: bottom;
+                    width: get-rems(32px);
+                }
+            }
+        }
+
+        &__footer {
+            margin-top: space();
+
+            a.btn {
+                display: block;
+                line-height: 1.15;
+                margin: 0 auto;
+                margin-bottom: space(.5);
+                width: get-rems(210px);
+
+                &:nth-last-child(1) {
+                    margin-bottom: 0;
+                }
+            }
+
+            @include breakpoint($s768) {
+                text-align: center;
+
+                a.btn {
+                    margin-top: space();
+                    width: get-rems(240px);
+                }
+            }
+        }
+
+        &__confirmation {
+            display: none;
+        }
+
+        > .t-h4 {
+            @include fluid-type(11px, 13px);
+        }
+    }
+
+    .content {
+        background-color: transparent;
+    }
+
+    .show {
+        display: block;
+    }
+
+    .custom-select {
+        margin-bottom: space();
+        margin-top: space(2);
+    }
+}

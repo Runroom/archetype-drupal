@@ -1,0 +1,71 @@
+.List {
+    @include marginBottomL;
+
+    @include breakpoint($s640) {
+        padding: 0 space(2);
+    }
+
+    @include breakpoint($s768) {
+        padding: 0;
+    }
+
+    .List-item {
+        background-color: $c-white;
+        border-bottom: 1px solid $c-border;
+        cursor: pointer;
+        display: block;
+        padding: space(.75) 0;
+        text-decoration: none;
+
+        @include breakpoint($s640) {
+            padding: space() space(.75);
+        }
+
+        @include transition;
+
+        &:first-child {
+            border-top: 1px solid $c-border;
+        }
+
+        &:hover {
+            background-color: $c-secondary;
+
+            .List-link {
+                @include transition($type: color);
+
+                color: $c-white;
+            }
+
+            .List-arrow {
+                .u-icon {
+                    @include transition($type: left);
+
+                    fill: $c-white;
+                    left: 2px;
+                }
+            }
+        }
+
+        .List-itemContainer {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .List-link {
+            color: $c-mainDark;
+            margin-bottom: 0;
+            padding-right: space(.25);
+        }
+
+        .List-arrow {
+            .u-icon {
+                fill: $c-mainDark;
+                height: get-rems(10px);
+                left: -1px;
+                position: relative;
+                width: get-rems(14px);
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+uuid: 8373ade3-3cdd-43cf-921b-d1b018ff0296
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hotel_operator
+    - node.type.hotel
+    - taxonomy.vocabulary.hotel_operator
+id: node.hotel.field_hotel_operator
+field_name: field_hotel_operator
+entity_type: node
+bundle: hotel
+label: Operador
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      hotel_operator: hotel_operator
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

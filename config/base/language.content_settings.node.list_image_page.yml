@@ -1,0 +1,16 @@
+uuid: b716d39f-78e9-415f-9d55-b73d54a9bdc2
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.list_image_page
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.list_image_page
+target_entity_type_id: node
+target_bundle: list_image_page
+default_langcode: current_interface
+language_alterable: true

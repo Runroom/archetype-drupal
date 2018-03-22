@@ -1,0 +1,12 @@
+uuid: b7e5537c-5329-4627-a156-5bb7871b35a1
+langcode: es
+status: true
+dependencies: {  }
+id: t9UQ7FvqR0wMQMnd5n2XukH0kM9liAM9wOhfSLRl2qw
+label: Spanish
+chunks: 1
+links: 44
+max_filesize: 7556
+context:
+  language: es
+updated: 1504262214

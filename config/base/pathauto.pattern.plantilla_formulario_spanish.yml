@@ -1,0 +1,33 @@
+uuid: c222a53c-d368-427b-a12c-6269ccf99f64
+langcode: es
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: plantilla_formulario_spanish
+label: 'Plantilla Formulario - Spanish'
+type: 'canonical_entities:node'
+pattern: '[node:field_header_title]'
+selection_criteria:
+  43d106ed-b1c5-4bbd-9c79-af681aa39992:
+    id: node_type
+    bundles:
+      page_form_template: page_form_template
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 43d106ed-b1c5-4bbd-9c79-af681aa39992
+  f7ffdbb1-c9dd-40c5-996f-50b3e48314e1:
+    id: language
+    langcodes:
+      es: es
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: f7ffdbb1-c9dd-40c5-996f-50b3e48314e1
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Idioma

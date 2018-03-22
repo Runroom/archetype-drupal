@@ -1,0 +1,25 @@
+uuid: 20aa4b56-8342-44eb-8a63-05a7be8503c2
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.front_template
+  module:
+    - user
+id: node.front_template.teaser
+targetEntityType: node
+bundle: front_template
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_background_image: true
+  field_header_cta: true
+  field_header_subtitle: true
+  field_header_title: true
+  field_highlights_data: true
+  field_modules_list: true
+  langcode: true
