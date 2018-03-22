@@ -1,0 +1,22 @@
+uuid: 42a3a8ea-712b-439e-8473-ec0230a036e8
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - runroom
+_core:
+  default_config_hash: 80N66GdzEvwqi1m-_GZ-ulkk8AJG9beoXcZ4-pMVKjI
+id: runroom_content
+theme: runroom
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

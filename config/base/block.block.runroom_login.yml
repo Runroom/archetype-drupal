@@ -1,17 +1,17 @@
-uuid: 88f30847-da1f-4358-a368-b841963d7550
+uuid: 932c2b30-878b-4c94-97ab-cb880ca4a5ab
 langcode: en
 status: true
 dependencies:
   module:
     - user
   theme:
-    - stark
+    - runroom
 _core:
-  default_config_hash: 4QlSnWBcxxKMIFRM8sbu_MjSkcp3NjGgnVrc-lynQHI
-id: stark_login
-theme: stark
-region: sidebar_first
-weight: 0
+  default_config_hash: 862sIulDdHmF0vBU1s2j2_a_CwkxursrL0pIrMDzzOg
+id: runroom_login
+theme: runroom
+region: content
+weight: 10
 provider: null
 plugin: user_login_block
 settings:

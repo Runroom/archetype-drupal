@@ -1,16 +1,16 @@
-uuid: 996e1a72-8fc4-45f0-bbcd-96fd242c2cd3
+uuid: 5467012c-ee83-4413-ac4c-8ce80116c204
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - stark
+    - runroom
 _core:
-  default_config_hash: 5MNdk3fpMKx_xxBTcz2T11DL4XEU1H5SgHl8BsYdFsA
-id: stark_messages
-theme: stark
-region: highlighted
+  default_config_hash: YqKTtloWJ8FjLtfVNfrHaK6kVgxT67lC1cJ3j6i6WLo
+id: runroom_messages
+theme: runroom
+region: header
 weight: 0
 provider: null
 plugin: system_messages_block

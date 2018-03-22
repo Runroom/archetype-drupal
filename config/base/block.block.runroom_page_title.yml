@@ -1,14 +1,14 @@
-uuid: ebcad6ed-ffae-43a6-ba3d-e0059699ef92
+uuid: fe6c3b15-c82f-428d-88ae-4b16f3d524d9
 langcode: en
 status: true
 dependencies:
   theme:
-    - stark
+    - runroom
 _core:
-  default_config_hash: 8yptDf6WrXxeyevUz4nP5vfr7BtxQqCBMninhV2IJ1g
-id: stark_page_title
-theme: stark
-region: content
+  default_config_hash: Z3nlZUh2mSJP3apMrJWt-duS-aLyP79rcfu_0wpPmDs
+id: runroom_page_title
+theme: runroom
+region: header
 weight: -30
 provider: null
 plugin: page_title_block
