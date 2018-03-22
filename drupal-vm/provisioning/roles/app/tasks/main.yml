@@ -1,0 +1,5 @@
+---
+- name: Install composer vendors
+  composer:
+    no_dev: no
+    working_dir: /vagrant

@@ -97,6 +97,7 @@
     - { role: geerlingguy.elasticsearch, when: '"elasticsearch" in installed_extras' }
     - { role: geerlingguy.varnish, when: '"varnish" in installed_extras' }
     - { role: drupalvm.www, tags: ['webserver'] }
+    - { role: app }
     - { role: geerlingguy.drupal, tags: ['drupal'] }
 
     # Roles for security and stability on production.
