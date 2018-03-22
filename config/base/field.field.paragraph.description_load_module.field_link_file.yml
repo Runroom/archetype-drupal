@@ -1,0 +1,59 @@
+uuid: fb4fb61f-36e3-4087-b4bf-77906eeb97ac
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link_file
+    - paragraphs.paragraphs_type.description_load_module
+    - paragraphs.paragraphs_type.file_attach_module
+    - paragraphs.paragraphs_type.link_module
+  module:
+    - entity_reference_revisions
+id: paragraph.description_load_module.field_link_file
+field_name: field_link_file
+entity_type: paragraph
+bundle: description_load_module
+label: 'Enlace o Archivo adjunto'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      file_attach_module: file_attach_module
+      link_module: link_module
+    target_bundles_drag_drop:
+      file_attach_module:
+        enabled: true
+        weight: 11
+      description_load_module:
+        weight: 12
+        enabled: false
+      highlights_module_data:
+        weight: 13
+        enabled: false
+      highlights_single_data:
+        weight: 14
+        enabled: false
+      image_gallery:
+        weight: 15
+        enabled: false
+      link_module:
+        enabled: true
+        weight: 16
+      maps_module:
+        weight: 17
+        enabled: false
+      module_video:
+        weight: 18
+        enabled: false
+      text_image:
+        weight: 19
+        enabled: false
+      wysiwyg_module:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions

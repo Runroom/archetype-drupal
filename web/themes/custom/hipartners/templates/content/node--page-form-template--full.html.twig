@@ -1,0 +1,24 @@
+
+{% extends directory ~ '/templates/layout/hero/hero-page-with-card.html.twig' %}
+
+{% block image %}style="background-image: url('{{ file_url(content.field_background_image.0['#item'].entity.uri.value) }}');"{% endblock %}
+{% block mobileImage %}{{ content.field_background_image }}{% endblock %}
+{% block cardAttributes %}{% endblock %}
+
+{% block card %}
+    <h1 class="t-h1" itemprop="name">{{ content.field_header_title }}</h1>
+    <div class="Card--indent">
+        <div class="" itemprop="description">
+            {{ content.field_intro }}
+        </div>
+        <div class="form">
+            {{ content.field_contact_form }}
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    {{ content|without('field_background_image', 'field_contact_form', 'field_header_title', 'field_intro') }}
+
+    {{ attach_library('hipartners/form') }}
+{% endblock %}

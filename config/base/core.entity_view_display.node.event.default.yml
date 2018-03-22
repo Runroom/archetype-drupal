@@ -1,0 +1,61 @@
+uuid: 89409e98-f65b-4fde-be74-f9b1af58303d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.event.field_date
+    - field.field.node.event.field_date_2
+    - field.field.node.event.field_header_subtitle
+    - field.field.node.event.field_only_year
+    - node.type.event
+  module:
+    - datetime
+    - user
+id: node.event.default
+targetEntityType: node
+bundle: event
+mode: default
+content:
+  field_date:
+    weight: 102
+    label: hidden
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_date_2:
+    weight: 103
+    label: hidden
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_header_subtitle:
+    weight: 101
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_only_year:
+    weight: 104
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

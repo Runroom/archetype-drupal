@@ -1,0 +1,31 @@
+.Calendar-item {
+    border-bottom: 1px solid $c-border;
+    margin-bottom: space();
+    padding-bottom: space();
+
+    .Calendar-itemInfo {
+        .Calendar-itemName {
+            font-weight: 600;
+            margin-bottom: get-rems(8px);
+        }
+
+        .Calendar-itemLocation {
+            margin-bottom: get-rems(0);
+        }
+    }
+
+    .Calendar-itemDate {
+        .day, .year {
+            display: block;
+            margin-bottom: get-rems(8px);
+        }
+
+        @include breakpoint($s768) {
+            max-width: 160px;
+            min-width: 160px;
+            order: 2;
+            text-align: right;
+            width: 160px;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+uuid: 43fa1ebd-e17b-4e7f-88b5-1f6377401203
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date
+    - node.type.annual_governance_report
+  module:
+    - datetime
+id: node.annual_governance_report.field_date
+field_name: field_date
+entity_type: node
+bundle: annual_governance_report
+label: 'Fecha Publicación'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

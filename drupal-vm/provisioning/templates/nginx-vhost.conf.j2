@@ -1,0 +1,143 @@
+{% block server_redirect -%}
+{% if item.server_name_redirect is defined -%}
+server {
+    listen       80;
+    server_name  {{ item.server_name_redirect }};
+    return       301 $scheme://{{ item.server_name.split(' ')[0] }}$request_uri;
+}
+{% endif %}
+{% endblock %}
+
+server {
+    {% block server_begin -%}{% endblock %}
+
+    {% block server_basic -%}
+    listen {{ item.listen | default('80') }};
+    server_name {{ item.server_name }};
+    root {{ item.root }};
+    index {{ item.index | default('index.php index.html index.htm') }};
+    {% endblock %}
+
+    {% block server_logs -%}
+    {%- if item.access_log is defined -%}
+    access_log {{ item.access_log }};
+    {%- endif -%}
+    error_log {{ item.error_log|default('/var/log/nginx/error.log') }} info;
+    {% endblock %}
+
+{% if item.is_php is defined and item.is_php %}
+    {% block location_primary -%}
+    location / {
+        # Don't touch PHP for static content.
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+    {% endblock %}
+
+    {% block location_deny -%}
+    # Don't allow direct access to PHP files in the vendor directory.
+    location ~ /vendor/.*\.php$ {
+        deny all;
+        return 404;
+    }
+    # Allow "Well-Known URIs" as per RFC 5785
+    location ~* ^/.well-known/ {
+        allow all;
+    }
+    location ~ (^|/)\. {
+        return 403;
+    }
+    {% endblock %}
+
+    {% block location_drupal_legacy -%}
+    {% if drupal_major_version == 8 -%}
+    # Redirect common PHP files to their new locations.
+    location ~ ^((?!.*(?:core)).*)/(install.php|rebuild.php) {
+         return 301 $scheme://$host$1/core/$2$is_args$args;
+    }
+    {% endif %}
+    {% endblock %}
+
+    {% block location_php -%}
+    # Use fastcgi for all php files.
+    location ~ \.php$|^/update.php {
+        fastcgi_split_path_info ^(.+?\.php)(|/.*)$;
+        fastcgi_index index.php;
+        fastcgi_param SCRIPT_FILENAME $request_filename;
+        fastcgi_intercept_errors on;
+        fastcgi_read_timeout {{ php_max_execution_time }};
+        include fastcgi_params;
+        fastcgi_pass {{ php_fpm_listen }};
+    }
+    {% endblock %}
+
+    {% block location_rewrite -%}
+    location @rewrite {
+        rewrite ^ /index.php;
+    }
+    {% endblock %}
+
+    {% block location_image_styles -%}
+    location ~ ^/sites/.*/files/styles/ {
+        try_files $uri @rewrite;
+    }
+    location ~ ^(/[a-z\-]+)?/system/files/ {
+        try_files $uri /index.php?$query_string;
+    }
+    {% endblock %}
+
+    {% block location_favicon -%}
+    location = /favicon.ico {
+        log_not_found off;
+        access_log off;
+    }
+    {% endblock %}
+
+    {% block location_robots -%}
+    location = /robots.txt {
+        allow all;
+        log_not_found off;
+        access_log off;
+    }
+    {% endblock %}
+
+    {% block location_assets -%}
+    location ~* \.(js|css|png|jpg|jpeg|gif|ico)$ {
+        expires max;
+        log_not_found off;
+    }
+    {% endblock %}
+{% endif %}
+
+    {% block server_compression -%}
+    gzip on;
+    gzip_proxied any;
+    gzip_static on;
+    gzip_http_version 1.0;
+    gzip_disable "MSIE [1-6]\.";
+    gzip_vary on;
+    gzip_comp_level 6;
+    gzip_types
+        text/plain
+        text/css
+        text/xml
+        text/javascript
+        application/javascript
+        application/x-javascript
+        application/json
+        application/xml
+        application/xml+rss
+        application/xhtml+xml
+        application/x-font-ttf
+        application/x-font-opentype
+        image/svg+xml
+        image/x-icon;
+    gzip_buffers 16 8k;
+    gzip_min_length 512;
+    {% endblock %}
+
+    {% block server_end -%}{% endblock %}
+
+{% if item.extra_parameters is defined -%}
+    {{ item.extra_parameters|indent(4) }}
+{%- endif %}
+}

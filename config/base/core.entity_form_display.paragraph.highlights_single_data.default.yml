@@ -1,0 +1,33 @@
+uuid: fb78bc14-1b83-4934-8ad5-b142457efed1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.highlights_single_data.field_big_text
+    - field.field.paragraph.highlights_single_data.field_small_text
+    - paragraphs.paragraphs_type.highlights_single_data
+id: paragraph.highlights_single_data.default
+targetEntityType: paragraph
+bundle: highlights_single_data
+mode: default
+content:
+  field_big_text:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_small_text:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

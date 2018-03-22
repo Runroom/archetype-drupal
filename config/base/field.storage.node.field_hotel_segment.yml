@@ -1,0 +1,20 @@
+uuid: f5b22cf8-fbde-44d9-a135-3c6c16aec525
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_hotel_segment
+field_name: field_hotel_segment
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

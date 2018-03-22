@@ -1,0 +1,9 @@
+uuid: 9bbf1fec-f29a-4e59-b794-2cfbc4298392
+langcode: en
+status: true
+dependencies: {  }
+name: 'Hotel Segment'
+vid: hotel_segment
+description: 'Segmento al que pertenece el tipo de contenido Hotel'
+hierarchy: 0
+weight: 0

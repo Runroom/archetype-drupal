@@ -1,0 +1,8 @@
+uuid: 3c807ada-5893-4ba9-9727-ced3f6caebd6
+langcode: es
+status: true
+dependencies: {  }
+id: company
+label: 'Menú compañía'
+description: 'Menú de segundo nivel sobre Compañía'
+locked: false

@@ -1,0 +1,39 @@
+uuid: 9fad86b1-9e00-41b1-a8d1-6ffe5aaf1dc2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.basic_views_module.field_list
+    - field.field.paragraph.basic_views_module.field_module_title
+    - paragraphs.paragraphs_type.basic_views_module
+  module:
+    - paragraphs
+id: paragraph.basic_views_module.default
+targetEntityType: paragraph
+bundle: basic_views_module
+mode: default
+content:
+  field_list:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_module_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

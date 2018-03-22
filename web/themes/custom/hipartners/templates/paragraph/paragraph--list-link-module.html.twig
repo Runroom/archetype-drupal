@@ -1,0 +1,20 @@
+{% import directory ~ '/templates/helpers/macros.html.twig' as macros %}
+
+{% set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    'actualidad-links-block'
+] %}
+
+{% block paragraph %}
+    <div{{ attributes.addClass(classes) }}>
+        {% block content %}
+            {{ content.field_single_list }}
+
+            <a class="link link-right" href="{{ path(content.field_cta[0]['#url'].getRouteName(), content.field_cta[0]['#url'].getRouteParameters()) }}">
+                {{ content.field_cta[0]['#title'] }} {{ macros.icon('arrow') }}
+            </a>
+        {% endblock %}
+    </div>
+{% endblock paragraph %}

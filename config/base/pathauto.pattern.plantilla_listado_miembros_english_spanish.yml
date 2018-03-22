@@ -1,0 +1,34 @@
+uuid: 814efcbe-8280-4c99-87f3-55f141d9787a
+langcode: es
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: plantilla_listado_miembros_english_spanish
+label: 'Plantilla listado miembros English & Spanish'
+type: 'canonical_entities:node'
+pattern: '[node:menu-link:parents:join-path]/[node:field_header_title]'
+selection_criteria:
+  48af048b-c389-4cfa-9812-fee498060d07:
+    id: node_type
+    bundles:
+      list_team_members: list_team_members
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 48af048b-c389-4cfa-9812-fee498060d07
+  4000f5d6-41af-469e-8716-0228123cd512:
+    id: language
+    langcodes:
+      en: en
+      es: es
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: 4000f5d6-41af-469e-8716-0228123cd512
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Idioma

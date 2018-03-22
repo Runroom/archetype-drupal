@@ -1,0 +1,43 @@
+uuid: fe4b851b-b6c9-4227-8c78-ee0793ff3b0f
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.regulatory_announcement.field_date
+    - field.field.node.regulatory_announcement.field_file
+    - field.field.node.regulatory_announcement.field_overwrite_metatags
+    - node.type.regulatory_announcement
+  module:
+    - datetime
+    - file
+    - user
+id: node.regulatory_announcement.teaser
+targetEntityType: node
+bundle: regulatory_announcement
+mode: teaser
+content:
+  field_date:
+    type: datetime_default
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: european
+    third_party_settings: {  }
+  field_file:
+    type: file_default
+    weight: 1
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_overwrite_metatags: true
+  langcode: true

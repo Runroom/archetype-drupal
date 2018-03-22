@@ -1,0 +1,38 @@
+uuid: 27f99944-e22f-43ae-8e49-97ae38c36e49
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_modules_list
+    - node.type.page_form_template
+    - paragraphs.paragraphs_type.maps_module
+    - paragraphs.paragraphs_type.text_image
+  module:
+    - entity_reference_revisions
+id: node.page_form_template.field_modules_list
+field_name: field_modules_list
+entity_type: node
+bundle: page_form_template
+label: 'Listado Módulos'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      maps_module: maps_module
+      text_image: text_image
+    target_bundles_drag_drop:
+      image_gallery:
+        weight: 4
+        enabled: false
+      maps_module:
+        enabled: true
+        weight: 5
+      text_image:
+        enabled: true
+        weight: 6
+field_type: entity_reference_revisions

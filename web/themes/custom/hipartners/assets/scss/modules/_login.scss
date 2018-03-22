@@ -1,0 +1,38 @@
+.login-layout-container {
+    header {
+        background-color: $c-secondary;
+        position: relative;
+    }
+}
+
+form.user-login-form {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 3rem 3rem 23rem;
+    width: 100%;
+
+    > div {
+        height: auto;
+        margin: 10px 10px 0;
+        padding: 5px;
+        width: 100%;
+
+        > div,label, input {
+            display: block;
+
+            &.description { display: none; }
+        }
+
+        > label { padding-bottom: 5px; }
+        > input { width: 250px; }
+    }
+
+    div.form-actions {
+        input {
+            margin: 15px 15px 15px 0;
+            width: 100px;
+        }
+    }
+}

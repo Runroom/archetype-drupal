@@ -1,0 +1,18 @@
+uuid: 69e34d57-64c7-4c53-bff6-59570c61b745
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.emission_brochures
+id: node.emission_brochures.title
+field_name: title
+entity_type: node
+bundle: emission_brochures
+label: Título
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,10 @@
+uuid: ce7b4cac-78e9-4d65-be57-df3ffd2db417
+langcode: en
+status: true
+dependencies: {  }
+id: node__list_offer_template
+label: 'Content: Plantilla Listado Ofertas'
+tags:
+  image_src: '[node:field_background_image]'
+  description: '[node:field_intro]'
+  title: '[node:title] | HI Partners'

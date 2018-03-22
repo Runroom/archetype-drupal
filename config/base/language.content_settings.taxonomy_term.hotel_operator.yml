@@ -1,0 +1,16 @@
+uuid: 58a7b563-f0d7-411b-a2f1-90773c23226d
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.hotel_operator
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.hotel_operator
+target_entity_type_id: taxonomy_term
+target_bundle: hotel_operator
+default_langcode: current_interface
+language_alterable: true

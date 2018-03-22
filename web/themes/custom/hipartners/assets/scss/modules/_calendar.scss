@@ -1,0 +1,13 @@
+.Calendar {
+    .views-element-container {
+        .views-row {
+            &:last-child {
+                .Calendar-item {
+                    border-bottom: none;
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+}

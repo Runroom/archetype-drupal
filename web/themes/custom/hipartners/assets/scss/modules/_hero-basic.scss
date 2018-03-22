@@ -1,0 +1,32 @@
+section.hero-basic {
+    margin-bottom: space();
+    padding: space() 0 0;
+    position: relative;
+
+    @include breakpoint($s768) {
+        background-color: $c-secondary;
+        margin-bottom: space(2);
+        padding: space(4) space(0) space(3);
+        padding-top: space(6);
+        text-align: center;
+    }
+
+    @include breakpoint($s1200) { margin-bottom: space(3); }
+
+    .t-h1, .t-h2, .t-h4 {
+        color: $c-secondary;
+        margin-bottom: 0;
+
+        @include breakpoint($s768) {
+            color: $c-white;
+            margin-bottom: space();
+        }
+    }
+
+    .t-h1 {
+        margin: 0 auto;
+        max-width: 920px;
+    }
+
+    .t-h4 { @include marginBottomS; }
+}

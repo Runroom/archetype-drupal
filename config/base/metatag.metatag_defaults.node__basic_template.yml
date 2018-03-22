@@ -1,0 +1,8 @@
+uuid: 6c43060a-11a1-49fb-9097-f4eb2c7e7804
+langcode: en
+status: true
+dependencies: {  }
+id: node__basic_template
+label: 'Content: Plantilla Básica'
+tags:
+  title: '[node:field_header_title] | HI Partners'

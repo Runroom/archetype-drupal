@@ -1,0 +1,112 @@
+.Related {
+    .Related-title {
+        margin-bottom: space();
+        padding: 0 space();
+        position: relative;
+        text-align: left;
+        width: 100%;
+
+        @include breakpoint($s768) { margin-bottom: space(2); }
+
+        &::before {
+            left: 0;
+            margin: auto;
+            position: absolute;
+            right: 0;
+        }
+
+        @include breakpoint($s768) {
+            @include bottomCenterLine;
+
+            margin-bottom: space(3);
+            padding-left: space();
+            padding-right: space();
+            text-align: center;
+        }
+
+        @include breakpoint($s1440) { padding: 0; }
+    }
+
+    .Related-hotels {
+        display: flex;
+        flex-wrap: wrap;
+
+        .Related-hotelsItem {
+            align-items: flex-end;
+            color: $c-white;
+            cursor: pointer;
+            display: flex;
+            flex-wrap: wrap;
+            overflow: hidden;
+            padding: 30vw space() space();
+            position: relative;
+            text-decoration: none;
+            width: 100%;
+
+            @include breakpoint($s640) {
+                padding: 22vw space() space();
+                width: 50%;
+            }
+
+            @include breakpoint($s960) {
+                padding: 18vw space(2) space(2);
+            }
+
+            &:first-child {
+                display: none;
+
+                @include breakpoint($s640) { display: inline-block; }
+            }
+
+            .background {
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                bottom: 0;
+                left: 0;
+                position: absolute;
+                right: 0;
+                top: 0;
+                transform: scale(1.02);
+                z-index: 1;
+
+                &::before {
+                    @include veilUp;
+
+                    content: '';
+                    height: 100%;
+                    left: 0;
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                    z-index: 2;
+                }
+            }
+
+            .subtitle, .title {
+                color: $c-white;
+                display: block;
+                position: relative;
+                width: 100%;
+                z-index: 3;
+
+                @include transition(all, .2s, ease-out);
+            }
+
+            .subtitle {
+                margin-bottom: space(.25);
+            }
+
+            .title {
+                margin-bottom: 0;
+            }
+
+            &:hover .title,
+            &:hover .subtitle {
+                @include breakpoint($s960) {
+                    transform: translateY(-5px);
+                }
+            }
+        }
+    }
+}

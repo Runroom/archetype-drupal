@@ -1,0 +1,20 @@
+{% set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    'hero-highlights-pill'
+] %}
+
+
+{% block paragraph %}
+    <section{{ attributes.addClass(classes) }}>
+
+        <p class="figure">
+            {{ content.field_big_text }}
+        </p>
+        <p class="t-h4 value">
+            {{ content.field_small_text }}
+        </p>
+
+    </section>
+{% endblock paragraph %}

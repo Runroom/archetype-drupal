@@ -1,0 +1,28 @@
+uuid: 9099447f-7df7-48e3-ba57-501abf067f6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hotel_brand
+    - node.type.hotel
+    - taxonomy.vocabulary.hotel_brand
+id: node.hotel.field_hotel_brand
+field_name: field_hotel_brand
+entity_type: node
+bundle: hotel
+label: Marca
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      hotel_brand: hotel_brand
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,22 @@
+uuid: 836f3075-7176-4246-ab19-6aacf9873714
+langcode: es
+status: true
+dependencies:
+  module:
+    - contact_storage
+third_party_settings:
+  contact_storage:
+    submit_text: Solicitar
+    show_preview: true
+    disabled_form_message: 'This contact form has been disabled.'
+    maximum_submissions_user: 0
+    page_autoreply_format: plain_text
+id: form_apply_job
+label: 'Formulario de aplicación a oferta'
+recipients:
+  - jagundez@runroom.com
+  - jobs@hipartners.es
+reply: ''
+weight: 0
+message: ''
+redirect: ''

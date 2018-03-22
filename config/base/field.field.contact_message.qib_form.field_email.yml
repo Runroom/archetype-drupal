@@ -1,0 +1,19 @@
+uuid: 30cb0aca-0e34-4691-bf2e-fb5f68d75a8e
+langcode: es
+status: true
+dependencies:
+  config:
+    - contact.form.qib_form
+    - field.storage.contact_message.field_email
+id: contact_message.qib_form.field_email
+field_name: field_email
+entity_type: contact_message
+bundle: qib_form
+label: Email
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

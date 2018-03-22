@@ -1,0 +1,16 @@
+uuid: 9eef8b8b-8baa-4155-88ad-5a1ddb4e71f9
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.regulatory_announcement
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.regulatory_announcement
+target_entity_type_id: node
+target_bundle: regulatory_announcement
+default_langcode: current_interface
+language_alterable: true

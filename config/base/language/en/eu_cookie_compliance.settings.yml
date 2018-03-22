@@ -1,0 +1,9 @@
+exclude_paths: "/admin\r\n/admin/*\r\n/batch\r\n/node/add*\r\n/node/*/*\r\n/user/*/*"
+popup_agreed:
+  value: "<p>Gracias por aceptar el uso de cookies</p>\r\n\r\n<p>Ya puede ocultar este mensaje o saber más sobre el uso de cookies.</p>\r\n"
+popup_agree_button_message: Accept
+popup_disagree_button_message: 'No acepto'
+popup_find_more_button_message: 'Más info'
+popup_hide_button_message: Aceptar
+popup_info:
+  value: '<p>We inform you that we use cookies to offer our services and collect statistical information. You can change the settings or get more information in <a href="/node/24/" target="_blank">Cookies Policy.</a> </p>'

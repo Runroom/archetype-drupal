@@ -1,0 +1,16 @@
+uuid: 3ddbc4b6-803d-4351-9f73-6caf35780851
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.maps_module
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: paragraph.maps_module
+target_entity_type_id: paragraph
+target_bundle: maps_module
+default_langcode: current_interface
+language_alterable: true

@@ -1,0 +1,24 @@
+uuid: 23e07e45-9244-4187-b082-05b770cdff99
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.job_offer_template
+  module:
+    - user
+id: node.job_offer_template.teaser
+targetEntityType: node
+bundle: job_offer_template
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_cta_text: true
+  field_header_subtitle: true
+  field_header_title: true
+  field_modules_list: true
+  field_overwrite_metatags: true
+  langcode: true

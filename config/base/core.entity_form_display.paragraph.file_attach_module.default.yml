@@ -1,0 +1,34 @@
+uuid: 46c33a6a-36ac-4f21-aeb1-f0282ef073bf
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.file_attach_module.field_file
+    - field.field.paragraph.file_attach_module.field_text_file
+    - paragraphs.paragraphs_type.file_attach_module
+  module:
+    - file
+id: paragraph.file_attach_module.default
+targetEntityType: paragraph
+bundle: file_attach_module
+mode: default
+content:
+  field_file:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_text_file:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

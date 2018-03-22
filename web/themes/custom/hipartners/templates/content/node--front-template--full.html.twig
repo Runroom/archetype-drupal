@@ -1,0 +1,33 @@
+{% extends directory ~ '/templates/layout/hero/hero-page-horizontal-card.html.twig' %}
+
+{% block attributes %}
+    {{ attributes.addClass('front-template') }}
+{% endblock %}
+
+{% block image %}style="background-image: url('{{ file_url(content.field_background_image.0['#item'].entity.uri.value) }}');"{% endblock %}
+{% block mobileImage %}style="background-image: url('{{ file_url(content.field_background_image.0['#item'].entity.uri.value) }}');"{% endblock %}
+
+{% block heroCopies %}
+    <h1 class="t-h1 t-h1--home t-white">
+        {{ content.field_header_title }}
+    </h1>
+    <div class="lead">
+        {{ content.field_header_small_subtitle |raw }}
+    </div>
+    {% if content.field_header_cta['#items'] %}
+        <a class="btn main" href="{{ path(content.field_header_cta[0]['#url'].getRouteName(), content.field_header_cta[0]['#url'].getRouteParameters()) }}">
+            <span>
+                {{ content.field_header_cta[0]['#title'] }}
+            </span>
+        </a>
+    {% endif %}
+
+{% endblock %}
+
+{% block heroHighlights %}
+    {{ content.field_highlights_data }}
+{% endblock %}
+
+{% block content %}
+    {{ content.field_modules_list }}
+{% endblock %}

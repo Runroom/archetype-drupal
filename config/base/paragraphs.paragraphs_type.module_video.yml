@@ -1,0 +1,7 @@
+uuid: f007f180-6d7e-4dd5-999b-a2f0938303ae
+langcode: en
+status: true
+dependencies: {  }
+id: module_video
+label: 'Módulo Vídeo'
+behavior_plugins: {  }

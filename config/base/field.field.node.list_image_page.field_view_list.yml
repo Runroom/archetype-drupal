@@ -1,0 +1,51 @@
+uuid: b231796e-2a26-4654-9de5-66f29f77917d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_view_list
+    - node.type.list_image_page
+  module:
+    - viewsreference
+id: node.list_image_page.field_view_list
+field_name: field_view_list
+entity_type: node
+bundle: list_image_page
+label: 'Listado ( vista )'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: 0
+  plugin_types:
+    block: block
+    default: 0
+    page: 0
+    feed: 0
+  preselect_views:
+    annual_governance_reports: annual_governance_reports
+    annual_remuneration_reports: annual_remuneration_reports
+    annual_reports: annual_reports
+    events: events
+    presentations: presentations
+    press_release: press_release
+    regulatory_announcement: regulatory_announcement
+    block_content: 0
+    contact_messages: 0
+    content: 0
+    content_recent: 0
+    files: 0
+    frontpage: 0
+    redirect: 0
+    redirect_404: 0
+    taxonomy_term: 0
+    user_admin_people: 0
+    view_hotel_list: 0
+    who_s_new: 0
+    who_s_online: 0
+field_type: viewsreference

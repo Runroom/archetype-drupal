@@ -1,0 +1,19 @@
+uuid: 46286115-110b-429c-b7df-bcdb2093f1f4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_module_title
+    - paragraphs.paragraphs_type.list_title_link_module
+id: paragraph.list_title_link_module.field_module_title
+field_name: field_module_title
+entity_type: paragraph
+bundle: list_title_link_module
+label: 'Título del listado'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

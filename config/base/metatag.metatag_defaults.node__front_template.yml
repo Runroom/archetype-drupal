@@ -1,0 +1,10 @@
+uuid: 0566984c-38d1-4423-8e3f-0b77e5591985
+langcode: es
+status: true
+dependencies: {  }
+id: node__front_template
+label: 'Content: Plantilla Portada'
+tags:
+  image_src: '[node:field_background_image]'
+  description: '[node:field_header_subtitle]'
+  title: '[node:field_header_title] | HI Partners'

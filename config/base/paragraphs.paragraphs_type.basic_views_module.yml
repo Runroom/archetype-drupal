@@ -1,0 +1,9 @@
+uuid: 06eea4c0-3fe6-4ad5-a4be-926a43d51b25
+langcode: es
+status: true
+dependencies: {  }
+id: basic_views_module
+label: 'Módulo Listado Sencillo'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

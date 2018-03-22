@@ -1,0 +1,21 @@
+uuid: 0d75e606-f9e2-42f4-9bbe-2f85cf2905d1
+langcode: es
+status: true
+dependencies:
+  module:
+    - contact
+id: contact_message.field_linkedin
+field_name: field_linkedin
+entity_type: contact_message
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

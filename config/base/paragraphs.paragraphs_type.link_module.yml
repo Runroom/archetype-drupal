@@ -1,0 +1,11 @@
+uuid: 6f6bd690-b7f6-496b-9d3d-c20e053ab6b1
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'file:file:6a57e761-6997-4b19-8c34-54ecb82e6530'
+id: link_module
+label: 'Enlace para módulo'
+icon_uuid: 6a57e761-6997-4b19-8c34-54ecb82e6530
+description: ''
+behavior_plugins: {  }

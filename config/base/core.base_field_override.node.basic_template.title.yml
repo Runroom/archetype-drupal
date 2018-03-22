@@ -1,0 +1,18 @@
+uuid: eb5e99c7-723a-4b87-90c1-a41c7e197f24
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.basic_template
+id: node.basic_template.title
+field_name: title
+entity_type: node
+bundle: basic_template
+label: 'Título Interno'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

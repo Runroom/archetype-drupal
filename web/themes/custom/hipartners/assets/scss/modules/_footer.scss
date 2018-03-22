@@ -1,0 +1,78 @@
+footer {
+    background-color: $c-secondary;
+    padding: 0 space(1.75);
+
+    .Footer-main {
+        align-items: center;
+        justify-content: space-between;
+        padding: space(2) 0 space(.25);
+
+        @include breakpoint($s768) {
+            display: flex;
+            padding: space(2) 0;
+        }
+
+        .Footer-mainLogo {
+            display: block;
+            margin-bottom: space(2);
+
+            img {
+                display: block;
+                margin: 0 auto;
+                width: get-rems(160px);
+
+                @include breakpoint($s768) { width: auto; }
+            }
+
+            @include breakpoint($s768) { margin-bottom: 0; }
+        }
+
+        .Footer-mainLinks {
+            text-align: center;
+
+            @include breakpoint($s768) { text-align: right; }
+
+            li {
+                display: block;
+                margin-bottom: space(.5);
+                margin-left: 0;
+
+                @include breakpoint($s768) {
+                    display: inline-block;
+                    margin-bottom: 0;
+                    margin-left: space(1.5);
+                }
+            }
+
+            a {
+                @include caps;
+                @include transition($type: border-bottom, $time: .3s, $ease: ease-in-out);
+
+                border-bottom: 1px solid transparent;
+                color: $c-white;
+                font-size: get-rems(11px);
+                text-decoration: none;
+
+                @include breakpoint($s960) {
+                    @include hoverLink;
+                }
+            }
+        }
+    }
+
+    .Footer-copyright {
+        @include caps;
+
+        color: $c-neutro;
+        display: block;
+        font-size: get-rems(11px);
+        line-height: 1.6;
+        padding: space() 0;
+        text-align: center;
+
+        @include breakpoint($s768) {
+            line-height: 1.4;
+            text-align: left;
+        }
+    }
+}

@@ -1,0 +1,80 @@
+uuid: 6349af87-59ae-4710-9e47-926c9ba8b47d
+langcode: es
+status: true
+dependencies:
+  config:
+    - contact.form.form_apply_job
+    - field.field.contact_message.form_apply_job.field_attach_file
+    - field.field.contact_message.form_apply_job.field_email
+    - field.field.contact_message.form_apply_job.field_linkedin
+    - field.field.contact_message.form_apply_job.field_name
+    - field.field.contact_message.form_apply_job.field_phone
+    - field.field.contact_message.form_apply_job.field_terms
+  module:
+    - file
+id: contact_message.form_apply_job.default
+targetEntityType: contact_message
+bundle: form_apply_job
+mode: default
+content:
+  field_attach_file:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_email:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_linkedin:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_name:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_phone:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_terms:
+    weight: 5
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  subject:
+    weight: 0
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+hidden:
+  langcode: true
+  mail: true
+  message: true
+  name: true

@@ -1,0 +1,19 @@
+uuid: 1b06520b-bdd5-4e7f-a3a6-6c2892e08926
+langcode: es
+status: true
+dependencies:
+  module:
+    - contact
+    - telephone
+id: contact_message.field_phone
+field_name: field_phone
+entity_type: contact_message
+type: telephone
+settings: {  }
+module: telephone
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

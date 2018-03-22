@@ -1,0 +1,22 @@
+uuid: 95f19343-7141-44a0-98a8-47350b64f782
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - hipartners
+_core:
+  default_config_hash: 5MNdk3fpMKx_xxBTcz2T11DL4XEU1H5SgHl8BsYdFsA
+id: hipartners_messages
+theme: hipartners
+region: help
+weight: -2
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

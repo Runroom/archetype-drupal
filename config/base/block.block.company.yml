@@ -1,0 +1,41 @@
+uuid: 5d5fedba-212c-44b8-a58e-620de51e4eab
+langcode: es
+status: false
+dependencies:
+  config:
+    - system.menu.company
+  module:
+    - block_visibility_groups
+    - ctools
+    - menu_block
+  theme:
+    - hipartners
+id: company
+theme: hipartners
+region: content
+weight: -2
+provider: null
+plugin: 'menu_block:company'
+settings:
+  id: 'menu_block:company'
+  label: 'Menú compañía'
+  provider: menu_block
+  label_display: visible
+  level: 1
+  depth: 0
+  expand: 1
+  parent: 'company:'
+  suggestion: company
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      basic_template: basic_template
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

@@ -1,0 +1,34 @@
+uuid: 157379d1-565a-46d6-9f8c-e6f5b41b21a5
+langcode: es
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: presentacion_spanish_english
+label: 'Presentacion Spanish & English'
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  06f07387-20f3-4ffd-81c5-5a3c12ced8cf:
+    id: node_type
+    bundles:
+      presentation: presentation
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 06f07387-20f3-4ffd-81c5-5a3c12ced8cf
+  5d2e0f18-ef86-4e57-83d7-b249789b99f0:
+    id: language
+    langcodes:
+      en: en
+      es: es
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: 5d2e0f18-ef86-4e57-83d7-b249789b99f0
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

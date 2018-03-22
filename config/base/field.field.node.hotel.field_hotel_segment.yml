@@ -1,0 +1,28 @@
+uuid: 0122f361-7f4d-4662-911f-83ec781a9f95
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hotel_segment
+    - node.type.hotel
+    - taxonomy.vocabulary.hotel_segment
+id: node.hotel.field_hotel_segment
+field_name: field_hotel_segment
+entity_type: node
+bundle: hotel
+label: Segmento
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      hotel_segment: hotel_segment
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

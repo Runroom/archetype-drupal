@@ -1,0 +1,21 @@
+uuid: a075ed56-51fc-4b26-861a-48fc38b33b28
+langcode: es
+status: true
+dependencies:
+  module:
+    - contact_storage
+third_party_settings:
+  contact_storage:
+    submit_text: 'I Agree'
+    show_preview: true
+    disabled_form_message: 'This contact form has been disabled.'
+    maximum_submissions_user: 0
+    page_autoreply_format: plain_text
+id: qib_form
+label: 'Formulario QIB'
+recipients:
+  - jagundez@runroom.com
+reply: ''
+weight: 0
+message: ''
+redirect: ''

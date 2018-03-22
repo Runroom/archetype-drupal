@@ -1,0 +1,27 @@
+uuid: 6b63d687-7907-4473-b213-0165a0b5cf76
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_file
+    - node.type.annual_report
+  module:
+    - file
+id: node.annual_report.field_file
+field_name: field_file
+entity_type: node
+bundle: annual_report
+label: 'Archivo adjunto'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'report/[date:custom:Y]-[date:custom:m]'
+  file_extensions: pdf
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

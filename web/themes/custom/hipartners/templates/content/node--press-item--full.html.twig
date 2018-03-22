@@ -1,0 +1,45 @@
+{% extends directory ~ '/templates/layout/hero/hero-page-basic.html.twig' %}
+{% import directory ~ '/templates/helpers/macros.html.twig' as macros %}
+
+{% block attributes %}
+    {{ attributes.addClass('basic-template') }}
+{% endblock %}
+
+{% block heroCopies %}
+    <h1 class="t-h2" itemprop="name">{{ content.field_header_title }}</h1>
+    <p class="t-h4">{{ content.field_date }} | {{ content.field_news_type }}</p>
+
+    {% if content.field_file[0]  %}
+
+        {% set url = file_url(content.field_file[0]['#file'].getFileUri()) %}
+
+        {% set size = content.field_file[0]['#file'].getSize() %}
+
+        <a class="btn hollow-light" target="_blank" href="{{ url }}">
+            <span>
+                {{ 'Download PDF' |t }} - {{ size | format_bytes }}
+            </span>
+        </a>
+
+    {% endif %}
+
+{% endblock %}
+
+{% block content %}
+
+    {% set url = path('entity.node.canonical', {'node': '51'}) %}
+
+    <div class="u-wrapper u-flex--s768 u-flex--justifyCenter">
+        <div class="u-flex--s768-12 u-flex--s1024-9 u-flex--s1440-8">
+            <a class="link back desktop" href="{{ url }}">{{ macros.icon('arrow-lang') }}{{ 'Go to press list'|t }}</a>
+        </div>
+    </div>
+
+    <div class="u-wrapper u-flex--justifyCenter u-flex--s768">
+        <div class="main-content u-flex--s768-8 u-flex--s1024-7 u-flex--s1440-6">
+            {{ content.field_modules_list }}
+        </div>
+    </div>
+
+
+{% endblock %}

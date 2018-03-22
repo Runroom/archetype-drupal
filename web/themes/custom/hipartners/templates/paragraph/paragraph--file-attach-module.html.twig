@@ -1,0 +1,28 @@
+{% import directory ~ '/templates/helpers/macros.html.twig' as macros %}
+
+{% set classes = [
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_class,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  'Archive-item',
+  'item-presentation',
+  'anim',
+  'anim--down'
+] %}
+
+{% block paragraph %}
+    <div{{ attributes.addClass(classes) }}>
+        {% block content %}
+        <span class="Archive-itemLink t-h3">
+            {{ content.field_text_file }}
+            {% set size = content.field_file[0]['#file'].getSize() %}
+            {% set url_file = file_url(content.field_file[0]['#file'].get('uri').getValue()[0]['value']) %}
+        </span>
+        <div class="Archive-itemInfo">
+            {% if content.field_file[0]  %}
+            <a class="link download" target="_blank" href="{{ url_file }}">{{ 'Download PDF' |t }} - {{ size | format_bytes }}{{ macros.icon('download') }}</a>
+            {% endif %}
+        </div>
+        {% endblock %}
+    </div>
+{% endblock paragraph %}

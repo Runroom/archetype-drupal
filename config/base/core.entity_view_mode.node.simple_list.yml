@@ -1,0 +1,10 @@
+uuid: 0d58b336-a8e6-41c0-a23e-c78472fc83d2
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.simple_list
+label: 'Simple list'
+targetEntityType: node
+cache: true

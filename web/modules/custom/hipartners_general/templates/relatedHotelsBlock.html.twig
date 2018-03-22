@@ -1,0 +1,9 @@
+<section class="Related">
+    <div class="Related-wrapper">
+        <h2 class="Related-title">{{ 'Continue discovering our hotels'|t }}</h2>
+        <div class="Related-hotels">
+            {% if previous is not null %}{{ previous }}{% endif %}
+            {% if next is not null %}{{ next }}{% endif %}
+        </div>
+    </div>
+</section>

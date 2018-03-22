@@ -1,0 +1,10 @@
+{%  set listClass = (element[0].contents['#name'] == 'events') ? 'Calendar' : 'Archive' %}
+
+<div class="{{listClass}}">
+
+    {% for item in items %}
+
+    {{ item.content }}
+
+    {% endfor %}
+</div>

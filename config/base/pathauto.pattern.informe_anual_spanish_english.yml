@@ -1,0 +1,34 @@
+uuid: 78835c9b-6593-4aa1-b4d1-c1c254715703
+langcode: es
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: informe_anual_spanish_english
+label: 'Informe anual Spanish   & English'
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  f05445ef-f71f-424b-bfab-ec6e5263de74:
+    id: node_type
+    bundles:
+      annual_report: annual_report
+    negate: false
+    context_mapping:
+      node: node
+    uuid: f05445ef-f71f-424b-bfab-ec6e5263de74
+  2701301d-ad96-4194-988f-e4a1656b383f:
+    id: language
+    langcodes:
+      en: en
+      es: es
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: 2701301d-ad96-4194-988f-e4a1656b383f
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

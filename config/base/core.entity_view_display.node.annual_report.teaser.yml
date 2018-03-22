@@ -1,0 +1,43 @@
+uuid: e6cfa66b-ff57-4c3e-a1fd-56a34c1c0028
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.annual_report.field_date
+    - field.field.node.annual_report.field_file
+    - field.field.node.annual_report.field_overwrite_metatags
+    - node.type.annual_report
+  module:
+    - datetime
+    - file
+    - user
+id: node.annual_report.teaser
+targetEntityType: node
+bundle: annual_report
+mode: teaser
+content:
+  field_date:
+    type: datetime_default
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: european
+    third_party_settings: {  }
+  field_file:
+    type: file_default
+    weight: 2
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_overwrite_metatags: true
+  langcode: true

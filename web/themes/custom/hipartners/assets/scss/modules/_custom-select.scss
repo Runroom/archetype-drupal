@@ -1,0 +1,116 @@
+.custom-select {
+    margin-bottom: space(2);
+    position: relative;
+
+    &::after,
+    &::before {
+        position: absolute;
+        right: get-rems(1px);
+        transform: rotate(180deg);
+        width: get-rems(54px);
+    }
+
+    &::after {
+        content: url('/themes/custom/hipartners/assets/img/flecha-menu.svg');
+        text-align: center;
+        top: get-rems(22px);
+        transform: rotate(180deg);
+    }
+
+    &::before {
+        background-color: $c-squares;
+        content: '';
+        height: get-rems(54px);
+        top: get-rems(1px);
+    }
+
+    .header {
+        border: 1px solid $c-border;
+        cursor: pointer;
+        display: block;
+        font-size: 100%;
+        height: get-rems(56px);
+        line-height: get-rems(44px);
+        margin: 0;
+        overflow: hidden;
+        padding: get-rems(5px) space(.5);
+        padding-right: get-rems(60px);
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        @include breakpoint($s768) {
+            padding-left: space();
+        }
+    }
+
+    &-dropdown {
+        background-color: $c-white;
+        border: 1px solid $c-border;
+        display: none;
+        max-height: get-rems(180px);
+        overflow-y: scroll;
+        padding: space(.25) 0;
+        position: absolute;
+        width: 100%;
+        z-index: 9;
+
+        .down & {
+            border-top: 0;
+            top: 100%;
+        }
+
+        .up & {
+            border-bottom: 0;
+            bottom: 100%;
+        }
+
+        @include breakpoint($s768) {
+            max-height: get-rems(220px);
+            padding: space(.5) 0;
+        }
+    }
+
+    .item {
+        font-weight: 600;
+        letter-spacing: 4px;
+        line-height: 1.1;
+        margin: space(.25) 0;
+        text-transform: uppercase;
+        width: 100%;
+
+        @include fluid-type(11px, 12px);
+
+        &.selected {
+            background-color: $c-squares;
+        }
+
+        a {
+            display: block;
+            padding: space(.45) space(.75);
+        }
+
+        @include breakpoint($s768) {
+            &.selected {
+                background-color: transparent;
+            }
+
+            &:hover {
+                background-color: $c-squares;
+            }
+
+            a {
+                padding: space(.5) space();
+            }
+        }
+    }
+
+    a,
+    span,
+    h2 {
+        color: $c-secondary;
+        font-family: $t-defaultFallback;
+        text-decoration: none;
+
+        .fonts-loaded & { font-family: $t-default; }
+    }
+}

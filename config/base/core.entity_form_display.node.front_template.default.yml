@@ -1,0 +1,187 @@
+uuid: 9c310b50-c9fd-4959-af24-4aacea6a0668
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.front_template.field_background_image
+    - field.field.node.front_template.field_header_cta
+    - field.field.node.front_template.field_header_small_subtitle
+    - field.field.node.front_template.field_header_title
+    - field.field.node.front_template.field_highlights_data
+    - field.field.node.front_template.field_modules_list
+    - field.field.node.front_template.field_overwrite_metatags
+    - image.style.thumbnail
+    - node.type.front_template
+  module:
+    - field_group
+    - image
+    - link
+    - metatag
+    - paragraphs
+    - path
+third_party_settings:
+  field_group:
+    group_header:
+      children:
+        - field_header_title
+        - field_header_small_subtitle
+        - field_background_image
+        - field_header_cta
+        - field_highlights_data
+      parent_name: group_front_tabs
+      weight: 20
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Cabecera
+    group_front_tabs:
+      children:
+        - group_header
+        - group_body
+      parent_name: ''
+      weight: 20
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: horizontal
+      label: 'Front Tabs'
+    group_body:
+      children:
+        - field_modules_list
+      parent_name: group_front_tabs
+      weight: 21
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Cuerpo
+id: node.front_template.default
+targetEntityType: node
+bundle: front_template
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_background_image:
+    weight: 34
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_header_cta:
+    weight: 35
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_header_small_subtitle:
+    weight: 33
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_header_title:
+    weight: 32
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_highlights_data:
+    type: entity_reference_paragraphs
+    weight: 36
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_modules_list:
+    weight: 36
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: select
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    type: paragraphs
+    region: content
+  field_overwrite_metatags:
+    weight: 37
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 15
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 16
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }

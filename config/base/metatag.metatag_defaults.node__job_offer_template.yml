@@ -1,0 +1,9 @@
+uuid: f7c42364-4739-4fe6-99a0-b14ec142920c
+langcode: en
+status: true
+dependencies: {  }
+id: node__job_offer_template
+label: 'Content: Plantilla Detalle de Oferta'
+tags:
+  description: '[node:field_header_subtitle]'
+  title: '[node:field_header_title] | HI Partners'

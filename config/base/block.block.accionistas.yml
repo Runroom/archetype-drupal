@@ -1,0 +1,41 @@
+uuid: 57de9f5e-dfce-4e7e-952a-cd76a805ad9c
+langcode: es
+status: false
+dependencies:
+  config:
+    - system.menu.accionistas
+  module:
+    - block_visibility_groups
+    - ctools
+    - menu_block
+  theme:
+    - hipartners
+id: accionistas
+theme: hipartners
+region: content
+weight: -3
+provider: null
+plugin: 'menu_block:accionistas'
+settings:
+  id: 'menu_block:accionistas'
+  label: 'Menú accionistas'
+  provider: menu_block
+  label_display: visible
+  level: 1
+  depth: 0
+  expand: 1
+  parent: 'accionistas:'
+  suggestion: accionistas
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      basic_template: basic_template
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

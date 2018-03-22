@@ -1,0 +1,16 @@
+uuid: 365cda02-3cdf-48d9-b4ed-21e606f9a8a3
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.page_form_template
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.page_form_template
+target_entity_type_id: node
+target_bundle: page_form_template
+default_langcode: current_interface
+language_alterable: true

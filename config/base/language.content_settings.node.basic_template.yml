@@ -1,0 +1,16 @@
+uuid: 76fceb11-b642-44d3-8106-122a1426956b
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.basic_template
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.basic_template
+target_entity_type_id: node
+target_bundle: basic_template
+default_langcode: current_interface
+language_alterable: true

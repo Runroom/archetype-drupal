@@ -1,0 +1,25 @@
+<div class="hotels-row">
+    <a class="detail-list-card anim anim--box" href="{{ url }}">
+        <article{{ attributes }} itemscope itemtype="http://schema.org/Hotel">
+            <meta itemprop="image" content="{{ host ~ file_url(content.field_hotel_background_image.0['#item'].entity.uri.value) }}">
+            <section{{ content_attributes }} class="bg-section">
+                <div class="detail-list-card--bg" style="background-image: url('{{ file_url(content.field_hotel_background_image.0['#item'].entity.uri.value) }}');"></div>
+                <div class="veil">
+                    <span class="t-h5" itemprop="address">{{ content.field_hotel_place }}</span>
+                    <h2 class="node-title t-h2" itemprop="name">{{ label }}</h2>
+                </div>
+            </section>
+            <div class="start-room">
+                <div class="hotel-stars">
+                    <span class="t-h4">{{ 'Category'|t }}</span>
+                    {{ content.field_hotel_category }}
+                </div>
+                <div class="hotel-rooms info">
+                    <span class="t-h4">{{ 'Rooms'|t }}</span>
+                    <p>{{ content.field_hotel_rooms }}</p>
+                </div>
+            </div>
+            <div class="hotel-intro info anim anim--text" itemprop="description">{{ content.field_hotel_intro }}</div>
+        </article>
+    </a>
+</div>

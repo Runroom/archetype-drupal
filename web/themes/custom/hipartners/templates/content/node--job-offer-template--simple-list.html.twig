@@ -1,0 +1,8 @@
+{% import directory ~ '/templates/helpers/macros.html.twig' as macros %}
+
+<a href="{{ path('entity.node.canonical', {'node': node.id}) }}" {{ attributes }} class="List-item">
+    <div{{ content_attributes }} class="List-itemContainer">
+        <span class="List-link t-h3">{{ content.field_header_title }}</span>
+        <span class="List-arrow">{{ macros.icon('arrow') }}</span>
+    </div>
+</a>

@@ -1,0 +1,9 @@
+uuid: 86ca1675-8606-4ead-9b5b-5d658eeecf86
+langcode: es
+status: true
+dependencies: {  }
+id: node__annual_report
+label: 'Content: Informe Anual'
+tags:
+  robots: noindex
+  title: '[node:title] | HI Partners'

@@ -1,0 +1,25 @@
+uuid: 134fae0c-c750-4c18-939b-2a19a4799855
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date
+    - node.type.emission_brochures
+  module:
+    - datetime
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: node.emission_brochures.field_date
+field_name: field_date
+entity_type: node
+bundle: emission_brochures
+label: 'Fecha Publicación'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

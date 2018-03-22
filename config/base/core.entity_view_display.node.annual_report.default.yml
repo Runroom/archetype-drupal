@@ -1,0 +1,49 @@
+uuid: 96637e17-b42a-46d2-9e10-ab59c8052b59
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.annual_report.field_date
+    - field.field.node.annual_report.field_file
+    - field.field.node.annual_report.field_overwrite_metatags
+    - node.type.annual_report
+  module:
+    - datetime
+    - file
+    - metatag
+    - user
+id: node.annual_report.default
+targetEntityType: node
+bundle: annual_report
+mode: default
+content:
+  field_date:
+    weight: 101
+    label: hidden
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_file:
+    weight: 102
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_overwrite_metatags:
+    weight: 103
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

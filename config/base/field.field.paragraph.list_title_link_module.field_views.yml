@@ -1,0 +1,48 @@
+uuid: f845d21a-41e0-4780-98c4-eb41c7b5f8f4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_views
+    - paragraphs.paragraphs_type.list_title_link_module
+  module:
+    - viewsreference
+id: paragraph.list_title_link_module.field_views
+field_name: field_views
+entity_type: paragraph
+bundle: list_title_link_module
+label: Listado
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: 0
+  plugin_types:
+    block: block
+    default: 0
+    page: 0
+    feed: 0
+  preselect_views:
+    press_release: press_release
+    regulatory_announcement: regulatory_announcement
+    annual_reports: 0
+    block_content: 0
+    contact_messages: 0
+    content: 0
+    content_recent: 0
+    files: 0
+    frontpage: 0
+    presentations: 0
+    redirect: 0
+    redirect_404: 0
+    taxonomy_term: 0
+    user_admin_people: 0
+    view_hotel_list: 0
+    who_s_new: 0
+    who_s_online: 0
+field_type: viewsreference

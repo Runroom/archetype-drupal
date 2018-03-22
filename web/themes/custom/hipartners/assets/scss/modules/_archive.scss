@@ -1,0 +1,18 @@
+.Archive {
+    @include marginBottomL;
+
+    .views-element-container {
+        .views-row {
+            &:last-child {
+                .Archive-item {
+                    border-bottom: none;
+
+                    &.no-margin {
+                        margin-bottom: 0;
+                        padding-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

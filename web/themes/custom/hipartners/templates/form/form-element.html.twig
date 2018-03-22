@@ -1,0 +1,31 @@
+{% set classes = [
+    'js-form-item',
+    'form-item',
+    'js-form-type-' ~ type|clean_class,
+    'form-item-' ~ name|clean_class,
+    'js-form-item-' ~ name|clean_class,
+    title_display not in ['after', 'before'] ? 'form-no-label',
+    disabled == 'disabled' ? 'form-disabled',
+    errors ? 'form-item--error',
+] %}
+
+{% if type == 'managed_file' %}
+    <div{{ attributes.addClass(classes) }}>
+        <!-- <div class="custom-label js-custom-inputfile"> -->
+          {# label #}
+        <!-- </div> -->
+        {{ children }}
+        {% if errors %}
+            {{ errors }}
+        {% endif %}
+    </div>
+{% else %}
+    <div{{ attributes.addClass(classes) }}>
+        {{ children }}
+        {% if errors %}
+            {{ errors }}
+        {% endif %}
+        {{ label }}
+        <div class="bar"></div>
+    </div>
+{% endif %}

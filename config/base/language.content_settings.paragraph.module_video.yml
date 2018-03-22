@@ -1,0 +1,16 @@
+uuid: 180522c0-c9de-4b82-a438-e19ba9b26c32
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.module_video
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: paragraph.module_video
+target_entity_type_id: paragraph
+target_bundle: module_video
+default_langcode: current_interface
+language_alterable: true

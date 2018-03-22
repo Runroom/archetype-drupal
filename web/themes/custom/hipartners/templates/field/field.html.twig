@@ -1,0 +1,23 @@
+{% if label_hidden %}
+
+    {% for item in items %}
+
+        {{ item.content }}
+
+    {% endfor %}
+
+{% else %}
+
+    <div{{ attributes }}>
+
+        <div{{ title_attributes }}>{{ label }}</div>
+
+        {% for item in items %}
+
+            {{ item.content }}
+
+        {% endfor %}
+
+    </div>
+
+{% endif %}

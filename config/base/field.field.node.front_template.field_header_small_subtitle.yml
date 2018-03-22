@@ -1,0 +1,19 @@
+uuid: aeff7d5e-0e87-4515-95b7-51ee9fe71b22
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_small_subtitle
+    - node.type.front_template
+id: node.front_template.field_header_small_subtitle
+field_name: field_header_small_subtitle
+entity_type: node
+bundle: front_template
+label: 'Subtitulo Cabecera'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

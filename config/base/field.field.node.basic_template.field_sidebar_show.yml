@@ -1,0 +1,23 @@
+uuid: acfccff7-c550-4f44-8c7f-36d5d6df284d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sidebar_show
+    - node.type.basic_template
+id: node.basic_template.field_sidebar_show
+field_name: field_sidebar_show
+entity_type: node
+bundle: basic_template
+label: 'Mostrar menú lateral'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

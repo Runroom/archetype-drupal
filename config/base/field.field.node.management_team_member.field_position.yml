@@ -1,0 +1,19 @@
+uuid: 29948c3a-083c-4471-a531-ddc4910c0442
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_position
+    - node.type.management_team_member
+id: node.management_team_member.field_position
+field_name: field_position
+entity_type: node
+bundle: management_team_member
+label: Cargo
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,9 @@
+uuid: 18581226-8006-42cc-8428-22fbf1483a2a
+langcode: es
+status: true
+dependencies: {  }
+id: node__regulatory_announcement
+label: 'Content: Hecho Relevante'
+tags:
+  robots: noindex
+  title: '[node:title] | HI Partners'

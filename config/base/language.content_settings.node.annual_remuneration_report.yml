@@ -1,0 +1,16 @@
+uuid: 1be8734d-0f66-437d-ae3e-9716928c7263
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.annual_remuneration_report
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.annual_remuneration_report
+target_entity_type_id: node
+target_bundle: annual_remuneration_report
+default_langcode: current_interface
+language_alterable: true

@@ -1,0 +1,19 @@
+uuid: d0e73230-555f-4911-93b5-455246f5ebc7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_title
+    - node.type.basic_template
+id: node.basic_template.field_header_title
+field_name: field_header_title
+entity_type: node
+bundle: basic_template
+label: 'Título de cabecera'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

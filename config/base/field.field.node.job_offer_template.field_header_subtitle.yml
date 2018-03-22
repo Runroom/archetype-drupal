@@ -1,0 +1,19 @@
+uuid: 87013caa-c60e-4355-9cff-ab9087f80cd0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_subtitle
+    - node.type.job_offer_template
+id: node.job_offer_template.field_header_subtitle
+field_name: field_header_subtitle
+entity_type: node
+bundle: job_offer_template
+label: 'Subtítulo de Cabecera'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

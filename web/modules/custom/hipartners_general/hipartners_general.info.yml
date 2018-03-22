@@ -1,0 +1,5 @@
+name: Hi partners General
+type: module
+description: Hi partners custom functionalities
+core: 8.x
+package: hipartners

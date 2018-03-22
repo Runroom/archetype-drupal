@@ -1,0 +1,18 @@
+uuid: ba738c1d-5098-420d-a136-8ed9be1f47a0
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.list_page
+id: node.list_page.title
+field_name: title
+entity_type: node
+bundle: list_page
+label: 'Título Interno'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

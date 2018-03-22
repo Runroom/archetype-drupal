@@ -1,0 +1,10 @@
+uuid: 53d0152c-3f73-4996-8a6e-4bd6de9c1ac6
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.teaser_reference
+label: 'Teaser Reference'
+targetEntityType: node
+cache: true

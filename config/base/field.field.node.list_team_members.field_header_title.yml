@@ -1,0 +1,19 @@
+uuid: efd6f7c4-36ba-4c61-9d32-b34c4bb4b105
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_title
+    - node.type.list_team_members
+id: node.list_team_members.field_header_title
+field_name: field_header_title
+entity_type: node
+bundle: list_team_members
+label: 'Título de cabecera'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

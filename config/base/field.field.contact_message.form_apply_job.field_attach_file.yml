@@ -1,0 +1,27 @@
+uuid: beac776e-a9d1-4fa9-a5d2-d844df48cd0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.form_apply_job
+    - field.storage.contact_message.field_attach_file
+  module:
+    - file
+id: contact_message.form_apply_job.field_attach_file
+field_name: field_attach_file
+entity_type: contact_message
+bundle: form_apply_job
+label: 'Adjuntar CV'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf'
+  max_filesize: 2MB
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

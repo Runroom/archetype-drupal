@@ -1,0 +1,22 @@
+uuid: d67b3ba8-3a34-4dd1-8e3f-d85f85688b0c
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.quarterly_results
+id: node.quarterly_results.promote
+field_name: promote
+entity_type: node
+bundle: quarterly_results
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

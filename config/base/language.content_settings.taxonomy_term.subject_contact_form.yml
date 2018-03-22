@@ -1,0 +1,16 @@
+uuid: 31ea3ed3-f219-43ae-921c-5f5666061b9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.subject_contact_form
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.subject_contact_form
+target_entity_type_id: taxonomy_term
+target_bundle: subject_contact_form
+default_langcode: current_interface
+language_alterable: true

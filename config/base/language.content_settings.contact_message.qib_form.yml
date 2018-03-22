@@ -1,0 +1,11 @@
+uuid: 5cfecb8d-4b0c-483e-bbb9-9a39fbfa94af
+langcode: es
+status: true
+dependencies:
+  config:
+    - contact.form.qib_form
+id: contact_message.qib_form
+target_entity_type_id: contact_message
+target_bundle: qib_form
+default_langcode: site_default
+language_alterable: false

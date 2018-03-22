@@ -1,0 +1,14 @@
+{% import directory ~ '/templates/helpers/macros.html.twig' as macros %}
+
+{% for item in items %}
+    <div class="Stars">
+        {% set value = item.content['#plain_text'] ? item.content['#plain_text'] : item.content['#title'] %}
+        <ul class="Stars-list" itemprop="starRating" itemscope itemtype="http://schema.org/Rating">
+            <meta itemprop="ratingValue" content="{{ value }}">
+            {% for i in 1..value|number_format %}
+            <li>{{ macros.icon('star') }}</li>
+            {% endfor %}
+        </ul>
+        {% if value == '5GL' %}<span class="Stars-extra">{{ 'Luxury'|t }}</span>{% endif %}
+    </div>
+{% endfor %}

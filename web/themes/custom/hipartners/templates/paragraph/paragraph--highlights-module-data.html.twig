@@ -1,0 +1,18 @@
+{% set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    'hero-highlights',
+    'u-flex--s1024',
+    'u-wrapper',
+    'u-flex--justifyCenter',
+] %}
+
+
+{% block paragraph %}
+    <section{{ attributes.addClass(classes) }}>
+        <div class="u-flex--s0 u-flex--s1024-10 u-flex--wrap u-flex--justifyCenter">
+            {{ content }}
+        </div>
+    </section>
+{% endblock paragraph %}

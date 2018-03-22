@@ -1,0 +1,25 @@
+<style>
+    .hero.has-image {
+        background-image: url('{{ image }}');
+    }
+
+    .hero.has-imagesidebar {
+        background-image: none;
+    }
+    @media (min-width: 768px) {
+        .hero.has-imagesidebar {
+            background-image: url('{{ image }}');
+        }
+    }
+</style>
+
+<article{% block attributes %}{% endblock %}>
+    <section class="hero {% block bgimage %}{% endblock %}">
+        <span class="parallax-veil"></span>
+        <div class="u-wrapper">
+            {% block heroCopies %}{% endblock %}
+        </div>
+    </section>
+    {% block content %}
+    {% endblock %}
+</article>

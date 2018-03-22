@@ -1,0 +1,18 @@
+uuid: b3c4f8f9-152a-4217-94c5-265a57e12712
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.quarterly_results
+id: node.quarterly_results.title
+field_name: title
+entity_type: node
+bundle: quarterly_results
+label: Título
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

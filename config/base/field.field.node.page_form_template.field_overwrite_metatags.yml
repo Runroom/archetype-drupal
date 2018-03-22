@@ -1,0 +1,23 @@
+uuid: 687386e9-db6e-4471-abc0-bbe5f0b5acaf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_overwrite_metatags
+    - node.type.page_form_template
+  module:
+    - metatag
+id: node.page_form_template.field_overwrite_metatags
+field_name: field_overwrite_metatags
+entity_type: node
+bundle: page_form_template
+label: 'Metatags Sobreescritos'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 'a:0:{}'
+default_value_callback: ''
+settings: {  }
+field_type: metatag

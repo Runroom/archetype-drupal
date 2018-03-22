@@ -1,0 +1,8 @@
+uuid: 4fd867d4-1fa3-42c4-b8d1-07da65d06b6c
+langcode: es
+status: true
+dependencies: {  }
+id: node__list_team_members
+label: 'Content: Plantilla Listado Miembros de Equipo Directivo'
+tags:
+  title: '[node:field_header_title] | HI Partners'

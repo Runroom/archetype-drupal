@@ -1,0 +1,16 @@
+uuid: c9a74860-db71-4568-94d0-429a7db6f013
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.emission_brochures
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.emission_brochures
+target_entity_type_id: node
+target_bundle: emission_brochures
+default_langcode: current_interface
+language_alterable: true

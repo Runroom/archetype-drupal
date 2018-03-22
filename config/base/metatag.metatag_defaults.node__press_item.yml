@@ -1,0 +1,8 @@
+uuid: 284817ba-982c-4af2-9922-7fa3b064cbc0
+langcode: es
+status: true
+dependencies: {  }
+id: node__press_item
+label: 'Content: Plantilla Noticia/Nota de prensa'
+tags:
+  title: '[node:field_header_title] | HI Partners'

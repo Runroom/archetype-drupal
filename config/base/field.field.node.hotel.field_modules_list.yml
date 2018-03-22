@@ -1,0 +1,45 @@
+uuid: fcf99adc-ad51-4e37-b8a5-340205c0e53c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_modules_list
+    - node.type.hotel
+    - paragraphs.paragraphs_type.image_gallery
+    - paragraphs.paragraphs_type.maps_module
+    - paragraphs.paragraphs_type.module_video
+    - paragraphs.paragraphs_type.text_image
+  module:
+    - entity_reference_revisions
+id: node.hotel.field_modules_list
+field_name: field_modules_list
+entity_type: node
+bundle: hotel
+label: 'Listado Módulos'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      text_image: text_image
+      image_gallery: image_gallery
+      maps_module: maps_module
+      module_video: module_video
+    target_bundles_drag_drop:
+      text_image:
+        enabled: true
+        weight: -7
+      image_gallery:
+        enabled: true
+        weight: -6
+      maps_module:
+        enabled: true
+        weight: -5
+      module_video:
+        enabled: true
+        weight: 7
+field_type: entity_reference_revisions

@@ -1,0 +1,14 @@
+{% import directory ~ '/templates/helpers/macros.html.twig' as macros %}
+
+<div class="Archive-item item-press anim anim--down">
+    <a class="Archive-itemLink t-h3" href="{{ url }}">{{ content.field_header_title }}</a>
+    <div class="Archive-itemInfo">
+        <span class="date t-h4">{{ content.field_date }}</span>
+        <span class="type t-h4">{{ content.field_news_type }}</span>
+        {% if content.field_file[0]  %}
+            {% set fileUrl = file_url(content.field_file[0]['#file'].getFileUri()) %}
+            {% set size = content.field_file[0]['#file'].getSize() %}
+            <a class="link download" target="_blank" href="{{ fileUrl }}">{{ 'Download PDF' |t }} - {{ size | format_bytes }}{{ macros.icon('download') }}</a>
+        {% endif %}
+    </div>
+</div>

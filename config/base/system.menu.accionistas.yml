@@ -1,0 +1,8 @@
+uuid: 95020895-e3e5-4514-84b7-37c7beebf8e0
+langcode: es
+status: true
+dependencies: {  }
+id: accionistas
+label: 'Menú accionistas'
+description: 'Menú de segundo nivel sobre Accionistas e Inversores'
+locked: false

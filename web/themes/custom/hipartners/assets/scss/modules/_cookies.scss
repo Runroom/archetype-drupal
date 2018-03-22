@@ -1,0 +1,26 @@
+.cookies-policy {
+    background-color: $c-neutroLight;
+    box-shadow: 0 -1px 4px 0 rgba(0, 0, 0, .12);
+    color: $c-black;
+    padding: space();
+
+    .popup-text {
+        text-align: left;
+    }
+
+    .cookies-btn {
+        text-align: right;
+    }
+
+    .btn {
+        margin-top: space();
+
+        @include breakpoint($s768) {
+            margin-top: 0;
+        }
+    }
+}
+
+.sliding-popup-bottom {
+    background: none;
+}

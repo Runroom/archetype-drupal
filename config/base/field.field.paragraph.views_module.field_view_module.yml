@@ -1,0 +1,63 @@
+uuid: b81e5e01-dd1f-4615-a0b0-9342da47c759
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_view_module
+    - paragraphs.paragraphs_type.list_title_link_module
+    - paragraphs.paragraphs_type.views_module
+  module:
+    - entity_reference_revisions
+id: paragraph.views_module.field_view_module
+field_name: field_view_module
+entity_type: paragraph
+bundle: views_module
+label: Listados
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      list_title_link_module: list_title_link_module
+    target_bundles_drag_drop:
+      list_title_link_module:
+        enabled: true
+        weight: 13
+      description_load_module:
+        weight: 14
+        enabled: false
+      file_attach_module:
+        weight: 15
+        enabled: false
+      highlights_module_data:
+        weight: 16
+        enabled: false
+      highlights_single_data:
+        weight: 17
+        enabled: false
+      image_gallery:
+        weight: 18
+        enabled: false
+      link_module:
+        weight: 19
+        enabled: false
+      maps_module:
+        weight: 20
+        enabled: false
+      module_video:
+        weight: 21
+        enabled: false
+      text_image:
+        weight: 22
+        enabled: false
+      views_module:
+        weight: 23
+        enabled: false
+      wysiwyg_module:
+        weight: 24
+        enabled: false
+field_type: entity_reference_revisions

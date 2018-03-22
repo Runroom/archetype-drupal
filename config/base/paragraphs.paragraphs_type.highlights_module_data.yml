@@ -1,0 +1,7 @@
+uuid: 6d96d623-940c-48ee-b4bf-cc3b9064250e
+langcode: es
+status: true
+dependencies: {  }
+id: highlights_module_data
+label: 'Módulo datos destacados'
+behavior_plugins: {  }
