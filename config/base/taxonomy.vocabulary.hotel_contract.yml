@@ -1,9 +1,0 @@
-uuid: 9d6c6c55-218a-41a3-ae1b-88536440860d
-langcode: en
-status: true
-dependencies: {  }
-name: 'Hotel Contract'
-vid: hotel_contract
-description: 'Tipo de contrato que tiene el tipo de contenido Hotel'
-hierarchy: 0
-weight: 0

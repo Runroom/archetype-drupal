@@ -1,9 +1,0 @@
-uuid: 95164567-b140-460d-9331-6c536707dd63
-langcode: es
-status: true
-dependencies: {  }
-name: 'Bloques personalizados disponibles'
-vid: custom_block_available
-description: 'Bloques Personalizados disponibles desde Plantillas de contenido'
-hierarchy: 0
-weight: 0

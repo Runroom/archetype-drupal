@@ -1,9 +1,0 @@
-uuid: 52e780ea-1e54-4665-acf7-d74e19e7c210
-langcode: es
-status: true
-dependencies: {  }
-id: views_module
-label: 'Módulo Listados Completo'
-icon_uuid: null
-description: ''
-behavior_plugins: {  }

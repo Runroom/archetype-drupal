@@ -1,7 +1,0 @@
-uuid: 3f10a9ba-8c93-4786-b73d-995943483b5a
-langcode: es
-status: true
-dependencies: {  }
-id: description_load_module
-label: 'Módulo Descripción + Enlaces/Descarga'
-behavior_plugins: {  }
