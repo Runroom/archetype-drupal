@@ -10,8 +10,8 @@ vagrant_synced_folders:
 # Composer project settings.
 drupal_build_makefile: false
 drupal_build_composer_project: false
-drupal_build_composer: false
-drupal_composer_path: false
+drupal_build_composer: true
+drupal_composer_path: /vagrant/composer.json
 drupal_composer_install_dir: /vagrant
 drupal_core_path: "{{ drupal_composer_install_dir }}/web"
 drupal_composer_dependencies: []
@@ -34,4 +34,4 @@ installed_extras:
   - pimpmylog
   - xdebug
 
-php_memory_limit: "512M"
+php_memory_limit: 512M
