@@ -1,0 +1,25 @@
+---
+- name: Configure /etc/mailname (Debian).
+  copy:
+    content: "{{ hostname_fqdn }}\n"
+    dest: /etc/mailname
+  when: ansible_os_family == 'Debian'
+
+- name: Add hostname to /etc/hosts.
+  lineinfile:
+    dest: /etc/hosts
+    regexp: '.*\t{{ hostname_short }}$'
+    line: "127.0.0.1\t{{ hostname_fqdn }}\t{{ hostname_short }}"
+    state: present
+    unsafe_writes: "{{ hostname_unsafe_writes }}"
+
+- name: Configure hostname.
+  copy:
+    content: "{{ (ansible_os_family == 'Debian') | ternary(hostname_short, hostname_fqdn) }}\n"
+    dest: /etc/hostname
+    unsafe_writes: "{{ hostname_unsafe_writes }}"
+  register: set_hostname
+
+- name: Set the hostname for current session.
+  shell: hostname --file /etc/hostname
+  when: set_hostname.changed
