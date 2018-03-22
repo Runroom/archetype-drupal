@@ -1,6 +1,6 @@
-{
+    {
     "name": "drupal-composer/drupal-project",
-    "description": "HI-PARTNERS Drupal 8 project by RUNROOM manage with composer",
+    "description": "runroom drupal archetype",
     "type": "project",
     "license": "GPL-2.0+",
     "authors": [
@@ -81,14 +81,6 @@
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
             "drush/contrib/{$name}": ["type:drupal-drush"]
-        },
-        "patches": {
-            "drupal/metatag": {
-                "Attempt to create a base field bundle override of field Metatags without an entity_type": "https://www.drupal.org/files/issues/metatag-n2899752-3.patch"
-            },
-            "drupal/better_formats": {
-                "Settings have no affect on the field if it is in a Paragraph bundle": "https://www.drupal.org/files/issues/11887466-fix-for-tmgmt-module-1.patch"
-            }
         }
     }
 }
