@@ -1,5 +1,5 @@
-vagrant_hostname: hipartners.local
-vagrant_machine_name: hipartners
+vagrant_hostname: drupal.local
+vagrant_machine_name: drupal
 vagrant_ip: 192.168.88.66
 vagrant_synced_folder_default_type: ''
 vagrant_synced_folders:
