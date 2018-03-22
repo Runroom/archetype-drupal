@@ -1,7 +1,7 @@
 name: Runroom
 type: theme
 description: 'Runroom base theme'
-version: VERSION
+version: 1.0.0
 core: 8.x
 base theme: stable
 libraries:
