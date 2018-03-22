@@ -1,0 +1,6 @@
+global-styling:
+  css:
+    theme:
+      css/styles.min.css: { minified: true }
+  js:
+    js/app.min.js: { minified: true }
