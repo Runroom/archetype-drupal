@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "3cab6cb6f0b9527e3a583bdc030a1fe0",
+    "content-hash": "395b0d4f94d43925f7fe76581df3c2f2",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -5890,6 +5890,38 @@
                 "webdriver"
             ],
             "time": "2018-01-07T19:17:08+00:00"
+        },
+        {
+            "name": "deployer/dist",
+            "version": "v4.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/deployphp/distribution.git",
+                "reference": "5e15a86f8be9b78018670aa169bae35d1d5d4d5b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/deployphp/distribution/zipball/5e15a86f8be9b78018670aa169bae35d1d5d4d5b",
+                "reference": "5e15a86f8be9b78018670aa169bae35d1d5d4d5b",
+                "shasum": ""
+            },
+            "bin": [
+                "dep"
+            ],
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Anton Medvedev",
+                    "email": "anton@medv.io"
+                }
+            ],
+            "description": "Deployer Phar Distribution",
+            "homepage": "https://deployer.org",
+            "time": "2017-07-24T16:28:02+00:00"
         },
         {
             "name": "doctrine/instantiator",

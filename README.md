@@ -1,1 +1,1 @@
-# HI Partners
+# Archetype Drupal

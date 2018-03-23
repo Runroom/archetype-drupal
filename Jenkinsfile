@@ -12,10 +12,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh "if [ ! -f composer.phar ]; then curl -sS https://getcomposer.org/installer | php${PHP_VERSION}; fi"
-                sh "php${PHP_VERSION} composer.phar self-update"
+                sh "php${PHP_VERSION} ${COMPOSER} self-update"
                 withEnv(['SYMFONY_ENV=test']) {
-                    sh "php${PHP_VERSION} composer.phar install -an --prefer-dist --no-progress --apcu-autoloader"
+                    sh "php${PHP_VERSION} ${COMPOSER} install --prefer-dist --no-progress --no-interaction --classmap-authoritative"
                 }
             }
         }

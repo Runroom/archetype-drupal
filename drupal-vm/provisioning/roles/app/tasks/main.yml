@@ -1,5 +1,19 @@
 ---
+- name: Enable forward agent
+  lineinfile:
+    dest: '/etc/ssh/ssh_config'
+    regexp: '#(\s*)ForwardAgent.*'
+    line: ' \1ForwardAgent yes'
+    backrefs: yes
+
+- name: Modify .bashrc
+  become: false
+  lineinfile:
+    dest: '/home/{{ drupalvm_user }}/.bashrc'
+    line: export PATH=/vagrant/vendor/bin:$PATH
+
 - name: Install composer vendors
+  become: false
   composer:
     no_dev: no
     working_dir: /vagrant
