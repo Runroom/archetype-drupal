@@ -1,0 +1,6 @@
+development:
+    user: runroom
+    host: 192.168.1.219
+    stage: development
+    deploy_path: /home/runroom/drupal
+    branch: master
