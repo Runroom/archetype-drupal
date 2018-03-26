@@ -15,10 +15,6 @@ application:
   overrides:
     config:
       skip-validate-site-uuid: true
-  remote:
-    port: '22'
-    user: 'drupal'
-    type: 'ssh'
   options:
     learning: false
     generate-inline: false
