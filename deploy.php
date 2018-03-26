@@ -8,6 +8,7 @@ set('repository', 'git@bitbucket.org:runroom/archetype-drupal.git');
 set('shared_dirs', ['web/sites/default/files']);
 set('shared_files', ['web/sites/default/settings.php', 'web/robots.txt', 'web/.htaccess']);
 set('writable_dirs', ['web/sites/default/files']);
+set('clear_paths', ['web/sites/development.services.yml']);
 
 set('ssh_type', 'native');
 set('ssh_multiplexing', true);
@@ -23,6 +24,7 @@ task('app', function () {
     run('{{bin/php}} {{drupal_console}} update:entities -y --root={{release_path}}/web');
 })->setPrivate();
 
+after('deploy:update_code', 'deploy:clear_paths');
 after('deploy:vendors', 'deploy:writable');
 after('deploy:writable', 'app');
 after('deploy:failed', 'deploy:unlock');
