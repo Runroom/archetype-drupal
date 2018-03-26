@@ -1,11 +1,8 @@
-uuid: fe6c3b15-c82f-428d-88ae-4b16f3d524d9
 langcode: en
 status: true
 dependencies:
   theme:
     - runroom
-_core:
-  default_config_hash: Z3nlZUh2mSJP3apMrJWt-duS-aLyP79rcfu_0wpPmDs
 id: runroom_page_title
 theme: runroom
 region: header
