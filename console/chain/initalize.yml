@@ -7,3 +7,5 @@ commands:
       force: true
     arguments:
       profile: minimal
+  - command: config:import
+  - command: cache:rebuild
