@@ -15,10 +15,10 @@ set('ssh_multiplexing', true);
 
 set('allow_anonymous_stats', false);
 set('drupal_console', '{{release_path}}/vendor/bin/drupal');
-set('composer_options', '{{composer_action}} --no-dev --prefer-dist --no-progress --no-interaction'/* --classmap-authoritative'*/);
+set('composer_options', '{{composer_action}} --no-dev --prefer-dist --no-progress --no-interaction --apcu-autoloader');
 
 task('app', function () {
-    // run('{{bin/php}} {{drupal_console}} deploy');
+//    run('{{bin/php}} {{drupal_console}} deploy');
 })->setPrivate();
 
 after('deploy:update_code', 'deploy:clear_paths');
