@@ -1,11 +1,8 @@
-uuid: cd354986-e725-4e4a-9536-2e2de605f908
 langcode: en
 status: true
 dependencies:
   theme:
     - runroom
-_core:
-  default_config_hash: ik4PTMlBD0MWansnSMpSXq5SUlWRJ1IVVt6C7AIbQmc
 id: runroom_local_actions
 theme: runroom
 region: content

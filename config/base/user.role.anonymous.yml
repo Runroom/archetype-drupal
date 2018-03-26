@@ -1,9 +1,6 @@
-uuid: 907a5215-9271-4ed9-899f-9b4e091cab7e
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
 id: anonymous
 label: 'Anonymous user'
 weight: 0

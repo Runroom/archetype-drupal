@@ -1,0 +1,8 @@
+command:
+  name: deploy
+  description: 'Initialize site'
+commands:
+  - command: cache:rebuild
+  - command: update:execute
+  - command: config:import
+  - command: update:entities
