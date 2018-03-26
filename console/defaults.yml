@@ -8,3 +8,6 @@ defaults:
       options:
         remove-uuid: true
         remove-config-hash: true
+    import:
+      options:
+        skip-uuid: true
