@@ -17,13 +17,6 @@ drupal_build_composer: false
 drupal_composer_install_dir: /vagrant
 drupal_composer_dependencies: []
 
-# Drupal install settings.
-drupal_site_name: Archetype Drupal
-drupal_install_site: true
-drupal_install_profile: minimal
-drupal_site_install_extra_args:
-  - --config-dir=/vagrant/config/base
-
 # Other overrides.
 php_version: "7.1"
 
@@ -34,7 +27,6 @@ installed_extras:
   - adminer
   - drupalconsole
   - drush
-  - drupal
   - mailhog
   - nodejs
   - pimpmylog
