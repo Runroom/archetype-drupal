@@ -18,7 +18,7 @@ set('drupal_console', '{{release_path}}/vendor/bin/drupal');
 set('composer_options', '{{composer_action}} --no-dev --prefer-dist --no-progress --no-interaction --apcu-autoloader');
 
 task('app', function () {
-//    run('{{bin/php}} {{drupal_console}} deploy');
+    run('cd {{release_path}} && {{bin/php}} {{drupal_console}} deploy');
 })->setPrivate();
 
 after('deploy:update_code', 'deploy:clear_paths');
