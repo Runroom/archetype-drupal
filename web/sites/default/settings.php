@@ -25,7 +25,7 @@ $settings['file_scan_ignore_directories'] = ['node_modules', 'bower_components']
 $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
 $settings['rebuild_access'] = FALSE;
 $settings['skip_permissions_hardening'] = TRUE;
-$settings['trusted_host_patterns'] = ['drupal.local'];
+$settings['trusted_host_patterns'] = ['^drupal\.local$'];
 $settings['install_profile'] = 'minimal';
 
 // DEV ONLY
