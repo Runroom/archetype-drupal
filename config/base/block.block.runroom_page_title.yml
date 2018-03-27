@@ -6,7 +6,7 @@ dependencies:
 id: runroom_page_title
 theme: runroom
 region: header
-weight: -30
+weight: -1
 provider: null
 plugin: page_title_block
 settings:

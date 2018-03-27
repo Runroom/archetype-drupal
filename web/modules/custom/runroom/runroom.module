@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains runroom.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function runroom_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the runroom module.
+    case 'help.page.runroom':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Runroom Default Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function runroom_theme() {
+  return [
+    'runroom' => [
+      'render element' => 'children',
+    ],
+  ];
+}

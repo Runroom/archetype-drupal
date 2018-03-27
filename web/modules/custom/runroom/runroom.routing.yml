@@ -1,0 +1,8 @@
+
+runroom.home_controller:
+  path: '/home'
+  defaults:
+    _controller: '\Drupal\runroom\Controller\HomeController::show'
+    _title: 'All the Drupals are belong to us'
+  requirements:
+    _permission: 'access content'
