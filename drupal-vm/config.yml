@@ -15,7 +15,6 @@ drupal_build_makefile: false
 drupal_build_composer_project: false
 drupal_build_composer: false
 drupal_composer_install_dir: /vagrant
-drupal_core_path: "{{ drupal_composer_install_dir }}/web"
 drupal_composer_dependencies: []
 
 # Drupal install settings.
@@ -28,8 +27,13 @@ drupal_site_install_extra_args:
 # Other overrides.
 php_version: "7.1"
 
+# Drush
+configure_drush_aliases: false
+
 installed_extras:
   - adminer
+  - drupalconsole
+  - drush
   - drupal
   - mailhog
   - nodejs
