@@ -1,6 +1,6 @@
 command:
   name: deploy
-  description: 'Initialize site'
+  description: 'Deploy'
 commands:
   - command: cache:rebuild
   - command: update:execute
