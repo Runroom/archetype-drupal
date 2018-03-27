@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'HTML Text'
+format: html_text
+weight: 0
+filters: {  }
