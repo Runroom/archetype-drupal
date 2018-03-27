@@ -11,3 +11,9 @@
   composer:
     no_dev: no
     working_dir: /vagrant
+
+- name: Install drupal
+  become: false
+  command: drupal initialize
+  args:
+    chdir: /vagrant
