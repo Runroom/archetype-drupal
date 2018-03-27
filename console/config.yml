@@ -12,6 +12,8 @@ application:
     config: 'true'
     chains: 'true'
     mappings: 'true'
+  remote:
+    port: 22
   overrides:
     config:
       skip-validate-site-uuid: true
