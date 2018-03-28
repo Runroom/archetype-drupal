@@ -4,6 +4,7 @@ module:
   ckeditor: 0
   contact: 0
   contextual: 0
+  ctools: 0
   dblog: 0
   devel: 0
   dynamic_page_cache: 0
@@ -18,7 +19,6 @@ module:
   node: 0
   page_cache: 0
   path: 0
-  quickedit: 0
   runroom: 0
   shortcut: 0
   system: 0
