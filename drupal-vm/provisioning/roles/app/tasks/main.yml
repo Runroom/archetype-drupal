@@ -6,14 +6,28 @@
     line: ' \1ForwardAgent yes'
     backrefs: yes
 
+- name: Add .bash_aliases
+  template:
+    src: .bash_aliases
+    dest: '/home/{{ drupalvm_user }}/.bash_aliases'
+
 - name: Install composer vendors
   become: false
   composer:
     no_dev: no
     working_dir: /vagrant
 
-- name: Install drupal
-  become: false
-  command: drupal initialize
-  args:
-    chdir: /vagrant
+- name: Drop database
+  command: drush sql-drop
+  tags:
+    - initialize
+
+- name: Create database
+  shell: 'drush sql-cli < /vagrant/{{ drupal_db_file }}'
+  tags:
+    - initialize
+
+- name: Import configuration
+  command: drupal local
+  tags:
+    - import
