@@ -1,0 +1,23 @@
+command:
+  sql:
+    dump:
+      options:
+        structure-tables-key: common
+        skip-tables-key: common
+
+sql:
+  structure-tables:
+    common:
+      - cache
+      - cachetags
+      - 'cache_*'
+      - history
+      - 'search_*'
+      - 'sessions'
+      - 'watchdog'
+  skip-tables:
+    common:
+      - 'migration_*'
+
+ssh:
+  options: '-q -o PasswordAuthentication=no'
