@@ -15,6 +15,9 @@ $databases = [
   ],
 ];
 
+$settings['trusted_host_patterns'] = ['^drupal\.local$'];
+$settings['hash_salt'] = '308d47268412acc4fe69f0afaf00b3e63cc7c69f6d94c62d4530d045cd911839';
+
 assert_options(ASSERT_ACTIVE, TRUE);
 \Drupal\Component\Assertion\Handle::register();
 
@@ -23,8 +26,6 @@ $config['system.performance']['css']['preprocess'] = FALSE;
 $config['system.performance']['js']['preprocess'] = FALSE;
 $config['system.logging']['error_level'] = 'verbose';
 
-$settings['trusted_host_patterns'] = ['^drupal\.local$'];
-$settings['hash_salt'] = '_2iTYTP4sKXrIutDsoT9ZaNAAAuXC34f5VC6OZjs7HmVPnoRu5q9N5gFFqvn7cgGWSEZwZd29Q';
 $settings['cache']['bins']['render'] = 'cache.backend.null';
 $settings['cache']['bins']['discovery_migration'] = 'cache.backend.memory';
 $settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
