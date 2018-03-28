@@ -6,9 +6,9 @@ require 'recipe/composer.php';
 
 set('repository', 'git@bitbucket.org:runroom/archetype-drupal.git');
 set('shared_dirs', ['web/sites/default/files']);
-set('shared_files', ['web/sites/default/settings.php', 'web/robots.txt', 'web/.htaccess']);
+set('shared_files', ['web/sites/custom.services.yml', 'web/sites/custom.settings.php', 'web/robots.txt', 'web/.htaccess']);
 set('writable_dirs', ['web/sites/default/files']);
-set('clear_paths', ['web/sites/development.services.yml', 'web/sites/development.settings.php']);
+set('clear_paths', []);
 
 set('ssh_type', 'native');
 set('ssh_multiplexing', true);
