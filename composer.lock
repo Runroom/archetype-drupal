@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "222a8f3b725054fa77dbded96e8e14b8",
+    "content-hash": "4d4df734e6aaacc92aa40a86c6322ac9",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1994,17 +1994,17 @@
         },
         {
             "name": "drupal/eu_cookie_compliance",
-            "version": "1.0.0-beta12",
+            "version": "1.0.0-rc1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/eu-cookie-compliance",
-                "reference": "8.x-1.0-beta12"
+                "reference": "8.x-1.0-rc1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/eu_cookie_compliance-8.x-1.0-beta12.zip",
-                "reference": "8.x-1.0-beta12",
-                "shasum": "fb4872c46946e85992592610716288241d499c9b"
+                "url": "https://ftp.drupal.org/files/projects/eu_cookie_compliance-8.x-1.0-rc1.zip",
+                "reference": "8.x-1.0-rc1",
+                "shasum": "29dc8765ea6e9de60143f36af672bf4bc6b1d263"
             },
             "require": {
                 "drupal/core": "*"
@@ -2015,11 +2015,11 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta12",
-                    "datestamp": "1520778184",
+                    "version": "8.x-1.0-rc1",
+                    "datestamp": "1521960184",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
+                        "message": "RC releases are not covered by Drupal security advisories."
                     }
                 }
             },
