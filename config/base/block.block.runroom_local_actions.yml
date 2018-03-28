@@ -6,7 +6,7 @@ dependencies:
 id: runroom_local_actions
 theme: runroom
 region: content
-weight: -3
+weight: -1
 provider: null
 plugin: local_actions_block
 settings:
