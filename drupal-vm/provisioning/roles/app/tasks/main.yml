@@ -28,6 +28,6 @@
     - initialize
 
 - name: Import configuration
-  command: drupal local
+  command: drupal deploy
   tags:
     - import
