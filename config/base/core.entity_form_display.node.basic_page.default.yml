@@ -5,6 +5,7 @@ dependencies:
     - field.field.node.basic_page.body
     - node.type.basic_page
   module:
+    - path
     - text
 id: node.basic_page.default
 targetEntityType: node
@@ -25,6 +26,13 @@ content:
     weight: 10
     region: content
     settings: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
     third_party_settings: {  }
   path:
     type: path
@@ -70,4 +78,7 @@ content:
       placeholder: ''
     region: content
     third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    region: content
 hidden: {  }
