@@ -3,7 +3,7 @@
 ## Database
 
 ```
-drush sql-dump --structure-tables-list=cache* > /vagrant/drupal-vm/provisioning/files/dump.sql
+drush sql-dump > /vagrant/drupal-vm/provisioning/files/dump.sql
 ```
 
 ```
