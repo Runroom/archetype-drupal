@@ -18,4 +18,4 @@ $settings['skip_permissions_hardening'] = TRUE;
 $settings['install_profile'] = 'minimal';
 $settings['container_yamls'][] = DRUPAL_ROOT . '/sites/custom.services.yml';
 
-include $app_root . '/' . $site_path . '/custom.settings.php';
+include DRUPAL_ROOT . '/sites/custom.settings.php';
