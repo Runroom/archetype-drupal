@@ -3,6 +3,6 @@ runroom.home_controller:
   path: '/home'
   defaults:
     _controller: '\Drupal\runroom\Controller\HomeController::show'
-    _title: 'All the Drupals are belong to us'
+    _title: 'Runroom Drupal Archetype'
   requirements:
     _permission: 'access content'

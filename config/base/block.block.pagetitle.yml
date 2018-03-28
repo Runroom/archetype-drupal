@@ -3,10 +3,10 @@ status: true
 dependencies:
   theme:
     - runroom
-id: runroom_page_title
+id: pagetitle
 theme: runroom
-region: header
-weight: -1
+region: content
+weight: 0
 provider: null
 plugin: page_title_block
 settings:
