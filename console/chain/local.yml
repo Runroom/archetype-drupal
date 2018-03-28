@@ -1,7 +1,0 @@
-command:
-  name: local
-  description: 'Local deployment'
-commands:
-  - command: config:import
-  - command: update:execute
-  - command: update:entities
