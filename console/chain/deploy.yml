@@ -1,8 +1,15 @@
 command:
   name: deploy
-  description: 'Deploy'
+  description: 'Deploy command'
 commands:
   - command: cache:rebuild
   - command: update:execute
   - command: config:import
+  - command: module:uninstall
+    options:
+      force: true
+    arguments:
+      module:
+        - devel
+        - kint
   - command: update:entities
