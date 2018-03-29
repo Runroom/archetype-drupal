@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "4d4df734e6aaacc92aa40a86c6322ac9",
+    "content-hash": "5f5c7dec272f92bcfaa3a36249dd9ae3",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1616,16 +1616,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "8.5.0",
+            "version": "8.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "0b9070370e272da441b4be52561c559c05f4553d"
+                "reference": "2aeca7dfa2661296602ac16bf9fd6085f0a121be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/0b9070370e272da441b4be52561c559c05f4553d",
-                "reference": "0b9070370e272da441b4be52561c559c05f4553d",
+                "url": "https://api.github.com/repos/drupal/core/zipball/2aeca7dfa2661296602ac16bf9fd6085f0a121be",
+                "reference": "2aeca7dfa2661296602ac16bf9fd6085f0a121be",
                 "shasum": ""
             },
             "require": {
@@ -1847,7 +1847,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2018-03-07T21:10:20+00:00"
+            "time": "2018-03-27T09:58:42+00:00"
         },
         {
             "name": "drupal/ctools",
@@ -7878,16 +7878,16 @@
         },
         {
             "name": "webflo/drupal-core-require-dev",
-            "version": "8.5.0",
+            "version": "8.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webflo/drupal-core-require-dev.git",
-                "reference": "6e5921f88a466a0157beea4c5993ed83a96d7092"
+                "reference": "aea8047c2553fbdc46aaa1e808b78c3d0f4cc968"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webflo/drupal-core-require-dev/zipball/6e5921f88a466a0157beea4c5993ed83a96d7092",
-                "reference": "6e5921f88a466a0157beea4c5993ed83a96d7092",
+                "url": "https://api.github.com/repos/webflo/drupal-core-require-dev/zipball/aea8047c2553fbdc46aaa1e808b78c3d0f4cc968",
+                "reference": "aea8047c2553fbdc46aaa1e808b78c3d0f4cc968",
                 "shasum": ""
             },
             "require": {
@@ -7895,7 +7895,7 @@
                 "behat/mink-goutte-driver": "^1.2",
                 "behat/mink-selenium2-driver": "1.3.x-dev",
                 "drupal/coder": "^8.2.12",
-                "drupal/core": "8.5.0",
+                "drupal/core": "8.5.1",
                 "jcalderonzumba/gastonjs": "^1.0.2",
                 "jcalderonzumba/mink-phantomjs-driver": "^0.3.1",
                 "mikey179/vfsstream": "^1.2",
@@ -7911,7 +7911,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "require-dev dependencies from drupal/core",
-            "time": "2018-03-07T21:31:21+00:00"
+            "time": "2018-03-28T19:27:23+00:00"
         }
     ],
     "aliases": [],
