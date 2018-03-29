@@ -11,6 +11,16 @@
     src: .bash_aliases
     dest: '/home/{{ drupalvm_user }}/.bash_aliases'
 
+- name: Install drupal console.
+  get_url:
+    url: https://github.com/hechoendrupal/drupal-console-launcher/releases/download/1.8.0/drupal.phar
+    dest: '{{ drupal_console_path }}'
+
+- name: Ensure drupal console is executable.
+  file:
+    path: '{{ drupal_console_path }}'
+    mode: 0755
+
 - name: Install composer vendors
   become: false
   composer:

@@ -1,5 +1,4 @@
 vagrant_hostname: drupal.local
-vagrant_machine_name: drupal
 vagrant_ip: 192.168.88.66
 vagrant_synced_folders:
   - local_path: .
@@ -11,11 +10,7 @@ vagrant_synced_folders:
 ssh_home: "{{ drupal_composer_install_dir }}"
 
 # Composer project settings.
-drupal_build_makefile: false
-drupal_build_composer_project: false
-drupal_build_composer: false
 drupal_composer_install_dir: /vagrant
-drupal_composer_dependencies: []
 
 # Other overrides.
 php_version: "7.1"
@@ -28,7 +23,7 @@ configure_drush_aliases: false
 
 installed_extras:
   - adminer
-  - drupalconsole
+  # - drupalconsole
   - drush
   - mailhog
   - nodejs
