@@ -4,9 +4,3 @@ development:
     stage: development
     deploy_path: /home/runroom/drupal
     branch: master
-esade_dev:
-    user: runroom
-    host: 34.243.142.37
-    stage: development
-    deploy_path: /var/www/esade/dev
-    branch: master
