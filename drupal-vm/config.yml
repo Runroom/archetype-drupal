@@ -31,3 +31,5 @@ installed_extras:
   - xdebug
 
 php_memory_limit: 512M
+
+vagrant_user: ubuntu
