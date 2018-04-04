@@ -26,10 +26,13 @@ function runroom_help($route_name, RouteMatchInterface $route_match) {
 /**
  * Implements hook_theme().
  */
-function runroom_theme() {
+function runroom_theme($existing, $type, $theme, $path) {
   return [
-    'runroom' => [
-      'render element' => 'children',
+    'home_block' => [
+      'variables' => [
+        'title' => NULL,
+        'text' => NULL
+      ]
     ],
   ];
 }

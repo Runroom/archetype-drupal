@@ -9,8 +9,9 @@ class HomeController extends ControllerBase {
 
   public function show() {
     return [
-      '#type' => 'markup',
-      '#markup' => $this->t("Do or do not, there is no try."),
+      '#theme' => 'home_block',
+      '#title' => $this->t('Runroom Drupal Archetype'),
+      '#text' => $this->t('Do or do not, there is no try.')
     ];
   }
 
