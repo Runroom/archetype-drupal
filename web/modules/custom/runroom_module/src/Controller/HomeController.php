@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\runroom\Controller;
+namespace Drupal\runroom_module\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 
