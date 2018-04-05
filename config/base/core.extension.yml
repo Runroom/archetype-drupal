@@ -25,6 +25,7 @@ module:
   path: 0
   redirect: 0
   runroom: 0
+  runroom_module: 0
   shortcut: 0
   system: 0
   text: 0
@@ -44,4 +45,5 @@ theme:
   seven: 0
   adminimal_theme: 0
   runroom: 0
+  runroom_theme: 0
 profile: minimal
