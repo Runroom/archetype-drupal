@@ -1,0 +1,123 @@
+@import 'settings/variables';
+@import 'tools/functions';
+@import 'tools/mixins';
+
+.dev-grid {
+    &__toggle {
+        align-items: center;
+        background: #444;
+        bottom: 36px; // Symfony status bar
+        color: #fff;
+        display: flex;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        height: 36px;
+        position: fixed;
+        right: 0;
+        width: 36px;
+        z-index: 9999;
+    }
+
+    &__toggle-actions {
+        align-items: center;
+        display: none;
+        justify-content: flex-start;
+        margin-right: 36px;
+        padding: 0 0 0 10px;
+
+        .title {
+            font-weight: bold;
+            margin: 0 10px 0 0;
+        }
+
+        label {
+            align-items: center;
+            cursor: pointer;
+            display: inline-flex;
+            height: 36px;
+            justify-content: center;
+            position: relative;
+            width: 36px;
+
+            &:not(:last-child) { margin: 0 10px 0 0; }
+
+            input {
+                cursor: pointer;
+                height: 100%;
+                left: 0;
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                z-index: 2;
+            }
+        }
+
+        .dev-grid__icon-grid,
+        .dev-grid__icon-rhythm {
+            cursor: pointer;
+            height: 24px;
+            width: 24px;
+
+            path { fill: #fff; }
+        }
+    }
+
+    &__toggle-triggers {
+        margin-left: auto;
+
+        a {
+            color: currentColor;
+            text-decoration: none;
+
+            &:hover { color: currentColor; }
+        }
+    }
+
+    &__toggle--open,
+    &__toggle--close {
+        @include square(36px);
+
+        align-items: center;
+        color: currentColor;
+        display: inline-flex;
+        font-size: 26px;
+        justify-content: center;
+    }
+
+    &__toggle--close { display: none; }
+
+    &__toggle.is-open {
+        max-width: 100%;
+        width: auto;
+
+        .dev-grid__toggle--open { display: none; }
+        .dev-grid__toggle-actions { display: flex; }
+        .dev-grid__toggle--close { display: inline-flex; }
+    }
+
+    &__layout {
+        display: none;
+        height: 100%;
+        left: 0;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 999;
+
+        .vertical-rhythm &,
+        .grid & { display: block; }
+        .vertical-rhythm & { background-image: url(//basehold.it/i/24/00aaff), url(//basehold.it/i/12/66ccff); }
+
+        .grid & {
+            .u-flex--s0-1 {
+                background-clip: content-box;
+                height: 100%;
+
+                &:nth-child(odd) { background: rgba(0, 170, 255, .1); }
+                &:nth-child(even) { background: rgba(0, 170, 255, .2); }
+            }
+        }
+    }
+}

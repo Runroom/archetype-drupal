@@ -1,6 +1,7 @@
-global-styling:
-  css:
-    theme:
-      css/styles.min.css: { minified: true }
-  js:
-    js/app.min.js: { minified: true }
+runroom:
+     version: 1.x
+     css:
+         theme:
+             css/styles.min.css: {}
+     js:
+         js/app.min.js: {}

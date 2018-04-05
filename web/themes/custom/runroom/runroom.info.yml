@@ -3,11 +3,12 @@ type: theme
 description: 'Runroom base theme'
 version: 1.0.0
 core: 8.x
-base theme: stable
 libraries:
    - core/drupal
    - core/jquery
-   - runroom/global-styling
+   - runroom/runroom
+libraries-override:
+  system/base: false
 regions:
     header: "Header"
     content: "Content"

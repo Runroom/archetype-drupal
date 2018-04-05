@@ -31,3 +31,7 @@ installed_extras:
   - xdebug
 
 php_memory_limit: 512M
+
+extra_packages:
+  - sqlite
+  - libpng16-16

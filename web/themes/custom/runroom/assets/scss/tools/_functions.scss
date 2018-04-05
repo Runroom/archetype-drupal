@@ -1,0 +1,39 @@
+@function strip-unit($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
+        @return $number / ($number * 0 + 1);
+    }
+
+    @return $number;
+}
+
+@function get-relative-value($size, $times) {
+    @if unit($size) == 'px' {
+        @return (strip-unit($size) / strip-unit($base-font-size)) * $times;
+    }
+
+    @else {
+        @return strip-unit($size) * $times;
+    }
+}
+
+@function get-rems($size, $times:1) {
+    @return get-relative-value($size, $times) * 1rem;
+}
+
+@function get-ems($size, $times:1) {
+    @return get-relative-value($size, $times) * 1em;
+}
+
+@function get-pxs($size) {
+    @if unit($size) != 'px' {
+        @return round(strip-unit($size) * strip-unit($base-font-size)) * 1px;
+    }
+
+    @else {
+        @return $size;
+    }
+}
+
+@function space($times: 1) {
+    @return get-rems($vertical-rhythm * $times);
+}
