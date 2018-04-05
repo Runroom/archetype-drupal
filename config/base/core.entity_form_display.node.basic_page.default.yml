@@ -3,8 +3,10 @@ status: true
 dependencies:
   config:
     - field.field.node.basic_page.body
+    - field.field.node.basic_page.field_file
     - node.type.basic_page
   module:
+    - file
     - path
     - text
 id: node.basic_page.default
@@ -27,6 +29,13 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_file:
+    weight: 122
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
   langcode:
     type: language_select
     weight: 2
@@ -69,6 +78,9 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
   uid:
     type: entity_reference_autocomplete
     weight: 5
