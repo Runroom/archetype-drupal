@@ -34,6 +34,12 @@ Once the dump is completed, you can use it by executing:
 ansible-run initialize,import
 ```
 
+How to import the dump.sql file ?
+
+```
+drush sql-cli < drupal-vm/provisioning/files/dump.sql
+```
+
 ## Export and Import custom translations
 
 Path: '/sites/custom_translations' (set in web/sites/default/settings.php as $settings['custom_translations_directory'])
