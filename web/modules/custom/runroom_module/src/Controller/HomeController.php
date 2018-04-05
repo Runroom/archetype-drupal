@@ -11,7 +11,7 @@ class HomeController extends ControllerBase {
     return [
       '#theme' => 'home_block',
       '#title' => $this->t('Runroom Drupal Archetype'),
-      '#text' => $this->t('Do or do not, there is no try.')
+      '#text' => $this->t('This is the Home of Runroom Drupal Archetype')
     ];
   }
 
