@@ -16,7 +16,7 @@ drupal_composer_install_dir: /vagrant
 php_version: "7.1"
 
 # Database
-drupal_db_file: drupal-vm/provisioning/files/dump.sql
+drupal_db_file: ansible/provisioning/files/dump.sql
 
 # Drush
 configure_drush_aliases: false
