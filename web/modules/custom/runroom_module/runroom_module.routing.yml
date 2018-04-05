@@ -1,8 +1,8 @@
 
-runroom.home_controller:
+runroom_module.home_controller:
   path: '/home'
   defaults:
-    _controller: '\Drupal\runroom\Controller\HomeController::show'
+    _controller: '\Drupal\runroom_module\Controller\HomeController::show'
     _title: 'Runroom Drupal Archetype'
   requirements:
     _permission: 'access content'

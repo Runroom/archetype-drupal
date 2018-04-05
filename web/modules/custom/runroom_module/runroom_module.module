@@ -1,0 +1,14 @@
+<?php
+/**
+ * Implements hook_theme().
+ */
+function runroom_module_theme($existing, $type, $theme, $path) {
+  return [
+    'home_block' => [
+      'variables' => [
+        'title' => NULL,
+        'text' => NULL
+      ]
+    ],
+  ];
+}
