@@ -16,6 +16,7 @@
         "drupal/console": "1.8.0",
         "drupal/core": "8.5.1",
         "drupal/devel": "1.2.0",
+        "drupal/drush_language": "1.0-rc1",
         "drupal/eu_cookie_compliance": "1.0.0-rc1",
         "drupal/field_group": "1.0.0",
         "drupal/metatag": "1.4.0",

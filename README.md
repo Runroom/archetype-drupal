@@ -34,6 +34,22 @@ Once the dump is completed, you can use it by executing:
 ansible-run initialize,import
 ```
 
+## Export and Import custom translations
+
+Path: '/sites/custom_translations' (set in web/sites/default/settings.php as $settings['custom_translations_directory'])
+
+Command to export:
+```
+cd /vagrant
+bash export-translations.bash
+```
+
+Command to import:
+```
+cd /vagrant
+bash import-translations.bash
+```
+
 Enjoy!
 
 ## Drupal Console
