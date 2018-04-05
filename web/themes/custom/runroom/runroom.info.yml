@@ -7,8 +7,6 @@ libraries:
   - core/drupal
   - core/jquery
   - runroom/global-styling
-libraries-override:
-  system/base: false
 regions:
   header: "Header"
   content: "Content"
