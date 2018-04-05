@@ -14,4 +14,3 @@ msgstr ""
 
 msgid "This is the Home of Runroom Drupal Archetype"
 msgstr "Esta es la portada del aquetipo de Drupal de Runroom"
-
