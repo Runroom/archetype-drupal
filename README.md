@@ -25,7 +25,7 @@ Virtual machine up:
 In order to do a database dump, execute this line with the desired alias:
 
 ```
-drush sql-dump > /vagrant/drupal-vm/provisioning/files/dump.sql
+drush sql-dump > /vagrant/ansible/provisioning/files/dump.sql
 ```
 
 Once the dump is completed, you can use it by executing:
@@ -37,7 +37,7 @@ ansible-run initialize,import
 How to import the dump.sql file ?
 
 ```
-drush sql-cli < drupal-vm/provisioning/files/dump.sql
+drush sql-cli < ansible/provisioning/files/dump.sql
 ```
 
 ## Export and Import custom translations
