@@ -8,5 +8,5 @@ do
   echo Import translations for $entry
   echo -----------------------
 
-  # drush language-import --langcode=es $entry
+  drush language-import --langcode=es $entry
 done
