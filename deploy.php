@@ -19,7 +19,7 @@ set('composer_options', '{{composer_action}} --no-dev --prefer-dist --no-progres
 
 task('app', function () {
     run('cd {{release_path}} && {{bin/php}} {{drupal_console}} deploy');
-    run('cd {{release_path}} && bash import-translations.bash');
+    run('cd {{release_path}}/drush && bash import-translations.bash');
 })->setPrivate();
 
 after('deploy:update_code', 'deploy:clear_paths');
