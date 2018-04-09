@@ -26,4 +26,5 @@ content:
     region: content
 hidden:
   field_file: true
+  field_image: true
   langcode: true
