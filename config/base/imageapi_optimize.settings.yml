@@ -1,1 +1,1 @@
-default_pipeline: jpegoptim_optipng
+default_pipeline: jpegoptim_pngquant

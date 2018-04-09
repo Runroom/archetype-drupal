@@ -36,7 +36,7 @@ extra_packages:
   - sqlite
   - libpng16-16
   - jpegoptim
-  - optipng
+  - pngquant
 
 vagrant_user: ubuntu
 
