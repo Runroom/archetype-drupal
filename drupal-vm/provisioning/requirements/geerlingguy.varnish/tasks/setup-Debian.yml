@@ -1,0 +1,26 @@
+---
+- name: Ensure APT HTTPS Transport is installed.
+  apt:
+    name: apt-transport-https
+    state: installed
+
+- name: Add packagecloud.io Varnish apt key.
+  apt_key:
+    url: https://packagecloud.io/varnishcache/{{ varnish_packagecloud_repo }}/gpgkey
+    state: present
+
+- name: Add packagecloud.io Varnish apt repository.
+  apt_repository:
+    repo: "deb https://packagecloud.io/varnishcache/{{ varnish_packagecloud_repo }}/{{ ansible_distribution | lower }}/ {{ ansible_distribution_release }} main"
+    state: present
+
+- name: Ensure Varnish is installed.
+  apt:
+    name: "{{ varnish_package_name }}"
+    state: present
+
+- name: Ensure old role-managed Varnish systemd unit file is removed.
+  file:
+    path: /etc/systemd/system/varnish.service
+    state: absent
+  when: varnish_systemd_config_path != '/etc/systemd/system'

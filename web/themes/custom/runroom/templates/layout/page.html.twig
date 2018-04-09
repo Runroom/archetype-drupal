@@ -1,23 +1,5 @@
-<div class="layout-container">
-
-  <header role="banner">
-    {{ page.header }}
-  </header>
-
-  <main role="main">
-
-    <a id="main-content" tabindex="-1"></a>
-
-    <div class="layout-content">
-      {{ page.content }}
-    </div>
-
-  </main>
-
-  {% if page.footer %}
-    <footer role="contentinfo">
-      {{ page.footer }}
-    </footer>
-  {% endif %}
-
-</div>
+{{ page.header }}
+{{ page.content }}
+{% if page.footer %}
+  {{ page.footer }}
+{% endif %}
