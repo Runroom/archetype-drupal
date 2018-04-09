@@ -1,0 +1,25 @@
+{#
+/**
+ * @file
+ * Theme override to display a region.
+ *
+ * Available variables:
+ * - content: The content for this region, typically blocks.
+ * - attributes: HTML attributes for the region div.
+ * - region: The name of the region variable as defined in the theme's
+ *   .info.yml file.
+ *
+ * @see template_preprocess_region()
+ */
+#}
+{% if content %}
+    <header class="header">
+        <div class="u-wrapper u-flex u-flex--align-start u-flex--justify-between">
+          <a itemscope itemtype="http://schema.org/Brand" class="logo" itemprop="url" href="" title="" rel="home">
+            Home
+          </a>
+          {{ drupal_block('mainnavigation') }}
+          {{ drupal_block('languageswitcher') }}
+        </div>
+    </header>
+{% endif %}
