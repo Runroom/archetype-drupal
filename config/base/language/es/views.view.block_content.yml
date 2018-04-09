@@ -1,6 +1,0 @@
-display:
-  default:
-    display_options:
-      fields:
-        operations:
-          label: Operaciones

@@ -4,4 +4,4 @@ dependencies: {  }
 name: optimized_image
 label: optimized-image
 effects: {  }
-pipeline: __default__
+pipeline: jpegoptim_pngquant
