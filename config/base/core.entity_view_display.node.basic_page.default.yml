@@ -26,7 +26,7 @@ content:
     type: image
     weight: 1
     region: content
-    label: above
+    label: hidden
     settings:
       image_style: optimized_image
       image_link: ''
