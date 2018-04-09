@@ -3,10 +3,11 @@ status: true
 dependencies:
   config:
     - field.field.node.basic_page.body
-    - field.field.node.basic_page.field_file
+    - field.field.node.basic_page.field_image
+    - image.style.optimized_image
     - node.type.basic_page
   module:
-    - file
+    - image
     - text
     - user
 id: node.basic_page.default
@@ -17,20 +18,20 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 0
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_file:
-    weight: 102
+  field_image:
+    type: image
+    weight: 1
+    region: content
     label: above
     settings:
-      use_description_as_link_text: true
+      image_style: optimized_image
+      image_link: ''
     third_party_settings: {  }
-    type: file_default
-    region: content
-  links:
-    weight: 100
-    region: content
 hidden:
+  field_file: true
   langcode: true
+  links: true
