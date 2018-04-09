@@ -3,10 +3,11 @@ status: true
 dependencies:
   config:
     - field.field.node.basic_page.body
-    - field.field.node.basic_page.field_file
+    - field.field.node.basic_page.field_image
+    - image.style.thumbnail
     - node.type.basic_page
   module:
-    - file
+    - image
     - path
     - text
 id: node.basic_page.default
@@ -29,12 +30,13 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_file:
-    weight: 122
+  field_image:
+    weight: 123
     settings:
       progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings: {  }
-    type: file_generic
+    type: image_image
     region: content
   langcode:
     type: language_select

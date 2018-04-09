@@ -35,6 +35,8 @@ php_memory_limit: 512M
 extra_packages:
   - sqlite
   - libpng16-16
+  - jpegoptim
+  - optipng
 
 vagrant_user: ubuntu
 

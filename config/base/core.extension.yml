@@ -14,6 +14,8 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  image: 0
+  imageapi_optimize: 0
   kint: 0
   language: 0
   link: 0
@@ -31,6 +33,7 @@ module:
   text: 0
   token: 0
   toolbar: 0
+  twig_tweak: 0
   update: 0
   user: 0
   views_ui: 0

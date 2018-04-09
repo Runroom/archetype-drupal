@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies: {  }
+name: jpegoptim_optipng
+label: 'jpegoptim + optipng'
+processors:
+  41b7e28a-e958-4e5d-ac7d-9112fbd7ff5f:
+    uuid: 41b7e28a-e958-4e5d-ac7d-9112fbd7ff5f
+    id: jpegoptim
+    weight: '1'
+    data:
+      manual_executable_path: ' /usr/bin/jpegoptim'
+      progressive: '1'
+      quality: '60'
+      size: ''
+  45de0862-2431-4e78-bc78-5c0b0f836625:
+    uuid: 45de0862-2431-4e78-bc78-5c0b0f836625
+    id: optipng
+    weight: 2
+    data:
+      manual_executable_path: /usr/bin/optipng
+      level: '5'
+      interlace: ''
