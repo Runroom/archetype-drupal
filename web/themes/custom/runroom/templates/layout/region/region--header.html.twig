@@ -15,9 +15,7 @@
 {% if content %}
     <header class="header">
         <div class="u-wrapper u-flex u-flex--align-start u-flex--justify-between">
-          <a itemscope itemtype="http://schema.org/Brand" class="logo" itemprop="url" href="" title="" rel="home">
-            Home
-          </a>
+          <a itemscope itemtype="http://schema.org/Brand" class="header__logo" itemprop="url" href="" title="" rel="home">{% include directory ~ '/img/svg/runroom-logo.svg' %}</a>
           {{ drupal_block('mainnavigation') }}
           {{ drupal_block('languageswitcher') }}
         </div>
