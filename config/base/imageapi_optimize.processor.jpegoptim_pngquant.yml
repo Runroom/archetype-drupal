@@ -11,7 +11,7 @@ processors:
     data:
       manual_executable_path: ' /usr/bin/jpegoptim'
       progressive: '1'
-      quality: '90'
+      quality: '100'
       size: ''
   99fc6675-720c-4eb1-abf6-743d5bd9358a:
     uuid: 99fc6675-720c-4eb1-abf6-743d5bd9358a
