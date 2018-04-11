@@ -1,5 +1,4 @@
 <article{{ attributes }}>
-  {% block content %}
-    {{ content }}
-  {% endblock %}
+  {% block billboard %}<h1>{{ label }}</h1>{% endblock %}
+  {% block content %}{{ content }}{% endblock %}
 </article>
