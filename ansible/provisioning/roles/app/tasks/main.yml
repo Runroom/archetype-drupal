@@ -42,4 +42,11 @@
   tags:
     - import
 
+- name: Import translations
+  command: bash import-translations.bash
+  args:
+    chdir: /vagrant/drush
+  tags:
+    - import
+
 - import_tasks: yarn.yml
