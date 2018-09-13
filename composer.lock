@@ -1942,7 +1942,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/devel",
-                "reference": "46ca997758a9f95b40749b40989d153daefc957e"
+                "reference": "e9354f8ee2112c4c720a718ea35e177f1e5c9296"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -1956,8 +1956,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.2+9-dev",
-                    "datestamp": "1518824280",
+                    "version": "8.x-1.2+25-dev",
+                    "datestamp": "1533401280",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -2016,7 +2016,7 @@
                 "issues": "http://drupal.org/project/devel",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
             },
-            "time": "2018-03-14T18:20:55+00:00"
+            "time": "2018-08-17T11:57:16+00:00"
         },
         {
             "name": "drupal/drush_language",

@@ -1,20 +1,13 @@
 @import 'settings/variables';
-@import 'settings/colors';
 @import 'tools/functions';
 @import 'tools/mixins';
+@import 'tools/extends';
 @import 'tools/media-queries';
+@import 'generic/fields';
 
 /* Atoms */
 @import 'atoms/buttons';
 
-/* Molecules */
-
 /* Organisms */
 @import 'organisms/footer';
-
-/* Pages */
-// @import 'pages/demo';
-
-body {
-    background-color: lightgrey;
-}
+@import 'organisms/form';

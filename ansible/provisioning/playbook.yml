@@ -7,6 +7,11 @@
     - ../default.config.yml
 
   pre_tasks:
+    - name: Update apt
+      apt:
+        cache_valid_time: 1800
+        update_cache: yes
+
     - include: tasks/config.yml
       tags: ['always']
 

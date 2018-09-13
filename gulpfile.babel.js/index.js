@@ -1,46 +1,32 @@
 'use strict';
 
 import gulp from 'gulp';
-import fs from 'fs';
-import taskListing from 'gulp-task-listing';
-import runSequence from 'run-sequence';
+import watch from 'gulp-watch';
 
-/**
- * Require all tasks from tasks folder
- */
- fs.readdirSync('./gulpfile.babel.js/tasks').filter((file) => {
-   return (/\.(js)$/i).test(file);
- }).map((file) => { require('./tasks/' + file); });
+import { serve, reload } from './tasks/browser-sync';
+import styles, { STYLES_FILES } from './tasks/styles.base';
+import scripts, { SCRIPTS_FILES } from './tasks/scripts.base';
+import images, { IMAGES_FILES } from './tasks/images.base';
+import imagesSprites, { SPRITES_FILES } from './tasks/images.sprites';
+import imagesSvg, { SVG_FILES } from './tasks/images.svg';
+import favicon from './tasks/images.favicon';
+import stylesLint from './tasks/styles.lint';
+import scriptsLint from './tasks/scripts.lint';
 
-/**
- * Task: Build
- * Call all task for building
- */
-gulp.task('build', (callback) => {
-  runSequence(['images', 'styles', 'scripts'], callback);
-});
+const buildStyles = gulp.series(stylesLint, styles);
+const buildScripts = gulp.series(scriptsLint, scripts);
+const buildImages = gulp.series(gulp.parallel(images, imagesSprites, imagesSvg), favicon);
+const build = gulp.parallel(buildStyles, buildImages, buildScripts);
 
-/**
- * Task: Default
- */
-gulp.task('default', ['serve']);
+const WATCH_OPTIONS = { usePolling: true };
 
-/**
- * Task: Help
- * List all available tasks
- */
-gulp.task('help', taskListing);
+const watcher = () => {
+  watch(STYLES_FILES, WATCH_OPTIONS, gulp.series(buildStyles, reload));
+  watch(SCRIPTS_FILES, WATCH_OPTIONS, gulp.series(buildScripts, reload));
+  watch(IMAGES_FILES, WATCH_OPTIONS, gulp.series(buildImages, reload));
+  watch(SPRITES_FILES, WATCH_OPTIONS, gulp.series(imagesSprites, reload));
+  watch(SVG_FILES, WATCH_OPTIONS, gulp.series(imagesSvg, reload));
+};
 
-/**
- * Task: Serve
- * Call the build task and open browser with BrowserSync & Watch
- */
- gulp.task('serve', (callback) => {
-   runSequence('build', 'watch', 'browserSync', callback);
- });
-
-/**
- * Task: Watch
- * Main task to run all watch tasks
- */
-gulp.task('watch', ['images:watch', 'styles:watch', 'scripts:watch'])
+const DEV = gulp.series(build, serve, watcher);
+export default DEV;

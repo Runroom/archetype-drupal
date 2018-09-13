@@ -4,7 +4,7 @@
 
 Clone repository:
 
-    git clone git@bitbucket.org:runroom/archetype-symfony.git
+    git clone git@bitbucket.org:runroom/archetype-drupal.git
 
 Install the hostmanager plugin
 

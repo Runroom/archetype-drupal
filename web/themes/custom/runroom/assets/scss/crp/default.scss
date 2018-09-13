@@ -1,14 +1,15 @@
 @import '../settings/variables';
 @import '../tools/functions';
 @import '../tools/mixins';
+@import '../tools/extends';
 @import '../tools/media-queries';
-@import '../../../../../../../node_modules/normalize.css/normalize';
+@import '../../../../../../../node_modules/normalize-scss/sass/normalize';
 @import '../generic/globals';
 @import '../generic/typography';
 @import '../utilities/utilities';
 
 /* Atoms */
-@import '../atoms/colors';
+@import '../atoms/skip-links';
 
 /* Organisms */
 @import '../organisms/header';
