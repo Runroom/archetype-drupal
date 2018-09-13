@@ -1,5 +1,0 @@
-name: 'Runroom Module'
-type: module
-description: 'Runroom Default Module'
-core: 8.x
-package: 'runroom'
