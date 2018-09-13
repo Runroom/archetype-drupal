@@ -1,22 +1,29 @@
-'use strict';
+const RESOURCE_PATH = 'web/themes/custom/runroom';
+const RESOURCE_ASSETS_PATH = `${RESOURCE_PATH}/assets`;
+const VIEWS_PATH = `${RESOURCE_PATH}/templates`;
 
-module.exports = {
-  src: {
-    base: 'web/themes/custom/runroom',
-    fonts: 'web/themes/custom/runroom/assets/fonts',
-    img: 'web/themes/custom/runroom/assets/img',
-    js: 'web/themes/custom/runroom/assets/js',
-    sprites: 'web/themes/custom/runroom/assets/img/sprites',
-    scss: 'web/themes/custom/runroom/assets/scss',
-    views: 'web/themes/custom/runroom/templates'
-  },
-  dist: {
-    base: 'web',
-    css: 'web/themes/custom/runroom/css',
-    fonts: 'web/themes/custom/runroom/fonts',
-    img: 'web/themes/custom/runroom/img',
-    js: 'web/themes/custom/runroom/js',
-    sprites: 'web/themes/custom/runroom/img/svg'
-  },
-  tmp: '.tmp'
+const FONTS_SRC = `${RESOURCE_ASSETS_PATH}/fonts`;
+const IMAGES_SRC = `${RESOURCE_ASSETS_PATH}/img`;
+const SCRIPTS_SRC = `${RESOURCE_ASSETS_PATH}/js`;
+const STYLES_SRC = `${RESOURCE_ASSETS_PATH}/scss`;
+const SPRITES_SRC = `${IMAGES_SRC}/sprites`;
+
+const FONTS_DEST = `${RESOURCE_PATH}/fonts`;
+const IMAGES_DEST = `${RESOURCE_PATH}/img`;
+const SCRIPTS_DEST = `${RESOURCE_PATH}/js`;
+const STYLES_DEST = `${RESOURCE_PATH}/css`;
+const SPRITES_DEST = `${VIEWS_PATH}/svg`;
+
+export {
+  VIEWS_PATH,
+  FONTS_SRC,
+  IMAGES_SRC,
+  SCRIPTS_SRC,
+  STYLES_SRC,
+  SPRITES_SRC,
+  FONTS_DEST,
+  IMAGES_DEST,
+  SCRIPTS_DEST,
+  STYLES_DEST,
+  SPRITES_DEST
 };
