@@ -2,7 +2,8 @@ command:
   name: deploy
   description: 'Deploy command'
 commands:
-  - command: config:import
+  - command: cache:rebuild
   - command: update:execute
+  - command: config:import
   - command: update:entities
   - command: cache:rebuild
