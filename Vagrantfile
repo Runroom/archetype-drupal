@@ -28,6 +28,7 @@ Vagrant.configure('2') do |config|
     end
 
     config.vm.provision 'ansible_local' do |ansible|
+        ansible.compatibility_mode = "2.0"
         ansible.playbook = 'ansible/provisioning/playbook.yml'
         ansible.extra_vars = {
             config_dir: '/vagrant/ansible',
