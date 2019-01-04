@@ -1,0 +1,3 @@
+services: 
+  mesoestetic_ecommerce.field_manager:
+    class: Drupal\mesoestetic_ecommerce\Services\Helper\FieldManagerService
