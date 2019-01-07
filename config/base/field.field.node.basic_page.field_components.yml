@@ -2,16 +2,17 @@ langcode: es
 status: true
 dependencies:
   config:
-    - field.storage.node.field_wysiwyg_component
+    - field.storage.node.field_components
     - node.type.basic_page
+    - paragraphs.paragraphs_type.cta_list_component
     - paragraphs.paragraphs_type.wysiwyg_component
   module:
     - entity_reference_revisions
-id: node.basic_page.field_wysiwyg_component
-field_name: field_wysiwyg_component
+id: node.basic_page.field_components
+field_name: field_components
 entity_type: node
 bundle: basic_page
-label: 'Componente Wysiwyg'
+label: Componentes
 description: ''
 required: false
 translatable: false
@@ -22,9 +23,13 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
+      cta_list_component: cta_list_component
       wysiwyg_component: wysiwyg_component
     target_bundles_drag_drop:
+      cta_list_component:
+        enabled: true
+        weight: 3
       wysiwyg_component:
         enabled: true
-        weight: 2
+        weight: 4
 field_type: entity_reference_revisions

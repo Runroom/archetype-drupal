@@ -1,0 +1,11 @@
+{% set config = {
+  title: content.field_title,
+  description: content.field_description,
+  ctas: content.field_cta
+} %}
+
+{% block paragraph %}
+  {% block content %}
+      {% include directory ~ '/templates/organisms/cta-list-component.html.twig' with config only %}
+  {% endblock %}
+{% endblock paragraph %}
