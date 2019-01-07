@@ -1,0 +1,8 @@
+langcode: es
+status: true
+dependencies: {  }
+id: wysiwyg_component
+label: 'Componente Wysiwyg'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

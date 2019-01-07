@@ -1,0 +1,25 @@
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.wysiwyg_component.field_text
+    - paragraphs.paragraphs_type.wysiwyg_component
+  module:
+    - text
+id: paragraph.wysiwyg_component.default
+targetEntityType: paragraph
+bundle: wysiwyg_component
+mode: default
+content:
+  field_text:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

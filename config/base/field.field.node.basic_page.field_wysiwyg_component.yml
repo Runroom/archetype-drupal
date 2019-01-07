@@ -1,0 +1,30 @@
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_wysiwyg_component
+    - node.type.basic_page
+    - paragraphs.paragraphs_type.wysiwyg_component
+  module:
+    - entity_reference_revisions
+id: node.basic_page.field_wysiwyg_component
+field_name: field_wysiwyg_component
+entity_type: node
+bundle: basic_page
+label: 'Componente Wysiwyg'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      wysiwyg_component: wysiwyg_component
+    target_bundles_drag_drop:
+      wysiwyg_component:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions
