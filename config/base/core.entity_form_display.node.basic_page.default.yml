@@ -2,8 +2,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.basic_page.field_components
     - field.field.node.basic_page.field_image
-    - field.field.node.basic_page.field_wysiwyg_component
     - image.style.thumbnail
     - node.type.basic_page
   module:
@@ -21,6 +21,18 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_components:
+    type: entity_reference_paragraphs
+    weight: 127
+    settings:
+      title: Párrafo
+      title_plural: Parráfos
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
   field_image:
     weight: 123
     settings:
@@ -28,18 +40,6 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
-    region: content
-  field_wysiwyg_component:
-    type: entity_reference_paragraphs
-    weight: 126
-    settings:
-      title: Párrafo
-      title_plural: Paragraphs
-      edit_mode: open
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
-    third_party_settings: {  }
     region: content
   langcode:
     type: language_select

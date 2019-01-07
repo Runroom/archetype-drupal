@@ -1,0 +1,8 @@
+langcode: es
+status: true
+dependencies: {  }
+id: cta_list_component
+label: 'Componente Listado CTAs'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

@@ -3,8 +3,8 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.basic_page.field_components
     - field.field.node.basic_page.field_image
-    - field.field.node.basic_page.field_wysiwyg_component
     - node.type.basic_page
   module:
     - user
@@ -17,7 +17,7 @@ content:
     weight: 100
     region: content
 hidden:
+  field_components: true
   field_file: true
   field_image: true
-  field_wysiwyg_component: true
   langcode: true
