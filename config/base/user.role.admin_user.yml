@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: admin_user
-label: 'Admin user'
+label: Admin
 weight: 2
 is_admin: null
 permissions:
@@ -15,10 +15,14 @@ permissions:
   - 'access site in maintenance mode'
   - 'access site reports'
   - 'access site-wide contact form'
+  - 'access taxonomy overview'
   - 'access toolbar'
   - 'access user contact forms'
   - 'access user profiles'
   - 'administer account settings'
+  - 'administer block_content display'
+  - 'administer block_content fields'
+  - 'administer block_content form display'
   - 'administer blocks'
   - 'administer contact forms'
   - 'administer contact_message display'
@@ -28,6 +32,8 @@ permissions:
   - 'administer content types'
   - 'administer display modes'
   - 'administer filters'
+  - 'administer image styles'
+  - 'administer imageapi optimize pipelines'
   - 'administer languages'
   - 'administer menu'
   - 'administer meta tags'
@@ -43,6 +49,10 @@ permissions:
   - 'administer shortcuts'
   - 'administer site configuration'
   - 'administer software updates'
+  - 'administer taxonomy'
+  - 'administer taxonomy_term display'
+  - 'administer taxonomy_term fields'
+  - 'administer taxonomy_term form display'
   - 'administer themes'
   - 'administer url aliases'
   - 'administer user display'

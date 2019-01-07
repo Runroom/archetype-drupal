@@ -1,5 +1,5 @@
 name: 'Runroom Archetype'
-mail: admin@example.com
+mail: software@runroom.com
 slogan: ''
 page:
   403: ''
@@ -8,4 +8,4 @@ page:
 admin_compact_mode: false
 weight_select_max: 100
 langcode: en
-default_langcode: en
+default_langcode: es
