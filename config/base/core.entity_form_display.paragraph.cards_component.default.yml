@@ -1,0 +1,29 @@
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cards_component.field_card
+    - paragraphs.paragraphs_type.cards_component
+  module:
+    - paragraphs
+id: paragraph.cards_component.default
+targetEntityType: paragraph
+bundle: cards_component
+mode: default
+content:
+  field_card:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Párrafo
+      title_plural: Parráfos
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true
