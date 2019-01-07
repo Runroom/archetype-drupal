@@ -10,5 +10,11 @@ function base_module_theme($existing, $type, $theme, $path) {
         'text' => NULL
       ]
     ],
+    'styleguide' => [
+      'variables' => [
+        'title' => NULL,
+        'text' => NULL
+      ]
+    ],
   ];
 }

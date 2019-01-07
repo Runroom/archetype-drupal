@@ -2,26 +2,19 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.basic_page.body
     - field.field.node.basic_page.field_image
+    - field.field.node.basic_page.field_wysiwyg_component
     - image.style.optimized_image
     - node.type.basic_page
   module:
+    - entity_reference_revisions
     - image
-    - text
     - user
 id: node.basic_page.default
 targetEntityType: node
 bundle: basic_page
 mode: default
 content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 0
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   field_image:
     type: image
     weight: 1
@@ -31,6 +24,15 @@ content:
       image_style: optimized_image
       image_link: ''
     third_party_settings: {  }
+  field_wysiwyg_component:
+    type: entity_reference_revisions_entity_view
+    weight: 4
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
 hidden:
   field_file: true
   langcode: true

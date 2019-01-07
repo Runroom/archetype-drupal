@@ -9,3 +9,4 @@ notification:
   emails:
     - admin@example.org
   threshold: all
+langcode: es

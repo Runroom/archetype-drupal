@@ -5,3 +5,4 @@ warning: false
 ignore_admin_path: false
 access_check: false
 route_normalizer_enabled: true
+langcode: es

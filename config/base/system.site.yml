@@ -7,6 +7,6 @@ page:
   front: /home
 admin_compact_mode: false
 weight_select_max: 100
-langcode: en
+langcode: es
 default_langcode: es
 mail_notification: ''

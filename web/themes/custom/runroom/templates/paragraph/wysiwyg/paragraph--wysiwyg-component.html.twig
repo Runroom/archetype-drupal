@@ -1,0 +1,9 @@
+{% set config = {
+  content: content.field_text
+} %}
+
+{% block paragraph %}
+  {% block content %}
+      {% include directory ~ '/templates/organisms/wysiwyg-component.html.twig' with config only %}
+  {% endblock %}
+{% endblock paragraph %}
