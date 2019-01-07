@@ -1,0 +1,22 @@
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_simple_cta
+    - paragraphs.paragraphs_type.img_text_cta
+  module:
+    - link
+id: paragraph.img_text_cta.field_simple_cta
+field_name: field_simple_cta
+entity_type: paragraph
+bundle: img_text_cta
+label: 'Cta simple'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

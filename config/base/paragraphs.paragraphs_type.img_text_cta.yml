@@ -1,0 +1,8 @@
+langcode: es
+status: true
+dependencies: {  }
+id: img_text_cta
+label: 'Card (IMG + Texto + CTA)'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

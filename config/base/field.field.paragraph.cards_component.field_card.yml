@@ -1,0 +1,39 @@
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_card
+    - paragraphs.paragraphs_type.cards_component
+    - paragraphs.paragraphs_type.img_text_cta
+  module:
+    - entity_reference_revisions
+id: paragraph.cards_component.field_card
+field_name: field_card
+entity_type: paragraph
+bundle: cards_component
+label: Tarjeta
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      img_text_cta: img_text_cta
+    target_bundles_drag_drop:
+      cards_component:
+        weight: 5
+        enabled: false
+      cta_list_component:
+        weight: 6
+        enabled: false
+      img_text_cta:
+        enabled: true
+        weight: 7
+      wysiwyg_component:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

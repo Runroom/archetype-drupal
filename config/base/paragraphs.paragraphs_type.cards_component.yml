@@ -1,0 +1,8 @@
+langcode: es
+status: true
+dependencies: {  }
+id: cards_component
+label: 'Componente Cards'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

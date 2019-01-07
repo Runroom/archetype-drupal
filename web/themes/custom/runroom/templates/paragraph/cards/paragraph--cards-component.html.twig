@@ -1,0 +1,9 @@
+{% set config = {
+  cards: content.field_card
+} %}
+
+{% block paragraph %}
+  {% block content %}
+      {% include directory ~ '/templates/organisms/cards-component.html.twig' with config only %}
+  {% endblock %}
+{% endblock paragraph %}
