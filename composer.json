@@ -15,7 +15,7 @@
         "drupal/adminimal_theme": "1.3.0",
         "drupal/allowed_formats": "1.1.0",
         "drupal/console": "1.8.0",
-        "drupal/core": "8.6.2",
+        "drupal/core": "8.6.5",
         "drupal/devel": "1.x-dev",
         "drupal/drush_language": "1.0-rc2",
         "drupal/editor_advanced_link": "1.4.0",
@@ -32,11 +32,11 @@
         "drupal/xmlsitemap": "1.0-alpha3",
         "drush/drush": "9.5.2",
         "webflo/drupal-finder": "1.1.0",
+        "webflo/drupal-core-require-dev": "8.6.5",
         "webmozart/path-util": "2.3.0"
     },
     "require-dev": {
-        "deployer/dist": "4.3.1",
-        "webflo/drupal-core-require-dev": "8.6.2"
+        "deployer/dist": "4.3.1"
     },
     "conflict": {
         "drupal/drupal": "*"
