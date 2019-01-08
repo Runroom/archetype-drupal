@@ -2,15 +2,15 @@ langcode: es
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_simple_cta
+    - field.storage.paragraph.field_link
     - paragraphs.paragraphs_type.img_text_cta
   module:
     - link
-id: paragraph.img_text_cta.field_simple_cta
-field_name: field_simple_cta
+id: paragraph.img_text_cta.field_link
+field_name: field_link
 entity_type: paragraph
 bundle: img_text_cta
-label: 'Cta simple'
+label: Enlace
 description: ''
 required: false
 translatable: false

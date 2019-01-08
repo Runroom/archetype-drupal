@@ -4,7 +4,7 @@ dependencies:
   config:
     - field.field.paragraph.img_text_cta.field_description
     - field.field.paragraph.img_text_cta.field_image
-    - field.field.paragraph.img_text_cta.field_simple_cta
+    - field.field.paragraph.img_text_cta.field_link
     - image.style.thumbnail
     - paragraphs.paragraphs_type.img_text_cta
   module:
@@ -31,8 +31,8 @@ content:
     third_party_settings: {  }
     type: image_image
     region: content
-  field_simple_cta:
-    weight: 3
+  field_link:
+    weight: 4
     settings:
       placeholder_url: ''
       placeholder_title: ''

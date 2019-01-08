@@ -1,8 +1,10 @@
 langcode: es
 status: true
-dependencies: {  }
+dependencies:
+  content:
+    - 'file:file:e67a5142-1522-4ca6-9580-afa36edc7048'
 id: wysiwyg_component
 label: 'Componente Wysiwyg'
-icon_uuid: null
-description: ''
+icon_uuid: e67a5142-1522-4ca6-9580-afa36edc7048
+description: 'Este es un paragraph que funciona como un componente.'
 behavior_plugins: {  }
