@@ -1,63 +1,11 @@
 <h1>{{ title }}</h1>
 <p>{{ text }}</p>
 
-{# Start Wysiwyg Component #}
-{# *********************** #}
-<h2>Componente Wysiwyg:</h2>
-{# {% set config = {
-  content: '<p>Esto es un <strong>texto</strong> del wysiwyg de prueba, desde el <strong>código del styleguide</strong></p><p><img alt="test" data-entity-type="file" data-entity-uuid="fdfaf72b-bded-43d0-a707-dec0776482d6" src="/sites/default/files/styleguide/imagen-test.jpg"></p>'
-} %} #}
-{% set config %}
-  	{% include directory ~ '/templates/styleguide/dummies/contenido-wysiwyg.html.twig' only %}
-{% endset %}
-{% include directory ~ '/templates/organisms/wysiwyg/wysiwyg-component.html.twig' with { content: config } only %}
+{# Wysiwyg component #}
+{% include directory ~ '/templates/styleguide/wysiwyg/wysiwyg-component.html.twig' %}
 
+{# CTA list component #}
+{% include directory ~ '/templates/styleguide/cta_list/cta-list-component.html.twig' %}
 
-
-{# Start Cta List Component #}
-{# *********************** #}
-{% set ctas %}
-	{% for i in 1..4 %}
-		{% include directory ~ '/templates/atoms/cta.html.twig' with {
-			uri: "https://www.google.es",
-			title: "CTA" ~ i
-		} only %}
-	{% endfor %}
-{% endset %}
-
-<h2>Componente lista CTA:</h2>
-{% set config = {
-  title: 'titulo dummy componente cta desde styleguide',
-  description: 'Esta es una descripción dummy desde codigo del styleguide',
-  ctas: ctas
- } %}
-
-{% include directory ~ '/templates/organisms/cta_list/cta-list-component.html.twig' with config only %}
-
-
-{# Start Cards Component #}
-{# ********************** #}
-{% set link %}
-	{% include directory ~ '/templates/atoms/link.html.twig' with {
-		uri: "https://www.google2.com",
-		title: "CTA Simple"
-	} only %}
-{% endset %}
-
-{% set nested %}
-	{% for i in 1..2 %}
-		{% include directory ~ '/templates/molecules/card/card-component.html.twig' with {
-		  image: '<img alt="test" data-entity-type="file" data-entity-uuid="fdfaf72b-bded-43d0-a707-dec0776482d6" src="/sites/default/files/styleguide/imagen-test.jpg">',
-		  description: 'Esta es una descripción dummy desde codigo del styleguide',
-		  link: link
-		 } only %}
-	{% endfor %}
-{% endset %}
-
-<h2>Componente Conjunto de Cards:</h2>
-{% set config = {
-  cards: nested, 
- } %}
-
-{% include directory ~ '/templates/organisms/cards/cards-component.html.twig' with config only %}
-
+{# Cards component #}
+{% include directory ~ '/templates/styleguide/cards/cards-component.html.twig' %}
