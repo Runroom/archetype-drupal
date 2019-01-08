@@ -1,8 +1,10 @@
 langcode: es
 status: true
-dependencies: {  }
+dependencies:
+  content:
+    - 'file:file:770c7188-4f8d-445b-8ad7-364b1151a996'
 id: img_text_cta
 label: 'Card (IMG + Texto + CTA)'
-icon_uuid: null
-description: ''
+icon_uuid: 770c7188-4f8d-445b-8ad7-364b1151a996
+description: 'Este elemento es un paragraph que se usa dentro de otro. "Card" que se instancia en el paragraph "Componente Cards"'
 behavior_plugins: {  }
