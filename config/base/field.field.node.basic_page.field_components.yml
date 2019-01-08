@@ -37,6 +37,9 @@ settings:
       cards_component:
         enabled: true
         weight: 5
+      contact_form_component:
+        enabled: true
+        weight: 7
       img_text_cta:
         weight: 7
         enabled: false

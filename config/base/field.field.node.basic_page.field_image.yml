@@ -5,7 +5,14 @@ dependencies:
     - field.storage.node.field_image
     - node.type.basic_page
   module:
+    - content_translation
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      file: file
+      alt: '0'
+      title: '0'
 id: node.basic_page.field_image
 field_name: field_image
 entity_type: node
@@ -13,7 +20,7 @@ bundle: basic_page
 label: Image
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
