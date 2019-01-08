@@ -1,0 +1,18 @@
+{% set ctas %}
+	{% for i in 1..4 %}
+		{% include directory ~ '/templates/atoms/cta.html.twig' with {
+			uri: "https://www.google.es",
+			title: "CTA" ~ i
+		} only %}
+	{% endfor %}
+{% endset %}
+
+{% set config = {
+  title: 'titulo dummy componente cta desde styleguide',
+  description: 'Esta es una descripción dummy desde codigo del styleguide',
+  ctas: ctas
+ } %}
+
+<h2>Componente lista CTA:</h2>
+
+{% include directory ~ '/templates/organisms/cta_list/cta-list-component.html.twig' with config only %}
