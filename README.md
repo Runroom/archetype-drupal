@@ -63,7 +63,7 @@ Use it for everything but database dumps
 
 Use it to do database dumps
 
-## Estructura de Templates
+## Template Structure
 
 The rendering approach of the templates has been based on the idea of designing and styling all the elements of the web directly from the styleguide.
 
