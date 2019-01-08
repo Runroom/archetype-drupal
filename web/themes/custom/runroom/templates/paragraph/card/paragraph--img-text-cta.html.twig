@@ -1,11 +1,11 @@
 {% set config = {
   image: content.field_image,
   description: content.field_description,
-  link: content.field_simple_cta
+  link: content.field_link
 } %}
 
 {% block paragraph %}
   {% block content %}
-      {% include directory ~ '/templates/organisms/card-component.html.twig' with config only %}
+      {% include directory ~ '/templates/molecules/card/card-component.html.twig' with config only %}
   {% endblock %}
 {% endblock paragraph %}

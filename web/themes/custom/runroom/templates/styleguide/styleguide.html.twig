@@ -4,18 +4,21 @@
 {# Start Wysiwyg Component #}
 {# *********************** #}
 <h2>Componente Wysiwyg:</h2>
-{% set config = {
+{# {% set config = {
   content: '<p>Esto es un <strong>texto</strong> del wysiwyg de prueba, desde el <strong>código del styleguide</strong></p><p><img alt="test" data-entity-type="file" data-entity-uuid="fdfaf72b-bded-43d0-a707-dec0776482d6" src="/sites/default/files/styleguide/imagen-test.jpg"></p>'
-} %}
-{% include directory ~ '/templates/organisms/wysiwyg-component.html.twig' with config only %}
-{# End Wysiwyg Component #}
+} %} #}
+{% set config %}
+  	{% include directory ~ '/templates/styleguide/dummies/contenido-wysiwyg.html.twig' only %}
+{% endset %}
+{% include directory ~ '/templates/organisms/wysiwyg/wysiwyg-component.html.twig' with { content: config } only %}
+
 
 
 {# Start Cta List Component #}
 {# *********************** #}
 {% set ctas %}
 	{% for i in 1..4 %}
-		{% include directory ~ '/templates/molecules/cta.html.twig' with {
+		{% include directory ~ '/templates/atoms/cta.html.twig' with {
 			uri: "https://www.google.es",
 			title: "CTA" ~ i
 		} only %}
@@ -29,13 +32,13 @@
   ctas: ctas
  } %}
 
-{% include directory ~ '/templates/organisms/cta-list-component.html.twig' with config only %}
-{# End Wysiwyg Component #}
+{% include directory ~ '/templates/organisms/cta_list/cta-list-component.html.twig' with config only %}
+
 
 {# Start Cards Component #}
 {# ********************** #}
 {% set link %}
-	{% include directory ~ '/templates/molecules/link.html.twig' with {
+	{% include directory ~ '/templates/atoms/link.html.twig' with {
 		uri: "https://www.google2.com",
 		title: "CTA Simple"
 	} only %}
@@ -43,7 +46,7 @@
 
 {% set nested %}
 	{% for i in 1..2 %}
-		{% include directory ~ '/templates/organisms/card-component.html.twig' with {
+		{% include directory ~ '/templates/molecules/card/card-component.html.twig' with {
 		  image: '<img alt="test" data-entity-type="file" data-entity-uuid="fdfaf72b-bded-43d0-a707-dec0776482d6" src="/sites/default/files/styleguide/imagen-test.jpg">',
 		  description: 'Esta es una descripción dummy desde codigo del styleguide',
 		  link: link
@@ -56,5 +59,5 @@
   cards: nested, 
  } %}
 
-{% include directory ~ '/templates/organisms/cards-component.html.twig' with config only %}
-{# End Wysiwyg Component #}
+{% include directory ~ '/templates/organisms/cards/cards-component.html.twig' with config only %}
+
