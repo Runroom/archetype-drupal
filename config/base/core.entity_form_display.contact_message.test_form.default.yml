@@ -1,0 +1,58 @@
+langcode: es
+status: true
+dependencies:
+  config:
+    - contact.form.test_form
+    - field.field.contact_message.test_form.field_email
+    - field.field.contact_message.test_form.field_name
+    - field.field.contact_message.test_form.field_phone
+id: contact_message.test_form.default
+targetEntityType: contact_message
+bundle: test_form
+mode: default
+content:
+  field_email:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_phone:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  langcode:
+    type: language_select
+    weight: 4
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  message:
+    type: string_textarea
+    weight: 3
+    settings:
+      rows: 12
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden:
+  copy: true
+  mail: true
+  name: true
+  preview: true
+  subject: true

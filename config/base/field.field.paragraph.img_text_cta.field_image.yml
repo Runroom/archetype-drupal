@@ -5,7 +5,14 @@ dependencies:
     - field.storage.paragraph.field_image
     - paragraphs.paragraphs_type.img_text_cta
   module:
+    - content_translation
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      file: file
+      alt: '0'
+      title: '0'
 id: paragraph.img_text_cta.field_image
 field_name: field_image
 entity_type: paragraph
@@ -13,7 +20,7 @@ bundle: img_text_cta
 label: Imagen
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

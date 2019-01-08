@@ -9,6 +9,7 @@ class Email implements JsonSerializable {
   protected $emailTo;
   protected $userName;
   protected $email;
+  protected $phone;
   protected $body;
 
   public function getEmailTo()
@@ -41,6 +42,16 @@ class Email implements JsonSerializable {
     $this->email = $email;
   }
 
+  public function getPhone()
+  {
+    return $this->phone;
+  }
+
+  public function setPhone($phone)
+  {
+    $this->phone = $phone;
+  }
+
   public function getBody()
   {
     return $this->body;
@@ -57,6 +68,7 @@ class Email implements JsonSerializable {
         'emailTo' => $this->getEmailTo(),
         'userName' => $this->getUserName(),
         'email' => $this->getEmail(),
+        'phone' => $this->getPhone(),
         'text' => $this->getBody()
       ];
   }
