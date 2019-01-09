@@ -1,18 +1,18 @@
 {% set link %}
-	{% include directory ~ '/templates/atoms/link.html.twig' with {
-		uri: "https://www.google2.com",
-		title: "CTA Simple"
-	} only %}
+  {% include directory ~ '/templates/atoms/link.html.twig' with {
+    uri: "https://www.google2.com",
+    title: "CTA Simple"
+  } only %}
 {% endset %}
 
 {% set nested %}
-	{% for i in 1..2 %}
-		{% include directory ~ '/templates/molecules/card/card-component.html.twig' with {
-		  image: '<img alt="test" data-entity-type="file" data-entity-uuid="fdfaf72b-bded-43d0-a707-dec0776482d6" src="/sites/default/files/styleguide/imagen-test.jpg">',
-		  description: 'Esta es una descripción dummy desde codigo del styleguide',
-		  link: link
-		 } only %}
-	{% endfor %}
+  {% for i in 1..2 %}
+    {% include directory ~ '/templates/molecules/card/card-component.html.twig' with {
+      image: '<img alt="test" data-entity-type="file" data-entity-uuid="fdfaf72b-bded-43d0-a707-dec0776482d6" src="/sites/default/files/styleguide/imagen-test.jpg">',
+      description: 'Esta es una descripción dummy desde codigo del styleguide',
+      link: link
+     } only %}
+  {% endfor %}
 {% endset %}
 
 {% set config = {
