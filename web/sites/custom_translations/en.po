@@ -1,10 +1,10 @@
-# English translation of Runroom Archetype
+# Inglés translation of Runroom Archetype
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2018-04-05 09:10-0500\n"
-"PO-Revision-Date: 2018-04-05 09:10-0500\n"
+"POT-Creation-Date: 2019-05-13 19:15+0200\n"
+"PO-Revision-Date: 2019-05-13 19:15+0200\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
