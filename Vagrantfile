@@ -1,4 +1,4 @@
-Vagrant.require_version '>= 1.8.5'
+Vagrant.require_version '>= 2.1.2'
 
 Vagrant.configure('2') do |config|
     config.hostmanager.enabled = true
@@ -6,6 +6,7 @@ Vagrant.configure('2') do |config|
     config.hostmanager.manage_guest = true
 
     config.vm.provider :virtualbox do |v|
+        v.linked_clone = true
         v.customize [
             'modifyvm', :id,
             '--name', 'drupal-vm',
@@ -18,24 +19,20 @@ Vagrant.configure('2') do |config|
     end
 
     config.vm.define 'drupal-vm' do |node|
-        node.vm.box = 'ubuntu/xenial64'
-        node.vm.network :private_network, ip: '192.168.88.66', nic_type: 'virtio'
+        node.vm.box = 'ubuntu/bionic64'
+        node.vm.network :private_network, ip: '192.168.33.99', nic_type: 'virtio'
+        node.vm.network :forwarded_port, host: 3306, guest: 3306, auto_correct: true
+        node.vm.network :forwarded_port, host: 5000, guest: 5000, auto_correct: true
+        node.vm.network :forwarded_port, host: 5001, guest: 5001, auto_correct: true
         node.vm.hostname = 'drupal.local'
-        node.hostmanager.aliases = ['pimpmylog.drupal.local', 'adminer.drupal.local']
+        node.hostmanager.aliases = []
 
-        node.vm.synced_folder './', '/vagrant', type: 'nfs', nfs_udp: false, mount_options: ['actimeo=1']
+        node.vm.synced_folder './', '/vagrant', type: 'nfs', nfs_udp: false, mount_options: ['actimeo=1', 'async', 'noatime']
         node.ssh.forward_agent = true
     end
 
     config.vm.provision 'ansible_local' do |ansible|
-        ansible.compatibility_mode = "2.0"
-        ansible.playbook = 'ansible/provisioning/playbook.yml'
-        ansible.extra_vars = {
-            config_dir: '/vagrant/ansible',
-            drupalvm_env: 'vagrant'
-        }
-        ansible.galaxy_command = 'ansible-galaxy install --role-file=%{role_file} --roles-path=%{roles_path}'
-        ansible.galaxy_role_file = 'ansible/provisioning/requirements.yml'
-        ansible.galaxy_roles_path = 'ansible/provisioning/requirements'
+        ansible.compatibility_mode = '2.0'
+        ansible.playbook = 'ansible/playbook.yaml'
     end
 end
