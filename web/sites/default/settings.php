@@ -15,7 +15,6 @@ $settings['file_scan_ignore_directories'] = ['node_modules', 'bower_components']
 $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
 $settings['rebuild_access'] = FALSE;
 $settings['skip_permissions_hardening'] = TRUE;
-$settings['install_profile'] = 'minimal';
 $settings['container_yamls'][] = DRUPAL_ROOT . '/sites/custom.services.yml';
 $settings['custom_translations_directory'] = DRUPAL_ROOT . '/sites/custom_translations';
 

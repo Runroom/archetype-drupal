@@ -9,7 +9,7 @@
         }
     ],
     "require": {
-        "php": "^7.1",
+        "php": "^7.3",
         "composer/installers": "1.6.0",
         "cweagans/composer-patches": "1.6.5",
         "drupal/adminimal_theme": "1.4.0",
@@ -49,11 +49,8 @@
     "extra": {
         "installer-paths": {
             "web/core": ["type:drupal-core"],
-            "web/libraries/{$name}": ["type:drupal-library"],
             "web/modules/contrib/{$name}": ["type:drupal-module"],
-            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
-            "web/themes/contrib/{$name}": ["type:drupal-theme"],
-            "drush/contrib/{$name}": ["type:drupal-drush"]
+            "web/themes/contrib/{$name}": ["type:drupal-theme"]
         }
     }
 }
