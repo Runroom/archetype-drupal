@@ -1,10 +1,11 @@
 @import '../settings/variables';
 @import '../tools/functions';
+@import '../../../node_modules/modularscale-sass/stylesheets/modularscale';
 @import '../tools/mixins';
-@import '../tools/extends';
 @import '../tools/media-queries';
-@import '../../../../../../../node_modules/normalize-scss/sass/normalize';
+@import '../../../node_modules/normalize-scss/sass/normalize';
 @import '../generic/globals';
+@import '../tools/extends';
 @import '../generic/typography';
 @import '../utilities/utilities';
 
@@ -13,4 +14,4 @@
 
 /* Organisms */
 @import '../organisms/header';
-@import '../organisms/cookies';
+@import '../organisms/cookies-message';
