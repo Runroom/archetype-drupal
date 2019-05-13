@@ -1,6 +1,6 @@
 @import 'settings/variables';
 @import 'tools/functions';
-@import '../../node_modules/modularscale-sass/stylesheets/modularscale';
+@import '../../../../../../node_modules/modularscale-sass/stylesheets/modularscale';
 @import 'tools/mixins';
 @import 'tools/media-queries';
 @import 'tools/extends';
@@ -17,5 +17,3 @@
 @import 'organisms/form';
 
 /* Pages */
-@import 'pages/demo';
-@import 'pages/cookies';
