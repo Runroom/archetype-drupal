@@ -35,7 +35,7 @@ ansible-run database
 How to import the dump.sql file?
 
 ```
-drush sql-cli < /vagrant/ansible/dump-law.sql
+drush sql-cli < /vagrant/ansible/dump.sql
 ```
 
 ## Drupal Console & Drush
