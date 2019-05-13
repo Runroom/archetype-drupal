@@ -8,7 +8,6 @@ server:
     - { key: vm.swappiness, value: 10 }
     - { key: vm.vfs_cache_pressure, value: 50 }
   links:
-    - { folder: vendor, dest: /vagrant }
     - { folder: node_modules, dest: /vagrant }
 webserver:
   type: nginx
