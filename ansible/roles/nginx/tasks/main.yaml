@@ -1,0 +1,13 @@
+---
+- name: Install nginx
+  become: true
+  apt:
+    name: nginx
+    state: latest
+
+- name: Change default nginx site
+  become: true
+  template:
+    src: default
+    dest: /etc/nginx/sites-available/default
+  notify: Restart nginx

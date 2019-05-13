@@ -1,0 +1,24 @@
+---
+- name: Install composer vendors
+  composer:
+    no_dev: no
+    working_dir: /vagrant
+  environment:
+    PATH: '/home/vagrant/bin:/usr/bin'
+
+- name: Import configuration
+  command: drupal deploy
+  args:
+    chdir: /vagrant
+
+- name: Add .bash_aliases
+  template:
+    src: .bash_aliases
+    dest: '{{ ansible_env.HOME }}/.bash_aliases'
+
+- name: Modify .bashrc
+  blockinfile:
+    path: '{{ ansible_env.HOME }}/.bashrc'
+    block: |
+      export PATH=/vagrant/bin:{{ ansible_env.HOME }}/vendor/bin:{{ ansible_env.HOME }}/.config/composer/vendor/bin:{{ ansible_env.HOME }}/.symfony/bin:$PATH
+      cd /vagrant

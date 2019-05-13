@@ -1,21 +1,22 @@
-const RESOURCE_PATH = 'web/themes/custom/runroom';
-const RESOURCE_ASSETS_PATH = `${RESOURCE_PATH}/assets`;
-const VIEWS_PATH = `${RESOURCE_PATH}/templates`;
+const WEB_PATH = 'web';
+const WEB_ASSETS_PATH = `${WEB_PATH}/themes/custom/runroom`;
+const ASSETS_PATH = `${WEB_ASSETS_PATH}/assets`;
 
-const FONTS_SRC = `${RESOURCE_ASSETS_PATH}/fonts`;
-const IMAGES_SRC = `${RESOURCE_ASSETS_PATH}/img`;
-const SCRIPTS_SRC = `${RESOURCE_ASSETS_PATH}/js`;
-const STYLES_SRC = `${RESOURCE_ASSETS_PATH}/scss`;
+const FONTS_SRC = `${ASSETS_PATH}/fonts`;
+const IMAGES_SRC = `${ASSETS_PATH}/img`;
+const SCRIPTS_SRC = `${ASSETS_PATH}/js`;
+const STYLES_SRC = `${ASSETS_PATH}/scss`;
 const SPRITES_SRC = `${IMAGES_SRC}/sprites`;
 
-const FONTS_DEST = `${RESOURCE_PATH}/fonts`;
-const IMAGES_DEST = `${RESOURCE_PATH}/img`;
-const SCRIPTS_DEST = `${RESOURCE_PATH}/js`;
-const STYLES_DEST = `${RESOURCE_PATH}/css`;
-const SPRITES_DEST = `${VIEWS_PATH}/svg`;
+const FONTS_DEST = `${WEB_ASSETS_PATH}/fonts`;
+const IMAGES_DEST = `${WEB_ASSETS_PATH}/img`;
+const SCRIPTS_DEST = `${WEB_ASSETS_PATH}/js`;
+const STYLES_DEST = `${WEB_ASSETS_PATH}/css`;
+const VIEWS_DEST = `${WEB_ASSETS_PATH}/templates`;
+const SPRITES_DEST = `${VIEWS_DEST}/svg`;
 
 export {
-  VIEWS_PATH,
+  WEB_PATH,
   FONTS_SRC,
   IMAGES_SRC,
   SCRIPTS_SRC,
@@ -25,5 +26,6 @@ export {
   IMAGES_DEST,
   SCRIPTS_DEST,
   STYLES_DEST,
+  VIEWS_DEST,
   SPRITES_DEST
 };
