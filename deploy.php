@@ -15,7 +15,7 @@ set('ssh_multiplexing', true);
 
 set('allow_anonymous_stats', false);
 set('drupal_console', '{{release_path}}/vendor/bin/drupal');
-set('composer_options', '{{composer_action}} --prefer-dist --classmap-authoritative --no-progress --no-interaction --no-dev');
+set('composer_options', '{{composer_action}} --prefer-dist --apcu-autoloader --no-progress --no-interaction --no-dev');
 
 task('app', function () {
     run('cd {{release_path}} && {{bin/php}} {{drupal_console}} deploy');
