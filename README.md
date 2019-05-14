@@ -23,7 +23,7 @@ Virtual machine up:
 In order to do a database dump, execute this line with the desired alias depending on the site (exed or law):
 
 ```
-drush sql-dump > /vagrant/ansible/dump.sql
+drush sql-dump > /vagrant/ansible/drupal.sql
 ```
 
 Once the dump is completed, you can use it by executing:
@@ -35,7 +35,7 @@ ansible-run database
 How to import the dump.sql file?
 
 ```
-drush sql-cli < /vagrant/ansible/dump.sql
+drush sql-cli < /vagrant/ansible/drupal.sql
 ```
 
 ## Drupal Console & Drush
