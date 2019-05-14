@@ -68,6 +68,8 @@ bash drush/import-translations.bash
 Import database and files from development:
 
 ```
-drush sql-sync @drupal.development @local.local
+drush sql-sync @drupal.development @drupal.local
 drush rsync @drupal.development:%files @local.local:%files
 ```
+
+Note that you can not import directly between servers, you have to import to local and then import to the other server instead.
