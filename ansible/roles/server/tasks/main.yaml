@@ -52,11 +52,6 @@
     value: 10000
   with_items: [soft, hard]
 
-- name: Create bin directory
-  file:
-    path: '{{ ansible_env.HOME }}/bin'
-    state: directory
-
 - import_tasks: swap.yaml
 - import_tasks: links.yaml
 - import_tasks: ssl.yaml

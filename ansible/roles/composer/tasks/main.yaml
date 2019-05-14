@@ -4,6 +4,11 @@
     url: https://getcomposer.org/installer
     dest: /tmp/composer-installer
 
+- name: Create composer directory
+  file:
+    path: '{{ ansible_env.HOME }}/bin'
+    state: directory
+
 - name: Install composer
   command: 'php /tmp/composer-installer --install-dir={{ ansible_env.HOME }}/bin --filename=composer'
   args:
