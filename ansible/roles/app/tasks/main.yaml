@@ -10,6 +10,8 @@
   command: drupal deploy
   args:
     chdir: /vagrant
+  environment:
+    PATH: '/vagrant/vendor/bin:/usr/bin'
 
 - name: Add .bash_aliases
   template:
