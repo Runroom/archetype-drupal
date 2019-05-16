@@ -2,13 +2,8 @@
 
 <footer id="footer" class="footer">
     <div class="u-wrapper u-flex u-flex--align-start u-flex--justify-between">
+        {% include directory ~ '/img/svg/runroom-logo.svg' %}
         &copy; Runroom {{ 'now'|date('Y') }}
-        {{ macros.icon('r-runroom') }}
-        <ul class="footer__pages">
-            {% for staticPage in page.staticPages('footer') %}
-            <li><a href="{{ path('runroom.static_page.route.static.' ~ locale, {'slug': staticPage.slug}) }}">{{ staticPage.title }}</a></li>
-            {% endfor %}
-            <li><a href="{{ path('runroom.cookies.route.cookies.' ~ locale) }}">{{ 'cookies.policy'|trans }}</a></li>
-        </ul>
+        {% block content %}{% endblock %}
     </div>
 </footer>
