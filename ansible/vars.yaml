@@ -9,6 +9,7 @@ server:
     - { key: vm.vfs_cache_pressure, value: 50 }
   links:
     - { folder: node_modules, dest: /vagrant }
+    - { folder: web/sites/default/files, dest: /vagrant }
 webserver:
   type: nginx
   name: drupal.local
@@ -42,6 +43,9 @@ php:
     - { setting: pm.start_servers, value: 5 }
     - { setting: pm.min_spare_servers, value: 5 }
     - { setting: pm.max_spare_servers, value: 5 }
+drupal:
+    permission_dirs: [web/sites/default/files]
+    files_folders: [tmp, translations]
 composer:
   packages:
     - { package: hirak/prestissimo }
