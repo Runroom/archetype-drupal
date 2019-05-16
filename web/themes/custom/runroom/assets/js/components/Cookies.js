@@ -99,24 +99,26 @@ const setupSettingsForm = () => {
 const cookiesWrapper = () => {
   const cookiesMessage = document.querySelector(OPTS.cookiesMessageClass);
 
-  if (typeof cookies.get(cookieMessage) === 'undefined') {
-    document.querySelector(OPTS.buttonAcceptClass).addEventListener('click', acceptCookies);
-    document.querySelector(OPTS.cookiesCloseClass).addEventListener('click', closeMessage);
-    cookiesMessage.classList.add(OPTS.cookiesVisibleClass);
-  } else {
-    cookiesMessage.remove();
-  }
+  if (cookiesMessage) {
+    if (typeof cookies.get(cookieMessage) === 'undefined') {
+      document.querySelector(OPTS.buttonAcceptClass).addEventListener('click', acceptCookies);
+      document.querySelector(OPTS.cookiesCloseClass).addEventListener('click', closeMessage);
+      cookiesMessage.classList.add(OPTS.cookiesVisibleClass);
+    } else {
+      cookiesMessage.remove();
+    }
 
-  if (cookies.get(performanceCookie) === false) {
-    removeCookies(PERFORMANCE_COOKIES);
-  }
+    if (cookies.get(performanceCookie) === false) {
+      removeCookies(PERFORMANCE_COOKIES);
+    }
 
-  if (cookies.get(targetingCookie) === false) {
-    removeCookies(TARGETING_COOKIES);
-  }
+    if (cookies.get(targetingCookie) === false) {
+      removeCookies(TARGETING_COOKIES);
+    }
 
-  if (document.querySelector(OPTS.formCookiesSettingsClass)) {
-    setupSettingsForm();
+    if (document.querySelector(OPTS.formCookiesSettingsClass)) {
+      setupSettingsForm();
+    }
   }
 };
 
