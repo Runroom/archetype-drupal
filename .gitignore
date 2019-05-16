@@ -15,10 +15,7 @@ web/core/*
 !web/core/.gitkeep
 web/modules/contrib/
 web/themes/contrib/
-web/sites/*/files/*
-!web/sites/*/files/tmp
-web/sites/*/files/tmp/*
-!web/sites/*/files/tmp/.gitkeep
+web/sites/default/files
 
 # NODE
 node_modules
