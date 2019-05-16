@@ -1,0 +1,37 @@
+{# GTM Variables #}
+{% set gtmId = '' %}
+{% set performanceIsAccepted = '' %}
+{% set targetingIsAccepted = '' %}
+{% set isInternalIp = '' %}
+
+<!DOCTYPE html>
+<html{{ html_attributes.addClass('non-touch no-js') }}>
+    <head>
+        <head-placeholder token="{{ placeholder_token|raw }}">
+        <title>{{ head_title|safe_join(' | ') }}</title>
+
+        {% include directory ~ '/templates/helpers/tagmanager.html.twig' with {
+            performanceIsAccepted: performanceIsAccepted,
+            targetingIsAccepted: targetingIsAccepted,
+            isInternalIp: isInternalIp
+        } %}
+        {% include directory ~ '/templates/helpers/fonts.html.twig' %}
+        {% include directory ~ '/templates/helpers/favicon.html.twig' %}
+        <style type="text/css">
+            {% block crp %}
+                {% include directory ~ '/templates/crp/default.min.css' %}
+            {% endblock %}
+        </style>
+    </head>
+    <body{{ attributes }}>
+        {% include directory ~ '/templates/helpers/tagmanager-noscript.html.twig' with { gtmId: gtmId } %}
+
+        {{ page_top }}
+        {{ page }}
+        {{ page_bottom }}
+        <css-placeholder token="{{ placeholder_token|raw }}">
+        <js-placeholder token="{{ placeholder_token|raw }}">
+        <js-bottom-placeholder token="{{ placeholder_token|raw }}">
+        {% block customlibraries %}{% endblock %}
+    </body>
+</html>

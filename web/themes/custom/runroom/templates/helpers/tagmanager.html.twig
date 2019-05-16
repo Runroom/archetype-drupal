@@ -1,8 +1,12 @@
+{% set performanceIsAccepted = performanceIsAccepted|default(null) %}
+{% set targetingIsAccepted = targetingIsAccepted|default(null) %}
+{% set isInternalIp = isInternalIp|default(null) %}
+
 <script>
     dataLayer = [{
-        {% if page.cookies.performanceIsAccepted is not null %}'COPerformance': {{ page.cookies.performanceIsAccepted ? 'true' : 'false' }},{% endif %}
-        {% if page.cookies.targetingIsAccepted is not null %}'COTargeting': {{ page.cookies.targetingIsAccepted ? 'true' : 'false' }},{% endif %}
-        {% if page.isInternalIp %}'GAFlashVersion': 'filter-gtm-intern',{% endif %}
+        {% if performanceIsAccepted is not null %}'COPerformance': {{ pageperformanceIsAccepted ? 'true' : 'false' }},{% endif %}
+        {% if targetingIsAccepted is not null %}'COTargeting': {{ pagetargetingIsAccepted ? 'true' : 'false' }},{% endif %}
+        {% if isInternalIp %}'GAFlashVersion': 'filter-gtm-intern',{% endif %}
     }];
 </script>
 
