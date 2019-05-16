@@ -1,4 +1,4 @@
-const keyup = callback => {
+const escape = callback => {
   document.addEventListener('keyup', event => {
     if (event.keyCode === 27) {
       event.preventDefault();
@@ -8,4 +8,4 @@ const keyup = callback => {
 };
 
 // Temporary. Remove when more events are added
-export { keyup }; // eslint-disable-line
+export { escape }; // eslint-disable-line
