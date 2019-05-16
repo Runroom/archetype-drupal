@@ -3,6 +3,7 @@
 {% set performanceIsAccepted = '' %}
 {% set targetingIsAccepted = '' %}
 {% set isInternalIp = '' %}
+{# END GTM Variables #}
 
 <!DOCTYPE html>
 <html{{ html_attributes.addClass('non-touch no-js') }}>
@@ -22,6 +23,7 @@
                 {% include directory ~ '/templates/crp/default.min.css' %}
             {% endblock %}
         </style>
+        <js-placeholder token="{{ placeholder_token|raw }}">
     </head>
     <body{{ attributes }}>
         {% include directory ~ '/templates/helpers/tagmanager-noscript.html.twig' with { gtmId: gtmId } %}
@@ -29,8 +31,8 @@
         {{ page_top }}
         {{ page }}
         {{ page_bottom }}
+
         <css-placeholder token="{{ placeholder_token|raw }}">
-        <js-placeholder token="{{ placeholder_token|raw }}">
         <js-bottom-placeholder token="{{ placeholder_token|raw }}">
         {% block customlibraries %}{% endblock %}
     </body>
