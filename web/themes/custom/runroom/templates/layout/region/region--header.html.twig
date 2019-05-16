@@ -1,9 +1,6 @@
 {% if content %}
-    <header class="header">
-        <div class="u-wrapper u-flex u-flex--align-start u-flex--justify-between">
-          <a itemscope itemtype="http://schema.org/Brand" class="header__logo" itemprop="url" href="" title="" rel="home">{% include directory ~ '/img/svg/runroom-logo.svg' %}</a>
-          {{ drupal_entity('block', 'mainnavigation') }}
-          {{ drupal_entity('block', 'languageswitcher') }}
-        </div>
-    </header>
+    {% embed directory ~ '/templates/organisms/header.html.twig' %}
+        {% block navigation %}{{ drupal_entity('block', 'mainnavigation') }}{% endblock %}
+        {% block language %}{{ drupal_entity('block', 'languageswitcher') }}{% endblock %}
+    {% endembed %}
 {% endif %}
