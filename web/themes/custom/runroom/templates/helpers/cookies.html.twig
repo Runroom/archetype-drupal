@@ -1,0 +1,8 @@
+{% if page.cookies is not empty %}
+    <script>
+        PERFORMANCE_COOKIES = {{ page.cookies.performanceCookies|json_encode|raw }};
+        TARGETING_COOKIES = {{ page.cookies.targetingCookies|json_encode|raw }};
+        COOKIES_DEFAULT_DOMAIN = '{{ cookiesDefaultDomain }}';
+        COOKIES_SECURE = {{ cookiesSecure }};
+    </script>
+{% endif %}

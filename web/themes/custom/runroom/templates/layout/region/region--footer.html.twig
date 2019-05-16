@@ -1,5 +1,5 @@
 {% if content %}
-    <footer class="footer">
-      {{ drupal_entity('block', 'footer') }}
-    </footer>
+    {% embed directory ~ '/templates/organisms/footer.html.twig' %}
+        {% block content %}{{ drupal_entity('block', 'footer') }}{% endblock %}
+    {% endembed %}
 {% endif %}
