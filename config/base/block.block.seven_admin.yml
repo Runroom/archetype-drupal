@@ -1,3 +1,4 @@
+uuid: 31fb2d98-ec79-401d-a43b-e1956698dfee
 langcode: en
 status: true
 dependencies:
@@ -20,4 +21,5 @@ settings:
   label_display: visible
   level: 1
   depth: 0
+  expand_all_items: false
 visibility: {  }

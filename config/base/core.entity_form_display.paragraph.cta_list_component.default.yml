@@ -1,3 +1,4 @@
+uuid: 00935206-df0a-4f8d-839b-8c3ac8cded0b
 langcode: es
 status: true
 dependencies:
@@ -36,6 +37,11 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  translation:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
     region: content
 hidden:
   created: true
