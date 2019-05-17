@@ -1,0 +1,14 @@
+%quote {
+    font-size: ms(2);
+
+    @include breakpoint($s768) {
+        font-size: ms(3);
+    }
+
+    &::before,
+    &::after { content: '"'; }
+
+    &::before {
+        margin-left: -15px;
+    }
+}

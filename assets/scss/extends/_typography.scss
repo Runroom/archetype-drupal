@@ -1,0 +1,69 @@
+/* Headings */
+%hyphens {
+    @include breakpoint-max(440px) {
+        hyphens: auto;
+    }
+}
+
+%title1,
+%title2 {
+    font-weight: 200;
+    letter-spacing: .3px;
+
+    @extend %hyphens;
+}
+
+%title1 {
+    font-size: ms(7);
+
+    @include space('line-height', 1.7);
+    @include space('margin-bottom', 2);
+
+    @include breakpoint($vr-breakpoint) {
+        font-size: ms(9);
+
+        @include space('line-height', 2);
+    }
+}
+
+%title2 {
+    @include space('line-height', 1.25);
+    @include space('margin-bottom');
+
+    font-size: ms(5);
+}
+
+%textSmall {
+    @include space('line-height', .75);
+
+    font-size: ms(-3);
+    letter-spacing: .3px;
+}
+
+%textBig {
+    @include space('line-height', 1.2);
+
+    font-size: ms(3);
+    letter-spacing: .3px;
+}
+
+%label {
+    @include space('line-height', .6);
+
+    font-size: ms(-2);
+    letter-spacing: .3px;
+
+    @include breakpoint($vr-breakpoint) {
+        font-size: ms(-3);
+    }
+}
+
+%labelBig {
+    font-weight: 500;
+}
+
+%link {
+    color: $c-neutro900;
+    cursor: pointer;
+    text-decoration: underline;
+}

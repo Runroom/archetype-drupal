@@ -1,0 +1,47 @@
+html, body {
+    @include space('line-height');
+
+    color: $c-neutro900;
+    font-family: $t-default;
+    font-size: $min-font-size;
+    font-weight: 300;
+    text-size-adjust: 100%;
+
+    @include breakpoint($vr-breakpoint) {
+        font-size: $max-font-size;
+    }
+
+    .fonts-loaded & { font-family: $t-default; }
+}
+
+h1, .t-title1 { @extend %title1; }
+h2, .t-title2 { @extend %title2; }
+// h3, .t-h3 { @extend %title3; }
+// h4, .t-h4 { @extend %title4; }
+// h5, .t-h5 { @extend %title5; }
+
+.p-small {
+    @extend %textSmall;
+}
+
+.p-big {
+    @extend %textBig;
+}
+
+.label { @extend %label; }
+
+.label-big {
+    @extend %label;
+    @extend %labelBig;
+}
+
+b, strong { font-weight: 500; }
+i, em { font-style: italic; }
+
+p, blockquote {
+    @include space('margin-bottom', .75);
+}
+
+a {
+    @extend %link;
+}
