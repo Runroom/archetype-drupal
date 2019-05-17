@@ -1,3 +1,4 @@
+uuid: 05738cf2-26d7-4bc7-9ed7-a99b6b9fb802
 langcode: es
 status: true
 dependencies:
@@ -38,6 +39,11 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
+  translation:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
     region: content
 hidden:
   created: true

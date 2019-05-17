@@ -1,7 +1,14 @@
 global-styling:
-  version: 1.x
+  version: VERSION
   css:
     theme:
       css/styles.min.css: { minified: true }
   js:
     js/app.min.js: { minified: true }
+
+toolbar.menu:
+  version: VERSION
+  css:
+    theme:
+      /core/themes/stable/css/system/components/clearfix.module.css: {}
+      /core/themes/stable/css/system/components/hidden.module.css: {}

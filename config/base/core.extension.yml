@@ -4,6 +4,8 @@ module:
   block_content: 0
   breakpoint: 0
   ckeditor: 0
+  config_filter: 0
+  config_split: 0
   config_translation: 0
   contact: 0
   ctools: 0
@@ -25,6 +27,8 @@ module:
   language: 0
   link: 0
   locale: 0
+  menu_breadcrumb: 0
+  menu_link_attributes: 0
   menu_ui: 0
   metatag: 0
   metatag_views: 0
@@ -38,6 +42,7 @@ module:
   text: 0
   token: 0
   toolbar: 0
+  twig_field_value: 0
   twig_tweak: 0
   update: 0
   user: 0
