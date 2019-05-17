@@ -1,0 +1,62 @@
+.demo {
+    background: $c-white;
+
+    .box {
+        color: #000;
+        margin-bottom: space();
+        min-height: space(4);
+        text-align: center;
+    }
+
+    &__background {
+        background: url(/assets/img/background.jpeg) no-repeat center / cover;
+        color: #fff;
+        overflow: hidden;
+        padding-bottom: space(3);
+        padding-top: space(3);
+        position: relative;
+
+        &::before {
+            background: hsla(0, 100%, 0%, .5);
+            content: '';
+            display: block;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 0;
+        }
+
+        .u-wrapper {
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    &__grid {
+        [class^="u-flex--"] {
+            background-clip: content-box;
+
+            @include breakpoint-max($s480) {
+                background: hsla(0, 100%, 0%, .1);
+            }
+
+            @include breakpoint-minmax($s480, $s768) {
+                background: hsla(0, 100%, 0%, .2);
+            }
+
+            @include breakpoint($s768) {
+                &:nth-child(odd) { background: hsla(0, 100%, 0%, .2); }
+                &:nth-child(even) { background: hsla(0, 100%, 0%, .1); }
+            }
+        }
+    }
+
+    &__link {
+        font-size: get-rems(18px);
+        font-weight: 700;
+        margin-top: space(2);
+        text-decoration: underline;
+    }
+}

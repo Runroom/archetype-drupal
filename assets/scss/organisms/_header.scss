@@ -1,0 +1,53 @@
+.header {
+    background-color: $c-neutro100;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    will-change: transform;
+    z-index: 9;
+
+    @include space('padding', .75, 0);
+
+    @include breakpoint($s768) {
+        @include space('padding', 1, 0);
+    }
+
+    @include breakpoint-max($s768) {
+        transform: translateY(0);
+        transition: transform .6s cubic-bezier($curve-Bezier);
+
+        .scroll-down & {
+            transform: translateY(-100%);
+        }
+    }
+
+    &--dark {
+        background-color: $c-neutro900;
+        color: $c-white;
+    }
+
+    &--blog {
+        @include vars(background-color, primary);
+        @include vars(color, secondary);
+    }
+
+    &__logo {
+        color: inherit;
+        height: 18px;
+        text-decoration: none;
+
+        svg * { fill: currentColor; }
+
+        @include hover { svg * { fill: currentColor; } }
+    }
+
+    &__animated-logo {
+        display: inline-flex;
+        height: 18px;
+
+        svg {
+            @include space('margin-right', .25);
+        }
+    }
+}

@@ -1,0 +1,144 @@
+@mixin clearfix {
+    &::after,
+    &::before {
+        content: " ";
+        display: table;
+    }
+
+    &::after {
+        clear: both;
+    }
+}
+
+@mixin visuallyHidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+@mixin videoFullWidth() {
+    height: 0;
+    padding-bottom: 56.25%;
+
+    /* 16:9 */
+    position: relative;
+
+    iframe {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}
+
+@mixin space($property, $top: 1, $right: '', $bottom: '', $left: '') {
+    /* Function generate-space to-do */
+    @if $right != '' and $bottom != '' and $left != '' {
+        #{$property}: space-fallback($top) space-fallback($right) space-fallback($bottom) space-fallback($left);
+        #{$property}: space-regular($top) space-regular($right) space-regular($bottom) space-regular($left);
+    }
+    @else if $right != '' and $bottom != '' {
+        #{$property}: space-fallback($top) space-fallback($right) space-fallback($bottom);
+        #{$property}: space-regular($top) space-regular($right) space-regular($bottom);
+    }
+    @else if $right != '' {
+        #{$property}: space-fallback($top) space-fallback($right);
+        #{$property}: space-regular($top) space-regular($right);
+    }
+    @else {
+        #{$property}: space-fallback($top);
+        #{$property}: space-regular($top);
+    }
+}
+
+@mixin square($size) {
+    height: $size;
+    width: $size;
+}
+
+@mixin placeholderColor() {
+    &::-webkit-input-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+}
+
+@mixin fluid-type($min-font-size, $max-font-size, $min-vw: 480px, $max-vw: 1440px) {
+    $u1: unit($min-vw);
+    $u2: unit($max-vw);
+    $u3: unit($min-font-size);
+    $u4: unit($max-font-size);
+
+    @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+        font-size: $min-font-size;
+
+        @media screen and (min-width: $min-vw) {
+            font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+        }
+
+        @media screen and (min-width: $max-vw) {
+            font-size: $max-font-size;
+        }
+    }
+
+    @else {
+        @error "Detected mixed units. Please use the same units for all parameters.";
+    }
+}
+
+@mixin get-ratio($o-width, $o-height, $width: 0, $height: 0) {
+    $h: strip-unit(get-pxs($height));
+    $w: strip-unit(get-pxs($width));
+
+    @if $w > 0 {
+        height: ceil(($w / $o-width) * $o-height) * 1px;
+        width: $w * 1px;
+    }
+
+    @else {
+        height: $h * 1px;
+        width: ceil(($h / $o-height) * $o-width) * 1px;
+    }
+}
+
+@mixin reset-field {
+    font-family: $t-default;
+    font-size: get-rems(14px);
+    font-weight: 400;
+}
+
+@mixin hover {
+    &:hover {
+        .non-touch & {
+            @content;
+        }
+    }
+}
+
+@mixin columns($number, $spaces: 1) {
+    width: calc((100% - #{space($spaces * ($number - 1))}) / #{$number});
+
+    &:nth-child(n) {
+        margin-right: space($spaces);
+    }
+
+    &:nth-child(#{$number}n) {
+        margin-right: 0;
+    }
+}
+
+@mixin vars($prop, $varName) {
+    #{$prop}: map-get($vars, $varName);
+    #{$prop}: var(--#{$varName});
+}
+
+@mixin vars-gradient($varName1, $varName2) {
+    background: -webkit-linear-gradient(180deg, map-get($vars, $varName1) 25%, map-get($vars, $varName2) 100%);
+    background: -webkit-linear-gradient(180deg, var(--#{$varName1}) 25%, var(--#{$varName2}) 100%);
+}

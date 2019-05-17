@@ -1,0 +1,22 @@
+.footer {
+    background: $c-white;
+    color: $c-black;
+
+    @include space('padding-bottom');
+    @include space('padding-top');
+
+    @include breakpoint($s768) {
+        @include space('padding-bottom', 2);
+        @include space('padding-top', 2);
+    }
+
+    &__legals {
+        @include space('margin-top', 2);
+    }
+
+    a span { display: block; }
+
+    p {
+        margin-bottom: 0;
+    }
+}

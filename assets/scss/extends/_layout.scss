@@ -1,0 +1,19 @@
+%section {
+    @include space('padding', 1.5, 0);
+
+    @include breakpoint($s768) {
+        @include space('padding', 2, 0);
+    }
+
+    > *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+%content {
+    @include space('padding', 2.5, 0);
+
+    @include breakpoint($s768) {
+        @include space('padding', 5, 0);
+    }
+}

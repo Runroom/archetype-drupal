@@ -1,6 +1,6 @@
 const WEB_PATH = 'web';
 const WEB_ASSETS_PATH = `${WEB_PATH}/themes/custom/runroom`;
-const ASSETS_PATH = `${WEB_ASSETS_PATH}/assets`;
+const ASSETS_PATH = `assets`;
 
 const FONTS_SRC = `${ASSETS_PATH}/fonts`;
 const IMAGES_SRC = `${ASSETS_PATH}/img`;

@@ -1,0 +1,16 @@
+$global-max-width: 1440px;
+$grid-columns: 24;
+$vertical-rhythm: 1.5rem;
+$font-ratio: 1.125;
+$grid-columns: 24;
+$vr-fallback: 1.8;
+$vr-breakpoint: 1024px;
+$vrPX: 36px;
+
+$curve-Bezier: .31, .77, .38, 1.01;
+
+:root {
+    --vr: 1.6;
+}
+
+$vr: var(--vr);

@@ -1,0 +1,24 @@
+$c-white: #fff;
+$c-black: #000;
+
+$c-primary: #ffc1bb;
+$c-secondary: #0032c6;
+
+$c-neutro100: #f2f2f2;
+$c-neutro200: #d4d4d4;
+$c-neutro300: #b0b0b0;
+$c-neutro900: #191919;
+
+$vars: (
+    primary: $c-primary,
+    secondary: $c-secondary
+);
+
+$c-border: $c-neutro300;
+
+$c-error: #ff1940;
+
+:root {
+    --primary: var(--theme-primary, #{map-get($vars, primary)});
+    --secondary: var(--theme-secondary, #{map-get($vars, secondary)});
+}

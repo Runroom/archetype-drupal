@@ -1,0 +1,21 @@
+.form {
+    &__field {
+        @include space('margin-bottom', .5);
+
+        label {
+            @extend %textSmall;
+
+            display: inline;
+            margin: 0;
+        }
+    }
+
+    &__message {
+        &--invalid {
+            background-color: lighten($c-error, 35);
+            display: block;
+
+            @include space('padding', .2, .5);
+        }
+    }
+}

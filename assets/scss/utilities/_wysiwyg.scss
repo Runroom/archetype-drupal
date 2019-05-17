@@ -1,0 +1,183 @@
+%u-wysiwyg,
+.u-wysiwyg {
+    > *:last-child {
+        margin-bottom: 0;
+    }
+
+    blockquote {
+        @extend %quote;
+
+        padding: 5px 15px;
+
+        @include space('padding-left');
+        @include space('margin', 1, 0);
+
+        @include breakpoint($s768) {
+            @include space('padding-left', 2);
+            @include space('margin', 2, 0);
+        }
+    }
+
+    table { @extend %table; }
+
+    h1 + h2,
+    h2 + h3,
+    h3 + h4,
+    h4 + h5 {
+        @include space('margin-top', .5);
+    }
+
+    ul { @extend %custom-ul; }
+    ol { @extend %custom-ol; }
+
+    img {
+        border: 0 !important;
+        display: block;
+        float: none !important;
+        height: auto !important;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100% !important;
+
+        @include space('margin-bottom');
+
+        &::after {
+            content: attr(data-title);
+            display: block;
+        }
+    }
+
+    ul, ol {
+        display: block;
+
+        ul, ol {
+            @include space('margin-top', .5);
+            @include space('margin-bottom', .5);
+        }
+
+        li {
+            @include space('margin-bottom', .25);
+
+            &:last-child { margin-bottom: 0; }
+        }
+
+        img { width: auto !important; }
+    }
+
+    a {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+
+    em, i { font-style: italic; }
+
+    h2 + ul, h2 + ol,
+    h3 + ul, h3 + ol,
+    h4 + ul, h4 + ol,
+    h5 + ul, h5 + ol {
+        @include space('margin-top', .5);
+    }
+
+    ol + h2,
+    ul + h2,
+    table + h2 {
+        @include space('margin-top', 1.5);
+    }
+
+    ol + table,
+    ul + table {
+        @include space('margin-top');
+    }
+
+    p + table,
+    p + p {
+        @include space('margin-top', .5);
+    }
+
+    h1 + p,
+    h2 + p,
+    h3 + p,
+    h4 + p,
+    h5 + p {
+        @include space('margin-top', .5);
+    }
+
+    ol + p,
+    ul + p {
+        @include space('margin-top');
+    }
+
+    table + p,
+    p + table {
+        @include space('margin-top', 1.5);
+    }
+
+    .p-big + table,
+    .p-big + p,
+    p + .p-big {
+        @include space('margin-top', .75);
+    }
+
+    p + ol,
+    p + ul {
+        @include space('margin-top');
+    }
+
+    .p-big + ol,
+    .p-big + ul {
+        @include space('margin-top');
+    }
+
+    ol + .p-big,
+    ul + .p-big,
+    table + .p-big {
+        @include space('margin-top', .75);
+    }
+
+    h1 + .p-big,
+    h2 + .p-big,
+    h3 + .p-big,
+    h4 + .p-big,
+    h5 + .p-big {
+        @include space('margin-top', .75);
+    }
+
+    p + h2,
+    ol + h2,
+    ul + h2,
+    p + h3,
+    ol + h3,
+    ul + h3,
+    p + h4,
+    ol + h4,
+    ul + h4,
+    p + h5,
+    ol + h5,
+    ul + h5 {
+        @include space('margin-top', 2);
+    }
+
+    .u-video-fullwidth,
+    .youtube-embed-wrapper,
+    .ckeditor-html5-audio {
+        @include space('margin-top', .5);
+        @include space('margin-bottom', .5);
+
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    pre {
+        overflow-wrap: break-word;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+
+        code {
+            @extend %code;
+
+            display: block;
+        }
+    }
+
+    .code { @extend %code; }
+}

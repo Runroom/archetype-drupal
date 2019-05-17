@@ -1,0 +1,35 @@
+%table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0;
+    max-width: 100%;
+    padding: 0;
+    text-align: left;
+    width: 100% !important;
+
+    @include breakpoint-max($s768) {
+        display: block;
+        overflow-x: scroll;
+    }
+
+    caption {
+        text-align: left;
+
+        @include space('margin-bottom', .75);
+    }
+
+    thead {
+        display: table-header-group;
+
+        tr th {
+            font-weight: 700;
+        }
+    }
+
+    thead tr th,
+    td {
+        border: 1px solid $c-neutro200;
+
+        @include space('padding', .75);
+    }
+}
