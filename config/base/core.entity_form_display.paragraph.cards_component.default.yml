@@ -1,3 +1,4 @@
+uuid: 288a7754-026d-46de-91cd-e718911835bd
 langcode: es
 status: true
 dependencies:
@@ -21,6 +22,11 @@ content:
       add_mode: dropdown
       form_display_mode: default
       default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  translation:
+    weight: 10
+    settings: {  }
     third_party_settings: {  }
     region: content
 hidden:

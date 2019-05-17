@@ -1,3 +1,4 @@
+uuid: 5abaa70d-f49e-4b43-8274-e86f9f19cf08
 langcode: es
 status: true
 dependencies:
@@ -18,6 +19,11 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
+  translation:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
     region: content
 hidden:
   created: true
