@@ -19,7 +19,7 @@ const THEME_NAME = argv.theme;
 
 const gulpCompilation = (themeName) => {
   return gulp
-    .src([`${STYLES_SRC}/themes/${themeName}.scss`, `${STYLES_SRC}/crp/themes/${themeName}.scss`], { base: STYLES_SRC })
+    .src([`${STYLES_SRC}/themes/${themeName}.scss`, `${STYLES_SRC}/crp/themes/${themeName}/*.scss`], { base: STYLES_SRC })
     .pipe(named(function (file) {
       return path.relative(file.base, file.path).slice(0, -5);
     }))
@@ -28,13 +28,12 @@ const gulpCompilation = (themeName) => {
     .pipe(plumber.stop())
     .pipe(filter('**/*.css'))
     .pipe(gulpIf(function (file) {
-      return file.path.includes('crp');
+      return !file.path.includes('crp');
     },
-      rename({ basename: 'default' }),
       rename({ basename: 'styles' })
     ))
     .pipe(rename(path => {
-      path.dirname = path.dirname.replace('themes', '');
+      path.dirname = path.dirname.indexOf('crp') >= 0 ? 'crp' : '';
       path.extname = '.min.css';
     }))
     .pipe(gulpIf(function (file) {
