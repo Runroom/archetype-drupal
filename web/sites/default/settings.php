@@ -17,5 +17,6 @@ $settings['rebuild_access'] = FALSE;
 $settings['skip_permissions_hardening'] = TRUE;
 $settings['container_yamls'][] = DRUPAL_ROOT . '/sites/custom.services.yml';
 $settings['custom_translations_directory'] = DRUPAL_ROOT . '/sites/custom_translations';
+$settings['gtm_id'] = 'GTM-KTPM543';
 
 include DRUPAL_ROOT . '/sites/custom.settings.php';
