@@ -22,11 +22,12 @@ const WATCH_OPTIONS = { usePolling: true };
 
 const watcher = () => {
   watch(STYLES_FILES, WATCH_OPTIONS, gulp.series(buildStyles, reload));
-  watch(SCRIPTS_FILES, WATCH_OPTIONS, gulp.series(buildScripts, reload));
-  watch(IMAGES_FILES, WATCH_OPTIONS, gulp.series(buildImages, reload));
-  watch(SPRITES_FILES, WATCH_OPTIONS, gulp.series(imagesSprites, reload));
-  watch(SVG_FILES, WATCH_OPTIONS, gulp.series(imagesSvg, reload));
+  // watch(SCRIPTS_FILES, WATCH_OPTIONS, gulp.series(buildScripts, reload));
+  // watch(IMAGES_FILES, WATCH_OPTIONS, gulp.series(buildImages, reload));
+  // watch(SPRITES_FILES, WATCH_OPTIONS, gulp.series(imagesSprites, reload));
+  // watch(SVG_FILES, WATCH_OPTIONS, gulp.series(imagesSvg, reload));
 };
 
-const DEV = gulp.series(build, serve, watcher);
+// const DEV = gulp.series(build, serve, watcher);
+const DEV = gulp.series(buildStyles, serve, watcher);
 export default DEV;
