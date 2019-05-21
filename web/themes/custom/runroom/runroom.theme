@@ -1,5 +1,11 @@
 <?php
 
+use Drupal\Core\Site\Settings;
+
+function runroom_preprocess(array &$variables, $hook) {
+  $variables['gtm_id'] = Settings::get('gtm_id');
+}
+
 /**
  * Implements THEME_theme_suggestions_html_alter().
  */

@@ -1,21 +1,10 @@
-{# GTM Variables #}
-{% set gtmId = '' %}
-{% set performanceIsAccepted = '' %}
-{% set targetingIsAccepted = '' %}
-{% set isInternalIp = '' %}
-{# END GTM Variables #}
-
 <!DOCTYPE html>
 <html{{ html_attributes.addClass('non-touch no-js') }}>
     <head>
         <head-placeholder token="{{ placeholder_token|raw }}">
         <title>{{ head_title|safe_join(' | ') }}</title>
 
-        {% include directory ~ '/templates/helpers/tagmanager.html.twig' with {
-            performanceIsAccepted: performanceIsAccepted,
-            targetingIsAccepted: targetingIsAccepted,
-            isInternalIp: isInternalIp
-        } %}
+        {% include directory ~ '/templates/helpers/tagmanager.html.twig' %}
         {% include directory ~ '/templates/helpers/fonts.html.twig' %}
         {% include directory ~ '/templates/helpers/favicon.html.twig' %}
         <style type="text/css">
@@ -26,7 +15,7 @@
         <js-placeholder token="{{ placeholder_token|raw }}">
     </head>
     <body{{ attributes }}>
-        {% include directory ~ '/templates/helpers/tagmanager-noscript.html.twig' with { gtmId: gtmId } %}
+        {% include directory ~ '/templates/helpers/tagmanager-noscript.html.twig' %}
 
         {{ page_top }}
         {{ page }}
