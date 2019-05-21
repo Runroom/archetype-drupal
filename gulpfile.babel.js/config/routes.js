@@ -1,6 +1,7 @@
 const WEB_PATH = 'web';
-const WEB_ASSETS_PATH = `${WEB_PATH}/themes/custom/runroom`;
+const WEB_ASSETS_PATH = `${WEB_PATH}/themes/custom/%s`;
 const ASSETS_PATH = `assets`;
+const AVAILABLE_THEMES = ['runroom', 'othertheme'];
 
 const FONTS_SRC = `${ASSETS_PATH}/fonts`;
 const IMAGES_SRC = `${ASSETS_PATH}/img`;
@@ -16,6 +17,7 @@ const VIEWS_DEST = `${WEB_ASSETS_PATH}/templates`;
 const SPRITES_DEST = `${VIEWS_DEST}/svg`;
 
 export {
+  AVAILABLE_THEMES,
   WEB_PATH,
   FONTS_SRC,
   IMAGES_SRC,
