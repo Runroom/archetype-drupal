@@ -122,23 +122,14 @@
 }
 
 @mixin columns($number, $spaces: 1) {
-    width: calc((100% - #{space($spaces * ($number - 1))}) / #{$number});
+    width: calc((100% - #{space-fallback($spaces * ($number - 1))}) / #{$number});
+    width: calc((100% - #{space-regular($spaces * ($number - 1))}) / #{$number});
 
     &:nth-child(n) {
-        margin-right: space($spaces);
+        @include space('margin-right', $spaces);
     }
 
     &:nth-child(#{$number}n) {
         margin-right: 0;
     }
-}
-
-@mixin vars($prop, $varName) {
-    #{$prop}: map-get($vars, $varName);
-    #{$prop}: var(--#{$varName});
-}
-
-@mixin vars-gradient($varName1, $varName2) {
-    background: -webkit-linear-gradient(180deg, map-get($vars, $varName1) 25%, map-get($vars, $varName2) 100%);
-    background: -webkit-linear-gradient(180deg, var(--#{$varName1}) 25%, var(--#{$varName2}) 100%);
 }

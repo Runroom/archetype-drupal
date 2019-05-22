@@ -1,6 +1,76 @@
+$form-padding: .25;
+$form-margin: .25;
+$form-input-height: 1.25;
+
 .form {
+    button,
+    input[type="submit"] {
+        padding: $form-padding * 2;
+        width: 100%;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="url"],
+    input[type="password"],
+    input[type="search"],
+    textarea {
+        background: $form-background;
+        border: $form-border;
+        border-radius: $form-radius;
+        box-shadow: $form-shadow;
+        padding: $form-padding;
+
+        &[disabled],
+        &[readonly] {
+            background: $form-background--disabled;
+            box-shadow: none;
+        }
+
+        &:focus:not(.form__state--invalid) {
+            border-color: $form_border--active;
+        }
+
+        &.form__state--invalid,
+        &.form__state--invalid:focus {
+            border-color: $c-error;
+            border-width: 2px;
+        }
+    }
+
+    label,
+    legend {
+        margin: 0 0 $form-margin;
+        @include space('margin', 0, 0, $form-margin);
+    }
+
+    select {
+        @include space('height', $form-input-height);
+    }
+
     &__field {
         @include space('margin-bottom', .5);
+
+        &:not(:first-child) {
+            @include space('margin', $form-margin, 0, 0);
+        }
+
+        &--inline {
+            &:not(:first-child) { @include space('margin', $form-margin, 0, 0); }
+
+            input[type="checkbox"],
+            input[type="radio"] {
+                @include space('margin', 0, $form-margin, 0, 0);
+            }
+
+            label { margin: 0; }
+
+            label,
+            input {
+                display: inline;
+            }
+        }
 
         label {
             @extend %textSmall;
