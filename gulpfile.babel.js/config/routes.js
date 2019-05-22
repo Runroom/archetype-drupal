@@ -1,7 +1,7 @@
 const WEB_PATH = 'web';
 const WEB_ASSETS_PATH = `${WEB_PATH}/themes/custom/%s`;
 const ASSETS_PATH = `assets`;
-const AVAILABLE_THEMES = ['runroom'];
+const AVAILABLE_THEMES = ['runroom', 'othertheme'];
 
 const FONTS_SRC = `${ASSETS_PATH}/fonts`;
 const IMAGES_SRC = `${ASSETS_PATH}/img`;

@@ -10,16 +10,16 @@ import { argv } from 'yargs';
 import webpack from 'webpack';
 import webpackStream from 'webpack-stream';
 
-import { AVAILABLE_THEMES, STYLES_SRC, STYLES_DEST, VIEWS_DEST } from '../config/routes';
+import { AVAILABLE_THEMES, STYLES_SRC, STYLES_DEST } from '../config/routes';
 import { WEBPACK_CONFIG } from '../config/webpack';
 import errorAlert from '../config/fn.error.alert';
 
 const STYLES_FILES = `${STYLES_SRC}/**/*.scss`;
 const THEME_NAME = argv.theme;
 
-const stylesCompilation = (themeName) => {
+const styleguideCompilation = (themeName) => {
   return gulp
-    .src([`${STYLES_SRC}/themes/${themeName}.scss`, `${STYLES_SRC}/crp/themes/${themeName}/*.scss`], { base: STYLES_SRC })
+    .src([`${STYLES_SRC}/styleguide.scss`], { base: STYLES_SRC })
     .pipe(named(function (file) {
       return path.relative(file.base, file.path).slice(0, -5);
     }))
@@ -27,34 +27,21 @@ const stylesCompilation = (themeName) => {
     .pipe(webpackStream(WEBPACK_CONFIG, webpack))
     .pipe(plumber.stop())
     .pipe(filter('**/*.css'))
-    .pipe(gulpIf(function (file) {
-      return !file.path.includes('crp');
-    },
-      rename({ basename: 'styles' })
-    ))
-    .pipe(rename(path => {
-      path.dirname = path.dirname.indexOf('crp') >= 0 ? 'crp' : '';
-      path.extname = '.min.css';
-    }))
-    .pipe(gulpIf(function (file) {
-      return file.path.includes('crp');
-    },
-      gulp.dest(VIEWS_DEST.replace('%s', themeName)),
-      gulp.dest(STYLES_DEST.replace('%s', themeName))
-    ));
+    .pipe(rename({ extname: '.min.css' }))
+    .pipe(gulp.dest(STYLES_DEST.replace('%s', themeName)));
 }
 
-const styles = () => {
+const styleguide = () => {
   if (THEME_NAME) {
-    return stylesCompilation(THEME_NAME);
+    return styleguideCompilation(THEME_NAME);
   } else {
     const promises = [];
 
-    AVAILABLE_THEMES.map(theme => promises.push(gulpPromise(stylesCompilation(theme))));
+    AVAILABLE_THEMES.map(theme => promises.push(gulpPromise(styleguideCompilation(theme))));
 
     return Promise.all(promises);
   }
 };
 
 export { STYLES_FILES };
-export default styles;
+export default styleguide;
