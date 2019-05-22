@@ -1,5 +1,5 @@
 global-styling:
-  version: VERSION
+  version: 1.x
   css:
     theme:
       css/styles.min.css: { minified: true }
