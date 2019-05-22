@@ -1,10 +1,25 @@
 {% extends directory ~ '/templates/templates/page.html.twig' %}
 
 {% block content %}
-    {% include directory ~ '/templates/styleguide/styleguide.html.twig' %}
+    <h1>{{ title }}</h1>
+    <p>{{ text }}</p>
+
+    {# Wysiwyg component #}
+    {% include directory ~ '/templates/styleguide/sections/wysiwyg.html.twig' %}
+
+{#
+    {% include directory ~ '/templates/styleguide/sections/intro.html.twig' %}
+    {% include directory ~ '/templates/styleguide/sections/breakpoints.html.twig' %}
+    {% include directory ~ '/templates/styleguide/sections/breadcrumbs.html.twig' %}
+    {% include directory ~ '/templates/styleguide/sections/buttons.html.twig' %}
+    {% include directory ~ '/templates/styleguide/sections/grid.html.twig' %}
+    {% include directory ~ '/templates/styleguide/sections/headings.html.twig' %}
+    {% include directory ~ '/templates/styleguide/sections/paragraphs.html.twig' %}
+    {% include directory ~ '/templates/styleguide/sections/links.html.twig' %}
+    {% include directory ~ '/templates/styleguide/sections/wysiwyg.html.twig' %} #}
+
 {% endblock %}
 
 {% block libraries %}
     {{ attach_library('runroom/styleguide') }}
 {% endblock %}
-

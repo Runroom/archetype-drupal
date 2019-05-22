@@ -1,22 +1,25 @@
 .footer {
-    background: $c-white;
-    color: $c-black;
+    background: $c-neutro900;
+    color: $c-white;
 
     @include space('padding-bottom');
     @include space('padding-top');
 
-    @include breakpoint($s768) {
-        @include space('padding-bottom', 2);
-        @include space('padding-top', 2);
-    }
+    .u-icon { fill: $c-primary; }
 
-    &__legals {
-        @include space('margin-top', 2);
-    }
+    &__pages {
+        li {
+            display: inline-block;
 
-    a span { display: block; }
+            @include space('padding-right', .25);
 
-    p {
-        margin-bottom: 0;
+            &:last-child { padding-right: 0; }
+
+            a {
+                color: currentColor;
+
+                @include hover { opacity: .75; }
+            }
+        }
     }
 }
