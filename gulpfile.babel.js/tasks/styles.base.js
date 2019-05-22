@@ -19,7 +19,7 @@ const THEME_NAME = argv.theme;
 
 const gulpCompilation = (themeName) => {
   return gulp
-    .src([`${STYLES_SRC}/themes/${themeName}.scss`, `${STYLES_SRC}/crp/themes/${themeName}/*.scss`], { base: STYLES_SRC })
+    .src([`${STYLES_SRC}/themes/${themeName}.scss`, `${STYLES_SRC}/crp/themes/${themeName}/*.scss`, ``], { base: STYLES_SRC })
     .pipe(named(function (file) {
       return path.relative(file.base, file.path).slice(0, -5);
     }))

@@ -2,5 +2,8 @@
   "extends": "@runroom/eslint-config-runroom",
   "env": {
     "browser": true
+  },
+  "rules": {
+    "implicit-arrow-linebreak": "off"
   }
 }
