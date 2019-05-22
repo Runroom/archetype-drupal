@@ -4,7 +4,7 @@
 
     &__item {
         &:not(:last-child) {
-            margin-right: space(.25);
+            @include space('margin-right', .25);
 
             &::after {
                 color: $c-black;
@@ -17,7 +17,8 @@
     }
 
     &__link {
-        padding-right: space(.25);
         text-decoration: underline;
+
+        @include space('padding-right', .25);
     }
 }

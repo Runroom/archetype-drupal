@@ -1,9 +1,0 @@
-.section {
-    @extend %section;
-
-    &__content {
-        @include space('margin-bottom', 1.5);
-
-        @include breakpoint($s768) { @include space('margin-bottom', 3); }
-    }
-}

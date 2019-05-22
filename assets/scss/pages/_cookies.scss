@@ -1,17 +1,17 @@
 .cookies {
     &__subtitle {
-        margin-bottom: space(.5);
+        @include space('margin-bottom', .5);
 
         @include breakpoint($s768) {
-            margin-bottom: space();
+            @include space('margin-bottom');
         }
     }
 
     &__section {
-        margin-bottom: space(2);
+        @include space('margin-bottom', 2);
 
         @include breakpoint($s768) {
-            margin-bottom: space(3.5);
+            @include space('margin-bottom', 3.5);
         }
     }
 
