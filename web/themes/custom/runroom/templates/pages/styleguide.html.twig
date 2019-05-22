@@ -1,0 +1,10 @@
+{% extends directory ~ '/templates/templates/page.html.twig' %}
+
+{% block content %}
+    {% include directory ~ '/templates/styleguide/styleguide.html.twig' %}
+{% endblock %}
+
+{% block libraries %}
+    {{ attach_library('runroom/styleguide') }}
+{% endblock %}
+

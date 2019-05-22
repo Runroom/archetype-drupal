@@ -6,6 +6,12 @@ global-styling:
   js:
     js/app.min.js: { minified: true }
 
+styleguide:
+  version: 1.x
+  css:
+    theme:
+      css/styleguide.min.css: { minified: true }
+
 toolbar.menu:
   version: VERSION
   css:
