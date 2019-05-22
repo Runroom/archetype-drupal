@@ -1,7 +1,0 @@
-<h2>Componente Wysiwyg:</h2>
-
-{% set config %}
-	{% include directory ~ '/templates/styleguide/wysiwyg/dummy-content-wysiwyg.html.twig' only %}
-{% endset %}
-
-{% include directory ~ '/templates/organisms/wysiwyg.html.twig' with { content: config } only %}

@@ -1,0 +1,23 @@
+{% extends directory ~ '/templates/styleguide/templates/section.html.twig' %}
+
+{% set content %}
+	{% include directory ~ '/templates/styleguide/content/wysiwyg.html.twig' %}
+{% endset %}
+
+{% block id %}Wysiwyg{% endblock %}
+{% block title %}Wysiwyg{% endblock %}
+
+{% block description %}
+    <p>
+        Estilos de distintos elementos básicos como headings, párrafos, etc. que se encuentran dentro del wysiwyg y la relación que existe entre ellos (las separaciones entre textos, imágenes, etc).
+        Archivos útiles para el wysiwyg y la función de los espaciados:
+    </p>
+    <ul>
+        <li><span class="styleguide__highlight url">/app/Resources/assets/scss/utilities/_wysiwyg.scss</span></li>
+        <li><span class="styleguide__highlight url">/app/Resources/assets/scss/tools/_functions.scss</span></li>
+    </ul>
+{% endblock %}
+
+{%- block code -%}
+    {% include directory ~ '/templates/organisms/wysiwyg.html.twig' with { content: content } only %}
+{%- endblock -%}
