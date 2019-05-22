@@ -6,5 +6,5 @@
 .u-italic { font-style: italic; }
 
 .u-list {
-    &--item { margin-top: space(.5); }
+    &--item { @include space(margin-top, .5); }
 }

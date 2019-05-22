@@ -1,6 +1,5 @@
 $button-bg: #000;
 $button-color-disabled: #5a5959;
-$button-padding: space(.5) space(2);
 
 button,
 [role="button"],
@@ -14,11 +13,12 @@ input[type="submit"] {
     cursor: pointer;
     font-family: inherit;
     font-size: 100%;
-    line-height: space();
-    padding: $button-padding;
     text-align: center;
     vertical-align: top;
     width: 100%;
+
+    @include space('padding', .5, 2);
+    @include space('line-height');
 
     * { pointer-events: none; }
 

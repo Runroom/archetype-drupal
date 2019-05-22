@@ -17,14 +17,16 @@
 
     &__header {
         border-bottom: 1px solid $c-neutro100;
-        margin-bottom: space();
-        padding-bottom: space();
+
+        @include space('margin-bottom');
+        @include space('padding-bottom');
 
         @include breakpoint($s768) {
             display: flex;
             justify-content: space-between;
-            margin-bottom: space(2);
             padding-bottom: 0;
+
+            @include space('margin-bottom', 2);
         }
     }
 }
