@@ -42,10 +42,11 @@ $logoMaxWidth: 200px;
         background: $c-neutro900;
         min-height: 100%;
         opacity: 0;
-        padding: space();
         position: relative;
         transition: all .3s ease-in-out;
         z-index: 1;
+
+        @include space('padding');
 
         .is-open & { opacity: 1; }
     }

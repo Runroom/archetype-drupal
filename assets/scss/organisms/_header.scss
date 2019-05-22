@@ -1,11 +1,11 @@
 .header {
-    padding: space() 0;
+    @include space('padding', 1, 0);
 
     &__logo {
         display: inherit;
 
         svg {
-            max-height: space(2);
+            @include space('max-height', 2);
 
             path { fill: $c-primary; }
         }

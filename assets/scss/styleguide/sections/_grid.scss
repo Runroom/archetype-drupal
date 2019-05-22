@@ -1,13 +1,15 @@
 .grid-sample {
     background-color: $c-neutro100;
-    padding: space(.5);
+
+    @include space('padding', .5);
 
     [class^="u-flex--s"] {
         border: 1px solid $c-white;
         color: $c-neutro300;
         min-height: 48px;
-        padding: space(.5);
         text-align: center;
+
+        @include space('padding', .5);
     }
 
     [class^="u-flex--s"]:nth-child(odd) {

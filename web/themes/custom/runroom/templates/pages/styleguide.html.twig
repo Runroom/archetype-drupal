@@ -1,23 +1,18 @@
 {% extends directory ~ '/templates/templates/page.html.twig' %}
 
 {% block content %}
-    <h1>{{ title }}</h1>
-    <p>{{ text }}</p>
-
-    {# Wysiwyg component #}
-    {% include directory ~ '/templates/styleguide/sections/wysiwyg.html.twig' %}
-
-{#
-    {% include directory ~ '/templates/styleguide/sections/intro.html.twig' %}
-    {% include directory ~ '/templates/styleguide/sections/breakpoints.html.twig' %}
-    {% include directory ~ '/templates/styleguide/sections/breadcrumbs.html.twig' %}
-    {% include directory ~ '/templates/styleguide/sections/buttons.html.twig' %}
-    {% include directory ~ '/templates/styleguide/sections/grid.html.twig' %}
-    {% include directory ~ '/templates/styleguide/sections/headings.html.twig' %}
-    {% include directory ~ '/templates/styleguide/sections/paragraphs.html.twig' %}
-    {% include directory ~ '/templates/styleguide/sections/links.html.twig' %}
-    {% include directory ~ '/templates/styleguide/sections/wysiwyg.html.twig' %} #}
-
+    <div class="u-wrapper">
+        <h1>Styleguide</h1>
+        {% include directory ~ '/templates/styleguide/sections/intro.html.twig' %}
+        {% include directory ~ '/templates/styleguide/sections/breakpoints.html.twig' %}
+        {% include directory ~ '/templates/styleguide/sections/breadcrumbs.html.twig' %}
+        {% include directory ~ '/templates/styleguide/sections/buttons.html.twig' %}
+        {% include directory ~ '/templates/styleguide/sections/grid.html.twig' %}
+        {% include directory ~ '/templates/styleguide/sections/headings.html.twig' %}
+        {% include directory ~ '/templates/styleguide/sections/paragraphs.html.twig' %}
+        {% include directory ~ '/templates/styleguide/sections/links.html.twig' %}
+        {% include directory ~ '/templates/styleguide/sections/wysiwyg.html.twig' %}
+    </div>
 {% endblock %}
 
 {% block libraries %}

@@ -1,7 +1,6 @@
 .sg-section {
-    margin: 0 0 space(3);
-    min-height: 100vh;
-    padding: space(2) 0;
+    @include space('margin', 0, 0, 3);
+    @include space('padding', 2, 0);
 
     &__title {
         border: solid #666;
@@ -31,7 +30,7 @@
 
     &__code {
         background-color: $c-neutro100;
-        border: 1px solid $c-neutroLighter;
+        border: 1px solid $c-neutro200;
         border-radius: 5px;
         box-shadow: 10px 11px 24px -12px rgba(0, 0, 0, .43);
         font-size: 14px;
