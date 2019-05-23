@@ -1,5 +1,5 @@
 const WEB_PATH = 'web';
-const WEB_ASSETS_PATH = `${WEB_PATH}/themes/custom/%s`;
+const WEB_ASSETS_PATH = `${WEB_PATH}/themes/custom/%t`;
 const ASSETS_PATH = `assets`;
 const AVAILABLE_THEMES = ['runroom'];
 
