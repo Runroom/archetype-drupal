@@ -5,10 +5,11 @@ import rename from 'gulp-rename';
 
 import { SVGO } from '../config/params';
 import { SPRITES_SRC, SPRITES_DEST } from '../config/routes';
+import themes from '../config/themes';
 
 const SPRITES_FILES = `${SPRITES_SRC}/*.svg`;
 
-const sprites = () => {
+const spritesCompilation = (themeName) => {
   return gulp
     .src(SPRITES_FILES)
     .pipe(rename({ prefix: 'icon-' }))
@@ -19,8 +20,10 @@ const sprites = () => {
       },
       parserOptions: { xmlMode: true }
     }))
-    .pipe(gulp.dest(SPRITES_DEST));
+    .pipe(gulp.dest(SPRITES_DEST.replace('%t', themeName)));
 };
+
+const sprites = () => themes(spritesCompilation);
 
 export { SPRITES_FILES };
 export default sprites;
