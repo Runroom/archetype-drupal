@@ -2,6 +2,7 @@ import gulp from 'gulp';
 import imagemin from 'gulp-imagemin';
 import mozjpeg from 'imagemin-mozjpeg';
 
+import { SVGO } from '../config/params';
 import { IMAGES_SRC, IMAGES_DEST } from '../config/routes';
 import themes from '../config/themes';
 
@@ -14,7 +15,7 @@ const imagesCompilation = (themeName) => {
       mozjpeg(),
       imagemin.gifsicle({ interlaced: true }),
       imagemin.optipng({ optimizationLevel: 5 }),
-      imagemin.svgo()
+      imagemin.svgo(SVGO)
     ]))
     .pipe(gulp.dest(IMAGES_DEST.replace('%t', themeName)));
 };
