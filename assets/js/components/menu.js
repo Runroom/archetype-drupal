@@ -23,16 +23,6 @@ const menu = () => {
     });
   });
 
-  // Click outside menu element
-  document.addEventListener('click', event => {
-    const activeMenu = document.querySelector(`.${CLASS_MENU_ACTIVE}`);
-
-    if (activeMenu !== null && !activeMenu.contains(event.target)) {
-      event.preventDefault();
-      toggleNavigation(`.${CLASS_MENU_ACTIVE}`);
-    }
-  });
-
   Utils.keyup('escape', () => {
     if (document.documentElement.classList.contains(CLASS_MENU_OPEN)) {
       toggleNavigation(`.${CLASS_MENU_ACTIVE}`);
