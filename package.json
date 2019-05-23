@@ -10,7 +10,8 @@
   },
   "private": true,
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "theme": "gulp --theme"
   },
   "engines": {
     "node": ">=8.11"
