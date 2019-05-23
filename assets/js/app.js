@@ -4,6 +4,7 @@ import { scrollTo, events, touchable } from '@runroom/purejs';
 // we recommend to use module import method and import it as needed.
 import cookies from './components/cookies';
 import lazyLoadImages from './components/lazyLoadImages';
+import menu from './components/menu';
 import './helpers/polyfills';
 
 touchable();
@@ -14,9 +15,8 @@ document.documentElement.classList.remove('no-js');
 events.onDocumentReady(() => {
   const anchor = document.querySelector('.js-anchor');
 
-  alert('here!');
-
   cookies();
+  menu();
 
   // For small projects or low use of javascript, you can add events in this
   // same file, as follows. Eventhough the module import method is preferred.

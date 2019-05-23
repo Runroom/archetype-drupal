@@ -59,15 +59,3 @@ table {
 
 html { touch-action: manipulation; }
 html, body { position: relative; }
-
-a,
-button {
-    transition: color .1s ease-out;
-    will-change: color;
-
-    * { pointer-events: none; }
-
-    @include hover {
-        color: $c-neutro300;
-    }
-}

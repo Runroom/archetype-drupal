@@ -11,10 +11,10 @@
     font-weight: 200;
     padding: 0;
 
-    @extend %link;
-
     &[attr="disabled"],
     &:disabled {
         box-shadow: none;
     }
+
+    * { pointer-events: none; }
 }
