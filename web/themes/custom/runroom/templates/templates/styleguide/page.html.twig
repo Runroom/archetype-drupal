@@ -1,9 +1,6 @@
-{% extends directory ~ '/templates/templates/page.html.twig' %}
+{% include directory ~ '/templates/styleguide/templates/sidebar.html.twig' %}
+<main class="styleguide" role="main" id="main-content">
+    {% block body %}{% endblock %}
+</main>
 
-{% block content %}
-
-    {% include directory ~ '/templates/styleguide/templates/sidebar.html.twig' %}
-    <main class="styleguide" role="main" id="main-content">
-        {% block body %}{% endblock %}
-    </main>
-{% endblock %}
+{% block libraries %}{% endblock %}
