@@ -3,6 +3,7 @@ $sidebarSmall: 55px;
 $logoMaxWidth: 200px;
 
 .sg-sidebar {
+    background-color: $c-neutro300;
     color: $c-white;
     height: 100vh;
     left: 0;
@@ -15,7 +16,6 @@ $logoMaxWidth: 200px;
     z-index: 1;
 
     @include breakpoint($s768) {
-        background: $c-neutro900;
         left: ($sidebarSmall - $sidebarWidth);
         width: $sidebarWidth;
     }

@@ -10,8 +10,9 @@
 
 .styleguide {
     margin-left: $sidebarSmall;
-    padding: space(2) space(1.5);
     transition: all .3s linear;
+
+    @include space('padding', 2, 0);
 
     &__highlight { color: #ff8b8b; }
     .url { word-break: break-all; }

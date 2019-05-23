@@ -14,6 +14,8 @@ document.documentElement.classList.remove('no-js');
 events.onDocumentReady(() => {
   const anchor = document.querySelector('.js-anchor');
 
+  alert('here!');
+
   cookies();
 
   // For small projects or low use of javascript, you can add events in this
