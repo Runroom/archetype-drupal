@@ -14,7 +14,7 @@
     "theme": "gulp --theme"
   },
   "engines": {
-    "node": ">=8.11"
+    "node": ">=10.15"
   },
   "dependencies": {
     "@runroom/purejs": "2.0.5",
