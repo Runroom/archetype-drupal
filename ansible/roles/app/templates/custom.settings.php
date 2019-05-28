@@ -3,9 +3,9 @@
 $databases = [
   'default' => [
     'default' => [
-      'database' => 'drupal',
-      'username' => 'drupal',
-      'password' => 'drupal',
+      'database' => '{{ mysql.database }}',
+      'username' => '{{ mysql.user }}',
+      'password' => '{{ mysql.password }}',
       'prefix' => '',
       'host' => 'localhost',
       'port' => '',
@@ -15,7 +15,7 @@ $databases = [
   ],
 ];
 
-$settings['trusted_host_patterns'] = ['^drupal\.local$'];
+$settings['trusted_host_patterns'] = ['^{{ webserver.name|replace('.', '\.') }}$'];
 $settings['hash_salt'] = '308d47268412acc4fe69f0afaf00b3e63cc7c69f6d94c62d4530d045cd911839';
 
 assert_options(ASSERT_ACTIVE, TRUE);
