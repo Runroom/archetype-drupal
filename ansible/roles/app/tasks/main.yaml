@@ -6,6 +6,14 @@
   environment:
     PATH: '/home/vagrant/bin:/usr/bin'
 
+- name: Site config
+  template:
+    src: '{{ item }}'
+    dest: '/vagrant/web/sites/{{ item }}'
+  with_items:
+    - custom.services.yml
+    - custom.settings.php
+
 - name: Import configuration
   command: drupal deploy
   args:
