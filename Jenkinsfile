@@ -19,6 +19,20 @@ pipeline {
                 }
             }
         }
+        stage('Test') {
+            steps {
+                sh "phpdbg${PHP_VERSION} -qrr ./vendor/bin/phpunit --log-junit coverage/unitreport.xml --coverage-html coverage"
+                step([ $class: 'JUnitResultArchiver', testResults: 'coverage/unitreport.xml' ])
+                publishHTML(target: [
+                    allowMissing: false,
+                    alwaysLinkToLastBuild: false,
+                    keepAll: true,
+                    reportDir: 'coverage',
+                    reportFiles: 'index.html',
+                    reportName: 'Coverage Report'
+                ])
+            }
+        }
         stage('Deploy') {
             when { expression { return env.BRANCH_NAME in ['development'] } }
             steps {

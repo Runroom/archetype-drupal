@@ -2,6 +2,11 @@
     "name": "runroom/drupal_archetype",
     "license": "proprietary",
     "type": "project",
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
     "repositories": [
         {
             "type": "composer",
@@ -40,7 +45,8 @@
     },
     "require-dev": {
         "deployer/dist": "4.3.4",
-        "friendsofphp/php-cs-fixer": "2.15.1"
+        "friendsofphp/php-cs-fixer": "2.15.1",
+        "phpunit/phpunit": "8.2.1"
     },
     "conflict": {
         "drupal/drupal": "*"

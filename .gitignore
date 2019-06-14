@@ -11,6 +11,7 @@ ubuntu-*-cloudimg-console.log
 
 # DRUPAL
 .php_cs.cache
+.phpunit.result.cache
 vendor
 web/core/*
 !web/core/.gitkeep

@@ -8,6 +8,7 @@ $finder = Finder::create()
         __DIR__ . '/web/modules/custom',
         __DIR__ . '/web/sites',
         __DIR__ . '/web/themes/custom',
+        __DIR__ . '/tests',
     ])
     ->name('*.php')
     ->name('*.module')
