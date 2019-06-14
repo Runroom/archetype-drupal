@@ -10,6 +10,7 @@ playbook.retry
 ubuntu-*-cloudimg-console.log
 
 # DRUPAL
+.php_cs.cache
 vendor
 web/core/*
 !web/core/.gitkeep

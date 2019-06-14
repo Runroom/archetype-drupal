@@ -10,11 +10,11 @@ $config['system.performance']['css']['preprocess'] = 1;
 $config['system.performance']['js']['preprocess'] = 1;
 $config['stage_file_proxy.settings']['origin'] = false;
 
-$settings['update_free_access'] = FALSE;
+$settings['update_free_access'] = false;
 $settings['file_scan_ignore_directories'] = ['node_modules', 'bower_components'];
 $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
-$settings['rebuild_access'] = FALSE;
-$settings['skip_permissions_hardening'] = TRUE;
+$settings['rebuild_access'] = false;
+$settings['skip_permissions_hardening'] = true;
 $settings['container_yamls'][] = DRUPAL_ROOT . '/sites/custom.services.yml';
 $settings['custom_translations_directory'] = DRUPAL_ROOT . '/sites/custom_translations';
 $settings['gtm_id'] = 'GTM-KTPM543';

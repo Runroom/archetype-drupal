@@ -4,35 +4,37 @@ namespace Drupal\mesoestetic_ecommerce\Services\Helper;
 
 use Drupal\Core\Entity\Entity;
 
-class FieldManagerService {
+class FieldManagerService
+{
+    public function getValueField(string $fieldName, Entity $node)
+    {
+        $field = $node->get($fieldName);
 
-  public function getValueField($field_name, Entity $node) {
-    $field = $node->get($field_name);
+        if (!empty($field) && !$field->isEmpty()) {
+            $value = $field->getValue()[0]['value'];
 
-    if (!empty($field) && !$field->isEmpty()) {
-      $value = $field->getValue()[0]['value'];
+            return $value;
+        }
 
-      return $value ;
+        return '';
     }
 
-    return '';
-  }
+    public function getReferencedField(string $fieldName, Entity $node)
+    {
+        $field = $node->get($fieldName);
 
-  public function getReferencedField($field_name, Entity $node) {
-    $field = $node->get($field_name);
+        if (!empty($field) && !$field->isEmpty()) {
+            $value = $field->getValue()[0]['target_id'];
 
-    if (!empty($field) && !$field->isEmpty()) {
-      $value = $field->getValue()[0]['target_id'];
+            return $value;
+        }
 
-      return $value ;
+        return '';
     }
 
-    return '';
-  }
-
-  public function setReferencedField($field_name, Entity $node, $value) {
-    $node->set($field_name, $value);
-    $node->save();
-  }
-
+    public function setReferencedField(string $fieldName, Entity $node, $value)
+    {
+        $node->set($fieldName, $value);
+        $node->save();
+    }
 }

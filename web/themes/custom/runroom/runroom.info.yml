@@ -5,14 +5,14 @@ version: 1.0.0
 core: 8.x
 base theme: stable
 libraries:
-  - runroom/global-styling
+    - runroom/global-styling
 regions:
-  header: Header
-  content: Content
-  footer: Footer
+    header: Header
+    content: Content
+    footer: Footer
 libraries-extend:
-  toolbar/toolbar.menu:
-    - runroom/toolbar.menu
+    toolbar/toolbar.menu:
+        - runroom/toolbar.menu
 libraries-override:
-  system/base: false
-  core/html5shiv: false
+    system/base: false
+    core/html5shiv: false

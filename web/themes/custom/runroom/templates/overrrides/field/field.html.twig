@@ -1,11 +1,11 @@
 {% if multiple %}
-  <div{{ attributes }}>
-    {% for item in items %}
-      {{ item.content }}
-    {% endfor %}
-  </div>
+    <div{{ attributes }}>
+        {% for item in items %}
+            {{ item.content }}
+        {% endfor %}
+    </div>
 {% else %}
-  {% for item in items %}
-    {{ item.content }}
-  {% endfor %}
+    {% for item in items %}
+        {{ item.content }}
+    {% endfor %}
 {% endif %}
