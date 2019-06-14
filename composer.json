@@ -39,7 +39,8 @@
         "webmozart/path-util": "2.3.0"
     },
     "require-dev": {
-        "deployer/dist": "4.3.4"
+        "deployer/dist": "4.3.4",
+        "friendsofphp/php-cs-fixer": "2.15.1"
     },
     "conflict": {
         "drupal/drupal": "*"

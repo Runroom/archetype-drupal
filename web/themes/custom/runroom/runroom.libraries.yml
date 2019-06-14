@@ -1,20 +1,20 @@
 global-styling:
-  version: 1.x
-  css:
-    theme:
-      css/styles.min.css: { minified: true }
-  js:
-    js/app.min.js: { minified: true }
+    version: VERSION
+    css:
+        theme:
+            css/styles.min.css: { minified: true }
+    js:
+        js/app.min.js: { minified: true }
 
 styleguide:
-  version: 1.x
-  css:
-    theme:
-      css/styleguide.min.css: { minified: true }
+    version: VERSION
+    css:
+        theme:
+            css/styleguide.min.css: { minified: true }
 
 toolbar.menu:
-  version: VERSION
-  css:
-    theme:
-      /core/themes/stable/css/system/components/clearfix.module.css: {}
-      /core/themes/stable/css/system/components/hidden.module.css: {}
+    version: VERSION
+    css:
+        theme:
+            /core/themes/stable/css/system/components/clearfix.module.css: {}
+            /core/themes/stable/css/system/components/hidden.module.css: {}

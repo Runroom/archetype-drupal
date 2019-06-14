@@ -1,15 +1,15 @@
 base_module.home_controller:
-  path: '/home'
-  defaults:
-    _controller: '\Drupal\base_module\Controller\HomeController::show'
-    _title: 'Runroom Drupal Archetype'
-  requirements:
-    _permission: 'access content'
+    path: '/home'
+    defaults:
+        _controller: '\Drupal\base_module\Controller\HomeController::show'
+        _title: 'Runroom Drupal Archetype'
+    requirements:
+        _permission: 'access content'
 
 base_module.styleguide:
-  path: '/styleguide'
-  defaults:
-    _controller: '\Drupal\base_module\Controller\StyleguideController::show'
-    _title: 'Runroom Drupal Styleguide'
-  requirements:
-    _access: 'TRUE'
+    path: '/styleguide'
+    defaults:
+        _controller: '\Drupal\base_module\Controller\StyleguideController::show'
+        _title: 'Runroom Drupal Styleguide'
+    requirements:
+        _access: 'TRUE'
