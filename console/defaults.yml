@@ -1,10 +1,10 @@
 defaults:
-  cache:
-    rebuild:
-      arguments:
-        cache: all
-  config:
-    export:
-      options:
-        remove-uuid: true
-        remove-config-hash: true
+    cache:
+        rebuild:
+            arguments:
+                cache: all
+    config:
+        export:
+            options:
+                remove-uuid: true
+                remove-config-hash: true
