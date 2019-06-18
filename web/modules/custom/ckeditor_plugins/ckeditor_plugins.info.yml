@@ -1,0 +1,7 @@
+name: 'CKEditor Plugins'
+type: module
+description: 'Custom CKEditor plugins'
+core: 8.x
+package: 'runroom'
+depedencies:
+    - ckeditor

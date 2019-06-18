@@ -73,3 +73,6 @@ drush rsync @drupal.development:%files @local.local:%files
 ```
 
 Note that you can not import directly between servers, you have to import to local and then import to the other server instead.
+
+## How to apply coding standards
+- Run `php-cs-fixer fix` to fix PHP coding standards
