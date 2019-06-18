@@ -1,0 +1,4 @@
+services:
+    base_module.service.metadata:
+        class: Drupal\base_module\Service\MetadataService
+        autowire: true

@@ -1,3 +1,0 @@
-services:
-    base_module.field_manager:
-        class: Drupal\base_module\Services\Helper\FieldManagerService

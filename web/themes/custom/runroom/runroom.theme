@@ -5,20 +5,28 @@ use Drupal\Core\Site\Settings;
 function runroom_preprocess(array &$variables, $hook)
 {
     $variables['gtm_id'] = Settings::get('gtm_id');
+    $variables['theme_path'] = base_path() . $variables['directory'];
 }
 
-function runroom_theme_suggestions_html_alter(&$suggestions, $vars, $hook)
+function runroom_page_attachments_alter(array &$attachments): void
 {
-    if ($node = \Drupal::routeMatch()->getParameter('node')) {
-        $type = $node->getType();
-        $suggestions[] = 'html__' . $type;
-    }
+    $service = \Drupal::service('base_module.service.metadata');
+    $service->truncateMetadata($attachments);
 }
 
-function runroom_theme_suggestions_page_alter(array &$suggestions, array $variables)
+function runroom_theme_suggestions_html_alter(array &$suggestions, $vars, $hook): void
+{
+    suggestTemplateByNodeType($suggestions, 'html');
+}
+
+function runroom_theme_suggestions_page_alter(array &$suggestions, array $variables): void
+{
+    suggestTemplateByNodeType($suggestions, 'page');
+}
+
+function suggestTemplateByNodeType(array &$suggestions, string $templateType): void
 {
     if ($node = \Drupal::routeMatch()->getParameter('node')) {
-        $type = $node->getType();
-        $suggestions[] = 'page__' . $type;
+        $suggestions[] = $templateType . '__' . $node->getType();
     }
 }
