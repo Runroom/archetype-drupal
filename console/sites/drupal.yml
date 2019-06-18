@@ -1,9 +1,9 @@
 local:
-  root: /vagrant
-  type: local
+    root: /vagrant
+    type: local
 
 development:
-  host: 159.89.16.248
-  user: forge
-  root: /home/forge/drupal.runroom.dev/current
-  type: ssh
+    host: 159.89.16.248
+    user: forge
+    root: /home/forge/drupal.runroom.dev/current
+    type: ssh

@@ -1,23 +1,23 @@
 application:
-  environment: 'prod'
-  language: 'en'
-  temp: '/tmp'
-  develop: 'false'
-  command: 'list'
-  checked: 'false'
-  clear: 'false'
-  extras:
-    alias: 'true'
-    extend: 'true'
-    config: 'true'
-    chains: 'true'
-    mappings: 'true'
-  remote:
-    port: 22
-  overrides:
-    config:
-      skip-validate-site-uuid: true
-  options:
-    learning: false
-    generate-inline: false
-    generate-chain: false
+    environment: 'prod'
+    language: 'en'
+    temp: '/tmp'
+    develop: 'false'
+    command: 'list'
+    checked: 'false'
+    clear: 'false'
+    extras:
+        alias: 'true'
+        extend: 'true'
+        config: 'true'
+        chains: 'true'
+        mappings: 'true'
+    remote:
+        port: 22
+    overrides:
+        config:
+            skip-validate-site-uuid: true
+    options:
+        learning: false
+        generate-inline: false
+        generate-chain: false

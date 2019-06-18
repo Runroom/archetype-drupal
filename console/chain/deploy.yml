@@ -1,9 +1,13 @@
 command:
-  name: deploy
-  description: 'Deploy command'
+    name: deploy
+    description: 'Deploy command'
 commands:
-  - command: cache:rebuild
-  - command: update:execute
-  - command: config:import
-  - command: update:entities
-  - command: cache:rebuild
+    - command: cache:rebuild
+    - command: exec
+      arguments:
+          bin: drush updatedb
+    - command: config:import
+    - command: exec
+      arguments:
+          bin: drush entity-updates
+    - command: cache:rebuild
