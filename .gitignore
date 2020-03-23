@@ -4,24 +4,30 @@
 .idea
 .vs
 
+# MKCERT
+.certs
+
 # VAGRANT
 .vagrant
 playbook.retry
 ubuntu-*-cloudimg-console.log
 
 # DRUPAL
+.php_cs
 .php_cs.cache
 .phpunit.result.cache
 vendor
-web/core/*
-!web/core/.gitkeep
-web/modules/contrib/
-web/themes/contrib/
-web/sites/custom.services.yml
-web/sites/custom.settings.php
+phpstan.neon
+phpunit.xml
+web/core
+web/modules/contrib
+web/themes/contrib
 web/sites/default/files
 
 # NODE
 node_modules
 npm-debug.log
 yarn-error.log
+
+# DOCKER
+.docker-sync

@@ -1,18 +1,15 @@
 ---
+- name: Copy certificates
+  copy:
+    src: ../.certs
+    dest: '{{ ansible_env.HOME }}'
+
 - name: Install composer vendors
   composer:
     no_dev: no
     working_dir: /vagrant
   environment:
     PATH: '/home/vagrant/bin:/usr/bin'
-
-- name: Site config
-  template:
-    src: '{{ item }}'
-    dest: '/vagrant/web/sites/{{ item }}'
-  with_items:
-    - custom.services.yml
-    - custom.settings.php
 
 - name: Import configuration
   command: drupal deploy
@@ -30,5 +27,5 @@
   blockinfile:
     path: '{{ ansible_env.HOME }}/.bashrc'
     block: |
-      export PATH=/vagrant/bin:/vagrant/vendor/bin:{{ ansible_env.HOME }}/.config/composer/vendor/bin:{{ ansible_env.HOME }}/.symfony/bin:$PATH
+      export PATH=/vagrant/bin:{{ ansible_env.HOME }}/vendor/bin:{{ ansible_env.HOME }}/.config/composer/vendor/bin:{{ ansible_env.HOME }}/.symfony/bin:$PATH
       cd /vagrant

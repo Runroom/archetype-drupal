@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+    app:
+        volumes:
+            - ../:/srv/app/:cached
+            - /srv/app/node_modules/
+    nginx:
+        volumes:
+            - ../.certs:/srv/app/.certs:ro,cached
+            - ../web:/srv/app/web:ro,cached
