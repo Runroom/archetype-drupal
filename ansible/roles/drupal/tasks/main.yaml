@@ -20,7 +20,7 @@
     path: '{{ ansible_env.HOME }}/web/sites/default/files/{{ item }}'
     mode: 0777
     state: directory
-  with_items: '{{ drupal.files_folders}}'
+  with_items: '{{ drupal.files_folders }}'
 
 - name: Configure global cronjob
   cron:

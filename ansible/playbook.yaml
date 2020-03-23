@@ -8,7 +8,6 @@
     - { role: apache, when: webserver.type == 'apache' }
     - { role: nginx, when: webserver.type == 'nginx' }
     - mysql
-    - composer
     - drupal
-    - node
+    - composer
     - app
