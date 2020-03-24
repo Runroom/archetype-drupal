@@ -53,7 +53,7 @@ class YoutubePlugin extends CKEditorPluginBase
         ];
     }
 
-    private function getLibraryPath(): ?string
+    private function getLibraryPath(): string
     {
         return drupal_get_path('module', 'ckeditor_plugins') . '/libraries/youtube';
     }

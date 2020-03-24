@@ -1,0 +1,5 @@
+includes:
+    - vendor/mglaman/phpstan-drupal/extension.neon
+
+parameters:
+    fileExtensions: [php, theme, module]
