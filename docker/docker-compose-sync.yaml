@@ -5,6 +5,10 @@ services:
         volumes:
             - drupal-sync:/srv/app/:nocopy
             - /srv/app/node_modules/
+            - /srv/app/web/sites/default/files/tmp/
+            - /srv/app/web/sites/default/files/php/
+            - /srv/app/web/sites/default/files/languages/
+            - /srv/app/web/sites/default/files/translations/
     nginx:
         volumes:
             - drupal-sync:/srv/app/:nocopy

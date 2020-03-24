@@ -1,9 +1,5 @@
 <?php
 
-$config_directories = [
-  'sync' => '../config/base',
-];
-
 $config['system.logging']['error_level'] = 'hide';
 $config['system.performance']['cache']['page']['max_age'] = 900;
 $config['system.performance']['css']['preprocess'] = 1;
@@ -18,5 +14,7 @@ $settings['skip_permissions_hardening'] = true;
 $settings['container_yamls'][] = DRUPAL_ROOT . '/sites/custom.services.yml';
 $settings['custom_translations_directory'] = DRUPAL_ROOT . '/sites/custom_translations';
 $settings['gtm_id'] = 'GTM-KTPM543';
+$settings['file_temp_path'] = 'sites/default/files/tmp';
+$settings['config_sync_directory'] = '../config/base';
 
 include DRUPAL_ROOT . '/sites/custom.settings.php';
