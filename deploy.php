@@ -29,9 +29,9 @@ task('app', function () {
 task('yarn:build', function () {
     cd('{{release_path}}');
 
-    if (has('previous_release')) {
-        run('cp -R {{previous_release}}/node_modules {{release_path}}/node_modules');
-    }
+    // if (has('previous_release')) {
+    //     run('cp -R {{previous_release}}/node_modules {{release_path}}/node_modules');
+    // }
 
     run('. ~/.nvm/nvm.sh --no-use && nvm use && {{bin/yarn}} && {{bin/yarn}} encore production');
 })->setPrivate();

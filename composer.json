@@ -40,13 +40,16 @@
     },
     "conflict": {
         "drupal/console": "1.9.4",
-        "drupal/drupal": "*"
+        "drupal/drupal": "*",
+        "phpunit/phpunit": ">=9.0.0"
     },
     "require-dev": {
         "deployer/dist": "6.7.3",
         "ergebnis/composer-normalize": "2.3.2",
         "friendsofphp/php-cs-fixer": "2.16.1",
-        "phpunit/phpunit": "9.0.1"
+        "mglaman/phpstan-drupal": "0.12.2",
+        "phpstan/phpstan": "0.12.18",
+        "phpunit/phpunit": "8.5.2"
     },
     "config": {
         "sort-packages": true
@@ -69,12 +72,14 @@
             "Tests\\": "tests/"
         }
     },
+    "scripts": {
+        "php-cs-fixer": "php-cs-fixer fix --ansi --verbose",
+        "phpstan": "phpstan analyse --level=5 --no-progress web/modules/custom web/themes/custom tests"
+    },
     "repositories": [
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         }
-    ],
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    ]
 }
