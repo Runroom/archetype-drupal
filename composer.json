@@ -25,7 +25,7 @@
         "drupal/devel": "2.1.0",
         "drupal/devel_entity_updates": "1.0.0",
         "drupal/drush_language": "1.0.0-rc2",
-        "drupal/editor_advanced_link": "1.4.0",
+        "drupal/editor_advanced_link": "1.6.0",
         "drupal/entity_reference_revisions": "1.7.0",
         "drupal/field_group": "3.x-dev",
         "drupal/imageapi_optimize": "2.0.0-alpha4",
