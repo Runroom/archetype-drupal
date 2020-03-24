@@ -4,27 +4,41 @@ namespace Deployer;
 
 require 'recipe/composer.php';
 
-set('repository', 'git@bitbucket.org:runroom/archetype-drupal.git');
-set('shared_dirs', ['web/sites/default/files']);
-set('shared_files', ['web/sites/custom.services.yml', 'web/sites/custom.settings.php', 'web/robots.txt']);
-set('writable_dirs', ['web/sites/default/files']);
-set('clear_paths', []);
+set('repository', 'git@github.com:Runroom/archetype-symfony.git');
+set('shared_dirs', ['var/spool', 'public/uploads']);
+set('shared_files', ['.env.local', 'public/robots.txt']);
+set('writable_dirs', ['var/log', 'var/cache', 'var/spool', 'public/uploads']);
 
-set('ssh_type', 'native');
-set('ssh_multiplexing', true);
-
+set('default_timeout', null);
 set('allow_anonymous_stats', false);
-set('drupal_console', '{{release_path}}/vendor/bin/drupal');
-set('composer_options', '{{composer_action}} --prefer-dist --apcu-autoloader --no-progress --no-interaction --no-dev');
+set('console', '{{release_path}}/bin/console');
+set('composer_options', '{{composer_action}} --prefer-dist --classmap-authoritative --no-progress --no-interaction --no-dev');
+
+set('bin/yarn', function () {
+    return run('which yarn');
+});
 
 task('app', function () {
-    run('cd {{release_path}} && {{bin/php}} {{drupal_console}} deploy');
-    run('cd {{release_path}}/drush && bash import-translations.bash');
+    cd('{{release_path}}');
+    run('{{bin/php}} {{drupal_console}} deploy');
+
+    cd('{{release_path}}/drush');
+    run('bash import-translations.bash');
 })->setPrivate();
 
-after('deploy:update_code', 'deploy:clear_paths');
-after('deploy:vendors', 'deploy:writable');
-after('deploy:writable', 'app');
+task('yarn:build', function () {
+    cd('{{release_path}}');
+
+    if (has('previous_release')) {
+        run('cp -R {{previous_release}}/node_modules {{release_path}}/node_modules');
+    }
+
+    run('. ~/.nvm/nvm.sh --no-use && nvm use && {{bin/yarn}} && {{bin/yarn}} encore production');
+})->setPrivate();
+
+after('deploy:vendors', 'yarn:build');
+after('yarn:build', 'app');
 after('deploy:failed', 'deploy:unlock');
 
-serverList('servers.yml');
+inventory('servers.yaml')
+    ->user(\getenv('DEPLOYER_USER'));
