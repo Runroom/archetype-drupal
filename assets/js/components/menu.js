@@ -1,4 +1,4 @@
-import Utils from '../helpers/utils';
+import { keyup } from '../helpers/keyEvents';
 
 const CLASS_MENU = 'js-menu';
 const CLASS_MENU_ACTIVE = 'is-open';
@@ -23,7 +23,17 @@ const menu = () => {
     });
   });
 
-  Utils.keyup('escape', () => {
+  // Click outside menu element
+  document.addEventListener('click', event => {
+    const activeMenu = document.querySelector(`.${CLASS_MENU_ACTIVE}`);
+
+    if (activeMenu !== null && !activeMenu.contains(event.target)) {
+      event.preventDefault();
+      toggleNavigation(`.${CLASS_MENU_ACTIVE}`);
+    }
+  });
+
+  keyup(() => {
     if (document.documentElement.classList.contains(CLASS_MENU_OPEN)) {
       toggleNavigation(`.${CLASS_MENU_ACTIVE}`);
     }

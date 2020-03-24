@@ -1,32 +1,10 @@
 .cookies {
-    &__subtitle {
-        @include space('margin-bottom', .5);
-
-        @include breakpoint($s768) {
-            @include space('margin-bottom');
-        }
-    }
-
-    &__section {
-        @include space('margin-bottom', 2);
-
-        @include breakpoint($s768) {
-            @include space('margin-bottom', 3.5);
-        }
-    }
+    &__subtitle { margin: 0 0 space(); }
+    &__section { margin: 0 0 space(2); }
 
     &__header {
-        border-bottom: 1px solid $c-neutro100;
-
-        @include space('margin-bottom');
-        @include space('padding-bottom');
-
-        @include breakpoint($s768) {
-            display: flex;
-            justify-content: space-between;
-            padding-bottom: 0;
-
-            @include space('margin-bottom', 2);
-        }
+        border-bottom: 1px solid $c-neutro200;
+        margin: 0 0 space(1.5);
+        padding: 0 0 space();
     }
 }

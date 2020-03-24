@@ -1,4 +1,4 @@
-import { forEach } from '@runroom/purejs';
+import forEach from '@runroom/purejs/lib/forEach';
 
 const actions = document.querySelectorAll('.js-gridAction');
 forEach(actions, action => {

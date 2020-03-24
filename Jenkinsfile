@@ -1,28 +1,33 @@
 #!groovy
 
 PROJECT_NAME = env.JOB_NAME.replace('/' + env.JOB_BASE_NAME, '')
-SLACK_ERROR_MESSAGE = "${PROJECT_NAME} - ${env.BUILD_DISPLAY_NAME} Failed (<${env.BUILD_URL + 'console'}|Open>)\n${env.BRANCH_NAME}"
-COMPOSER = '/usr/local/bin/composer'
-PHP_VERSION = '7.3'
 
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'runroom/php7.3-cli'
+            args '--user root:root'
+        }
+    }
 
-    options { buildDiscarder(logRotator(numToKeepStr: '10')) }
+    options { buildDiscarder(logRotator(numToKeepStr: '5')) }
 
     stages {
         stage('Build') {
             steps {
-                sh "php${PHP_VERSION} ${COMPOSER} self-update"
-                withEnv(['SYMFONY_ENV=test']) {
-                    sh "php${PHP_VERSION} ${COMPOSER} install --prefer-dist --apcu-autoloader --no-progress --no-interaction --no-scripts"
-                }
+                sh 'composer install --prefer-dist --classmap-authoritative --no-progress --no-interaction'
             }
         }
         stage('Test') {
             steps {
-                sh "phpdbg${PHP_VERSION} -qrr ./vendor/bin/phpunit --log-junit coverage/unitreport.xml --coverage-html coverage"
-                step([ $class: 'JUnitResultArchiver', testResults: 'coverage/unitreport.xml' ])
+                sh 'phpdbg -qrr ./vendor/bin/phpunit --log-junit coverage/unitreport.xml --coverage-html coverage'
+                xunit([PHPUnit(
+                    deleteOutputFiles: false,
+                    failIfNotNew: false,
+                    pattern: 'coverage/unitreport.xml',
+                    skipNoTestFiles: true,
+                    stopProcessingIfError: false
+                )])
                 publishHTML(target: [
                     allowMissing: false,
                     alwaysLinkToLastBuild: false,
@@ -34,9 +39,9 @@ pipeline {
             }
         }
         stage('Deploy') {
-            when { expression { return env.BRANCH_NAME in ['development'] } }
+            when { expression { return env.BRANCH_NAME in ['master'] } }
             steps {
-                build job: "${PROJECT_NAME}_deploy", parameters: [
+                build job: "${PROJECT_NAME} Deploy", parameters: [
                     [$class: 'StringParameterValue', name: 'BRANCH', value: env.BRANCH_NAME]
                 ], wait: false
             }
@@ -44,6 +49,7 @@ pipeline {
     }
 
     post {
-        failure { slackSend(color: 'danger', message: SLACK_ERROR_MESSAGE) }
+        fixed { slackSend(color: 'good', message: "Fixed - ${PROJECT_NAME} - ${env.BUILD_DISPLAY_NAME} (<${env.BUILD_URL}|Open>)\n${env.BRANCH_NAME}")}
+        failure { slackSend(color: 'danger', message: "Failed - ${PROJECT_NAME} - ${env.BUILD_DISPLAY_NAME} (<${env.BUILD_URL}|Open>)\n${env.BRANCH_NAME}") }
     }
 }

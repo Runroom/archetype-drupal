@@ -1,22 +1,20 @@
 .grid-sample {
     background-color: $c-neutro100;
-
-    @include space('padding', .5);
+    padding: space(.5);
 
     [class^="u-flex--s"] {
         border: 1px solid $c-white;
-        color: $c-neutro300;
+        color: $c-neutro500;
         min-height: 48px;
+        padding: space(.5);
         text-align: center;
-
-        @include space('padding', .5);
     }
 
     [class^="u-flex--s"]:nth-child(odd) {
-        background: rgba($c-secondary, .2);
+        background: rgba($c-complementary500, .2);
     }
 
     [class^="u-flex--s"]:nth-child(even) {
-        background: rgba($c-secondary, .3);
+        background: rgba($c-secondary500, .3);
     }
 }

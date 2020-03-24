@@ -1,124 +1,121 @@
-import { forEach } from '@runroom/purejs';
+import forEach from '@runroom/purejs/lib/forEach';
 import cookies from 'js-cookie';
 
-const OPTS = {
-  cookiesMessageClass: '.js-cookies',
-  cookiesVisibleClass: 'cookies-message--state-visible',
-  cookiesCloseClass: '.js-cookies-close',
-  checkboxPerformanceClass: '.js-cookies-performance-checkbox',
-  checkboxTargetingClass: '.js-cookies-targeting-checkbox',
-  buttonAcceptClass: '.js-cookies-accept',
-  buttonSaveClass: '.js-cookies-savePreferences',
-  formCookiesSettingsClass: '.js-cookies-form',
-  cookiesSettingsSavedClass: '.js-cookies--settings-saved',
-  hideClass: 'u-hide'
-};
+const CLASS_HIDE = 'u-hide';
+const CLASS_VISIBLE = 'is-visible';
+const CLASS_MODAL = 'js-cookies';
+const CLASS_MODAL_CLOSE = 'js-cookies-close';
+const CLASS_PREFORMANCE = 'js-cookies-performance-checkbox';
+const CLASS_TARGETING = 'js-cookies-targeting-checkbox';
+const CLASS_ACCEPT_BUTTON = 'js-cookies-accept';
+const CLASS_SAVE_BUTTON = 'js-cookies-save-preferences';
+const CLASS_FORM_SETTINGS = 'js-cookies-form';
+const CLASS_FORM_SETTINGS_SAVED = 'js-cookies-settings-saved';
+const COOKIE_MESSAGE_NAME = 'cookie_message';
+const COOKIE_PERFORMANCE_NAME = 'performance_cookie';
+const COOKIE_TARGETING_NAME = 'targeting_cookie';
 
-const PERFORMANCE_COOKIES = window.PERFORMANCE_COOKIES || [];
-const TARGETING_COOKIES = window.TARGETING_COOKIES || [];
-const COOKIES_DEFAULT_DOMAIN = window.COOKIES_DEFAULT_DOMAIN || '';
-const COOKIES_SECURE = window.COOKIES_SECURE || false;
-
-const cookieMessage = 'cookie_message';
-const performanceCookie = 'performance_cookie';
-const targetingCookie = 'targeting_cookie';
+const performanceCookies = window.PERFORMANCE_COOKIES || [];
+const targetingCookies = window.TARGETING_COOKIES || [];
 const cookieSettings = {
-  secure: COOKIES_SECURE,
-  domain: COOKIES_DEFAULT_DOMAIN
-};
-
-const pushEvent = (performance, targeting) => {
-  window.dataLayer.push({ event: 'COEvent', COPerformance: performance, COTargeting: targeting });
+  domain: window.COOKIES_DEFAULT_DOMAIN || '',
+  expires: 365,
+  sameSite: 'lax',
+  secure: window.location.protocol === 'https:'
 };
 
 const setCookies = (performance, targeting) => {
-  cookies.set(cookieMessage, true, cookieSettings);
-  cookies.set(performanceCookie, performance, cookieSettings);
-  cookies.set(targetingCookie, targeting, cookieSettings);
-  pushEvent(performance, targeting);
+  cookies.set(COOKIE_MESSAGE_NAME, 'true', cookieSettings);
+  cookies.set(COOKIE_PERFORMANCE_NAME, performance, cookieSettings);
+  cookies.set(COOKIE_TARGETING_NAME, targeting, cookieSettings);
+
+  window.dataLayer.push({ event: 'COEvent' });
 };
 
 const removeCookies = cookiesJar => {
   forEach(cookiesJar, cookie => {
-    cookies.remove(cookie.name, { domain: cookie.domain || COOKIES_DEFAULT_DOMAIN });
+    cookies.remove(cookie.name, { domain: cookie.domain || cookieSettings.domain });
   });
 };
 
 const acceptCookies = event => {
   event.preventDefault();
-  setCookies(true, true);
-  document.querySelector(OPTS.cookiesMessageClass).remove();
+  setCookies('true', 'true');
+  document.querySelector(`.${CLASS_MODAL}`).remove();
 };
 
 const closeMessage = event => {
   event.preventDefault();
-  setCookies(true, false);
-  document.querySelector(OPTS.cookiesMessageClass).remove();
+  setCookies('true', 'false');
+  document.querySelector(`.${CLASS_MODAL}`).remove();
 };
 
 const saveCookieSettings = event => {
   event.preventDefault();
-  const performanceCheckbox = document.querySelector(OPTS.checkboxPerformanceClass).checked;
-  const targetingCheckbox = document.querySelector(OPTS.checkboxTargetingClass).checked;
-  const cookiesMessageNode = document.querySelector(OPTS.cookiesMessageClass);
-  const cookiesSettingsSaved = document.querySelector(OPTS.cookiesSettingsSavedClass);
+  const performanceCheckbox = document.querySelector(`.${CLASS_PREFORMANCE}`).checked;
+  const targetingCheckbox = document.querySelector(`.${CLASS_TARGETING}`).checked;
+  const cookiesMessageNode = document.querySelector(`.${CLASS_MODAL}`);
+  const cookiesSettingsSaved = document.querySelector(`.${CLASS_FORM_SETTINGS_SAVED}`);
 
   setCookies(performanceCheckbox, targetingCheckbox);
 
   if (!performanceCheckbox) {
-    removeCookies(PERFORMANCE_COOKIES);
+    removeCookies(performanceCookies);
   }
 
   if (!targetingCheckbox) {
-    removeCookies(TARGETING_COOKIES);
+    removeCookies(targetingCookies);
   }
 
   if (cookiesMessageNode) {
     cookiesMessageNode.remove();
   }
 
-  cookiesSettingsSaved.classList.remove(OPTS.hideClass);
+  cookiesSettingsSaved.classList.remove(CLASS_HIDE);
 
   setTimeout(_ => {
-    cookiesSettingsSaved.classList.add(OPTS.hideClass);
+    cookiesSettingsSaved.classList.add(CLASS_HIDE);
   }, 3000);
 };
 
 const setupSettingsForm = () => {
-  if (cookies.get(performanceCookie)) {
-    document.querySelector(OPTS.checkboxPerformanceClass).checked = (cookies.get(performanceCookie) === 'true');
+  const performanceCookie = cookies.get(COOKIE_PERFORMANCE_NAME);
+  const targetingCookie = cookies.get(COOKIE_TARGETING_NAME);
+  const performanceElement = document.querySelector(`.${CLASS_PREFORMANCE}`);
+  const targetingElement = document.querySelector(`.${CLASS_TARGETING}`);
+
+  if (performanceCookie) {
+    performanceElement.checked = performanceCookie === 'true';
   }
 
-  if (cookies.get(targetingCookie)) {
-    document.querySelector(OPTS.checkboxTargetingClass).checked = (cookies.get(targetingCookie) === 'true');
+  if (targetingCookie) {
+    targetingElement.checked = targetingCookie === 'true';
   }
 
-  document.querySelector(OPTS.buttonSaveClass).addEventListener('click', saveCookieSettings);
+  document.querySelector(`.${CLASS_SAVE_BUTTON}`).addEventListener('click', saveCookieSettings);
 };
 
 const cookiesWrapper = () => {
-  const cookiesMessage = document.querySelector(OPTS.cookiesMessageClass);
+  const cookiesMessage = document.querySelector(`.${CLASS_MODAL}`);
 
-  if (cookiesMessage) {
-    if (typeof cookies.get(cookieMessage) === 'undefined') {
-      document.querySelector(OPTS.buttonAcceptClass).addEventListener('click', acceptCookies);
-      document.querySelector(OPTS.cookiesCloseClass).addEventListener('click', closeMessage);
-      cookiesMessage.classList.add(OPTS.cookiesVisibleClass);
-    } else {
-      cookiesMessage.remove();
-    }
+  if (typeof cookies.get(COOKIE_MESSAGE_NAME) === 'undefined') {
+    document.querySelector(`.${CLASS_ACCEPT_BUTTON}`).addEventListener('click', acceptCookies);
+    document.querySelector(`.${CLASS_MODAL_CLOSE}`).addEventListener('click', closeMessage);
+    cookiesMessage.classList.add(CLASS_VISIBLE);
+  } else {
+    cookiesMessage.remove();
+  }
 
-    if (cookies.get(performanceCookie) === false) {
-      removeCookies(PERFORMANCE_COOKIES);
-    }
+  if (cookies.get(COOKIE_PERFORMANCE_NAME) === 'false') {
+    removeCookies(performanceCookies);
+  }
 
-    if (cookies.get(targetingCookie) === false) {
-      removeCookies(TARGETING_COOKIES);
-    }
+  if (cookies.get(COOKIE_TARGETING_NAME) === 'false') {
+    removeCookies(targetingCookies);
+  }
 
-    if (document.querySelector(OPTS.formCookiesSettingsClass)) {
-      setupSettingsForm();
-    }
+  if (document.querySelector(`.${CLASS_FORM_SETTINGS}`)) {
+    setupSettingsForm();
   }
 };
 

@@ -1,183 +1,70 @@
-%u-wysiwyg,
+/**
+ * Mantenemos el WYSIWYG como archivo
+ * No es una clase que tiene una función fija, es una clase que contiene muchos
+ * estilos y en cada proyecto son distintos
+ */
 .u-wysiwyg {
-    > *:last-child {
-        margin-bottom: 0;
-    }
-
-    blockquote {
-        @extend %quote;
-
-        padding: 5px 15px;
-
-        @include space('padding-left');
-        @include space('margin', 1, 0);
-
-        @include breakpoint($s768) {
-            @include space('padding-left', 2);
-            @include space('margin', 2, 0);
-        }
-    }
-
-    table { @extend %table; }
-
-    h1 + h2,
-    h2 + h3,
-    h3 + h4,
-    h4 + h5 {
-        @include space('margin-top', .5);
-    }
-
-    ul { @extend %custom-ul; }
-    ol { @extend %custom-ol; }
-
-    img {
-        border: 0 !important;
-        display: block;
-        float: none !important;
-        height: auto !important;
-        margin-left: auto;
-        margin-right: auto;
-        width: 100% !important;
-
-        @include space('margin-bottom');
-
-        &::after {
-            content: attr(data-title);
-            display: block;
-        }
-    }
+    ul { list-style: disc; }
+    ol { list-style: decimal; }
 
     ul, ol {
         display: block;
 
-        ul, ol {
-            @include space('margin-top', .5);
-            @include space('margin-bottom', .5);
-        }
-
         li {
-            @include space('margin-bottom', .25);
+            margin: 0 0 space(.25) space();
 
             &:last-child { margin-bottom: 0; }
         }
-
-        img { width: auto !important; }
     }
 
     a {
+        color: $c-primary500;
         overflow-wrap: break-word;
+        text-decoration: underline;
         word-wrap: break-word;
+
+        @include hover {
+            color: $c-primary600;
+        }
     }
 
     em, i { font-style: italic; }
 
-    h2 + ul, h2 + ol,
-    h3 + ul, h3 + ol,
-    h4 + ul, h4 + ol,
-    h5 + ul, h5 + ol {
-        @include space('margin-top', .5);
-    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        margin: 0;
+        padding: 0;
+        width: 100% !important;
 
-    ol + h2,
-    ul + h2,
-    table + h2 {
-        @include space('margin-top', 1.5);
-    }
+        tr:nth-child(even) { background: $c-white; }
+        tr:nth-child(odd) { background: $c-neutro200; }
 
-    ol + table,
-    ul + table {
-        @include space('margin-top');
-    }
+        td, th { text-align: left; }
+        td { padding: space(.5) space(); }
 
-    p + table,
-    p + p {
-        @include space('margin-top', .5);
-    }
-
-    h1 + p,
-    h2 + p,
-    h3 + p,
-    h4 + p,
-    h5 + p {
-        @include space('margin-top', .5);
-    }
-
-    ol + p,
-    ul + p {
-        @include space('margin-top');
-    }
-
-    table + p,
-    p + table {
-        @include space('margin-top', 1.5);
-    }
-
-    .p-big + table,
-    .p-big + p,
-    p + .p-big {
-        @include space('margin-top', .75);
-    }
-
-    p + ol,
-    p + ul {
-        @include space('margin-top');
-    }
-
-    .p-big + ol,
-    .p-big + ul {
-        @include space('margin-top');
-    }
-
-    ol + .p-big,
-    ul + .p-big,
-    table + .p-big {
-        @include space('margin-top', .75);
-    }
-
-    h1 + .p-big,
-    h2 + .p-big,
-    h3 + .p-big,
-    h4 + .p-big,
-    h5 + .p-big {
-        @include space('margin-top', .75);
-    }
-
-    p + h2,
-    ol + h2,
-    ul + h2,
-    p + h3,
-    ol + h3,
-    ul + h3,
-    p + h4,
-    ol + h4,
-    ul + h4,
-    p + h5,
-    ol + h5,
-    ul + h5 {
-        @include space('margin-top', 2);
-    }
-
-    .u-video-fullwidth,
-    .youtube-embed-wrapper,
-    .ckeditor-html5-audio {
-        @include space('margin-top', .5);
-        @include space('margin-bottom', .5);
-
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-    }
-
-    pre {
-        overflow-wrap: break-word;
-        white-space: pre-wrap;
-        word-wrap: break-word;
-
-        code {
-            @extend %code;
-
-            display: block;
+        th {
+            background: $c-primary500;
+            color: $c-white;
+            font-weight: 700;
+            padding: space(.75) space();
         }
     }
 
-    .code { @extend %code; }
+    /**
+     * Override editor styles
+     * Editors allows to put inline styles
+     */
+    p {
+        margin: 0 0 space();
+        text-align: left !important;
+    }
+
+    img {
+        border: 0 !important;
+        float: none !important;
+        height: auto !important;
+        margin: 0 0 space() !important;
+        width: auto !important;
+    }
 }

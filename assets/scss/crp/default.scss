@@ -1,23 +1,13 @@
 @import '../settings/variables';
 @import '../tools/functions';
-@import '../../../node_modules/modularscale-sass/stylesheets/modularscale';
 @import '../tools/mixins';
-@import '../tools/media-queries';
-@import '../../../node_modules/normalize-scss/sass/normalize';
 @import '../generic/globals';
-@import '../extends/extends';
 @import '../generic/typography';
 @import '../utilities/utilities';
 
-/* Atoms */
-@import '../atoms/skip-links';
-@import '../atoms/hamburger';
+/* Components */
+@import '../components/skip-link';
+@import '../components/header';
 
-/* Molecules */
-
-/* Organisms */
-@import '../organisms/cookies-message';
-@import '../organisms/header';
-@import '../organisms/navigation';
-
-/* Pages */
+/* Modules */
+@import '../modules/cookies-message';
