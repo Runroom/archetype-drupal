@@ -2,15 +2,15 @@ global-styling:
     version: VERSION
     css:
         theme:
-            css/styles.min.css: { minified: true }
+            build/styles.css: { minified: true }
     js:
-        js/app.min.js: { minified: true }
+        build/app.js: { minified: true }
 
 styleguide:
     version: VERSION
     css:
         theme:
-            css/styleguide.min.css: { minified: true }
+            build/styleguide.css: { minified: true }
 
 toolbar.menu:
     version: VERSION

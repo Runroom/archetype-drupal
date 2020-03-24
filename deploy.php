@@ -5,13 +5,13 @@ namespace Deployer;
 require 'recipe/composer.php';
 
 set('repository', 'git@github.com:Runroom/archetype-drupal.git');
-set('shared_dirs', ['var/spool', 'public/uploads']);
-set('shared_files', ['.env.local', 'public/robots.txt']);
-set('writable_dirs', ['var/log', 'var/cache', 'var/spool', 'public/uploads']);
+set('shared_dirs', ['web/sites/default/files']);
+set('shared_files', ['web/sites/custom.services.yml', 'web/sites/custom.settings.php', 'web/robots.txt']);
+set('writable_dirs', ['web/sites/default/files']);
 
 set('default_timeout', null);
 set('allow_anonymous_stats', false);
-set('console', '{{release_path}}/bin/console');
+set('drupal_console', '{{release_path}}/vendor/bin/drupal');
 set('composer_options', '{{composer_action}} --prefer-dist --apcu-autoloader --no-progress --no-interaction --no-dev');
 
 set('bin/yarn', function () {
