@@ -71,14 +71,14 @@
             "Tests\\": "tests/"
         }
     },
-    "scripts": {
-        "php-cs-fixer": "php-cs-fixer fix --ansi --verbose",
-        "phpstan": "phpstan analyse --level=5 --no-progress web/modules/custom web/themes/custom tests"
-    },
     "repositories": [
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         }
-    ]
+    ],
+    "scripts": {
+        "php-cs-fixer": "php-cs-fixer fix --ansi --verbose",
+        "phpstan": "phpstan analyse --level=5 --no-progress web/modules/custom web/themes/custom tests"
+    }
 }
