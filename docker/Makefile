@@ -40,7 +40,7 @@ database:
 	./docker-console drush sql:create -y
 	./docker-console drush sql:cli -y < ../ansible/drupal.sql
 
-update: database
+update:
 	./docker-console drush updatedb -y
 	./docker-console drush entity:update -y
 	./docker-console drupal config:export -y
