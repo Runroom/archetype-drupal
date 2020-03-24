@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7138743e53700e57e64f4311eaef7bc4",
+    "content-hash": "c096aeca767e57f7c774570e04512e44",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3291,17 +3291,17 @@
         },
         {
             "name": "drupal/imageapi_optimize",
-            "version": "2.0.0-alpha4",
+            "version": "2.0.0-beta1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/imageapi_optimize.git",
-                "reference": "8.x-2.0-alpha4"
+                "reference": "8.x-2.0-beta1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/imageapi_optimize-8.x-2.0-alpha4.zip",
-                "reference": "8.x-2.0-alpha4",
-                "shasum": "2e5525f8b1f58b9ef505fece615beae256c62b0c"
+                "url": "https://ftp.drupal.org/files/projects/imageapi_optimize-8.x-2.0-beta1.zip",
+                "reference": "8.x-2.0-beta1",
+                "shasum": "41e369b62bb608611bad08719aac9e47dd2d6b53"
             },
             "require": {
                 "drupal/core": "^8.2"
@@ -3312,11 +3312,11 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.0-alpha4",
+                    "version": "8.x-2.0-beta1",
                     "datestamp": "1581436166",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Alpha releases are not covered by Drupal security advisories."
+                        "message": "Beta releases are not covered by Drupal security advisories."
                     }
                 }
             },
