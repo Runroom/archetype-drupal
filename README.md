@@ -1,78 +1,67 @@
-# Runroom Drupal Archetype
+Runroom - Archetype Drupal
+===========================
+
+![ci](https://github.com/Runroom/archetype-drupal/workflows/ci/badge.svg)
+![qa](https://github.com/Runroom/archetype-drupal/workflows/qa/badge.svg)
+![deployment](https://github.com/Runroom/archetype-drupal/workflows/deployment/badge.svg)
+
+## Requirements
+
+To run this project, you need to have:
+
+- [Git](https://git-scm.com/)
+- [Nvm](https://github.com/nvm-sh/nvm)
+- [Yarn](https://yarnpkg.com/)
+- [Mkcert](https://github.com/FiloSottile/mkcert)
+
+Docker (new method):
+
+- [Docker](https://www.docker.com/)
+- [Docker sync](https://github.com/EugenMayer/docker-sync) (MacOS users)
+
+Vagrant (old method):
+
+- [VirtualBox](https://www.virtualbox.org/)
+- [Vagrant](https://www.vagrantup.com/)
+- [Vagrant Host Manager](https://github.com/devopsgroup-io/vagrant-hostmanager)
 
 ## Setup
 
-Clone repository:
+Docker (new method):
 
-    git clone git@bitbucket.org:runroom/archetype-drupal.git
+    cd docker
+    make up
+    make provision
 
-Install the hostmanager plugin
-
-    vagrant plugin install vagrant-hostmanager
-
-Virtual machine up:
+Vagrant (old method):
 
     vagrant up
 
-## Environment
+To generate build assets:
 
-- `http://drupal.local` to view Drupal site
+    nvm use
+    yarn
+    yarn encore dev
 
-## Databases
+## Docker (new method)
 
-In order to do a database dump, execute this line with the desired alias depending on the site (exed or law):
+Open `https://localhost:8443` in your browser
 
-```
-drush sql-dump > /vagrant/ansible/drupal.sql
-```
+## Vagrant (old method)
 
-Once the dump is completed, you can use it by executing:
+Open `https://drupal.local` in your browser.
 
-```
-ansible-run database
-```
+## Contribute
 
-How to import the dump.sql file?
+Please refer to [CONTRIBUTING](doc/Contributing.md) for information on how
+to contribute to the Archetype and its related projects.
 
-```
-drush sql-cli < /vagrant/ansible/drupal.sql
-```
+## Additional documentation
 
-## Drupal Console & Drush
-
-To execute an Deploy of all config-import, rebuild cache, update entities:
-
-```
-drupal deploy
-```
-
-```
-drush
-```
-
-## Export and Import custom translations
-
-Command to export:
-
-```
-drush language-export
-```
-
-Command to import:
-```
-bash drush/import-translations.bash
-```
-
-## How to import database and files from other configured environments?
-
-Import database and files from development:
-
-```
-drush sql-sync @drupal.development @drupal.local
-drush rsync @drupal.development:%files @local.local:%files
-```
-
-Note that you can not import directly between servers, you have to import to local and then import to the other server instead.
-
-## How to apply coding standards
-- Run `php-cs-fixer fix` to fix PHP coding standards
+- [Ansible](doc/Ansible.md)
+- [Code of conduct](doc/Code_of_conduct.md)
+- [Continuous Integration](doc/Continuous_integration.md)
+- [Contributing](doc/Contributing.md)
+- [Deployment](doc/Deployment.md)
+- [Docker](doc/Docker.md)
+- [Drupal](doc/Drupal.md)
