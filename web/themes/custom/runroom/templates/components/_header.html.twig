@@ -1,0 +1,18 @@
+{% set class = class|default('') %}
+<header class="header {{ class }}">
+    <div class="u-wrapper u-flex u-flex--align-start u-flex--justify-between">
+        {# Change this path when defining your own home route #}
+        <a class="header__logo" href="/">{% include 'svg/runroom-logo.svg' %}</a>
+        <ul class="header__language p-small">
+            {% for lang, href in page.alternateLinks %}
+            <li>
+                {% if locale == lang %}
+                    <span>{{ lang|upper }}</span>
+                {% else %}
+                    <a href="{{ href }}">{{ lang|upper }}</a>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</header>

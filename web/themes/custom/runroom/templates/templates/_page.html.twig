@@ -1,0 +1,13 @@
+{% block header %}
+    {% include directory ~ '/templates/organisms/_header.html.twig' %}
+{% endblock %}
+
+{% block content %}
+    {{ page.content }}
+{% endblock %}
+
+{% block footer %}
+    {% include directory ~ '/templates/organisms/_footer.html.twig' %}
+{% endblock %}
+
+{% block libraries %}{% endblock %}
