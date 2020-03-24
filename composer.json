@@ -37,7 +37,7 @@
         "drupal/redirect": "1.4.0",
         "drupal/twig_field_value": "1.2.0",
         "drupal/twig_tweak": "2.4.0",
-        "drupal/xmlsitemap": "1.0.0-alpha3",
+        "drupal/xmlsitemap": "1.0.0-rc1",
         "drush/drush": "9.7.1"
     },
     "require-dev": {
