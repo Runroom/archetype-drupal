@@ -7,7 +7,6 @@ append_member_page: false
 member_page_as_link: false
 remove_home: false
 add_home: false
-home_as_site_name: false
 exclude_empty_url: false
 derived_active_trail: false
 menu_breadcrumb_menus:
@@ -15,3 +14,4 @@ menu_breadcrumb_menus:
     enabled: 1
     weight: -10
 langcode: es
+front_title: 1

@@ -5,9 +5,11 @@ commands:
     - command: cache:rebuild
     - command: exec
       arguments:
-          bin: drush updatedb
-    - command: config:import
+          bin: drush updatedb -y
     - command: exec
       arguments:
-          bin: drush entity-updates
+          bin: drush config:import -y
+    - command: exec
+      arguments:
+          bin: drush entity:updates -y
     - command: cache:rebuild

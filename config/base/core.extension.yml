@@ -1,5 +1,4 @@
 module:
-  allowed_formats: 0
   base_module: 0
   block: 0
   block_content: 0
@@ -18,7 +17,6 @@ module:
   drush_language: 0
   dynamic_page_cache: 0
   editor: 0
-  editor_advanced_link: 0
   entity_reference_revisions: 0
   field: 0
   field_group: 0
@@ -37,9 +35,9 @@ module:
   metatag: 0
   metatag_views: 0
   node: 0
-  options: 0
   page_cache: 0
   path: 0
+  path_alias: 0
   redirect: 0
   shortcut: 0
   system: 0
@@ -54,7 +52,6 @@ module:
   views_ui: 0
   menu_link_content: 1
   pathauto: 1
-  xmlsitemap: 1
   content_translation: 10
   views: 10
   paragraphs: 11
