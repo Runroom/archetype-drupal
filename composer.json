@@ -1,6 +1,8 @@
 {
-    "name": "runroom/drupal_archetype",
-    "license": "proprietary",
+    "name": "runroom/archetype-drupal",
+    "description": "This is our Symfony project template",
+    "homepage": "https://github.com/Runroom/archetype-symfony",
+    "license": "MIT",
     "type": "project",
     "autoload-dev": {
         "psr-4": {

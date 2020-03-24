@@ -1,0 +1,4 @@
+drupal.runroom.dev:
+    deploy_path: ~/drupal.runroom.dev
+    stage: master
+    branch: master

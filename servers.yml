@@ -1,6 +1,0 @@
-development:
-    user: forge
-    host: 159.89.16.248
-    stage: development
-    deploy_path: /home/forge/drupal.runroom.dev
-    branch: development
