@@ -36,10 +36,15 @@ composer-install:
 	./docker-console composer install --optimize-autoloader
 
 database:
-	# ./docker-console console doctrine:database:drop --no-interaction --force
-	# ./docker-console console doctrine:database:create --no-interaction
-	# ./docker-console console doctrine:database:import docker/dump.sql
-	# ./docker-console console doctrine:migrations:migrate --no-interaction
+	./docker-console drush sql:drop -y
+	./docker-console drush sql:create -y
+	./docker-console drush sql:cli -y < ../ansible/drupal.sql
+
+update: database
+	./docker-console drush updatedb -y
+	./docker-console drush entity:update -y
+	./docker-console drupal config:export -y
+	./docker-console drush sql:dump > ../ansible/drupal.sql
 
 provision: composer-install database
 

@@ -1,7 +1,7 @@
 local:
-  root: /vagrant/web
+  root: /srv/app/web
 
 development:
-  host: 159.89.16.248
+  host: drupal.runroom.dev
   user: forge
-  root: /home/forge/drupal.runroom.dev/current/web
+  root: ~/drupal.runroom.dev/current/web
