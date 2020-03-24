@@ -15,7 +15,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'composer install --prefer-dist --classmap-authoritative --no-progress --no-interaction'
+                sh 'composer install --prefer-dist --apcu-autoloader --no-progress --no-interaction'
             }
         }
         stage('Test') {
