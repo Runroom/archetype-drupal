@@ -6,14 +6,14 @@
 
         {{ drupal_block('tag_manager_block') }}
 
-        {% include directory ~ '/templates/helpers/_fonts.html.twig' %}
-        {% include directory ~ '/templates/helpers/_favicon.html.twig' %}
+        {% include directory ~ '/templates/modules/_fonts.html.twig' %}
+        {% include directory ~ '/templates/modules/_favicon.html.twig' %}
 
-        <style type="text/css">
+        {#<style type="text/css">
             {% block crp %}
-                {% include directory ~ '/templates/crp/basic-page.min.css' %}
+                {% include directory ~ '/templates/helpers/_inline-crp.html.twig' with { crp: 'crp.default.scss' } %}
             {% endblock %}
-        </style>
+        </style>#}
         <js-placeholder token="{{ placeholder_token|raw }}">
         {{ block('pixels') }}
     </head>
@@ -40,9 +40,8 @@
         <js-bottom-placeholder token="{{ placeholder_token|raw }}">
 
         {% block customlibraries %}{% endblock %}
-        {{ drupal_entity('block', 'tabs') }}
 
-        {% include directory ~ '/templates/molecules/_cookies.html.twig' %}
+        {% include directory ~ '/templates/modules/_cookies.html.twig' %}
     </body>
 </html>
 
