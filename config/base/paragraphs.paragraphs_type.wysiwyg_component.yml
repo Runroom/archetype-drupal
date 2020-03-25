@@ -6,5 +6,6 @@ dependencies:
 id: wysiwyg_component
 label: 'Componente Wysiwyg'
 icon_uuid: e67a5142-1522-4ca6-9580-afa36edc7048
+icon_default: null
 description: 'Este es un paragraph que funciona como un componente.'
 behavior_plugins: {  }

@@ -1,0 +1,21 @@
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.home.field_internal_title
+    - node.type.home
+  module:
+    - user
+id: node.home.default
+targetEntityType: node
+bundle: home
+mode: default
+content:
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_internal_title: true
+  langcode: true

@@ -1,0 +1,22 @@
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.home.field_internal_title
+    - node.type.home
+  module:
+    - user
+id: node.home.teaser
+targetEntityType: node
+bundle: home
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_internal_title: true
+  langcode: true

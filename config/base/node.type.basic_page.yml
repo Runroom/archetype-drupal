@@ -5,13 +5,12 @@ dependencies:
     - menu_ui
 third_party_settings:
   menu_ui:
-    available_menus:
-      - main
-    parent: 'main:'
-name: 'Basic Page'
+    available_menus: {  }
+    parent: ''
+name: 'Página Básica'
 type: basic_page
-description: ''
+description: 'Páginas con título y componentes'
 help: ''
 new_revision: false
-preview_mode: 0
+preview_mode: 1
 display_submitted: false

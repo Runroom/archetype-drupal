@@ -1,0 +1,15 @@
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.home
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.home
+target_entity_type_id: node
+target_bundle: home
+default_langcode: site_default
+language_alterable: true

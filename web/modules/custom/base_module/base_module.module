@@ -3,16 +3,9 @@
 function base_module_theme($existing, $type, $theme, $path)
 {
     return [
-        'home_block' => [
-            'variables' => [
-                'title' => null,
-                'text' => null,
-            ],
-        ],
         'styleguide' => [
             'variables' => [
                 'title' => null,
-                'text' => null,
             ],
         ],
     ];

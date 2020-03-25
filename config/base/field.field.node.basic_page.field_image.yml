@@ -17,7 +17,7 @@ id: node.basic_page.field_image
 field_name: field_image
 entity_type: node
 bundle: basic_page
-label: Image
+label: Imagen
 description: ''
 required: false
 translatable: true

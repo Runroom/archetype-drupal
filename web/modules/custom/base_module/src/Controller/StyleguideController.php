@@ -10,8 +10,7 @@ class StyleguideController extends ControllerBase
     {
         return [
             '#theme' => 'styleguide',
-            '#title' => $this->t('ESADE Exed Styleguide'),
-            '#text' => $this->t('Hello Styleguide!'),
+            '#title' => $this->t('Styleguide'),
         ];
     }
 }
