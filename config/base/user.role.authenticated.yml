@@ -7,4 +7,3 @@ weight: 1
 is_admin: false
 permissions:
   - 'access content'
-  - 'use text format html_text'
