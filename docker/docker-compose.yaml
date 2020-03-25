@@ -14,7 +14,7 @@ services:
             - 8443:443
         volumes:
             - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
-    database:
+    mysql:
         image: mysql:5.7
         environment:
             MYSQL_DATABASE: drupal
