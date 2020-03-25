@@ -30,7 +30,7 @@ settings:
         -
           name: Multimedia
           items:
-            - DrupalImage
+            - DrupalMediaLibrary
         -
           name: Herramientas
           items:
