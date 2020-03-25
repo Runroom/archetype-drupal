@@ -1,4 +1,15 @@
 ---
+- name: Add mysql apt signing key.
+  become: true
+  apt_key:
+    url: https://repo.mysql.com/RPM-GPG-KEY-mysql
+
+- name: Install the official mysql repo
+  become: true
+  apt:
+    deb: https://dev.mysql.com/get/mysql-apt-config_0.8.11-1_all.deb
+    state: present
+
 - name: Install mysql packages
   become: true
   apt:
@@ -6,19 +17,20 @@
       - mysql-server
       - mysql-client
       - python-mysqldb
+    update_cache: yes
     state: latest
 
-- name: Allow external connections
+- name: Modify settings on mysqld.cnf
   become: true
   lineinfile:
-    path: '/etc/mysql/mysql.conf.d/mysqld.cnf'
-    regexp: '^{{ item }}(.*)$'
-    line: '#{{ item }}\1'
-    backrefs: yes
+    path: /etc/mysql/mysql.conf.d/mysqld.cnf
+    regexp: '#?{{ item.setting }} ?=.*'
+    line: '{{ item.setting }} = {{ item.value }}'
   with_items:
-    - skip-external-locking
-    - bind-address
+    - { setting: default-authentication-plugin, value: mysql_native_password }
   notify: Restart mysql
+
+- meta: flush_handlers
 
 - name: Drop database
   become: true
@@ -32,7 +44,7 @@
   become: true
   mysql_db:
     name: '{{ mysql.database }}'
-    encoding: utf8
+    encoding: utf8mb4
   tags:
     - database
 

@@ -7,7 +7,7 @@ $databases = [
       'username' => 'drupal',
       'password' => 'drupal',
       'prefix' => '',
-      'host' => 'database',
+      'host' => 'database', // localhost (vagrant)
       'port' => '',
       'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
       'driver' => 'mysql',
@@ -15,7 +15,7 @@ $databases = [
   ],
 ];
 
-$settings['trusted_host_patterns'] = ['localhost'];
+$settings['trusted_host_patterns'] = ['localhost']; // drupal.local (vagrant)
 $settings['hash_salt'] = '308d47268412acc4fe69f0afaf00b3e63cc7c69f6d94c62d4530d045cd911839';
 
 \assert_options(ASSERT_ACTIVE, true);
