@@ -10,14 +10,15 @@ sql:
     common:
       - cache
       - cachetags
-      - 'cache_*'
+      - cache_*
       - history
-      - 'search_*'
-      - 'sessions'
-      - 'watchdog'
+      - search_*
+      - sessions
+      - watchdog
+      - config_*
   skip-tables:
     common:
-      - 'migration_*'
+      - migration_*
 
 ssh:
-  options: '-q -o PasswordAuthentication=no'
+  options: -q -o PasswordAuthentication=no
