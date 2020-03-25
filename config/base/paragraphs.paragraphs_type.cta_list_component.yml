@@ -6,5 +6,6 @@ dependencies:
 id: cta_list_component
 label: 'Componente Listado CTAs'
 icon_uuid: 7b4969a5-9353-4cdc-8874-f5045048fe71
+icon_default: null
 description: 'Este es un paragraph que funciona como un componente.'
 behavior_plugins: {  }

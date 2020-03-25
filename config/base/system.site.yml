@@ -1,10 +1,10 @@
-name: 'Runroom Archetype'
+name: 'Archetype Drupal'
 mail: software@runroom.com
 slogan: ''
 page:
   403: ''
   404: ''
-  front: /home
+  front: /node/2
 admin_compact_mode: false
 weight_select_max: 100
 langcode: es

@@ -2,3 +2,7 @@ services:
     base_module.service.metadata:
         class: Drupal\base_module\Service\MetadataService
         autowire: true
+
+    base_module.service.field_manager:
+        class: Drupal\base_module\Service\FieldManagerService
+        autowire: true
