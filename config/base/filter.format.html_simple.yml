@@ -1,6 +1,8 @@
 langcode: es
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - media
 name: 'HTML Simple'
 format: html_simple
 weight: 0
@@ -11,6 +13,16 @@ filters:
     status: false
     weight: -10
     settings:
-      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h5 id> <h6 id> <h2 id class="t-title2"> <h3 id class="t-title3"> <h4 id class="t-title4"> <img src alt data-entity-type data-entity-uuid>'
+      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h5 id> <h6 id> <h2 id class="t-title2"> <h3 id class="t-title3"> <h4 id class="t-title4"> <img src alt data-entity-type data-entity-uuid> <drupal-media data-entity-type data-entity-uuid data-view-mode data-align data-caption alt title>'
       filter_html_help: true
       filter_html_nofollow: false
+  media_embed:
+    id: media_embed
+    provider: media
+    status: true
+    weight: 100
+    settings:
+      default_view_mode: default
+      allowed_media_types:
+        media_image: media_image
+      allowed_view_modes: {  }
