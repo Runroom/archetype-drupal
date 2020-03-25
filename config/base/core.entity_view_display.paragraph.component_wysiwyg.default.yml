@@ -1,0 +1,21 @@
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.component_wysiwyg.field_text
+    - paragraphs.paragraphs_type.component_wysiwyg
+  module:
+    - text
+id: paragraph.component_wysiwyg.default
+targetEntityType: paragraph
+bundle: component_wysiwyg
+mode: default
+content:
+  field_text:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

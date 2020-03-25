@@ -3,12 +3,9 @@ status: true
 dependencies:
   config:
     - field.field.node.basic_page.field_components
-    - field.field.node.basic_page.field_image
     - field.field.node.basic_page.field_internal_title
-    - image.style.thumbnail
     - node.type.basic_page
   module:
-    - image
     - paragraphs
     - path
 id: node.basic_page.default
@@ -33,14 +30,6 @@ content:
       form_display_mode: default
       default_paragraph_type: ''
     third_party_settings: {  }
-    region: content
-  field_image:
-    weight: 11
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
     region: content
   field_internal_title:
     weight: 0
