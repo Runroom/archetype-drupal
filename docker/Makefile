@@ -44,7 +44,7 @@ update:
 	./docker-console drush updatedb -y
 	./docker-console drush entity:update -y
 	./docker-console drupal config:export -y
-	./docker-console drush sql:dump > ../ansible/drupal.sql
+	./docker-console drush sql:dump >| ../ansible/drupal.sql
 
 provision: composer-install database
 
