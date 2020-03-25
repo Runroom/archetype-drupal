@@ -4,9 +4,7 @@ dependencies:
   config:
     - field.storage.node.field_components
     - node.type.basic_page
-    - paragraphs.paragraphs_type.cards_component
-    - paragraphs.paragraphs_type.cta_list_component
-    - paragraphs.paragraphs_type.wysiwyg_component
+    - paragraphs.paragraphs_type.component_wysiwyg
   module:
     - entity_reference_revisions
 id: node.basic_page.field_components
@@ -24,23 +22,9 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
-      cta_list_component: cta_list_component
-      wysiwyg_component: wysiwyg_component
-      cards_component: cards_component
+      component_wysiwyg: component_wysiwyg
     target_bundles_drag_drop:
-      cta_list_component:
+      component_wysiwyg:
         enabled: true
-        weight: 3
-      wysiwyg_component:
-        enabled: true
-        weight: 4
-      cards_component:
-        enabled: true
-        weight: 5
-      contact_form_component:
-        enabled: true
-        weight: 7
-      img_text_cta:
-        weight: 7
-        enabled: false
+        weight: 2
 field_type: entity_reference_revisions

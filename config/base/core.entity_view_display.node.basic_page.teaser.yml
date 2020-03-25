@@ -4,7 +4,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.basic_page.field_components
-    - field.field.node.basic_page.field_image
     - field.field.node.basic_page.field_internal_title
     - node.type.basic_page
   module:
@@ -20,6 +19,5 @@ content:
 hidden:
   field_components: true
   field_file: true
-  field_image: true
   field_internal_title: true
   langcode: true
