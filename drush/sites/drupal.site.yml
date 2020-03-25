@@ -4,4 +4,4 @@ local:
 development:
   host: drupal.runroom.dev
   user: forge
-  root: ~/drupal.runroom.dev/current/web
+  root: /home/forge/drupal.runroom.dev/current/web
