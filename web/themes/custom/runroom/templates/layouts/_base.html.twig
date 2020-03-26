@@ -1,7 +1,12 @@
-<main id="main" class="page {{ block('contentClass') }}">
+{% block header %}
+    {% include directory ~ '/templates/components/_header.html.twig' %}
+{% endblock %}
+<main id="main" class="page {{ block('mainClass') }}">
     {{ block('billboard') }}
-    {{ block('content') }}
-    {{ block('footer') }}
+    {{ block('main') }}
 </main>
+{% block footer %}
+    {% include directory ~ '/templates/components/_footer.html.twig' %}
+{% endblock %}
 {{ block('styles') }}
 {{ block('scripts') }}

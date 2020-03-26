@@ -30,17 +30,11 @@
         {{ page_bottom }}
 
         <css-placeholder token="{{ placeholder_token|raw }}">
-
-        <script>
-            PERFORMANCE_COOKIES = {{ performanceCookies|json_encode|raw }};
-            TARGETING_COOKIES = {{ targetingCookies|json_encode|raw }};
-            COOKIES_DEFAULT_DOMAIN = '{{ cookiesDefaultDomain }}';
-        </script>
-
         <js-bottom-placeholder token="{{ placeholder_token|raw }}">
 
         {% block customlibraries %}{% endblock %}
 
+        {% include directory ~ '/templates/modules/_cookies-scripts.html.twig' %}
         {% include directory ~ '/templates/modules/_cookies.html.twig' %}
     </body>
 </html>
