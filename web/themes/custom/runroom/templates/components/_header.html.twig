@@ -1,0 +1,28 @@
+{% set gtm_label = is_front ? url('<front>') : url('<current>') %}
+
+<header id="header" class="header" data-gtm-category="Navigation">
+    <div class="header__wrapper u-wrapper u-flex u-flex--align-center u-flex--justify-between">
+        {#<div class="header__hamburger">
+            {% include directory ~ '/templates/components/_hamburger.html.twig' with {
+                class: 'js-hamburger',
+                target: '#navigation',
+                text: 'Menu',
+                attributes: 'data-gtm-event data-gtm-action="Menu" data-gtm-label="Open"'
+            } %}
+        </div>#}
+        <a
+            data-gtm-event
+            data-gtm-action="Logo"
+            data-gtm-label="{{ gtm_label }}"
+            itemscope
+            itemtype="http://schema.org/Brand"
+            class="header__logo"
+            itemprop="url"
+            href="{{ url('<front>') }}"
+            title="{{ site_name }}"
+            rel="home">
+            {% include directory ~ '/build/svg/runroom-logo.svg' %}
+        </a>
+    </div>
+</header>
+{#{% include directory ~ '/templates/components/_navigation.html.twig' %}#}

@@ -1,0 +1,13 @@
+{% extends directory ~ '/templates/layouts/_base.html.twig' %}
+
+{% block main %}
+    {% include directory ~'/templates/components/_skip-link.html.twig' with {
+        target: '#main',
+        title: 'a11y.skip_to.main'|trans
+    } %}
+    {% include directory ~'/templates/components/_skip-link.html.twig' with {
+        target: '#footer',
+        title: 'a11y.skip_to.footer'|trans
+    } %}
+    {% block('content') %}
+{% endblock %}

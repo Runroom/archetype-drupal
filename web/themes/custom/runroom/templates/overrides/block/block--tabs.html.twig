@@ -1,0 +1,8 @@
+<div{{ attributes.addClass('admin_tabs') }}>
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+</div>

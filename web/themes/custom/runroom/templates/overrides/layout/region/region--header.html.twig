@@ -1,6 +1,0 @@
-{% if content %}
-    {% embed directory ~ '/templates/organisms/header.html.twig' %}
-        {% block navigation %}{{ drupal_entity('block', 'mainnavigation') }}{% endblock %}
-        {% block language %}{{ drupal_entity('block', 'languageswitcher') }}{% endblock %}
-    {% endembed %}
-{% endif %}

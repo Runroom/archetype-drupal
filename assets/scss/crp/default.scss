@@ -11,3 +11,7 @@
 
 /* Modules */
 @import '../modules/cookies-message';
+
+@include flex-basic;
+@include flex-advanced;
+@include clear-form;
