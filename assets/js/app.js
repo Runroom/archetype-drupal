@@ -13,6 +13,8 @@ import cookies from './components/cookies';
 
 touchable();
 
+document.documentElement.classList.remove('no-js');
+
 if (isExplorer()) {
   document.documentElement.classList.add('browser-ie');
 }
