@@ -1,5 +1,5 @@
-import Utils from '../helpers/utils';
-import intersectionObserver from '../helpers/IntersectionObserver';
+import preloadImage from '../helpers/preloadImage';
+import intersectionObserver from '../helpers/intersectionObserver';
 
 const HANDLED_CLASS = 'lazyloaded';
 const config = {
@@ -15,7 +15,7 @@ const loadImage = image => {
   const bg = image.classList.contains('lazybg');
   const { src } = image.dataset;
 
-  Utils.preloadImage(src).then(() => {
+  preloadImage(src).then(() => {
     image.classList.add(HANDLED_CLASS);
     if (bg) {
       image.style.backgroundImage = `url(${src})`;
