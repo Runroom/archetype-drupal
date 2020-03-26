@@ -14,15 +14,52 @@ class MetadataService
         'twitter:description' => 200,
     ];
 
-    public function truncateMetadata(array &$attachments): void
+    public function truncateMetadata(array &$page): void
     {
-        foreach ($attachments['#attached']['html_head'] as &$tag) {
+        foreach ($page['#attached']['html_head'] as &$tag) {
             if ($this->hasToBeTruncated($tag[0])) {
                 $tag[0]['#attributes']['content'] = $this->truncate(
                     $tag[0]['#attributes']['content'],
                     self::MAX_LENGTHS[$tag[0]['#attributes'][$this->getType($tag[0])]]
                 );
             }
+        }
+    }
+
+    public function attachMetadata(
+        array &$page,
+        string $title,
+        string $description,
+        string $imageUrl = null
+    ): void {
+        $url = \Drupal::request()->getRequestUri();
+
+        $title = $title . ' | ' . \Drupal::config('system.site')->get('name');
+        $description = \strip_tags($description);
+
+        $metadata = [
+            'title' => $title,
+            'description' => $description,
+            'og:type' => 'website',
+            'og:url' => $url,
+            'og:title' => $title,
+            'og:description' => $description,
+            'og:image' => $imageUrl,
+            'twitter:card' => 'summary',
+            'twitter:url' => $url,
+            'twitter:title' => $title,
+            'twitter:description' => $description,
+            'twitter:image' => $imageUrl,
+        ];
+
+        foreach ($metadata as $tag => $content) {
+            $page['#attached']['html_head'][] = [[
+                '#tag' => 'meta',
+                '#attributes' => [
+                    'property' => $tag,
+                    'content' => $content,
+                ],
+            ], $tag];
         }
     }
 

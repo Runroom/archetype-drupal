@@ -1,0 +1,21 @@
+uuid: 06a3e182-861f-498f-90ae-49ff8c9991ee
+langcode: es
+status: true
+dependencies:
+  module:
+    - cookies
+    - text
+_core:
+  default_config_hash: TkBSuHOE750Detjqo--ERWu0DIc8LRrIzrp_JcPUK2c
+id: cookies_entity.field_introduction
+field_name: field_introduction
+entity_type: cookies_entity
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

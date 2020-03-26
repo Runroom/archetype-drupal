@@ -1,0 +1,24 @@
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.cookies_entity.field_introduction
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    html_simple: '0'
+    plain_text: '0'
+id: cookies_entity.cookies_entity.field_introduction
+field_name: field_introduction
+entity_type: cookies_entity
+bundle: cookies_entity
+label: Introducción
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

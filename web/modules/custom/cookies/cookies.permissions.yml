@@ -1,0 +1,19 @@
+add cookies entity entities:
+    title: 'Create new Cookies entity entities'
+
+administer cookies entity entities:
+    title: 'Administer Cookies entity entities'
+    description: 'Allow to access the administration form to configure Cookies entity entities.'
+    restrict access: true
+
+delete cookies entity entities:
+    title: 'Delete Cookies entity entities'
+
+edit cookies entity entities:
+    title: 'Edit Cookies entity entities'
+
+view published cookies entity entities:
+    title: 'View published Cookies entity entities'
+
+view unpublished cookies entity entities:
+    title: 'View unpublished Cookies entity entities'

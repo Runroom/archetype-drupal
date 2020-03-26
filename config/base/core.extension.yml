@@ -10,6 +10,7 @@ module:
   config_split: 0
   config_translation: 0
   contact: 0
+  cookies: 0
   ctools: 0
   datetime: 0
   dblog: 0

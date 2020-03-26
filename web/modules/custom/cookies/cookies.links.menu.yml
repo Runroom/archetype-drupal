@@ -1,0 +1,11 @@
+cookies_entity.admin.structure.settings:
+    title: Cookies settings
+    description: Configure Cookies entity
+    route_name: cookies_entity.settings
+    parent: system.admin_structure
+
+cookies_entity.admin.structure.collection:
+    title: Cookies
+    description: Configure Cookies
+    route_name: entity.cookies_entity.collection
+    parent: system.admin_structure

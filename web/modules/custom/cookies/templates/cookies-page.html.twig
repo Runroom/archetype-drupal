@@ -1,0 +1,22 @@
+<div class="u-wrapper u-wrapper--reading">
+    <div class="cookies form u-wysiwyg js-cookies-form">
+        {% if introduction %}
+            {{ introduction|raw }}
+        {% endif %}
+        <h2 class="cookies__title">{{ 'cookies.mandatory.title'|trans }}</h2>
+        <input type="checkbox" class="form-checkbox checkbox" id="mandatory" name="mandatory" {% if form.mandatory['#checked'] %}checked{% endif %} {% if form.mandatory['#attributes']['disabled'] %}disabled{% endif %}>
+        <p>{{ 'cookies.mandatory.description'|trans }}</p>
+        {% include '@cookies/cookies-table.html.twig' with { cookies: cookies.mandatory } %}
+
+        <h2 class="cookies__title">{{ 'cookies.performance.title'|trans }}</h2>
+        <input type="checkbox" class="form-checkbox checkbox js-cookies-performance-checkbox" id="performance" name="performance" {% if form.performance['#checked'] %}checked{% endif %} {% if form.performance['#attributes']['disabled'] %}disabled{% endif %}>
+        <p>{{ 'cookies.performance.description'|trans }}</p>
+        {% include '@cookies/cookies-table.html.twig' with { cookies: cookies.performance } %}
+
+        <h2 class="cookies__title">{{ 'cookies.targeting.title'|trans }}</h2>
+        <input type="checkbox" class="form-checkbox checkbox js-cookies-targeting-checkbox" id="targeting" name="targeting" {% if form.targeting['#checked'] %}checked{% endif %} {% if form.targeting['#attributes']['disabled'] %}disabled{% endif %}>
+        <p>{{ 'cookies.targeting.description'|trans }}</p>
+        {% include '@cookies/cookies-table.html.twig' with { cookies: cookies.targeting } %}
+    </div>
+    <button class="cookies__button button button--secondary js-cookies-save-preferences">{{ 'cookies.page.save'|trans }}</button>
+</div>

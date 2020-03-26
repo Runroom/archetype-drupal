@@ -1,0 +1,17 @@
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.cookies_entity.field_title
+id: cookies_entity.cookies_entity.field_title
+field_name: field_title
+entity_type: cookies_entity
+bundle: cookies_entity
+label: Título
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
