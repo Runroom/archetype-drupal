@@ -1,8 +1,9 @@
 @mixin wrapper($middle: $s768, $max: $global-max-width) {
     .u-wrapper {
+        &:not(.u-reading) { max-width: $global-max-width; }
+
         height: 100%;
         margin: 0 auto;
-        max-width: $global-max-width;
         padding-left: space();
         padding-right: space();
 

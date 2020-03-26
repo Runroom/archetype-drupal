@@ -1,9 +1,6 @@
 @import './default';
 @import '../utilities/wysiwyg';
 
-@include flex-basic;
-@include clear-form;
-
 /* Layouts */
 @import '../layouts/static';
 

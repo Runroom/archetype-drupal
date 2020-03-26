@@ -10,7 +10,6 @@
 @include flex-grid((1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24), ($s480, $s768, $s960));
 @include flex-inline(($s480, $s960));
 @include flex-wrap;
-@include wrapper;
 @include visibility(($s768));
 
 .demo {
