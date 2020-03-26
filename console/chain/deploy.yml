@@ -13,7 +13,4 @@ commands:
           bin: drush config:import -y
     - command: exec
       arguments:
-          bin: drush entity:updates -y
-    - command: exec
-      arguments:
           bin: drush cache:rebuild
