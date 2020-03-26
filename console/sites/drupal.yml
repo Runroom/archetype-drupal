@@ -1,9 +1,0 @@
-local:
-    root: /srv/app
-    type: local
-
-development:
-    host: drupal.runroom.dev
-    user: forge
-    root: /home/forge/drupal.runroom.dev/current
-    type: ssh

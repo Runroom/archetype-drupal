@@ -14,9 +14,6 @@ application:
         mappings: 'true'
     remote:
         port: 22
-    overrides:
-        config:
-            skip-validate-site-uuid: true
     options:
         learning: false
         generate-inline: false
