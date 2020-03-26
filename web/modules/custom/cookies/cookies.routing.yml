@@ -1,0 +1,7 @@
+cookies.page:
+    path: '/cookies-policy'
+    defaults:
+        _controller: '\Drupal\cookies\Controller\CookiesController::configuration'
+        _title_callback: '\Drupal\cookies\Controller\CookiesController::getTitle'
+    requirements:
+        _access: 'TRUE'

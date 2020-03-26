@@ -2,6 +2,9 @@
 
 namespace Drupal\base_module\Service;
 
+use Drupal\Core\Config\ConfigFactory;
+use Symfony\Component\HttpFoundation\RequestStack;
+
 class MetadataService
 {
     public const TERMINATION = '...';
@@ -13,16 +16,63 @@ class MetadataService
         'twitter:title' => 70,
         'twitter:description' => 200,
     ];
+    protected $requestStack;
+    protected $configFactory;
 
-    public function truncateMetadata(array &$attachments): void
+    public function __construct(
+        RequestStack $requestStack,
+        ConfigFactory $configFactory
+    ) {
+        $this->requestStack = $requestStack;
+        $this->configFactory = $configFactory;
+    }
+
+    public function truncateMetadata(array &$page): void
     {
-        foreach ($attachments['#attached']['html_head'] as &$tag) {
+        foreach ($page['#attached']['html_head'] as &$tag) {
             if ($this->hasToBeTruncated($tag[0])) {
                 $tag[0]['#attributes']['content'] = $this->truncate(
                     $tag[0]['#attributes']['content'],
                     self::MAX_LENGTHS[$tag[0]['#attributes'][$this->getType($tag[0])]]
                 );
             }
+        }
+    }
+
+    public function attachMetadata(
+        array &$page,
+        string $title,
+        string $description,
+        string $imageUrl = null
+    ): void {
+        $url = $this->requestStack->getCurrentRequest()->getRequestUri();
+
+        $title = $title . ' | ' . $this->configFactory->get('system.site')->get('name');
+        $description = \strip_tags($description);
+
+        $metadata = [
+            'title' => $title,
+            'description' => $description,
+            'og:type' => 'website',
+            'og:url' => $url,
+            'og:title' => $title,
+            'og:description' => $description,
+            'og:image' => $imageUrl,
+            'twitter:card' => 'summary',
+            'twitter:url' => $url,
+            'twitter:title' => $title,
+            'twitter:description' => $description,
+            'twitter:image' => $imageUrl,
+        ];
+
+        foreach ($metadata as $tag => $content) {
+            $page['#attached']['html_head'][] = [[
+                '#tag' => 'meta',
+                '#attributes' => [
+                    'property' => $tag,
+                    'content' => $content,
+                ],
+            ], $tag];
         }
     }
 
