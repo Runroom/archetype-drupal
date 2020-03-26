@@ -1,0 +1,45 @@
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.cookies_entity.cookies_entity.field_introduction
+    - field.field.cookies_entity.cookies_entity.field_title
+  module:
+    - text
+id: cookies_entity.cookies_entity.default
+targetEntityType: cookies_entity
+bundle: cookies_entity
+mode: default
+content:
+  field_introduction:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_title:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

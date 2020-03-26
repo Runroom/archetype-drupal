@@ -1,0 +1,60 @@
+<?php
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Site\Settings;
+
+function cookies_help(string $route_name, RouteMatchInterface $route_match): ?string
+{
+    switch ($route_name) {
+        case 'help.page.cookies':
+            $output = '';
+            $output .= '<h3>' . t('About') . '</h3>';
+            $output .= '<p>' . t('Cookies Module') . '</p>';
+
+            return $output;
+    }
+
+    return null;
+}
+
+function cookies_theme(): array
+{
+    return [
+        'cookies_page' => [
+            'variables' => [
+                'cookiesPage' => null,
+                'cookies' => null,
+                'form' => null,
+            ],
+        ],
+    ];
+}
+
+function cookies_page_attachments_alter(array &$page): void
+{
+    if (\Drupal::routeMatch()->getRouteName() === 'cookies.page') {
+        $repository = \Drupal::service('cookies.repository.cookies_entity');
+        $cookies = $repository->getCookiesPage();
+        $title = $cookies->get('field_title')->value ?: '';
+        $description = $cookies->get('field_introduction')->value ?: '';
+
+        $service = \Drupal::service('base_module.service.metadata');
+        $service->attachMetadata($page, $title, $description);
+
+        $page['#attached']['html_head'][] = [[
+            '#tag' => 'meta',
+            '#attributes' => [
+                'name' => 'robots',
+                'content' => 'noindex,follow',
+            ],
+        ], 'robots'];
+    }
+}
+
+function cookies_preprocess_html(array &$variables): void
+{
+    $cookiesService = \Drupal::service('cookies.service.cookies');
+    $variables['performanceCookies'] = $cookiesService->getCookiesByType('performance');
+    $variables['targetingCookies'] = $cookiesService->getCookiesByType('targeting');
+    $variables['cookiesDefaultDomain'] = Settings::get('cookies_default_domain');
+}

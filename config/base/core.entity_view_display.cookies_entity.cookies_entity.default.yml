@@ -1,0 +1,42 @@
+uuid: 3c1a9f83-ef46-4846-870e-2f6e0a9471f3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.cookies_entity.cookies_entity.field_introduction
+    - field.field.cookies_entity.cookies_entity.field_title
+  module:
+    - cookies
+    - text
+_core:
+  default_config_hash: q9UiRQKVRegoUDqP1lzdpfOX7uORifdWyPcrAtqH8-s
+id: cookies_entity.cookies_entity.default
+targetEntityType: cookies_entity
+bundle: cookies_entity
+mode: default
+content:
+  field_introduction:
+    weight: -2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_title:
+    weight: -3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  name:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  langcode: true

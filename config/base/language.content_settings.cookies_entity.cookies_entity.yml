@@ -1,0 +1,19 @@
+uuid: f9ccedf8-bf7e-4097-847b-ee8e675bb4d4
+langcode: es
+status: true
+dependencies:
+  module:
+    - content_translation
+    - cookies
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+_core:
+  default_config_hash: WuBOEafNxUwOK3z9KgNwyjRi935bLqqcCY8kqebYMDQ
+id: cookies_entity.cookies_entity
+target_entity_type_id: cookies_entity
+target_bundle: cookies_entity
+default_langcode: site_default
+language_alterable: true

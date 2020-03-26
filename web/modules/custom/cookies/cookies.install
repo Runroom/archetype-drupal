@@ -1,0 +1,10 @@
+<?php
+
+use Drupal\cookies\Entity\CookiesEntity;
+
+function cookies_install(): void
+{
+    $cookies = CookiesEntity::create();
+    $cookies->setName('Cookies policy');
+    $cookies->save();
+}

@@ -1,0 +1,20 @@
+cookies_entity.settings_tab:
+    route_name: cookies_entity.settings
+    title: 'Settings'
+    base_route: cookies_entity.settings
+
+entity.cookies_entity.canonical:
+    route_name: entity.cookies_entity.canonical
+    base_route: entity.cookies_entity.canonical
+    title: 'View'
+
+entity.cookies_entity.edit_form:
+    route_name: entity.cookies_entity.edit_form
+    base_route: entity.cookies_entity.canonical
+    title: 'Edit'
+
+entity.cookies_entity.delete_form:
+    route_name:  entity.cookies_entity.delete_form
+    base_route:  entity.cookies_entity.canonical
+    title: Delete
+    weight: 10
