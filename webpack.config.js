@@ -33,15 +33,15 @@ Encore.setOutputPath('web/themes/custom/runroom/build/')
       whitelist: [
         'lazyloaded',
         'is-opened',
-        'non-touch',
+        'non-touch'
       ],
       whitelistPatterns: [
         /^is-/,
         /^has-/,
         /^u-/,
         /^grid/,
+        /^js-/
       ],
-      whitelistPatterns: [/^js-/, /^u-/],
       extractors: [{
         extractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
         extensions: ['twig']
