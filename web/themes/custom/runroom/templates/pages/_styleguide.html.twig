@@ -1,0 +1,18 @@
+{% extends '@runroom/styleguide/templates/_page.html.twig' %}
+
+{% block body %}
+    <div class="u-wrapper">
+        <h1>Drupal Archetype</h1>
+        <h2>The Drupal Archetype is a boilerplate project.</h2>
+        {% include '@runroom/styleguide/sections/_intro.html.twig' %}
+        {% include '@runroom/styleguide/sections/_breakpoints.html.twig' %}
+        {% include '@runroom/styleguide/sections/_colors.html.twig' %}
+        {% include '@runroom/styleguide/sections/_grid.html.twig' %}
+        {% include '@runroom/styleguide/sections/_headings.html.twig' %}
+        {% include '@runroom/styleguide/sections/_paragraphs.html.twig' %}
+    </div>
+{% endblock %}
+
+{% block libraries %}
+    {{ attach_library('runroom/styleguide') }}
+{% endblock %}
