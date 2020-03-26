@@ -5,7 +5,12 @@ dependencies:
     - field.storage.paragraph.field_text
     - paragraphs.paragraphs_type.component_wysiwyg
   module:
+    - allowed_formats
     - text
+third_party_settings:
+  allowed_formats:
+    html_simple: html_simple
+    plain_text: '0'
 id: paragraph.component_wysiwyg.field_text
 field_name: field_text
 entity_type: paragraph
