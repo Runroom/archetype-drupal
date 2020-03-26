@@ -1,7 +1,0 @@
-{% for item in items %}
-	{% set config = {
-	   title: item.content['#title'],
-	   uri: item.content['#url'].getUri(),
-	} %}
-	{% include directory ~ '/templates/atoms/cta.html.twig' with config only %}
-{% endfor %}

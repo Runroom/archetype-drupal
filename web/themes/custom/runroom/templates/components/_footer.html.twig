@@ -1,0 +1,11 @@
+{% from directory ~ '/templates/helpers/_macros.html.twig' import icon %}
+
+<footer id="footer" class="footer" data-gtm-category="Navigation" data-gtm-action="Footer">
+    <div class="u-wrapper u-flex u-flex--align-between u-flex--justify-between">
+        &copy; Runroom {{ 'now'|date('Y') }}
+        {{ icon('r-runroom') }}
+        {# <ul class="footer__pages">
+            {{ drupal_menu('footer-legals') }}
+        </ul> #}
+    </div>
+</footer>

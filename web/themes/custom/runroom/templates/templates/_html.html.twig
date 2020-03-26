@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html{{ html_attributes.addClass('no-js') }}>
+    <head>
+        <head-placeholder token="{{ placeholder_token|raw }}">
+        <title>{{ head_title|safe_join(' | ') }}</title>
+
+        {# {{ drupal_block('tag_manager_block') }} #}
+
+        {% include directory ~ '/templates/modules/_fonts.html.twig' %}
+        {% include directory ~ '/templates/modules/_favicon.html.twig' %}
+
+        <style type="text/css">
+            {% block crp %}
+                {% include directory ~ '/build/crp.default.css' %}
+            {% endblock %}
+        </style>
+        <js-placeholder token="{{ placeholder_token|raw }}">
+        {# {{ block('pixels') }} #}
+    </head>
+
+    {% set loggedClass = logged_in ? 'logged' : 'not-logged' %}
+
+    <body{{ attributes.addClass(bodyClass).addClass(loggedClass) }}>
+        {# {{ drupal_block('tag_manager_no_script_block') }} #}
+
+        {{ page_top }}
+        {% block page %}
+            {{ page }}
+        {% endblock %}
+        {{ page_bottom }}
+
+        <css-placeholder token="{{ placeholder_token|raw }}">
+        <js-bottom-placeholder token="{{ placeholder_token|raw }}">
+
+        {% block customlibraries %}{% endblock %}
+
+        {% include directory ~ '/templates/modules/_cookies-scripts.html.twig' %}
+        {% include directory ~ '/templates/modules/_cookies.html.twig' %}
+    </body>
+</html>
+
+{% set schema_title = head_title|safe_join(' | ') %}
+{% set schema_description = head_description %}
+
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "WebPage",
+        "name": "{{ schema_title }}",
+        "description": "{{ schema_description }}"
+    }
+</script>
