@@ -6,18 +6,17 @@ import touchable from '@runroom/purejs/lib/touchable';
 
 // polyfills and helpers should be before any other component
 import './helpers/polyfills';
+import lazyLoadImages from './components/lazyLoadImages';
 
 // In order to keep readability and maintainability on bigger projects
 // we recommend to use module import method and import it as needed.
 import cookies from './components/cookies';
 
 touchable();
+lazyLoadImages();
 
+if (isExplorer()) document.documentElement.classList.add('browser-ie');
 document.documentElement.classList.remove('no-js');
-
-if (isExplorer()) {
-  document.documentElement.classList.add('browser-ie');
-}
 
 events.onDocumentReady(() => {
   cookies();
