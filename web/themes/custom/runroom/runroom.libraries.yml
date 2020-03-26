@@ -5,6 +5,7 @@ global-styling:
             build/styles.css: { minified: true }
     js:
         build/app.js: { minified: true }
+        build/runtime.js: { minified: true }
 
 styleguide:
     version: VERSION
