@@ -20,8 +20,6 @@
         "drupal/config_split": "1.4.0",
         "drupal/console": "1.9.3",
         "drupal/core": "8.8.4",
-        "drupal/devel": "2.1.0",
-        "drupal/devel_entity_updates": "1.0.0",
         "drupal/drush_language": "1.0.0-rc2",
         "drupal/editor_advanced_link": "1.6.0",
         "drupal/entity_reference_revisions": "1.8.0",
@@ -44,6 +42,7 @@
     },
     "require-dev": {
         "deployer/dist": "6.7.3",
+        "drupal/devel": "2.1.0",
         "ergebnis/composer-normalize": "2.3.2",
         "friendsofphp/php-cs-fixer": "2.16.1",
         "mglaman/phpstan-drupal": "0.12.2",
