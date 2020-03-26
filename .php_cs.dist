@@ -5,6 +5,7 @@ use PhpCsFixer\Finder;
 
 $finder = Finder::create()
     ->in([
+        __DIR__ . '/drush',
         __DIR__ . '/web/modules/custom',
         __DIR__ . '/web/sites',
         __DIR__ . '/web/themes/custom',

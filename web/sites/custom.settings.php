@@ -25,6 +25,7 @@ $config['system.performance']['cache']['page']['max_age'] = 0;
 $config['system.performance']['css']['preprocess'] = false;
 $config['system.performance']['js']['preprocess'] = false;
 $config['system.logging']['error_level'] = 'verbose';
+$config['config_split.config_split.development']['status'] = true;
 
 $settings['cache']['bins']['render'] = 'cache.backend.null';
 $settings['cache']['bins']['discovery_migration'] = 'cache.backend.memory';
