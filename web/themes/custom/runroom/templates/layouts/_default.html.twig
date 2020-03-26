@@ -1,11 +1,11 @@
-{% extends 'layouts/base.html.twig' %}
+{% extends directory ~ '/templates/layouts/_base.html.twig' %}
 
 {% block main %}
-    {% include 'components/skip-link.html.twig' with {
+    {% include directory ~'/templates/components/_skip-link.html.twig' with {
         target: '#main',
         title: 'a11y.skip_to.main'|trans
     } %}
-    {% include 'components/skip-link.html.twig' with {
+    {% include directory ~'/templates/components/_skip-link.html.twig' with {
         target: '#footer',
         title: 'a11y.skip_to.footer'|trans
     } %}

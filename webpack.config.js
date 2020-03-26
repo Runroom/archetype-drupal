@@ -30,7 +30,17 @@ Encore.setOutputPath('web/themes/custom/runroom/build/')
   .addPlugin(
     new PurgeCss({
       paths: glob.sync([path.join(__dirname, '/web/themes/custom/runroom/templates/**/*.html.twig')]),
-      whitelist: ['non-touch'],
+      whitelist: [
+        'lazyloaded',
+        'is-opened',
+        'non-touch',
+      ],
+      whitelistPatterns: [
+        /^is-/,
+        /^has-/,
+        /^u-/,
+        /^grid/,
+      ],
       whitelistPatterns: [/^js-/, /^u-/],
       extractors: [{
         extractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
@@ -45,6 +55,7 @@ Encore.setOutputPath('web/themes/custom/runroom/build/')
   .addStyleEntry('styles', './assets/scss/styles.scss')
   .addStyleEntry('development', './assets/scss/development.scss')
   .addStyleEntry('styleguide', './assets/scss/styleguide.scss')
-  .addStyleEntry('crp.default', './assets/scss/crp/default.scss');
+  .addStyleEntry('crp.default', './assets/scss/crp/default.scss')
+  .addStyleEntry('crp.billboard', './assets/scss/crp/billboard.scss');
 
 module.exports = Encore.getWebpackConfig();
