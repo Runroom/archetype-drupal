@@ -29,7 +29,7 @@ const setCookies = (performance, targeting) => {
   cookies.set(COOKIE_PERFORMANCE_NAME, performance, cookieSettings);
   cookies.set(COOKIE_TARGETING_NAME, targeting, cookieSettings);
 
-  window.dataLayer.push({ event: 'COEvent' });
+  // window.dataLayer.push({ event: 'COEvent' });
 };
 
 const removeCookies = cookiesJar => {
