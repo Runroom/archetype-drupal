@@ -12,8 +12,9 @@ function cookies_help(string $route_name, RouteMatchInterface $route_match): ?st
             $output .= '<p>' . t('Cookies Module') . '</p>';
 
             return $output;
-        default:
     }
+
+    return null;
 }
 
 function cookies_theme(): array

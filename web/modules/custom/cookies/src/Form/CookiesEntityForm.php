@@ -12,7 +12,7 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Session\AccountProxyInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
-class CookiesEntityForm extends ContentEntityForm
+final class CookiesEntityForm extends ContentEntityForm
 {
     protected $account;
 
@@ -67,5 +67,7 @@ class CookiesEntityForm extends ContentEntityForm
         Cache::invalidateTags(CookiesController::COOKIES_CACHE_TAGS);
 
         $formState->setRedirect('entity.cookies_entity.canonical', ['cookies_entity' => $entity->id()]);
+
+        return $status;
     }
 }

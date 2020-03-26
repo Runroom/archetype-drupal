@@ -6,7 +6,7 @@ use Drupal\cookies\Service\CookiesService;
 use Drupal\Core\Controller\ControllerBase;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
-class CookiesController extends ControllerBase
+final class CookiesController extends ControllerBase
 {
     public const COOKIES_CACHE_TAGS = ['page:cookies'];
 

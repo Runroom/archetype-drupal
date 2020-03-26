@@ -2,6 +2,7 @@
 
 namespace Drupal\cookies\Service;
 
+use Drupal\Core\Form\FormBuilderInterface;
 use Drupal\cookies\Entity\CookiesEntity;
 use Drupal\cookies\Form\CookiesForm;
 use Drupal\cookies\Repository\CookiesEntityRepository;
@@ -12,15 +13,18 @@ class CookiesService
     protected $cookies;
     protected $languageManager;
     protected $repository;
+    protected $formBuilder;
 
     public function __construct(
         array $cookies,
         ConfigurableLanguageManager $languageManager,
-        CookiesEntityRepository $repository
+        CookiesEntityRepository $repository,
+        FormBuilderInterface $formBuilder
     ) {
         $this->cookies = $cookies;
         $this->languageManager = $languageManager;
         $this->repository = $repository;
+        $this->formBuilder = $formBuilder;
     }
 
     public function getCookiesPage(): ?CookiesEntity
@@ -42,7 +46,7 @@ class CookiesService
 
     public function getForm(): array
     {
-        return \Drupal::formBuilder()->getForm(CookiesForm::class);
+        return $this->formBuilder->getForm(CookiesForm::class);
     }
 
     public function getCookiesByType(string $type): ?array

@@ -6,7 +6,7 @@ use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
-class CookiesForm extends FormBase
+final class CookiesForm extends FormBase
 {
     public static function create(ContainerInterface $container)
     {
@@ -51,6 +51,6 @@ class CookiesForm extends FormBase
 
     protected function isCookieActive(string $cookie, string $defaultValue): bool
     {
-        return \Drupal::request()->cookies->get($cookie, $defaultValue) === 'true';
+        return $this->getRequest()->cookies->get($cookie, $defaultValue) === 'true';
     }
 }
