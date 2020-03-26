@@ -8,7 +8,6 @@ description: 'Configuraciones del entorno de desarrollo'
 folder: ../config/development
 module:
   devel: 0
-  devel_entity_updates: 0
   kint: 0
 theme: {  }
 blacklist: {  }
