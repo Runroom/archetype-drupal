@@ -1,12 +1,12 @@
 {% block header %}
-    {% include directory ~ '/templates/components/_header.html.twig' %}
+    {% include '@runroom/components/_header.html.twig' %}
 {% endblock %}
 <main id="main" class="page {{ block('mainClass') }}">
     {{ block('billboard') }}
     {{ block('main') }}
 </main>
 {% block footer %}
-    {% include directory ~ '/templates/components/_footer.html.twig' %}
+    {% include '@runroom/components/_footer.html.twig' %}
 {% endblock %}
 {{ block('styles') }}
 {{ block('scripts') }}

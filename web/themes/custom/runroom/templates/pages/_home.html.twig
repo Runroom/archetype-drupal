@@ -55,7 +55,7 @@
             {% endblock %}
         {% endembed %}
 
-        {% include directory ~ '/templates/modules/_demo-module.html.twig' %}
+        {% include '@runroom/modules/_demo-module.html.twig' %}
 
         <section class="demo__grid u-wrapper">
             <h2>Flexbox grid</h2>
@@ -63,7 +63,7 @@
             <div class="demo__section u-flex u-flex--wrap">
                 <div class="demo__column u-flex--s768-8">
                     <h3>8-column</h3>
-                    {% include directory ~ '/templates/components/_blockquote.html.twig' with {
+                    {% include '@runroom/components/_blockquote.html.twig' with {
                         class: 'blockquote--clean',
                         quote: 'Derive of reason salvation overcome insofar insofar enlightenment against reason. Prejudice law contradict mountains oneself pinnacle zarathustra merciful against aversion ocean ultimate pious aversion.',
                         author: 'Friedrich Nietzsche'
@@ -71,7 +71,7 @@
                 </div>
                 <div class="demo__column u-flex--s768-8">
                     <h3>8-column</h3>
-                    {% include directory ~ '/templates/components/_blockquote.html.twig' with {
+                    {% include '@runroom/components/_blockquote.html.twig' with {
                         class: 'blockquote--clean',
                         quote: 'Against disgust endless overcome morality philosophy burying pinnacle dead deceptions.',
                         author: 'Friedrich Nietzsche'
@@ -79,7 +79,7 @@
                 </div>
                 <div class="demo__column u-flex--s768-8">
                     <h3>8-column</h3>
-                    {% include directory ~ '/templates/components/_blockquote.html.twig' with {
+                    {% include '@runroom/components/_blockquote.html.twig' with {
                         class: 'blockquote--clean',
                         quote: 'Love mountains deceptions convictions value self holiest disgust mountains selfish virtues. Philosophy passion convictions derive war strong holiest pinnacle free morality self play.',
                         author: 'Friedrich Nietzsche'
@@ -155,7 +155,7 @@
                 <p class="p-big">{{ 'form.messages.ok_description'|trans }}</p>
             {%- else -%}
                 <h2 class="u-flex--s480-24">This is a sample of a form</h2>
-                {% include directory ~ '/templates/components/_contact-form.html.twig' with {
+                {% include '@runroom/components/_contact-form.html.twig' with {
                     'action': path(
                         app.request.attributes.get('_route'),
                         app.request.attributes.get('_route_params')|merge({'_fragment': 'form'})
