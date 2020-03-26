@@ -1,11 +1,11 @@
 {% extends directory ~ '/templates/layouts/_base.html.twig' %}
 
 {% block main %}
-    {% include directory ~ '/templates/components/_skip-link.html.twig' with {
+    {% include '@runroom/components/_skip-link.html.twig' with {
         target: '#main',
         title: 'a11y.skip_to.main'|trans
     } %}
-    {% include directory ~ '/templates/components/_billboard.html.twig' with {
+    {% include '@runroom/components/_billboard.html.twig' with {
         title: block('billboardTitle') is defined ? block('billboardTitle') : '',
         description: block('billboardDescription') is defined ? block('billboardDescription') : '',
         class: block('billboardClass') is defined ? block('billboardClass') : '',

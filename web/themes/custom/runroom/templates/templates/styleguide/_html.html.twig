@@ -4,11 +4,11 @@
         <head-placeholder token="{{ placeholder_token|raw }}">
         <title>{{ head_title|safe_join(' | ') }}</title>
 
-        {% include directory ~ '/templates/helpers/_fonts.html.twig' %}
-        {% include directory ~ '/templates/helpers/_favicon.html.twig' %}
+        {% include '@runroom/helpers/_fonts.html.twig' %}
+        {% include '@runroom/helpers/_favicon.html.twig' %}
         <style type="text/css">
             {% block crp %}
-                {% include directory ~ '/templates/crp/default.min.css' %}
+                {% include '@runroom/crp/default.min.css' %}
             {% endblock %}
         </style>
         <js-placeholder token="{{ placeholder_token|raw }}">

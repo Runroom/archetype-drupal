@@ -6,8 +6,8 @@
 
         {# {{ drupal_block('tag_manager_block') }} #}
 
-        {% include directory ~ '/templates/modules/_fonts.html.twig' %}
-        {% include directory ~ '/templates/modules/_favicon.html.twig' %}
+        {% include '@runroom/modules/_fonts.html.twig' %}
+        {% include '@runroom/modules/_favicon.html.twig' %}
 
         <style type="text/css">
             {% block crp %}
@@ -34,8 +34,8 @@
 
         {% block customlibraries %}{% endblock %}
 
-        {% include directory ~ '/templates/modules/_cookies-scripts.html.twig' %}
-        {% include directory ~ '/templates/modules/_cookies.html.twig' %}
+        {% include '@runroom/modules/_cookies-scripts.html.twig' %}
+        {% include '@runroom/modules/_cookies.html.twig' %}
     </body>
 </html>
 
