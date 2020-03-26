@@ -11,7 +11,7 @@ set('writable_dirs', ['web/sites/default/files']);
 
 set('default_timeout', null);
 set('allow_anonymous_stats', false);
-set('drupal_console', '{{release_path}}/vendor/bin/drupal');
+set('drupal', '{{release_path}}/vendor/bin/drupal');
 set('composer_options', '{{composer_action}} --prefer-dist --apcu-autoloader --no-progress --no-interaction --no-dev');
 
 set('bin/yarn', function () {
@@ -20,7 +20,7 @@ set('bin/yarn', function () {
 
 task('app', function () {
     cd('{{release_path}}');
-    run('{{bin/php}} {{drupal_console}} deploy');
+    run('{{bin/php}} {{drupal}} deploy');
 
     cd('{{release_path}}/drush');
     run('bash import-translations.bash');

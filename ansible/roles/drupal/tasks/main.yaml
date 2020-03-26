@@ -21,9 +21,3 @@
     mode: 0777
     state: directory
   with_items: '{{ drupal.files_folders }}'
-
-- name: Configure global cronjob
-  cron:
-    name: Drupal cron
-    job: '/vagrant/vendor/bin/drupal --root=/vagrant cron:execute > /dev/null 2>&1'
-    special_time: hourly
