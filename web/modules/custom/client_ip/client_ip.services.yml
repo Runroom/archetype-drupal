@@ -1,0 +1,6 @@
+services:
+    client_ip.client_ip_middleware:
+        class: Drupal\client_ip\ClientIpMiddleware
+        autowire: true
+        tags:
+            - { name: http_middleware, priority: 280 }
