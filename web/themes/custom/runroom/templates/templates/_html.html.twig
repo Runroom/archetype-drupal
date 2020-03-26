@@ -9,11 +9,11 @@
         {% include directory ~ '/templates/modules/_fonts.html.twig' %}
         {% include directory ~ '/templates/modules/_favicon.html.twig' %}
 
-        {# <style type="text/css">
+        <style type="text/css">
             {% block crp %}
-                {% include directory ~ '/templates/helpers/_inline-crp.html.twig' with { crp: 'crp.default.scss' } %}
+                {% include directory ~ '/build/crp.default.css' %}
             {% endblock %}
-        </style> #}
+        </style>
         <js-placeholder token="{{ placeholder_token|raw }}">
         {# {{ block('pixels') }} #}
     </head>

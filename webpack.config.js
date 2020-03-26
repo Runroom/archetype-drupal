@@ -29,7 +29,7 @@ Encore.setOutputPath('web/themes/custom/runroom/build/')
   )
   .addPlugin(
     new PurgeCss({
-      paths: glob.sync([path.join(__dirname, 'templates/**/*.html.twig')]),
+      paths: glob.sync([path.join(__dirname, '/web/themes/custom/runroom/templates/**/*.html.twig')]),
       whitelist: ['non-touch'],
       whitelistPatterns: [/^js-/, /^u-/],
       extractors: [{

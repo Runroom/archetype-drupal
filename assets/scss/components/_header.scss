@@ -1,4 +1,5 @@
 .header {
+    background: red;
     padding: space() 0;
 
     &__logo {
@@ -8,17 +9,6 @@
             max-height: space(2);
 
             path { fill: $c-primary500; }
-        }
-    }
-
-    &__language {
-        li {
-            display: inline-block;
-            padding-right: space(.25);
-
-            &:last-child { padding-right: 0; }
-
-            span { font-weight: bold; }
         }
     }
 }
