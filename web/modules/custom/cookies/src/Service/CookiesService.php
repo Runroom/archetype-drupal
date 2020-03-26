@@ -2,10 +2,10 @@
 
 namespace Drupal\cookies\Service;
 
-use Drupal\Core\Form\FormBuilderInterface;
 use Drupal\cookies\Entity\CookiesEntity;
 use Drupal\cookies\Form\CookiesForm;
 use Drupal\cookies\Repository\CookiesEntityRepository;
+use Drupal\Core\Form\FormBuilderInterface;
 use Drupal\language\ConfigurableLanguageManager;
 
 class CookiesService
