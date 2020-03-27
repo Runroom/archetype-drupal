@@ -1,10 +1,10 @@
-# Español translation of Runroom Archetype
+# Español translation of Archetype Drupal
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2019-05-13 19:15+0200\n"
-"PO-Revision-Date: 2019-05-13 19:15+0200\n"
+"POT-Creation-Date: 2020-03-27 09:56+0100\n"
+"PO-Revision-Date: 2020-03-27 09:56+0100\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -39686,4 +39686,14 @@ msgid "%collection_label can only be created in the default workspace."
 msgstr ""
 "%collection_label solo puede ser creado en el espacio de trabajo por "
 "defecto."
+
+msgid "cookies.accept"
+msgstr "Aceptar todas las cookies"
+
+msgid "cookies.advice"
+msgstr ""
+"Este sitio utiliza cookies propias y de terceros para mejorar tu "
+"experiencia en la página. Para habilitar o restringir las cookies "
+"activas o para obtener más información, haz click en <a "
+"href=\"@url\" target=\"_blank\">personalizar la configuración</a>."
 
