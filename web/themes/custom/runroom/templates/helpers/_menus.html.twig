@@ -8,7 +8,7 @@
                     {{ link(item.title, item.url) }}
 
                     {% if item.below %}
-                        {{ menus.main_menu(item.below, attributes, menu_level + 1) }}
+                        {{ menus.main_menu(item.below, menu_level + 1) }}
                     {% endif %}
                 </li>
             {% endfor %}
