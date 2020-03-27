@@ -10,6 +10,9 @@
 @import './components/form';
 @import './components/blockquote';
 
+/* Modules */
+@import 'modules/admin-tabs';
+
 /* Pages */
 @import './pages/demo';
 @import './pages/cookies';
