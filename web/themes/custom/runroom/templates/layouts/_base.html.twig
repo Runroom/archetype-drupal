@@ -1,12 +1,6 @@
-{% block header %}
-    {% include '@runroom/components/_header.html.twig' %}
-{% endblock %}
 <main id="main" class="page {{ block('mainClass') }}">
     {{ block('billboard') }}
     {{ block('main') }}
 </main>
-{% block footer %}
-    {% include '@runroom/components/_footer.html.twig' %}
-{% endblock %}
 {{ block('styles') }}
 {{ block('scripts') }}
