@@ -2,12 +2,8 @@
 
 <footer id="footer" class="footer" data-gtm-category="Navigation" data-gtm-action="Footer">
     <div class="u-wrapper u-flex u-flex--align-between u-flex--justify-between">
-        &copy; Runroom {{ 'now'|date('Y') }}
         {{ icon('r-runroom') }}
+        &copy; Runroom {{ 'now'|date('Y') }}
     </div>
-    <div class="u-wrapper u-flex u-flex--align-center u-flex--justify-end">
-        <ul class="footer__pages">
-            {# {{ drupal_menu('footer-links') }} #}
-        </ul>
-    </div>
+    {{ drupal_menu('footer') }}
 </footer>
