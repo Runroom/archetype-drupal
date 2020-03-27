@@ -1,0 +1,20 @@
+uuid: fbd0b901-fa06-49fc-9822-fbc2deed74ed
+langcode: es
+status: true
+dependencies:
+  theme:
+    - runroom
+id: tabs
+theme: runroom
+region: footer
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Pestañas
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }
