@@ -1,0 +1,89 @@
+{# {% macro main_menu(items, menu_level, extraItems = []) %}
+    {% import _self as menus %}
+    {% if items|length > 0 %}
+        {% if menu_level == 0 %}
+            {% for item in items %}
+                <div class="navigation__column {% if item.color %}navigation__column--{{ item.color }}{% endif %}">
+                    {% if item.url.external or item.url.routeName != '<nolink>' %}
+                        <a
+                            class="navigation__item navigation__title"
+                            href="{{ item.url }}"
+                            data-gtm-label="{{ item.url }}"
+                            data-gtm-event
+                        >
+                            {{ item.title }}
+                        </a>
+                    {% else %}
+                        <span>{{ item.title }}</span>
+                    {% endif %}
+                    {% if item.below %}
+                        {{ menus.main_menu(item.below, menu_level + 1, extraItems) }}
+                    {% endif %}
+                </div>
+            {% endfor %}
+        {% else %}
+            <ul>
+                {% for item in items %}
+                    <li>
+                        <a
+                            href="{{ item.url }}"
+                            class="navigation__item p-small {% if isMenuActive(item.url) %}active{% endif %}{% if item.classes is defined %} {{ item.classes }}{% endif %}"
+                            {% if item.attributes is defined %} {{ item.attributes|raw }}{% endif %}
+                            data-gtm-label="{{ item.url }}"
+                            data-gtm-event
+                            {% if item.url.options['attributes']['target'] is not null %} target="{{ item.url.options['attributes']['target'] }}"{% endif %}
+                        >
+                            <span>{{ item.title }}</span>
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endif %}
+{% endmacro %} #}
+
+{% macro main_menu(items, menu_level) %}
+    {% import _self as menus %}
+    {% if items %}
+        <ul>
+        {% for item in items %}
+            <li{{ item.attributes }}>
+                {% if item.url.external or item.url.routeName != '<nolink>' %}
+                    {{ link(item.title, item.url, { 'data-gtm-label': item.url.__toString, 'data-gtm-event':'' }) }}
+                {% else %}
+                    <span>{{ item.title }}</span>
+                {% endif %}
+
+                {% if item.below %}
+                    {{ menus.main_menu(item.below, attributes, menu_level + 1) }}
+                {% endif %}
+            </li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+{% endmacro %}
+{#
+{% macro footer_menu(items, attributes, menu_level) %}
+    {% import _self as menus %}
+    {% if items %}
+        {% if menu_level == 0 %}
+            <ul{{ attributes }}>
+        {% else %}
+            <ul>
+        {% endif %}
+        {% for item in items %}
+            <li{{ item.attributes }}>
+                {% if item.url.routeName != '<nolink>' %}
+                    {{ link(item.title, item.url, { 'data-gtm-label': item.url.__toString, 'data-gtm-event':'' }) }}
+                {% else %}
+                    <span>{{ item.title }}</span>
+                {% endif %}
+
+                {% if item.below %}
+                    {{ menus.footer_menu(item.below, attributes, menu_level + 1) }}
+                {% endif %}
+            </li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+{% endmacro %} #}
