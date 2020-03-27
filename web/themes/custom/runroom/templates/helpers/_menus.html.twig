@@ -5,11 +5,7 @@
             <ul class="u-flex">
             {% for item in items %}
                 <li{{ item.attributes }}>
-                    {% if item.url.external or item.url.routeName != '<nolink>' %}
-                        {{ link(item.title, item.url, { 'data-gtm-label': item.url.__toString, 'data-gtm-event':'' }) }}
-                    {% else %}
-                        <span>{{ item.title }}</span>
-                    {% endif %}
+                    {{ link(item.title, item.url) }}
 
                     {% if item.below %}
                         {{ menus.main_menu(item.below, attributes, menu_level + 1) }}
