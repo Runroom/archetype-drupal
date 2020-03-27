@@ -56,6 +56,7 @@ Encore.setOutputPath('web/themes/custom/runroom/build/')
   .addStyleEntry('development', './assets/scss/development.scss')
   .addStyleEntry('styleguide', './assets/scss/styleguide.scss')
   .addStyleEntry('crp.default', './assets/scss/crp/default.scss')
-  .addStyleEntry('crp.billboard', './assets/scss/crp/billboard.scss');
+  .addStyleEntry('crp.billboard', './assets/scss/crp/billboard.scss')
+  .addStyleEntry('crp.basic-page', './assets/scss/crp/basic-page.scss');
 
 module.exports = Encore.getWebpackConfig();
