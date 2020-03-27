@@ -19,11 +19,8 @@ set('bin/yarn', function () {
 });
 
 task('app', function () {
-    cd('{{release_path}}');
-    run('{{bin/php}} {{drupal}} deploy');
-
-    cd('{{release_path}}/drush');
-    run('bash import-translations.bash');
+    run('cd {{release_path}} && {{bin/php}} {{drupal}} deploy');
+    run('cd {{release_path}} && bash drush/import-translations.bash');
 })->setPrivate();
 
 task('yarn:build', function () {

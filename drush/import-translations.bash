@@ -1,6 +1,6 @@
 #!/bin/bash
 
-translation_dir=$(pwd)/../web/sites/custom_translations
+translation_dir=$(pwd)/web/sites/custom_translations
 
 for entry in "$translation_dir"/*
 do
