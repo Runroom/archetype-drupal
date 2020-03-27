@@ -2,14 +2,6 @@
 
 <header id="header" class="header" data-gtm-category="Navigation">
     <div class="header__wrapper u-wrapper u-flex u-flex--align-center u-flex--justify-between">
-        {#<div class="header__hamburger">
-            {% include '@runroom/components/_hamburger.html.twig' with {
-                class: 'js-hamburger',
-                target: '#navigation',
-                text: 'Menu',
-                attributes: 'data-gtm-event data-gtm-action="Menu" data-gtm-label="Open"'
-            } %}
-        </div>#}
         <a
             data-gtm-event
             data-gtm-action="Logo"
@@ -23,6 +15,6 @@
             rel="home">
             {% include directory ~ '/build/svg/runroom-logo.svg' %}
         </a>
+        {{ drupal_menu('main') }}
     </div>
 </header>
-{#{% include '@runroom/components/_navigation.html.twig' %}#}

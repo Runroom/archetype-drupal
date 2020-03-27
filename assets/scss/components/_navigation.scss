@@ -1,0 +1,7 @@
+.navigation {
+    a {
+        margin: 0 space(.5);
+
+        &:last-child { margin-right: 0; }
+    }
+}
