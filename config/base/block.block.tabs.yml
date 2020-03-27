@@ -2,6 +2,8 @@ uuid: fbd0b901-fa06-49fc-9822-fbc2deed74ed
 langcode: es
 status: true
 dependencies:
+  module:
+    - user
   theme:
     - runroom
 id: tabs
@@ -17,4 +19,11 @@ settings:
   label_display: '0'
   primary: true
   secondary: true
-visibility: {  }
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      admin_user: admin_user
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

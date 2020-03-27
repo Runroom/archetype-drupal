@@ -41,12 +41,12 @@ database:
 	./docker-console drush sql:cli -y < ../ansible/drupal.sql
 
 update:
-	./docker-console drush updatedb -y
-	./docker-console drush entity:update -y
 	./docker-console drush config:export -y
 	./docker-console drush sql:dump >| ../ansible/drupal.sql
 
 provision: composer-install database
+	./docker-console drupal deploy
+	./docker-console bash drush/import-translations.bash
 
 phpunit:
 	./docker-console phpunit
