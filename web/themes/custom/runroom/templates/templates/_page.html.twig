@@ -2,20 +2,20 @@
     {% include '@runroom/components/_header.html.twig' %}
 {% endblock %}
 
-{% block content %}
-    {% block skipLinks %}
-        {% include '@runroom/components/_skip-link.html.twig' with {
-            target: '#main',
-            title: 'a11y.skip_to.main'|trans
-        } %}
-        {% include '@runroom/components/_skip-link.html.twig' with {
-            target: '#footer',
-            title: 'a11y.skip_to.footer'|trans
-        } %}
-    {% endblock %}
-
-    {{ page.content }}
+{% block skipLinks %}
+    {% include '@runroom/components/_skip-link.html.twig' with {
+        target: '#main',
+        title: 'a11y.skip_to.main'|trans
+    } %}
+    {% include '@runroom/components/_skip-link.html.twig' with {
+        target: '#footer',
+        title: 'a11y.skip_to.footer'|trans
+    } %}
 {% endblock %}
+
+<main id="main" class="page {{ block('pageClass') }}">
+    {% block content %}{{ page.content }}{% endblock %}
+</main>
 
 {% block footer %}
     {% include '@runroom/components/_footer.html.twig' %}
