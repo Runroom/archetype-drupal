@@ -1,14 +1,11 @@
-{% extends '@runroom/layouts/_base.html.twig' %}
+{% extends '@runroom/layouts/_default.html.twig' %}
 
-{% block main %}
-    {% block billboard %}
-        {% include '@runroom/components/_billboard.html.twig' with {
-            title: block('billboardTitle'),
-            description: block('billboardDescription'),
-            class: block('billboardClass'),
-            image: block('billboardImage')
-        } %}
-    {% endblock %}
-
-    {{ block('content') }}
+{% block preContent %}
+    {% include '@runroom/components/_billboard.html.twig' with {
+        title: block('billboardTitle'),
+        description: block('billboardDescription'),
+        class: block('billboardClass'),
+        image: block('billboardImage')
+    } %}
 {% endblock %}
+

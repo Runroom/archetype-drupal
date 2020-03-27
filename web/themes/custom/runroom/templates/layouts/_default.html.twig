@@ -1,5 +1,7 @@
-{% extends '@runroom/layouts/_base.html.twig' %}
+{{ block('preContent') }}
 
-{% block main %}
-    {{ block('content') }}
+{% block content %}
+    {{ content }}
 {% endblock %}
+
+{{ block('postContent') }}
