@@ -1,0 +1,48 @@
+.admin_tabs {
+    background-color: $c-black;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 0;
+
+        li {
+            border: 0;
+            font: inherit;
+            font-size: 100%;
+            margin: 0;
+            padding: 0;
+            vertical-align: baseline;
+
+            a {
+                color: $c-white;
+                display: inline-block;
+                font-size: ms(-4);
+                font-weight: 700;
+                letter-spacing: 1px;
+                line-height: 1.25;
+                padding: space-fallback(.35) space-fallback();
+                text-align: center;
+                text-decoration: none;
+                text-transform: uppercase;
+                transition: background-color .2s ease-out;
+
+                &::after,
+                &::before {
+                    display: none;
+                }
+
+                @include hover {
+                    color: $c-neutro300;
+                }
+            }
+        }
+    }
+}
