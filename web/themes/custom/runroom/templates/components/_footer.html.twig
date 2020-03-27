@@ -3,7 +3,7 @@
 <footer id="footer" class="footer" data-gtm-category="Navigation" data-gtm-action="Footer">
     <div class="u-wrapper u-flex u-flex--align-between u-flex--justify-between">
         {{ icon('r-runroom') }}
-        &copy; Runroom {{ 'now'|date('Y') }}
+        <span>&copy; Runroom {{ 'now'|date('Y') }}</span>
+        {{ drupal_menu('footer') }}
     </div>
-    {{ drupal_menu('footer') }}
 </footer>
