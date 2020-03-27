@@ -1,3 +1,11 @@
+{% block header %}
+    {% include '@runroom/components/_header.html.twig' %}
+{% endblock %}
+
 {% block content %}
     {{ page.content }}
+{% endblock %}
+
+{% block footer %}
+    {% include '@runroom/components/_footer.html.twig' %}
 {% endblock %}
