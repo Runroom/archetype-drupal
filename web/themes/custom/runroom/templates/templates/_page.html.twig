@@ -3,14 +3,16 @@
 {% endblock %}
 
 {% block content %}
-    {% include '@runroom/components/_skip-link.html.twig' with {
-        target: '#main',
-        title: 'a11y.skip_to.main'|trans
-    } %}
-    {% include '@runroom/components/_skip-link.html.twig' with {
-        target: '#footer',
-        title: 'a11y.skip_to.footer'|trans
-    } %}
+    {% block skipLinks %}
+        {% include '@runroom/components/_skip-link.html.twig' with {
+            target: '#main',
+            title: 'a11y.skip_to.main'|trans
+        } %}
+        {% include '@runroom/components/_skip-link.html.twig' with {
+            target: '#footer',
+            title: 'a11y.skip_to.footer'|trans
+        } %}
+    {% endblock %}
 
     {{ page.content }}
 {% endblock %}
