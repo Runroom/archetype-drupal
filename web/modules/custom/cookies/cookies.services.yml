@@ -12,22 +12,23 @@ services:
 
 parameters:
     cookies:
-        mandatory:
-            - name: Drupal
+        mandatory_cookies:
+            - name: drupal
+              has_description: true
               cookies:
                 - { name: SESSxxxxxxxxxx }
-            - name: Consent
+            - name: consent
               cookies:
                 - { name: cookie_message }
                 - { name: performance_cookie }
                 - { name: targeting_cookie }
-        performance:
-            - name: Google Analytics
+        performance_cookies:
+            - name: analytics
               cookies:
                 - { name: _ga }
                 - { name: _gid }
-        targeting:
-            - name: Google / DoubleClick
+        targeting_cookies:
+            - name: doubleclick
               cookies:
                 - { name: _dc_gtm_UA-4275551-14 }
                 - { name: _gat_UA-4275551-14 }

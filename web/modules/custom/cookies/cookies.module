@@ -54,7 +54,7 @@ function cookies_page_attachments_alter(array &$page): void
 function cookies_preprocess_html(array &$variables): void
 {
     $cookiesService = \Drupal::service('cookies.service.cookies');
-    $variables['performanceCookies'] = $cookiesService->getCookiesByType('performance');
-    $variables['targetingCookies'] = $cookiesService->getCookiesByType('targeting');
+    $variables['performanceCookies'] = $cookiesService->getCookiesByType('performance_cookies');
+    $variables['targetingCookies'] = $cookiesService->getCookiesByType('targeting_cookies');
     $variables['cookiesDefaultDomain'] = Settings::get('cookies_default_domain');
 }
