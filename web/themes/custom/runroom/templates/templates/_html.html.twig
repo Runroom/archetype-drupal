@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html{{ html_attributes.addClass('no-js') }}>
     <head>
+        {% include '@runroom/modules/_tagmanager.html.twig' %}
         <head-placeholder token="{{ placeholder_token|raw }}">
         <title>{{ head_title|safe_join(' | ') }}</title>
-
-        {# {{ drupal_block('tag_manager_block') }} #}
 
         {% include '@runroom/modules/_fonts.html.twig' %}
         {% include '@runroom/modules/_favicon.html.twig' %}
@@ -15,13 +14,12 @@
             {% endblock %}
         </style>
         <js-placeholder token="{{ placeholder_token|raw }}">
-        {# {{ block('pixels') }} #}
     </head>
 
     {% set loggedClass = logged_in ? 'logged' : 'not-logged' %}
 
     <body{{ attributes.addClass(bodyClass).addClass(loggedClass) }}>
-        {# {{ drupal_block('tag_manager_no_script_block') }} #}
+        {% include '@runroom/modules/_tagmanager-noscript.html.twig' %}
 
         {{ page_top }}
         {% block page %}
@@ -40,15 +38,3 @@
         {% include '@runroom/modules/_cookies.html.twig' %}
     </body>
 </html>
-
-{% set schema_title = head_title|safe_join(' | ') %}
-{% set schema_description = head_description %}
-
-<script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "WebPage",
-        "name": "{{ schema_title }}",
-        "description": "{{ schema_description }}"
-    }
-</script>
