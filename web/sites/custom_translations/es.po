@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2020-03-27 09:56+0100\n"
-"PO-Revision-Date: 2020-03-27 09:56+0100\n"
+"POT-Creation-Date: 2020-03-27 11:11+0100\n"
+"PO-Revision-Date: 2020-03-27 11:11+0100\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -39689,6 +39689,81 @@ msgstr ""
 
 msgid "cookies.accept"
 msgstr "Aceptar todas las cookies"
+
+msgid "cookies.mandatory_cookies.title"
+msgstr "Cookies estrictamente necesarias"
+
+msgid "cookies.mandatory_cookies.label"
+msgstr "Aceptar cookies estrictamente necesarias"
+
+msgid "cookies.mandatory_cookies.text"
+msgstr ""
+"Estas cookies son necesarias para que el sitio web funcione y no se "
+"pueden desactivar en nuestros sistemas. Por lo general, solo se "
+"configuran en respuesta a acciones realizadas por usted que equivalen "
+"a una solicitud de servicios, como configurar sus preferencias de "
+"privacidad, iniciar sesión o completar formularios. Puede configurar "
+"su navegador para que bloquee o le avise sobre estas cookies, pero "
+"algunas partes del sitio no funcionarán. Estas cookies no almacenan "
+"ninguna información de identificación personal."
+
+msgid "cookies.table.category"
+msgstr "Categoría"
+
+msgid "cookies.table.cookies"
+msgstr "Cookies"
+
+msgid "cookies.category.drupal.title"
+msgstr "Drupal"
+
+msgid "cookies.category.drupal.description"
+msgstr "Cookies usadas por el cms Drupal"
+
+msgid "cookies.category.consent.title"
+msgstr "Consentimento de las cookies"
+
+msgid "cookies.performance_cookies.title"
+msgstr "Performance cookies"
+
+msgid "cookies.performance_cookies.label"
+msgstr "Aceptar cookies de performance"
+
+msgid "cookies.performance_cookies.text"
+msgstr ""
+"Estas cookies nos permiten contar las visitas y las fuentes de "
+"tráfico, por lo que podemos medir y mejorar el rendimiento de nuestro "
+"sitio. Nos ayudan a saber qué páginas son las más y las menos "
+"populares y cómo los visitantes se mueven por el sitio. Toda la "
+"información que recogen estas cookies es agregada y, por lo tanto, "
+"anónima. Si no permite estas cookies, no sabremos cuándo ha visitado "
+"nuestro sitio."
+
+msgid "cookies.category.analytics.title"
+msgstr "Google Analytics"
+
+msgid "cookies.targeting_cookies.title"
+msgstr "Targeting cookies"
+
+msgid "cookies.targeting_cookies.label"
+msgstr "Aceptar cookies de targeting"
+
+msgid "cookies.targeting_cookies.text"
+msgstr ""
+"Estas cookies se establecen a través de nuestro sitio por nuestros "
+"socios publicitarios. Estas compañías pueden utilizarlas para crear "
+"un perfil de sus intereses y mostrarle anuncios relevantes en otros "
+"sitios. Funcionan mediante la identificación única de su navegador y "
+"dispositivo. Si no permite estas cookies, no experimentará nuestra "
+"publicidad dirigida en diferentes sitios web."
+
+msgid "cookies.category.doubleclick.title"
+msgstr "Google / DoubleClick"
+
+msgid "cookies.save_settings"
+msgstr "Guardar configuración"
+
+msgid "cookies.updated"
+msgstr "Las preferencias de cookies se han actualizado"
 
 msgid "cookies.advice"
 msgstr ""
