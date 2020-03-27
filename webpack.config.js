@@ -32,7 +32,7 @@ Encore.setOutputPath('web/themes/custom/runroom/build/')
       paths: glob.sync([path.join(__dirname, '/web/themes/custom/runroom/templates/**/*.html.twig')]),
       whitelist: [
         'lazyloaded',
-        'is-opened',
+        'visually-hidden',
         'non-touch'
       ],
       whitelistPatterns: [
