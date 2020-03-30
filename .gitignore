@@ -16,6 +16,7 @@ ubuntu-*-cloudimg-console.log
 .php_cs
 .php_cs.cache
 .phpunit.result.cache
+coverage
 vendor
 phpstan.neon
 phpunit.xml
