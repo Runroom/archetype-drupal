@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a21584dd57751cf710dd42a0e2ef894a",
+    "content-hash": "0baee21e8980f95f173855145799ee20",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -6984,16 +6984,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v3.4.38",
+            "version": "v3.4.39",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "bc63e15160866e8730a1f738541b194c401f72bf"
+                "reference": "e701b47e11749970f63803879c4febb520f07b6c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/bc63e15160866e8730a1f738541b194c401f72bf",
-                "reference": "bc63e15160866e8730a1f738541b194c401f72bf",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/e701b47e11749970f63803879c4febb520f07b6c",
+                "reference": "e701b47e11749970f63803879c4febb520f07b6c",
                 "shasum": ""
             },
             "require": {
@@ -7039,7 +7039,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2020-01-16T19:04:26+00:00"
+            "time": "2020-03-25T12:02:26+00:00"
         },
         {
             "name": "twig/twig",
@@ -8319,16 +8319,16 @@
         },
         {
             "name": "mglaman/phpstan-drupal",
-            "version": "0.12.2",
+            "version": "0.12.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mglaman/phpstan-drupal.git",
-                "reference": "bcd4ba1db8f49d282f3fb6558bda5cc21f677cc9"
+                "reference": "c72367d12498c9f5d3738852d4089b4570690a55"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mglaman/phpstan-drupal/zipball/bcd4ba1db8f49d282f3fb6558bda5cc21f677cc9",
-                "reference": "bcd4ba1db8f49d282f3fb6558bda5cc21f677cc9",
+                "url": "https://api.github.com/repos/mglaman/phpstan-drupal/zipball/c72367d12498c9f5d3738852d4089b4570690a55",
+                "reference": "c72367d12498c9f5d3738852d4089b4570690a55",
                 "shasum": ""
             },
             "require": {
@@ -8394,7 +8394,7 @@
                 }
             ],
             "description": "Drupal extension and rules for PHPStan",
-            "time": "2020-01-27T20:01:01+00:00"
+            "time": "2020-03-31T19:03:49+00:00"
         },
         {
             "name": "myclabs/deep-copy",
