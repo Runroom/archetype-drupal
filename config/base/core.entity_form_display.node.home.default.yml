@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.home.field_internal_title
+    - field.field.node.home.field_meta_information
     - node.type.home
   module:
+    - metatag
     - path
 id: node.home.default
 targetEntityType: node
@@ -25,6 +27,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_meta_information:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
     region: content
   langcode:
     type: language_select

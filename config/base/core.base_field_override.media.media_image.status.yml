@@ -1,0 +1,22 @@
+uuid: eab08679-bca4-44b4-8fb8-ff92c03fa671
+langcode: es
+status: true
+dependencies:
+  config:
+    - media.type.media_image
+id: media.media_image.status
+field_name: status
+entity_type: media
+bundle: media_image
+label: Publicado
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean
