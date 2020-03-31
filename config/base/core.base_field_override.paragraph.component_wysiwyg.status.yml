@@ -1,0 +1,22 @@
+uuid: a595285d-e2f8-45c6-9af5-ec5ddf6abd51
+langcode: es
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.component_wysiwyg
+id: paragraph.component_wysiwyg.status
+field_name: status
+entity_type: paragraph
+bundle: component_wysiwyg
+label: Publicado
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean

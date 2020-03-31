@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.basic_page.field_components
     - field.field.node.basic_page.field_internal_title
+    - field.field.node.basic_page.field_meta_information
     - node.type.basic_page
   module:
     - user
@@ -21,4 +22,5 @@ hidden:
   field_components: true
   field_file: true
   field_internal_title: true
+  field_meta_information: true
   langcode: true
