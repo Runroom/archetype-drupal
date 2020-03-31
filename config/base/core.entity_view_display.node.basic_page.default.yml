@@ -5,9 +5,11 @@ dependencies:
   config:
     - field.field.node.basic_page.field_components
     - field.field.node.basic_page.field_internal_title
+    - field.field.node.basic_page.field_meta_information
     - node.type.basic_page
   module:
     - entity_reference_revisions
+    - metatag
     - user
 id: node.basic_page.default
 targetEntityType: node
@@ -22,6 +24,13 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    region: content
+  field_meta_information:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
     region: content
 hidden:
   field_file: true

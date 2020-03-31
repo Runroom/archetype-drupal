@@ -1,0 +1,21 @@
+uuid: d731ead5-02f0-4baf-aabb-12b42abb917f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_information
+    - node.type.basic_page
+  module:
+    - metatag
+id: node.basic_page.field_meta_information
+field_name: field_meta_information
+entity_type: node
+bundle: basic_page
+label: 'Meta Etiquetas'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

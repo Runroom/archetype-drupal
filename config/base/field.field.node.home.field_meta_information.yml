@@ -1,0 +1,21 @@
+uuid: 4b5348bd-47c9-4551-a551-01d58d517b35
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_information
+    - node.type.home
+  module:
+    - metatag
+id: node.home.field_meta_information
+field_name: field_meta_information
+entity_type: node
+bundle: home
+label: 'Meta Etiquetas'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

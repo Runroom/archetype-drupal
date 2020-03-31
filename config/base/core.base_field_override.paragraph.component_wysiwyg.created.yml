@@ -1,0 +1,18 @@
+uuid: d28e9d07-dd51-4367-ac00-ac10129ed912
+langcode: es
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.component_wysiwyg
+id: paragraph.component_wysiwyg.created
+field_name: created
+entity_type: paragraph
+bundle: component_wysiwyg
+label: Fecha
+description: 'La hora en que se creó el Paragraph.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

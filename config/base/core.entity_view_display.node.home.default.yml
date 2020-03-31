@@ -4,14 +4,23 @@ status: true
 dependencies:
   config:
     - field.field.node.home.field_internal_title
+    - field.field.node.home.field_meta_information
     - node.type.home
   module:
+    - metatag
     - user
 id: node.home.default
 targetEntityType: node
 bundle: home
 mode: default
 content:
+  field_meta_information:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
   links:
     weight: 0
     region: content
