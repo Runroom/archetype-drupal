@@ -1,5 +1,5 @@
 Runroom - Archetype Drupal
-===========================
+==========================
 
 ![ci](https://github.com/Runroom/archetype-drupal/workflows/ci/badge.svg)
 ![qa](https://github.com/Runroom/archetype-drupal/workflows/qa/badge.svg)
