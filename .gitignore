@@ -30,6 +30,3 @@ web/themes/custom/runroom/build
 node_modules
 npm-debug.log
 yarn-error.log
-
-# DOCKER
-.docker-sync
