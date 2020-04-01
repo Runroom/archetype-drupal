@@ -1,0 +1,11 @@
+uuid: 0dbb7369-8d1b-4c60-af20-1e1377f01361
+langcode: es
+status: true
+dependencies: {  }
+id: node__home
+label: 'Contenido: Home'
+tags:
+  shortlink: '[site:url]'
+  canonical_url: '[site:url]'
+  og_url: '[site:url]'
+  twitter_cards_page_url: '[site:url]'

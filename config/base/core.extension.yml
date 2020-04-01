@@ -27,6 +27,7 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  hreflang: 0
   image: 0
   imageapi_optimize: 0
   language: 0
@@ -38,6 +39,8 @@ module:
   menu_link_attributes: 0
   menu_ui: 0
   metatag: 0
+  metatag_open_graph: 0
+  metatag_twitter_cards: 0
   metatag_views: 0
   node: 0
   page_cache: 0
