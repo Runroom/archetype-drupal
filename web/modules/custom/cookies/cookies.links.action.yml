@@ -1,5 +1,0 @@
-entity.cookies_entity.add_form:
-    route_name: entity.cookies_entity.add_form
-    title: 'Add Cookies entity'
-    appears_on:
-        - entity.cookies_entity.collection
