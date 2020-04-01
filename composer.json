@@ -17,6 +17,7 @@
         "cweagans/composer-patches": "1.6.7",
         "drupal/adminimal_theme": "1.5.0",
         "drupal/allowed_formats": "1.2.0",
+        "drupal/clientside_validation": "2.0.0-rc1",
         "drupal/config_split": "1.4.0",
         "drupal/console": "1.9.3",
         "drupal/core": "8.8.4",

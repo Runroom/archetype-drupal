@@ -20,7 +20,7 @@ filters:
   media_embed:
     id: media_embed
     provider: media
-    status: true
+    status: false
     weight: 100
     settings:
       default_view_mode: default
