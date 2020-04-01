@@ -1,12 +1,12 @@
-uuid: 5f81793f-3921-4267-888e-0d4062eecea1
+uuid: d89edc62-d98d-4607-827d-1a68c1679a60
 langcode: es
 status: true
 dependencies:
   config:
-    - filter.format.html_simple
+    - filter.format.html_complete
   module:
     - ckeditor
-format: html_simple
+format: html_complete
 editor: ckeditor
 settings:
   toolbar:
@@ -15,6 +15,7 @@ settings:
         -
           name: Formato
           items:
+            - Styles
             - Bold
             - Italic
         -
@@ -22,13 +23,27 @@ settings:
           items:
             - DrupalLink
             - DrupalUnlink
+        -
+          name: Listas
+          items:
+            - BulletedList
+            - NumberedList
+        -
+          name: Multimedia
+          items:
+            - DrupalMediaLibrary
+        -
+          name: Herramientas
+          items:
+            - ShowBlocks
+            - Maximize
   plugins:
     stylescombo:
-      styles: ''
+      styles: "h2.t-title2|H2\r\nh3.t-title3|H3\r\nh4.t-title4|H4\r\np|Párrafo"
     language:
       language_list: un
 image_upload:
-  status: true
+  status: false
   scheme: public
   directory: inline-images
   max_size: ''

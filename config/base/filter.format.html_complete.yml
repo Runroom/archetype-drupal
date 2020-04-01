@@ -1,0 +1,21 @@
+uuid: af38affb-b39c-4a4d-b5ff-b04083cc0bf9
+langcode: es
+status: true
+dependencies:
+  module:
+    - media
+name: 'HTML Completo'
+format: html_complete
+weight: 0
+filters:
+  media_embed:
+    id: media_embed
+    provider: media
+    status: true
+    weight: 100
+    settings:
+      default_view_mode: default
+      allowed_media_types:
+        media_image: media_image
+      allowed_view_modes:
+        default: default

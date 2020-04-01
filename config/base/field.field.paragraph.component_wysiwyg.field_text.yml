@@ -10,7 +10,8 @@ dependencies:
     - text
 third_party_settings:
   allowed_formats:
-    html_simple: html_simple
+    html_complete: html_complete
+    html_simple: '0'
     plain_text: '0'
 id: paragraph.component_wysiwyg.field_text
 field_name: field_text
