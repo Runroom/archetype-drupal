@@ -15,7 +15,7 @@ filters:
     weight: 100
     settings:
       default_view_mode: default
-      allowed_media_types:
-        media_image: media_image
       allowed_view_modes:
         default: default
+      allowed_media_types:
+        media_image: media_image
