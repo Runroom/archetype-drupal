@@ -7,7 +7,10 @@ pipeline {
         docker { image 'runroom/php7.3-cli' }
     }
 
-    options { buildDiscarder(logRotator(numToKeepStr: '5')) }
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '5'))
+        disableConcurrentBuilds()
+    }
 
     stages {
         stage('Build') {
