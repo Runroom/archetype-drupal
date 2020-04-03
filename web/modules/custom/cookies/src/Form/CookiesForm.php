@@ -22,12 +22,14 @@ final class CookiesForm extends FormBase
     {
         $form['mandatory'] = [
             '#type' => 'checkbox',
+            '#title' => $this->t('cookies.mandatory_cookies.label'),
             '#attributes' => ['disabled' => true],
             '#default_value' => true,
         ];
 
         $form['performance'] = [
             '#type' => 'checkbox',
+            '#title' => $this->t('cookies.performance_cookies.label'),
             '#attributes' => [
                 'class' => ['js-cookies-performance-checkbox'],
             ],
@@ -36,10 +38,19 @@ final class CookiesForm extends FormBase
 
         $form['targeting'] = [
             '#type' => 'checkbox',
+            '#title' => $this->t('cookies.targeting_cookies.label'),
             '#attributes' => [
                 'class' => ['js-cookies-targeting-checkbox'],
             ],
             '#default_value' => $this->isCookieActive('targeting_cookie', 'false'),
+        ];
+
+        $form['submit'] = [
+            '#type' => 'submit',
+            '#value' => $this->t('cookies.save_settings'),
+            '#attributes' => [
+                'class' => ['js-cookies-save-preferences'],
+            ],
         ];
 
         return $form;

@@ -1,16 +1,17 @@
 <div>
     {% if introduction %}{{ introduction|raw }}{% endif %}
+
     <h2>Mandatory cookies</h2>
-    <input type="checkbox" id="mandatory" name="mandatory" {% if form.mandatory['#checked'] %}checked{% endif %} {% if form.mandatory['#attributes']['disabled'] %}disabled{% endif %}>
+    {{ form.mandatory }}
     {% include '@cookies/cookies-list.html.twig' with { cookiesList: cookies.mandatory_cookies } %}
 
     <h2>Performance cookies</h2>
-    <input type="checkbox" class="js-cookies-targeting-checkbox" id="performance" name="performance" {% if form.performance['#checked'] %}checked{% endif %} {% if form.performance['#attributes']['disabled'] %}disabled{% endif %}>
+    {{ form.performance }}
     {% include '@cookies/cookies-list.html.twig' with { cookiesList: cookies.performance_cookies } %}
 
     <h2>Targeting cookies</h2>
-    <input type="checkbox" class="js-cookies-targeting-checkbox" id="targeting" name="targeting" {% if form.targeting['#checked'] %}checked{% endif %} {% if form.targeting['#attributes']['disabled'] %}disabled{% endif %}>
+    {{ form.targeting }}
     {% include '@cookies/cookies-list.html.twig' with { cookiesList: cookies.targeting_cookies } %}
 
-    <button class="js-cookies-save-preferences">Save preferences</button>
+    {{ form.submit }}
 </div>

@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2020-03-27 11:11+0100\n"
-"PO-Revision-Date: 2020-03-27 11:11+0100\n"
+"POT-Creation-Date: 2020-04-03 10:56+0200\n"
+"PO-Revision-Date: 2020-04-03 10:56+0200\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -39687,6 +39687,12 @@ msgstr ""
 "%collection_label solo puede ser creado en el espacio de trabajo por "
 "defecto."
 
+msgid "a11y.skip_to.main"
+msgstr "Saltar al contenido principal."
+
+msgid "a11y.skip_to.footer"
+msgstr "Saltar al pie de página."
+
 msgid "cookies.accept"
 msgstr "Aceptar todas las cookies"
 
@@ -39771,4 +39777,10 @@ msgstr ""
 "experiencia en la página. Para habilitar o restringir las cookies "
 "activas o para obtener más información, haz click en <a "
 "href=\"@url\" target=\"_blank\">personalizar la configuración</a>."
+
+msgid "form.required_label_visible"
+msgstr "*"
+
+msgid "form.required_label_screen_reader"
+msgstr "(campo requerido)"
 

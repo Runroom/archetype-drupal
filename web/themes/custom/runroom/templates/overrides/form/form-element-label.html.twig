@@ -1,0 +1,17 @@
+{% set classes = [
+    title_display == 'after' ? 'option',
+    title_display == 'invisible' ? 'visually-hidden',
+    required ? 'js-form-required',
+    required ? 'form-required',
+] %}
+
+{% if title is not empty or required -%}
+    <label{{ attributes.addClass(classes) }}>
+        {{ title }}
+
+        {% if required and title_display != 'after' %}
+            <span aria-hidden="true">{{ 'form.required_label_visible'|trans }}</span>
+            <span class="u-sr-only">{{ 'form.required_label_screen_reader'|trans }}</span>
+        {% endif %}
+    </label>
+{%- endif %}

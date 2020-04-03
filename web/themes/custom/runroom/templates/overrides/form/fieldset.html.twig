@@ -1,0 +1,34 @@
+{% set classes = [
+    'form__field',
+    'js-form-item',
+    'form-item',
+    'js-form-wrapper',
+    'form-wrapper',
+] %}
+
+<fieldset{{ attributes.addClass(classes) }}>
+    {% set legend_span_classes = [
+        'fieldset-legend',
+        required ? 'js-form-required',
+        required ? 'form-required',
+    ] %}
+
+    <legend{{ legend_span.attributes.addClass(legend_span_classes) }}>
+        {{ legend.title }}
+
+        {% if required %}
+            <span aria-hidden="true">{{ 'form.required_label_visible'|trans }}</span>
+            <span class="u-sr-only">{{ 'form.required_label_screen_reader'|trans }}</span>
+        {% endif %}
+    </legend>
+
+    <div aria-labelledby="{{ attributes.id }}" role="radiogroup">
+        {{ children }}
+    </div>
+
+    {% if errors %}
+        <span class="form__message--invalid">
+            {{ errors }}
+        </span>
+    {% endif %}
+</fieldset>
