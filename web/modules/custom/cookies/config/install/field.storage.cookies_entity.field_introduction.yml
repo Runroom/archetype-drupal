@@ -2,6 +2,7 @@ langcode: es
 status: true
 dependencies:
   module:
+    - cookies
     - text
 id: cookies_entity.field_introduction
 field_name: field_introduction

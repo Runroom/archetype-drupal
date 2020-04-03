@@ -1,5 +1,5 @@
 {% set classes = [
-    'form__element',
+    label_display in ['after'] ? 'form__field--inline' : 'form__field',
     'js-form-item',
     'form-item',
     'js-form-type-' ~ type|clean_class,
@@ -11,6 +11,19 @@
 ] %}
 
 <div {{ attributes.addClass(classes) }}>
-    {{ label }}
+    {% if label_display in ['before', 'invisible'] %}
+        {{ label }}
+    {% endif %}
+
     {{ children }}
+
+    {% if label_display == 'after' %}
+        {{ label }}
+    {% endif %}
+
+    {% if errors %}
+        <span class="form__message--invalid">
+            {{ errors }}
+        </span>
+    {% endif %}
 </div>
