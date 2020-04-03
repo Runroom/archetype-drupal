@@ -11,5 +11,10 @@
         "multiline": true
       }
     ]
+  },
+  "globals": {
+    "jQuery": true,
+    "Drupal": true,
+    "drupalSettings": true
   }
 }

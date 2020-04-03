@@ -3,6 +3,7 @@ status: true
 dependencies:
   module:
     - content_translation
+    - cookies
 third_party_settings:
   content_translation:
     enabled: true

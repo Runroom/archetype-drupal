@@ -35,7 +35,7 @@ function cookies_page_attachments_alter(array &$page): void
     if (\Drupal::routeMatch()->getRouteName() === 'cookies.page') {
         $repository = \Drupal::service('cookies.repository.cookies_entity');
         $cookies = $repository->getCookiesPage();
-        $title = $cookies->get('field_title')->value ?: '';
+        $title = $cookies->label() ?: '';
         $description = $cookies->get('field_introduction')->value ?: '';
 
         $service = \Drupal::service('base_module.service.metadata');
