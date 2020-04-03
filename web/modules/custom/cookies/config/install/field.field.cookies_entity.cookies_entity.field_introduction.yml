@@ -5,6 +5,7 @@ dependencies:
     - field.storage.cookies_entity.field_introduction
   module:
     - allowed_formats
+    - cookies
     - text
 third_party_settings:
   allowed_formats:

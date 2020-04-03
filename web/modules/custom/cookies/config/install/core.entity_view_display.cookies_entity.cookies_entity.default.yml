@@ -3,8 +3,8 @@ status: true
 dependencies:
   config:
     - field.field.cookies_entity.cookies_entity.field_introduction
-    - field.field.cookies_entity.cookies_entity.field_title
   module:
+    - cookies
     - text
 id: cookies_entity.cookies_entity.default
 targetEntityType: cookies_entity
@@ -17,14 +17,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
-    region: content
-  field_title:
-    weight: -3
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
     region: content
   name:
     label: above

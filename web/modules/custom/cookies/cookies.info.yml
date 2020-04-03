@@ -3,10 +3,11 @@ type: module
 description: 'Cookies Module'
 core: 8.x
 dependencies:
-  - allowed_formats
-  - content_translation
-  - field
-  - language
-  - text
+    - allowed_formats
+    - content_translation
+    - field
+    - language
+    - text
 version: 8.x-1.0
 package: runroom
+core_incompatible: false
