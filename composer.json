@@ -67,6 +67,11 @@
             "web/themes/contrib/{$name}": [
                 "type:drupal-theme"
             ]
+        },
+        "patches": {
+            "drupal/twig_tweak": {
+                "Make image_style more powerful": "patches/image_style.patch"
+            }
         }
     },
     "autoload-dev": {

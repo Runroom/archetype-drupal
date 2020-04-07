@@ -13,6 +13,8 @@ regions:
 libraries-extend:
     toolbar/toolbar.menu:
         - runroom/toolbar.menu
+    clientside_validation_jquery/cv.jquery.validate:
+        - runroom/cv.jquery.validate
 libraries-override:
     system/base: false
     core/html5shiv: false
