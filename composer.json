@@ -45,7 +45,7 @@
     "require-dev": {
         "deployer/dist": "6.7.3",
         "drupal/devel": "2.1.0",
-        "drupal/devel_entity_updates": "2.0.0-rc1",
+        "drupal/devel_entity_updates": "2.0.0",
         "drupal/features": "3.8.0",
         "ergebnis/composer-normalize": "2.3.2",
         "friendsofphp/php-cs-fixer": "2.16.1",
