@@ -1,0 +1,113 @@
+diff --git a/src/TwigExtension.php b/src/TwigExtension.php
+index 5001459..7709abe 100644
+--- a/src/TwigExtension.php
++++ b/src/TwigExtension.php
+@@ -990,8 +990,22 @@ class TwigExtension extends \Twig_Extension {
+   /**
+    * Returns the URL of this image derivative for an original image path or URI.
+    *
+-   * @param string $path
+-   *   The path or URI to the original image.
++   * When field item list passed the URI from the first item will be used.
++   * In order to use the URI of specific item specify its delta explicitly using
++   * array notation.
++   * @code
++   *   {{ node.field_image|image_style('thumbnail') }}
++   *   {{ node.field_image[0]|image_style('thumbnail') }}
++   * @endcode
++   *
++   * Media fields are fully supported.
++   * @code
++   *   {{ node.field_media|image_style('thumbnail') }}
++   * @endcode
++   *
++   * @param string|object $input
++   *   Can be either the path or URI to the original image, or an object that
++   *   contains the URI.
+    * @param string $style
+    *   The image style.
+    *
+@@ -999,13 +1013,15 @@ class TwigExtension extends \Twig_Extension {
+    *   The absolute URL where a style image can be downloaded, suitable for use
+    *   in an <img> tag. Requesting the URL will cause the image to be created.
+    */
+-  public function imageStyle($path, $style) {
++  public function imageStyle($input, $style) {
+ 
+     if (!$image_style = ImageStyle::load($style)) {
+       trigger_error(sprintf('Could not load image style %s.', $style));
+       return;
+     }
+ 
++    $path = is_string($input) ? $input : self::getUrlFromEntity($input);
++
+     if (!$image_style->supportsUri($path)) {
+       trigger_error(sprintf('Could not apply image style %s.', $style));
+       return;
+@@ -1169,30 +1185,45 @@ class TwigExtension extends \Twig_Extension {
+    *   A URL that may be used to access the file.
+    */
+   public function fileUrl($input) {
+-    if (is_string($input)) {
+-      return file_url_transform_relative(file_create_url($input));
+-    }
++    $url = $input;
++
+     if ($input instanceof EntityReferenceFieldItemListInterface) {
+       $referenced_entities = $input->referencedEntities();
+       if (isset($referenced_entities[0])) {
+-        return self::getUrlFromEntity($referenced_entities[0]);
++        $url = self::getUrlFromEntity($referenced_entities[0]);
+       }
+     }
+     elseif ($input instanceof EntityReferenceItem) {
+-      return self::getUrlFromEntity($input->entity);
++      $url = self::getUrlFromEntity($input->entity);
++    }
++
++    if (is_string($url)) {
++      return file_url_transform_relative(file_create_url($url));
+     }
+   }
+ 
+   /**
+    * Extracts file URL form content entity.
+    *
+-   * @param object $entity
++   * @param object $input
+    *   Entity object that contains information about the file.
+    *
+    * @return string|null
+    *   A URL that may be used to access the file.
+    */
+-  private static function getUrlFromEntity($entity) {
++  private static function getUrlFromEntity($input) {
++    $entity = $input;
++
++    if ($input instanceof EntityReferenceFieldItemListInterface) {
++      $referenced_entities = $input->referencedEntities();
++      if (isset($referenced_entities[0])) {
++        $entity = $referenced_entities[0];
++      }
++    }
++    elseif ($input instanceof EntityReferenceItem) {
++      $entity = $input->entity;
++    }
++
+     if ($entity instanceof MediaInterface) {
+       $source = $entity->getSource();
+       $value = $source->getSourceFieldValue($entity);
+@@ -1200,11 +1231,11 @@ class TwigExtension extends \Twig_Extension {
+         return $value;
+       }
+       elseif ($file = File::load($value)) {
+-        return $file->createFileUrl();
++        return $file->getFileUri();
+       }
+     }
+     elseif ($entity instanceof FileInterface) {
+-      return $entity->createFileUrl();
++      return $entity->getFileUri();
+     }
+   }
+ 

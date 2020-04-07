@@ -5,7 +5,6 @@ global-styling:
             build/styles.css: { minified: true }
     js:
         build/app.js: { minified: true }
-        build/form.js: { minified: true }
         build/runtime.js: { minified: true }
 
 styleguide:
@@ -20,3 +19,12 @@ toolbar.menu:
         theme:
             /core/themes/stable/css/system/components/clearfix.module.css: {}
             /core/themes/stable/css/system/components/hidden.module.css: {}
+
+cv.jquery.validate:
+    version: VERSION
+    js:
+        /modules/contrib/clientside_validation/clientside_validation_jquery/js/cv.jquery.validate.js: {}
+        build/form.js: { minified: true }
+    dependencies:
+        - clientside_validation_jquery/jquery.validate
+        - global-styling

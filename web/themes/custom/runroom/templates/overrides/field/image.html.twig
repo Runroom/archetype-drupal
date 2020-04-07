@@ -1,1 +1,1 @@
-<img{{ attributes.addClass('lazyload') }} />
+<img data-src="{{ attributes.src }}" class="lazyload" {{ attributes|without('src', 'class') }} />
