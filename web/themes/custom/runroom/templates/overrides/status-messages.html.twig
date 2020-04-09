@@ -1,0 +1,14 @@
+{% from '@runroom/helpers/_macros.html.twig' import icon %}
+
+<div class="modal" data-drupal-messages>
+    {% for type, messages in message_list %}
+        <div class="modal__body" role="contentinfo" aria-label="{{ status_headings[type] }}">
+            <div class="modal__close">{{ icon('close') }}</div>
+            <ul>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+        </div>
+    {% endfor %}
+</div>

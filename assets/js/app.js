@@ -11,6 +11,7 @@ import './helpers/polyfills';
 // we recommend to use module import method and import it as needed.
 import cookies from './components/cookies';
 import lazyLoadImages from './components/lazyLoadImages';
+import modal from './components/modal';
 
 touchable();
 lazyLoadImages();
@@ -20,6 +21,7 @@ document.documentElement.classList.remove('no-js');
 
 events.onDocumentReady(() => {
   cookies();
+  modal();
 
   // For small projects or low use of javascript, you can add events in this
   // same file, as follows. Eventhough the module import method is preferred.

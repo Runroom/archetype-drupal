@@ -27,4 +27,4 @@ cv.jquery.validate:
         build/form.js: { minified: true }
     dependencies:
         - clientside_validation_jquery/jquery.validate
-        - global-styling
+        - runroom/global-styling
