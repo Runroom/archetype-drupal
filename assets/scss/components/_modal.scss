@@ -1,0 +1,52 @@
+.modal {
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 4;
+
+    &::before {
+        background: rgba(0, 0, 0, .5);
+        content: "";
+        display: block;
+        height: 100vh;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        z-index: 5;
+    }
+
+    &__body {
+        background: $c-neutro100;
+        border-radius: get-rems(4px);
+        height: auto;
+        left: 50%;
+        max-width: space(48.5);
+        padding: space(3.5) space();
+        position: fixed;
+        text-align: center;
+        top: 25vh;
+        transform: translateX(-50%);
+        width: 90%;
+        z-index: 6;
+
+        @include breakpoint($s768) {
+            max-height: 50vh;
+            padding: space(3.5);
+        }
+    }
+
+    &__close {
+        cursor: pointer;
+        display: inline-flex;
+        position: absolute;
+        right: space();
+        top: space();
+
+        svg {
+            @include square(11px);
+        }
+    }
+}
