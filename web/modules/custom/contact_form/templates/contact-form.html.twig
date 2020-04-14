@@ -1,0 +1,13 @@
+{{ form.name }}
+{{ form.email }}
+{{ form.phone }}
+{{ form.subject }}
+{{ form.other_subject }}
+{{ form.type }}
+{{ form.preferences }}
+{{ form.comment }}
+{{ form.newsletter }}
+{{ form.privacy_policy }}
+{{ form.submit }}
+
+{{ form|without('name', 'email', 'phone', 'subject', 'other_subject', 'type', 'preferences', 'comment', 'newsletter', 'privacy_policy', 'submit') }}

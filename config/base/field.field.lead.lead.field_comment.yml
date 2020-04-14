@@ -1,0 +1,22 @@
+uuid: 27d5bec7-90c9-42da-bca9-615a73cce2df
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.lead.field_comment
+  module:
+    - contact_form
+_core:
+  default_config_hash: 4qWXHUK8MndIyd__Itaf3l2Zu4XpvuZAhkgW901EM5Y
+id: lead.lead.field_comment
+field_name: field_comment
+entity_type: lead
+bundle: lead
+label: Comentario
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

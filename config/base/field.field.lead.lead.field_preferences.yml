@@ -1,0 +1,21 @@
+uuid: ae1bdb0a-ee84-4d6f-a95e-6145cbb98f08
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.lead.field_preferences
+  module:
+    - contact_form
+    - options
+id: lead.lead.field_preferences
+field_name: field_preferences
+entity_type: lead
+bundle: lead
+label: Preferencias
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

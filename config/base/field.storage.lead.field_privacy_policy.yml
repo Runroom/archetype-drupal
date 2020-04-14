@@ -1,0 +1,20 @@
+uuid: e0900701-71f9-458e-a1bc-3be809eaeaee
+langcode: es
+status: true
+dependencies:
+  module:
+    - contact_form
+_core:
+  default_config_hash: dxUOo7haPe2QKpkoP6TQQq17_M0T5IU4LVEaxiPik9g
+id: lead.field_privacy_policy
+field_name: field_privacy_policy
+entity_type: lead
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

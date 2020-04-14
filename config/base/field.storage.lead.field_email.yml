@@ -1,0 +1,20 @@
+uuid: 4b5c265d-35ae-4fc7-ac06-a9a59d663de9
+langcode: es
+status: true
+dependencies:
+  module:
+    - contact_form
+_core:
+  default_config_hash: IiRkBBxOIPraMwdDoaju1dw3Un6kYwwjm5cS8XpymIk
+id: lead.field_email
+field_name: field_email
+entity_type: lead
+type: email
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

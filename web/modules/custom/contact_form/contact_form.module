@@ -1,0 +1,33 @@
+<?php
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+function contact_form_help(string $routeName, RouteMatchInterface $routeMatch): ?string
+{
+    switch ($routeName) {
+        case 'help.page.contact_form':
+            $output = '';
+            $output .= '<h3>' . t('About') . '</h3>';
+            $output .= '<p>' . t('Contact Form') . '</p>';
+
+            return $output;
+        default:
+    }
+
+    return null;
+}
+
+function contact_form_theme(): array
+{
+    return [
+        'contact_form' => [
+            'render element' => 'form',
+        ],
+        'contact_form_errors' => [
+            'variables' => [
+                'message_list' => null,
+            ],
+        ],
+        'contact_form_ok' => [],
+    ];
+}

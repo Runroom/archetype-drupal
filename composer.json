@@ -21,6 +21,7 @@
         "drupal/config_split": "1.4.0",
         "drupal/console": "1.9.3",
         "drupal/core": "8.8.5",
+        "drupal/date_popup": "1.0.0",
         "drupal/drush_language": "1.0.0-rc2",
         "drupal/editor_advanced_link": "1.6.0",
         "drupal/entity_reference_revisions": "1.8.0",
@@ -35,8 +36,11 @@
         "drupal/redirect": "1.5.0",
         "drupal/twig_field_value": "1.2.0",
         "drupal/twig_tweak": "2.5.0",
+        "drupal/vbo_export": "3.1.0",
+        "drupal/views_bulk_operations": "3.6.0",
         "drupal/xmlsitemap": "1.0.0-rc1",
-        "drush/drush": "10.2.2"
+        "drush/drush": "10.2.2",
+        "twig/twig": "1.42.5"
     },
     "conflict": {
         "drupal/console": "1.9.4",
@@ -69,6 +73,9 @@
             ]
         },
         "patches": {
+            "drupal/core": {
+                "FAPI #radios form elements do not have an accessible required attribute - 2951317": "https://www.drupal.org/files/issues/2019-04-19/2951317_29.patch"
+            },
             "drupal/twig_tweak": {
                 "Make image_style more powerful": "patches/image_style.patch"
             }

@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2020-04-03 10:56+0200\n"
-"PO-Revision-Date: 2020-04-03 10:56+0200\n"
+"POT-Creation-Date: 2020-04-20 16:25+0200\n"
+"PO-Revision-Date: 2020-04-20 16:25+0200\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -39783,4 +39783,9 @@ msgstr "*"
 
 msgid "form.required_label_screen_reader"
 msgstr "(campo requerido)"
+
+msgid "contact_form.privacy_policy"
+msgstr ""
+"Acepto la <a href=\"@link\" target=\"_blank\">política de "
+"privacidad</a>"
 

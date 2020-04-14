@@ -1,0 +1,21 @@
+uuid: 13f25589-db3f-4973-898b-2d372235bcd9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.lead.field_subject
+  module:
+    - contact_form
+    - options
+id: lead.lead.field_subject
+field_name: field_subject
+entity_type: lead
+bundle: lead
+label: Asunto
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

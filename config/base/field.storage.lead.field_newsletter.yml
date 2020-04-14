@@ -1,0 +1,18 @@
+uuid: 1c8473d1-c14b-497e-a53a-1adb7c078d55
+langcode: es
+status: true
+dependencies:
+  module:
+    - contact_form
+id: lead.field_newsletter
+field_name: field_newsletter
+entity_type: lead
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

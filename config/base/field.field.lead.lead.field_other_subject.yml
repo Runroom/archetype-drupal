@@ -1,0 +1,20 @@
+uuid: c7ac8736-2917-4781-a550-2d40f029887b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.lead.field_other_subject
+  module:
+    - contact_form
+id: lead.lead.field_other_subject
+field_name: field_other_subject
+entity_type: lead
+bundle: lead
+label: 'Otro asunto'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

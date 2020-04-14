@@ -1,0 +1,23 @@
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.lead.field_privacy_policy
+  module:
+    - contact_form
+id: lead.lead.field_privacy_policy
+field_name: field_privacy_policy
+entity_type: lead
+bundle: lead
+label: 'Política de privacidad'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Aceptada
+  off_label: 'No Aceptada'
+field_type: boolean
