@@ -33,7 +33,7 @@
         "drupal/paragraphs": "1.11.0",
         "drupal/pathauto": "1.6.0",
         "drupal/redirect": "1.5.0",
-        "drupal/twig_field_value": "1.2.0",
+        "drupal/twig_field_value": "2.0.0",
         "drupal/twig_tweak": "2.5.0",
         "drupal/xmlsitemap": "1.0.0-rc1",
         "drush/drush": "10.2.2"
