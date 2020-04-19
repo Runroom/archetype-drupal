@@ -50,7 +50,7 @@
         "ergebnis/composer-normalize": "2.3.2",
         "friendsofphp/php-cs-fixer": "2.16.3",
         "mglaman/phpstan-drupal": "0.12.3",
-        "phpstan/phpstan": "0.12.18",
+        "phpstan/phpstan": "0.12.19",
         "phpunit/phpunit": "9.1.1"
     },
     "config": {
