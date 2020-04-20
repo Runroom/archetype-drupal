@@ -14,7 +14,7 @@ Encore.setOutputPath('web/themes/custom/runroom/build/')
   .enableSourceMaps(!Encore.isProduction())
   .enableVersioning(false)
   .enableSassLoader()
-  .enableEslintLoader({ configFile: './.eslintrc' })
+  .enableEslintLoader()
   .addExternals({
     jQuery: 'jQuery',
     Drupal: 'Drupal',
