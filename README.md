@@ -63,3 +63,4 @@ to contribute to the Archetype and its related projects.
 - [Deployment](doc/Deployment.md)
 - [Docker](doc/Docker.md)
 - [Drupal](doc/Drupal.md)
+- [MailHog](doc/MailHog.md)
