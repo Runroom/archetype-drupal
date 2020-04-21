@@ -1,0 +1,20 @@
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.lead.field_phone
+  module:
+    - contact_form
+    - telephone
+id: lead.lead.field_phone
+field_name: field_phone
+entity_type: lead
+bundle: lead
+label: Teléfono
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

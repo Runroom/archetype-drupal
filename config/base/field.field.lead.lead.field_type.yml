@@ -1,0 +1,21 @@
+uuid: 512a8d94-4d4e-4a1d-9086-cf4ce7dd442c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.lead.field_type
+  module:
+    - contact_form
+    - options
+id: lead.lead.field_type
+field_name: field_type
+entity_type: lead
+bundle: lead
+label: Tipo
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

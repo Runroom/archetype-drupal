@@ -1,0 +1,14 @@
+name: 'Contact Form'
+type: module
+description: 'Contact Form'
+core: 8.x
+package: runroom
+core_incompatible: false
+dependencies:
+    - field
+    - options
+    - telephone
+    - user
+    - views
+    - views_bulk_operations
+version: 8.x-1.0

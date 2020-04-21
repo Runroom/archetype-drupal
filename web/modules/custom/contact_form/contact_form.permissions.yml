@@ -1,0 +1,19 @@
+add lead entities:
+    title: 'Create new Lead entities'
+
+administer lead entities:
+    title: 'Administer Lead entities'
+    description: 'Allow to access the administration form to configure Lead entities.'
+    restrict access: true
+
+delete lead entities:
+    title: 'Delete Lead entities'
+
+edit lead entities:
+    title: 'Edit Lead entities'
+
+view published lead entities:
+    title: 'View published Lead entities'
+
+view unpublished lead entities:
+    title: 'View unpublished Lead entities'

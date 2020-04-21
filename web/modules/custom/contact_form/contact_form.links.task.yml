@@ -1,0 +1,20 @@
+lead.settings_tab:
+    route_name: lead.settings
+    title: 'Settings'
+    base_route: lead.settings
+
+entity.lead.canonical:
+    route_name: entity.lead.canonical
+    base_route: entity.lead.canonical
+    title: 'View'
+
+entity.lead.edit_form:
+    route_name: entity.lead.edit_form
+    base_route: entity.lead.canonical
+    title: 'Edit'
+
+entity.lead.delete_form:
+    route_name:  entity.lead.delete_form
+    base_route:  entity.lead.canonical
+    title: Delete
+    weight: 10

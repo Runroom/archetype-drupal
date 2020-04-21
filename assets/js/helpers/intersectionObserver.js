@@ -1,3 +1,5 @@
+import forEach from '@runroom/purejs/lib/forEach';
+
 const defaults = {
   root: null,
   rootMargin: '50px 0px',
@@ -10,18 +12,17 @@ const intersectionObserver = (config, callback) => {
 
   if ('IntersectionObserver' in window) {
     observer = new IntersectionObserver((changes, obs) => {
-      changes.forEach(change => {
+      forEach(changes, change => {
         if (change.intersectionRatio > 0) {
           callback(change.target);
           obs.unobserve(change.target);
         }
       });
     }, { ...defaults, ...config.observer });
-    elements.forEach(element => observer.observe(element));
+
+    forEach(elements, element => observer.observe(element));
   } else {
-    elements.forEach(element => {
-      callback(element);
-    });
+    forEach(elements, element => callback(element));
   }
 };
 
