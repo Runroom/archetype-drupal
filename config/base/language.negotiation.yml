@@ -4,7 +4,7 @@ url:
   source: path_prefix
   prefixes:
     en: en
-    es: es
+    es: ''
   domains:
     en: ''
     es: ''

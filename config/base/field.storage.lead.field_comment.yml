@@ -1,0 +1,21 @@
+uuid: 52fe9446-9257-47f3-a7dc-1b44577043cb
+langcode: es
+status: true
+dependencies:
+  module:
+    - contact_form
+_core:
+  default_config_hash: YEc2o65qO-Qyw12mov4oGRLzw3jnyh4_EAy1p4lVoAQ
+id: lead.field_comment
+field_name: field_comment
+entity_type: lead
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

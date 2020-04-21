@@ -1,0 +1,101 @@
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.lead.lead.field_comment
+    - field.field.lead.lead.field_email
+    - field.field.lead.lead.field_newsletter
+    - field.field.lead.lead.field_other_subject
+    - field.field.lead.lead.field_phone
+    - field.field.lead.lead.field_preferences
+    - field.field.lead.lead.field_privacy_policy
+    - field.field.lead.lead.field_subject
+    - field.field.lead.lead.field_type
+  module:
+    - contact_form
+    - options
+id: lead.lead.default
+targetEntityType: lead
+bundle: lead
+mode: default
+content:
+  field_comment:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_email:
+    weight: -2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_newsletter:
+    weight: 8
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_other_subject:
+    weight: 7
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_phone:
+    weight: 9
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_preferences:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_privacy_policy:
+    weight: 0
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_subject:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_type:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  name:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  langcode: true

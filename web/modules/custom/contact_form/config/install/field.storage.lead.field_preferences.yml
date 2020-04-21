@@ -1,0 +1,32 @@
+langcode: es
+status: true
+dependencies:
+  module:
+    - contact_form
+    - options
+id: lead.field_preferences
+field_name: field_preferences
+entity_type: lead
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: design
+      label: Diseño
+    -
+      value: backend
+      label: Backend
+    -
+      value: frontend
+      label: Frontend
+    -
+      value: marketing
+      label: Marketing
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

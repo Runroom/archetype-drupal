@@ -1,0 +1,19 @@
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.lead.field_comment
+  module:
+    - contact_form
+id: lead.lead.field_comment
+field_name: field_comment
+entity_type: lead
+bundle: lead
+label: Comentario
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

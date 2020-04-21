@@ -1,0 +1,26 @@
+langcode: es
+status: true
+dependencies:
+  module:
+    - contact_form
+    - options
+id: lead.field_subject
+field_name: field_subject
+entity_type: lead
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: general
+      label: General
+    -
+      value: specific
+      label: Específico
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

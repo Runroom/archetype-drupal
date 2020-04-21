@@ -1,0 +1,22 @@
+uuid: 8f3d6791-7c51-42fa-8d31-b26c0ad0177e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.lead.field_email
+  module:
+    - contact_form
+_core:
+  default_config_hash: yJyEL3kyDWz7egr8e90QJ1jZ72wnkJWw43swNdqNAHk
+id: lead.lead.field_email
+field_name: field_email
+entity_type: lead
+bundle: lead
+label: Email
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

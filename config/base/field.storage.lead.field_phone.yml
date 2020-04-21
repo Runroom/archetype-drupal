@@ -1,0 +1,19 @@
+uuid: 3e4a8f54-9257-4dcf-abb2-e332c7ac83d5
+langcode: es
+status: true
+dependencies:
+  module:
+    - contact_form
+    - telephone
+id: lead.field_phone
+field_name: field_phone
+entity_type: lead
+type: telephone
+settings: {  }
+module: telephone
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
