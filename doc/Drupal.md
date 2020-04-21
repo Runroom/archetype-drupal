@@ -5,13 +5,13 @@
 In order to do a database dump, execute this line with the desired alias depending on the site:
 
 ```
-drush sql-dump > ansible/drupal.sql
+drush sql-dump > docker/drupal.sql
 ```
 
 How to import the dump.sql file?
 
 ```
-drush sql-cli < ansible/drupal.sql
+drush sql-cli < docker/drupal.sql
 ```
 
 ## Drupal Console & Drush

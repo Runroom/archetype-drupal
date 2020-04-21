@@ -29,11 +29,11 @@ composer-install:
 database:
 	./docker-console drush sql:drop -y
 	./docker-console drush sql:create -y
-	./docker-console drush sql:cli -y < ../ansible/drupal.sql
+	./docker-console drush sql:cli -y < drupal.sql
 
 update:
 	./docker-console drush config:export -y
-	./docker-console drush sql:dump >| ../ansible/drupal.sql
+	./docker-console drush sql:dump >| drupal.sql
 
 provision: composer-install database
 	./docker-console drupal deploy
