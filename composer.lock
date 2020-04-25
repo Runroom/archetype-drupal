@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ec597d5be197884fcaacd321c7fb1c0c",
+    "content-hash": "32ef4fde4274c784a0cd5a8772e513f9",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3827,9 +3827,6 @@
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-2.x": "2.x-dev"
-                },
                 "drupal": {
                     "version": "8.x-2.5",
                     "datestamp": "1583937566",
@@ -3931,12 +3928,9 @@
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-3.x": "3.x-dev"
-                },
                 "drupal": {
                     "version": "8.x-3.6",
-                    "datestamp": "1583133812",
+                    "datestamp": "1583133990",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -8036,16 +8030,16 @@
         },
         {
             "name": "deployer/dist",
-            "version": "v6.7.3",
+            "version": "v6.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/deployphp/distribution.git",
-                "reference": "a1f14ef4ef38d44667e8ade96490e49d4ca0d402"
+                "reference": "857158fa5466d5135ce87f07fe67779b6b6a13d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/deployphp/distribution/zipball/a1f14ef4ef38d44667e8ade96490e49d4ca0d402",
-                "reference": "a1f14ef4ef38d44667e8ade96490e49d4ca0d402",
+                "url": "https://api.github.com/repos/deployphp/distribution/zipball/857158fa5466d5135ce87f07fe67779b6b6a13d2",
+                "reference": "857158fa5466d5135ce87f07fe67779b6b6a13d2",
                 "shasum": ""
             },
             "bin": [
@@ -8064,7 +8058,7 @@
             ],
             "description": "Deployer Phar Distribution",
             "homepage": "https://deployer.org",
-            "time": "2019-12-18T17:34:50+00:00"
+            "time": "2020-04-25T18:48:50+00:00"
         },
         {
             "name": "doctrine/instantiator",
