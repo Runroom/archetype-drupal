@@ -47,7 +47,7 @@
         "drupal/drupal": "*"
     },
     "require-dev": {
-        "deployer/dist": "6.7.3",
+        "deployer/dist": "6.8.0",
         "drupal/devel": "2.1.0",
         "drupal/devel_entity_updates": "2.0.0",
         "drupal/features": "3.8.0",
