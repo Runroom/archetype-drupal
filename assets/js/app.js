@@ -13,11 +13,13 @@ import cookies from './components/cookies';
 import lazyLoadImages from './components/lazyLoadImages';
 import modal from './components/modal';
 
-touchable();
 lazyLoadImages();
 
 if (isExplorer()) document.documentElement.classList.add('browser-ie');
 document.documentElement.classList.remove('no-js');
+
+const isTouchable = touchable();
+document.documentElement.classList.add(isTouchable ? 'touch' : 'non-touch');
 
 events.onDocumentReady(() => {
   cookies();
