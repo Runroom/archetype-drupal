@@ -6,7 +6,7 @@ Encore.setOutputPath('web/themes/custom/runroom/build/')
   .copyFiles([
     { from: './assets/img', to: 'img/[name].[ext]', pattern: /\.(png|jpg|jpeg|gif|ico)$/ },
     { from: './assets/img', to: 'svg/[name].svg', pattern: /\.svg$/ },
-    { from: './assets/fonts', to: 'fonts/[name].[ext]', pattern: /\.(woff|woff2)$/ },
+    { from: './assets/fonts', to: 'fonts/[name].[ext]', pattern: /\.(woff|woff2)$/ }
   ])
   .enableSingleRuntimeChunk()
   .cleanupOutputBeforeBuild()
