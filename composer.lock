@@ -7232,16 +7232,16 @@
         },
         {
             "name": "symfony/translation",
-            "version": "v3.4.39",
+            "version": "v3.4.40",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "e06ca83b2682eba25854b97a8a9af22c1da491f5"
+                "reference": "4e844362f573713e6d45949795c95a4cb6cf760d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/e06ca83b2682eba25854b97a8a9af22c1da491f5",
-                "reference": "e06ca83b2682eba25854b97a8a9af22c1da491f5",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/4e844362f573713e6d45949795c95a4cb6cf760d",
+                "reference": "4e844362f573713e6d45949795c95a4cb6cf760d",
                 "shasum": ""
             },
             "require": {
@@ -7298,7 +7298,7 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
-            "time": "2020-03-16T08:31:04+00:00"
+            "time": "2020-04-12T16:39:58+00:00"
         },
         {
             "name": "symfony/validator",
