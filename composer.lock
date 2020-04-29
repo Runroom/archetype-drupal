@@ -6140,7 +6140,7 @@
         },
         {
             "name": "symfony/dom-crawler",
-            "version": "v3.4.39",
+            "version": "v3.4.40",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dom-crawler.git",
