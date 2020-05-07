@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "964494a83646dcf6efead998494e7133",
+    "content-hash": "7f80d65abd162d84a94503de7332b2d8",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2289,9 +2289,6 @@
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
                 "drupal": {
                     "version": "8.x-1.4",
                     "datestamp": "1537971780",
@@ -2988,9 +2985,6 @@
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
                 "drupal": {
                     "version": "8.x-1.0-rc2",
                     "datestamp": "1523365384",
@@ -3011,12 +3005,12 @@
             ],
             "authors": [
                 {
-                    "name": "axel.rutz",
-                    "homepage": "https://www.drupal.org/user/229048"
-                },
-                {
                     "name": "dawehner",
                     "homepage": "https://www.drupal.org/user/99340"
+                },
+                {
+                    "name": "geek-merlin",
+                    "homepage": "https://www.drupal.org/user/229048"
                 },
                 {
                     "name": "gurvan",
@@ -3043,29 +3037,26 @@
         },
         {
             "name": "drupal/editor_advanced_link",
-            "version": "1.6.0",
+            "version": "1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/editor_advanced_link.git",
-                "reference": "8.x-1.6"
+                "reference": "8.x-1.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/editor_advanced_link-8.x-1.6.zip",
-                "reference": "8.x-1.6",
-                "shasum": "920f22fd7841bc1c77b56c6ae51436319b47636e"
+                "url": "https://ftp.drupal.org/files/projects/editor_advanced_link-8.x-1.7.zip",
+                "reference": "8.x-1.7",
+                "shasum": "5d4b74d98ca3970840d0808ad05eea25d4a00259"
             },
             "require": {
-                "drupal/core": "*"
+                "drupal/core": "^8 || ^9"
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-1.6",
-                    "datestamp": "1577188383",
+                    "version": "8.x-1.7",
+                    "datestamp": "1588153187",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3528,9 +3519,6 @@
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
                 "drupal": {
                     "version": "8.x-1.11",
                     "datestamp": "1581850829",
@@ -4009,9 +3997,6 @@
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
                 "drupal": {
                     "version": "8.x-1.0-rc1",
                     "datestamp": "1576705928",
@@ -5502,16 +5487,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.10.3",
+            "version": "v0.10.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "2bde2fa03e05dff0aee834598b951d6fc7c6fe02"
+                "reference": "a8aec1b2981ab66882a01cce36a49b6317dc3560"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/2bde2fa03e05dff0aee834598b951d6fc7c6fe02",
-                "reference": "2bde2fa03e05dff0aee834598b951d6fc7c6fe02",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/a8aec1b2981ab66882a01cce36a49b6317dc3560",
+                "reference": "a8aec1b2981ab66882a01cce36a49b6317dc3560",
                 "shasum": ""
             },
             "require": {
@@ -5570,7 +5555,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2020-04-07T06:44:48+00:00"
+            "time": "2020-05-03T19:32:03+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -8401,16 +8386,16 @@
         },
         {
             "name": "ergebnis/composer-normalize",
-            "version": "2.4.0",
+            "version": "2.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ergebnis/composer-normalize.git",
-                "reference": "6129311c1738bd45a06ed7c3773b631d75336f93"
+                "reference": "d0faf549e565757a7ffbf1f306a4293080e43bdd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ergebnis/composer-normalize/zipball/6129311c1738bd45a06ed7c3773b631d75336f93",
-                "reference": "6129311c1738bd45a06ed7c3773b631d75336f93",
+                "url": "https://api.github.com/repos/ergebnis/composer-normalize/zipball/d0faf549e565757a7ffbf1f306a4293080e43bdd",
+                "reference": "d0faf549e565757a7ffbf1f306a4293080e43bdd",
                 "shasum": ""
             },
             "require": {
@@ -8421,10 +8406,8 @@
                 "php": "^7.1"
             },
             "require-dev": {
-                "composer/composer": "^1.10.5",
+                "composer/composer": "^1.10.5 || ^2.0.0",
                 "composer/package-versions-deprecated": "^1.8.0",
-                "ergebnis/license": "~0.1.0",
-                "ergebnis/php-cs-fixer-config": "^2.1.2",
                 "ergebnis/phpstan-rules": "~0.14.4",
                 "ergebnis/test-util": "~1.0.0",
                 "jangregor/phpstan-prophecy": "~0.6.2",
@@ -8434,9 +8417,7 @@
                 "phpstan/phpstan-phpunit": "~0.12.8",
                 "phpstan/phpstan-strict-rules": "~0.12.2",
                 "phpunit/phpunit": "^7.5.20",
-                "psalm/plugin-phpunit": "~0.10.0",
-                "symfony/filesystem": "^4.4.7",
-                "vimeo/psalm": "^3.11.2"
+                "symfony/filesystem": "^4.4.8"
             },
             "type": "composer-plugin",
             "extra": {
@@ -8465,7 +8446,7 @@
                 "normalizer",
                 "plugin"
             ],
-            "time": "2020-04-26T18:11:30+00:00"
+            "time": "2020-05-01T12:02:09+00:00"
         },
         {
             "name": "ergebnis/json-normalizer",
@@ -9425,16 +9406,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "0.12.19",
+            "version": "0.12.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "054f6d76b12ba9a6c13a5a8d5fcdf51219615f4d"
+                "reference": "71e529efced79e055fa8318b692e7f7d03ea4e75"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/054f6d76b12ba9a6c13a5a8d5fcdf51219615f4d",
-                "reference": "054f6d76b12ba9a6c13a5a8d5fcdf51219615f4d",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/71e529efced79e055fa8318b692e7f7d03ea4e75",
+                "reference": "71e529efced79e055fa8318b692e7f7d03ea4e75",
                 "shasum": ""
             },
             "require": {
@@ -9463,7 +9444,7 @@
                 "MIT"
             ],
             "description": "PHPStan - PHP Static Analysis Tool",
-            "time": "2020-04-19T20:35:10+00:00"
+            "time": "2020-05-05T12:55:44+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -9729,16 +9710,16 @@
         },
         {
             "name": "phpunit/php-token-stream",
-            "version": "4.0.0",
+            "version": "4.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-token-stream.git",
-                "reference": "b2560a0c33f7710e4d7f8780964193e8e8f8effe"
+                "reference": "cdc0db5aed8fbfaf475fbd95bfd7bab83c7a779c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/b2560a0c33f7710e4d7f8780964193e8e8f8effe",
-                "reference": "b2560a0c33f7710e4d7f8780964193e8e8f8effe",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/cdc0db5aed8fbfaf475fbd95bfd7bab83c7a779c",
+                "reference": "cdc0db5aed8fbfaf475fbd95bfd7bab83c7a779c",
                 "shasum": ""
             },
             "require": {
@@ -9774,20 +9755,20 @@
             "keywords": [
                 "tokenizer"
             ],
-            "time": "2020-02-07T06:19:00+00:00"
+            "time": "2020-05-06T09:56:31+00:00"
         },
         {
             "name": "phpunit/phpunit",
-            "version": "9.1.3",
+            "version": "9.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "a74780472172957a65cb5999a597e8c0878cf39c"
+                "reference": "2d7080c622cf7884992e7c3cf87853877bae8ff4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/a74780472172957a65cb5999a597e8c0878cf39c",
-                "reference": "a74780472172957a65cb5999a597e8c0878cf39c",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/2d7080c622cf7884992e7c3cf87853877bae8ff4",
+                "reference": "2d7080c622cf7884992e7c3cf87853877bae8ff4",
                 "shasum": ""
             },
             "require": {
@@ -9808,7 +9789,7 @@
                 "phpunit/php-invoker": "^3.0",
                 "phpunit/php-text-template": "^2.0",
                 "phpunit/php-timer": "^3.1.4",
-                "sebastian/code-unit": "^1.0",
+                "sebastian/code-unit": "^1.0.2",
                 "sebastian/comparator": "^4.0",
                 "sebastian/diff": "^4.0",
                 "sebastian/environment": "^5.0.1",
@@ -9862,20 +9843,20 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2020-04-23T04:42:05+00:00"
+            "time": "2020-04-30T06:32:53+00:00"
         },
         {
             "name": "sebastian/code-unit",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/code-unit.git",
-                "reference": "00d2094a93573796ec6666401be467fa6efcd86a"
+                "reference": "ac958085bc19fcd1d36425c781ef4cbb5b06e2a5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/code-unit/zipball/00d2094a93573796ec6666401be467fa6efcd86a",
-                "reference": "00d2094a93573796ec6666401be467fa6efcd86a",
+                "url": "https://api.github.com/repos/sebastianbergmann/code-unit/zipball/ac958085bc19fcd1d36425c781ef4cbb5b06e2a5",
+                "reference": "ac958085bc19fcd1d36425c781ef4cbb5b06e2a5",
                 "shasum": ""
             },
             "require": {
@@ -9908,7 +9889,7 @@
             ],
             "description": "Collection of value objects that represent the PHP code units",
             "homepage": "https://github.com/sebastianbergmann/code-unit",
-            "time": "2020-04-27T06:25:01+00:00"
+            "time": "2020-04-30T05:58:10+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",

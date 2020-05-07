@@ -1,12 +1,23 @@
 UNAME := $(shell uname)
 
-# Docker
-certs:
-	mkdir -p ../.certs
-	mkcert -install
-	mkcert -cert-file ../.certs/certificate.pem -key-file ../.certs/certificate-key.pem localhost
+CERTS_DIR = ../.certs
+AUTOLOAD = ../vendor/autoload.php
 
-up: certs
+.PHONY: up certs compose halt destroy build composer-install database update provision phpunit \
+		phpunit-coverage composer-normalize phpstan php-cs-fixer
+
+# Docker
+up: compose $(AUTOLOAD)
+
+$(CERTS_DIR):
+	$(MAKE) certs
+
+certs:
+	mkdir -p $(CERTS_DIR)
+	mkcert -install
+	mkcert -cert-file $(CERTS_DIR)/certificate.pem -key-file $(CERTS_DIR)/certificate-key.pem localhost
+
+compose: $(CERTS_DIR)
 ifeq ($(UNAME), Darwin)
 	SSH_AUTH_SOCK=/run/host-services/ssh-auth.sock docker-compose -f docker-compose.yaml -f docker-compose-dev.yaml up -d
 else
@@ -23,6 +34,9 @@ build: halt
 	docker-compose build
 
 # App
+$(AUTOLOAD):
+	$(MAKE) provision
+
 composer-install:
 	./docker-console composer install --optimize-autoloader
 
