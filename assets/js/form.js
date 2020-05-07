@@ -3,10 +3,10 @@ jQuery(document).on('cv-jquery-validate-options-update', (event, jQueryValidateS
   jQueryValidateSettings.errorClass = 'form__message--invalid';
   jQueryValidateSettings.errorPlacement = (error, element) => {
     if (element.attr('type') === 'radio') {
-      element = jQuery(element).parent().parent();
+      element = element.parent();
     }
 
-    jQuery(element).before(error);
+    element.parent().append(error);
   };
   jQueryValidateSettings.highlight = (element, errorClass, validClass) => {
     element.classList.add('form__state--invalid');

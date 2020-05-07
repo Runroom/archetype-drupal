@@ -45,3 +45,24 @@ drush rsync @drupal.development:%files @local.local:%files
 ```
 
 Note that you can not import directly between servers, you have to import to local and then import to the other server instead.
+
+## Migrating from Drupal Console to Drush
+
+If you are using Drupal Console to do config:import and you are avoiding uuids, then you might need this code in order to do a migration from Drupal Console to Drush (and from not setting uuids to setting them):
+
+    use Symfony\Component\Yaml\Yaml;
+    use Symfony\Component\Finder\Finder;
+
+    $finder = new Finder();
+    $finder->files()->in(__DIR__ . '/../../config/base/')->name('*.yml');
+
+    foreach ($finder as $configFile) {
+        $contents = Yaml::parseFile($configFile->getPathName());
+
+        if (isset($contents['uuid'])) {
+            $filename = pathinfo($configFile->getFilename(), PATHINFO_FILENAME);
+            $configFactory->getEditable($filename)->set('uuid', $contents['uuid'])->save();
+        }
+    }
+
+You will need to use this code on `PreConfigImportCommand.php` in order to avoid problems on the FIRST deploy using uuids. Once the first deploy is complete, you don't have to keep the code, it can be safely removed.
