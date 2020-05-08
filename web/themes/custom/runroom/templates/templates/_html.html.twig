@@ -5,14 +5,13 @@
         <head-placeholder token="{{ placeholder_token|raw }}">
         <title>{{ head_title|safe_join(' | ') }}</title>
 
-        {% include '@runroom/modules/_fonts.html.twig' %}
         {% include '@runroom/modules/_favicon.html.twig' %}
 
-        <style type="text/css">
+        <style type="text/css">{% apply spaceless %}
             {% block crp %}
-                {% include directory ~ '/build/crp.default.css' %}
+                {% include '@runroom/helpers/_inline-crp.html.twig' with { crp: 'crp.default' } %}
             {% endblock %}
-        </style>
+        {% endapply %}</style>
         <js-placeholder token="{{ placeholder_token|raw }}">
     </head>
 

@@ -13,7 +13,7 @@
             href="{{ url('<front>') }}"
             title="{{ site_name }}"
             rel="home">
-            {% include directory ~ '/build/svg/runroom-logo.svg' %}
+            {% include '@runroom/helpers/_inline-svg.html.twig' with { svg: 'runroom-logo' } %}
         </a>
         {{ drupal_menu('main') }}
     </div>
