@@ -1,0 +1,3 @@
+{% set crp = crp|default('crp.default') %}
+
+{{ source(active_theme_path() ~ '/build/' ~ crp ~'.css', true)|raw }}

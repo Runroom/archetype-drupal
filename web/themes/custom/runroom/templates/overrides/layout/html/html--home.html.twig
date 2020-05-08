@@ -1,5 +1,5 @@
 {% extends '@runroom/templates/_html.html.twig' %}
 
 {% block crp %}
-    {% include directory ~ '/build/crp.billboard.css' %}
+    {% include '@runroom/helpers/_inline-crp.html.twig' with { crp: 'crp.billboard' } %}
 {% endblock %}

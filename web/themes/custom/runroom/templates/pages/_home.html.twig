@@ -28,7 +28,7 @@
             </div>
         </section>
 
-        {% embed directory ~ '/templates/layouts/_section-demo.html.twig' %}
+        {% embed '@runroom/layouts/_section-demo.html.twig' %}
             {% block sectionId 'demo-module-layout' %}
             {% block sectionClass 'demo__section' %}
             {% block sectionAside %}
@@ -44,7 +44,7 @@
             {% endblock %}
         {% endembed %}
 
-        {% embed directory ~ '/templates/layouts/_section-demo.html.twig' %}
+        {% embed '@runroom/layouts/_section-demo.html.twig' %}
             {% block sectionClass 'demo__section' %}
             {% block sectionAside %}
                 <h2>Reutilizamos el mismo layout que antes</h2>
