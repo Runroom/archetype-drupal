@@ -1,9 +1,9 @@
 {% from '@runroom/helpers/_macros.html.twig' import icon %}
 
-<footer id="footer" class="footer" data-gtm-category="Navigation" data-gtm-action="Footer">
+<footer id="footer" class="footer">
     <div class="u-wrapper u-flex u-flex--align-between u-flex--justify-between">
+        &copy; Runroom {{ 'now'|date('Y') }}
         {{ icon('r-runroom') }}
-        <span>&copy; Runroom {{ 'now'|date('Y') }}</span>
         {{ drupal_menu('footer') }}
     </div>
 </footer>

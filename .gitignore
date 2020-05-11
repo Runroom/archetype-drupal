@@ -19,7 +19,8 @@ web/core
 web/modules/contrib
 web/themes/contrib
 web/sites/default/files
-web/themes/custom/runroom/build
+web/themes/custom/runroom/build/*
+!web/themes/custom/runroom/build/.gitignore
 
 # NODE
 node_modules

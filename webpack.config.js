@@ -9,18 +9,11 @@ Encore.setOutputPath('web/themes/custom/runroom/build/')
     { from: './assets/fonts', to: 'fonts/[name].[ext]', pattern: /\.(woff|woff2)$/ }
   ])
   .enableSingleRuntimeChunk()
-  .cleanupOutputBeforeBuild()
+  .cleanupOutputBeforeBuild(['**/*', '!.gitignore'])
   .enableBuildNotifications()
   .enableSourceMaps(!Encore.isProduction())
   .enableVersioning(false)
-  .enableSassLoader(options => {
-    options.sourceMap = true;
-    options.sassOptions = {
-      outputStyle: options.outputStyle,
-      sourceComments: !Encore.isProduction()
-    };
-    delete options.outputStyle;
-  }, {})
+  .enableSassLoader()
   .enableEslintLoader()
   .addExternals({
     jQuery: 'jQuery',
