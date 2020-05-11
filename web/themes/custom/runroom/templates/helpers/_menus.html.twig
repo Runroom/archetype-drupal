@@ -1,18 +1,17 @@
 {% macro main_menu(items, menu_level) %}
     {% import _self as menus %}
-    {% if items %}
-        <div class="navigation">
-            <ul class="u-flex">
-            {% for item in items %}
-                <li{{ item.attributes }}>
-                    {{ link(item.title, item.url) }}
 
-                    {% if item.below %}
-                        {{ menus.main_menu(item.below, menu_level + 1) }}
-                    {% endif %}
-                </li>
+    <div class="navigation">
+        <ul class="u-flex">
+            {% for item in items %}
+            <li{{ item.attributes }}>
+                {{ link(item.title, item.url) }}
+
+                {% if item.below %}
+                    {{ menus.main_menu(item.below, menu_level + 1) }}
+                {% endif %}
+            </li>
             {% endfor %}
-            </ul>
-        </div>
-    {% endif %}
+        </ul>
+    </div>
 {% endmacro %}

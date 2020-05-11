@@ -1,20 +1,10 @@
-{% set gtm_label = is_front ? url('<front>') : url('<current>') %}
+{% set class = class|default('') %}
 
-<header id="header" class="header" data-gtm-category="Navigation">
+<header id="header" class="header {{ class }}">
     <div class="header__wrapper u-wrapper u-flex u-flex--align-center u-flex--justify-between">
-        <a
-            data-gtm-event
-            data-gtm-action="Logo"
-            data-gtm-label="{{ gtm_label }}"
-            itemscope
-            itemtype="http://schema.org/Brand"
-            class="header__logo"
-            itemprop="url"
-            href="{{ url('<front>') }}"
-            title="{{ site_name }}"
-            rel="home">
+        <a class="header__logo" href="{{ url('<front>') }}">
             {% include '@runroom/helpers/_inline-svg.html.twig' with { svg: 'runroom-logo' } %}
         </a>
-        {{ drupal_menu('main') }}
+        {{ drupal_entity('block', 'languageswitcher') }}
     </div>
 </header>

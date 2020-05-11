@@ -1,0 +1,7 @@
+<ul class="footer__pages">
+    {% for item in items %}
+    <li{{ item.attributes }}>
+        {{ link(item.title, item.url) }}
+    </li>
+    {% endfor %}
+</ul>
