@@ -16,7 +16,7 @@ To run this project, you need to have:
 
 ## Setup
 
-To start docker containers (inside docker folder):
+To start docker containers:
 
     make
 
