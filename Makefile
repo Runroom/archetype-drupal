@@ -2,7 +2,6 @@ UNAME := $(shell uname)
 
 AUTOLOAD = vendor/autoload.php
 CERTS_DIR = .certs
-DOCKER = docker
 DOCKER_COMPOSE = docker-compose
 DOCKER_COMPOSE_FLAGS = -f docker/docker-compose.yaml -f docker/docker-compose-dev.yaml --env-file docker/.env
 MKCERT = mkcert
@@ -29,10 +28,8 @@ build: halt
 halt:
 	$(call docker-compose,stop)
 
-destroy: halt
-	$(DOCKER) container prune -f
-	$(DOCKER) image prune -af
-	$(DOCKER) volume prune -f
+destroy:
+	$(call docker-compose,down --remove-orphans)
 
 ssh:
 	$(call docker-compose,exec app /bin/bash)
