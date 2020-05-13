@@ -33,7 +33,7 @@ task('yarn:build', function () {
 
 after('deploy:vendors', 'yarn:build');
 after('yarn:build', 'app');
-before('deploy:publish', 'deploy:clear_paths');
+before('deploy:symlink', 'deploy:clear_paths');
 after('deploy:failed', 'deploy:unlock');
 
 inventory('servers.yaml')
