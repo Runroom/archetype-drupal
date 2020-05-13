@@ -4,6 +4,7 @@ namespace Deployer;
 
 require 'recipe/composer.php';
 
+set('keep_releases', 3);
 set('repository', 'git@github.com:Runroom/archetype-drupal.git');
 set('shared_dirs', ['web/sites/default/files']);
 set('shared_files', ['web/sites/custom.services.yml', 'web/sites/custom.settings.php', 'web/robots.txt']);
