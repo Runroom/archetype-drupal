@@ -9,6 +9,7 @@ set('repository', 'git@github.com:Runroom/archetype-drupal.git');
 set('shared_dirs', ['web/sites/default/files']);
 set('shared_files', ['web/sites/custom.services.yml', 'web/sites/custom.settings.php', 'web/robots.txt']);
 set('writable_dirs', ['web/sites/default/files']);
+set('clear_paths', ['assets', 'doc', 'docker', 'node_modules', 'tests']);
 
 set('default_timeout', null);
 set('allow_anonymous_stats', false);
@@ -27,15 +28,12 @@ task('app', function () {
 task('yarn:build', function () {
     cd('{{release_path}}');
 
-    if (has('previous_release')) {
-        run('cp -R {{previous_release}}/node_modules {{release_path}}/node_modules');
-    }
-
-    run('. ~/.nvm/nvm.sh --no-use && nvm use && {{bin/yarn}} && {{bin/yarn}} encore production');
+    run('. ~/.nvm/nvm.sh --no-use && nvm use && {{bin/yarn}} install --frozen-lockfile && {{bin/yarn}} encore production');
 })->setPrivate();
 
 after('deploy:vendors', 'yarn:build');
 after('yarn:build', 'app');
+before('deploy:publish', 'deploy:clear_paths');
 after('deploy:failed', 'deploy:unlock');
 
 inventory('servers.yaml')
