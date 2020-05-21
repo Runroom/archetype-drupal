@@ -5,14 +5,10 @@ services:
         volumes:
             - ../:/srv/app/:cached
             - /srv/app/node_modules/
-            - /srv/app/web/sites/default/files/tmp/
-            - /srv/app/web/sites/default/files/php/
-            - /srv/app/web/sites/default/files/languages/
-            - /srv/app/web/sites/default/files/translations/
             - ${SSH_AUTH_SOCK}:${SSH_AUTH_SOCK}
         environment:
             - SSH_AUTH_SOCK=${SSH_AUTH_SOCK}
     nginx:
         volumes:
-            - ../.certs:/srv/app/.certs:ro,cached
-            - ../web:/srv/app/web:ro,cached
+            - ../.certs:/srv/app/.certs:cached
+            - ../web:/srv/app/web:cached
