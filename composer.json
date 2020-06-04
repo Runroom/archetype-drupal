@@ -38,7 +38,7 @@
         "drupal/twig_field_value": "2.0.0",
         "drupal/twig_tweak": "2.6.0",
         "drupal/vbo_export": "3.1.0",
-        "drupal/views_bulk_operations": "3.6.0",
+        "drupal/views_bulk_operations": "3.7.0",
         "drupal/xmlsitemap": "1.0.0-rc1",
         "drush/drush": "10.2.2",
         "twig/twig": "1.42.5"
