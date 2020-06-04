@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d26f10c3b323348a260efe78977ac47a",
+    "content-hash": "124d7120b00d04daa317623201bdf751",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3520,7 +3520,7 @@
             "extra": {
                 "drupal": {
                     "version": "8.x-1.12",
-                    "datestamp": "1590066861",
+                    "datestamp": "1590140081",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3903,26 +3903,32 @@
         },
         {
             "name": "drupal/views_bulk_operations",
-            "version": "3.6.0",
+            "version": "3.7.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/views_bulk_operations.git",
-                "reference": "8.x-3.6"
+                "reference": "8.x-3.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/views_bulk_operations-8.x-3.6.zip",
-                "reference": "8.x-3.6",
-                "shasum": "e73974b85f33b6b569912b5bd880510586bd5486"
+                "url": "https://ftp.drupal.org/files/projects/views_bulk_operations-8.x-3.7.zip",
+                "reference": "8.x-3.7",
+                "shasum": "2c8dce4e546405046725bedc4cf078a50033c59b"
             },
             "require": {
-                "drupal/core": "~8.8"
+                "drupal/core": "^8.8 || ^9"
+            },
+            "require-dev": {
+                "drush/drush": "^10"
+            },
+            "suggest": {
+                "drush/drush": "^9 || ^10"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.6",
-                    "datestamp": "1583133990",
+                    "version": "8.x-3.7",
+                    "datestamp": "1591195766",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3930,13 +3936,13 @@
                 },
                 "drush": {
                     "services": {
-                        "drush.services.yml": "^9"
+                        "drush.services.yml": "^9 || ^10"
                     }
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
