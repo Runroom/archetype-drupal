@@ -56,7 +56,7 @@
         "friendsofphp/php-cs-fixer": "2.16.3",
         "mglaman/phpstan-drupal": "0.12.3",
         "phpstan/phpstan": "0.12.25",
-        "phpunit/phpunit": "9.2.0"
+        "phpunit/phpunit": "9.2.2"
     },
     "config": {
         "sort-packages": true
