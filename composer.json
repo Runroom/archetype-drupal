@@ -54,7 +54,7 @@
         "drupal/features": "3.11.0",
         "ergebnis/composer-normalize": "2.5.1",
         "friendsofphp/php-cs-fixer": "2.16.3",
-        "mglaman/phpstan-drupal": "0.12.3",
+        "mglaman/phpstan-drupal": "0.12.4",
         "phpstan/phpstan": "0.12.28",
         "phpunit/phpunit": "9.2.2"
     },
