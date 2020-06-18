@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6ae0cc072ce98f247f9b7d71e65d07d6",
+    "content-hash": "d9e870e2169754e6f18e80f03ee35e27",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2602,16 +2602,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "8.9.0",
+            "version": "8.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "f90882ab0723becda2333e4d33e1a6ab27cb8f0c"
+                "reference": "e8ee964c562870381876e85d3f5eaaf8c8ecc9ee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/f90882ab0723becda2333e4d33e1a6ab27cb8f0c",
-                "reference": "f90882ab0723becda2333e4d33e1a6ab27cb8f0c",
+                "url": "https://api.github.com/repos/drupal/core/zipball/e8ee964c562870381876e85d3f5eaaf8c8ecc9ee",
+                "reference": "e8ee964c562870381876e85d3f5eaaf8c8ecc9ee",
                 "shasum": ""
             },
             "require": {
@@ -2832,7 +2832,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2020-06-03T16:44:36+00:00"
+            "time": "2020-06-17T17:57:48+00:00"
         },
         {
             "name": "drupal/ctools",
@@ -4412,16 +4412,16 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "6.5.4",
+            "version": "6.5.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "a4a1b6930528a8f7ee03518e6442ec7a44155d9d"
+                "reference": "9d4290de1cfd701f38099ef7e183b64b4b7b0c5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/a4a1b6930528a8f7ee03518e6442ec7a44155d9d",
-                "reference": "a4a1b6930528a8f7ee03518e6442ec7a44155d9d",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/9d4290de1cfd701f38099ef7e183b64b4b7b0c5e",
+                "reference": "9d4290de1cfd701f38099ef7e183b64b4b7b0c5e",
                 "shasum": ""
             },
             "require": {
@@ -4429,7 +4429,7 @@
                 "guzzlehttp/promises": "^1.0",
                 "guzzlehttp/psr7": "^1.6.1",
                 "php": ">=5.5",
-                "symfony/polyfill-intl-idn": "1.17.0"
+                "symfony/polyfill-intl-idn": "^1.17.0"
             },
             "require-dev": {
                 "ext-curl": "*",
@@ -4475,7 +4475,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2020-05-25T19:35:05+00:00"
+            "time": "2020-06-16T21:01:06+00:00"
         },
         {
             "name": "guzzlehttp/promises",
