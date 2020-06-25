@@ -1,7 +1,7 @@
 name: 'Cookies Module'
 type: module
 description: 'Cookies Module'
-core: 8.x
+core_version_requirement: ^8.9 || ^9
 dependencies:
     - allowed_formats
     - content_translation

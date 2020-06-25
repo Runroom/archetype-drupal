@@ -1,14 +1,18 @@
 services:
     base_module.service.metadata:
         class: Drupal\base_module\Service\MetadataService
-        autowire: true
+        arguments:
+            $requestStack: '@request_stack'
+            $configFactory: '@config.factory'
 
     base_module.service.field_manager:
         class: Drupal\base_module\Service\FieldManagerService
-        autowire: true
 
     base_module.theme.entity_embed_preview_theme_negotiator:
         class: Drupal\base_module\Theme\EntityEmbedPreviewThemeNegotiator
-        autowire: true
+        arguments:
+            $user: '@current_user'
+            $configFactory: '@config.factory'
+            $entityTypeManager: '@entity_type.manager'
         tags:
             - { name: theme_negotiator }

@@ -1,7 +1,11 @@
-{{ block('preContent') }}
+{% if block('preContent') is defined %}
+    {{ block('preContent') }}
+{% endif %}
 
 {% block content %}
     {{ content }}
 {% endblock %}
 
-{{ block('postContent') }}
+{% if block('postContent') is defined %}
+    {{ block('postContent') }}
+{% endif %}
