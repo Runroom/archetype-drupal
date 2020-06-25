@@ -1,14 +1,16 @@
 services:
     cookies.service.cookies:
         class: Drupal\cookies\Service\CookiesService
-        autowire: true
         arguments:
             $cookies: '%cookies%'
+            $languageManager: '@language_manager'
+            $repository: '@cookies.repository.cookies_entity'
+            $formBuilder: '@form_builder'
 
     cookies.repository.cookies_entity:
         class: Drupal\cookies\Repository\CookiesEntityRepository
         arguments:
-            - '@entity_type.manager'
+            $entityTypeManager: '@entity_type.manager'
 
 parameters:
     cookies:

@@ -1,0 +1,8 @@
+uuid: 650dfb91-d2eb-4bfd-be5b-af2e59742325
+langcode: en
+status: true
+dependencies: {  }
+name: optimized_image
+label: optimized-image
+effects: {  }
+pipeline: jpegoptim_pngquant

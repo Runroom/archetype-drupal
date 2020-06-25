@@ -12,7 +12,6 @@ module:
   devel: 0
   features: 0
   features_ui: 0
-  kint: 0
 theme: {  }
 blacklist: {  }
 graylist: {  }
