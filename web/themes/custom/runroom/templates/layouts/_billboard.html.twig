@@ -2,10 +2,10 @@
 
 {% block preContent %}
     {% include '@runroom/components/_billboard.html.twig' with {
-        title: block('billboardTitle'),
-        description: block('billboardDescription'),
-        class: block('billboardClass'),
-        image: block('billboardImage')
+        title: block('billboardTitle') ?? '',
+        description: block('billboardDescription') ?? '',
+        class: block('billboardClass') ?? '',
+        image: block('billboardImage') ?? ''
     } %}
 {% endblock %}
 
