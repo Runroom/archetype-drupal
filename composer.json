@@ -53,7 +53,7 @@
         "drupal/devel_entity_updates": "3.0.0",
         "drupal/features": "3.11.0",
         "ergebnis/composer-normalize": "2.5.1",
-        "friendsofphp/php-cs-fixer": "2.16.3",
+        "friendsofphp/php-cs-fixer": "2.16.4",
         "kint-php/kint": "3.3.0",
         "kint-php/kint-twig": "2.0.0",
         "mglaman/phpstan-drupal": "0.12.4",
