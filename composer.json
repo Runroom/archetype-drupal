@@ -57,7 +57,7 @@
         "kint-php/kint": "3.3.0",
         "kint-php/kint-twig": "2.0.0",
         "mglaman/phpstan-drupal": "0.12.4",
-        "phpstan/phpstan": "0.12.31",
+        "phpstan/phpstan": "0.12.32",
         "phpunit/phpunit": "9.2.5"
     },
     "config": {
