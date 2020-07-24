@@ -7093,16 +7093,16 @@
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v3.4.42",
+            "version": "v3.4.43",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "fbd216d2304b1a3fe38d6392b04729c8dd356359"
+                "reference": "5219dba1253aa07ed3ad82f73c08146fb3f517d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/fbd216d2304b1a3fe38d6392b04729c8dd356359",
-                "reference": "fbd216d2304b1a3fe38d6392b04729c8dd356359",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/5219dba1253aa07ed3ad82f73c08146fb3f517d0",
+                "reference": "5219dba1253aa07ed3ad82f73c08146fb3f517d0",
                 "shasum": ""
             },
             "require": {
@@ -7157,7 +7157,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-05-16T13:15:54+00:00"
+            "time": "2020-07-23T09:37:51+00:00"
         },
         {
             "name": "symfony/http-kernel",
