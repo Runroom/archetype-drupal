@@ -8253,16 +8253,16 @@
         },
         {
             "name": "symfony/serializer",
-            "version": "v3.4.42",
+            "version": "v3.4.43",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/serializer.git",
-                "reference": "0db90db012b1b0a04fbb2d64ae9160871cad9d4f"
+                "reference": "f64adecb8428febda812166bdc4baa99c039fc74"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/serializer/zipball/0db90db012b1b0a04fbb2d64ae9160871cad9d4f",
-                "reference": "0db90db012b1b0a04fbb2d64ae9160871cad9d4f",
+                "url": "https://api.github.com/repos/symfony/serializer/zipball/f64adecb8428febda812166bdc4baa99c039fc74",
+                "reference": "f64adecb8428febda812166bdc4baa99c039fc74",
                 "shasum": ""
             },
             "require": {
@@ -8342,7 +8342,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-05-30T18:58:05+00:00"
+            "time": "2020-06-18T17:32:39+00:00"
         },
         {
             "name": "symfony/translation",
