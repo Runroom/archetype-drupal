@@ -21,7 +21,7 @@
         "drupal/config_filter": "2.0.0-rc1",
         "drupal/config_split": "1.5.0-rc3",
         "drupal/console": "1.9.3",
-        "drupal/core": "8.9.2",
+        "drupal/core": "8.9.3",
         "drupal/date_popup": "1.1.0",
         "drupal/drush_language": "1.0.0-rc3",
         "drupal/editor_advanced_link": "1.8.0",
