@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fc5b247aa7208d818744e38e8ca68bcb",
+    "content-hash": "a7c62ecdd41b38e9dcac1a2f43ce6679",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -10655,20 +10655,20 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "0.12.32",
+            "version": "0.12.41",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "d03863f504c8432b3de4d1881f73f6acb8c0e67c"
+                "reference": "75140de614eeaf67c4ccdce94d970aba8fb7c528"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/d03863f504c8432b3de4d1881f73f6acb8c0e67c",
-                "reference": "d03863f504c8432b3de4d1881f73f6acb8c0e67c",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/75140de614eeaf67c4ccdce94d970aba8fb7c528",
+                "reference": "75140de614eeaf67c4ccdce94d970aba8fb7c528",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1"
+                "php": "^7.1|^8.0"
             },
             "conflict": {
                 "phpstan/phpstan-shim": "*"
@@ -10707,7 +10707,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-07-01T11:57:52+00:00"
+            "time": "2020-09-02T10:59:46+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
