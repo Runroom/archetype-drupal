@@ -18,9 +18,17 @@ pipeline {
                 sh 'composer install --prefer-dist --apcu-autoloader --no-progress --no-interaction'
             }
         }
+        stage('Quality Assurance') {
+            steps {
+                sh 'composer php-cs-fixer -- --dry-run'
+                sh 'composer phpstan'
+                sh 'composer normalize --dry-run'
+            }
+        }
         stage('Test') {
             steps {
-                sh 'phpdbg -qrr ./vendor/bin/phpunit --log-junit coverage/unitreport.xml --coverage-html coverage'
+                sh 'vendor/bin/phpunit --log-junit coverage/unitreport.xml --coverage-html coverage'
+
                 xunit([PHPUnit(
                     deleteOutputFiles: false,
                     failIfNotNew: false,

@@ -2,25 +2,32 @@
 
 <phpunit
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
     backupGlobals="false"
+    backupStaticAttributes="false"
     colors="true"
-    bootstrap="web/core/tests/bootstrap.php"
+    convertErrorsToExceptions="true"
+    convertNoticesToExceptions="true"
+    convertWarningsToExceptions="true"
+    processIsolation="false"
+    stopOnFailure="false"
+    bootstrap="vendor/autoload.php"
+    xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd"
 >
-    <php>
-        <ini name="error_reporting" value="-1" />
-    </php>
-
     <testsuites>
         <testsuite name="Archetype Drupal Test Suite">
             <directory>tests</directory>
         </testsuite>
     </testsuites>
 
-    <filter>
-        <whitelist processUncoveredFilesFromWhitelist="true">
+    <coverage>
+        <include>
             <directory suffix=".php">web/themes/custom</directory>
             <directory suffix=".php">web/modules/custom</directory>
-        </whitelist>
-    </filter>
+        </include>
+    </coverage>
+
+    <php>
+        <ini name="precision" value="8"/>
+        <server name="SHELL_VERBOSITY" value="-1" />
+    </php>
 </phpunit>
