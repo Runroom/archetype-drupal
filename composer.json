@@ -19,8 +19,8 @@
         "drupal/allowed_formats": "1.3.0",
         "drupal/clientside_validation": "3.0.0-rc4",
         "drupal/config_filter": "2.1.0",
-        "drupal/config_split": "1.5.0-rc3",
-        "drupal/console": "1.9.3",
+        "drupal/config_split": "1.5.0-rc4",
+        "drupal/console": "1.9.5",
         "drupal/core": "8.9.4",
         "drupal/date_popup": "1.1.0",
         "drupal/drush_language": "1.0.0-rc3",
@@ -29,7 +29,7 @@
         "drupal/field_group": "3.1.0",
         "drupal/hreflang": "1.3.0",
         "drupal/imageapi_optimize": "4.0.0-beta1",
-        "drupal/menu_breadcrumb": "1.13.0",
+        "drupal/menu_breadcrumb": "1.14.0",
         "drupal/menu_link_attributes": "1.1.0",
         "drupal/metatag": "1.14.0",
         "drupal/paragraphs": "1.12.0",
@@ -38,13 +38,20 @@
         "drupal/twig_field_value": "2.0.0",
         "drupal/twig_tweak": "2.6.0",
         "drupal/vbo_export": "3.2.0",
-        "drupal/views_bulk_operations": "3.8.0",
+        "drupal/views_bulk_operations": "3.9.0",
         "drupal/xmlsitemap": "1.0.0",
         "drush/drush": "10.3.4",
         "twig/twig": "1.43.1"
     },
+    "replace": {
+        "symfony/polyfill-php56": "*",
+        "symfony/polyfill-php70": "*",
+        "symfony/polyfill-php71": "*",
+        "symfony/polyfill-php72": "*",
+        "symfony/polyfill-php73": "*",
+        "symfony/polyfill-php74": "*"
+    },
     "conflict": {
-        "drupal/console": "1.9.4",
         "drupal/drupal": "*"
     },
     "require-dev": {
@@ -57,7 +64,7 @@
         "kint-php/kint": "3.3.0",
         "kint-php/kint-twig": "2.0.0",
         "mglaman/phpstan-drupal": "0.12.5",
-        "phpstan/phpstan": "0.12.32",
+        "phpstan/phpstan": "0.12.42",
         "phpunit/phpunit": "9.3.8"
     },
     "config": {
@@ -98,6 +105,6 @@
     ],
     "scripts": {
         "php-cs-fixer": "php-cs-fixer fix --ansi --verbose",
-        "phpstan": "phpstan analyse --level=5 --no-progress web/modules/custom web/themes/custom tests"
+        "phpstan": "phpstan analyse --no-progress"
     }
 }

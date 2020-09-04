@@ -1,5 +1,14 @@
 includes:
+    - phpstan.baseline.neon
     - vendor/mglaman/phpstan-drupal/extension.neon
 
 parameters:
-    fileExtensions: [php, theme, module]
+    level: 5
+    paths:
+        - web/modules/custom
+        - web/themes/custom
+        - tests
+    fileExtensions:
+        - php
+        - theme
+        - module
