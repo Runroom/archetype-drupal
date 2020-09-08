@@ -18,7 +18,6 @@ Basic commands used to control the app
 - `make database` creates the database using ansible/drupal.sql
 - `make update` updates current confing and database dump
 - `make phpunit` executes `phpunit` tests
-- `make phpunit-coverage` executes `phpunit` tests and generates coverage
 - `make composer-normalize` executes `composer normalize` plugin to normalize composer.json
 - `make phpstan` executes `phpstan`
 - `make php-cs-fixer` executes `php-cs-fixer`
