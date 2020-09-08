@@ -1,11 +1,13 @@
-uuid: affc5478-a9fa-481a-a432-fd0f4a002106
+uuid: d031d91b-a52a-49aa-a705-e22a1ee5c01f
 langcode: es
 status: true
 dependencies:
   theme:
-    - adminimal_theme
-id: adminimal_theme_secondary_local_tasks
-theme: adminimal_theme
+    - gin
+_core:
+  default_config_hash: BCWhood0xXFQYqxFgL1spXdb9KeIuXH1YvTdjIEedDg
+id: gin_secondary_local_tasks
+theme: gin
 region: pre_content
 weight: 0
 provider: null
