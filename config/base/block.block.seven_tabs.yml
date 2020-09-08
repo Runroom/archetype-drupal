@@ -1,0 +1,29 @@
+uuid: 1a3bc3ca-b327-42ae-8df8-aa2333425362
+langcode: es
+status: true
+dependencies:
+  module:
+    - user
+  theme:
+    - seven
+id: seven_tabs
+theme: seven
+region: header
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Pestañas
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      admin_user: admin_user
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
