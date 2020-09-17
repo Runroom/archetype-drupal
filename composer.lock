@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "09773b0d01af88b7d4207e786c8bbe42",
+    "content-hash": "576e26f86efcf565f814672895d83131",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2089,16 +2089,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "9.0.5",
+            "version": "9.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "145671b8ac88322c43c8415cf287b76dfe45ad38"
+                "reference": "783122d82abb104cebc73ea1f0659f7ccd46f9a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/145671b8ac88322c43c8415cf287b76dfe45ad38",
-                "reference": "145671b8ac88322c43c8415cf287b76dfe45ad38",
+                "url": "https://api.github.com/repos/drupal/core/zipball/783122d82abb104cebc73ea1f0659f7ccd46f9a8",
+                "reference": "783122d82abb104cebc73ea1f0659f7ccd46f9a8",
                 "shasum": ""
             },
             "require": {
@@ -2332,7 +2332,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2020-09-03T21:05:44+00:00"
+            "time": "2020-09-16T11:21:49+00:00"
         },
         {
             "name": "drupal/ctools",
