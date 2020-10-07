@@ -5748,20 +5748,20 @@
         },
         {
             "name": "symfony-cmf/routing",
-            "version": "2.3.2",
+            "version": "2.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony-cmf/Routing.git",
-                "reference": "e073c3b6db0e9a5f4c8d7a7bb8a092cd5e191fba"
+                "reference": "3c97e7b7709b313cecfb76d691ad4cc22acbf3f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony-cmf/Routing/zipball/e073c3b6db0e9a5f4c8d7a7bb8a092cd5e191fba",
-                "reference": "e073c3b6db0e9a5f4c8d7a7bb8a092cd5e191fba",
+                "url": "https://api.github.com/repos/symfony-cmf/Routing/zipball/3c97e7b7709b313cecfb76d691ad4cc22acbf3f5",
+                "reference": "3c97e7b7709b313cecfb76d691ad4cc22acbf3f5",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.2",
+                "php": "^7.2 || ^8.0",
                 "psr/log": "^1.0",
                 "symfony/http-kernel": "^4.4 || ^5.0",
                 "symfony/routing": "^4.4 || ^5.0"
@@ -5803,7 +5803,7 @@
                 "database",
                 "routing"
             ],
-            "time": "2020-05-27T08:26:50+00:00"
+            "time": "2020-10-06T10:15:37+00:00"
         },
         {
             "name": "symfony/config",
