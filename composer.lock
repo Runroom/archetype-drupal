@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "768b7cbc61d4865228e86f1710abb9eb",
+    "content-hash": "c9d6a65bb72f092139d238089d2aac4a",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3415,17 +3415,17 @@
         },
         {
             "name": "drupal/twig_tweak",
-            "version": "2.7.0",
+            "version": "2.8.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/twig_tweak.git",
-                "reference": "8.x-2.7"
+                "reference": "8.x-2.8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/twig_tweak-8.x-2.7.zip",
-                "reference": "8.x-2.7",
-                "shasum": "fcae9c94996022af9e8f993aee11e4b0cbd5ed98"
+                "url": "https://ftp.drupal.org/files/projects/twig_tweak-8.x-2.8.zip",
+                "reference": "8.x-2.8",
+                "shasum": "11ae232159fc1139e00980736dff39bf2bfcfa6d"
             },
             "require": {
                 "drupal/core": "^8.7 || ^9.0",
@@ -3437,8 +3437,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.7",
-                    "datestamp": "1601530189",
+                    "version": "8.x-2.8",
+                    "datestamp": "1602156806",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
