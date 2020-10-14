@@ -25,12 +25,13 @@ class CookiesEntityHtmlRouteProvider extends AdminHtmlRouteProvider
     {
         if (!$entity_type->getBundleEntityType()) {
             $route = new Route("/admin/structure/{$entity_type->id()}/settings");
+
             $route->setDefaults([
                 '_form' => 'Drupal\cookies\Form\CookiesEntitySettingsForm',
                 '_title' => "{$entity_type->getLabel()} settings",
             ])
-            ->setRequirement('_permission', $entity_type->getAdminPermission())
-            ->setOption('_admin_route', true);
+                ->setRequirement('_permission', $entity_type->getAdminPermission())
+                ->setOption('_admin_route', true);
 
             return $route;
         }

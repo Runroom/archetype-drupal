@@ -7,7 +7,7 @@ use Drupal\Core\Entity\EntityTypeManagerInterface;
 
 class CookiesEntityRepository
 {
-    protected $entityTypeManager;
+    private $entityTypeManager;
 
     public function __construct(EntityTypeManagerInterface $entityTypeManager)
     {

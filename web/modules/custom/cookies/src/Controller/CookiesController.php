@@ -10,7 +10,7 @@ final class CookiesController extends ControllerBase
 {
     public const COOKIES_CACHE_TAGS = ['page:cookies'];
 
-    protected $service;
+    private $service;
 
     public function __construct(CookiesService $service)
     {

@@ -10,10 +10,10 @@ use Drupal\language\ConfigurableLanguageManager;
 
 class CookiesService
 {
-    protected $cookies;
-    protected $languageManager;
-    protected $repository;
-    protected $formBuilder;
+    private $cookies;
+    private $languageManager;
+    private $repository;
+    private $formBuilder;
 
     public function __construct(
         array $cookies,
