@@ -4,6 +4,7 @@ command:
       options:
         structure-tables-key: common
         skip-tables-key: common
+        extra-dump: '--no-tablespaces'
 
 sql:
   structure-tables:
