@@ -33,7 +33,6 @@ final class CookiesForm extends FormBase
             '#attributes' => [
                 'class' => ['js-cookies-performance-checkbox'],
             ],
-            '#default_value' => $this->isCookieActive('performance_cookie', 'true'),
         ];
 
         $form['targeting'] = [
@@ -42,7 +41,6 @@ final class CookiesForm extends FormBase
             '#attributes' => [
                 'class' => ['js-cookies-targeting-checkbox'],
             ],
-            '#default_value' => $this->isCookieActive('targeting_cookie', 'false'),
         ];
 
         $form['submit'] = [
@@ -58,10 +56,5 @@ final class CookiesForm extends FormBase
 
     public function submitForm(array &$form, FormStateInterface $formState): void
     {
-    }
-
-    protected function isCookieActive(string $cookie, string $defaultValue): bool
-    {
-        return $this->getRequest()->cookies->get($cookie, $defaultValue) === 'true';
     }
 }
