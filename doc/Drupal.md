@@ -14,12 +14,23 @@ How to import the dump.sql file?
 drush sql-cli < docker/drupal.sql
 ```
 
-## Drupal Console & Drush
+## Drush deployment
 
-To execute an Deploy of all config-import, rebuild cache, update entities:
+To execute an Deploy of all configs, rebuild cache, update entities you should use Drush.
+
+Outside docker:
 
 ```
-drupal deploy
+make deploy
+```
+
+Inside docker:
+
+```
+drush cache:rebuild
+drush updatedb -y
+drush config:import -y
+drush cache:rebuild
 ```
 
 ## Export and Import custom translations

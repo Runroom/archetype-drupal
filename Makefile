@@ -46,8 +46,13 @@ certs:
 $(AUTOLOAD):
 	$(MAKE) provision
 
-provision: composer-install database language-import
-	$(call docker-exec,drupal deploy)
+provision: composer-install database language-import deploy
+
+deploy:
+	$(call docker-exec,drush cache:rebuild)
+	$(call docker-exec,drush updatedb -y)
+	$(call docker-exec,drush config:import -y)
+	$(call docker-exec,drush cache:rebuild)
 
 composer-install:
 	$(call docker-exec,composer install --optimize-autoloader)
@@ -80,4 +85,4 @@ language-import:
 	$(call docker-exec,bash drush/import-translations.bash)
 
 cache-rebuild:
-	$(call docker-exec,drupal cr)
+	$(call docker-exec,drush cache:rebuild)

@@ -15,14 +15,14 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'composer install --prefer-dist --apcu-autoloader --no-progress --no-interaction'
+                sh 'composer-v2 install --prefer-dist --apcu-autoloader --no-progress --no-interaction'
             }
         }
         stage('Quality Assurance') {
             steps {
-                sh 'composer php-cs-fixer -- --dry-run'
-                sh 'composer phpstan'
-                sh 'composer normalize --dry-run'
+                sh 'composer-v2 php-cs-fixer -- --dry-run'
+                sh 'composer-v2 phpstan'
+                sh 'composer-v2 normalize --dry-run'
             }
         }
         stage('Test') {
