@@ -1,15 +1,14 @@
 FROM php:7.4-fpm-alpine
 
-COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/bin/
-COPY --from=composer /usr/bin/composer /usr/bin/composer
+COPY --from=mlocati/php-extension-installer:latest /usr/bin/install-php-extensions /usr/bin/
 
 RUN install-php-extensions apcu bz2 gd intl opcache pdo_mysql zip pcov
-RUN mv $PHP_INI_DIR/php.ini-production $PHP_INI_DIR/php.ini
-
 RUN apk --no-cache add bash git mysql-client openssh-client rsync patch unzip
 
-ENV PATH="/srv/app/vendor/bin:/srv/app/bin:${PATH}"
+ENV PATH="/usr/app/vendor/bin:/usr/app/bin:${PATH}"
 
-RUN composer global require hirak/prestissimo
+RUN mv $PHP_INI_DIR/php.ini-production $PHP_INI_DIR/php.ini
 
-WORKDIR /srv/app
+COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
+
+WORKDIR /usr/app
