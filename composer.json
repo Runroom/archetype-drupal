@@ -41,7 +41,7 @@
         "drupal/views_bulk_operations": "3.9.0",
         "drupal/xmlsitemap": "1.0.0",
         "drush/drush": "10.3.5",
-        "twig/twig": "2.13.1"
+        "twig/twig": "2.14.1"
     },
     "replace": {
         "symfony/polyfill-php56": "*",
