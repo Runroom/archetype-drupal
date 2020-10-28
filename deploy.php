@@ -13,7 +13,7 @@ set('clear_paths', ['assets', 'doc', 'docker', 'node_modules', 'tests']);
 
 set('default_timeout', null);
 set('allow_anonymous_stats', false);
-set('drupal', '{{release_path}}/vendor/bin/drupal');
+set('drush', '{{release_path}}/vendor/bin/drush');
 set('composer_options', '{{composer_action}} --prefer-dist --apcu-autoloader --no-progress --no-interaction --no-dev');
 
 set('bin/yarn', function () {
@@ -21,7 +21,11 @@ set('bin/yarn', function () {
 });
 
 task('app', function () {
-    run('cd {{release_path}} && {{bin/php}} {{drupal}} deploy');
+    run('cd {{release_path}} && {{bin/php}} {{drush}} cache:rebuild');
+    run('cd {{release_path}} && {{bin/php}} {{drush}} updatedb -y');
+    run('cd {{release_path}} && {{bin/php}} {{drush}} config:import -y');
+    run('cd {{release_path}} && {{bin/php}} {{drush}} cache:rebuild');
+
     run('cd {{release_path}} && bash drush/import-translations.bash');
 })->setPrivate();
 

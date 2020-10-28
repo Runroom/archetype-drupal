@@ -1,5 +1,0 @@
-defaults:
-    cache:
-        rebuild:
-            arguments:
-                cache: all
