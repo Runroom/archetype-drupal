@@ -40,7 +40,7 @@
         "drupal/vbo_export": "3.2.0",
         "drupal/views_bulk_operations": "3.9.0",
         "drupal/xmlsitemap": "1.0.0",
-        "drush/drush": "10.3.5",
+        "drush/drush": "10.3.6",
         "twig/twig": "2.14.1"
     },
     "replace": {
