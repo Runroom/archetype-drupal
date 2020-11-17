@@ -82,7 +82,7 @@ language-export:
 	$(call docker-exec,drush language-export)
 
 language-import:
-	$(call docker-exec,bash drush/import-translations.bash)
+	$(call docker-exec,drush language-import)
 
 cache-rebuild:
 	$(call docker-exec,drush cache:rebuild)
