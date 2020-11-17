@@ -16,7 +16,7 @@ provider: null
 plugin: system_main_block
 settings:
   id: system_main_block
-  label: 'Main page content'
+  label: 'Contenido principal de la página'
   provider: system
   label_display: '0'
 visibility: {  }
