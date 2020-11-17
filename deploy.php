@@ -25,8 +25,7 @@ task('app', function () {
     run('cd {{release_path}} && {{bin/php}} {{drush}} updatedb -y');
     run('cd {{release_path}} && {{bin/php}} {{drush}} config:import -y');
     run('cd {{release_path}} && {{bin/php}} {{drush}} cache:rebuild');
-
-    run('cd {{release_path}} && bash drush/import-translations.bash');
+    run('cd {{release_path}} && {{bin/php}} {{drush}} language-import');
 })->setPrivate();
 
 task('yarn:build', function () {
