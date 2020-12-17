@@ -1,3 +1,36 @@
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+
+    function getConsentCookie(cname) {
+        var name = cname + '=';
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+
+        for (var i = 0; i <ca.length; i++) {
+            var c = ca[i];
+
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+
+        return '';
+    }
+
+    gtag('consent', 'default', {
+        'ad_storage': getConsentCookie('targeting_cookie') === 'true' ? 'granted': 'denied',
+        'analytics_storage': getConsentCookie('performance_cookie') === 'true' ? 'granted' : 'denied'
+    });
+
+    gtag('set', 'ads_data_redaction', true);
+    gtag('set', 'url_passthrough', true);
+</script>
+
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
