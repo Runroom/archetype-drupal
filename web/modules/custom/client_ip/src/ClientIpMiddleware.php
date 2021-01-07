@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Drupal\client_ip;
 
 use Symfony\Component\HttpFoundation\Cookie;
@@ -20,7 +22,7 @@ class ClientIpMiddleware implements HttpKernelInterface
     {
         $response = $this->app->handle($request, $type, $catch);
 
-        if (\is_null($request->cookies->get(self::COOKIE_NAME))) {
+        if (null === $request->cookies->get(self::COOKIE_NAME)) {
             $response->headers->setCookie(
                 new Cookie(self::COOKIE_NAME, $request->getClientIp(), 0, '/', null, true, false)
             );

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use Drupal\Core\Routing\RouteMatchInterface;
 
 function contact_form_help(string $routeName, RouteMatchInterface $routeMatch): ?string

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Drupal\base_module\Theme;
 
 use Drupal\Core\Config\ConfigFactoryInterface;
@@ -26,7 +28,7 @@ class EntityEmbedPreviewThemeNegotiator implements ThemeNegotiatorInterface
 
     public function applies(RouteMatchInterface $routeMatch): bool
     {
-        return $routeMatch->getRouteName() === 'media.filter.preview'
+        return 'media.filter.preview' === $routeMatch->getRouteName()
             && $this->entityTypeManager->hasHandler('user_role', 'storage')
             && $this->user->hasPermission('view the administration theme');
     }

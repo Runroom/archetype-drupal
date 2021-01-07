@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Drupal\contact_form\Form;
 
 use Drupal\contact_form\Entity\Lead;
@@ -131,7 +133,7 @@ class ContactForm extends FormBase
         $lead->set('field_subject', $form['subject']['#value']);
         $lead->set('field_other_subject', $form['other_subject']['#value']);
         $lead->set('field_type', $form['type']['#value']);
-        $lead->set('field_preferences', \array_values($form['preferences']['#value']));
+        $lead->set('field_preferences', array_values($form['preferences']['#value']));
         $lead->set('field_comment', $form['comment']['#value']);
         $lead->set('field_newsletter', $form['newsletter']['#value']);
         $lead->set('field_privacy_policy', $form['privacy_policy']['#value']);

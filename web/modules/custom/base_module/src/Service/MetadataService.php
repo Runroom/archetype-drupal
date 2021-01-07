@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Drupal\base_module\Service;
 
 use Drupal\Core\Config\ConfigFactory;
@@ -48,7 +50,7 @@ class MetadataService
         $url = $this->requestStack->getCurrentRequest()->getRequestUri();
 
         $title = $title . ' | ' . $this->configFactory->get('system.site')->get('name');
-        $description = \strip_tags($description);
+        $description = strip_tags($description);
 
         $metadata = [
             'title' => $title,
@@ -85,9 +87,8 @@ class MetadataService
     {
         $type = $this->getType($tag);
 
-        return $tag['#tag'] === 'meta'
-            && isset($tag['#attributes'][$type])
-            && isset(self::MAX_LENGTHS[$tag['#attributes'][$type]]);
+        return 'meta' === $tag['#tag']
+            && isset($tag['#attributes'][$type], self::MAX_LENGTHS[$tag['#attributes'][$type]]);
     }
 
     private function truncate(string $content, int $length): string
@@ -96,6 +97,6 @@ class MetadataService
             return $content;
         }
 
-        return \substr($content, 0, $length - \strlen(self::TERMINATION)) . self::TERMINATION;
+        return substr($content, 0, $length - \strlen(self::TERMINATION)) . self::TERMINATION;
     }
 }

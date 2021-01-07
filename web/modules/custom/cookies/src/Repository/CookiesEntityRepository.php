@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Drupal\cookies\Repository;
 
 use Drupal\cookies\Entity\CookiesEntity;
