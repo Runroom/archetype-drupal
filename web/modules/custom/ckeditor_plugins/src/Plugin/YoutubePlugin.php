@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Drupal\ckeditor_plugins\Plugin;
 
 use Drupal\ckeditor\CKEditorPluginBase;

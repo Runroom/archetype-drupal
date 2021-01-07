@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use Drupal\Core\Site\Settings;
 
 function runroom_preprocess(array &$variables, $hook)

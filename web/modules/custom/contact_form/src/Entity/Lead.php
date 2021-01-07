@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Drupal\contact_form\Entity;
 
 use Drupal\Core\Entity\ContentEntityBase;
@@ -82,8 +84,8 @@ class Lead extends ContentEntityBase implements LeadInterface
         $fields = parent::baseFieldDefinitions($entityType);
 
         $fields['name'] = BaseFieldDefinition::create('string')
-            ->setLabel(t('Name'))
-            ->setDescription(t('The name of the Lead entity.'))
+            ->setLabel((string) t('Name'))
+            ->setDescription((string) t('The name of the Lead entity.'))
             ->setSettings([
                 'max_length' => 50,
                 'text_processing' => 0,
@@ -103,12 +105,12 @@ class Lead extends ContentEntityBase implements LeadInterface
             ->setRequired(true);
 
         $fields['created'] = BaseFieldDefinition::create('created')
-            ->setLabel(t('Created'))
-            ->setDescription(t('The time that the entity was created.'));
+            ->setLabel((string) t('Created'))
+            ->setDescription((string) t('The time that the entity was created.'));
 
         $fields['changed'] = BaseFieldDefinition::create('changed')
-            ->setLabel(t('Changed'))
-            ->setDescription(t('The time that the entity was last edited.'));
+            ->setLabel((string) t('Changed'))
+            ->setDescription((string) t('The time that the entity was last edited.'));
 
         return $fields;
     }

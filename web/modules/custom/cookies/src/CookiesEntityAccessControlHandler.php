@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Drupal\cookies;
 
 use Drupal\Core\Access\AccessResult;
