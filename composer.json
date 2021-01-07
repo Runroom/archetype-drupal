@@ -36,7 +36,7 @@
         "drupal/pathauto": "1.8.0",
         "drupal/redirect": "1.6.0",
         "drupal/twig_field_value": "2.0.0",
-        "drupal/twig_tweak": "2.8.0",
+        "drupal/twig_tweak": "3.0.0",
         "drupal/vbo_export": "3.2.0",
         "drupal/views_bulk_operations": "3.10.0",
         "drupal/xmlsitemap": "1.0.0",
@@ -85,10 +85,7 @@
         },
         "patches": {
             "drupal/core": {
-                "FAPI #radios form elements do not have an accessible required attribute - 2951317": "https://www.drupal.org/files/issues/2019-04-19/2951317_29.patch"
-            },
-            "drupal/twig_tweak": {
-                "Make image_style more powerful": "patches/image_style.patch"
+                "FAPI #radios form elements do not have an accessible required attribute - 2951317": "https://www.drupal.org/files/issues/2019-07-25/2951317-38.patch"
             }
         }
     },
