@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 function base_module_theme($existing, $type, $theme, $path)
 {
     return [
@@ -15,9 +17,9 @@ function base_module_language_switch_links_alter(array &$links, $type, $path)
 {
     $node = \Drupal::routeMatch()->getParameter('node');
 
-    if (!\is_null($node)) {
+    if (null !== $node) {
         foreach ($links as $langCode => $link) {
-            if (\is_null($node->getTranslationStatus($langCode))
+            if (null === $node->getTranslationStatus($langCode)
                 || !$node->getTranslation($langCode)->isPublished()) {
                 unset($links[$langCode]);
             }

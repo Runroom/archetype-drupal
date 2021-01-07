@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Drupal\cookies\Service;
 
 use Drupal\cookies\Entity\CookiesEntity;
@@ -53,7 +55,7 @@ class CookiesService
     {
         $cookies = [];
         foreach ($this->cookies[$type] as $category) {
-            $cookies = \array_merge($cookies, $category['cookies'] ?? []);
+            $cookies = array_merge($cookies, $category['cookies'] ?? []);
         }
 
         return $cookies;

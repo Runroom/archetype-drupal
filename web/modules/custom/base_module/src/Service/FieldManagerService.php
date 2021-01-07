@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Drupal\base_module\Service;
 
 use Drupal\Core\Entity\FieldableEntityInterface;
@@ -53,7 +55,7 @@ class FieldManagerService
             return [];
         }
 
-        return \array_map(function ($reference) {
+        return array_map(function ($reference) {
             return $reference['target_id'];
         }, $field->getValue());
     }
@@ -99,7 +101,7 @@ class FieldManagerService
     public function getListAllowedValues(string $fieldName, object $object): ?array
     {
         $fieldDefinition = $object->get($fieldName)->getFieldDefinition();
-        if ($fieldDefinition->getType() !== 'list_string') {
+        if ('list_string' !== $fieldDefinition->getType()) {
             return null;
         }
 

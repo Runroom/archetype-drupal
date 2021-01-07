@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 $databases = [
   'default' => [
     'default' => [
@@ -18,7 +20,7 @@ $databases = [
 $settings['trusted_host_patterns'] = ['localhost']; // drupal.local (vagrant)
 $settings['hash_salt'] = '308d47268412acc4fe69f0afaf00b3e63cc7c69f6d94c62d4530d045cd911839';
 
-\assert_options(ASSERT_ACTIVE, true);
+assert_options(ASSERT_ACTIVE, true);
 \Drupal\Component\Assertion\Handle::register();
 
 $config['system.performance']['cache']['page']['max_age'] = 0;

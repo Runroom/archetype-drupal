@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Site\Settings;
 
@@ -32,7 +34,7 @@ function cookies_theme(): array
 
 function cookies_page_attachments_alter(array &$page): void
 {
-    if (\Drupal::routeMatch()->getRouteName() === 'cookies.page') {
+    if ('cookies.page' === \Drupal::routeMatch()->getRouteName()) {
         $repository = \Drupal::service('cookies.repository.cookies_entity');
         $cookies = $repository->getCookiesPage();
         $title = $cookies->label() ?: '';

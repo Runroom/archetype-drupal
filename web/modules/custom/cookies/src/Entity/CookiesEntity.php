@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Drupal\cookies\Entity;
 
 use Drupal\Core\Entity\ContentEntityBase;
@@ -81,8 +83,8 @@ class CookiesEntity extends ContentEntityBase implements CookiesEntityInterface
         $fields = parent::baseFieldDefinitions($entity_type);
 
         $fields['name'] = BaseFieldDefinition::create('string')
-            ->setLabel(t('Name'))
-            ->setDescription(t('The name of the Cookies entity entity.'))
+            ->setLabel((string) t('Name'))
+            ->setDescription((string) t('The name of the Cookies entity entity.'))
             ->setSettings([
                 'max_length' => 50,
                 'text_processing' => 0,
@@ -103,12 +105,12 @@ class CookiesEntity extends ContentEntityBase implements CookiesEntityInterface
             ->setRequired(true);
 
         $fields['created'] = BaseFieldDefinition::create('created')
-            ->setLabel(t('Created'))
-            ->setDescription(t('The time that the entity was created.'));
+            ->setLabel((string) t('Created'))
+            ->setDescription((string) t('The time that the entity was created.'));
 
         $fields['changed'] = BaseFieldDefinition::create('changed')
-            ->setLabel(t('Changed'))
-            ->setDescription(t('The time that the entity was last edited.'));
+            ->setLabel((string) t('Changed'))
+            ->setDescription((string) t('The time that the entity was last edited.'));
 
         return $fields;
     }
