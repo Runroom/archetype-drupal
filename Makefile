@@ -69,6 +69,9 @@ php-cs-fixer:
 phpunit:
 	$(call docker-exec,phpunit)
 
+grumphp:
+	$(call docker-exec,grumphp run)
+
 database:
 	$(call docker-exec,drush sql:drop -y)
 	$(call docker-exec,drush sql:create -y)
