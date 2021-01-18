@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Deployer;
 
 require 'recipe/composer.php';
@@ -21,10 +23,7 @@ set('bin/yarn', function () {
 });
 
 task('app', function () {
-    run('cd {{release_path}} && {{bin/php}} {{drush}} cache:rebuild');
-    run('cd {{release_path}} && {{bin/php}} {{drush}} updatedb -y');
-    run('cd {{release_path}} && {{bin/php}} {{drush}} config:import -y');
-    run('cd {{release_path}} && {{bin/php}} {{drush}} cache:rebuild');
+    run('cd {{release_path}} && {{bin/php}} {{drush}} deploy --yes');
     run('cd {{release_path}} && {{bin/php}} {{drush}} language-import');
 })->setPrivate();
 
@@ -40,4 +39,4 @@ before('deploy:symlink', 'deploy:clear_paths');
 after('deploy:failed', 'deploy:unlock');
 
 inventory('servers.yaml')
-    ->user(\getenv('DEPLOYER_USER'));
+    ->user(getenv('DEPLOYER_USER'));
