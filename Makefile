@@ -46,13 +46,10 @@ certs:
 $(AUTOLOAD):
 	$(MAKE) provision
 
-provision: composer-install database language-import deploy
+provision: composer-install database deploy language-import
 
 deploy:
-	$(call docker-exec,drush cache:rebuild)
-	$(call docker-exec,drush updatedb -y)
-	$(call docker-exec,drush config:import -y)
-	$(call docker-exec,drush cache:rebuild)
+	$(call docker-exec,drush deploy --yes)
 
 composer-install:
 	$(call docker-exec,composer install --optimize-autoloader)
@@ -70,12 +67,12 @@ phpunit:
 	$(call docker-exec,phpunit)
 
 database:
-	$(call docker-exec,drush sql:drop -y)
-	$(call docker-exec,drush sql:create -y)
-	$(call docker-exec,drush sql:cli -y < docker/drupal.sql)
+	$(call docker-exec,drush sql:drop --yes)
+	$(call docker-exec,drush sql:create --yes)
+	$(call docker-exec,drush sql:cli --yes < docker/drupal.sql)
 
 update: language-export
-	$(call docker-exec,drush config:export -y)
+	$(call docker-exec,drush config:export -yes)
 	$(call docker-exec,drush sql:dump >| docker/drupal.sql)
 
 language-export:
