@@ -25,6 +25,7 @@ $databases = [
 $settings['hash_salt'] = $_SERVER['APP_SECRET'];
 $settings['gtm_id'] = $_SERVER['GTM_ID'];
 $settings['trusted_host_patterns'] = [$_SERVER['TRUSTED_HOST']];
+$settings['cookies_default_domain'] = $_SERVER['COOKIES_DEFAULT_DOMAIN'];
 
 // Default Settings
 $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
