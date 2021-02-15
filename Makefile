@@ -2,12 +2,9 @@ UNAME := $(shell uname)
 
 AUTOLOAD = vendor/autoload.php
 CERTS_DIR = .certs
-DOCKER_COMPOSE = docker-compose
-DOCKER_COMPOSE_FLAGS = -f docker/docker-compose.yaml -f docker/docker-compose-dev.yaml --env-file docker/.env
 MKCERT = mkcert
 
-docker-compose = $(DOCKER_COMPOSE) $(DOCKER_COMPOSE_FLAGS) $1
-docker-exec =  $(call docker-compose,exec -T app /bin/bash -c "$1")
+docker-exec = docker-compose exec app /bin/bash -c "$1"
 
 .PHONY: up compose build halt destroy ssh certs provision composer-install composer-normalize \
 		phpstan php-cs-fixer phpunit phpunit-coverage database update language-export language-import cache-rebuild
@@ -17,22 +14,22 @@ up: compose $(AUTOLOAD)
 
 compose: $(CERTS_DIR)
 ifeq ($(UNAME), Darwin)
-	XDEBUG_CONFIG="client_host=host.docker.internal" SSH_AUTH_SOCK=/run/host-services/ssh-auth.sock $(call docker-compose,up -d)
+	COMPOSE_DOCKER_CLI_BUILD=1 XDEBUG_CONFIG="client_host=host.docker.internal" SSH_AUTH_SOCK=/run/host-services/ssh-auth.sock docker-compose up -d
 else
-	$(call docker-compose,up -d)
+	COMPOSE_DOCKER_CLI_BUILD=1 docker-compose up -d
 endif
 
 build: halt
-	$(call docker-compose,build)
+	COMPOSE_DOCKER_CLI_BUILD=1 docker-compose build
 
 halt:
-	$(call docker-compose,stop)
+	docker-compose stop
 
 destroy:
-	$(call docker-compose,down --remove-orphans)
+	docker-compose down --remove-orphans
 
 ssh:
-	$(call docker-compose,exec app /bin/bash)
+	docker-compose exec app /bin/bash
 
 $(CERTS_DIR):
 	$(MAKE) certs
@@ -69,11 +66,11 @@ phpunit:
 database:
 	$(call docker-exec,drush sql:drop --yes)
 	$(call docker-exec,drush sql:create --yes)
-	$(call docker-exec,drush sql:cli --yes < docker/drupal.sql)
+	$(call docker-exec,drush sql:cli --yes < .docker/drupal.sql)
 
 update: language-export
-	$(call docker-exec,drush config:export -yes)
-	$(call docker-exec,drush sql:dump >| docker/drupal.sql)
+	$(call docker-exec,drush config:export --yes)
+	$(call docker-exec,drush sql:dump >| .docker/drupal.sql)
 
 language-export:
 	$(call docker-exec,drush language-export)
