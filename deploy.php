@@ -23,8 +23,11 @@ set('bin/yarn', function () {
 });
 
 task('app', function () {
-    run('cd {{release_path}} && {{bin/php}} {{drush}} deploy --yes');
-    run('cd {{release_path}} && {{bin/php}} {{drush}} language-import');
+    cd('{{release_path}}');
+
+    run('{{bin/php}} {{bin/composer}} symfony:dump-env prod');
+    run('{{bin/php}} {{drush}} deploy --yes');
+    run('{{bin/php}} {{drush}} language-import');
 })->setPrivate();
 
 task('yarn:build', function () {
