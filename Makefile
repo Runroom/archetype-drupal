@@ -63,6 +63,9 @@ php-cs-fixer:
 phpunit:
 	$(call docker-exec,phpunit)
 
+phpunit-coverage:
+	$(call docker-exec,phpunit --coverage-html /usr/app/coverage)
+
 database:
 	$(call docker-exec,drush sql:drop --yes)
 	$(call docker-exec,drush sql:create --yes)
