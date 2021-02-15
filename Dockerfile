@@ -46,7 +46,7 @@ COPY . /usr/app
 
 RUN composer dump-autoload --apcu
 
-ENTRYPOINT ["bash", "/usr/app/php-fpm.sh"]
+ENTRYPOINT ["bash", "/usr/app/.docker/app-prod/php-fpm.sh"]
 
 # FPM-DEV
 FROM base as fpm-dev
