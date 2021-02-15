@@ -20,7 +20,6 @@ services:
         environment:
             - SSH_AUTH_SOCK
             - XDEBUG_CONFIG
-        command: php-fpm --allow-to-run-as-root
     nginx:
         image: nginx:1-alpine
         ports:
