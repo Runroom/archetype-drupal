@@ -8,7 +8,6 @@ COPY --from=mlocati/php-extension-installer:latest /usr/bin/install-php-extensio
 RUN install-php-extensions apcu bz2 gd intl opcache pdo_mysql zip
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
-    bash \
     unzip \
     mariadb-client \
     git \
