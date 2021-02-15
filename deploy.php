@@ -9,9 +9,9 @@ require 'recipe/composer.php';
 set('keep_releases', 3);
 set('repository', 'git@github.com:Runroom/archetype-drupal.git');
 set('shared_dirs', ['web/sites/default/files']);
-set('shared_files', ['web/sites/custom.services.yml', 'web/sites/custom.settings.php', 'web/robots.txt']);
+set('shared_files', ['web/robots.txt', '.env.local']);
 set('writable_dirs', ['web/sites/default/files']);
-set('clear_paths', ['assets', 'doc', 'docker', 'node_modules', 'tests']);
+set('clear_paths', ['assets', 'doc', '.docker', 'node_modules', 'tests']);
 
 set('default_timeout', null);
 set('allow_anonymous_stats', false);
