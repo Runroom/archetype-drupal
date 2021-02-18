@@ -66,7 +66,7 @@
         "kint-php/kint-twig": "3.0.0",
         "mglaman/phpstan-drupal": "0.12.8",
         "phpspec/prophecy-phpunit": "2.0.1",
-        "phpstan/phpstan": "0.12.76",
+        "phpstan/phpstan": "0.12.77",
         "phpunit/phpunit": "9.5.2"
     },
     "config": {
