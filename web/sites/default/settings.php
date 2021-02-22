@@ -22,6 +22,10 @@ $databases = [
   ],
 ];
 
+if (null !== $_SERVER['FILES_BASE_URL']) {
+    $settings['file_public_base_url'] = $_SERVER['FILES_BASE_URL'];
+}
+
 $settings['hash_salt'] = $_SERVER['APP_SECRET'];
 $settings['gtm_id'] = $_SERVER['GTM_ID'];
 $settings['trusted_host_patterns'] = [$_SERVER['TRUSTED_HOST']];
@@ -30,7 +34,7 @@ $settings['cookies_default_domain'] = $_SERVER['COOKIES_DEFAULT_DOMAIN'];
 // Default Settings
 $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
 $settings['custom_translations_directory'] = 'sites/custom_translations';
-$settings['file_temp_path'] = 'sites/default/files/tmp';
+$settings['file_temp_path'] = 'sites/default/tmp';
 $settings['config_sync_directory'] = '../config/base';
 $settings['skip_permissions_hardening'] = true;
 $settings['rebuild_access'] = false;

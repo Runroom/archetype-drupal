@@ -40,9 +40,9 @@
         "drupal/vbo_export": "3.2.0",
         "drupal/views_bulk_operations": "3.10.0",
         "drupal/xmlsitemap": "1.0.0",
-        "drush/drush": "10.3.6",
+        "drush/drush": "10.4.0",
         "symfony/dotenv": "5.2.3",
-        "symfony/flex": "1.12.1"
+        "symfony/flex": "1.12.2"
     },
     "replace": {
         "symfony/polyfill-php56": "*",
@@ -66,7 +66,7 @@
         "kint-php/kint-twig": "3.0.0",
         "mglaman/phpstan-drupal": "0.12.8",
         "phpspec/prophecy-phpunit": "2.0.1",
-        "phpstan/phpstan": "0.12.76",
+        "phpstan/phpstan": "0.12.78",
         "phpunit/phpunit": "9.5.2"
     },
     "config": {

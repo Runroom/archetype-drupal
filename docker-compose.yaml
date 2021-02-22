@@ -10,7 +10,7 @@ services:
             - .docker/app-dev/extra.ini:/usr/local/etc/php/conf.d/extra.ini
             - .docker/app-dev/www.conf:/usr/local/etc/php-fpm.d/www.conf
             - /usr/app/node_modules/
-            - /usr/app/web/sites/default/files/tmp/
+            - /usr/app/web/sites/default/tmp/
             - /usr/app/web/sites/default/files/php/
             - /usr/app/web/sites/default/files/languages/
             - /usr/app/web/sites/default/files/translations/
@@ -20,17 +20,27 @@ services:
         environment:
             - SSH_AUTH_SOCK
             - XDEBUG_CONFIG
+        # Prod
+        # build:
+        #     context: .
+        #     target: fpm-prod
+        # volumes:
+        #     - data-volume:/usr/app/web/sites/default/files
     nginx:
-        image: nginx:1-alpine
+        image: nginx:1.18
         ports:
             - 8080:80
             - 8443:443
         volumes:
-            - .docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+            - .docker/nginx-dev/nginx.conf:/etc/nginx/nginx.conf
             - .certs:/usr/app/.certs:ro,cached
             - ./web:/usr/app/web:ro,cached
         depends_on:
             - app
+        # Prod
+        # volumes:
+        #     - .docker/nginx-prod/nginx.conf:/etc/nginx/nginx.conf
+        #     - data-volume:/usr/app/web/sites/default/files
     mysql:
         image: mysql:5.7
         environment:
@@ -44,3 +54,7 @@ services:
         image: mailhog/mailhog
         ports:
             - 8025:8025
+
+# Prod
+# volumes:
+#     data-volume:

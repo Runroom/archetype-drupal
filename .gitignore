@@ -21,10 +21,9 @@ phpunit.xml
 web/core
 web/modules/contrib
 web/themes/contrib
-web/sites/default/files/*
-!web/sites/default/files/tmp
-web/sites/default/files/tmp/*
-!web/sites/default/files/tmp/.gitignore
+web/sites/default/files
+web/sites/default/tmp/*
+!web/sites/default/tmp/.gitignore
 web/themes/custom/runroom/build/*
 !web/themes/custom/runroom/build/.gitignore
 

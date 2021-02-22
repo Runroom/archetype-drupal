@@ -197,6 +197,9 @@
     "egulias/email-validator": {
         "version": "2.1.22"
     },
+    "enlightn/security-checker": {
+        "version": "v1.5.1"
+    },
     "ergebnis/composer-normalize": {
         "version": "2.13.2"
     },
