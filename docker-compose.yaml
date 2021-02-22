@@ -25,7 +25,7 @@ services:
         #     context: .
         #     target: fpm-prod
         # volumes:
-        #     - data-volume:/usr/app/web/sites/default/files
+        #     - data-volume:/usr/app/web
     nginx:
         image: nginx:1.18
         ports:
@@ -40,7 +40,7 @@ services:
         # Prod
         # volumes:
         #     - .docker/nginx-prod/nginx.conf:/etc/nginx/nginx.conf
-        #     - data-volume:/usr/app/web/sites/default/files
+        #     - data-volume:/usr/app/web
     mysql:
         image: mysql:5.7
         environment:
