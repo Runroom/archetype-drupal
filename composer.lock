@@ -3500,16 +3500,16 @@
         },
         {
             "name": "enlightn/security-checker",
-            "version": "v1.5.1",
+            "version": "v1.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/enlightn/security-checker.git",
-                "reference": "aa8170ec81d7b65e35efb3821159b198dd10eac3"
+                "reference": "a0914d126de022ba0c1afca2e1691f0f14592cde"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/enlightn/security-checker/zipball/aa8170ec81d7b65e35efb3821159b198dd10eac3",
-                "reference": "aa8170ec81d7b65e35efb3821159b198dd10eac3",
+                "url": "https://api.github.com/repos/enlightn/security-checker/zipball/a0914d126de022ba0c1afca2e1691f0f14592cde",
+                "reference": "a0914d126de022ba0c1afca2e1691f0f14592cde",
                 "shasum": ""
             },
             "require": {
@@ -3522,6 +3522,7 @@
                 "symfony/yaml": "^3.4|^4|^5"
             },
             "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.18",
                 "phpunit/phpunit": "^5.5|^6|^7|^8|^9"
             },
             "bin": [
@@ -3558,9 +3559,9 @@
             ],
             "support": {
                 "issues": "https://github.com/enlightn/security-checker/issues",
-                "source": "https://github.com/enlightn/security-checker/tree/v1.5.1"
+                "source": "https://github.com/enlightn/security-checker/tree/v1.6.1"
             },
-            "time": "2021-02-17T16:25:07+00:00"
+            "time": "2021-02-24T07:54:18+00:00"
         },
         {
             "name": "ezyang/htmlpurifier",
