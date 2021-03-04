@@ -56,11 +56,11 @@ COPY composer.lock /usr/app/composer.lock
 COPY symfony.lock /usr/app/symfony.lock
 
 RUN composer install --prefer-dist --no-progress --no-interaction --no-dev
-RUN composer symfony:dump-env prod
 
 COPY . /usr/app
 
 RUN composer dump-autoload --apcu
+RUN composer symfony:dump-env prod
 
 COPY --from=node-prod /usr/app/web/themes/custom/runroom/build /usr/app/web/themes/custom/runroom/build
 
