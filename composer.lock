@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7df1c321d2c89033bb668887380b4bf8",
+    "content-hash": "32455af5e8e55fd5d224e7edecaf0253",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2443,17 +2443,17 @@
         },
         {
             "name": "drupal/hreflang",
-            "version": "1.3.0",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/hreflang.git",
-                "reference": "8.x-1.3"
+                "reference": "8.x-1.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/hreflang-8.x-1.3.zip",
-                "reference": "8.x-1.3",
-                "shasum": "0a367e16e96b88a2598aa47ce94d30be18b46bde"
+                "url": "https://ftp.drupal.org/files/projects/hreflang-8.x-1.4.zip",
+                "reference": "8.x-1.4",
+                "shasum": "2d0f7452a0e65f713522400e312a588365ff322d"
             },
             "require": {
                 "drupal/core": "^8 || ^9"
@@ -2461,8 +2461,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.3",
-                    "datestamp": "1578637687",
+                    "version": "8.x-1.4",
+                    "datestamp": "1615098968",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
