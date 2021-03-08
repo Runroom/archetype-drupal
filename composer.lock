@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7df1c321d2c89033bb668887380b4bf8",
+    "content-hash": "27104e5bd46a740da960b73158ab4780",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -9267,17 +9267,17 @@
         },
         {
             "name": "drupal/devel_entity_updates",
-            "version": "3.0.0",
+            "version": "3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/devel_entity_updates.git",
-                "reference": "3.0.0"
+                "reference": "3.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/devel_entity_updates-3.0.0.zip",
-                "reference": "3.0.0",
-                "shasum": "2fcbde815745117b11170598de0211b31dd2321e"
+                "url": "https://ftp.drupal.org/files/projects/devel_entity_updates-3.0.1.zip",
+                "reference": "3.0.1",
+                "shasum": "ed7f7b410659538b4ccf898933ef413f75382896"
             },
             "require": {
                 "drupal/core": "^8.7.7 || ^9",
@@ -9293,8 +9293,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.0.0",
-                    "datestamp": "1591220515",
+                    "version": "3.0.1",
+                    "datestamp": "1614938245",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
