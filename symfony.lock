@@ -155,6 +155,9 @@
     "drupal/imageapi_optimize": {
         "version": "4.0.0-beta1"
     },
+    "drupal/mailsystem": {
+        "version": "4.3.0"
+    },
     "drupal/menu_breadcrumb": {
         "version": "1.14.0"
     },
@@ -172,6 +175,9 @@
     },
     "drupal/redirect": {
         "version": "1.6.0"
+    },
+    "drupal/swiftmailer": {
+        "version": "2.0.0"
     },
     "drupal/token": {
         "version": "1.9.0"
@@ -238,6 +244,9 @@
     },
     "guzzlehttp/psr7": {
         "version": "1.7.0"
+    },
+    "html2text/html2text": {
+        "version": "4.3.1"
     },
     "justinrainbow/json-schema": {
         "version": "5.2.10"
@@ -445,6 +454,9 @@
     "stack/builder": {
         "version": "v1.0.6"
     },
+    "swiftmailer/swiftmailer": {
+        "version": "v6.2.7"
+    },
     "symfony-cmf/routing": {
         "version": "2.3.3"
     },
@@ -460,6 +472,9 @@
             "bin/console",
             "config/bootstrap.php"
         ]
+    },
+    "symfony/css-selector": {
+        "version": "v5.2.4"
     },
     "symfony/debug": {
         "version": "v4.4.16"
@@ -599,6 +614,9 @@
     },
     "theseer/tokenizer": {
         "version": "1.2.0"
+    },
+    "tijsverkoyen/css-to-inline-styles": {
+        "version": "2.2.3"
     },
     "twig/twig": {
         "version": "v2.14.1"
