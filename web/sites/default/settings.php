@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use Symfony\Component\Dotenv\Dotenv;
+use Symfony\Component\HttpFoundation\Request;
 
 (new Dotenv())->bootEnv(__DIR__ . '/../../../.env');
 
@@ -24,6 +25,31 @@ $databases = [
 
 if (null !== $_SERVER['FILES_BASE_URL']) {
     $settings['file_public_base_url'] = $_SERVER['FILES_BASE_URL'];
+}
+
+if ((bool) $_SERVER['REVERSE_PROXY']) {
+    $settings['reverse_proxy'] = true;
+    $settings['reverse_proxy_trusted_headers'] = Request::HEADER_X_FORWARDED_ALL;
+
+    // In case you know the reverse proxy addresses, it is better to use them instead of the general remote_addr
+    $settings['reverse_proxy_addresses'] = [$_SERVER['REMOTE_ADDR']];
+}
+
+$config['system.site']['mail'] = $_SERVER['SYSTEM_EMAIL'];
+$config['system.site']['mail_notification'] = $_SERVER['SYSTEM_EMAIL_NOTIFICATION'];
+
+if ((bool) $_SERVER['SMTP_OVERRIDE']) {
+    $config['swiftmailer.transport'] = [
+        'smtp_host' => $_SERVER['SMTP_HOST'],
+        'smtp_port' => $_SERVER['SMTP_PORT'],
+        'smtp_encryption' => $_SERVER['SMTP_ENCRYPTION'],
+        'smtp_credentials' => [
+            'swiftmailer' => [
+                'username' => $_SERVER['SMTP_USER'],
+                'password' => $_SERVER['SMTP_PASSWORD'],
+            ],
+        ],
+    ];
 }
 
 $settings['hash_salt'] = $_SERVER['APP_SECRET'];
