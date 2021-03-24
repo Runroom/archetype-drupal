@@ -69,7 +69,7 @@
         "mglaman/phpstan-drupal": "0.12.9",
         "phpspec/prophecy-phpunit": "2.0.1",
         "phpstan/phpstan": "0.12.81",
-        "phpunit/phpunit": "9.5.2"
+        "phpunit/phpunit": "9.5.4"
     },
     "config": {
         "sort-packages": true
