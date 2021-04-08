@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5d8a6b51da1d1ffb2d9360740ac62dc8",
+    "content-hash": "0bfecad42ef1bfb6b29a7b3dd19b40d1",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1603,16 +1603,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "9.1.5",
+            "version": "9.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "075ea2e792edbe573a29f02e80d6edf445f18e14"
+                "reference": "775b801f12bbcfb0634b2ae442c5ed4529b3150d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/075ea2e792edbe573a29f02e80d6edf445f18e14",
-                "reference": "075ea2e792edbe573a29f02e80d6edf445f18e14",
+                "url": "https://api.github.com/repos/drupal/core/zipball/775b801f12bbcfb0634b2ae442c5ed4529b3150d",
+                "reference": "775b801f12bbcfb0634b2ae442c5ed4529b3150d",
                 "shasum": ""
             },
             "require": {
@@ -1849,22 +1849,22 @@
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
             "support": {
-                "source": "https://github.com/drupal/core/tree/9.1.5"
+                "source": "https://github.com/drupal/core/tree/9.1.6"
             },
-            "time": "2021-03-04T14:36:14+00:00"
+            "time": "2021-04-07T11:18:45+00:00"
         },
         {
             "name": "drupal/core-recommended",
-            "version": "9.1.5",
+            "version": "9.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-recommended.git",
-                "reference": "809cd5dd382f95abf1e81abf8910c0eb9c97f012"
+                "reference": "03a5765123d9c76e0ca2ab3de26059356193d35c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/809cd5dd382f95abf1e81abf8910c0eb9c97f012",
-                "reference": "809cd5dd382f95abf1e81abf8910c0eb9c97f012",
+                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/03a5765123d9c76e0ca2ab3de26059356193d35c",
+                "reference": "03a5765123d9c76e0ca2ab3de26059356193d35c",
                 "shasum": ""
             },
             "require": {
@@ -1873,7 +1873,7 @@
                 "doctrine/annotations": "1.11.1",
                 "doctrine/lexer": "1.2.1",
                 "doctrine/reflection": "1.2.2",
-                "drupal/core": "9.1.5",
+                "drupal/core": "9.1.6",
                 "egulias/email-validator": "2.1.22",
                 "guzzlehttp/guzzle": "6.5.5",
                 "guzzlehttp/promises": "1.4.0",
@@ -1934,9 +1934,9 @@
             ],
             "description": "Locked core dependencies; require this project INSTEAD OF drupal/core.",
             "support": {
-                "source": "https://github.com/drupal/core-recommended/tree/9.1.5"
+                "source": "https://github.com/drupal/core-recommended/tree/9.1.6"
             },
-            "time": "2021-03-04T14:36:14+00:00"
+            "time": "2021-04-07T11:18:45+00:00"
         },
         {
             "name": "drupal/ctools",
