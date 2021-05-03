@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4de911857441bb0901f1aecb047d6aee",
+    "content-hash": "ef6e80e1fd3bf76228b037e312933d4c",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2325,27 +2325,26 @@
         },
         {
             "name": "drupal/gin",
-            "version": "3.0.0-alpha33",
+            "version": "3.0.0-alpha9",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/gin.git",
-                "reference": "8.x-3.0-alpha33"
+                "reference": "8.x-3.0-alpha9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/gin-8.x-3.0-alpha33.zip",
-                "reference": "8.x-3.0-alpha33",
-                "shasum": "daca198d157a28f3a3ee89e3a1018d0bdc1c9b5c"
+                "url": "https://ftp.drupal.org/files/projects/gin-8.x-3.0-alpha9.zip",
+                "reference": "8.x-3.0-alpha9",
+                "shasum": "32669f5a52d50e9c2c3b5015a01bb0a2630e1b96"
             },
             "require": {
-                "drupal/core": "^8.8 || ^9",
-                "drupal/gin_toolbar": "^1.0@beta"
+                "drupal/core": "^8.8 || ^9"
             },
             "type": "drupal-theme",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.0-alpha33",
-                    "datestamp": "1611172829",
+                    "version": "8.x-3.0-alpha9",
+                    "datestamp": "1587598687",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
@@ -2358,31 +2357,20 @@
             ],
             "authors": [
                 {
-                    "name": "Sascha Eggenberger (saschaeggi)",
-                    "homepage": "https://www.drupal.org/u/saschaeggi",
-                    "role": "Maintainer"
+                    "name": "dermario",
+                    "homepage": "https://www.drupal.org/user/241276"
                 },
                 {
                     "name": "saschaeggi",
                     "homepage": "https://www.drupal.org/user/1999056"
                 }
             ],
-            "description": "For a better Admin and Content Editor Experience.",
+            "description": "For a better Content Editor Experience on top of Claro.",
             "homepage": "https://www.drupal.org/project/gin",
             "support": {
                 "source": "https://git.drupalcode.org/project/gin",
                 "issues": "https://www.drupal.org/project/issues/gin"
-            },
-            "funding": [
-                {
-                    "type": "github",
-                    "url": "https://github.com/sponsors/saschaeggi"
-                },
-                {
-                    "type": "other",
-                    "url": "https://paypal.me/saschaeggi"
-                }
-            ]
+            }
         },
         {
             "name": "drupal/gin_toolbar",
