@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "632d17973b8826bc815ad2db40ba75ef",
+    "content-hash": "9976419c9d8643b9150893f849326062",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3146,22 +3146,23 @@
         },
         {
             "name": "drupal/twig_tweak",
-            "version": "3.0.0",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/twig_tweak.git",
-                "reference": "3.0.0"
+                "reference": "3.1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/twig_tweak-3.0.0.zip",
-                "reference": "3.0.0",
-                "shasum": "c8596addb06cbc67ad7914533c7e96e97ecbd54a"
+                "url": "https://ftp.drupal.org/files/projects/twig_tweak-3.1.1.zip",
+                "reference": "3.1.1",
+                "shasum": "818cc2aaa248d4bbf11d13e4d53653d2ced9e8f0"
             },
             "require": {
                 "drupal/core": "^9.0",
                 "ext-json": "*",
                 "php": ">=7.3",
+                "symfony/polyfill-php80": "^1.17",
                 "twig/twig": "^2.12"
             },
             "suggest": {
@@ -3170,8 +3171,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.0.0",
-                    "datestamp": "1608096096",
+                    "version": "3.1.1",
+                    "datestamp": "1619981432",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
