@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cba72c6fb231d6f12bbbf7076a9c1b07",
+    "content-hash": "675c1cc414b15ec7c7f67311e03a1196",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2570,17 +2570,17 @@
         },
         {
             "name": "drupal/menu_breadcrumb",
-            "version": "1.15.0",
+            "version": "1.16.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/menu_breadcrumb.git",
-                "reference": "8.x-1.15"
+                "reference": "8.x-1.16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/menu_breadcrumb-8.x-1.15.zip",
-                "reference": "8.x-1.15",
-                "shasum": "ff0a7bb7131273a55e8d75027c471ad905f6896f"
+                "url": "https://ftp.drupal.org/files/projects/menu_breadcrumb-8.x-1.16.zip",
+                "reference": "8.x-1.16",
+                "shasum": "e7faa28edcd703c5512b480117d35718d0dd7441"
             },
             "require": {
                 "drupal/core": "^8 || ^9"
@@ -2588,8 +2588,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.15",
-                    "datestamp": "1620207284",
+                    "version": "8.x-1.16",
+                    "datestamp": "1620238102",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
