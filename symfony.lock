@@ -53,9 +53,6 @@
     "dflydev/dot-access-data": {
         "version": "v1.1.0"
     },
-    "dnoegel/php-xdg-base-dir": {
-        "version": "v0.1.1"
-    },
     "doctrine/annotations": {
         "version": "1.0",
         "recipe": {

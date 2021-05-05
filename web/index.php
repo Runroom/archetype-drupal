@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /**
  * @file
  * The PHP page that serves all page requests on a Drupal installation.
