@@ -1,3 +1,5 @@
+import jQuery from 'jquery';
+
 jQuery(document).on('cv-jquery-validate-options-update', (event, jQueryValidateSettings) => {
   jQueryValidateSettings.errorElement = 'span';
   jQueryValidateSettings.errorClass = 'form__message--invalid';
