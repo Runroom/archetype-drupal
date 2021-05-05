@@ -12,21 +12,21 @@ Encore.setOutputPath('web/themes/custom/runroom/build/')
   .cleanupOutputBeforeBuild(['**/*', '!.gitignore'])
   .enableBuildNotifications()
   .enableSourceMaps(!Encore.isProduction())
-  .enableVersioning(false)
-  .enableSassLoader()
+  .enableVersioning(Encore.isProduction())
+  .enableSassLoader(options => {
+    options.sourceMap = true;
+    options.sassOptions = { sourceComments: !Encore.isProduction() };
+  }, {})
   .enableEslintLoader()
+  .autoProvidejQuery()
   .addExternals({
-    jQuery: 'jQuery',
     Drupal: 'Drupal',
     drupalSettings: 'drupalSettings'
   })
   .addPlugin(
     new StyleLintPlugin({
-      configFile: '.stylelintrc',
       context: 'assets/scss',
-      files: '**/*.scss',
-      failOnError: false,
-      quiet: false
+      emitWarning: true
     })
   )
   .enablePostCssLoader()

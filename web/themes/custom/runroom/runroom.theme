@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use Drupal\Core\Site\Settings;
 
-function runroom_preprocess(array &$variables, $hook)
+function runroom_preprocess(array &$variables, $hook): void
 {
     $variables['gtmId'] = Settings::get('gtm_id');
     $variables['theme_path'] = base_path() . $variables['directory'];

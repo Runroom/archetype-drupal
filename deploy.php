@@ -22,7 +22,7 @@ set('bin/yarn', function () {
     return run('which yarn');
 });
 
-task('app', function () {
+task('app', function (): void {
     cd('{{release_path}}');
 
     run('{{bin/php}} {{bin/composer}} symfony:dump-env prod');
@@ -30,10 +30,10 @@ task('app', function () {
     run('{{bin/php}} {{drush}} language-import');
 })->setPrivate();
 
-task('yarn:build', function () {
+task('yarn:build', function (): void {
     cd('{{release_path}}');
 
-    run('. ~/.nvm/nvm.sh --no-use && nvm use && {{bin/yarn}} install --frozen-lockfile && {{bin/yarn}} encore production');
+    run('. ~/.nvm/nvm.sh --no-use && nvm use && {{bin/yarn}} install --immutable && {{bin/yarn}} encore production');
 })->setPrivate();
 
 after('deploy:vendors', 'yarn:build');

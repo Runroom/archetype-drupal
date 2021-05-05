@@ -1,15 +1,27 @@
 {
-  "extends": ["config:base"],
+  "extends": [
+    "config:base",
+    ":disableRateLimiting",
+    ":automergePatch",
+    ":automergeMinor",
+    ":automergePr"
+  ],
   "packageRules": [
     {
-      "matchUpdateTypes": [
-        "minor",
-        "patch",
-        "pin",
-        "digest"
-      ],
-      "automerge": true,
-      "automergeType": "branch"
+      "matchPackagePatterns": ["phpstan"],
+      "groupName": "phpstan"
+    },
+    {
+      "matchPackagePatterns": ["eslint"],
+      "groupName": "eslint"
+    },
+    {
+      "matchPackagePatterns": ["stylelint"],
+      "groupName": "stylelint"
+    },
+    {
+      "matchPackagePatterns": ["doctrine/"],
+      "groupName": "doctrine"
     }
   ]
 }

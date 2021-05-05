@@ -1,7 +1,9 @@
 {
+  "parser": "@babel/eslint-parser",
   "extends": "@runroom/eslint-config-runroom",
   "env": {
-    "browser": true
+    "browser": true,
+    "jquery": true
   },
   "rules": {
     "operator-linebreak": "off",
@@ -13,7 +15,6 @@
     ]
   },
   "globals": {
-    "jQuery": true,
     "Drupal": true,
     "drupalSettings": true
   }
