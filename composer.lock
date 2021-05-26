@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cf81fcf26942130e06e993f622e31863",
+    "content-hash": "b4b4261d9af1761fb3282898785f497c",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1567,16 +1567,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "9.1.8",
+            "version": "9.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "487661aa08e9474ef234074844e7b1b8fa6e3c3c"
+                "reference": "2c649d5807f08f8c7945d1c6ffb4bb21d5c7849a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/487661aa08e9474ef234074844e7b1b8fa6e3c3c",
-                "reference": "487661aa08e9474ef234074844e7b1b8fa6e3c3c",
+                "url": "https://api.github.com/repos/drupal/core/zipball/2c649d5807f08f8c7945d1c6ffb4bb21d5c7849a",
+                "reference": "2c649d5807f08f8c7945d1c6ffb4bb21d5c7849a",
                 "shasum": ""
             },
             "require": {
@@ -1813,22 +1813,22 @@
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
             "support": {
-                "source": "https://github.com/drupal/core/tree/9.1.8"
+                "source": "https://github.com/drupal/core/tree/9.1.9"
             },
-            "time": "2021-05-05T11:09:15+00:00"
+            "time": "2021-05-25T09:18:28+00:00"
         },
         {
             "name": "drupal/core-recommended",
-            "version": "9.1.8",
+            "version": "9.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-recommended.git",
-                "reference": "1cacf0f150d64ca03785c4f9dddfa5d8788da1f2"
+                "reference": "c29e4707ba567b7b80b86a8fa6aea0d0e50967b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/1cacf0f150d64ca03785c4f9dddfa5d8788da1f2",
-                "reference": "1cacf0f150d64ca03785c4f9dddfa5d8788da1f2",
+                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/c29e4707ba567b7b80b86a8fa6aea0d0e50967b0",
+                "reference": "c29e4707ba567b7b80b86a8fa6aea0d0e50967b0",
                 "shasum": ""
             },
             "require": {
@@ -1837,7 +1837,7 @@
                 "doctrine/annotations": "1.11.1",
                 "doctrine/lexer": "1.2.1",
                 "doctrine/reflection": "1.2.2",
-                "drupal/core": "9.1.8",
+                "drupal/core": "9.1.9",
                 "egulias/email-validator": "2.1.22",
                 "guzzlehttp/guzzle": "6.5.5",
                 "guzzlehttp/promises": "1.4.0",
@@ -1898,9 +1898,9 @@
             ],
             "description": "Locked core dependencies; require this project INSTEAD OF drupal/core.",
             "support": {
-                "source": "https://github.com/drupal/core-recommended/tree/9.1.8"
+                "source": "https://github.com/drupal/core-recommended/tree/9.1.9"
             },
-            "time": "2021-05-05T11:09:15+00:00"
+            "time": "2021-05-25T09:18:28+00:00"
         },
         {
             "name": "drupal/ctools",
@@ -8871,16 +8871,16 @@
         },
         {
             "name": "doctrine/cache",
-            "version": "1.11.0",
+            "version": "1.11.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/cache.git",
-                "reference": "a9c1b59eba5a08ca2770a76eddb88922f504e8e0"
+                "reference": "3bb5588cec00a0268829cc4a518490df6741af9d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/a9c1b59eba5a08ca2770a76eddb88922f504e8e0",
-                "reference": "a9c1b59eba5a08ca2770a76eddb88922f504e8e0",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/3bb5588cec00a0268829cc4a518490df6741af9d",
+                "reference": "3bb5588cec00a0268829cc4a518490df6741af9d",
                 "shasum": ""
             },
             "require": {
@@ -8950,7 +8950,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/cache/issues",
-                "source": "https://github.com/doctrine/cache/tree/1.11.0"
+                "source": "https://github.com/doctrine/cache/tree/1.11.3"
             },
             "funding": [
                 {
@@ -8966,7 +8966,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-04-13T14:46:17+00:00"
+            "time": "2021-05-25T09:01:55+00:00"
         },
         {
             "name": "doctrine/collections",

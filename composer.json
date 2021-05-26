@@ -20,7 +20,7 @@
         "drupal/clientside_validation": "3.0.0-rc4",
         "drupal/config_filter": "1.8.0",
         "drupal/config_split": "1.7.0",
-        "drupal/core-recommended": "9.1.8",
+        "drupal/core-recommended": "9.1.9",
         "drupal/date_popup": "1.1.0",
         "drupal/drush_language": "1.0.0-rc4",
         "drupal/editor_advanced_link": "1.8.0",
