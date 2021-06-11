@@ -94,7 +94,7 @@
         },
         "patches": {
             "drupal/core": {
-                "FAPI #radios form elements do not have an accessible required attribute - 2951317": "https://www.drupal.org/files/issues/2019-07-25/2951317-38.patch"
+                "Radios element missing \"required\" attribute - 2951317": "https://www.drupal.org/files/issues/2019-07-25/2951317-38.patch"
             },
             "drupal/vbo_export": {
                 "Deprecated function theme_vbo_export_content_xlsx() should no longer be used - 3175522": "https://www.drupal.org/files/issues/2020-12-20/vbo_export-deprecated-theme-functions-3175522-9.patch"
