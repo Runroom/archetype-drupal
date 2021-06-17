@@ -3148,7 +3148,7 @@ __metadata:
     js-cookie: 2.2.1
     node-sass: 6.0.0
     picturefill: 3.0.3
-    postcss: 8.3.3
+    postcss: 8.3.5
     postcss-loader: 6.1.0
     sass-loader: 12.1.0
     stylelint: 13.13.1
@@ -10492,14 +10492,14 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"postcss@npm:8.3.3":
-  version: 8.3.3
-  resolution: "postcss@npm:8.3.3"
+"postcss@npm:8.3.5":
+  version: 8.3.5
+  resolution: "postcss@npm:8.3.5"
   dependencies:
     colorette: ^1.2.2
     nanoid: ^3.1.23
     source-map-js: ^0.6.2
-  checksum: 3e8e8310b40e6ea87f4338af8f9890ace40cea774e0f5bf741ea436d71de89c3c4d955e7877ff8b2ab8ce7a283b2216bc7b9e1e895b9c9ef2bfa8e2bc248d94a
+  checksum: 87dc16efcf40286fad4ded0a433497ddbc55dfad3d7ddb200ba9c0761ec376280fa2c06a522628583c9284def85894c52bc361cffedf0679f4936370c084a145
   languageName: node
   linkType: hard
 
