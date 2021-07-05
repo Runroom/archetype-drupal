@@ -8,6 +8,7 @@ use Drupal\Core\Entity\ContentEntityBase;
 use Drupal\Core\Entity\EntityChangedTrait;
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Field\BaseFieldDefinition;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
 
 /**
  * @ingroup contact_form
@@ -55,24 +56,28 @@ class Lead extends ContentEntityBase implements LeadInterface
 {
     use EntityChangedTrait;
 
-    public function getName(): ?string
+    public const NAME = 'name';
+    public const CREATED = 'created';
+    public const CHANGED = 'changed';
+
+    public function getName(): string
     {
-        return $this->get('name')->value;
+        return $this->get(self::NAME)->getString();
     }
 
-    public function setName(?string $name): LeadInterface
+    public function setName(string $name): self
     {
-        $this->set('name', $name);
+        $this->set(self::NAME, $name);
 
         return $this;
     }
 
-    public function getCreatedTime(): ?int
+    public function getCreatedTime(): int
     {
-        return (int) $this->get('created')->value;
+        return (int) $this->get('created')->getString();
     }
 
-    public function setCreatedTime(?int $timestamp): LeadInterface
+    public function setCreatedTime(int $timestamp): self
     {
         $this->set('created', $timestamp);
 
@@ -83,9 +88,9 @@ class Lead extends ContentEntityBase implements LeadInterface
     {
         $fields = parent::baseFieldDefinitions($entityType);
 
-        $fields['name'] = BaseFieldDefinition::create('string')
-            ->setLabel((string) t('Name'))
-            ->setDescription((string) t('The name of the Lead entity.'))
+        $fields[self::NAME] = BaseFieldDefinition::create('string')
+            ->setLabel((string) new TranslatableMarkup('Name'))
+            ->setDescription((string) new TranslatableMarkup('The name of the Lead entity.'))
             ->setSettings([
                 'max_length' => 50,
                 'text_processing' => 0,
@@ -105,12 +110,12 @@ class Lead extends ContentEntityBase implements LeadInterface
             ->setRequired(true);
 
         $fields['created'] = BaseFieldDefinition::create('created')
-            ->setLabel((string) t('Created'))
-            ->setDescription((string) t('The time that the entity was created.'));
+            ->setLabel((string) new TranslatableMarkup('Created'))
+            ->setDescription((string) new TranslatableMarkup('The time that the entity was created.'));
 
         $fields['changed'] = BaseFieldDefinition::create('changed')
-            ->setLabel((string) t('Changed'))
-            ->setDescription((string) t('The time that the entity was last edited.'));
+            ->setLabel((string) new TranslatableMarkup('Changed'))
+            ->setDescription((string) new TranslatableMarkup('The time that the entity was last edited.'));
 
         return $fields;
     }

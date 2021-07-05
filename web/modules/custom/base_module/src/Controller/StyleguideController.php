@@ -8,7 +8,7 @@ use Drupal\Core\Controller\ControllerBase;
 
 class StyleguideController extends ControllerBase
 {
-    public function show()
+    public function show(): array
     {
         return [
             '#theme' => 'styleguide',

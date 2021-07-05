@@ -30,9 +30,15 @@ class LeadHtmlRouteProvider extends AdminHtmlRouteProvider
             $route->setDefaults([
                 '_form' => 'Drupal\contact_form\Form\LeadSettingsForm',
                 '_title' => "{$entityType->getLabel()} settings",
-            ])
-            ->setRequirement('_permission', $entityType->getAdminPermission())
-            ->setOption('_admin_route', true);
+            ]);
+
+            $adminPermission = $entityType->getAdminPermission();
+
+            if (\is_string($adminPermission)) {
+                $route->setRequirement('_permission', $adminPermission);
+            }
+
+            $route->setOption('_admin_route', true);
 
             return $route;
         }

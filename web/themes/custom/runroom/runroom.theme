@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use Drupal\Core\Site\Settings;
 
-function runroom_preprocess(array &$variables, $hook): void
+function runroom_preprocess(array &$variables): void
 {
     $variables['gtmId'] = Settings::get('gtm_id');
     $variables['theme_path'] = base_path() . $variables['directory'];
@@ -16,12 +16,12 @@ function runroom_page_attachments_alter(array &$attachments): void
     $service->truncateMetadata($attachments);
 }
 
-function runroom_theme_suggestions_html_alter(array &$suggestions, $vars, $hook): void
+function runroom_theme_suggestions_html_alter(array &$suggestions): void
 {
     suggestTemplateByNodeType($suggestions, 'html');
 }
 
-function runroom_theme_suggestions_page_alter(array &$suggestions, array $variables): void
+function runroom_theme_suggestions_page_alter(array &$suggestions): void
 {
     suggestTemplateByNodeType($suggestions, 'page');
 }

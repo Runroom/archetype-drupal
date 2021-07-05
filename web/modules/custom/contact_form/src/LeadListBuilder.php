@@ -23,7 +23,7 @@ class LeadListBuilder extends EntityListBuilder
     public function buildRow(EntityInterface $entity): array
     {
         $row['name'] = Link::createFromRoute(
-            $entity->label(),
+            $entity->label() ?? '',
             'entity.lead.edit_form',
             ['lead' => $entity->id()]
         );

@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Site\Settings;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
 
-function cookies_help(string $route_name, RouteMatchInterface $route_match): ?string
+function cookies_help(string $route_name): ?string
 {
     switch ($route_name) {
         case 'help.page.cookies':
             $output = '';
-            $output .= '<h3>' . t('About') . '</h3>';
-            $output .= '<p>' . t('Cookies Module') . '</p>';
+            $output .= '<h3>' . new TranslatableMarkup('About') . '</h3>';
+            $output .= '<p>' . new TranslatableMarkup('Cookies Module') . '</p>';
 
             return $output;
     }

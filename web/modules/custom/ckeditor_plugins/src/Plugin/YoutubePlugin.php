@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Drupal\ckeditor_plugins\Plugin;
 
 use Drupal\ckeditor\CKEditorPluginBase;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
 use Drupal\editor\Entity\Editor;
 
 /**
@@ -19,7 +20,7 @@ class YoutubePlugin extends CKEditorPluginBase
     {
         return [
             'Youtube' => [
-                'label' => t('YouTube'),
+                'label' => new TranslatableMarkup('YouTube'),
                 'image' => $this->getLibraryPath() . '/images/icon.png',
             ],
         ];
