@@ -6,16 +6,10 @@ namespace Drupal\cookies\Form;
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
-use Symfony\Component\DependencyInjection\ContainerInterface;
 
 final class CookiesForm extends FormBase
 {
-    public static function create(ContainerInterface $container)
-    {
-        return new static();
-    }
-
-    public function getFormId()
+    public function getFormId(): string
     {
         return 'cookies_form';
     }

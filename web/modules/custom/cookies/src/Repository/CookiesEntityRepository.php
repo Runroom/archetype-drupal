@@ -4,22 +4,23 @@ declare(strict_types=1);
 
 namespace Drupal\cookies\Repository;
 
-use Drupal\cookies\Entity\CookiesEntity;
+use Drupal\cookies\Entity\CookiesEntityInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 
 class CookiesEntityRepository
 {
-    private $entityTypeManager;
+    private EntityTypeManagerInterface $entityTypeManager;
 
     public function __construct(EntityTypeManagerInterface $entityTypeManager)
     {
         $this->entityTypeManager = $entityTypeManager;
     }
 
-    public function getCookiesPage(): ?CookiesEntity
+    public function getCookiesPage(): ?CookiesEntityInterface
     {
-        return $this->entityTypeManager
-            ->getStorage('cookies_entity')
-            ->load(1);
+        $storage = $this->entityTypeManager->getStorage('cookies_entity');
+
+        /** @var CookiesEntityInterface|null */
+        return $storage->load(1);
     }
 }

@@ -10,8 +10,9 @@ use Symfony\Component\HttpKernel\HttpKernelInterface;
 
 class ClientIpMiddleware implements HttpKernelInterface
 {
-    protected const COOKIE_NAME = 'client_ip';
-    protected $app;
+    private const COOKIE_NAME = 'client_ip';
+
+    private HttpKernelInterface $app;
 
     public function __construct(HttpKernelInterface $app)
     {

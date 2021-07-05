@@ -4,103 +4,117 @@ declare(strict_types=1);
 
 namespace Drupal\base_module\Service;
 
+use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\FieldableEntityInterface;
+use Drupal\Core\Field\EntityReferenceFieldItemList;
+use Drupal\Core\Field\FieldItemListInterface;
 
 class FieldManagerService
 {
+    public function getValue(string $fieldName, FieldableEntityInterface $object, string $fieldValue = 'value'): ?string
+    {
+        if (!$object->hasField($fieldName)) {
+            return null;
+        }
+
+        $values = $this->getFieldValues($object->get($fieldName), $fieldValue);
+
+        if (null === $values || [] === $values) {
+            return null;
+        }
+
+        return current($values);
+    }
+
+    /** @return string[]|null */
+    public function getValues(string $fieldName, FieldableEntityInterface $object, string $fieldValue = 'value'): ?array
+    {
+        if (!$object->hasField($fieldName)) {
+            return null;
+        }
+
+        return $this->getFieldValues($object->get($fieldName), $fieldValue);
+    }
+
+    /** @return string[]|null */
+    public function getFieldValues(FieldItemListInterface $field, string $fieldName = 'value'): ?array
+    {
+        if ($field->isEmpty()) {
+            return null;
+        }
+
+        $fieldValue = $field->getValue();
+        $values = [];
+
+        foreach ($fieldValue as $singleValue) {
+            if (isset($singleValue[$fieldName])) {
+                $values[] = $singleValue[$fieldName];
+            }
+        }
+
+        return $values;
+    }
+
+    public function getEntity(string $fieldName, FieldableEntityInterface $object): ?EntityInterface
+    {
+        if (!$object->hasField($fieldName)) {
+            return null;
+        }
+
+        $field = $object->get($fieldName);
+        \assert($field instanceof EntityReferenceFieldItemList);
+
+        $entities = $this->getFieldEntities($field);
+
+        if (null === $entities || [] === $entities) {
+            return null;
+        }
+
+        return current($entities);
+    }
+
+    /** @return EntityInterface[]|null */
+    public function getEntities(string $fieldName, FieldableEntityInterface $object): ?array
+    {
+        if (!$object->hasField($fieldName)) {
+            return null;
+        }
+
+        $field = $object->get($fieldName);
+        \assert($field instanceof EntityReferenceFieldItemList);
+
+        return $this->getFieldEntities($field);
+    }
+
+    /** @return EntityInterface[]|null */
+    public function getFieldEntities(EntityReferenceFieldItemList $field): ?array
+    {
+        if ($field->isEmpty()) {
+            return null;
+        }
+
+        return $field->referencedEntities();
+    }
+
     public function getFileUrlField(string $fieldName, FieldableEntityInterface $object): ?string
     {
-        try {
-            $field = $object->get($fieldName);
-            $fieldEntity = $field->entity;
-
-            return $fieldEntity->url();
-        } catch (\Exception $e) {
-        }
-
-        return null;
-    }
-
-    public function getValueField(string $fieldName, FieldableEntityInterface $object): ?string
-    {
-        $field = $object->get($fieldName);
-
-        if (empty($field) || $field->isEmpty()) {
+        if ($object->hasField($fieldName)) {
             return null;
         }
 
-        return $field->getValue()[0]['value'];
+        $fieldEntity = $object->get($fieldName)->entity;
+
+        return $fieldEntity->url();
     }
 
-    public function getReferencedField(string $fieldName, FieldableEntityInterface $object): ?string
+    public function getListAllowedValues(string $fieldName, FieldableEntityInterface $object): ?array
     {
-        try {
-            $field = $object->get($fieldName);
-        } catch (\Exception $e) {
+        if ($object->hasField($fieldName)) {
             return null;
         }
 
-        if (empty($field) || $field->isEmpty()) {
-            return null;
-        }
-
-        return $field->getValue()[0]['target_id'];
-    }
-
-    public function getReferencedFields(string $fieldName, FieldableEntityInterface $object): array
-    {
-        $field = $object->get($fieldName);
-
-        if (empty($field) || $field->isEmpty()) {
-            return [];
-        }
-
-        return array_map(function ($reference) {
-            return $reference['target_id'];
-        }, $field->getValue());
-    }
-
-    public function getEntityReferenced(string $fieldName, FieldableEntityInterface $object): ?object
-    {
-        try {
-            $entityReferenceList = $object->get($fieldName);
-
-            if (isset($entityReferenceList[0])) {
-                $entityReferenceItem = $entityReferenceList[0];
-
-                $entityReference = $entityReferenceItem->get('entity');
-                $entityAdapter = $entityReference->getTarget();
-
-                return $entityAdapter->getValue();
-            }
-        } catch (\Exception $exception) {
-        }
-
-        return null;
-    }
-
-    public function getEntitiesReferenced(string $fieldName, FieldableEntityInterface $object): ?array
-    {
-        $entities = [];
-
-        try {
-            $entityReferenceList = $object->get($fieldName);
-
-            foreach ($entityReferenceList as $entityReferenceItem) {
-                $entityReference = $entityReferenceItem->get('entity');
-                $entityAdapter = $entityReference->getTarget();
-                $entities[] = $entityAdapter->getValue();
-            }
-        } catch (\Exception $exception) {
-            return null;
-        }
-
-        return $entities;
-    }
-
-    public function getListAllowedValues(string $fieldName, object $object): ?array
-    {
         $fieldDefinition = $object->get($fieldName)->getFieldDefinition();
+
         if ('list_string' !== $fieldDefinition->getType()) {
             return null;
         }

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Drupal\cookies\Service;
 
-use Drupal\cookies\Entity\CookiesEntity;
+use Drupal\cookies\Entity\CookiesEntityInterface;
 use Drupal\cookies\Form\CookiesForm;
 use Drupal\cookies\Repository\CookiesEntityRepository;
 use Drupal\Core\Form\FormBuilderInterface;
@@ -12,10 +12,10 @@ use Drupal\language\ConfigurableLanguageManager;
 
 class CookiesService
 {
-    private $cookies;
-    private $languageManager;
-    private $repository;
-    private $formBuilder;
+    private array $cookies;
+    private ConfigurableLanguageManager $languageManager;
+    private CookiesEntityRepository $repository;
+    private FormBuilderInterface $formBuilder;
 
     public function __construct(
         array $cookies,
@@ -29,10 +29,15 @@ class CookiesService
         $this->formBuilder = $formBuilder;
     }
 
-    public function getCookiesPage(): ?CookiesEntity
+    public function getCookiesPage(): ?CookiesEntityInterface
     {
         $cookies = $this->repository->getCookiesPage();
-        $locale = $this->getCurrentLocale();
+
+        if (null === $cookies) {
+            return null;
+        }
+
+        $locale = $this->languageManager->getCurrentLanguage()->getId();
 
         if ($cookies->hasTranslation($locale)) {
             return $cookies->getTranslation($locale);
@@ -59,10 +64,5 @@ class CookiesService
         }
 
         return $cookies;
-    }
-
-    private function getCurrentLocale(): string
-    {
-        return $this->languageManager->getCurrentLanguage()->getId();
     }
 }

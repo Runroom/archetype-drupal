@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Drupal\contact_form;
 
 use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Access\AccessResultInterface;
 use Drupal\Core\Entity\EntityAccessControlHandler;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\EntityPublishedInterface;
@@ -12,7 +13,7 @@ use Drupal\Core\Session\AccountInterface;
 
 class LeadAccessControlHandler extends EntityAccessControlHandler
 {
-    protected function checkAccess(EntityInterface $entity, $operation, AccountInterface $account)
+    protected function checkAccess(EntityInterface $entity, $operation, AccountInterface $account): AccessResultInterface
     {
         switch ($operation) {
             case 'view':
@@ -30,7 +31,7 @@ class LeadAccessControlHandler extends EntityAccessControlHandler
         return AccessResult::neutral();
     }
 
-    protected function checkCreateAccess(AccountInterface $account, array $context, $entityBundle = null)
+    protected function checkCreateAccess(AccountInterface $account, array $context, $entityBundle = null): AccessResultInterface
     {
         return AccessResult::allowedIfHasPermission($account, 'add lead entities');
     }

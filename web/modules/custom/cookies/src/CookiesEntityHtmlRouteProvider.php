@@ -10,32 +10,38 @@ use Symfony\Component\Routing\Route;
 
 class CookiesEntityHtmlRouteProvider extends AdminHtmlRouteProvider
 {
-    public function getRoutes(EntityTypeInterface $entity_type)
+    public function getRoutes(EntityTypeInterface $entityType)
     {
-        $collection = parent::getRoutes($entity_type);
+        $collection = parent::getRoutes($entityType);
 
-        $entity_type_id = $entity_type->id();
-
-        if ($settings_form_route = $this->getSettingsFormRoute($entity_type)) {
-            $collection->add("$entity_type_id.settings", $settings_form_route);
+        if ($settings_form_route = $this->getSettingsFormRoute($entityType)) {
+            $collection->add($entityType->id() . '.settings', $settings_form_route);
         }
 
         return $collection;
     }
 
-    protected function getSettingsFormRoute(EntityTypeInterface $entity_type)
+    protected function getSettingsFormRoute(EntityTypeInterface $entityType): ?Route
     {
-        if (!$entity_type->getBundleEntityType()) {
-            $route = new Route("/admin/structure/{$entity_type->id()}/settings");
+        if (!$entityType->getBundleEntityType()) {
+            $route = new Route("/admin/structure/{$entityType->id()}/settings");
 
             $route->setDefaults([
                 '_form' => 'Drupal\cookies\Form\CookiesEntitySettingsForm',
-                '_title' => "{$entity_type->getLabel()} settings",
-            ])
-                ->setRequirement('_permission', $entity_type->getAdminPermission())
-                ->setOption('_admin_route', true);
+                '_title' => "{$entityType->getLabel()} settings",
+            ]);
+
+            $adminPermission = $entityType->getAdminPermission();
+
+            if (\is_string($adminPermission)) {
+                $route->setRequirement('_permission', $adminPermission);
+            }
+
+            $route->setOption('_admin_route', true);
 
             return $route;
         }
+
+        return null;
     }
 }

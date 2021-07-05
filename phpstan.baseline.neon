@@ -4,14 +4,3 @@ parameters:
 			message: "#^Access to an undefined property Drupal\\\\Core\\\\Field\\\\FieldItemListInterface\\:\\:\\$entity\\.$#"
 			count: 1
 			path: web/modules/custom/base_module/src/Service/FieldManagerService.php
-
-		-
-			message: "#^Access to an undefined property Drupal\\\\Core\\\\Field\\\\FieldItemListInterface\\:\\:\\$value\\.$#"
-			count: 2
-			path: web/modules/custom/contact_form/src/Entity/Lead.php
-
-		-
-			message: "#^Access to an undefined property Drupal\\\\Core\\\\Field\\\\FieldItemListInterface\\:\\:\\$value\\.$#"
-			count: 2
-			path: web/modules/custom/cookies/src/Entity/CookiesEntity.php
-

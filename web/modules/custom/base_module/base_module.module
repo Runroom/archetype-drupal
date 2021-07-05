@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-function base_module_theme($existing, $type, $theme, $path)
+function base_module_theme(): array
 {
     return [
         'styleguide' => [
@@ -13,7 +13,7 @@ function base_module_theme($existing, $type, $theme, $path)
     ];
 }
 
-function base_module_language_switch_links_alter(array &$links, $type, $path): void
+function base_module_language_switch_links_alter(array &$links): void
 {
     $node = \Drupal::routeMatch()->getParameter('node');
 

@@ -12,11 +12,11 @@ use Drupal\Core\Entity\EntityChangedInterface;
  */
 interface LeadInterface extends ContentEntityInterface, EntityChangedInterface
 {
-    public function getName(): ?string;
+    public function getName(): string;
 
-    public function setName(?string $name): self;
+    public function setName(string $name): self;
 
-    public function getCreatedTime(): ?int;
+    public function getCreatedTime(): int;
 
-    public function setCreatedTime(?int $timestamp): self;
+    public function setCreatedTime(int $timestamp): self;
 }
