@@ -10,11 +10,11 @@ use Drupal\Core\Entity\EntityPublishedInterface;
 
 interface CookiesEntityInterface extends ContentEntityInterface, EntityChangedInterface, EntityPublishedInterface
 {
-    public function getName();
+    public function getName(): string;
 
-    public function setName($name);
+    public function setName(string $name): self;
 
-    public function getCreatedTime();
+    public function getCreatedTime(): int;
 
-    public function setCreatedTime($timestamp);
+    public function setCreatedTime(int $timestamp): self;
 }

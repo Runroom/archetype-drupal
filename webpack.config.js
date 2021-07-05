@@ -12,7 +12,7 @@ Encore.setOutputPath('web/themes/custom/runroom/build/')
   .cleanupOutputBeforeBuild(['**/*', '!.gitignore'])
   .enableBuildNotifications()
   .enableSourceMaps(!Encore.isProduction())
-  .enableVersioning(Encore.isProduction())
+  .enableVersioning(false) // We do not enable versioning on Drupal
   .enableSassLoader(options => {
     options.sourceMap = true;
     options.sassOptions = { sourceComments: !Encore.isProduction() };

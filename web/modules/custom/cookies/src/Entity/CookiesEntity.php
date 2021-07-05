@@ -9,6 +9,7 @@ use Drupal\Core\Entity\EntityChangedTrait;
 use Drupal\Core\Entity\EntityPublishedTrait;
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Field\BaseFieldDefinition;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
 
 /**
  * @ContentEntityType(
@@ -53,38 +54,42 @@ class CookiesEntity extends ContentEntityBase implements CookiesEntityInterface
 {
     use EntityChangedTrait;
     use EntityPublishedTrait;
+    public const NAME = 'name';
+    public const CREATED = 'created';
+    public const CHANGED = 'changed';
+    public const FIELD_INTRODUCTION = 'field_introduction';
 
-    public function getName()
+    public function getName(): string
     {
-        return $this->get('name')->value;
+        return $this->get(self::NAME)->getString();
     }
 
-    public function setName($name)
+    public function setName(string $name): self
     {
-        $this->set('name', $name);
+        $this->set(self::NAME, $name);
 
         return $this;
     }
 
-    public function getCreatedTime()
+    public function getCreatedTime(): int
     {
-        return $this->get('created')->value;
+        return (int) $this->get(self::CREATED)->getString();
     }
 
-    public function setCreatedTime($timestamp)
+    public function setCreatedTime(int $timestamp): self
     {
-        $this->set('created', $timestamp);
+        $this->set(self::CREATED, $timestamp);
 
         return $this;
     }
 
-    public static function baseFieldDefinitions(EntityTypeInterface $entity_type)
+    public static function baseFieldDefinitions(EntityTypeInterface $entityType): array
     {
-        $fields = parent::baseFieldDefinitions($entity_type);
+        $fields = parent::baseFieldDefinitions($entityType);
 
-        $fields['name'] = BaseFieldDefinition::create('string')
-            ->setLabel((string) t('Name'))
-            ->setDescription((string) t('The name of the Cookies entity entity.'))
+        $fields[self::NAME] = BaseFieldDefinition::create('string')
+            ->setLabel((string) new TranslatableMarkup('Name'))
+            ->setDescription((string) new TranslatableMarkup('The name of the Cookies entity entity.'))
             ->setSettings([
                 'max_length' => 50,
                 'text_processing' => 0,
@@ -104,13 +109,13 @@ class CookiesEntity extends ContentEntityBase implements CookiesEntityInterface
             ->setDisplayConfigurable('view', true)
             ->setRequired(true);
 
-        $fields['created'] = BaseFieldDefinition::create('created')
-            ->setLabel((string) t('Created'))
-            ->setDescription((string) t('The time that the entity was created.'));
+        $fields[self::CREATED] = BaseFieldDefinition::create('created')
+            ->setLabel((string) new TranslatableMarkup('Created'))
+            ->setDescription((string) new TranslatableMarkup('The time that the entity was created.'));
 
-        $fields['changed'] = BaseFieldDefinition::create('changed')
-            ->setLabel((string) t('Changed'))
-            ->setDescription((string) t('The time that the entity was last edited.'));
+        $fields[self::CHANGED] = BaseFieldDefinition::create('changed')
+            ->setLabel((string) new TranslatableMarkup('Changed'))
+            ->setDescription((string) new TranslatableMarkup('The time that the entity was last edited.'));
 
         return $fields;
     }

@@ -12,9 +12,9 @@ use Drupal\Core\Theme\ThemeNegotiatorInterface;
 
 class EntityEmbedPreviewThemeNegotiator implements ThemeNegotiatorInterface
 {
-    protected $user;
-    protected $configFactory;
-    protected $entityTypeManager;
+    private AccountInterface $user;
+    private ConfigFactoryInterface $configFactory;
+    private EntityTypeManagerInterface $entityTypeManager;
 
     public function __construct(
         AccountInterface $user,

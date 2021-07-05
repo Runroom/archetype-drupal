@@ -17,11 +17,11 @@ class LeadSettingsForm extends FormBase
         return 'lead_settings';
     }
 
-    public function submitForm(array &$form, FormStateInterface $form_state): void
+    public function submitForm(array &$form, FormStateInterface $formState): void
     {
     }
 
-    public function buildForm(array $form, FormStateInterface $form_state): array
+    public function buildForm(array $form, FormStateInterface $formState): array
     {
         $form['lead_settings']['#markup'] = 'Settings form for Lead entities. Manage field settings here.';
 

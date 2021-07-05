@@ -10,17 +10,17 @@ use Drupal\Core\Link;
 
 class CookiesEntityListBuilder extends EntityListBuilder
 {
-    public function buildHeader()
+    public function buildHeader(): array
     {
         $header['name'] = $this->t('Name');
 
         return $header + parent::buildHeader();
     }
 
-    public function buildRow(EntityInterface $entity)
+    public function buildRow(EntityInterface $entity): array
     {
         $row['name'] = Link::createFromRoute(
-            $entity->label(),
+            $entity->label() ?? '',
             'entity.cookies_entity.edit_form',
             ['cookies_entity' => $entity->id()]
         );

@@ -18,8 +18,9 @@ class MetadataService
         'twitter:title' => 70,
         'twitter:description' => 200,
     ];
-    protected $requestStack;
-    protected $configFactory;
+
+    private RequestStack $requestStack;
+    private ConfigFactory $configFactory;
 
     public function __construct(
         RequestStack $requestStack,
@@ -41,13 +42,20 @@ class MetadataService
         }
     }
 
+    /** @throws \RuntimeException if there is no request */
     public function attachMetadata(
         array &$page,
         string $title,
         string $description,
         string $imageUrl = null
     ): void {
-        $url = $this->requestStack->getCurrentRequest()->getRequestUri();
+        $request = $this->requestStack->getCurrentRequest();
+
+        if (null === $request) {
+            throw new \RuntimeException('There is no request.');
+        }
+
+        $requestUri = $request->getRequestUri();
 
         $title = $title . ' | ' . $this->configFactory->get('system.site')->get('name');
         $description = strip_tags($description);
@@ -56,12 +64,12 @@ class MetadataService
             'title' => $title,
             'description' => $description,
             'og:type' => 'website',
-            'og:url' => $url,
+            'og:url' => $requestUri,
             'og:title' => $title,
             'og:description' => $description,
             'og:image' => $imageUrl,
             'twitter:card' => 'summary',
-            'twitter:url' => $url,
+            'twitter:url' => $requestUri,
             'twitter:title' => $title,
             'twitter:description' => $description,
             'twitter:image' => $imageUrl,
