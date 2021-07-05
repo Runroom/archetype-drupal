@@ -5,9 +5,9 @@ declare(strict_types=1);
 use Drupal\Core\Site\Settings;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
 
-function cookies_help(string $route_name): ?string
+function cookies_help(string $routeName): ?string
 {
-    switch ($route_name) {
+    switch ($routeName) {
         case 'help.page.cookies':
             $output = '';
             $output .= '<h3>' . new TranslatableMarkup('About') . '</h3>';

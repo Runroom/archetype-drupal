@@ -15,7 +15,7 @@ final class CookiesForm extends FormBase
         return 'cookies_form';
     }
 
-    public function buildForm(array $form, FormStateInterface $form_state): array
+    public function buildForm(array $form, FormStateInterface $formState): array
     {
         $form['mandatory'] = [
             '#type' => 'checkbox',
