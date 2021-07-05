@@ -11,6 +11,6 @@ class DemoTest extends TestCase
     /** @test */
     public function itWorks(): void
     {
-        $this->assertTrue(true);
+        self::assertTrue(true);
     }
 }

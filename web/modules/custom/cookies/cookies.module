@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use Drupal\cookies\Entity\CookiesEntity;
 use Drupal\Core\Site\Settings;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
 
@@ -37,11 +38,13 @@ function cookies_page_attachments_alter(array &$page): void
     if ('cookies.page' === \Drupal::routeMatch()->getRouteName()) {
         $repository = \Drupal::service('cookies.repository.cookies_entity');
         $cookies = $repository->getCookiesPage();
-        $title = $cookies->label() ?: '';
-        $description = $cookies->get('field_introduction')->value ?: '';
 
         $service = \Drupal::service('base_module.service.metadata');
-        $service->attachMetadata($page, $title, $description);
+        $service->attachMetadata(
+            $page,
+            $cookies->label() ?? '',
+            $cookies->get(CookiesEntity::FIELD_INTRODUCTION)->getString() ?? ''
+        );
 
         $page['#attached']['html_head'][] = [[
             '#tag' => 'meta',
