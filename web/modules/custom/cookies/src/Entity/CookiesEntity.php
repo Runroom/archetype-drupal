@@ -54,6 +54,7 @@ class CookiesEntity extends ContentEntityBase implements CookiesEntityInterface
 {
     use EntityChangedTrait;
     use EntityPublishedTrait;
+
     public const NAME = 'name';
     public const CREATED = 'created';
     public const CHANGED = 'changed';
