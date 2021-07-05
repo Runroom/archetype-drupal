@@ -26,7 +26,7 @@ class CookiesEntityAccessControlHandler extends EntityAccessControlHandler
         return AccessResult::neutral();
     }
 
-    protected function checkCreateAccess(AccountInterface $account, array $context, $entity_bundle = null): AccessResultInterface
+    protected function checkCreateAccess(AccountInterface $account, array $context, $entityBundle = null): AccessResultInterface
     {
         return AccessResult::allowedIfHasPermission($account, 'add cookies entity entities');
     }
