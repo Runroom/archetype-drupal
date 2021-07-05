@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Drupal\base_module\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
 
 class StyleguideController extends ControllerBase
 {
@@ -12,7 +13,7 @@ class StyleguideController extends ControllerBase
     {
         return [
             '#theme' => 'styleguide',
-            '#title' => $this->t('Styleguide'),
+            '#title' => new TranslatableMarkup('Styleguide'),
         ];
     }
 }
