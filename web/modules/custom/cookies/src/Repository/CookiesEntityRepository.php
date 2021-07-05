@@ -20,7 +20,9 @@ class CookiesEntityRepository
     {
         $storage = $this->entityTypeManager->getStorage('cookies_entity');
 
-        /** @var CookiesEntityInterface|null */
-        return $storage->load(1);
+        $cookiesEntity = $storage->load(1);
+        \assert($cookiesEntity instanceof CookiesEntityInterface || null === $cookiesEntity);
+
+        return $cookiesEntity;
     }
 }

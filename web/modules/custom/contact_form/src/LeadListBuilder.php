@@ -7,6 +7,7 @@ namespace Drupal\contact_form;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\EntityListBuilder;
 use Drupal\Core\Link;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
 
 /**
  * @ingroup contact_form
@@ -15,7 +16,7 @@ class LeadListBuilder extends EntityListBuilder
 {
     public function buildHeader(): array
     {
-        $header['name'] = $this->t('contact_form.name');
+        $header['name'] = new TranslatableMarkup('contact_form.name');
 
         return $header + parent::buildHeader();
     }
