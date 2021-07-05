@@ -13,19 +13,15 @@ class CookiesEntityListBuilder extends EntityListBuilder
 {
     public function buildHeader(): array
     {
-        $header['name'] = new TranslatableMarkup('Name');
-
-        return $header + parent::buildHeader();
+        return [
+            'name' => new TranslatableMarkup('Name'),
+        ] + parent::buildHeader();
     }
 
     public function buildRow(EntityInterface $entity): array
     {
-        $row['name'] = Link::createFromRoute(
-            $entity->label() ?? '',
-            'entity.cookies_entity.edit_form',
-            ['cookies_entity' => $entity->id()]
-        );
-
-        return $row + parent::buildRow($entity);
+        return [
+            'name' => Link::createFromRoute($entity->label() ?? '', 'entity.cookies_entity.edit_form', ['cookies_entity' => $entity->id()]),
+        ] + parent::buildRow($entity);
     }
 }

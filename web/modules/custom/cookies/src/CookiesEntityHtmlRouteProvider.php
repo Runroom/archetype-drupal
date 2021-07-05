@@ -13,9 +13,10 @@ class CookiesEntityHtmlRouteProvider extends AdminHtmlRouteProvider
     public function getRoutes(EntityTypeInterface $entityType)
     {
         $collection = parent::getRoutes($entityType);
+        $settingsFormRoute = $this->getSettingsFormRoute($entityType);
 
-        if ($settings_form_route = $this->getSettingsFormRoute($entityType)) {
-            $collection->add($entityType->id() . '.settings', $settings_form_route);
+        if (null !== $settingsFormRoute) {
+            $collection->add($entityType->id() . '.settings', $settingsFormRoute);
         }
 
         return $collection;
@@ -23,7 +24,7 @@ class CookiesEntityHtmlRouteProvider extends AdminHtmlRouteProvider
 
     protected function getSettingsFormRoute(EntityTypeInterface $entityType): ?Route
     {
-        if (!$entityType->getBundleEntityType()) {
+        if (null !== $entityType->getBundleEntityType()) {
             $route = new Route("/admin/structure/{$entityType->id()}/settings");
 
             $route->setDefaults([

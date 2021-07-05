@@ -16,19 +16,15 @@ class LeadListBuilder extends EntityListBuilder
 {
     public function buildHeader(): array
     {
-        $header['name'] = new TranslatableMarkup('contact_form.name');
-
-        return $header + parent::buildHeader();
+        return [
+            'name' => new TranslatableMarkup('contact_form.name'),
+        ] + parent::buildHeader();
     }
 
     public function buildRow(EntityInterface $entity): array
     {
-        $row['name'] = Link::createFromRoute(
-            $entity->label() ?? '',
-            'entity.lead.edit_form',
-            ['lead' => $entity->id()]
-        );
-
-        return $row + parent::buildRow($entity);
+        return [
+            'name' => Link::createFromRoute($entity->label() ?? '', 'entity.lead.edit_form', ['lead' => $entity->id()]),
+        ] + parent::buildRow($entity);
     }
 }

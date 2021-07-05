@@ -70,6 +70,7 @@
         "mglaman/phpstan-drupal": "0.12.10",
         "phpspec/prophecy-phpunit": "2.0.1",
         "phpstan/phpstan": "0.12.91",
+        "phpstan/phpstan-strict-rules": "0.12.10",
         "phpunit/phpunit": "9.5.6",
         "symfony/phpunit-bridge": "5.3.3"
     },

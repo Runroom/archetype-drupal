@@ -28,7 +28,9 @@ function runroom_theme_suggestions_page_alter(array &$suggestions): void
 
 function suggestTemplateByNodeType(array &$suggestions, string $templateType): void
 {
-    if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $node = \Drupal::routeMatch()->getParameter('node');
+
+    if (null !== $node) {
         $suggestions[] = $templateType . '__' . $node->getType();
     }
 }
