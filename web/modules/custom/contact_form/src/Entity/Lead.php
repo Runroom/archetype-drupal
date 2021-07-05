@@ -74,12 +74,12 @@ class Lead extends ContentEntityBase implements LeadInterface
 
     public function getCreatedTime(): int
     {
-        return (int) $this->get('created')->getString();
+        return (int) $this->get(self::CREATED)->getString();
     }
 
     public function setCreatedTime(int $timestamp): self
     {
-        $this->set('created', $timestamp);
+        $this->set(self::CREATED, $timestamp);
 
         return $this;
     }
@@ -109,11 +109,11 @@ class Lead extends ContentEntityBase implements LeadInterface
             ->setDisplayConfigurable('view', true)
             ->setRequired(true);
 
-        $fields['created'] = BaseFieldDefinition::create('created')
+        $fields[self::CREATED] = BaseFieldDefinition::create('created')
             ->setLabel((string) new TranslatableMarkup('Created'))
             ->setDescription((string) new TranslatableMarkup('The time that the entity was created.'));
 
-        $fields['changed'] = BaseFieldDefinition::create('changed')
+        $fields[self::CHANGED] = BaseFieldDefinition::create('changed')
             ->setLabel((string) new TranslatableMarkup('Changed'))
             ->setDescription((string) new TranslatableMarkup('The time that the entity was last edited.'));
 
