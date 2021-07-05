@@ -7,12 +7,13 @@ namespace Drupal\cookies;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\EntityListBuilder;
 use Drupal\Core\Link;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
 
 class CookiesEntityListBuilder extends EntityListBuilder
 {
     public function buildHeader(): array
     {
-        $header['name'] = $this->t('Name');
+        $header['name'] = new TranslatableMarkup('Name');
 
         return $header + parent::buildHeader();
     }

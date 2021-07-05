@@ -2,13 +2,15 @@
 
 declare(strict_types=1);
 
+use Drupal\Core\StringTranslation\TranslatableMarkup;
+
 function contact_form_help(string $routeName): ?string
 {
     switch ($routeName) {
         case 'help.page.contact_form':
             $output = '';
-            $output .= '<h3>' . t('About') . '</h3>';
-            $output .= '<p>' . t('Contact Form') . '</p>';
+            $output .= '<h3>' . new TranslatableMarkup('About') . '</h3>';
+            $output .= '<p>' . new TranslatableMarkup('Contact Form') . '</p>';
 
             return $output;
         default:

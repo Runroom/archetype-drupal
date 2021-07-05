@@ -8,6 +8,7 @@ use Drupal\cookies\Controller\CookiesController;
 use Drupal\Core\Cache\Cache;
 use Drupal\Core\Entity\ContentEntityForm;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
 
 final class CookiesEntityForm extends ContentEntityForm
 {
@@ -19,14 +20,14 @@ final class CookiesEntityForm extends ContentEntityForm
 
         switch ($status) {
             case SAVED_NEW:
-                $this->messenger()->addMessage($this->t('Created the %label Cookies entity.', [
+                $this->messenger()->addMessage(new TranslatableMarkup('Created the %label Cookies entity.', [
                     '%label' => $entity->label(),
                 ]));
 
                 break;
 
             default:
-                $this->messenger()->addMessage($this->t('Saved the %label Cookies entity.', [
+                $this->messenger()->addMessage(new TranslatableMarkup('Saved the %label Cookies entity.', [
                     '%label' => $entity->label(),
                 ]));
         }

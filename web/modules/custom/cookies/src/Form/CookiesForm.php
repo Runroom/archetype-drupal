@@ -6,6 +6,7 @@ namespace Drupal\cookies\Form;
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
 
 final class CookiesForm extends FormBase
 {
@@ -18,14 +19,14 @@ final class CookiesForm extends FormBase
     {
         $form['mandatory'] = [
             '#type' => 'checkbox',
-            '#title' => $this->t('cookies.mandatory_cookies.label'),
+            '#title' => new TranslatableMarkup('cookies.mandatory_cookies.label'),
             '#attributes' => ['disabled' => true],
             '#default_value' => true,
         ];
 
         $form['performance'] = [
             '#type' => 'checkbox',
-            '#title' => $this->t('cookies.performance_cookies.label'),
+            '#title' => new TranslatableMarkup('cookies.performance_cookies.label'),
             '#attributes' => [
                 'class' => ['js-cookies-performance-checkbox'],
             ],
@@ -33,7 +34,7 @@ final class CookiesForm extends FormBase
 
         $form['targeting'] = [
             '#type' => 'checkbox',
-            '#title' => $this->t('cookies.targeting_cookies.label'),
+            '#title' => new TranslatableMarkup('cookies.targeting_cookies.label'),
             '#attributes' => [
                 'class' => ['js-cookies-targeting-checkbox'],
             ],
@@ -41,7 +42,7 @@ final class CookiesForm extends FormBase
 
         $form['submit'] = [
             '#type' => 'submit',
-            '#value' => $this->t('cookies.save_settings'),
+            '#value' => new TranslatableMarkup('cookies.save_settings'),
             '#attributes' => [
                 'class' => ['js-cookies-save-preferences'],
             ],
