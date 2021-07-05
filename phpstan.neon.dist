@@ -1,6 +1,7 @@
 includes:
     - phpstan.baseline.neon
     - vendor/mglaman/phpstan-drupal/extension.neon
+    - vendor/phpstan/phpstan-strict-rules/rules.neon
 
 parameters:
     level: 8
