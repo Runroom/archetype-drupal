@@ -23,7 +23,7 @@ set('bin/yarn', function () {
 });
 
 set('bin/composer', function () {
-    return locateBinaryPath('composer');
+    return '{{bin/php}} ' . locateBinaryPath('composer');
 });
 
 // @todo: Remove this once all projects runs on php 8.0
