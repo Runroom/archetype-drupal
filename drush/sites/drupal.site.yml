@@ -1,5 +1,5 @@
 local:
-  root: /srv/app/web
+  root: /usr/app/web
 
 development:
   host: drupal.runroom.dev

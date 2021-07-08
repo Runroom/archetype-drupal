@@ -8,9 +8,6 @@ use Drupal\Core\Entity\ContentEntityForm;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
 
-/**
- * @ingroup contact_form
- */
 class LeadForm extends ContentEntityForm
 {
     public function save(array $form, FormStateInterface $formState): int

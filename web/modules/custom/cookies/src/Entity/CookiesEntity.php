@@ -19,17 +19,16 @@ use Drupal\Core\StringTranslation\TranslatableMarkup;
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
  *     "list_builder" = "Drupal\cookies\CookiesEntityListBuilder",
  *     "views_data" = "Drupal\cookies\Entity\CookiesEntityViewsData",
- *     "translation" = "Drupal\cookies\CookiesEntityTranslationHandler",
+ *     "access" = "Drupal\cookies\CookiesEntityAccessControlHandler",
  *     "form" = {
  *       "default" = "Drupal\cookies\Form\CookiesEntityForm",
  *       "add" = "Drupal\cookies\Form\CookiesEntityForm",
  *       "edit" = "Drupal\cookies\Form\CookiesEntityForm",
- *       "delete" = "Drupal\cookies\Form\CookiesEntityDeleteForm",
+ *       "delete" = "Drupal\cookies\Form\CookiesEntityDeleteForm"
  *     },
  *     "route_provider" = {
- *       "html" = "Drupal\cookies\CookiesEntityHtmlRouteProvider",
- *     },
- *     "access" = "Drupal\cookies\CookiesEntityAccessControlHandler",
+ *       "html" = "Drupal\Core\Entity\Routing\AdminHtmlRouteProvider"
+ *     }
  *   },
  *   base_table = "cookies_entity",
  *   translatable = TRUE,
@@ -38,16 +37,16 @@ use Drupal\Core\StringTranslation\TranslatableMarkup;
  *     "id" = "id",
  *     "label" = "name",
  *     "uuid" = "uuid",
- *     "langcode" = "langcode",
+ *     "langcode" = "langcode"
  *   },
  *   links = {
- *     "canonical" = "/admin/structure/cookies_entity/{cookies_entity}",
- *     "add-form" = "/admin/structure/cookies_entity/add",
- *     "edit-form" = "/admin/structure/cookies_entity/{cookies_entity}/edit",
- *     "delete-form" = "/admin/structure/cookies_entity/{cookies_entity}/delete",
- *     "collection" = "/admin/structure/cookies_entity",
+ *     "add-form" = "/admin/content/cookies_entity/add",
+ *     "canonical" = "/cookies_entity/{cookies_entity}",
+ *     "edit-form" = "/admin/content/cookies_entity/{cookies_entity}/edit",
+ *     "delete-form" = "/admin/content/cookies_entity/{cookies_entity}/delete",
+ *     "collection" = "/admin/content/cookies_entity"
  *   },
- *   field_ui_base_route = "cookies_entity.settings"
+ *   field_ui_base_route = "entity.cookies_entity.settings"
  * )
  */
 class CookiesEntity extends ContentEntityBase implements CookiesEntityInterface

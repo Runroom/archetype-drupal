@@ -7,9 +7,6 @@ namespace Drupal\contact_form\Form;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
-/**
- * @ingroup contact_form
- */
 class LeadSettingsForm extends FormBase
 {
     public function getFormId(): string

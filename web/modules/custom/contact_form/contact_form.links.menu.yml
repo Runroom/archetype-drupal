@@ -1,5 +1,5 @@
-lead.admin.structure.settings:
+entity.lead.settings:
     title: 'Lead settings'
     description: 'Configure Lead entities'
-    route_name: lead.settings
+    route_name: entity.lead.settings
     parent: system.admin_structure

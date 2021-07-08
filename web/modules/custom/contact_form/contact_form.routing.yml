@@ -1,0 +1,7 @@
+entity.lead.settings:
+    path: 'admin/structure/lead'
+    defaults:
+        _form: '\Drupal\lead\Form\LeadSettingsForm'
+        _title: 'Academy'
+    requirements:
+        _permission: 'administer lead entities'
