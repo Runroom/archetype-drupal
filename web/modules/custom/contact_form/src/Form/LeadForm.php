@@ -8,16 +8,13 @@ use Drupal\Core\Entity\ContentEntityForm;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
 
-/**
- * @ingroup contact_form
- */
 class LeadForm extends ContentEntityForm
 {
-    public function save(array $form, FormStateInterface $formState): int
+    public function save(array $form, FormStateInterface $form_state): int
     {
         $entity = $this->entity;
 
-        $status = parent::save($form, $formState);
+        $status = parent::save($form, $form_state);
 
         switch ($status) {
             case SAVED_NEW:
@@ -32,7 +29,7 @@ class LeadForm extends ContentEntityForm
                 ]));
         }
 
-        $formState->setRedirect('entity.lead.canonical', ['lead' => $entity->id()]);
+        $form_state->setRedirect('entity.lead.canonical', ['lead' => $entity->id()]);
 
         return $status;
     }

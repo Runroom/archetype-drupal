@@ -9,9 +9,6 @@ use Drupal\Core\Entity\EntityListBuilder;
 use Drupal\Core\Link;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
 
-/**
- * @ingroup contact_form
- */
 class LeadListBuilder extends EntityListBuilder
 {
     public function buildHeader(): array
