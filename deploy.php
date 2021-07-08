@@ -34,7 +34,7 @@ set('bin/php', function () {
 task('app', function (): void {
     cd('{{release_path}}');
 
-    run('{{bin/php}} {{bin/composer}} symfony:dump-env prod');
+    run('{{bin/composer}} symfony:dump-env prod');
     run('{{bin/php}} {{drush}} deploy --yes');
     run('{{bin/php}} {{drush}} language-import');
 })->setPrivate();
