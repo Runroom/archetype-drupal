@@ -29,7 +29,7 @@ set('bin/composer', function () {
 
 // @todo: Remove this once all projects runs on php 8.0
 set('bin/php', function () {
-    return locateBinaryPath('which php8.0');
+    return locateBinaryPath('php8.0');
 });
 
 task('app', function (): void {
