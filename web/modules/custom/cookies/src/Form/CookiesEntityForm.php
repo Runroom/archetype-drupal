@@ -12,11 +12,11 @@ use Drupal\Core\StringTranslation\TranslatableMarkup;
 
 final class CookiesEntityForm extends ContentEntityForm
 {
-    public function save(array $form, FormStateInterface $formState): int
+    public function save(array $form, FormStateInterface $form_state): int
     {
         $entity = $this->entity;
 
-        $status = parent::save($form, $formState);
+        $status = parent::save($form, $form_state);
 
         switch ($status) {
             case SAVED_NEW:
@@ -34,7 +34,7 @@ final class CookiesEntityForm extends ContentEntityForm
 
         Cache::invalidateTags(CookiesController::COOKIES_CACHE_TAGS);
 
-        $formState->setRedirect('entity.cookies_entity.canonical', ['cookies_entity' => $entity->id()]);
+        $form_state->setRedirect('entity.cookies_entity.canonical', ['cookies_entity' => $entity->id()]);
 
         return $status;
     }

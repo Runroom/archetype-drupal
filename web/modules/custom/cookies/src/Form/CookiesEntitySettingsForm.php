@@ -14,7 +14,7 @@ class CookiesEntitySettingsForm extends FormBase
         return 'cookiesentity_settings';
     }
 
-    public function submitForm(array &$form, FormStateInterface $formState): void
+    public function submitForm(array &$form, FormStateInterface $form_state): void
     {
     }
 

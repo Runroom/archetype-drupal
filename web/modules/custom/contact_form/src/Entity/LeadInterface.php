@@ -7,9 +7,6 @@ namespace Drupal\contact_form\Entity;
 use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\Entity\EntityChangedInterface;
 
-/**
- * @ingroup contact_form
- */
 interface LeadInterface extends ContentEntityInterface, EntityChangedInterface
 {
     public function getName(): string;

@@ -1,7 +1,7 @@
-lead.settings_tab:
-    route_name: lead.settings
+entity.lead.settings:
     title: 'Settings'
-    base_route: lead.settings
+    route_name: entity.lead.settings
+    base_route: entity.lead.settings
 
 entity.lead.canonical:
     route_name: entity.lead.canonical

@@ -11,8 +11,6 @@ use Drupal\Core\Field\BaseFieldDefinition;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
 
 /**
- * @ingroup contact_form
- *
  * @ContentEntityType(
  *   id = "lead",
  *   label = @Translation("Lead"),
@@ -20,17 +18,16 @@ use Drupal\Core\StringTranslation\TranslatableMarkup;
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
  *     "list_builder" = "Drupal\contact_form\LeadListBuilder",
  *     "views_data" = "Drupal\contact_form\Entity\LeadViewsData",
- *
+ *     "access" = "Drupal\contact_form\LeadAccessControlHandler",
  *     "form" = {
  *       "default" = "Drupal\contact_form\Form\LeadForm",
  *       "add" = "Drupal\contact_form\Form\LeadForm",
  *       "edit" = "Drupal\contact_form\Form\LeadForm",
- *       "delete" = "Drupal\contact_form\Form\LeadDeleteForm",
+ *       "delete" = "Drupal\contact_form\Form\LeadDeleteForm"
  *     },
  *     "route_provider" = {
- *       "html" = "Drupal\contact_form\LeadHtmlRouteProvider",
- *     },
- *     "access" = "Drupal\contact_form\LeadAccessControlHandler",
+ *       "html" = "Drupal\Core\Entity\Routing\AdminHtmlRouteProvider"
+ *     }
  *   },
  *   base_table = "lead",
  *   translatable = FALSE,
@@ -40,16 +37,16 @@ use Drupal\Core\StringTranslation\TranslatableMarkup;
  *     "label" = "name",
  *     "uuid" = "uuid",
  *     "langcode" = "langcode",
- *     "published" = "status",
+ *     "published" = "status"
  *   },
  *   links = {
- *     "canonical" = "/admin/structure/lead/{lead}",
- *     "add-form" = "/admin/structure/lead/add",
- *     "edit-form" = "/admin/structure/lead/{lead}/edit",
- *     "delete-form" = "/admin/structure/lead/{lead}/delete",
- *     "collection" = "/admin/structure/lead",
+ *     "canonical" = "/admin/content/lead/{lead}",
+ *     "add-form" = "/admin/content/lead/add",
+ *     "edit-form" = "/admin/content/lead/{lead}/edit",
+ *     "delete-form" = "/admin/content/lead/{lead}/delete",
+ *     "collection" = "/admin/content/lead"
  *   },
- *   field_ui_base_route = "lead.settings"
+ *   field_ui_base_route = "entity.lead.settings"
  * )
  */
 class Lead extends ContentEntityBase implements LeadInterface
