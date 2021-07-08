@@ -26,7 +26,7 @@ halt:
 	docker-compose stop
 
 destroy:
-	docker-compose down --remove-orphans --volumes
+	docker-compose down --remove-orphans --volumes --rmi all
 
 ssh:
 	docker-compose exec app /bin/bash

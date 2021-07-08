@@ -39,7 +39,7 @@ class ContactForm extends FormBase
         return 'contact_form';
     }
 
-    public function buildForm(array $form, FormStateInterface $formState): array
+    public function buildForm(array $form, FormStateInterface $form_state): array
     {
         $form['name'] = [
             '#type' => 'textfield',
@@ -125,7 +125,7 @@ class ContactForm extends FormBase
         return $form;
     }
 
-    public function submitForm(array &$form, FormStateInterface $formState): void
+    public function submitForm(array &$form, FormStateInterface $form_state): void
     {
         $lead = Lead::create();
 

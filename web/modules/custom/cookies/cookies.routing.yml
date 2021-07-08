@@ -2,7 +2,7 @@ entity.cookies_entity.settings:
     path: 'admin/structure/cookies_entity'
     defaults:
         _form: '\Drupal\cookies\Form\CookiesEntitySettingsForm'
-        _title: 'Academy'
+        _title: 'Cookies entity'
     requirements:
         _permission: 'administer cookies entity entities'
 
