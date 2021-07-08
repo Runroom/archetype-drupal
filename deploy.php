@@ -19,12 +19,17 @@ set('drush', '{{release_path}}/vendor/bin/drush');
 set('composer_options', '{{composer_action}} --prefer-dist --apcu-autoloader --no-progress --no-interaction --no-dev');
 
 set('bin/yarn', function () {
-    return run('which yarn');
+    return locateBinaryPath('yarn');
+});
+
+// @todo: Remove this once all projects runs on php 8.0
+set('bin/composer', function () {
+    return '{{bin/php}} ' . locateBinaryPath('composer');
 });
 
 // @todo: Remove this once all projects runs on php 8.0
 set('bin/php', function () {
-    return run('which php8.0');
+    return locateBinaryPath('which php8.0');
 });
 
 task('app', function (): void {
