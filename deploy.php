@@ -22,6 +22,11 @@ set('bin/yarn', function () {
     return run('which yarn');
 });
 
+// @todo: Remove this once all projects runs on php 8.0
+set('bin/php', function () {
+    return run('which php8.0');
+});
+
 task('app', function (): void {
     cd('{{release_path}}');
 
