@@ -67,9 +67,9 @@
         "friendsofphp/php-cs-fixer": "3.0.0",
         "kint-php/kint": "3.3.0",
         "kint-php/kint-twig": "3.0.0",
-        "mglaman/phpstan-drupal": "0.12.10",
+        "mglaman/phpstan-drupal": "0.12.12",
         "phpspec/prophecy-phpunit": "2.0.1",
-        "phpstan/phpstan": "0.12.91",
+        "phpstan/phpstan": "0.12.94",
         "phpstan/phpstan-strict-rules": "0.12.10",
         "phpunit/phpunit": "9.5.6",
         "symfony/phpunit-bridge": "5.3.3"
