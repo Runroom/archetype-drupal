@@ -24,7 +24,7 @@
         "drupal/drush_language": "1.0.0-rc4",
         "drupal/editor_advanced_link": "2.0.0",
         "drupal/entity_reference_revisions": "1.9.0",
-        "drupal/field_group": "3.1.0",
+        "drupal/field_group": "3.2.0",
         "drupal/gin": "3.0.0-alpha36",
         "drupal/gin_toolbar": "1.0.0-beta18",
         "drupal/hreflang": "1.4.0",
