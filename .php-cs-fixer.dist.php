@@ -11,7 +11,7 @@ $finder = Finder::create()
         __DIR__ . '/web/themes/custom',
         __DIR__ . '/tests',
     ])
-    ->exclude(['files'])
+    ->exclude(['files', 'simpletest'])
     ->name('*.php')
     ->name('*.module')
     ->name('*.theme');

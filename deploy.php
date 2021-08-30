@@ -22,15 +22,6 @@ set('bin/yarn', function () {
     return locateBinaryPath('yarn');
 });
 
-set('bin/composer', function () {
-    return '{{bin/php}} ' . locateBinaryPath('composer');
-});
-
-// @todo: Remove this once all projects runs on php 8.0
-set('bin/php', function () {
-    return locateBinaryPath('php8.0');
-});
-
 task('app', function (): void {
     cd('{{release_path}}');
 
