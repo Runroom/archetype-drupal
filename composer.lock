@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2f09cbc61d5c0f083d330d06793578ea",
+    "content-hash": "e9238af5f5224af1f592d5cd1746ed65",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -6692,16 +6692,16 @@
         },
         {
             "name": "symfony/flex",
-            "version": "v1.14.8",
+            "version": "v1.15.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/flex.git",
-                "reference": "6be2577d721f49cb19f1af0659c1f7f0f403b038"
+                "reference": "c2605222ee4984899bdc93b3e56f502fc79bafc6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/flex/zipball/6be2577d721f49cb19f1af0659c1f7f0f403b038",
-                "reference": "6be2577d721f49cb19f1af0659c1f7f0f403b038",
+                "url": "https://api.github.com/repos/symfony/flex/zipball/c2605222ee4984899bdc93b3e56f502fc79bafc6",
+                "reference": "c2605222ee4984899bdc93b3e56f502fc79bafc6",
                 "shasum": ""
             },
             "require": {
@@ -6740,7 +6740,7 @@
             "description": "Composer plugin for Symfony",
             "support": {
                 "issues": "https://github.com/symfony/flex/issues",
-                "source": "https://github.com/symfony/flex/tree/v1.14.8"
+                "source": "https://github.com/symfony/flex/tree/v1.15.1"
             },
             "funding": [
                 {
@@ -6756,7 +6756,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-08-30T10:06:58+00:00"
+            "time": "2021-08-30T14:55:05+00:00"
         },
         {
             "name": "symfony/http-client-contracts",
