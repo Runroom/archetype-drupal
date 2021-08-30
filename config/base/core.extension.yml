@@ -9,7 +9,6 @@ module:
   client_ip: 0
   clientside_validation: 0
   clientside_validation_jquery: 0
-  config_filter: 0
   config_split: 0
   config_translation: 0
   contact: 0
