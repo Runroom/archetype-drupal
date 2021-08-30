@@ -101,9 +101,6 @@
     "drupal/clientside_validation": {
         "version": "3.0.0-rc4"
     },
-    "drupal/config_filter": {
-        "version": "1.8.0"
-    },
     "drupal/config_split": {
         "version": "1.7.0"
     },
