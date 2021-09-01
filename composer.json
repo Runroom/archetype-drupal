@@ -69,7 +69,7 @@
         "kint-php/kint-twig": "3.0.0",
         "mglaman/phpstan-drupal": "0.12.13",
         "phpspec/prophecy-phpunit": "2.0.1",
-        "phpstan/phpstan": "0.12.96",
+        "phpstan/phpstan": "0.12.97",
         "phpstan/phpstan-strict-rules": "0.12.11",
         "phpunit/phpunit": "9.5.9",
         "symfony/phpunit-bridge": "5.3.7"
