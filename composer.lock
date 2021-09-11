@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "110d5c8bdb6926eb87875c7ed7cd810b",
+    "content-hash": "c6ea1f968ae05f4c1acc1fad1912fcc6",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1420,17 +1420,17 @@
         },
         {
             "name": "drupal/config_split",
-            "version": "2.0.0-beta2",
+            "version": "2.0.0-beta3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/config_split.git",
-                "reference": "2.0.0-beta2"
+                "reference": "2.0.0-beta3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/config_split-2.0.0-beta2.zip",
-                "reference": "2.0.0-beta2",
-                "shasum": "ca365f987fa1f7ac6c62a1b13b0e5e43b81e4808"
+                "url": "https://ftp.drupal.org/files/projects/config_split-2.0.0-beta3.zip",
+                "reference": "2.0.0-beta3",
+                "shasum": "90d026a51ad206110d2e1995381c6941419a7ed4"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9"
@@ -1448,8 +1448,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.0-beta2",
-                    "datestamp": "1605524409",
+                    "version": "2.0.0-beta3",
+                    "datestamp": "1631372296",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
