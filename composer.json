@@ -13,7 +13,7 @@
     ],
     "require": {
         "php": "^8.0",
-        "composer/installers": "2.0.0",
+        "composer/installers": "2.0.1",
         "cweagans/composer-patches": "1.7.1",
         "drupal/allowed_formats": "1.3.0",
         "drupal/clientside_validation": "3.0.0-rc4",
