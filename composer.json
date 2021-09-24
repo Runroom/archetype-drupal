@@ -43,7 +43,7 @@
         "drupal/xmlsitemap": "1.1.0",
         "drush/drush": "10.6.0",
         "symfony/dotenv": "5.3.7",
-        "symfony/flex": "1.16.1"
+        "symfony/flex": "1.16.2"
     },
     "replace": {
         "symfony/polyfill-php56": "*",
