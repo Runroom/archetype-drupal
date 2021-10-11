@@ -58,7 +58,7 @@
         "drupal/drupal": "*"
     },
     "require-dev": {
-        "behat/mink": "1.8.1",
+        "behat/mink": "1.9.0",
         "deployer/dist": "6.8.0",
         "drupal/devel": "4.1.1",
         "drupal/devel_entity_updates": "3.0.1",
