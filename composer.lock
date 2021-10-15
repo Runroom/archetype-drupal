@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5d49912c40b98904f3f3d002ba297684",
+    "content-hash": "f10b1f3308d763fb04068e4972172f2d",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2352,29 +2352,29 @@
         },
         {
             "name": "drupal/imageapi_optimize",
-            "version": "4.0.0-beta1",
+            "version": "4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/imageapi_optimize.git",
-                "reference": "4.0.0-beta1"
+                "reference": "4.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/imageapi_optimize-4.0.0-beta1.zip",
-                "reference": "4.0.0-beta1",
-                "shasum": "9c32fbedec551613c820fd5f2c115ab5c9a08353"
+                "url": "https://ftp.drupal.org/files/projects/imageapi_optimize-4.0.0.zip",
+                "reference": "4.0.0",
+                "shasum": "16d2ef6f1931833b40980d7d0475132e5f43cdf3"
             },
             "require": {
-                "drupal/core": "^8 || ^9"
+                "drupal/core": "^9"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "4.0.0-beta1",
-                    "datestamp": "1591257441",
+                    "version": "4.0.0",
+                    "datestamp": "1634305797",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
@@ -12870,8 +12870,7 @@
         "drupal/config_split": 10,
         "drupal/drush_language": 5,
         "drupal/gin": 15,
-        "drupal/gin_toolbar": 10,
-        "drupal/imageapi_optimize": 10
+        "drupal/gin_toolbar": 10
     },
     "prefer-stable": false,
     "prefer-lowest": false,
