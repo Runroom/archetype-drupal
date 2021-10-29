@@ -42,7 +42,7 @@
         "drupal/views_bulk_operations": "3.13.0",
         "drupal/xmlsitemap": "1.1.0",
         "drush/drush": "10.6.1",
-        "symfony/dotenv": "5.3.8",
+        "symfony/dotenv": "5.3.10",
         "symfony/flex": "1.17.2"
     },
     "replace": {
@@ -72,7 +72,7 @@
         "phpstan/phpstan": "0.12.99",
         "phpstan/phpstan-strict-rules": "0.12.11",
         "phpunit/phpunit": "9.5.10",
-        "symfony/phpunit-bridge": "5.3.8"
+        "symfony/phpunit-bridge": "5.3.10"
     },
     "config": {
         "sort-packages": true
