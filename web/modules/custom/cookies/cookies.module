@@ -35,25 +35,31 @@ function cookies_theme(): array
 
 function cookies_page_attachments_alter(array &$page): void
 {
-    if ('cookies.page' === \Drupal::routeMatch()->getRouteName()) {
-        $repository = \Drupal::service('cookies.repository.cookies_entity');
-        $cookies = $repository->getCookiesPage();
-
-        $service = \Drupal::service('base_module.service.metadata');
-        $service->attachMetadata(
-            $page,
-            $cookies->label() ?? '',
-            $cookies->get(CookiesEntity::FIELD_INTRODUCTION)->getString() ?? ''
-        );
-
-        $page['#attached']['html_head'][] = [[
-            '#tag' => 'meta',
-            '#attributes' => [
-                'name' => 'robots',
-                'content' => 'noindex,follow',
-            ],
-        ], 'robots'];
+    if ('cookies.page' !== \Drupal::routeMatch()->getRouteName()) {
+        return;
     }
+
+    $repository = \Drupal::service('cookies.repository.cookies_entity');
+    $cookies = $repository->getCookiesPage();
+
+    if (null === $cookies) {
+        return;
+    }
+
+    $service = \Drupal::service('base_module.service.metadata');
+    $service->attachMetadata(
+        $page,
+        $cookies->label() ?? '',
+        $cookies->get(CookiesEntity::FIELD_INTRODUCTION)->getString()
+    );
+
+    $page['#attached']['html_head'][] = [[
+        '#tag' => 'meta',
+        '#attributes' => [
+            'name' => 'robots',
+            'content' => 'noindex,follow',
+        ],
+    ], 'robots'];
 }
 
 function cookies_preprocess_html(array &$variables): void

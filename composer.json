@@ -1,9 +1,8 @@
 {
     "name": "runroom/archetype-drupal",
-    "type": "project",
     "description": "This is our Drupal project template",
-    "homepage": "https://github.com/Runroom/archetype-drupal",
     "license": "MIT",
+    "type": "project",
     "authors": [
         {
             "name": "Runroom",
@@ -11,6 +10,7 @@
             "homepage": "https://www.runroom.com"
         }
     ],
+    "homepage": "https://github.com/Runroom/archetype-drupal",
     "require": {
         "php": "^8.0",
         "composer/installers": "2.0.1",
@@ -24,8 +24,8 @@
         "drupal/editor_advanced_link": "2.0.0",
         "drupal/entity_reference_revisions": "1.9.0",
         "drupal/field_group": "3.2.0",
-        "drupal/gin": "3.0.0-alpha36",
-        "drupal/gin_toolbar": "1.0.0-beta19",
+        "drupal/gin": "3.0.0-alpha37",
+        "drupal/gin_toolbar": "1.0.0-beta20",
         "drupal/hreflang": "1.5.0",
         "drupal/imageapi_optimize": "4.0.0",
         "drupal/mailsystem": "4.3.0",
@@ -38,12 +38,29 @@
         "drupal/swiftmailer": "2.1.0",
         "drupal/twig_field_value": "2.0.0",
         "drupal/twig_tweak": "3.1.3",
-        "drupal/vbo_export": "3.2.0",
-        "drupal/views_bulk_operations": "3.13.0",
+        "drupal/vbo_export": "3.4.0",
+        "drupal/views_bulk_operations": "4.0.0",
         "drupal/xmlsitemap": "1.2.0",
         "drush/drush": "10.6.1",
         "symfony/dotenv": "6.0.0",
         "symfony/flex": "2.0.1"
+    },
+    "require-dev": {
+        "behat/mink": "1.9.0",
+        "deployer/dist": "6.8.0",
+        "drupal/devel": "4.1.1",
+        "drupal/devel_entity_updates": "3.0.1",
+        "drupal/features": "3.12.0",
+        "ergebnis/composer-normalize": "2.17.0",
+        "friendsofphp/php-cs-fixer": "3.2.1",
+        "kint-php/kint": "3.3.0",
+        "kint-php/kint-twig": "3.0.0",
+        "mglaman/phpstan-drupal": "1.1.1",
+        "phpspec/prophecy-phpunit": "2.0.1",
+        "phpstan/phpstan": "1.2.0",
+        "phpstan/phpstan-strict-rules": "1.1.0",
+        "phpunit/phpunit": "9.5.10",
+        "symfony/phpunit-bridge": "6.0.0"
     },
     "replace": {
         "symfony/polyfill-php56": "*",
@@ -57,22 +74,16 @@
     "conflict": {
         "drupal/drupal": "*"
     },
-    "require-dev": {
-        "behat/mink": "1.9.0",
-        "deployer/dist": "6.8.0",
-        "drupal/devel": "4.1.1",
-        "drupal/devel_entity_updates": "3.0.1",
-        "drupal/features": "3.12.0",
-        "ergebnis/composer-normalize": "2.16.0",
-        "friendsofphp/php-cs-fixer": "3.2.1",
-        "kint-php/kint": "3.3.0",
-        "kint-php/kint-twig": "3.0.0",
-        "mglaman/phpstan-drupal": "0.12.14",
-        "phpspec/prophecy-phpunit": "2.0.1",
-        "phpstan/phpstan": "0.12.99",
-        "phpstan/phpstan-strict-rules": "0.12.11",
-        "phpunit/phpunit": "9.5.10",
-        "symfony/phpunit-bridge": "6.0.0"
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    ],
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
     },
     "config": {
         "sort-packages": true
@@ -93,23 +104,9 @@
         "patches": {
             "drupal/core": {
                 "Radios element missing \"required\" attribut - 2951317": "https://www.drupal.org/files/issues/2019-07-25/2951317-38.patch"
-            },
-            "drupal/vbo_export": {
-                "Deprecated function theme_vbo_export_content_xlsx() should no longer be used - 3175522": "https://www.drupal.org/files/issues/2020-12-20/vbo_export-deprecated-theme-functions-3175522-9.patch"
             }
         }
     },
-    "autoload-dev": {
-        "psr-4": {
-            "Tests\\": "tests/"
-        }
-    },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://packages.drupal.org/8"
-        }
-    ],
     "scripts": {
         "php-cs-fixer": "php-cs-fixer fix --ansi --verbose",
         "phpstan": "phpstan analyse --no-progress"
