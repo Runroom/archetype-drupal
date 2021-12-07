@@ -1,6 +1,7 @@
 parameters:
 	ignoreErrors:
 		-
-			message: "#^Access to an undefined property Drupal\\\\Core\\\\Field\\\\FieldItemListInterface\\:\\:\\$entity\\.$#"
+			message: "#^Call to an undefined method Drupal\\\\Core\\\\Entity\\\\EntityInterface\\:\\:url\\(\\)\\.$#"
 			count: 1
 			path: web/modules/custom/base_module/src/Service/FieldManagerService.php
+

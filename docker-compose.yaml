@@ -14,11 +14,9 @@ services:
             - /usr/app/web/sites/default/files/php/
             - /usr/app/web/sites/default/files/languages/
             - /usr/app/web/sites/default/files/translations/
-            - ${SSH_AUTH_SOCK}:${SSH_AUTH_SOCK}
         depends_on:
             - mysql
         environment:
-            - SSH_AUTH_SOCK
             - XDEBUG_CONFIG
         # Prod
         # build:
