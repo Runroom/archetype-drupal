@@ -34,7 +34,7 @@ final class CookiesController extends ControllerBase
             return '';
         }
 
-        return $cookiesPage->getName() ?? '';
+        return $cookiesPage->getName();
     }
 
     public function configuration(): array
