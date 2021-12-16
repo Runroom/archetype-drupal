@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "42d861e3756c17ca8baf0684ad827300",
+    "content-hash": "a17ff155444dfb28fe2a2af4ff07fde9",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2308,17 +2308,17 @@
         },
         {
             "name": "drupal/hreflang",
-            "version": "1.5.0",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/hreflang.git",
-                "reference": "8.x-1.5"
+                "reference": "8.x-1.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/hreflang-8.x-1.5.zip",
-                "reference": "8.x-1.5",
-                "shasum": "415286f25a1cab7c735de08e9245a95df297c188"
+                "url": "https://ftp.drupal.org/files/projects/hreflang-8.x-1.6.zip",
+                "reference": "8.x-1.6",
+                "shasum": "d7b9673fc5379dc8242fd6a307299de9ed88e481"
             },
             "require": {
                 "drupal/core": "^8 || ^9"
@@ -2326,8 +2326,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.5",
-                    "datestamp": "1635985562",
+                    "version": "8.x-1.6",
+                    "datestamp": "1639686850",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2344,7 +2344,7 @@
                     "homepage": "https://www.drupal.org/user/12302"
                 }
             ],
-            "description": "Adds hreflang link elements to the header of each page.",
+            "description": "Automatically adds an hreflang tag to the page for each enabled language.",
             "homepage": "https://www.drupal.org/project/hreflang",
             "support": {
                 "source": "https://git.drupalcode.org/project/hreflang"
