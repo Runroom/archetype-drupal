@@ -26,7 +26,7 @@
         "drupal/field_group": "3.2.0",
         "drupal/gin": "3.0.0-alpha37",
         "drupal/gin_toolbar": "1.0.0-beta20",
-        "drupal/hreflang": "1.6.0",
+        "drupal/hreflang": "1.7.0",
         "drupal/imageapi_optimize": "4.0.0",
         "drupal/mailsystem": "4.3.0",
         "drupal/menu_breadcrumb": "1.16.0",
