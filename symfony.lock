@@ -11,6 +11,9 @@
     "composer/installers": {
         "version": "v1.10.0"
     },
+    "composer/pcre": {
+        "version": "1.0.0"
+    },
     "composer/semver": {
         "version": "3.2.2"
     },
@@ -212,6 +215,9 @@
     "ergebnis/json-printer": {
         "version": "3.1.1"
     },
+    "ergebnis/json-schema-validator": {
+        "version": "2.0.0"
+    },
     "ezyang/htmlpurifier": {
         "version": "v4.13.0"
     },
@@ -266,9 +272,6 @@
     "laminas/laminas-stdlib": {
         "version": "3.3.0"
     },
-    "laminas/laminas-zendframework-bridge": {
-        "version": "1.1.1"
-    },
     "league/container": {
         "version": "2.4.1"
     },
@@ -295,12 +298,6 @@
     },
     "myclabs/php-enum": {
         "version": "1.7.7"
-    },
-    "nette/finder": {
-        "version": "v2.5.2"
-    },
-    "nette/utils": {
-        "version": "v3.2.1"
     },
     "nikic/php-parser": {
         "version": "v4.10.4"
@@ -554,6 +551,9 @@
     "symfony/polyfill-iconv": {
         "version": "v1.20.0"
     },
+    "symfony/polyfill-intl-grapheme": {
+        "version": "v1.24.0"
+    },
     "symfony/polyfill-intl-idn": {
         "version": "v1.20.0"
     },
@@ -594,6 +594,9 @@
     },
     "symfony/stopwatch": {
         "version": "v5.2.3"
+    },
+    "symfony/string": {
+        "version": "v5.4.2"
     },
     "symfony/translation": {
         "version": "3.3",
