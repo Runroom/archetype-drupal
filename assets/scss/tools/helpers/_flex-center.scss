@@ -1,4 +1,4 @@
-@mixin flex-center($breakpoints:[], $base: true) {
+@mixin flex-center($breakpoints: [], $base: true) {
     @if $base {
         .u-flex--center {
             align-items: center;

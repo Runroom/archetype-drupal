@@ -1,7 +1,7 @@
 module.exports = {
   plugins: {
-    autoprefixer: { cascade: false },
+    'autoprefixer': { cascade: false },
     'css-mqpacker': { sort: true },
-    cssnano: { zindex: false, reduceIdents: false }
+    'cssnano': { zindex: false, reduceIdents: false }
   }
 };

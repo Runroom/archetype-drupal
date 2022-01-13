@@ -3,29 +3,29 @@ name: deployment
 on: [deployment]
 
 jobs:
-  deployment:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        php: ['8.1']
-    env:
-      DEPLOYER_USER: ${{ secrets.DEPLOYER_USER }}
-    steps:
-      - uses: actions/checkout@v2
-      - uses: shivammathur/setup-php@v2
-        with:
-          php-version: ${{ matrix.php }}
-          coverage: none
-      - uses: webfactory/ssh-agent@v0.2.0
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-      - id: composer-cache
-        run: echo "::set-output name=dir::$(composer config cache-files-dir)"
-      - uses: actions/cache@v1
-        with:
-          path: ${{ steps.composer-cache.outputs.dir }}
-          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
-          restore-keys: ${{ runner.os }}-composer-
-      - run: composer install --prefer-dist --no-progress --no-interaction --no-scripts
-      - run: ssh-keyscan ${{ github.event.deployment.payload.url }} >> ~/.ssh/known_hosts
-      - run: vendor/bin/dep deploy ${{ github.event.deployment.environment }}
+    deployment:
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                php: ["8.1"]
+        env:
+            DEPLOYER_USER: ${{ secrets.DEPLOYER_USER }}
+        steps:
+            - uses: actions/checkout@v2
+            - uses: shivammathur/setup-php@v2
+              with:
+                  php-version: ${{ matrix.php }}
+                  coverage: none
+            - uses: webfactory/ssh-agent@v0.2.0
+              with:
+                  ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+            - id: composer-cache
+              run: echo "::set-output name=dir::$(composer config cache-files-dir)"
+            - uses: actions/cache@v1
+              with:
+                  path: ${{ steps.composer-cache.outputs.dir }}
+                  key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+                  restore-keys: ${{ runner.os }}-composer-
+            - run: composer install --prefer-dist --no-progress --no-interaction --no-scripts
+            - run: ssh-keyscan ${{ github.event.deployment.payload.url }} >> ~/.ssh/known_hosts
+            - run: vendor/bin/dep deploy ${{ github.event.deployment.environment }}

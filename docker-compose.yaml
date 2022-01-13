@@ -1,4 +1,8 @@
-version: '3.8'
+version: "3.8"
+
+# Prod
+# volumes:
+#     data-volume:
 
 services:
     app:
@@ -51,7 +55,3 @@ services:
         image: mailhog/mailhog
         ports:
             - 8025:8025
-
-# Prod
-# volumes:
-#     data-volume:
