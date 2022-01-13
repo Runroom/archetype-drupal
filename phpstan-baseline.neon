@@ -4,4 +4,12 @@ parameters:
 			message: "#^Call to an undefined method Drupal\\\\Core\\\\Entity\\\\EntityInterface\\:\\:url\\(\\)\\.$#"
 			count: 1
 			path: web/modules/custom/base_module/src/Service/FieldManagerService.php
+		-
+			message: "#^Class Drupal\\\\contact_form\\\\Form\\\\LeadDeleteForm extends @internal class Drupal\\\\Core\\\\Entity\\\\ContentEntityDeleteForm\\.$#"
+			count: 1
+			path: web/modules/custom/contact_form/src/Form/LeadDeleteForm.php
+		-
+			message: "#^Class Drupal\\\\cookies\\\\Form\\\\CookiesEntityDeleteForm extends @internal class Drupal\\\\Core\\\\Entity\\\\ContentEntityDeleteForm\\.$#"
+			count: 1
+			path: web/modules/custom/cookies/src/Form/CookiesEntityDeleteForm.php
 
