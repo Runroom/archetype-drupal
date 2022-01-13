@@ -18,8 +18,12 @@ set('allow_anonymous_stats', false);
 set('drush', '{{release_path}}/vendor/bin/drush');
 set('composer_options', '{{composer_action}} --prefer-dist --apcu-autoloader --no-progress --no-interaction --no-dev');
 
-set('bin/yarn', function () {
-    return locateBinaryPath('yarn');
+set('bin/npm', function () {
+    return run('. ~/.nvm/nvm.sh && nvm use > /dev/null 2>&1 && which npm');
+});
+
+set('bin/npx', function () {
+    return run('. ~/.nvm/nvm.sh && nvm use > /dev/null 2>&1 && which npx');
 });
 
 task('app', function (): void {
@@ -30,14 +34,15 @@ task('app', function (): void {
     run('{{bin/php}} {{drush}} language-import');
 })->setPrivate();
 
-task('yarn:build', function (): void {
+task('frontend:build', function (): void {
     cd('{{release_path}}');
 
-    run('. ~/.nvm/nvm.sh --no-use && nvm use && {{bin/yarn}} install --immutable && {{bin/yarn}} encore production');
+    run('{{bin/npm}} clean-install');
+    run('{{bin/npx}} encore production');
 })->setPrivate();
 
-after('deploy:vendors', 'yarn:build');
-after('yarn:build', 'app');
+after('deploy:vendors', 'frontend:build');
+after('frontend:build', 'app');
 before('deploy:symlink', 'deploy:clear_paths');
 after('deploy:failed', 'deploy:unlock');
 

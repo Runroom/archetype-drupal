@@ -31,12 +31,3 @@ web/themes/custom/runroom/build/*
 
 # NODE
 node_modules
-
-# YARN
-.yarn/*
-!.yarn/patches
-!.yarn/releases
-!.yarn/plugins
-!.yarn/sdks
-!.yarn/versions
-.pnp.*
