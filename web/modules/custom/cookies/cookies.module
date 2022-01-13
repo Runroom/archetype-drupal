@@ -49,7 +49,7 @@ function cookies_page_attachments_alter(array &$page): void
     $service = \Drupal::service('base_module.service.metadata');
     $service->attachMetadata(
         $page,
-        $cookies->label() ?? '',
+        (string) ($cookies->label() ?? ''),
         $cookies->get(CookiesEntity::FIELD_INTRODUCTION)->getString()
     );
 
