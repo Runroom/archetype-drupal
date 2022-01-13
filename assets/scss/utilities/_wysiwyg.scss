@@ -4,16 +4,23 @@
  * estilos y en cada proyecto son distintos
  */
 .u-wysiwyg {
-    ul { list-style: disc; }
-    ol { list-style: decimal; }
+    ul {
+        list-style: disc;
+    }
+    ol {
+        list-style: decimal;
+    }
 
-    ul, ol {
+    ul,
+    ol {
         display: block;
 
         li {
-            margin: 0 0 space(.25) space();
+            margin: 0 0 space(0.25) space();
 
-            &:last-child { margin-bottom: 0; }
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
     }
 
@@ -28,7 +35,10 @@
         }
     }
 
-    em, i { font-style: italic; }
+    em,
+    i {
+        font-style: italic;
+    }
 
     table {
         border-collapse: collapse;
@@ -37,17 +47,26 @@
         padding: 0;
         width: 100% !important;
 
-        tr:nth-child(even) { background: $c-white; }
-        tr:nth-child(odd) { background: $c-neutro200; }
+        tr:nth-child(even) {
+            background: $c-white;
+        }
+        tr:nth-child(odd) {
+            background: $c-neutro200;
+        }
 
-        td, th { text-align: left; }
-        td { padding: space(.5) space(); }
+        td,
+        th {
+            text-align: left;
+        }
+        td {
+            padding: space(0.5) space();
+        }
 
         th {
             background: $c-primary500;
             color: $c-white;
             font-weight: 700;
-            padding: space(.75) space();
+            padding: space(0.75) space();
         }
     }
 

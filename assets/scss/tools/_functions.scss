@@ -1,5 +1,5 @@
 @function strip-unit($number) {
-    @if type-of($number) == 'number' and not unitless($number) {
+    @if type-of($number) == "number" and not unitless($number) {
         @return $number / ($number * 0 + 1);
     }
 
@@ -7,11 +7,9 @@
 }
 
 @function get-relative-value($size, $ratio: $min-font-size) {
-    @if unit($size) == 'px' {
+    @if unit($size) == "px" {
         @return (strip-unit($size) / strip-unit($ratio));
-    }
-
-    @else {
+    } @else {
         @return strip-unit($size);
     }
 }
@@ -29,11 +27,9 @@
 }
 
 @function get-pxs($size) {
-    @if unit($size) != 'px' {
+    @if unit($size) != "px" {
         @return round(strip-unit($size) * strip-unit($min-font-size)) * 1px;
-    }
-
-    @else {
+    } @else {
         @return $size;
     }
 }

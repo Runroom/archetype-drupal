@@ -1,7 +1,6 @@
 {
-  "extends": ["stylelint-config-standard-scss"],
+  "extends": ["stylelint-config-standard-scss", "stylelint-prettier/recommended"],
   "rules": {
-    "indentation": 4,
     "at-rule-empty-line-before": [
       "always",
       {
@@ -31,7 +30,6 @@
     ],
     "color-hex-case": ["lower", { "severity": "warning" }],
     "no-descending-specificity": null,
-    "number-leading-zero": "never",
     "selector-class-pattern": null,
     "selector-list-comma-newline-after": null,
     "no-missing-end-of-source-newline": false,
@@ -59,6 +57,7 @@
     "scss/at-else-empty-line-before": null,
     "scss/dollar-variable-empty-line-before": null,
     "scss/at-mixin-pattern": null,
-    "scss/operator-no-unspaced": null
+    "scss/operator-no-unspaced": null,
+    "scss/operator-no-newline-after": null
   }
 }

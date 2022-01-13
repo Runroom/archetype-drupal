@@ -59,6 +59,7 @@ pipeline {
                 // Lint + QA
                 sh 'npx stylelint assets/scss'
                 sh 'npx eslint assets/js'
+                sh 'npx prettier --check .github assets webpack.config.js babel.config.js .eslintrc.js postcss.config.js prettier.config.js docker-compose.yaml servers.yaml'
 
                 // Build
                 sh 'npx encore production'

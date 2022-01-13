@@ -1,5 +1,5 @@
 .cookies-message {
-    background: hsla(0, 100%, 0%, .8);
+    background: hsla(0, 100%, 0%, 0.8);
     bottom: 0;
     color: $c-white;
     display: block;
@@ -26,21 +26,23 @@
             text-decoration: none;
         }
 
-        @include breakpoint($s768) { padding: 0 space() 0 0; }
+        @include breakpoint($s768) {
+            padding: 0 space() 0 0;
+        }
     }
 
     &__button {
         border: solid 1px currentColor;
         color: currentColor;
         line-height: 1;
-        padding: space(.5);
+        padding: space(0.5);
         text-align: center;
         text-decoration: none;
         text-transform: uppercase;
 
         @include hover {
             background: $c-white;
-            color: hsla(0, 100%, 0%, .8);
+            color: hsla(0, 100%, 0%, 0.8);
         }
     }
 
@@ -48,11 +50,11 @@
         color: $c-white;
         cursor: pointer;
         position: absolute;
-        right: space(.25);
-        top: space(.25);
+        right: space(0.25);
+        top: space(0.25);
 
         @include breakpoint($s960) {
-            right: space(.5);
+            right: space(0.5);
         }
 
         svg {

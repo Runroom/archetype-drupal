@@ -3,7 +3,9 @@ $menuSize: 60px;
 @mixin hamburgerClosed {
     transform: rotate(45deg);
 
-    &::after { transform: rotate(-90deg); }
+    &::after {
+        transform: rotate(-90deg);
+    }
 
     &::before,
     &::after {
@@ -20,7 +22,9 @@ $menuSize: 60px;
     padding: 0;
     width: 30px;
 
-    * { pointer-events: none; }
+    * {
+        pointer-events: none;
+    }
 
     &__icon {
         position: relative;
@@ -37,18 +41,25 @@ $menuSize: 60px;
             opacity: 1;
             position: absolute;
             transform: rotate(0deg);
-            transition: transform .3s ease-in-out, top .3s ease-in-out, left .3s ease-in-out, width .3s ease-in-out, right .3s ease-in-out;
+            transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, left 0.3s ease-in-out,
+                width 0.3s ease-in-out, right 0.3s ease-in-out;
         }
 
         &::before,
         &::after {
-            content: '';
+            content: "";
             width: 30px;
         }
 
-        &::before { top: -10px; }
-        &::after { top: 10px; }
+        &::before {
+            top: -10px;
+        }
+        &::after {
+            top: 10px;
+        }
 
-        .is-open & { @include hamburgerClosed; }
+        .is-open & {
+            @include hamburgerClosed;
+        }
     }
 }
