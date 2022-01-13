@@ -17,6 +17,6 @@ plugin: system_breadcrumb_block
 settings:
   id: system_breadcrumb_block
   label: 'Enlaces de ayuda a la navegación'
-  provider: system
   label_display: '0'
+  provider: system
 visibility: {  }

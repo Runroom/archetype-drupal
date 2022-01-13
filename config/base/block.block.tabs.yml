@@ -15,15 +15,15 @@ plugin: local_tasks_block
 settings:
   id: local_tasks_block
   label: Pestañas
-  provider: core
   label_display: '0'
+  provider: core
   primary: true
   secondary: true
 visibility:
   user_role:
     id: user_role
-    roles:
-      admin_user: admin_user
     negate: false
     context_mapping:
       user: '@user.current_user_context:current_user'
+    roles:
+      admin_user: admin_user

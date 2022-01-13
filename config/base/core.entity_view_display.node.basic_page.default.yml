@@ -18,19 +18,19 @@ mode: default
 content:
   field_components:
     type: entity_reference_revisions_entity_view
-    weight: 1
     label: above
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    weight: 1
     region: content
   field_meta_information:
-    weight: 2
+    type: metatag_empty_formatter
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: metatag_empty_formatter
+    weight: 2
     region: content
 hidden:
   field_file: true

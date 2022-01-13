@@ -15,13 +15,13 @@ bundle: cookies_entity
 mode: default
 content:
   field_introduction:
+    type: text_textarea
     weight: 4
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
-    region: content
   langcode:
     type: language_select
     weight: 2

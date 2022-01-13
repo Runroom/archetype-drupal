@@ -15,19 +15,19 @@ bundle: cookies_entity
 mode: default
 content:
   field_introduction:
-    weight: -2
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: -2
     region: content
   name:
-    label: above
     type: string
-    weight: -4
-    region: content
+    label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: -4
+    region: content
 hidden:
   langcode: true

@@ -1,7 +1,7 @@
+_core:
+  default_config_hash: 3YUV4RQQ4k8drO7uzYJ7lNc5Az0iDAH5YW8KbZVxjeY
+langcode: es
 use_cdn: true
 cdn_base_url: 'https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/'
 validate_all_ajax_forms: 2
 force_validate_on_blur: 0
-_core:
-  default_config_hash: 3YUV4RQQ4k8drO7uzYJ7lNc5Az0iDAH5YW8KbZVxjeY
-langcode: es

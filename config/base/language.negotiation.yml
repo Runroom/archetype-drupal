@@ -1,3 +1,4 @@
+langcode: es
 session:
   parameter: language
 url:
@@ -10,4 +11,3 @@ url:
     en: ''
     es: ''
 selected_langcode: site_default
-langcode: es
