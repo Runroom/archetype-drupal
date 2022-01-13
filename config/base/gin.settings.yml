@@ -1,3 +1,16 @@
+_core:
+  default_config_hash: CEHTCpo0zzrZOJNa9_M2R_HdYKrq3v1zlRVCf66hh7U
+langcode: es
+favicon:
+  use_default: true
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: false
+third_party_settings:
+  shortcut:
+    module_link: true
 preset_accent_color: blue
 preset_focus_color: gin
 enable_darkmode: false
@@ -5,19 +18,6 @@ classic_toolbar: horizontal
 icon_default: true
 icon_path: ''
 high_contrast_mode: false
-third_party_settings:
-  shortcut:
-    module_link: true
-_core:
-  default_config_hash: CEHTCpo0zzrZOJNa9_M2R_HdYKrq3v1zlRVCf66hh7U
-langcode: es
-features:
-  node_user_picture: false
-  comment_user_picture: true
-  comment_user_verification: true
-  favicon: true
-favicon:
-  use_default: true
 accent_color: ''
 focus_color: ''
 icon_upload: ''

@@ -1,3 +1,4 @@
+langcode: es
 attributes:
   class:
     label: ''
@@ -8,4 +9,3 @@ attributes:
     options:
       _blank: 'New window (_blank)'
       _self: 'Same window (_self)'
-langcode: es
