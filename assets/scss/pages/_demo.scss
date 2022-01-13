@@ -31,8 +31,8 @@
         position: relative;
 
         &::before {
-            background: hsla(0, 100%, 0%, .5);
-            content: '';
+            background: hsla(0, 100%, 0%, 0.5);
+            content: "";
             display: block;
             height: 100%;
             left: 0;
@@ -53,21 +53,27 @@
             background-clip: content-box;
 
             @include breakpoint-max($s480) {
-                background: hsla(0, 100%, 0%, .1);
+                background: hsla(0, 100%, 0%, 0.1);
             }
 
             @include breakpoint-minmax($s480, $s768) {
-                background: hsla(0, 100%, 0%, .2);
+                background: hsla(0, 100%, 0%, 0.2);
             }
 
             @include breakpoint($s768) {
-                &:nth-child(odd) { background: hsla(0, 100%, 0%, .2); }
-                &:nth-child(even) { background: hsla(0, 100%, 0%, .1); }
+                &:nth-child(odd) {
+                    background: hsla(0, 100%, 0%, 0.2);
+                }
+                &:nth-child(even) {
+                    background: hsla(0, 100%, 0%, 0.1);
+                }
             }
         }
     }
 
-    &__column { padding: space() space(.5); }
+    &__column {
+        padding: space() space(0.5);
+    }
 
     &__link {
         font-size: get-rems(18px);
@@ -83,23 +89,38 @@
         text-align: center;
     }
 
-    ul { list-style: disc; }
-    ol { list-style: decimal; }
+    ul {
+        list-style: disc;
+    }
+    ol {
+        list-style: decimal;
+    }
 
-    ul, ol {
+    ul,
+    ol {
         display: block;
 
         li {
-            margin: 0 0 space(.25) space();
+            margin: 0 0 space(0.25) space();
 
-            &:last-child { margin-bottom: 0; }
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
     }
 
-    p + ul, p + ol { margin: space(1.5) 0 0; }
+    p + ul,
+    p + ol {
+        margin: space(1.5) 0 0;
+    }
 
     .form {
-        ul, ol { list-style: none; }
-        li { margin: 0; }
+        ul,
+        ol {
+            list-style: none;
+        }
+        li {
+            margin: 0;
+        }
     }
 }

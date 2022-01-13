@@ -95,7 +95,7 @@ const saveCookieSettings = event => {
 
   cookiesSettingsSaved.classList.remove(CLASS_HIDE);
 
-  setTimeout(_ => {
+  setTimeout(() => {
     cookiesSettingsSaved.classList.add(CLASS_HIDE);
   }, 3000);
 };

@@ -1,18 +1,18 @@
-@import '../settings/variables';
-@import '../tools/functions';
-@import '../tools/mixins';
-@import '../generic/globals';
-@import '../generic/typography';
-@import '../utilities/utilities';
+@import "../settings/variables";
+@import "../tools/functions";
+@import "../tools/mixins";
+@import "../generic/globals";
+@import "../generic/typography";
+@import "../utilities/utilities";
 
 /* Components */
-@import '../components/skip-link';
-@import '../components/header';
-@import '../components/modal';
-@import '../components/navigation';
+@import "../components/skip-link";
+@import "../components/header";
+@import "../components/modal";
+@import "../components/navigation";
 
 /* Modules */
-@import '../modules/cookies-message';
+@import "../modules/cookies-message";
 
 @include flex-basic;
 @include flex-advanced;

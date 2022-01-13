@@ -1,9 +1,21 @@
-.u-noscroll { overflow: hidden; }
-.u-align-center { text-align: center; }
-.u-uppercase { text-transform: uppercase; }
-.u-sr-only { @include visually-hidden; }
-.visually-hidden { @include visually-hidden; }
-.u-reading { max-width: get-maxrems($max-reading-width); }
+.u-noscroll {
+    overflow: hidden;
+}
+.u-align-center {
+    text-align: center;
+}
+.u-uppercase {
+    text-transform: uppercase;
+}
+.u-sr-only {
+    @include visually-hidden;
+}
+.visually-hidden {
+    @include visually-hidden;
+}
+.u-reading {
+    max-width: get-maxrems($max-reading-width);
+}
 
 .u-icon {
     display: inline-block;

@@ -1,5 +1,5 @@
-$form-padding: space(.25);
-$form-margin: space(.25);
+$form-padding: space(0.25);
+$form-margin: space(0.25);
 $form-input-height: space(1.25);
 
 .form {
@@ -10,7 +10,7 @@ $form-input-height: space(1.25);
     }
 
     textarea,
-    input[type]:not([type=checkbox]):not([type=radio]):not([type=hidden]):not([type=submit]) {
+    input[type]:not([type="checkbox"]):not([type="radio"]):not([type="hidden"]):not([type="submit"]) {
         background: $form-background;
         border: $form-border;
         border-radius: $form-radius;
@@ -44,17 +44,23 @@ $form-input-height: space(1.25);
     }
 
     &__field {
-        &:not(:first-child) { margin: $form-margin 0 0; }
+        &:not(:first-child) {
+            margin: $form-margin 0 0;
+        }
 
         &--inline {
-            &:not(:first-child) { margin: $form-margin 0 0; }
+            &:not(:first-child) {
+                margin: $form-margin 0 0;
+            }
 
             input[type="checkbox"],
             input[type="radio"] {
                 margin: 0 $form-margin 0 0;
             }
 
-            label { margin: 0; }
+            label {
+                margin: 0;
+            }
 
             label,
             input {
@@ -67,7 +73,7 @@ $form-input-height: space(1.25);
         &--invalid {
             background-color: lighten($c-error, 35);
             display: block;
-            padding: space(.2) space(.5);
+            padding: space(0.2) space(0.5);
         }
     }
 }

@@ -1,6 +1,10 @@
 .cookies {
-    &__subtitle { margin: 0 0 space(); }
-    &__section { margin: 0 0 space(2); }
+    &__subtitle {
+        margin: 0 0 space();
+    }
+    &__section {
+        margin: 0 0 space(2);
+    }
 
     &__header {
         border-bottom: 1px solid $c-neutro200;
