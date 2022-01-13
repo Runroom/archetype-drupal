@@ -3,9 +3,7 @@
 PROJECT_NAME = env.JOB_NAME.replace('/' + env.JOB_BASE_NAME, '')
 
 pipeline {
-    agent {
-        docker { image 'runroom/php8.0-cli' }
-    }
+    agent any
 
     options {
         buildDiscarder(logRotator(numToKeepStr: '5'))
@@ -13,22 +11,24 @@ pipeline {
     }
 
     stages {
-        stage('Build') {
-            steps {
-                sh 'composer install --prefer-dist --apcu-autoloader --no-progress --no-interaction'
+        stage('Continuous Integration - PHP') {
+            agent {
+                docker { image 'runroom/php8.1-cli' }
             }
-        }
-        stage('Quality Assurance') {
+
             steps {
+                // Install
+                sh 'composer install --prefer-dist --no-progress --no-interaction'
+
+                // Lint + QA
                 sh 'composer php-cs-fixer -- --dry-run'
                 sh 'composer phpstan'
                 sh 'composer normalize --dry-run'
-            }
-        }
-        stage('Test') {
-            steps {
+
+                // Tests
                 sh 'vendor/bin/phpunit --log-junit coverage/unitreport.xml --coverage-html coverage'
 
+                // Report
                 xunit([PHPUnit(
                     deleteOutputFiles: false,
                     failIfNotNew: false,
@@ -46,6 +46,25 @@ pipeline {
                 ])
             }
         }
+
+        stage('Continuous Integration - Node') {
+            agent {
+                docker { image 'runroom/node17' }
+            }
+
+            steps {
+                // Install
+                sh 'npm clean-install'
+
+                // Lint + QA
+                sh 'npx stylelint assets/scss'
+                sh 'npx eslint assets/js'
+
+                // Build
+                sh 'npx encore production'
+            }
+        }
+
         stage('Deploy') {
             when { expression { return env.BRANCH_NAME in ['master'] } }
             steps {

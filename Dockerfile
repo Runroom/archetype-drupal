@@ -1,15 +1,15 @@
 # BASE
-FROM php:8.0-fpm-buster as base
+FROM php:8.1-fpm as base
 
 WORKDIR /usr/app
 
 COPY --from=mlocati/php-extension-installer:latest /usr/bin/install-php-extensions /usr/bin/
 
-RUN install-php-extensions apcu bz2 gd intl opcache pdo_mysql zip
+RUN install-php-extensions apcu bz2 gd intl opcache pdo_pgsql zip
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
     unzip \
-    mariadb-client \
+    postgresql-client \
     git \
     patch \
     rsync \
@@ -24,19 +24,17 @@ RUN mv $PHP_INI_DIR/php.ini-production $PHP_INI_DIR/php.ini
 COPY .docker/app-prod/extra.ini /usr/local/etc/php/conf.d/extra.ini
 COPY .docker/app-prod/www.conf /usr/local/etc/php-fpm.d/www.conf
 
-COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
+COPY --from=composer:2.2 /usr/bin/composer /usr/bin/composer
 
 # NODE-PROD
-FROM node:14-buster-slim as node-prod
+FROM node:17.3 as node-prod
 
 WORKDIR /usr/app
 
-COPY .yarn /usr/app/.yarn
-COPY .yarnrc.yml /usr/app/yarnrc.yml
 COPY package.json /usr/app/package.json
-COPY yarn.lock /usr/app/yarn.lock
+COPY package-lock.json /usr/app/package-lock.json
 
-RUN yarn install --immutable
+RUN npm clean-install
 
 COPY webpack.config.js /usr/app/webpack.config.js
 COPY .babelrc /usr/app/.babelrc
@@ -47,7 +45,7 @@ COPY postcss.config.js /usr/app/postcss.config.js
 
 COPY assets /usr/app/assets
 
-RUN yarn encore production
+RUN npx encore production
 
 # FPM-PROD
 FROM base as fpm-prod

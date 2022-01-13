@@ -14,13 +14,13 @@ up: compose $(AUTOLOAD)
 
 compose: $(CERTS_DIR)
 ifeq ($(UNAME), Darwin)
-	COMPOSE_DOCKER_CLI_BUILD=1 XDEBUG_CONFIG="client_host=host.docker.internal" docker-compose up -d
+	XDEBUG_CONFIG="client_host=host.docker.internal" docker-compose up -d
 else
-	COMPOSE_DOCKER_CLI_BUILD=1 docker-compose up -d
+	docker-compose up -d
 endif
 
 build: halt
-	COMPOSE_DOCKER_CLI_BUILD=1 docker-compose build
+	docker-compose build
 
 halt:
 	docker-compose stop
@@ -67,13 +67,10 @@ phpunit-coverage:
 	$(call docker-exec,phpunit --coverage-html /usr/app/coverage)
 
 database:
-	$(call docker-exec,drush sql:drop --yes)
-	$(call docker-exec,drush sql:create --yes)
-	$(call docker-exec,drush sql:cli --yes < .docker/drupal.sql)
+	$(call docker-exec,drush site:install minimal --account-mail admin@localhost.com --account-pass admin --yes)
 
 update: language-export
 	$(call docker-exec,drush config:export --yes)
-	$(call docker-exec,drush sql:dump >| .docker/drupal.sql)
 
 language-export:
 	$(call docker-exec,drush language-export)
