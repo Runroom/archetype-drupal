@@ -1,5 +1,6 @@
 const Encore = require('@symfony/webpack-encore');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 Encore.setOutputPath('web/themes/custom/runroom/build/')
   .setPublicPath('/themes/custom/runroom/build')
@@ -17,7 +18,6 @@ Encore.setOutputPath('web/themes/custom/runroom/build/')
     options.sourceMap = true;
     options.sassOptions = { sourceComments: !Encore.isProduction() };
   }, {})
-  .enableEslintLoader()
   .autoProvidejQuery()
   .addExternals({
     Drupal: 'Drupal',
@@ -29,12 +29,11 @@ Encore.setOutputPath('web/themes/custom/runroom/build/')
       emitWarning: true
     })
   )
+  .addPlugin(new ESLintPlugin())
   .enablePostCssLoader()
   .addEntry('app', './assets/js/app.js')
   .addEntry('form', './assets/js/form.js')
-  .addEntry('styleguide-scripts', './assets/js/styleguide.js')
   .addStyleEntry('styles', './assets/scss/styles.scss')
-  .addStyleEntry('styleguide', './assets/scss/styleguide.scss')
   .addStyleEntry('crp.default', './assets/scss/crp/default.scss')
   .addStyleEntry('crp.billboard', './assets/scss/crp/billboard.scss')
   .addStyleEntry('crp.basic-page', './assets/scss/crp/basic-page.scss');

@@ -1,7 +1,0 @@
-base_module.styleguide:
-    path: '/styleguide'
-    defaults:
-        _controller: '\Drupal\base_module\Controller\StyleguideController::show'
-        _title: 'Runroom Drupal Styleguide'
-    requirements:
-        _access: 'TRUE'

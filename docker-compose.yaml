@@ -14,11 +14,11 @@ services:
             - /usr/app/web/sites/default/files/php/
             - /usr/app/web/sites/default/files/languages/
             - /usr/app/web/sites/default/files/translations/
-        depends_on:
-            - mysql
         environment:
             - XDEBUG_CONFIG
         # Prod
+        # depends_on:
+        #     - database
         # build:
         #     context: .
         #     target: fpm-prod
@@ -33,21 +33,20 @@ services:
             - .docker/nginx-dev/nginx.conf:/etc/nginx/nginx.conf
             - .certs:/usr/app/.certs:ro,cached
             - ./web:/usr/app/web:ro,cached
-        depends_on:
-            - app
         # Prod
+        # depends_on:
+        #     - app
         # volumes:
         #     - .docker/nginx-prod/nginx.conf:/etc/nginx/nginx.conf
         #     - data-volume:/usr/app/web
-    mysql:
-        image: mysql:5.7
+    database:
+        image: postgres:14.1
         environment:
-            - MYSQL_DATABASE
-            - MYSQL_USER
-            - MYSQL_PASSWORD
-            - MYSQL_ROOT_PASSWORD=root
+            POSTGRES_DB: drupal
+            POSTGRES_USER: drupal
+            POSTGRES_PASSWORD: drupal
         ports:
-            - 8336:3306
+            - 8432:5432
     mailhog:
         image: mailhog/mailhog
         ports:

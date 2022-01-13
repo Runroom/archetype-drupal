@@ -11,14 +11,14 @@ use Symfony\Component\HttpFoundation\Request;
 $databases = [
   'default' => [
     'default' => [
-      'database' => $_SERVER['MYSQL_DATABASE'],
-      'username' => $_SERVER['MYSQL_USER'],
-      'password' => $_SERVER['MYSQL_PASSWORD'],
+      'database' => $_SERVER['DATABASE_NAME'],
+      'username' => $_SERVER['DATABASE_USER'],
+      'password' => $_SERVER['DATABASE_PASSWORD'],
       'prefix' => '',
-      'host' => $_SERVER['MYSQL_HOST'],
+      'host' => $_SERVER['DATABASE_HOST'],
       'port' => '',
-      'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-      'driver' => 'mysql',
+      'namespace' => 'Drupal\\Core\\Database\\Driver\\' . $_SERVER['DATABASE_DRIVER'],
+      'driver' => $_SERVER['DATABASE_DRIVER'],
     ],
   ],
 ];
