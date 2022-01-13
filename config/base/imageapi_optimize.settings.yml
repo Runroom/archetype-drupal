@@ -1,2 +1,2 @@
-default_pipeline: jpegoptim_pngquant
 langcode: es
+default_pipeline: jpegoptim_pngquant

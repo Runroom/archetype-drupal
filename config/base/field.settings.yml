@@ -1,2 +1,2 @@
-purge_batch_size: 50
 langcode: es
+purge_batch_size: 50
