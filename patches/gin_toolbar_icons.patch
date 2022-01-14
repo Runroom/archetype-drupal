@@ -1,0 +1,32 @@
+diff --git a/dist/css/gin_classic_toolbar.css b/dist/css/gin_classic_toolbar.css
+index 7a5083f..4b1330a 100644
+--- a/dist/css/gin_classic_toolbar.css
++++ b/dist/css/gin_classic_toolbar.css
+@@ -98,6 +98,7 @@
+ }
+ .toolbar .toolbar-bar #toolbar-item-administration-search::before,
+ .toolbar .toolbar-bar .toolbar-menu-administration .toolbar-icon::before,
++.toolbar .toolbar-bar .toolbar-menu .toolbar-icon::before,
+ .toolbar .toolbar-bar .toolbar-menu-administration .responsive-preview-icon::before,
+ .toolbar .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item::before,
+ .toolbar .toolbar-bar .toolbar-icon-toggle-vertical::before,
+diff --git a/dist/css/gin_horizontal_toolbar.css b/dist/css/gin_horizontal_toolbar.css
+index 48f925c..f35530a 100644
+--- a/dist/css/gin_horizontal_toolbar.css
++++ b/dist/css/gin_horizontal_toolbar.css
+@@ -365,6 +365,7 @@
+ }
+ .toolbar .toolbar-bar #toolbar-item-administration-search::before,
+ .toolbar .toolbar-bar .toolbar-menu-administration .toolbar-icon::before,
++.toolbar .toolbar-bar .toolbar-menu .toolbar-icon::before,
+ .toolbar .toolbar-bar .toolbar-menu-administration .responsive-preview-icon::before,
+ .toolbar .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item::before,
+ .toolbar .toolbar-bar .toolbar-icon-toggle-vertical::before,
+@@ -379,6 +380,7 @@
+ }
+ .toolbar .toolbar-bar #toolbar-item-administration-search.toolbar-icon-default::before,
+ .toolbar .toolbar-bar .toolbar-menu-administration .toolbar-icon.toolbar-icon-default::before,
++.toolbar .toolbar-bar .toolbar-menu .toolbar-icon-default::before,
+ .toolbar .toolbar-bar .toolbar-menu-administration .toolbar-icon-default.responsive-preview-icon::before,
+ .toolbar .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item.toolbar-icon-default::before,
+ .toolbar .toolbar-bar .toolbar-icon-toggle-vertical.toolbar-icon-default::before,
