@@ -110,6 +110,9 @@
         "patches": {
             "drupal/core": {
                 "Radios element missing \"required\" attribut - 2951317": "https://www.drupal.org/files/issues/2019-07-25/2951317-38.patch"
+            },
+            "drupal/gin": {
+                "Icons are not loading correctly with some themes - 3200336": "patches/gin_toolbar_icons.patch"
             }
         }
     },
