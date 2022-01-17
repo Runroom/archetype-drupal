@@ -41,7 +41,7 @@
         "drupal/vbo_export": "3.4.0",
         "drupal/views_bulk_operations": "4.0.0",
         "drupal/xmlsitemap": "1.2.0",
-        "drush/drush": "11.0.0",
+        "drush/drush": "11.0.1",
         "symfony/dotenv": "6.0.2",
         "symfony/flex": "2.0.1"
     },
