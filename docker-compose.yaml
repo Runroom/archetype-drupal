@@ -18,8 +18,8 @@ services:
             - /usr/app/web/sites/default/files/php/
             - /usr/app/web/sites/default/files/languages/
             - /usr/app/web/sites/default/files/translations/
-        environment:
-            - XDEBUG_CONFIG
+        extra_hosts:
+            - host.docker.internal:host-gateway
         # Prod
         # depends_on:
         #     - database
