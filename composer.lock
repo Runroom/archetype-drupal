@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ceb024a03eada5df3b7d2173a98d3a44",
+    "content-hash": "64a0b8d0a9b03d97179b64aade9181b9",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3312,16 +3312,16 @@
         },
         {
             "name": "drush/drush",
-            "version": "11.0.2",
+            "version": "11.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drush-ops/drush.git",
-                "reference": "3c93b6393d6a463cb1df314dae3db27fbb640cd4"
+                "reference": "d5c63f337f52b059cbe9d39fca2f3090980450dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drush-ops/drush/zipball/3c93b6393d6a463cb1df314dae3db27fbb640cd4",
-                "reference": "3c93b6393d6a463cb1df314dae3db27fbb640cd4",
+                "url": "https://api.github.com/repos/drush-ops/drush/zipball/d5c63f337f52b059cbe9d39fca2f3090980450dd",
+                "reference": "d5c63f337f52b059cbe9d39fca2f3090980450dd",
                 "shasum": ""
             },
             "require": {
@@ -3447,7 +3447,7 @@
                 "irc": "irc://irc.freenode.org/drush",
                 "issues": "https://github.com/drush-ops/drush/issues",
                 "slack": "https://drupal.slack.com/messages/C62H9CWQM",
-                "source": "https://github.com/drush-ops/drush/tree/11.0.2"
+                "source": "https://github.com/drush-ops/drush/tree/11.0.3"
             },
             "funding": [
                 {
@@ -3455,7 +3455,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-01-19T13:42:06+00:00"
+            "time": "2022-01-21T12:52:10+00:00"
         },
         {
             "name": "egulias/email-validator",
