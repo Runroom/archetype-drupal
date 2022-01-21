@@ -44,7 +44,7 @@
     {% endembed %}
 
     {% embed '@runroom/layouts/_section-demo.html.twig' %}
-        {% block sectionClass 'h-screen py-8' %}
+        {% block sectionClass 'bg-neutral-200 py-8' %}
         {% block sectionAside %}
             <h2>Reutilizamos el mismo layout que antes</h2>
         {% endblock %}
@@ -87,35 +87,29 @@
     </section>
 
     <section class="py-8 wrapper">
-        <h2>This is a sample of a grid alignment</h2>
-        <div class="flex flex-wrap items-center">
-            <div class="basis-1/6 mr-4">
+        <div class="s768:grid grid-cols-4 gap-1">
+            <div>
                 <p>We're right above you. Stand by. You came in that thing? You're braver that I thought. Nice! Come on! It's them! Blast them! Get back to the ship!</p>
+                <img data-src="{{ theme_path ~ '/build/img/background.jpg' }}" class="lazyload">
             </div>
-            <div class="basis-1/6">
-                <img data-src="{{ theme_path ~ '/build/img/background.jpeg' }}" class="lazyload">
-            </div>
-        </div>
-
-        <div class="s768:flex flex-wrap justify-between">
-            <div class="basis-1/4">
+            <div>
                 <p>We're right above you. Stand by. You came in that thing? You're braver that I thought. Nice! Come on! It's them! Blast them! Get back to the ship!</p>
-                <img data-src="{{ theme_path ~ '/build/img/background.jpeg' }}" class="lazyload">
+                <img data-src="{{ theme_path ~ '/build/img/background.jpg' }}" class="lazyload">
             </div>
-            <div class="basis-1/4">
+            <div>
                 <p>We're right above you. Stand by. You came in that thing? You're braver that I thought. Nice! Come on! It's them! Blast them! Get back to the ship!</p>
-                <img data-src="{{ theme_path ~ '/build/img/background.jpeg' }}" class="lazyload">
+                <img data-src="{{ theme_path ~ '/build/img/background.jpg' }}" class="lazyload">
             </div>
-            <div class="basis-1/4">
+            <div>
                 <p>We're right above you. Stand by. You came in that thing? You're braver that I thought. Nice! Come on! It's them! Blast them! Get back to the ship!</p>
-                <img data-src="{{ theme_path ~ '/build/img/background.jpeg' }}" class="lazyload">
+                <img data-src="{{ theme_path ~ '/build/img/background.jpg' }}" class="lazyload">
             </div>
         </div>
 
     </section>
 
-    <section class="flex items-center justify-center bg-cover bg-no-repeat bg-center h-screen text-white" style="background-image: url({{ theme_path ~ '//build/img/background.jpeg' }})">
-        <div class="wrapper flex flex-col items-center justify-center max-w-prose">
+    <section class="flex items-center justify-center bg-cover bg-no-repeat bg-center h-screen text-white relative before:content-[''] before:absolute before:bg-neutral-900 before:opacity-70 before:top-0 before:left-0 before:w-full before:h-full before:z-1" style="background-image: url({{ theme_path ~ '//build/img/background.jpg' }})">
+        <div class="wrapper flex flex-col items-center justify-center max-w-prose relative z-2">
             <h5>Uh...Threepio, hand me those binders there will you? Okay.</h5>
             <p>
                 <strong>The Rebel Alliance is too well equipped.</strong>
