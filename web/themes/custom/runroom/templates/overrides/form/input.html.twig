@@ -1,7 +1,7 @@
 {% set classes = [
-    'min-h-8',
     'w-full',
-    'p-3',
+    'py-2',
+    'px-3',
     'mb-2',
     'text-base',
     'text-gray-700',
@@ -11,4 +11,4 @@
     'focus:shadow-outline'
 ] %}
 
-<textarea{{ attributes.addClass(classes) }}>{{ value }}</textarea>
+<input{{ attributes.addClass(classes) }} />{{ children }}
