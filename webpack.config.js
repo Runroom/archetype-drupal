@@ -14,10 +14,6 @@ Encore.setOutputPath('web/themes/custom/runroom/build/')
   .enableBuildNotifications()
   .enableSourceMaps(!Encore.isProduction())
   .enableVersioning(false) // We do not enable versioning on Drupal
-  .enableSassLoader(options => {
-    options.sourceMap = true;
-    options.sassOptions = { sourceComments: !Encore.isProduction() };
-  }, {})
   .autoProvidejQuery()
   .addExternals({
     Drupal: 'Drupal',
@@ -25,7 +21,7 @@ Encore.setOutputPath('web/themes/custom/runroom/build/')
   })
   .addPlugin(
     new StyleLintPlugin({
-      context: 'assets/scss',
+      context: 'assets/css',
       emitWarning: true
     })
   )
@@ -33,9 +29,8 @@ Encore.setOutputPath('web/themes/custom/runroom/build/')
   .enablePostCssLoader()
   .addEntry('app', './assets/js/app.js')
   .addEntry('form', './assets/js/form.js')
-  .addStyleEntry('styles', './assets/scss/styles.scss')
-  .addStyleEntry('crp.default', './assets/scss/crp/default.scss')
-  .addStyleEntry('crp.billboard', './assets/scss/crp/billboard.scss')
-  .addStyleEntry('crp.basic-page', './assets/scss/crp/basic-page.scss');
+  .addStyleEntry('styles', './assets/css/styles.css')
+  .addStyleEntry('globals', './assets/css/globals.css')
+  .addStyleEntry('crp.default', './assets/css/crp.default.css');
 
 module.exports = Encore.getWebpackConfig();

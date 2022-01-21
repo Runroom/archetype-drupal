@@ -1,15 +1,15 @@
 {% macro icon(icon, class) %}{% apply spaceless %}
-    <span class="u-icon {{ class|default('') }}" aria-hidden="true">
+    <span class="icon {{ class|default('') }}" aria-hidden="true">
         {% include '@runroom/helpers/_inline-svg.html.twig' with { svg: icon } %}
     </span>
 {% endapply %}{% endmacro %}
 
 {% macro breadcrumbs(breadcrumbs, title) %}{% apply spaceless %}
     <nav aria-label="{{ title|default('Breadcrumb') }}">
-        <ul class="breadcrumbs">
+        <ul class="flex items-center">
             {% for breadcrumb in breadcrumbs %}
                 {% set breadcrumbClass = loop.last or not breadcrumb.url ? 'breadcrumbs__nolink' : 'breadcrumbs__link' %}
-                <li class="breadcrumbs__item">
+                <li class="mx-2">
                     <a href="{{ breadcrumb.url|default('') }}" class="{{ breadcrumbClass }}" {% if breadcrumb.url is not defined or breadcrumb.url == '' %}tabindex="-1"{% endif %} {% if loop.last %}aria-current="page"{% endif %}>{{ breadcrumb.title }}</a>
                 </li>
             {% endfor %}

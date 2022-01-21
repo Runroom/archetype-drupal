@@ -1,3 +1,7 @@
-<div class="form__field">
-    <input{{ attributes }}/>{{ children }}
+{% set classes = [
+    'button'
+] %}
+
+<div class="mt-4 inline-block mx-auto">
+    <input{{ attributes.addClass(classes) }}/>{{ children }}
 </div>

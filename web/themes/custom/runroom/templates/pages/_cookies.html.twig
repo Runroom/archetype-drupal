@@ -1,31 +1,31 @@
 {% extends '@runroom/layouts/_default.html.twig' %}
 
 {% block content %}
-    <div class="u-wrapper">
-        <h1 class="cookies__title">{{ cookiesPage.label }}</h1>
-        <div class="u-wysiwyg ">{{ cookiesPage.field_introduction.value|raw }}</div>
-        <form class="form u-wysiwyg js-cookies-form">
-            <section class="cookies__section">
-                <div class="cookies__header u-flex--s768 u-flex--justify-between">
-                    <h2 class="cookies__subtitle">{{ 'cookies.mandatory_cookies.title'|trans }}</h2>
+    <div class="wrapper">
+        <h1>{{ cookiesPage.label }}</h1>
+        <div class="wysiwyg ">{{ cookiesPage.field_introduction.value|raw }}</div>
+        <form class="form wysiwyg js-cookies-form">
+            <section class="py-4">
+                <div class="s768:flex justify-between">
+                    <h2>{{ 'cookies.mandatory_cookies.title'|trans }}</h2>
                     {{ form.mandatory }}
                 </div>
                 <p>{{ 'cookies.mandatory_cookies.text'|trans }}</p>
                 {% include '@runroom/components/_cookies-list.html.twig' with { cookiesList: cookies.mandatory_cookies } %}
             </section>
 
-            <section class="cookies__section">
-                <div class="cookies__header u-flex--s768 u-flex--justify-between">
-                    <h2 class="cookies__subtitle">{{ 'cookies.performance_cookies.title'|trans }}</h2>
+            <section class="py-4">
+                <div class="s768:flex justify-between">
+                    <h2>{{ 'cookies.performance_cookies.title'|trans }}</h2>
                     {{ form.performance }}
                 </div>
                 <p>{{ 'cookies.performance_cookies.text'|trans }}</p>
                 {% include '@runroom/components/_cookies-list.html.twig' with { cookiesList: cookies.performance_cookies } %}
             </section>
 
-            <section class="cookies__section">
-                <div class="cookies__header u-flex--s768 u-flex--justify-between">
-                    <h2 class="cookies__subtitle">{{ 'cookies.targeting_cookies.title'|trans }}</h2>
+            <section class="py-4">
+                <div class="s768:flex justify-between">
+                    <h2>{{ 'cookies.targeting_cookies.title'|trans }}</h2>
                     {{ form.targeting }}
                 </div>
                 <p>{{ 'cookies.targeting_cookies.text'|trans }}</p>
@@ -33,7 +33,7 @@
             </section>
 
             {{ form.submit }}
-            <p class="small u-hide cookies__success js-cookies-settings-saved">{{ 'cookies.updated'|t }}</p>
+            <p class="text-sm hidden js-cookies-settings-saved">{{ 'cookies.updated'|t }}</p>
         </form>
     </div>
 {% endblock %}

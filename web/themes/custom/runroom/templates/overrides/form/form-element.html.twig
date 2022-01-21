@@ -1,13 +1,12 @@
 {% set classes = [
     label_display in ['after'] ? 'form__field--inline' : 'form__field',
     'js-form-item',
-    'form-item',
     'js-form-type-' ~ type|clean_class,
     'form-item-' ~ name|clean_class,
     'js-form-item-' ~ name|clean_class,
     title_display not in ['after', 'before'] ? 'form-no-label',
     disabled == 'disabled' ? 'form-disabled',
-    errors ? 'form-item--error',
+    errors ? 'text-red-500',
 ] %}
 
 <div {{ attributes.addClass(classes) }}>
@@ -22,7 +21,7 @@
     {% endif %}
 
     {% if errors %}
-        <span class="form__message--invalid">
+        <span class="text-sm text-red-500 italic">
             {{ errors }}
         </span>
     {% endif %}

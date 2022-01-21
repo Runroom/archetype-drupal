@@ -3,10 +3,10 @@
 {% set cite = cite|default({}) %}
 {% set author = author|default('') %}
 {% if quote is defined %}
-<blockquote class="blockquote {{ class }}">
+<blockquote class="p-4 {{ class }}">
     {{ quote }}
     {% if cite or author %}
-    <footer class="blockquote__footer">
+    <footer class="mt-2 italic text-sm">
         {% if cite %}
             <cite>
                 <a title="{{ cite.title }}" href="{{ cite.link }}">{{ cite.label }}</a>

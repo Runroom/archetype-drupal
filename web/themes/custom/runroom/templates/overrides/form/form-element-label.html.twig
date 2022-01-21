@@ -1,4 +1,7 @@
 {% set classes = [
+    'block',
+    'text-sm',
+    'mb-2',
     title_display == 'after' ? 'option',
     title_display == 'invisible' ? 'visually-hidden',
     required ? 'js-form-required',
@@ -11,7 +14,7 @@
 
         {% if required and title_display != 'after' %}
             <span aria-hidden="true">{{ 'form.required_label_visible'|trans }}</span>
-            <span class="u-sr-only">{{ 'form.required_label_screen_reader'|trans }}</span>
+            <span class="sr-only">{{ 'form.required_label_screen_reader'|trans }}</span>
         {% endif %}
     </label>
 {%- endif %}

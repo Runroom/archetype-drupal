@@ -8,6 +8,7 @@
         {% include '@runroom/modules/_favicon.html.twig' %}
 
         <style type="text/css">{% apply spaceless %}
+            {% include '@runroom/helpers/_inline-crp.html.twig' with { crp: 'globals' } %}
             {% block crp %}
                 {% include '@runroom/helpers/_inline-crp.html.twig' with { crp: 'crp.default' } %}
             {% endblock %}

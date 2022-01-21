@@ -5,153 +5,137 @@
 {% block billboardDescription 'The Drupal Archetype is a boilerplate project.' %}
 
 {% block content %}
-    <div class="demo">
-        <section class="u-hide--s768 u-wrapper">
-            <p>Modal message for mobile view only</p>
-        </section>
-        <section class="u-hide u-show--s768 u-wrapper">
-            <p>Modal message for desktop view only</p>
-        </section>
-        <p class="u-sr-only">This message is for Screen Reader only</p>
-        <section class="demo__section">
-            <div class="u-wrapper">
-                <h2>Build-in functionallities</h2>
-                <p class="u-reading">You can follow the specifications in the docs files to read about template hierarchy and modularization</p>
-                {#
-                 # Anchors can be made using `data-anchor` attribute or `href`
-                 # attribute
-                 #}
-                <ul>
-                    <li><a href="#" class="js-anchor" data-anchor="#demo-module-layout">Modulable layouts</a></li>
-                    <li><a href="#grid" class="js-anchor">Flexbox grid classes</a></li>
-                </ul>
+    <section class="s768:hidden wrapper italic my-2">
+        <p>Modal message for under 768px view only</p>
+    </section>
+    <section class="hidden s768:block wrapper italic my-2">
+        <p>Modal message for over 768px view only</p>
+    </section>
+    <p class="sr-only">This message is for Screen Reader only</p>
+    <section class="py-8">
+        <div class="wrapper">
+            <h2>Build-in functionallities</h2>
+            <p class="max-w-prose">You can follow the specifications in the docs files to read about template hierarchy and modularization</p>
+            {#
+                # Anchors can be made using `data-anchor` attribute or `href`
+                # attribute
+                #}
+            <ul>
+                <li><a href="#" class="js-anchor" data-anchor="#demo-module-layout">Modulable layouts</a></li>
+                <li><a href="#grid" class="js-anchor">Flexbox grid classes</a></li>
+            </ul>
+        </div>
+    </section>
+
+    {% embed '@runroom/layouts/_section-demo.html.twig' %}
+        {% block sectionId 'demo-module-layout' %}
+        {% block sectionClass 'py-8' %}
+        {% block sectionAside %}
+            <h2>Secciones como layouts</h2>
+        {% endblock %}
+        {% block sectionContent %}
+            <p>Este tipo de layouts nos permite reutilizar estructuras de secciones que se repiten a lo largo de nuestro proyecto.</p>
+            <ul>
+                <li>Nos permiten reducir la cantidad de código</li>
+                <li>Reducimos la velocidad de desarrollo de estas secciones</li>
+                <li>Son flexibles para recibir cualquier tipo de contenido</li>
+            </ul>
+        {% endblock %}
+    {% endembed %}
+
+    {% embed '@runroom/layouts/_section-demo.html.twig' %}
+        {% block sectionClass 'h-screen py-8' %}
+        {% block sectionAside %}
+            <h2>Reutilizamos el mismo layout que antes</h2>
+        {% endblock %}
+        {% block sectionContent %}
+            <h3>Tenemos contenidos distintos</h3>
+            <img data-src="https://picsum.photos/300/200" class="lazyload" alt="">
+        {% endblock %}
+    {% endembed %}
+
+    {% include '@runroom/modules/_demo-module.html.twig' %}
+
+    <section id="grid" class="wrapper">
+        <h2>Grid</h2>
+        <div class="py-8 grid grid-cols-3 gap-2">
+            <div>
+                <h3>Column</h3>
+                {% include '@runroom/components/_blockquote.html.twig' with {
+                    class: 'blockquote--clean',
+                    quote: 'Derive of reason salvation overcome insofar insofar enlightenment against reason. Prejudice law contradict mountains oneself pinnacle zarathustra merciful against aversion ocean ultimate pious aversion.',
+                    author: 'Friedrich Nietzsche'
+                } %}
             </div>
-        </section>
-
-        {% embed '@runroom/layouts/_section-demo.html.twig' %}
-            {% block sectionId 'demo-module-layout' %}
-            {% block sectionClass 'demo__section' %}
-            {% block sectionAside %}
-                <h2>Secciones como layouts</h2>
-            {% endblock %}
-            {% block sectionContent %}
-                <p>Este tipo de layouts nos permite reutilizar estructuras de secciones que se repiten a lo largo de nuestro proyecto.</p>
-                <ul>
-                    <li>Nos permiten reducir la cantidad de código</li>
-                    <li>Reducimos la velocidad de desarrollo de estas secciones</li>
-                    <li>Son flexibles para recibir cualquier tipo de contenido</li>
-                </ul>
-            {% endblock %}
-        {% endembed %}
-
-        {% embed '@runroom/layouts/_section-demo.html.twig' %}
-            {% block sectionClass 'demo__section' %}
-            {% block sectionAside %}
-                <h2>Reutilizamos el mismo layout que antes</h2>
-            {% endblock %}
-            {% block sectionContent %}
-                <h3>Tenemos contenidos distintos</h3>
-                <img data-src="https://picsum.photos/300/200" class="lazyload" alt="">
-            {% endblock %}
-        {% endembed %}
-
-        {% include '@runroom/modules/_demo-module.html.twig' %}
-
-        <section class="demo__grid u-wrapper">
-            <h2>Flexbox grid</h2>
-            <p class="u-reading">Flexbox grid based on classes. This classes can be customize depending on the needed breakpoints and column sizes. The current grid is based on 24 columns</p>
-            <div class="demo__section u-flex u-flex--wrap">
-                <div class="demo__column u-flex--s768-8">
-                    <h3>8-column</h3>
-                    {% include '@runroom/components/_blockquote.html.twig' with {
-                        class: 'blockquote--clean',
-                        quote: 'Derive of reason salvation overcome insofar insofar enlightenment against reason. Prejudice law contradict mountains oneself pinnacle zarathustra merciful against aversion ocean ultimate pious aversion.',
-                        author: 'Friedrich Nietzsche'
-                    } %}
-                </div>
-                <div class="demo__column u-flex--s768-8">
-                    <h3>8-column</h3>
-                    {% include '@runroom/components/_blockquote.html.twig' with {
-                        class: 'blockquote--clean',
-                        quote: 'Against disgust endless overcome morality philosophy burying pinnacle dead deceptions.',
-                        author: 'Friedrich Nietzsche'
-                    } %}
-                </div>
-                <div class="demo__column u-flex--s768-8">
-                    <h3>8-column</h3>
-                    {% include '@runroom/components/_blockquote.html.twig' with {
-                        class: 'blockquote--clean',
-                        quote: 'Love mountains deceptions convictions value self holiest disgust mountains selfish virtues. Philosophy passion convictions derive war strong holiest pinnacle free morality self play.',
-                        author: 'Friedrich Nietzsche'
-                    } %}
-                </div>
+            <div>
+                <h3>Column</h3>
+                {% include '@runroom/components/_blockquote.html.twig' with {
+                    class: 'blockquote--clean',
+                    quote: 'Against disgust endless overcome morality philosophy burying pinnacle dead deceptions.',
+                    author: 'Friedrich Nietzsche'
+                } %}
             </div>
-        </section>
-
-        <section class="demo__section u-wrapper">
-            <h2>This is a sample of a grid alignment</h2>
-            <div class="u-flex u-flex--wrap u-flex--center">
-                <div class="u-flex--s960-8" style="margin-right: 20px;">
-                    <p>We're right above you. Stand by. You came in that thing? You're braver that I thought. Nice! Come on! It's them! Blast them! Get back to the ship!</p>
-                </div>
-                <div class="u-flex--s960-8">
-                    <img data-src="{{ theme_path ~ '/build/img/background.jpeg' }}" class="lazyload">
-                </div>
+            <div>
+                <h3>Column</h3>
+                {% include '@runroom/components/_blockquote.html.twig' with {
+                    class: 'blockquote--clean',
+                    quote: 'Love mountains deceptions convictions value self holiest disgust mountains selfish virtues. Philosophy passion convictions derive war strong holiest pinnacle free morality self play.',
+                    author: 'Friedrich Nietzsche'
+                } %}
             </div>
+        </div>
+    </section>
 
-            <div class="u-flex--s768 u-flex--wrap u-flex--justify-between">
-                <div class="u-flex--s768-6">
-                    <p>We're right above you. Stand by. You came in that thing? You're braver that I thought. Nice! Come on! It's them! Blast them! Get back to the ship!</p>
-                    <img data-src="{{ theme_path ~ '/build/img/background.jpeg' }}" class="lazyload">
-                </div>
-                <div class="u-flex--s768-6">
-                    <p>We're right above you. Stand by. You came in that thing? You're braver that I thought. Nice! Come on! It's them! Blast them! Get back to the ship!</p>
-                    <img data-src="{{ theme_path ~ '/build/img/background.jpeg' }}" class="lazyload">
-                </div>
-                <div class="u-flex--s768-6">
-                    <p>We're right above you. Stand by. You came in that thing? You're braver that I thought. Nice! Come on! It's them! Blast them! Get back to the ship!</p>
-                    <img data-src="{{ theme_path ~ '/build/img/background.jpeg' }}" class="lazyload">
-                </div>
+    <section class="py-8 wrapper">
+        <h2>This is a sample of a grid alignment</h2>
+        <div class="flex flex-wrap items-center">
+            <div class="basis-1/6 mr-4">
+                <p>We're right above you. Stand by. You came in that thing? You're braver that I thought. Nice! Come on! It's them! Blast them! Get back to the ship!</p>
             </div>
-
-        </section>
-
-        <section class="demo__background" style="background-image: url({{ theme_path ~ '//build/img/background.jpeg' }})">
-            <div class="u-wrapper u-flex--s960-8 u-center">
-                <h5>Uh...Threepio, hand me those binders there will you? Okay.</h5>
-                <p>
-                    <strong>The Rebel Alliance is too well equipped.</strong>
-                    They're more dangerous than you realize. Dangerous to your starfleet, Commander, not to this battle station! The Rebellion will continue to gain a support in the Imperial Senate as long as.... The Imperial Senate will no longer be of any concern to us. I've just received word that the Emperor has dissolved the council permanently. The last remnants of the Old Republic have been swept away.
-                </p>
+            <div class="basis-1/6">
+                <img data-src="{{ theme_path ~ '/build/img/background.jpeg' }}" class="lazyload">
             </div>
-        </section>
+        </div>
 
-        <section class="demo__section u-wrapper u-reading">
-            <h2 class="">This is a sample of a reading section</h2>
-            <h3>It is base on max-width (960px), not the grid</h3>
-            <p>Biggs, Wedge, let's close it up. We're going in. We're going in full throttle. Right with you, boss. Luke, at that speed will you be able to pull out in time? It'll be just like Beggar's Canyon back home. We'll stay back far enough to cover you. My scope shows the tower, but I can't see the exhaust port! Are you sure the computer can hit it? Watch yourself! Increase speed full throttle! What about the tower? You worry about those fighters! I'll worry about the tower! Artoo...that, that stabilizer's broken loose again! See if you can't lock it down! I'm hit! I can't stay with you. Get clear, Wedge. You can't do any more good back there! Sorry!</p>
-            <p>The approach will not be easy. You are required to maneuver straight down this trench and skim the surface to this point. The target area is only two meters wide. It's a small thermal exhaust port, right below the main port. The shaft leads directly to the reactor system. A precise hit will start a chain reaction which should destroy the station. Only a precise hit will set up a chain reaction. The shaft is ray-shielded, so you'll have to use proton torpedoes. That's impossible, even for a computer. It's not impossible. I used to bull's-eye womp rats in my T-sixteen back home. They're not much bigger than two meters. Man your ships! And may the Force be with you!</p>
-            <p>Rendezvous at mark six point one. This is Red Two. Flying toward you. Red Three, standing by. Red Leader, this is Base One. Keep half your group out of range for the next run. Copy, Base One. Luke, take Red Two and Three. Hold up here and wait for my signal...to start your run. This is it! We should be able to see it by now. Keep your eyes open for those fighters! There's too much interference! Red Five, can you see them from where you are? No sign of any...wait! Coming in point three five. I see them. I'm in range. Target's coming up! Just hold them off for a few seconds.</p>
-            <p>Didn't we just leave this party? What kept you? We ran into some old friends. Is the ship all right? Seems okay, if we can get to it. Just hope the old man got the tractor beam out of commission. Look! Come on, Artoo, we're going! Now's our chance! Go! No! Come on! Come on! Luke, its too late! Blast the door! Kid!</p>
-            <p>Until this battle station is fully operational we are vulnerable. The Rebel Alliance is too well equipped. They're more dangerous than you realize. Dangerous to your starfleet, Commander, not to this battle station! The Rebellion will continue to gain a support in the Imperial Senate as long as.... The Imperial Senate will no longer be of any concern to us. I've just received word that the Emperor has dissolved the council permanently. The last remnants of the Old Republic have been swept away. That's impossible! How will the Emperor maintain control without the bureaucracy? The regional governors now have direct control over territories. Fear will keep the local systems in line. Fear of this battle station.</p>
-        </section>
+        <div class="s768:flex flex-wrap justify-between">
+            <div class="basis-1/4">
+                <p>We're right above you. Stand by. You came in that thing? You're braver that I thought. Nice! Come on! It's them! Blast them! Get back to the ship!</p>
+                <img data-src="{{ theme_path ~ '/build/img/background.jpeg' }}" class="lazyload">
+            </div>
+            <div class="basis-1/4">
+                <p>We're right above you. Stand by. You came in that thing? You're braver that I thought. Nice! Come on! It's them! Blast them! Get back to the ship!</p>
+                <img data-src="{{ theme_path ~ '/build/img/background.jpeg' }}" class="lazyload">
+            </div>
+            <div class="basis-1/4">
+                <p>We're right above you. Stand by. You came in that thing? You're braver that I thought. Nice! Come on! It's them! Blast them! Get back to the ship!</p>
+                <img data-src="{{ theme_path ~ '/build/img/background.jpeg' }}" class="lazyload">
+            </div>
+        </div>
 
-        <section id="grid" class="demo__grid demo__section u-wrapper u-flex u-flex--wrap">
-            {% set boxes = [24, 12, 8, 6, 4] %}
-            {% for box in boxes %}
-                {% set columns = 24 / box %}
-                {% for i in 1..columns %}
-                    <div class="u-flex--s768-{{ box }} u-flex--center box">
-                        <span style="word-break: break-all;">{{ box }}
-                            columns</span>
-                    </div>
-                {% endfor %}
-            {% endfor %}
-        </section>
+    </section>
 
-        <section id="form" class="demp__section u-wrapper">
-            <h2 class="u-flex--s480-24">This is a sample of a form</h2>
-            {{ drupal_form('Drupal\\contact_form\\Form\\ContactForm') }}
-        </section>
-    </div>
+    <section class="flex items-center justify-center bg-cover bg-no-repeat bg-center h-screen text-white" style="background-image: url({{ theme_path ~ '//build/img/background.jpeg' }})">
+        <div class="wrapper flex flex-col items-center justify-center max-w-prose">
+            <h5>Uh...Threepio, hand me those binders there will you? Okay.</h5>
+            <p>
+                <strong>The Rebel Alliance is too well equipped.</strong>
+                They're more dangerous than you realize. Dangerous to your starfleet, Commander, not to this battle station! The Rebellion will continue to gain a support in the Imperial Senate as long as.... The Imperial Senate will no longer be of any concern to us. I've just received word that the Emperor has dissolved the council permanently. The last remnants of the Old Republic have been swept away.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-8 wrapper max-w-prose">
+        <h2 class="mb-2">This is a sample of a reading section</h2>
+        <h3 class="mb-4">It is base on max-width (960px), not the grid</h3>
+        <p>Biggs, Wedge, let's close it up. We're going in. We're going in full throttle. Right with you, boss. Luke, at that speed will you be able to pull out in time? It'll be just like Beggar's Canyon back home. We'll stay back far enough to cover you. My scope shows the tower, but I can't see the exhaust port! Are you sure the computer can hit it? Watch yourself! Increase speed full throttle! What about the tower? You worry about those fighters! I'll worry about the tower! Artoo...that, that stabilizer's broken loose again! See if you can't lock it down! I'm hit! I can't stay with you. Get clear, Wedge. You can't do any more good back there! Sorry!</p>
+        <p>The approach will not be easy. You are required to maneuver straight down this trench and skim the surface to this point. The target area is only two meters wide. It's a small thermal exhaust port, right below the main port. The shaft leads directly to the reactor system. A precise hit will start a chain reaction which should destroy the station. Only a precise hit will set up a chain reaction. The shaft is ray-shielded, so you'll have to use proton torpedoes. That's impossible, even for a computer. It's not impossible. I used to bull's-eye womp rats in my T-sixteen back home. They're not much bigger than two meters. Man your ships! And may the Force be with you!</p>
+        <p>Rendezvous at mark six point one. This is Red Two. Flying toward you. Red Three, standing by. Red Leader, this is Base One. Keep half your group out of range for the next run. Copy, Base One. Luke, take Red Two and Three. Hold up here and wait for my signal...to start your run. This is it! We should be able to see it by now. Keep your eyes open for those fighters! There's too much interference! Red Five, can you see them from where you are? No sign of any...wait! Coming in point three five. I see them. I'm in range. Target's coming up! Just hold them off for a few seconds.</p>
+        <p>Didn't we just leave this party? What kept you? We ran into some old friends. Is the ship all right? Seems okay, if we can get to it. Just hope the old man got the tractor beam out of commission. Look! Come on, Artoo, we're going! Now's our chance! Go! No! Come on! Come on! Luke, its too late! Blast the door! Kid!</p>
+        <p>Until this battle station is fully operational we are vulnerable. The Rebel Alliance is too well equipped. They're more dangerous than you realize. Dangerous to your starfleet, Commander, not to this battle station! The Rebellion will continue to gain a support in the Imperial Senate as long as.... The Imperial Senate will no longer be of any concern to us. I've just received word that the Emperor has dissolved the council permanently. The last remnants of the Old Republic have been swept away. That's impossible! How will the Emperor maintain control without the bureaucracy? The regional governors now have direct control over territories. Fear will keep the local systems in line. Fear of this battle station.</p>
+    </section>
+
+    <section id="form" class="wrapper">
+        <h2>This is a sample of a form</h2>
+        {{ drupal_form('Drupal\\contact_form\\Form\\ContactForm') }}
+    </section>
 {% endblock %}

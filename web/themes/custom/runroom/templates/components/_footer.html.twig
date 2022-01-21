@@ -1,9 +1,9 @@
 {% from '@runroom/helpers/_macros.html.twig' import icon %}
 
-<footer id="footer" class="footer">
-    <div class="u-wrapper u-flex u-flex--align-between u-flex--justify-between">
+<footer id="footer" class="py-8 bg-neutral-900 text-white">
+    <div class="wrapper flex items-between justify-between">
         &copy; Runroom {{ 'now'|date('Y') }}
-        {{ icon('r-runroom') }}
+        {{ icon('r-runroom', 'fill-white') }}
         {{ drupal_menu('footer') }}
     </div>
 </footer>

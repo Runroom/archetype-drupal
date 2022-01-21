@@ -1,9 +1,7 @@
 {% set classes = [
-    'form__field',
+    'py-2',
     'js-form-item',
-    'form-item',
-    'js-form-wrapper',
-    'form-wrapper',
+    'js-form-wrapper'
 ] %}
 
 <fieldset{{ attributes.addClass(classes) }}>
@@ -18,7 +16,7 @@
 
         {% if required %}
             <span aria-hidden="true">{{ 'form.required_label_visible'|trans }}</span>
-            <span class="u-sr-only">{{ 'form.required_label_screen_reader'|trans }}</span>
+            <span class="sr-only">{{ 'form.required_label_screen_reader'|trans }}</span>
         {% endif %}
     </legend>
 
@@ -27,7 +25,7 @@
     </div>
 
     {% if errors %}
-        <span class="form__message--invalid">
+        <span class="text-sm text-red-500 italic">
             {{ errors }}
         </span>
     {% endif %}

@@ -1,8 +1,8 @@
 {% set class = class|default('') %}
 
-<header id="header" class="header {{ class }}">
-    <div class="header__wrapper u-wrapper u-flex u-flex--align-center u-flex--justify-between">
-        <a class="header__logo" href="{{ url('<front>') }}">
+<header id="header" class="py-4 {{ class }}">
+    <div class="wrapper flex items-center justify-between">
+        <a href="{{ url('<front>') }}">
             {% include '@runroom/helpers/_inline-svg.html.twig' with { svg: 'runroom-logo' } %}
         </a>
         {{ drupal_entity('block', 'languageswitcher') }}

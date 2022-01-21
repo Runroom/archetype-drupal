@@ -3,11 +3,11 @@
 {% set class = class|default('') %}
 {% set image = image|default(false) %}
 
-<section class="billboard u-flex u-flex--align-center {{ class }}" style="{% if image %}background-image: url({{ image }});{% endif %}">
-    <div class="u-wrapper">
-        <h1 class="billboard__title">{{ title }}</h1>
+<section class="flex items-center justify-center h-screen bg-cover bg-no-repeat bg-center text-white text-center {{ class }}" style="{% if image %}background-image: url({{ image }});{% endif %}">
+    <div class="wrapper">
+        <h1 class="mb-4">{{ title }}</h1>
         {% if description %}
-            <p class="billboard__description u-reading">{{ description }}</p>
+            <p class="max-w-prose">{{ description }}</p>
         {% endif %}
     </div>
 </section>

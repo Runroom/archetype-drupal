@@ -1,1 +1,5 @@
-<textarea{{ attributes }}>{{ value }}</textarea>
+{% set classes = [
+    'min-h-8'
+] %}
+
+<textarea{{ attributes.addClass(classes) }}>{{ value }}</textarea>

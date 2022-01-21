@@ -1,8 +1,8 @@
 {% macro main_menu(items, menu_level) %}
     {% import _self as menus %}
 
-    <div class="navigation">
-        <ul class="u-flex">
+    <nav>
+        <ul class="flex">
             {% for item in items %}
             <li{{ item.attributes }}>
                 {{ link(item.title, item.url) }}
