@@ -59,7 +59,7 @@
         "phpspec/prophecy-phpunit": "2.0.1",
         "phpstan/phpstan": "1.4.2",
         "phpstan/phpstan-strict-rules": "1.1.0",
-        "phpunit/phpunit": "9.5.12",
+        "phpunit/phpunit": "9.5.13",
         "symfony/phpunit-bridge": "6.0.0"
     },
     "replace": {
