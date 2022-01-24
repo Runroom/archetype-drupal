@@ -1,11 +1,11 @@
-{% from '@runroom/helpers/_macros.html.twig' import icon %}
-
-<div class="py-4 bg-neutral-900 text-white absolute bottom-0 left-0 w-full js-cookies">
+<div class="fixed bottom-0 left-0 w-full py-6 bg-neutral-900 text-white js-cookies">
     <div class="wrapper flex flex-wrap items-center">
         <p>
             {{ 'cookies.advice'|trans({ '@url': path('cookies.page') }) }}
         </p>
         <a class="button js-cookies-accept" href="#">{{ 'cookies.accept'|trans }}</a>
     </div>
-    {{ icon('exit', 'fill-white js-cookies-close') }}
+    <button class="block absolute top-4 right-4 h-4 w-4 fill-white js-cookies-close">
+        {% include '@runroom/helpers/_inline-svg.html.twig' with { svg: 'exit' } %}
+    </button>
 </div>

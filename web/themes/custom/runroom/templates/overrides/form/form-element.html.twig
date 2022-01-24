@@ -13,8 +13,16 @@
     {% if label_display in ['before', 'invisible'] %}
         {{ label }}
     {% endif %}
+    {% if type == 'select' %}
+        <div class="custom-select">
+    {% endif %}
 
     {{ children }}
+
+    {% if type == 'select' %}
+            {% include '@runroom/helpers/_inline-svg.html.twig' with { svg: 'arrow-down' } %}
+        </div>
+    {% endif %}
 
     {% if label_display == 'after' %}
         {{ label }}

@@ -2,9 +2,9 @@
 
 {% block content %}
     <div class="wrapper">
-        <h1>{{ cookiesPage.label }}</h1>
-        <div class="wysiwyg ">{{ cookiesPage.field_introduction.value|raw }}</div>
-        <form class="form wysiwyg js-cookies-form">
+        <h1 class="my-8">{{ cookiesPage.label }}</h1>
+        <div class="wysiwyg">{{ cookiesPage.field_introduction.value|raw }}</div>
+        <form class="form wysiwyg py-8 js-cookies-form">
             <section class="py-4">
                 <div class="s768:flex justify-between">
                     <h2>{{ 'cookies.mandatory_cookies.title'|trans }}</h2>
