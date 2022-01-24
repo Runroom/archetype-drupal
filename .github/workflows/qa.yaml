@@ -33,7 +33,7 @@ jobs:
               with:
                   node-version: ${{ matrix.node }}
             - uses: bahmutov/npm-install@v1
-            - run: npx stylelint assets/scss
+            - run: npx stylelint assets/css
             - run: npx eslint assets/js
             - run:
                   npx prettier --check .github assets webpack.config.js babel.config.js .eslintrc.js
