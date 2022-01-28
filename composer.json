@@ -42,8 +42,8 @@
         "drupal/views_bulk_operations": "4.0.1",
         "drupal/xmlsitemap": "1.2.0",
         "drush/drush": "11.0.4",
-        "symfony/dotenv": "6.0.2",
-        "symfony/flex": "2.1.2"
+        "symfony/dotenv": "6.0.3",
+        "symfony/flex": "2.1.4"
     },
     "require-dev": {
         "behat/mink": "1.9.0",
@@ -60,7 +60,7 @@
         "phpstan/phpstan": "1.4.2",
         "phpstan/phpstan-strict-rules": "1.1.0",
         "phpunit/phpunit": "9.5.13",
-        "symfony/phpunit-bridge": "6.0.0"
+        "symfony/phpunit-bridge": "6.0.3"
     },
     "replace": {
         "symfony/polyfill-php56": "*",
