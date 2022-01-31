@@ -14,6 +14,7 @@ pipeline {
         stage('Continuous Integration - PHP') {
             agent {
                 docker { image 'runroom/php8.1-cli' }
+                reuseNode true
             }
 
             steps {
@@ -50,6 +51,7 @@ pipeline {
         stage('Continuous Integration - Node') {
             agent {
                 docker { image 'runroom/node17' }
+                reuseNode true
             }
 
             steps {
