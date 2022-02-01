@@ -170,6 +170,9 @@
     "drupal/pathauto": {
         "version": "1.8.0"
     },
+    "drupal/r4032login": {
+        "version": "2.1.0"
+    },
     "drupal/redirect": {
         "version": "1.6.0"
     },
