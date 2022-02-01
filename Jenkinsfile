@@ -13,15 +13,16 @@ pipeline {
     stages {
         stage('Continuous Integration - PHP') {
             agent {
-                docker { 
+                docker {
                     image 'runroom/php8.1-cli'
+                    args '-v $HOME/composer:/home/jenkins/.composer:z'
                     reuseNode true
                 }
             }
 
             steps {
                 // Install
-                sh 'composer install --prefer-dist --no-progress --no-interaction'
+                sh 'composer install --no-progress --no-interaction'
 
                 // Lint + QA
                 sh 'composer php-cs-fixer -- --dry-run'
@@ -52,8 +53,9 @@ pipeline {
 
         stage('Continuous Integration - Node') {
             agent {
-                docker { 
+                docker {
                     image 'runroom/node17'
+                    args '-v $HOME/npm:/home/node/.npm:z'
                     reuseNode true
                 }
             }
@@ -83,7 +85,10 @@ pipeline {
     }
 
     post {
-        always { cleanWs() }
+        always { cleanWs deleteDirs: true, patterns: [
+            [pattern: '**/.cache/**', type: 'EXCLUDE'],
+            [pattern: 'node_modules', type: 'EXCLUDE']
+        ] }
         fixed { slackSend(color: 'good', message: "Fixed - ${PROJECT_NAME} - ${env.BUILD_DISPLAY_NAME} (<${env.BUILD_URL}|Open>)\n${env.BRANCH_NAME}")}
         failure { slackSend(color: 'danger', message: "Failed - ${PROJECT_NAME} - ${env.BUILD_DISPLAY_NAME} (<${env.BUILD_URL}|Open>)\n${env.BRANCH_NAME}") }
     }
