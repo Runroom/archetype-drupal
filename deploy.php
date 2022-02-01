@@ -16,7 +16,7 @@ set('clear_paths', ['assets', 'doc', '.docker', 'node_modules', 'tests']);
 set('default_timeout', null);
 set('allow_anonymous_stats', false);
 set('drush', '{{release_path}}/vendor/bin/drush');
-set('composer_options', '{{composer_action}} --prefer-dist --apcu-autoloader --no-progress --no-interaction --no-dev');
+set('composer_options', '{{composer_action}} --apcu-autoloader --no-progress --no-interaction --no-dev');
 
 set('bin/npm', function () {
     return run('. ~/.nvm/nvm.sh && nvm use > /dev/null 2>&1 && which npm');
