@@ -1,0 +1,17 @@
+uuid: 7e5c7208-7edb-42b7-ad9a-84963c8c9671
+langcode: es
+status: false
+dependencies: {  }
+id: staging
+label: Staging
+description: 'Configuraciones del entorno de staging'
+weight: 0
+stackable: false
+storage: folder
+folder: ../config/staging
+module:
+  content_snapshot: 0
+  serialization: 0
+theme: {  }
+complete_list: {  }
+partial_list: {  }

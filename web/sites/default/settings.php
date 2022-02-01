@@ -9,18 +9,18 @@ use Symfony\Component\HttpFoundation\Request;
 
 // Env Settings
 $databases = [
-  'default' => [
     'default' => [
-      'database' => $_SERVER['DATABASE_NAME'],
-      'username' => $_SERVER['DATABASE_USER'],
-      'password' => $_SERVER['DATABASE_PASSWORD'],
-      'prefix' => '',
-      'host' => $_SERVER['DATABASE_HOST'],
-      'port' => '',
-      'namespace' => 'Drupal\\Core\\Database\\Driver\\' . $_SERVER['DATABASE_DRIVER'],
-      'driver' => $_SERVER['DATABASE_DRIVER'],
+        'default' => [
+            'database' => $_SERVER['DATABASE_NAME'],
+            'username' => $_SERVER['DATABASE_USER'],
+            'password' => $_SERVER['DATABASE_PASSWORD'],
+            'prefix' => '',
+            'host' => $_SERVER['DATABASE_HOST'],
+            'port' => '',
+            'namespace' => 'Drupal\\Core\\Database\\Driver\\' . $_SERVER['DATABASE_DRIVER'],
+            'driver' => $_SERVER['DATABASE_DRIVER'],
+        ],
     ],
-  ],
 ];
 
 if (null !== $_SERVER['FILES_BASE_URL']) {
@@ -91,4 +91,8 @@ if ('dev' === $_SERVER['APP_ENV']) {
     $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.dev.yml';
 
     $config['config_split.config_split.development']['status'] = true;
+}
+
+if ('staging' === $_SERVER['APP_ENV']) {
+    $config['config_split.config_split.staging']['status'] = true;
 }
