@@ -30,9 +30,22 @@ task('app', function (): void {
     cd('{{release_path}}');
 
     run('{{bin/composer}} symfony:dump-env prod');
+})->setPrivate();
+
+task('migrations', function (): void {
+    cd('{{release_path}}');
+
     run('{{bin/php}} {{drush}} deploy --yes');
     run('{{bin/php}} {{drush}} language-import');
-})->setPrivate();
+})->onRoles('production');
+
+task('fixtures', function (): void {
+    cd('{{release_path}}');
+
+    run('{{bin/php}} {{drush}} site:install minimal --existing-config --yes');
+    run('{{bin/php}} {{drush}} deploy --yes');
+    run('{{bin/php}} {{drush}} language-import');
+})->onRoles('staging');
 
 task('frontend:build', function (): void {
     cd('{{release_path}}');
@@ -43,6 +56,8 @@ task('frontend:build', function (): void {
 
 after('deploy:vendors', 'frontend:build');
 after('frontend:build', 'app');
+after('app', 'migrations');
+after('app', 'fixtures');
 before('deploy:symlink', 'deploy:clear_paths');
 after('deploy:failed', 'deploy:unlock');
 

@@ -61,7 +61,7 @@ phpunit-coverage:
 	$(call docker-exec,phpunit --coverage-html /usr/app/coverage)
 
 database:
-	$(call docker-exec,drush site:install minimal --account-mail admin@localhost.com --account-pass admin --existing-config --yes)
+	$(call docker-exec,drush site:install minimal --existing-config --yes)
 
 update: language-export
 	$(call docker-exec,drush config:export --yes)

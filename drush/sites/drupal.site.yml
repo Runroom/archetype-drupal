@@ -1,7 +1,7 @@
 local:
-  root: /usr/app/web
+    root: /usr/app/web
 
 development:
-  host: drupal.runroom.dev
-  user: forge
-  root: /home/forge/drupal.runroom.dev/current/web
+    host: drupal.runroom.dev
+    user: forge
+    root: /home/forge/drupal.runroom.dev/current/web
