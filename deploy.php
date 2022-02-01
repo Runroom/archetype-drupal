@@ -29,7 +29,7 @@ set('bin/npx', function () {
 task('app', function (): void {
     cd('{{release_path}}');
 
-    run('{{bin/composer}} symfony:dump-env prod');
+    run('{{bin/composer}} symfony:dump-env');
 })->setPrivate();
 
 task('migrations', function (): void {
