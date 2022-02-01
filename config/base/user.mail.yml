@@ -1,7 +1,7 @@
 langcode: es
 cancel_confirm:
   subject: 'Account cancellation request for [user:display-name] at [site:name]'
-  body: "[user:display-name],\r\n\r\nA request to cancel your account has been made at [site:name].\r\n\r\nYou may now cancel your account on [site:url-brief] by clicking this link or copying and pasting it into your browser:\r\n\r\n[user:cancel-url]\r\n\r\nNOTE: The cancellation of your account is not reversible.\r\n\r\nThis link expires in one day and nothing will happen if it is not used.\r\n\r\n--  [site:name] team"
+  body: "[user:display-name],\r\n\r\nUna petición para cancelar su cuenta ha sido realizada en [site:name].\r\n\r\nPuede ahora cancelar su cuenta en [site:url-brief] haciendo clic en este enlace o copiando y pegandolo en su navegador:\r\n\r\n[user:cancel-url]\r\n\r\nAVISO: La cancelación de su cuenta no es reversible.\r\n\r\nEste enlace caduca en un día y no ocurrirá nada si no se usa.\r\n\r\n--  Equipo de [site:name]"
 password_reset:
   subject: 'Replacement login information for [user:display-name] at [site:name]'
   body: "[user:display-name],\r\n\r\nA request to reset the password for your account has been made at [site:name].\r\n\r\nYou may now log in by clicking this link or copying and pasting it into your browser:\r\n\r\n[user:one-time-login-url]\r\n\r\nThis link can only be used once to log in and will lead you to a page where you can set your password. It expires after one day and nothing will happen if it's not used.\r\n\r\n--  [site:name] team"
