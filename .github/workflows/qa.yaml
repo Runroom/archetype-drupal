@@ -36,6 +36,6 @@ jobs:
             - run: npx stylelint assets/scss
             - run: npx eslint assets/js
             - run:
-                  npx prettier --check .github assets webpack.config.js babel.config.js .eslintrc.js
-                  postcss.config.js prettier.config.js docker-compose.yaml servers.yaml
+                  npx prettier --check .github assets drush webpack.config.js babel.config.js
+                  .eslintrc.js postcss.config.js prettier.config.js docker-compose.yaml servers.yaml
             - run: npx encore production

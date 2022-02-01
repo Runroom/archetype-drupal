@@ -1,24 +1,29 @@
 command:
-  sql:
-    dump:
-      options:
-        structure-tables-key: common
-        skip-tables-key: common
-        extra-dump: '--no-tablespaces'
+    sql:
+        dump:
+            options:
+                structure-tables-key: common
+                skip-tables-key: common
+                extra-dump: "--no-tablespaces"
+    site:
+        install:
+            options:
+                account-mail: admin@localhost.com
+                account-pass: admin
 
 sql:
-  structure-tables:
-    common:
-      - cache
-      - cachetags
-      - cache_*
-      - history
-      - search_*
-      - sessions
-      - watchdog
-  skip-tables:
-    common:
-      - migration_*
+    structure-tables:
+        common:
+            - cache
+            - cachetags
+            - cache_*
+            - history
+            - search_*
+            - sessions
+            - watchdog
+    skip-tables:
+        common:
+            - migration_*
 
 ssh:
-  options: -q -o PasswordAuthentication=no
+    options: -q -o PasswordAuthentication=no
