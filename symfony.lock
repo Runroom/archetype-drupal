@@ -107,6 +107,9 @@
     "drupal/config_update": {
         "version": "1.7.0"
     },
+    "drupal/content_snapshot": {
+        "version": "2.0.0-beta3"
+    },
     "drupal/core": {
         "version": "9.1.4"
     },
@@ -551,9 +554,6 @@
     "symfony/polyfill-iconv": {
         "version": "v1.20.0"
     },
-    "symfony/polyfill-intl-grapheme": {
-        "version": "v1.24.0"
-    },
     "symfony/polyfill-intl-idn": {
         "version": "v1.20.0"
     },
@@ -594,9 +594,6 @@
     },
     "symfony/stopwatch": {
         "version": "v5.2.3"
-    },
-    "symfony/string": {
-        "version": "v5.4.2"
     },
     "symfony/translation": {
         "version": "3.3",

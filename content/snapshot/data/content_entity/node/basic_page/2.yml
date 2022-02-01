@@ -1,0 +1,87 @@
+nid:
+  -
+    value: 2
+uuid:
+  -
+    value: 7b974427-f9e5-4234-aafe-642ace8f9b4a
+langcode:
+  -
+    value: es
+type:
+  -
+    target_id: basic_page
+    target_type: node_type
+revision_timestamp:
+  -
+    value: '2022-02-01T17:00:16+00:00'
+    format: 'Y-m-d\TH:i:sP'
+revision_uid:
+  -
+    target_id: 1
+    target_type: user
+revision_log: {  }
+status:
+  -
+    value: true
+uid:
+  -
+    target_id: 1
+    target_type: user
+title:
+  -
+    value: 'Política de privacidad'
+created:
+  -
+    value: '2022-02-01T16:59:38+00:00'
+    format: 'Y-m-d\TH:i:sP'
+changed:
+  -
+    value: '2022-02-01T17:00:16+00:00'
+    format: 'Y-m-d\TH:i:sP'
+promote:
+  -
+    value: false
+sticky:
+  -
+    value: false
+default_langcode:
+  -
+    value: true
+metatag:
+  value:
+    canonical_url: 'http://default/politica-privacidad'
+    shortlink: 'http://default/politica-privacidad'
+    title: 'Política de privacidad | Archetype Drupal'
+    og_type: website
+    og_url: 'http://default/politica-privacidad'
+    og_title: 'Política de privacidad | Archetype Drupal'
+    twitter_cards_type: summary
+    twitter_cards_title: 'Política de privacidad | Archetype Drupal'
+    twitter_cards_page_url: 'http://default/politica-privacidad'
+path:
+  -
+    pathauto: 1
+    alias: /politica-privacidad
+    langcode: es
+content_translation_source:
+  -
+    value: und
+content_translation_outdated:
+  -
+    value: false
+field_components:
+  -
+    target_id: 1
+    target_type: paragraph
+field_internal_title:
+  -
+    value: 'Política de privacidad'
+field_meta_information: {  }
+_content_snapshot_metadata:
+  id: '2'
+  uuid: 7b974427-f9e5-4234-aafe-642ace8f9b4a
+  type: content_entity
+  additional:
+    entity_type: node
+    bundle: basic_page
+    is_translatable: true

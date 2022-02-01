@@ -32,7 +32,9 @@ content:
     type: metatag_firehose
     weight: 26
     region: content
-    settings: {  }
+    settings:
+      sidebar: true
+      use_details: true
     third_party_settings: {  }
   langcode:
     type: language_select
