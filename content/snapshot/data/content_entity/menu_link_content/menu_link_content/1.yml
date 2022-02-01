@@ -1,0 +1,91 @@
+id:
+  -
+    value: 1
+uuid:
+  -
+    value: 24b1fbbd-0428-4646-bdf9-5674e3d67aca
+langcode:
+  -
+    value: es
+bundle:
+  -
+    value: menu_link_content
+revision_created:
+  -
+    value: '2022-02-01T17:03:55+00:00'
+    format: 'Y-m-d\TH:i:sP'
+revision_user: {  }
+revision_log_message: {  }
+enabled:
+  -
+    value: true
+title:
+  -
+    value: 'Política de privacidad'
+description: {  }
+menu_name:
+  -
+    value: footer
+link:
+  -
+    uri: 'entity:node/2'
+    title: ''
+    options:
+      attributes:
+        class: {  }
+external:
+  -
+    value: false
+rediscover:
+  -
+    value: false
+weight:
+  -
+    value: -49
+expanded:
+  -
+    value: false
+parent: {  }
+changed:
+  -
+    value: '2022-02-01T17:05:05+00:00'
+    format: 'Y-m-d\TH:i:sP'
+default_langcode:
+  -
+    value: true
+metatag:
+  value:
+    canonical_url: 'http://default/node/1'
+    shortlink: 'http://default/node/1'
+    title: '| Archetype Drupal'
+    og_type: website
+    og_url: 'http://default/node/1'
+    og_title: '| Archetype Drupal'
+    twitter_cards_type: summary
+    twitter_cards_title: '| Archetype Drupal'
+    twitter_cards_page_url: 'http://default/node/1'
+content_translation_source:
+  -
+    value: und
+content_translation_outdated:
+  -
+    value: false
+content_translation_uid:
+  -
+    target_id: 1
+    target_type: user
+content_translation_status:
+  -
+    value: true
+content_translation_created:
+  -
+    value: '2022-02-01T17:03:55+00:00'
+    format: 'Y-m-d\TH:i:sP'
+_content_snapshot_metadata:
+  id: '1'
+  uuid: 24b1fbbd-0428-4646-bdf9-5674e3d67aca
+  type: content_entity
+  additional:
+    entity_type: menu_link_content
+    bundle: menu_link_content
+    is_translatable: true

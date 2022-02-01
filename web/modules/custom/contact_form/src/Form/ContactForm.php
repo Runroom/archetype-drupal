@@ -112,7 +112,7 @@ class ContactForm extends FormBase
         $form['privacy_policy'] = [
             '#type' => 'checkbox',
             '#title' => new TranslatableMarkup('contact_form.privacy_policy', [
-                '@link' => Url::fromRoute('entity.node.canonical', ['node' => 1])->toString(),
+                '@link' => Url::fromRoute('entity.node.canonical', ['node' => 2])->toString(),
             ]),
             '#required' => true,
         ];

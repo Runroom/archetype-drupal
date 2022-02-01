@@ -1,0 +1,26 @@
+id:
+  -
+    value: 1
+uuid:
+  -
+    value: a82268d8-1e8b-4b67-9ca2-bd2295d2a6ee
+langcode:
+  -
+    value: es
+path:
+  -
+    value: /node/2
+alias:
+  -
+    value: /politica-privacidad
+status:
+  -
+    value: true
+_content_snapshot_metadata:
+  id: '1'
+  uuid: a82268d8-1e8b-4b67-9ca2-bd2295d2a6ee
+  type: content_entity
+  additional:
+    entity_type: path_alias
+    bundle: path_alias
+    is_translatable: false

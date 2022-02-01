@@ -45,6 +45,7 @@ task('fixtures', function (): void {
     run('{{bin/php}} {{drush}} site:install minimal --existing-config --yes');
     run('{{bin/php}} {{drush}} deploy --yes');
     run('{{bin/php}} {{drush}} language-import');
+    run('{{bin/php}} {{drush}} content-snapshot:import --yes');
 })->onRoles('staging');
 
 task('frontend:build', function (): void {

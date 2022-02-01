@@ -5,7 +5,8 @@ MKCERT = mkcert
 docker-exec = docker compose exec app /bin/bash -c "$1"
 
 .PHONY: up compose build halt destroy ssh certs provision composer-install composer-normalize \
-		phpstan php-cs-fixer phpunit phpunit-coverage database update language-export language-import cache-rebuild
+		phpstan php-cs-fixer phpunit phpunit-coverage database update config-export config-import \
+		content-export content-import language-export language-import cache-rebuild
 
 # Docker
 up: compose $(AUTOLOAD)
@@ -37,7 +38,7 @@ certs:
 $(AUTOLOAD):
 	$(MAKE) provision
 
-provision: composer-install database deploy language-import
+provision: composer-install database deploy language-import content-import
 
 deploy:
 	$(call docker-exec,drush deploy --yes)
@@ -63,8 +64,19 @@ phpunit-coverage:
 database:
 	$(call docker-exec,drush site:install minimal --existing-config --yes)
 
-update: language-export
+update: language-export config-export
+
+config-export:
 	$(call docker-exec,drush config:export --yes)
+
+config-import:
+	$(call docker-exec,drush config:import --yes)
+
+content-export:
+	$(call docker-exec,drush content-snapshot:export --yes)
+
+content-import:
+	$(call docker-exec,drush content-snapshot:import --yes)
 
 language-export:
 	$(call docker-exec,drush language-export)

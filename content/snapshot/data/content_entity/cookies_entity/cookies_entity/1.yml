@@ -1,0 +1,55 @@
+id:
+  -
+    value: 1
+uuid:
+  -
+    value: 8bdf8ebb-709e-45f6-8772-4956b7087f38
+langcode:
+  -
+    value: es
+name:
+  -
+    value: 'Cookies policy'
+created:
+  -
+    value: '2022-02-01T15:41:03+00:00'
+    format: 'Y-m-d\TH:i:sP'
+changed:
+  -
+    value: '2022-02-01T15:41:03+00:00'
+    format: 'Y-m-d\TH:i:sP'
+default_langcode:
+  -
+    value: true
+metatag:
+  value:
+    canonical_url: 'http://default/node/1'
+    shortlink: 'http://default/node/1'
+    title: '| Archetype Drupal'
+    og_type: website
+    og_url: 'http://default/node/1'
+    og_title: '| Archetype Drupal'
+    twitter_cards_type: summary
+    twitter_cards_title: '| Archetype Drupal'
+    twitter_cards_page_url: 'http://default/node/1'
+content_translation_source:
+  -
+    value: und
+content_translation_outdated:
+  -
+    value: false
+content_translation_uid: {  }
+content_translation_status:
+  -
+    value: true
+content_translation_created: {  }
+content_translation_changed: {  }
+field_introduction: {  }
+_content_snapshot_metadata:
+  id: '1'
+  uuid: 8bdf8ebb-709e-45f6-8772-4956b7087f38
+  type: content_entity
+  additional:
+    entity_type: cookies_entity
+    bundle: cookies_entity
+    is_translatable: true

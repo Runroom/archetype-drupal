@@ -7,14 +7,16 @@ label: Desarrollo
 description: 'Configuraciones del entorno de desarrollo'
 weight: 0
 stackable: false
-storage: null
+storage: folder
 folder: ../config/development
 module:
   config: 0
   config_update: 0
+  content_snapshot: 0
   devel: 0
   features: 0
   features_ui: 0
+  serialization: 0
 theme: {  }
 complete_list: {  }
 partial_list: {  }

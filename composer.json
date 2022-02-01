@@ -18,6 +18,7 @@
         "drupal/allowed_formats": "1.4.0",
         "drupal/clientside_validation": "3.0.0-rc4",
         "drupal/config_split": "2.0.0-beta5",
+        "drupal/content_snapshot": "2.0.0-beta3",
         "drupal/core-recommended": "9.3.3",
         "drupal/date_popup": "1.1.0",
         "drupal/drush_language": "1.0.0-rc4",
@@ -42,7 +43,7 @@
         "drupal/vbo_export": "3.4.0",
         "drupal/views_bulk_operations": "4.0.1",
         "drupal/xmlsitemap": "1.2.0",
-        "drush/drush": "11.0.4",
+        "drush/drush": "10.6.2",
         "symfony/dotenv": "6.0.3",
         "symfony/flex": "2.1.4"
     },

@@ -1,0 +1,13 @@
+_core:
+  default_config_hash: FjJCDRX4oNw1pxiEQGe8dWnMXmMLEFUKI9AmJNmocF4
+langcode: es
+strict: 1
+snapshot_path: ../content/snapshot
+snapshot_streams:
+  -
+    scheme: public
+    path_exclude_pattern: ^js|^css|^simpletest|^styles|^translations|^xmlsitemap|^php|^languages|^.htaccess
+  -
+    scheme: private
+    path_exclude_pattern: null
+    optional: true
