@@ -4,8 +4,8 @@ node_modules
 vendor
 web/core
 web/modules/contrib
-web/sites/default/files
-web/sites/default/tmp
+web/sites/default/files/*
+web/sites/default/tmp/*
 web/sites/simpletest
 web/themes/contrib
 web/themes/custom/runroom/build
