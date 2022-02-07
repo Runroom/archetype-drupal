@@ -21,7 +21,8 @@ phpunit.xml
 web/core
 web/modules/contrib
 web/themes/contrib
-web/sites/default/files
+web/sites/default/files/*
+!web/sites/default/files/.gitignore
 web/sites/default/tmp/*
 !web/sites/default/tmp/.gitignore
 web/sites/simpletest/Assert.php
