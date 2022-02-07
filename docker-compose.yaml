@@ -23,6 +23,7 @@ services:
         # depends_on:
         #     - database
         # environment:
+        #     APP_ENV: staging
         #     RESET_DATABASE: true
         # volumes:
         #     - data-volume:/usr/app/web/sites/default/files
