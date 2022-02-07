@@ -31,7 +31,9 @@ services:
         #     test: ["CMD", "healthcheck"]
         #     start_period: 1m
     nginx:
-        image: nginx:1.21
+        build:
+            context: .
+            target: nginx-base
         ports:
             - 8080:80
             - 8443:443
