@@ -31,4 +31,5 @@ web/themes/custom/runroom/build/*
 !web/themes/custom/runroom/build/.gitignore
 
 # NODE
+npm-debug.log
 node_modules
