@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "27b2922ad68ae8a7133b6a7e93f22ae0",
+    "content-hash": "2c422994ce4b788000f655834d5d4a60",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -10486,16 +10486,16 @@
         },
         {
             "name": "mglaman/phpstan-drupal",
-            "version": "1.1.10",
+            "version": "1.1.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mglaman/phpstan-drupal.git",
-                "reference": "d18007fef2b46a7908f2b897c1557c8bfb1e6dfc"
+                "reference": "57b5b162749a84b3ae2eae5dd6c30fe6846c4753"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mglaman/phpstan-drupal/zipball/d18007fef2b46a7908f2b897c1557c8bfb1e6dfc",
-                "reference": "d18007fef2b46a7908f2b897c1557c8bfb1e6dfc",
+                "url": "https://api.github.com/repos/mglaman/phpstan-drupal/zipball/57b5b162749a84b3ae2eae5dd6c30fe6846c4753",
+                "reference": "57b5b162749a84b3ae2eae5dd6c30fe6846c4753",
                 "shasum": ""
             },
             "require": {
@@ -10506,15 +10506,16 @@
                 "webflo/drupal-finder": "^1.2"
             },
             "require-dev": {
+                "behat/mink": "^1.8",
                 "composer/installers": "^1.9",
-                "drupal/core-dev": "^8.8@alpha || ^9.0",
                 "drupal/core-recommended": "^8.8@alpha || ^9.0",
                 "drush/drush": "^9.6 || ^10.0",
                 "phpstan/extension-installer": "^1.1",
                 "phpstan/phpstan-deprecation-rules": "^1.0",
                 "phpstan/phpstan-strict-rules": "^1.0",
                 "phpunit/phpunit": "^6.5 || ^7.5 || ^8.0 || ^9",
-                "squizlabs/php_codesniffer": "^3.3"
+                "squizlabs/php_codesniffer": "^3.3",
+                "symfony/phpunit-bridge": "^3.4.3 || ^4.4 || ^5.4 || ^6.0"
             },
             "suggest": {
                 "jangregor/phpstan-prophecy": "Provides a prophecy/prophecy extension for phpstan/phpstan.",
@@ -10570,7 +10571,7 @@
             "description": "Drupal extension and rules for PHPStan",
             "support": {
                 "issues": "https://github.com/mglaman/phpstan-drupal/issues",
-                "source": "https://github.com/mglaman/phpstan-drupal/tree/1.1.10"
+                "source": "https://github.com/mglaman/phpstan-drupal/tree/1.1.11"
             },
             "funding": [
                 {
@@ -10586,7 +10587,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-01-26T21:36:53+00:00"
+            "time": "2022-02-18T21:31:42+00:00"
         },
         {
             "name": "myclabs/deep-copy",
