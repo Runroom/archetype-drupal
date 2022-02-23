@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "adbc8018e93b70e8810311373e147236",
+    "content-hash": "33e6269695b89c8e1c5f21281a7f2a48",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -10379,27 +10379,26 @@
         },
         {
             "name": "kint-php/kint-twig",
-            "version": "3.0",
+            "version": "4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kint-php/kint-twig.git",
-                "reference": "876b38c496d6bdfe6482647e8512e32e4528d811"
+                "reference": "5fdb325ddd4cb988dfa40a0f290d16e38b884d03"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kint-php/kint-twig/zipball/876b38c496d6bdfe6482647e8512e32e4528d811",
-                "reference": "876b38c496d6bdfe6482647e8512e32e4528d811",
+                "url": "https://api.github.com/repos/kint-php/kint-twig/zipball/5fdb325ddd4cb988dfa40a0f290d16e38b884d03",
+                "reference": "5fdb325ddd4cb988dfa40a0f290d16e38b884d03",
                 "shasum": ""
             },
             "require": {
-                "kint-php/kint": "^3 || ^4",
-                "php": ">= 7.0",
+                "kint-php/kint": "^4",
                 "twig/twig": "^2.4 || ^3.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^2.0",
-                "phpunit/phpunit": "^7.0",
-                "vimeo/psalm": "^3.7"
+                "friendsofphp/php-cs-fixer": "^3.0",
+                "phpunit/phpunit": "^9.0",
+                "vimeo/psalm": "^4"
             },
             "type": "library",
             "autoload": {
@@ -10420,9 +10419,9 @@
             "description": "Twig extension for Kint integration",
             "support": {
                 "issues": "https://github.com/kint-php/kint-twig/issues",
-                "source": "https://github.com/kint-php/kint-twig/tree/3.0"
+                "source": "https://github.com/kint-php/kint-twig/tree/4.0"
             },
-            "time": "2020-07-03T14:19:54+00:00"
+            "time": "2022-02-10T17:55:16+00:00"
         },
         {
             "name": "localheinz/diff",
