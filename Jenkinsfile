@@ -75,7 +75,7 @@ pipeline {
         }
 
         stage('Deploy') {
-            when { expression { return env.BRANCH_NAME in ['master'] } }
+            when { expression { return env.BRANCH_NAME in ['main'] } }
             steps {
                 build job: "${FOLDER_NAME}/Production Deploy", wait: false
             }
