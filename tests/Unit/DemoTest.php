@@ -8,7 +8,9 @@ use PHPUnit\Framework\TestCase;
 
 class DemoTest extends TestCase
 {
-    /** @test */
+    /**
+     * @test
+     */
     public function itWorks(): void
     {
         self::assertTrue(true);
