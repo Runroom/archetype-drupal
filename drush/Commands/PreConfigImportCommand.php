@@ -6,7 +6,9 @@ namespace Drush\Commands;
 
 class PreConfigImportCommand extends DrushCommands
 {
-    /** @hook pre-command config:import */
+    /**
+     * @hook pre-command config:import
+     */
     public function setUuid(): void
     {
         $staticUuidIsSet = \Drupal::state()->get('static_uuid_is_set');

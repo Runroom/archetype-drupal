@@ -42,7 +42,9 @@ class MetadataService
         }
     }
 
-    /** @throws \RuntimeException if there is no request */
+    /**
+     * @throws \RuntimeException if there is no request
+     */
     public function attachMetadata(
         array &$page,
         string $title,
