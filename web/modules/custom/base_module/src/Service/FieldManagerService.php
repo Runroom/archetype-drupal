@@ -26,7 +26,9 @@ class FieldManagerService
         return current($values);
     }
 
-    /** @return string[]|null */
+    /**
+     * @return string[]|null
+     */
     public function getValues(string $fieldName, FieldableEntityInterface $object, string $fieldValue = 'value'): ?array
     {
         if (!$object->hasField($fieldName)) {
@@ -36,7 +38,9 @@ class FieldManagerService
         return $this->getFieldValues($object->get($fieldName), $fieldValue);
     }
 
-    /** @return string[]|null */
+    /**
+     * @return string[]|null
+     */
     public function getFieldValues(FieldItemListInterface $field, string $fieldName = 'value'): ?array
     {
         if ($field->isEmpty()) {
@@ -73,7 +77,9 @@ class FieldManagerService
         return current($entities);
     }
 
-    /** @return EntityInterface[]|null */
+    /**
+     * @return EntityInterface[]|null
+     */
     public function getEntities(string $fieldName, FieldableEntityInterface $object): ?array
     {
         if (!$object->hasField($fieldName)) {
@@ -86,7 +92,9 @@ class FieldManagerService
         return $this->getFieldEntities($field);
     }
 
-    /** @return EntityInterface[]|null */
+    /**
+     * @return EntityInterface[]|null
+     */
     public function getFieldEntities(EntityReferenceFieldItemList $field): ?array
     {
         if ($field->isEmpty()) {
