@@ -13,6 +13,6 @@ class DemoTest extends TestCase
      */
     public function itWorks(): void
     {
-        self::assertTrue(true);
+        static::assertTrue(true);
     }
 }
