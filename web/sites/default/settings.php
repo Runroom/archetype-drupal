@@ -53,7 +53,9 @@ if ((bool) ($_SERVER['SMTP_OVERRIDE'] ?? false)) {
 }
 
 $settings['deployment_identifier'] = \Drupal::VERSION;
-if (false !== include_once $app_root . '/../.deployment-identifier') {
+
+$diFile = $app_root . '/../.deployment-identifier';
+if (file_exists($diFile) && false !== include_once $diFile) {
     $settings['deployment_identifier'] = $deploymentIdentifier;
 }
 
