@@ -36,7 +36,7 @@ task('deployment-identifier', function (): void {
     cd('{{release_path}}');
 
     if (!test('[ -f .deployment-identifier ]')) {
-        run("echo '<?php \$deploymentIdentifier = \"{{release_name}}\";' > ~/drupal.runroom.dev/releases/102/.deployment-identifier");
+        run("echo '<?php \$deploymentIdentifier = \"{{release_name}}\";' > {{release_path}}/.deployment-identifier");
     }
 })->setPrivate();
 
