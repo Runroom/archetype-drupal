@@ -21,6 +21,7 @@
         "drupal/content_snapshot": "2.0.0-beta3",
         "drupal/core-recommended": "9.3.7",
         "drupal/date_popup": "1.1.0",
+        "drupal/dis": "1.0.0",
         "drupal/drush_language": "1.0.0-rc4",
         "drupal/editor_advanced_link": "2.0.0",
         "drupal/entity_reference_revisions": "1.9.0",
