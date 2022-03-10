@@ -23,6 +23,9 @@ web/modules/contrib
 web/themes/contrib
 web/sites/default/files/*
 !web/sites/default/files/.gitignore
+!web/sites/default/files/translations
+web/sites/default/files/translations/*
+!web/sites/default/files/translations/.gitignore
 web/sites/default/tmp/*
 !web/sites/default/tmp/.gitignore
 web/sites/simpletest/Assert.php
