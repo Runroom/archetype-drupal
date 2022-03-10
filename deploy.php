@@ -64,7 +64,7 @@ task('frontend:build', function (): void {
     run('{{bin/npx}} encore production');
 })->setPrivate();
 
-after('deploy:release', 'deployment-identifier');
+after('deploy:update_code', 'deployment-identifier');
 after('deploy:vendors', 'frontend:build');
 after('frontend:build', 'app');
 after('app', 'migrations');
