@@ -32,6 +32,14 @@ task('app', function (): void {
     run('{{bin/composer}} symfony:dump-env');
 })->setPrivate();
 
+task('deployment-identifier', function (): void {
+    cd('{{release_path}}');
+
+    if (!test('[ -f .deployment-identifier ]')) {
+        run("echo '<?php \$deploymentIdentifier = \"{{release_name}}\";' > ~/drupal.runroom.dev/releases/102/.deployment-identifier");
+    }
+})->setPrivate();
+
 task('migrations', function (): void {
     cd('{{release_path}}');
 
@@ -56,6 +64,7 @@ task('frontend:build', function (): void {
     run('{{bin/npx}} encore production');
 })->setPrivate();
 
+after('deploy:release', 'deployment-identifier');
 after('deploy:vendors', 'frontend:build');
 after('frontend:build', 'app');
 after('app', 'migrations');

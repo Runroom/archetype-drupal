@@ -52,6 +52,11 @@ if ((bool) ($_SERVER['SMTP_OVERRIDE'] ?? false)) {
     ];
 }
 
+$settings['deployment_identifier'] = \Drupal::VERSION;
+if (false !== include_once $app_root . '/../.deployment-identifier') {
+    $settings['deployment_identifier'] = $deploymentIdentifier;
+}
+
 $settings['hash_salt'] = $_SERVER['APP_SECRET'];
 $settings['gtm_id'] = $_SERVER['GTM_ID'];
 $settings['trusted_host_patterns'] = [$_SERVER['TRUSTED_HOST']];
