@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0a7e47a478e3ee66e4cb27d93cd05d17",
+    "content-hash": "6896df735e332a3563ad9db234d663ad",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2010,6 +2010,60 @@
             "homepage": "https://www.drupal.org/project/date_popup",
             "support": {
                 "source": "https://git.drupalcode.org/project/date_popup"
+            }
+        },
+        {
+            "name": "drupal/dis",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/dis.git",
+                "reference": "1.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/dis-1.0.0.zip",
+                "reference": "1.0.0",
+                "shasum": "052570a3f245b879abfe5e4e1866639885c58a3b"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0",
+                    "datestamp": "1595304311",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Kirill Roskolii (aka Ro$k0)",
+                    "homepage": "https://www.drupal.org/u/rosk0",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Contributors",
+                    "homepage": "https://www.drupal.org/node/3160438/committers",
+                    "role": "Contributors"
+                }
+            ],
+            "description": "Displays deployment identifier on the status report page",
+            "homepage": "https://www.drupal.org/project/dis",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/dis",
+                "issues": "https://www.drupal.org/project/issues/dis"
             }
         },
         {
