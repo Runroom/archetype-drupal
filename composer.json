@@ -112,8 +112,8 @@
         },
         "patches": {
             "drupal/core": {
-                "Radios element missing \"required\" attribut - 2951317": "https://www.drupal.org/files/issues/2019-07-25/2951317-38.patch",
-                "Error running config import \"Call to a member function delete() on null in Drupal\\Core\\Config\\ConfigImporter->checkOp()\" - 3198715": "https://www.drupal.org/files/issues/2021-10-27/error-running-config-import-delete-on-null-3198715-8.patch"
+                "Error running config import \"Call to a member function delete() on null in Drupal\\Core\\Config\\ConfigImporter->checkOp()\" - 3198715": "https://www.drupal.org/files/issues/2021-10-27/error-running-config-import-delete-on-null-3198715-8.patch",
+                "Radios element missing \"required\" attribut - 2951317": "https://www.drupal.org/files/issues/2019-07-25/2951317-38.patch"
             },
             "drupal/gin": {
                 "Icons are not loading correctly with some themes - 3200336": "patches/gin_toolbar_icons.patch"
