@@ -26,8 +26,8 @@
         "drupal/editor_advanced_link": "2.0.0",
         "drupal/entity_reference_revisions": "1.9.0",
         "drupal/field_group": "3.2.0",
-        "drupal/gin": "3.0.0-beta1",
-        "drupal/gin_toolbar": "1.0.0-beta21",
+        "drupal/gin": "3.0.0-alpha37",
+        "drupal/gin_toolbar": "1.0.0-beta20",
         "drupal/hreflang": "1.9.0",
         "drupal/imageapi_optimize": "4.0.0",
         "drupal/mailsystem": "4.3.0",
@@ -115,6 +115,9 @@
             "drupal/core": {
                 "Error running config import \"Call to a member function delete() on null in Drupal\\Core\\Config\\ConfigImporter->checkOp()\" - 3198715": "https://www.drupal.org/files/issues/2021-10-27/error-running-config-import-delete-on-null-3198715-8.patch",
                 "Radios element missing \"required\" attribut - 2951317": "https://www.drupal.org/files/issues/2019-07-25/2951317-38.patch"
+            },
+            "drupal/gin": {
+                "Icons are not loading correctly with some themes - 3200336": "patches/gin_toolbar_icons.patch"
             }
         }
     },
