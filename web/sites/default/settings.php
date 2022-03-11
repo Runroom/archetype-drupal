@@ -52,7 +52,7 @@ if ((bool) ($_SERVER['SMTP_OVERRIDE'] ?? false)) {
     ];
 }
 
-if ((bool) ($_SERVER['ENABLED_REDIS'] ?? false)) {
+if ((bool) ($_SERVER['ENABLE_REDIS'] ?? false)) {
     $settings['redis.connection']['interface'] = 'PhpRedis';
     $settings['redis.connection']['host'] = $_SERVER['REDIS_HOST'];
 
