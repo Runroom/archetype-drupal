@@ -52,6 +52,13 @@ if ((bool) ($_SERVER['SMTP_OVERRIDE'] ?? false)) {
     ];
 }
 
+if ((bool) ($_SERVER['ENABLED_REDIS'] ?? false)) {
+    $settings['redis.connection']['interface'] = 'PhpRedis';
+    $settings['redis.connection']['host'] = $_SERVER['REDIS_HOST'];
+
+    $settings['cache']['default'] = 'cache.backend.redis';
+}
+
 $settings['deployment_identifier'] = \Drupal::VERSION;
 
 $diFile = $app_root . '/../.deployment-identifier';

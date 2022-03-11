@@ -14,7 +14,7 @@ provider: null
 plugin: local_actions_block
 settings:
   id: local_actions_block
-  label: 'Acciones primarias de administración'
+  label: 'Acciones principales de la administración'
   label_display: '0'
   provider: core
 visibility: {  }
