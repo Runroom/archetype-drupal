@@ -62,7 +62,7 @@ if ((bool) ($_SERVER['ENABLE_REDIS'] ?? false)) {
 $settings['deployment_identifier'] = \Drupal::VERSION;
 
 $diFile = $app_root . '/../.deployment-identifier';
-if (file_exists($diFile) && false !== include_once $diFile) {
+if (file_exists($diFile) && false !== include $diFile) {
     $settings['deployment_identifier'] = $deploymentIdentifier;
 }
 
