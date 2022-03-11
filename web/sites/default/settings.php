@@ -69,6 +69,7 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
 $settings['custom_translations_directory'] = 'sites/custom_translations';
 $settings['file_temp_path'] = 'sites/default/tmp';
 $settings['config_sync_directory'] = '../config/base';
+$settings['php_storage']['default']['directory'] = 'sites/default/php';
 $settings['php_storage']['twig']['directory'] = 'sites/default/php';
 $settings['skip_permissions_hardening'] = true;
 $settings['rebuild_access'] = false;
