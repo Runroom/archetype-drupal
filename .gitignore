@@ -29,6 +29,8 @@ web/sites/default/files/translations/*
 !web/sites/default/files/translations/.gitignore
 web/sites/default/tmp/*
 !web/sites/default/tmp/.gitignore
+web/sites/default/php/*
+!web/sites/default/php/.gitignore
 web/sites/simpletest/Assert.php
 web/sites/simpletest/TestCase.php
 web/themes/custom/runroom/build/*

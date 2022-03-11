@@ -10,7 +10,7 @@ set('keep_releases', 3);
 set('repository', 'git@github.com:Runroom/archetype-drupal.git');
 set('shared_dirs', ['web/sites/default/files']);
 set('shared_files', ['web/robots.txt', '.env.local']);
-set('writable_dirs', ['web/sites/default/files', 'web/sites/default/tmp']);
+set('writable_dirs', ['web/sites/default/files', 'web/sites/default/tmp', 'web/sites/default/php']);
 set('clear_paths', ['assets', 'doc', '.docker', 'node_modules', 'tests']);
 
 set('default_timeout', null);
