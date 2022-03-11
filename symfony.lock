@@ -182,6 +182,9 @@
     "drupal/redirect": {
         "version": "1.6.0"
     },
+    "drupal/redis": {
+        "version": "1.5.0"
+    },
     "drupal/swiftmailer": {
         "version": "2.0.0"
     },
