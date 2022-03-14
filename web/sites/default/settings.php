@@ -2,6 +2,11 @@
 
 declare(strict_types=1);
 
+use Drupal\Component\Serialization\PhpSerialize;
+use Drupal\redis\Cache\CacheBackendFactory;
+use Drupal\redis\Cache\PhpRedis;
+use Drupal\redis\Cache\RedisCacheTagsChecksum;
+use Drupal\redis\ClientFactory;
 use Symfony\Component\Dotenv\Dotenv;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -57,6 +62,39 @@ if ((bool) ($_SERVER['ENABLE_REDIS'] ?? false)) {
     $settings['redis.connection']['host'] = $_SERVER['REDIS_HOST'];
 
     $settings['cache']['default'] = 'cache.backend.redis';
+    $settings['container_yamls'][] = 'modules/contrib/redis/example.services.yml';
+    $settings['container_yamls'][] = 'modules/contrib/redis/redis.services.yml';
+
+    $class_loader->addPsr4('Drupal\\redis\\', 'modules/contrib/redis/src');
+
+    $settings['bootstrap_container_definition'] = [
+        'parameters' => [],
+        'services' => [
+            'redis.factory' => [
+                'class' => ClientFactory::class,
+            ],
+            'cache.backend.redis' => [
+                'class' => CacheBackendFactory::class,
+                'arguments' => [
+                    '@redis.factory',
+                    '@cache_tags_provider.container',
+                    '@serialization.phpserialize',
+                ],
+            ],
+            'cache.container' => [
+                'class' => PhpRedis::class,
+                'factory' => ['@cache.backend.redis', 'get'],
+                'arguments' => ['container'],
+            ],
+            'cache_tags_provider.container' => [
+                'class' => RedisCacheTagsChecksum::class,
+                'arguments' => ['@redis.factory'],
+            ],
+            'serialization.phpserialize' => [
+                'class' => PhpSerialize::class,
+            ],
+        ],
+    ];
 }
 
 $settings['deployment_identifier'] = \Drupal::VERSION;
