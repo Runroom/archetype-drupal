@@ -30,7 +30,7 @@
     "@symfony/webpack-encore": "1.8.1",
     "@typescript-eslint/eslint-plugin": "5.15.0",
     "@typescript-eslint/parser": "5.15.0",
-    "autoprefixer": "10.4.3",
+    "autoprefixer": "10.4.4",
     "css-mqpacker": "7.0.0",
     "cssnano": "5.1.4",
     "eslint": "8.11.0",
