@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "18fe4568bb56a4bc824bb29a3dcdf022",
+    "content-hash": "8dea5e69d2136bc3947fa012995b66b6",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3398,20 +3398,20 @@
         },
         {
             "name": "drupal/views_bulk_operations",
-            "version": "4.1.0",
+            "version": "4.1.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/views_bulk_operations.git",
-                "reference": "4.1.0"
+                "reference": "4.1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/views_bulk_operations-4.1.0.zip",
-                "reference": "4.1.0",
-                "shasum": "acb6891afda4f973f043155e4f53e1b7d8ffe63d"
+                "url": "https://ftp.drupal.org/files/projects/views_bulk_operations-4.1.1.zip",
+                "reference": "4.1.1",
+                "shasum": "f4a95ef998749b38c193bb74adbd4e578064590d"
             },
             "require": {
-                "drupal/core": "^8.8 || ^9"
+                "drupal/core": "^9"
             },
             "require-dev": {
                 "drush/drush": "^10"
@@ -3422,8 +3422,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "4.1.0",
-                    "datestamp": "1646055586",
+                    "version": "4.1.1",
+                    "datestamp": "1647708148",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
