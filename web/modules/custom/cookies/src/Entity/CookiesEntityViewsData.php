@@ -6,6 +6,6 @@ namespace Drupal\cookies\Entity;
 
 use Drupal\views\EntityViewsData;
 
-class CookiesEntityViewsData extends EntityViewsData
+final class CookiesEntityViewsData extends EntityViewsData
 {
 }

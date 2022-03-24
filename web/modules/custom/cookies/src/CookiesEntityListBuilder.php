@@ -9,7 +9,7 @@ use Drupal\Core\Entity\EntityListBuilder;
 use Drupal\Core\Link;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
 
-class CookiesEntityListBuilder extends EntityListBuilder
+final class CookiesEntityListBuilder extends EntityListBuilder
 {
     public function buildHeader(): array
     {

@@ -9,7 +9,7 @@ use Drupal\Core\Entity\EntityListBuilder;
 use Drupal\Core\Link;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
 
-class LeadListBuilder extends EntityListBuilder
+final class LeadListBuilder extends EntityListBuilder
 {
     public function buildHeader(): array
     {

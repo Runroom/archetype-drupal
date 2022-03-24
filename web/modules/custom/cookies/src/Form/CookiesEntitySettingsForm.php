@@ -7,7 +7,7 @@ namespace Drupal\cookies\Form;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
-class CookiesEntitySettingsForm extends FormBase
+final class CookiesEntitySettingsForm extends FormBase
 {
     public function getFormId(): string
     {

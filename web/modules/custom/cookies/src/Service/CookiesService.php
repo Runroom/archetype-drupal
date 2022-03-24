@@ -10,23 +10,14 @@ use Drupal\cookies\Repository\CookiesEntityRepository;
 use Drupal\Core\Form\FormBuilderInterface;
 use Drupal\language\ConfigurableLanguageManager;
 
-class CookiesService
+final class CookiesService
 {
-    private array $cookies;
-    private ConfigurableLanguageManager $languageManager;
-    private CookiesEntityRepository $repository;
-    private FormBuilderInterface $formBuilder;
-
     public function __construct(
-        array $cookies,
-        ConfigurableLanguageManager $languageManager,
-        CookiesEntityRepository $repository,
-        FormBuilderInterface $formBuilder
+        private readonly array $cookies,
+        private readonly ConfigurableLanguageManager $languageManager,
+        private readonly CookiesEntityRepository $repository,
+        private readonly FormBuilderInterface $formBuilder
     ) {
-        $this->cookies = $cookies;
-        $this->languageManager = $languageManager;
-        $this->repository = $repository;
-        $this->formBuilder = $formBuilder;
     }
 
     public function getCookiesPage(): ?CookiesEntityInterface

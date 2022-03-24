@@ -49,7 +49,7 @@ use Drupal\Core\StringTranslation\TranslatableMarkup;
  *   field_ui_base_route = "entity.lead.settings"
  * )
  */
-class Lead extends ContentEntityBase implements LeadInterface
+final class Lead extends ContentEntityBase implements LeadInterface
 {
     use EntityChangedTrait;
 

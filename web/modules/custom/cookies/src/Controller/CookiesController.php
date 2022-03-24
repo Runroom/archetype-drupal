@@ -12,11 +12,8 @@ final class CookiesController extends ControllerBase
 {
     public const COOKIES_CACHE_TAGS = ['page:cookies'];
 
-    private CookiesService $service;
-
-    public function __construct(CookiesService $service)
+    public function __construct(private readonly CookiesService $service)
     {
-        $this->service = $service;
     }
 
     public static function create(ContainerInterface $container): self

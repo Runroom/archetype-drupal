@@ -6,6 +6,6 @@ namespace Drupal\contact_form\Form;
 
 use Drupal\Core\Entity\ContentEntityDeleteForm;
 
-class LeadDeleteForm extends ContentEntityDeleteForm
+final class LeadDeleteForm extends ContentEntityDeleteForm
 {
 }

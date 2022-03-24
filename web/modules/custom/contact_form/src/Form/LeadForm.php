@@ -8,7 +8,7 @@ use Drupal\Core\Entity\ContentEntityForm;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
 
-class LeadForm extends ContentEntityForm
+final class LeadForm extends ContentEntityForm
 {
     public function save(array $form, FormStateInterface $form_state): int
     {

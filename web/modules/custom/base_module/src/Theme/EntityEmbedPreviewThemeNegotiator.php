@@ -10,20 +10,13 @@ use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Theme\ThemeNegotiatorInterface;
 
-class EntityEmbedPreviewThemeNegotiator implements ThemeNegotiatorInterface
+final class EntityEmbedPreviewThemeNegotiator implements ThemeNegotiatorInterface
 {
-    private AccountInterface $user;
-    private ConfigFactoryInterface $configFactory;
-    private EntityTypeManagerInterface $entityTypeManager;
-
     public function __construct(
-        AccountInterface $user,
-        ConfigFactoryInterface $configFactory,
-        EntityTypeManagerInterface $entityTypeManager
+        private readonly AccountInterface $user,
+        private readonly ConfigFactoryInterface $configFactory,
+        private readonly EntityTypeManagerInterface $entityTypeManager
     ) {
-        $this->user = $user;
-        $this->configFactory = $configFactory;
-        $this->entityTypeManager = $entityTypeManager;
     }
 
     public function applies(RouteMatchInterface $routeMatch): bool
