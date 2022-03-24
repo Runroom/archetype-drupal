@@ -7,7 +7,7 @@ use Drupal\Core\Site\Settings;
 function runroom_preprocess(array &$variables): void
 {
     $variables['gtmId'] = Settings::get('gtm_id');
-    $variables['theme_path'] = base_path() . $variables['directory'];
+    $variables['theme_path'] = '/' . $variables['directory'];
 }
 
 function runroom_page_attachments_alter(array &$attachments): void

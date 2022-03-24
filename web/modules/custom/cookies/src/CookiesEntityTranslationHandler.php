@@ -6,6 +6,6 @@ namespace Drupal\cookies;
 
 use Drupal\content_translation\ContentTranslationHandler;
 
-class CookiesEntityTranslationHandler extends ContentTranslationHandler
+final class CookiesEntityTranslationHandler extends ContentTranslationHandler
 {
 }

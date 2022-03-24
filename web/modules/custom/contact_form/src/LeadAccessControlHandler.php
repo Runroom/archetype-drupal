@@ -11,7 +11,7 @@ use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\EntityPublishedInterface;
 use Drupal\Core\Session\AccountInterface;
 
-class LeadAccessControlHandler extends EntityAccessControlHandler
+final class LeadAccessControlHandler extends EntityAccessControlHandler
 {
     protected function checkAccess(EntityInterface $entity, $operation, AccountInterface $account): AccessResultInterface
     {

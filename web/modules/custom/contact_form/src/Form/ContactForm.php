@@ -8,22 +8,16 @@ use Drupal\contact_form\Entity\Lead;
 use Drupal\Core\Entity\EntityFieldManager;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Messenger\Messenger;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
 use Drupal\Core\Url;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
-class ContactForm extends FormBase
+final class ContactForm extends FormBase
 {
-    protected $messenger;
-    private EntityFieldManager $entityFieldManager;
-
-    final public function __construct(
-        Messenger $messenger,
-        EntityFieldManager $entityFieldManager
+    public function __construct(
+        protected $messenger,
+        private readonly EntityFieldManager $entityFieldManager
     ) {
-        $this->messenger = $messenger;
-        $this->entityFieldManager = $entityFieldManager;
     }
 
     public static function create(ContainerInterface $container): self

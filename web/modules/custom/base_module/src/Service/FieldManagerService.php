@@ -9,7 +9,7 @@ use Drupal\Core\Entity\FieldableEntityInterface;
 use Drupal\Core\Field\EntityReferenceFieldItemList;
 use Drupal\Core\Field\FieldItemListInterface;
 
-class FieldManagerService
+final class FieldManagerService
 {
     public function getValue(string $fieldName, FieldableEntityInterface $object, string $fieldValue = 'value'): ?string
     {

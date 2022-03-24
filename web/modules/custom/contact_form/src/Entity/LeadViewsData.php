@@ -6,6 +6,6 @@ namespace Drupal\contact_form\Entity;
 
 use Drupal\views\EntityViewsData;
 
-class LeadViewsData extends EntityViewsData
+final class LeadViewsData extends EntityViewsData
 {
 }

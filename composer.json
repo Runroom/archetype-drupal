@@ -60,10 +60,12 @@
         "kint-php/kint": "4.1.2",
         "kint-php/kint-twig": "4.0",
         "mglaman/phpstan-drupal": "1.1.14",
+        "palantirnet/drupal-rector": "^0.12.1",
         "phpspec/prophecy-phpunit": "2.0.1",
         "phpstan/phpstan": "1.4.10",
         "phpstan/phpstan-strict-rules": "1.1.0",
         "phpunit/phpunit": "9.5.19",
+        "rector/rector": "^0.12.19",
         "symfony/phpunit-bridge": "6.0.3"
     },
     "replace": {
@@ -123,6 +125,7 @@
     },
     "scripts": {
         "php-cs-fixer": "@php php-cs-fixer fix --ansi --verbose",
-        "phpstan": "@php phpstan analyse --no-progress"
+        "phpstan": "@php phpstan analyse --no-progress",
+        "rector": "@php rector --no-progress-bar"
     }
 }

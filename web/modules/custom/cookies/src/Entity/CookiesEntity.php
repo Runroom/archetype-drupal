@@ -49,7 +49,7 @@ use Drupal\Core\StringTranslation\TranslatableMarkup;
  *   field_ui_base_route = "entity.cookies_entity.settings"
  * )
  */
-class CookiesEntity extends ContentEntityBase implements CookiesEntityInterface
+final class CookiesEntity extends ContentEntityBase implements CookiesEntityInterface
 {
     use EntityChangedTrait;
     use EntityPublishedTrait;

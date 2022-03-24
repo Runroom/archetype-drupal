@@ -7,13 +7,10 @@ namespace Drupal\cookies\Repository;
 use Drupal\cookies\Entity\CookiesEntityInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 
-class CookiesEntityRepository
+final class CookiesEntityRepository
 {
-    private EntityTypeManagerInterface $entityTypeManager;
-
-    public function __construct(EntityTypeManagerInterface $entityTypeManager)
+    public function __construct(private readonly EntityTypeManagerInterface $entityTypeManager)
     {
-        $this->entityTypeManager = $entityTypeManager;
     }
 
     public function getCookiesPage(): ?CookiesEntityInterface

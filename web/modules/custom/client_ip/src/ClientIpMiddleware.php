@@ -8,15 +8,12 @@ use Symfony\Component\HttpFoundation\Cookie;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
 
-class ClientIpMiddleware implements HttpKernelInterface
+final class ClientIpMiddleware implements HttpKernelInterface
 {
     private const COOKIE_NAME = 'client_ip';
 
-    private HttpKernelInterface $app;
-
-    public function __construct(HttpKernelInterface $app)
+    public function __construct(private readonly HttpKernelInterface $app)
     {
-        $this->app = $app;
     }
 
     public function handle(Request $request, $type = self::MASTER_REQUEST, $catch = true)
@@ -25,7 +22,7 @@ class ClientIpMiddleware implements HttpKernelInterface
 
         if (null === $request->cookies->get(self::COOKIE_NAME)) {
             $response->headers->setCookie(
-                new Cookie(self::COOKIE_NAME, $request->getClientIp(), 0, '/', null, true, false)
+                Cookie::create(self::COOKIE_NAME, $request->getClientIp(), 0, '/', null, true, false)
             );
         }
 

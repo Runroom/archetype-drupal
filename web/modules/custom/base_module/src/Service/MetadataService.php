@@ -7,7 +7,7 @@ namespace Drupal\base_module\Service;
 use Drupal\Core\Config\ConfigFactory;
 use Symfony\Component\HttpFoundation\RequestStack;
 
-class MetadataService
+final class MetadataService
 {
     public const TERMINATION = '...';
     public const MAX_LENGTHS = [
@@ -19,15 +19,10 @@ class MetadataService
         'twitter:description' => 200,
     ];
 
-    private RequestStack $requestStack;
-    private ConfigFactory $configFactory;
-
     public function __construct(
-        RequestStack $requestStack,
-        ConfigFactory $configFactory
+        private readonly RequestStack $requestStack,
+        private readonly ConfigFactory $configFactory
     ) {
-        $this->requestStack = $requestStack;
-        $this->configFactory = $configFactory;
     }
 
     public function truncateMetadata(array &$page): void
