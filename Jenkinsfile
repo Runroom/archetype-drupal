@@ -27,6 +27,7 @@ pipeline {
                 // Lint + QA
                 sh 'composer php-cs-fixer -- --dry-run'
                 sh 'composer phpstan'
+                sh 'composer rector -- --dry-run'
                 sh 'composer normalize --dry-run'
 
                 // Tests
