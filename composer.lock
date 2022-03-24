@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "32df31cad97dbaf73340610522a45b38",
+    "content-hash": "c9f9ca75e468d66a9c0d5303162dd3c5",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3423,7 +3423,7 @@
             "extra": {
                 "drupal": {
                     "version": "4.1.2",
-                    "datestamp": "1647723469",
+                    "datestamp": "1647943086",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -8932,6 +8932,7 @@
                 "issues": "https://github.com/deployphp/deployer/issues",
                 "source": "https://github.com/deployphp/deployer"
             },
+            "abandoned": "deployer/deployer",
             "time": "2020-04-25T18:48:50+00:00"
         },
         {
