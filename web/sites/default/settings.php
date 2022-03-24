@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use Drupal\Component\Assertion\Handle;
 use Drupal\Component\Serialization\PhpSerialize;
 use Drupal\redis\Cache\CacheBackendFactory;
 use Drupal\redis\Cache\PhpRedis;
@@ -111,7 +112,7 @@ $settings['cookies_default_domain'] = $_SERVER['COOKIES_DEFAULT_DOMAIN'];
 
 // Default Settings
 $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
-$settings['custom_translations_directory'] = 'sites/custom_translations';
+$settings['custom_translations_directory'] = 'sites/default/custom_translations';
 $settings['file_temp_path'] = 'sites/default/tmp';
 $settings['config_sync_directory'] = '../config/base';
 $settings['php_storage']['default']['directory'] = 'sites/default/php';
@@ -131,7 +132,7 @@ $config['system.logging']['error_level'] = 'hide';
 // Development Settings
 if ('dev' === $_SERVER['APP_ENV']) {
     assert_options(\ASSERT_ACTIVE, true);
-    \Drupal\Component\Assertion\Handle::register();
+    Handle::register();
 
     $config['system.performance']['css']['preprocess'] = false;
     $config['system.performance']['js']['preprocess'] = false;

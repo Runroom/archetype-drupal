@@ -14,7 +14,7 @@ use Drupal\editor\Entity\Editor;
  *   label = @Translation("Youtube Plugin")
  * )
  */
-class YoutubePlugin extends CKEditorPluginBase
+final class YoutubePlugin extends CKEditorPluginBase
 {
     public function getButtons(): array
     {
@@ -58,6 +58,6 @@ class YoutubePlugin extends CKEditorPluginBase
 
     private function getLibraryPath(): string
     {
-        return drupal_get_path('module', 'ckeditor_plugins') . '/libraries/youtube';
+        return \Drupal::service('extension.list.module')->getPath('ckeditor_plugins') . '/libraries/youtube';
     }
 }

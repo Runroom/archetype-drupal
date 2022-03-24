@@ -311,6 +311,9 @@
     "nikic/php-parser": {
         "version": "v4.10.4"
     },
+    "palantirnet/drupal-rector": {
+        "version": "0.12.1"
+    },
     "pear/archive_tar": {
         "version": "1.4.12"
     },
@@ -411,6 +414,9 @@
     },
     "ralouphie/getallheaders": {
         "version": "3.0.3"
+    },
+    "rector/rector": {
+        "version": "0.12.19"
     },
     "sebastian/cli-parser": {
         "version": "1.0.1"
