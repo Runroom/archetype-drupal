@@ -7,11 +7,11 @@ $finder = Finder::create()
     ->in([
         __DIR__ . '/drush',
         __DIR__ . '/web/modules/custom',
-        __DIR__ . '/web/sites',
+        __DIR__ . '/web/sites/default',
         __DIR__ . '/web/themes/custom',
         __DIR__ . '/tests',
     ])
-    ->exclude(['files', 'simpletest'])
+    ->exclude(['php', 'tmp', 'files', 'simpletest'])
     ->name('*.php')
     ->name('*.module')
     ->name('*.theme');
