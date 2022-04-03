@@ -62,7 +62,7 @@
         "mglaman/phpstan-drupal": "1.1.14",
         "palantirnet/drupal-rector": "0.12.1",
         "phpspec/prophecy-phpunit": "2.0.1",
-        "phpstan/phpstan": "1.5.3",
+        "phpstan/phpstan": "1.5.4",
         "phpstan/phpstan-strict-rules": "1.1.0",
         "phpunit/phpunit": "9.5.20",
         "rector/rector": "0.12.19",
