@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "32edcd34b807cde87c9524e34ed88dcd",
+    "content-hash": "fdf8277aa2ee947329e4fdf3ba4194e9",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2921,26 +2921,26 @@
         },
         {
             "name": "drupal/r4032login",
-            "version": "2.1.1",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/r4032login.git",
-                "reference": "2.1.1"
+                "reference": "2.2.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/r4032login-2.1.1.zip",
-                "reference": "2.1.1",
-                "shasum": "48fbf333b70090975cd810b116da40d69cb1299c"
+                "url": "https://ftp.drupal.org/files/projects/r4032login-2.2.0.zip",
+                "reference": "2.2.0",
+                "shasum": "fc0e611d005d1040d19a3448a21875de65afb591"
             },
             "require": {
-                "drupal/core": "^9"
+                "drupal/core": "^9.3 || ^10"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.1.1",
-                    "datestamp": "1648949481",
+                    "version": "2.2.0",
+                    "datestamp": "1649051152",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
