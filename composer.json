@@ -59,7 +59,7 @@
         "friendsofphp/php-cs-fixer": "3.4.0",
         "kint-php/kint": "4.1.2",
         "kint-php/kint-twig": "4.0",
-        "mglaman/phpstan-drupal": "1.1.14",
+        "mglaman/phpstan-drupal": "1.1.15",
         "palantirnet/drupal-rector": "0.12.1",
         "phpspec/prophecy-phpunit": "2.0.1",
         "phpstan/phpstan": "1.5.4",
