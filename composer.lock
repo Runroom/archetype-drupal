@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f3055c47ad16cba1b77566043f20ab03",
+    "content-hash": "9a126cbc58633cb1d84e9ee8879cead3",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1398,17 +1398,17 @@
         },
         {
             "name": "drupal/config_split",
-            "version": "2.0.0-beta5",
+            "version": "2.0.0-rc1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/config_split.git",
-                "reference": "2.0.0-beta5"
+                "reference": "2.0.0-rc1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/config_split-2.0.0-beta5.zip",
-                "reference": "2.0.0-beta5",
-                "shasum": "b5cf4ee3d7af1ba38883bebead12678214a98f1e"
+                "url": "https://ftp.drupal.org/files/projects/config_split-2.0.0-rc1.zip",
+                "reference": "2.0.0-rc1",
+                "shasum": "c7054738314d1af0ca938b9cb56ea370dcd221ed"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9"
@@ -1426,16 +1426,16 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.0-beta5",
-                    "datestamp": "1637101204",
+                    "version": "2.0.0-rc1",
+                    "datestamp": "1650976427",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
+                        "message": "RC releases are not covered by Drupal security advisories."
                     }
                 },
                 "drush": {
                     "services": {
-                        "drush.services.yml": "^10"
+                        "drush.services.yml": "^10 || ^11"
                     }
                 }
             },
@@ -12933,7 +12933,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "drupal/clientside_validation": 5,
-        "drupal/config_split": 10,
+        "drupal/config_split": 5,
         "drupal/content_snapshot": 10,
         "drupal/drush_language": 5,
         "drupal/gin": 10,
@@ -12945,5 +12945,5 @@
         "php": "^8.1"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.3.0"
 }
