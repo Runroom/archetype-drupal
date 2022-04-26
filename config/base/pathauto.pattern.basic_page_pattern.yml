@@ -10,7 +10,7 @@ type: 'canonical_entities:node'
 pattern: '[node:title]'
 selection_criteria:
   10b8c12c-9193-4311-b7fa-0043335cbec4:
-    id: node_type
+    id: 'entity_bundle:node'
     negate: false
     uuid: 10b8c12c-9193-4311-b7fa-0043335cbec4
     context_mapping:

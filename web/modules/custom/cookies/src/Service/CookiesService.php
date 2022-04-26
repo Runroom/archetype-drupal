@@ -31,7 +31,10 @@ final class CookiesService
         $locale = $this->languageManager->getCurrentLanguage()->getId();
 
         if ($cookies->hasTranslation($locale)) {
-            return $cookies->getTranslation($locale);
+            $cookiesTranslation = $cookies->getTranslation($locale);
+            \assert($cookiesTranslation instanceof CookiesEntityInterface);
+
+            return $cookiesTranslation;
         }
 
         return $cookies;
