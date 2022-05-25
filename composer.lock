@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "883a8f862456c0b40755648acf812d92",
+    "content-hash": "3aa1d0d7a2e17006a4e22368ff40211f",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2314,17 +2314,17 @@
         },
         {
             "name": "drupal/gin",
-            "version": "3.0.0-beta2",
+            "version": "3.0.0-beta3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/gin.git",
-                "reference": "8.x-3.0-beta2"
+                "reference": "8.x-3.0-beta3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/gin-8.x-3.0-beta2.zip",
-                "reference": "8.x-3.0-beta2",
-                "shasum": "5f38fab22d33ec4ec5e696f5bc804d8accb456a2"
+                "url": "https://ftp.drupal.org/files/projects/gin-8.x-3.0-beta3.zip",
+                "reference": "8.x-3.0-beta3",
+                "shasum": "1478b2500ca90ca1d9638f51c0d74bdd1aa564f3"
             },
             "require": {
                 "drupal/core": "^8.9 || ^9 || ^10",
@@ -2333,8 +2333,8 @@
             "type": "drupal-theme",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.0-beta2",
-                    "datestamp": "1649710290",
+                    "version": "8.x-3.0-beta3",
+                    "datestamp": "1653469967",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
@@ -2342,6 +2342,11 @@
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
+            "scripts": {
+                "phpcs": [
+                    "phpcs -s --runtime-set ignore_warnings_on_exit 1 --runtime-set ignore_errors_on_exit 0 'web/modules/custom'"
+                ]
+            },
             "license": [
                 "GPL-2.0-or-later"
             ],
@@ -8934,16 +8939,16 @@
         },
         {
             "name": "doctrine/cache",
-            "version": "1.12.1",
+            "version": "1.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/cache.git",
-                "reference": "4cf401d14df219fa6f38b671f5493449151c9ad8"
+                "reference": "56cd022adb5514472cb144c087393c1821911d09"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/4cf401d14df219fa6f38b671f5493449151c9ad8",
-                "reference": "4cf401d14df219fa6f38b671f5493449151c9ad8",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/56cd022adb5514472cb144c087393c1821911d09",
+                "reference": "56cd022adb5514472cb144c087393c1821911d09",
                 "shasum": ""
             },
             "require": {
@@ -8955,13 +8960,13 @@
             "require-dev": {
                 "alcaeus/mongo-php-adapter": "^1.1",
                 "cache/integration-tests": "dev-master",
-                "doctrine/coding-standard": "^8.0",
+                "doctrine/coding-standard": "^9",
                 "mongodb/mongodb": "^1.1",
-                "phpunit/phpunit": "^7.0 || ^8.0 || ^9.0",
+                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.5",
                 "predis/predis": "~1.0",
                 "psr/cache": "^1.0 || ^2.0 || ^3.0",
-                "symfony/cache": "^4.4 || ^5.2 || ^6.0@dev",
-                "symfony/var-exporter": "^4.4 || ^5.2 || ^6.0@dev"
+                "symfony/cache": "^4.4 || ^5.4 || ^6",
+                "symfony/var-exporter": "^4.4 || ^5.4 || ^6"
             },
             "suggest": {
                 "alcaeus/mongo-php-adapter": "Required to use legacy MongoDB driver"
@@ -9013,7 +9018,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/cache/issues",
-                "source": "https://github.com/doctrine/cache/tree/1.12.1"
+                "source": "https://github.com/doctrine/cache/tree/1.13.0"
             },
             "funding": [
                 {
@@ -9029,7 +9034,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-07-17T14:39:21+00:00"
+            "time": "2022-05-20T20:06:54+00:00"
         },
         {
             "name": "doctrine/collections",
