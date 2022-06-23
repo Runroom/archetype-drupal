@@ -34,6 +34,7 @@
         "drupal/menu_breadcrumb": "1.16.0",
         "drupal/menu_link_attributes": "1.2.0",
         "drupal/metatag": "1.19.0",
+        "drupal/monolog": "2.0.2",
         "drupal/paragraphs": "1.14.0",
         "drupal/pathauto": "1.10.0",
         "drupal/r4032login": "2.2.0",
@@ -47,7 +48,7 @@
         "drupal/xmlsitemap": "1.2.0",
         "drush/drush": "10.6.2",
         "symfony/dotenv": "6.0.5",
-        "symfony/flex": "2.1.8"
+        "symfony/flex": "2.2.2"
     },
     "require-dev": {
         "behat/mink": "1.10.0",
@@ -65,8 +66,8 @@
         "phpstan/phpstan": "1.7.15",
         "phpstan/phpstan-strict-rules": "1.2.3",
         "phpunit/phpunit": "9.5.21",
-        "rector/rector": "0.13.4",
-        "symfony/phpunit-bridge": "6.0.8"
+        "rector/rector": "0.13.5",
+        "symfony/phpunit-bridge": "6.1.0"
     },
     "replace": {
         "symfony/polyfill-ctype": "*",
