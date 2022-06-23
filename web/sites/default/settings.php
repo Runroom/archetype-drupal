@@ -112,6 +112,7 @@ $settings['cookies_default_domain'] = $_SERVER['COOKIES_DEFAULT_DOMAIN'];
 
 // Default Settings
 $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
+$settings['container_yamls'][] = $app_root . '/' . $site_path . '/monolog.services.yml';
 $settings['custom_translations_directory'] = 'sites/default/custom_translations';
 $settings['file_temp_path'] = 'sites/default/tmp';
 $settings['config_sync_directory'] = '../config/base';
@@ -146,6 +147,8 @@ if ('dev' === $_SERVER['APP_ENV']) {
     $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.dev.yml';
 
     $config['config_split.config_split.development']['status'] = true;
+} else {
+    $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.prod.yml';
 }
 
 if ('staging' === $_SERVER['APP_ENV']) {

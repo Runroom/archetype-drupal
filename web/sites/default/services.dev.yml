@@ -4,7 +4,16 @@ parameters:
         debug: true
         auto_reload: true
         cache: true
+    monolog.channel_handlers:
+        default:
+            handlers:
+                - name: "stream"
+                  formatter: "json"
 
 services:
     cache.backend.null:
         class: Drupal\Core\Cache\NullBackendFactory
+
+    monolog.handler.stream:
+        class: Monolog\Handler\StreamHandler
+        arguments: ["php://stderr"]

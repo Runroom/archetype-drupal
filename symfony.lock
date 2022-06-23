@@ -170,6 +170,9 @@
     "drupal/metatag": {
         "version": "1.15.0"
     },
+    "drupal/monolog": {
+        "version": "2.0.2"
+    },
     "drupal/paragraphs": {
         "version": "1.12.0"
     },
@@ -301,6 +304,9 @@
     },
     "mglaman/phpstan-drupal": {
         "version": "0.12.8"
+    },
+    "monolog/monolog": {
+        "version": "2.7.0"
     },
     "myclabs/deep-copy": {
         "version": "1.10.2"
