@@ -1,0 +1,15 @@
+parameters:
+    monolog.channel_handlers:
+        default:
+            handlers:
+                - name: "fingers_crossed"
+                  formatter: "json"
+
+services:
+    monolog.handler.stream:
+        class: Monolog\Handler\StreamHandler
+        arguments: ["php://stderr"]
+
+    monolog.handler.fingers_crossed:
+        class: Monolog\Handler\FingersCrossedHandler
+        arguments: ["@monolog.handler.stream", "debug", 100]

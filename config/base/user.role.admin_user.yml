@@ -1,7 +1,33 @@
 uuid: 25e25ed8-52d6-4ba8-b82d-11011e007d7f
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - node.type.basic_page
+  module:
+    - block
+    - block_content
+    - config_translation
+    - contact
+    - content_translation
+    - field_ui
+    - file
+    - filter
+    - image
+    - imageapi_optimize
+    - language
+    - locale
+    - menu_link_content
+    - metatag
+    - node
+    - path
+    - pathauto
+    - redirect
+    - shortcut
+    - system
+    - taxonomy
+    - toolbar
+    - views_ui
 id: admin_user
 label: Admin
 weight: 2
@@ -9,7 +35,6 @@ is_admin: true
 permissions:
   - 'access administration pages'
   - 'access content overview'
-  - 'access devel information'
   - 'access files overview'
   - 'access kint'
   - 'access shortcuts'
@@ -82,7 +107,6 @@ permissions:
   - 'revert basic_page revisions'
   - 'select account cancellation method'
   - 'switch shortcut sets'
-  - 'switch users'
   - 'translate any entity'
   - 'translate basic_page node'
   - 'translate configuration'
