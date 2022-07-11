@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7a0c762f4c6b29102056e7f251edade3",
+    "content-hash": "f3236b9c1cf7265a4e29aaf487154d2c",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2524,26 +2524,26 @@
         },
         {
             "name": "drupal/mailsystem",
-            "version": "4.3.0",
+            "version": "4.4.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/mailsystem.git",
-                "reference": "8.x-4.3"
+                "reference": "8.x-4.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/mailsystem-8.x-4.3.zip",
-                "reference": "8.x-4.3",
-                "shasum": "1a74016e268ff207535be5d5e42ac8f72ac89050"
+                "url": "https://ftp.drupal.org/files/projects/mailsystem-8.x-4.4.zip",
+                "reference": "8.x-4.4",
+                "shasum": "49b2e9efd090cdb4a282c7638b1c76d6723c47b6"
             },
             "require": {
-                "drupal/core": "^8.7.7 || ^9"
+                "drupal/core": "^9 || ^10"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-4.3",
-                    "datestamp": "1586203024",
+                    "version": "8.x-4.4",
+                    "datestamp": "1657576306",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2552,7 +2552,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
