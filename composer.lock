@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "77d83c7c6cdaf122d0860fd161595958",
+    "content-hash": "29fbf479d11830f4ab97386ca837da65",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2030,17 +2030,17 @@
         },
         {
             "name": "drupal/date_popup",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/date_popup.git",
-                "reference": "8.x-1.1"
+                "reference": "8.x-1.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/date_popup-8.x-1.1.zip",
-                "reference": "8.x-1.1",
-                "shasum": "b877b29cf11414e600b154eeea5c9078e0b125c6"
+                "url": "https://ftp.drupal.org/files/projects/date_popup-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "49b076db3cac96812c11c20f53496751fc34f9e6"
             },
             "require": {
                 "drupal/core": "^8 || ^9"
@@ -2048,8 +2048,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.1",
-                    "datestamp": "1591849806",
+                    "version": "8.x-1.2",
+                    "datestamp": "1657668220",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
