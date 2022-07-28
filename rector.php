@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+use DrupalRector\Set\Drupal8SetList;
+use DrupalRector\Set\Drupal9SetList;
 use Rector\Config\RectorConfig;
 use Rector\Php71\Rector\FuncCall\CountOnNullRector;
 use Rector\Set\ValueObject\LevelSetList;
@@ -26,13 +28,17 @@ return static function (RectorConfig $rectorConfig): void {
     ]);
 
     $rectorConfig->importNames();
-    $rectorConfig->disableImportShortClasses();
+    $rectorConfig->importShortClasses(false);
     $rectorConfig->skip([
         CountOnNullRector::class,
     ]);
 
     $rectorConfig->sets([
         LevelSetList::UP_TO_PHP_81,
-        __DIR__ .  '/vendor/palantirnet/drupal-rector/config/drupal-9/drupal-9-all-deprecations.php',
+        Drupal8SetList::DRUPAL_8,
+        Drupal9SetList::DRUPAL_9,
     ]);
+
+    $parameters = $rectorConfig->parameters();
+    $parameters->set('drupal_rector_notices_as_comments', true);
 };
