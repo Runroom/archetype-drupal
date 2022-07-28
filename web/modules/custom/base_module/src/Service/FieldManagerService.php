@@ -7,6 +7,7 @@ namespace Drupal\base_module\Service;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\FieldableEntityInterface;
 use Drupal\Core\Field\EntityReferenceFieldItemList;
+use Drupal\Core\Field\FieldItemInterface;
 use Drupal\Core\Field\FieldItemListInterface;
 
 final class FieldManagerService
@@ -39,6 +40,8 @@ final class FieldManagerService
     }
 
     /**
+     * @param FieldItemListInterface<FieldItemInterface> $field
+     *
      * @return string[]|null
      */
     public function getFieldValues(FieldItemListInterface $field, string $fieldName = 'value'): ?array
