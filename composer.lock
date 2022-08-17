@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5e9415e13ddfeb8007ef1486834889ea",
+    "content-hash": "8b44b0adf7e04ceafd1384ae484b2dc6",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -10938,16 +10938,16 @@
         },
         {
             "name": "palantirnet/drupal-rector",
-            "version": "0.13.0",
+            "version": "0.13.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/palantirnet/drupal-rector.git",
-                "reference": "9495bce8009dd5b7f1b920abf438052d397d348c"
+                "reference": "4814ad9fa7d19be068f75558220383967c258d10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/palantirnet/drupal-rector/zipball/9495bce8009dd5b7f1b920abf438052d397d348c",
-                "reference": "9495bce8009dd5b7f1b920abf438052d397d348c",
+                "url": "https://api.github.com/repos/palantirnet/drupal-rector/zipball/4814ad9fa7d19be068f75558220383967c258d10",
+                "reference": "4814ad9fa7d19be068f75558220383967c258d10",
                 "shasum": ""
             },
             "require": {
@@ -11009,9 +11009,9 @@
                 "rector"
             ],
             "support": {
-                "source": "https://github.com/palantirnet/drupal-rector/tree/0.13.0"
+                "source": "https://github.com/palantirnet/drupal-rector/tree/0.13.1"
             },
-            "time": "2022-07-15T15:40:32+00:00"
+            "time": "2022-08-05T19:55:37+00:00"
         },
         {
             "name": "phar-io/manifest",
