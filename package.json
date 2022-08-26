@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@runroom/purejs": "3.1.1",
-    "jquery": "3.6.0",
+    "jquery": "3.6.1",
     "js-cookie": "3.0.1",
     "picturefill": "3.0.3"
   },
