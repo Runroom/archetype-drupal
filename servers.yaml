@@ -1,4 +1,0 @@
-drupal.runroom.dev:
-    deploy_path: ~/drupal.runroom.dev
-    # role: staging will reset database and load the configuration
-    roles: staging
