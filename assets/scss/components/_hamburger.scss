@@ -1,6 +1,6 @@
-$menuSize: 60px;
+$menu-size: 60px;
 
-@mixin hamburgerClosed {
+@mixin hamburger-closed {
     transform: rotate(45deg);
 
     &::after {
@@ -18,7 +18,7 @@ $menuSize: 60px;
     background-color: transparent;
     border: 0;
     color: $c-white;
-    height: $menuSize;
+    height: $menu-size;
     padding: 0;
     width: 30px;
 
@@ -34,7 +34,7 @@ $menuSize: 60px;
         &,
         &::before,
         &::after {
-            background: currentColor;
+            background: currentcolor;
             border-radius: 0;
             display: block;
             height: 2px;
@@ -54,12 +54,13 @@ $menuSize: 60px;
         &::before {
             top: -10px;
         }
+
         &::after {
             top: 10px;
         }
 
         .is-open & {
-            @include hamburgerClosed;
+            @include hamburger-closed;
         }
     }
 }
