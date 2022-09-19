@@ -1,6 +1,6 @@
 const Encore = require('@symfony/webpack-encore');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
-const ESLintPlugin = require('eslint-webpack-plugin');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 Encore.setOutputPath('web/themes/custom/runroom/build/')
   .setPublicPath('/themes/custom/runroom/build')
@@ -14,26 +14,32 @@ Encore.setOutputPath('web/themes/custom/runroom/build/')
   .enableBuildNotifications()
   .enableSourceMaps(!Encore.isProduction())
   .enableVersioning(false) // We do not enable versioning on Drupal
+  .enableTypeScriptLoader(tsConfig => {
+    tsConfig.compilerOptions = {
+      noEmit: false
+    };
+  })
+  .enablePostCssLoader()
   .enableSassLoader(options => {
     options.sourceMap = true;
     options.sassOptions = { sourceComments: !Encore.isProduction() };
   }, {})
   .autoProvidejQuery()
+  .enableBuildCache({ config: [__filename] })
   .addExternals({
     Drupal: 'Drupal',
     drupalSettings: 'drupalSettings'
   })
+  .enableEslintPlugin()
   .addPlugin(
     new StyleLintPlugin({
       context: 'assets/scss',
       emitWarning: true
     })
   )
-  .addPlugin(new ESLintPlugin())
-  .enablePostCssLoader()
-  .enableBuildCache({ config: [__filename] })
-  .addEntry('app', './assets/js/app.js')
-  .addEntry('form', './assets/js/form.js')
+  .addPlugin(new ForkTsCheckerWebpackPlugin())
+  .addEntry('app', './assets/js/app.ts')
+  .addEntry('form', './assets/js/form.ts')
   .addStyleEntry('styles', './assets/scss/styles.scss')
   .addStyleEntry('crp.default', './assets/scss/crp/default.scss')
   .addStyleEntry('crp.billboard', './assets/scss/crp/billboard.scss')

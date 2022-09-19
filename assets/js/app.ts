@@ -5,12 +5,14 @@ import isExplorer from '@runroom/purejs/lib/isExplorer';
 import touchable from '@runroom/purejs/lib/touchable';
 
 // polyfills and helpers should be before any other component
-import './helpers/polyfills';
+import { prototypeRemove } from './polyfills/prototype-remove';
+
+prototypeRemove();
 
 // In order to keep readability and maintainability on bigger projects
 // we recommend to use module import method and import it as needed.
-import cookies from './components/cookies';
 import lazyLoadImages from './components/lazyLoadImages';
+import cookies from './components/cookies';
 import modal from './components/modal';
 
 lazyLoadImages();
@@ -31,9 +33,12 @@ events.onDocumentReady(() => {
 
   if (anchors) {
     forEach(anchors, anchor => {
-      anchor.addEventListener('click', event => {
+      anchor.addEventListener('click', (event: { target: HTMLElement }) => {
         const element = event.target.dataset.anchor || event.target.getAttribute('href');
-        animateTo({ element, speed: 300 });
+
+        if (element) {
+          animateTo({ element, speed: 300 });
+        }
       });
     });
   }

@@ -1,5 +1,5 @@
 .cookies-message {
-    background: hsla(0, 100%, 0%, 0.8);
+    background: hsl(0deg 100% 0% / 80%);
     bottom: 0;
     color: $c-white;
     display: block;
@@ -20,8 +20,8 @@
         padding: 0 0 space() 0;
 
         a {
-            border-bottom: 1px solid currentColor;
-            color: currentColor;
+            border-bottom: 1px solid currentcolor;
+            color: currentcolor;
             display: inline;
             text-decoration: none;
         }
@@ -32,8 +32,8 @@
     }
 
     &__button {
-        border: solid 1px currentColor;
-        color: currentColor;
+        border: solid 1px currentcolor;
+        color: currentcolor;
         line-height: 1;
         padding: space(0.5);
         text-align: center;
@@ -42,7 +42,7 @@
 
         @include hover {
             background: $c-white;
-            color: hsla(0, 100%, 0%, 0.8);
+            color: hsl(0deg 100% 0% / 80%);
         }
     }
 

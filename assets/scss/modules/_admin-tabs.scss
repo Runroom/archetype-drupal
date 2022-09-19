@@ -12,35 +12,35 @@
         flex-wrap: wrap;
         justify-content: center;
         margin-top: 0;
+    }
 
-        li {
-            border: 0;
-            font: inherit;
-            font-size: 100%;
-            padding: 0;
-            vertical-align: baseline;
+    li {
+        border: 0;
+        font: inherit;
+        font-size: 100%;
+        padding: 0;
+        vertical-align: baseline;
+    }
 
-            a {
-                color: $c-white;
-                display: inline-block;
-                font-size: ms(-2);
-                font-weight: 700;
-                letter-spacing: 1px;
-                line-height: 1.25;
-                padding: space(0.35) space();
-                text-align: center;
-                text-decoration: none;
-                transition: color 0.2s ease-out;
+    a {
+        color: $c-white;
+        display: inline-block;
+        font-size: ms(-2);
+        font-weight: 700;
+        letter-spacing: 1px;
+        line-height: 1.25;
+        padding: space(0.35) space();
+        text-align: center;
+        text-decoration: none;
+        transition: color 0.2s ease-out;
 
-                &::after,
-                &::before {
-                    display: none;
-                }
+        &::after,
+        &::before {
+            display: none;
+        }
 
-                @include hover {
-                    color: $c-neutro300;
-                }
-            }
+        @include hover {
+            color: $c-neutro300;
         }
     }
 }

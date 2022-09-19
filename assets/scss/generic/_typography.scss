@@ -1,13 +1,13 @@
 // https://fonts.googleapis.com/css?family=Lora|Open+Sans:300,400
 @font-face {
     font-display: swap;
-    font-family: "Lora";
+    font-family: Lora;
     font-style: normal;
     font-weight: 400;
     src: local("Lora Regular"), local("Lora-Regular"),
-        url(https://fonts.gstatic.com/s/lora/v12/rAXKWvABQNHjPUk26ixVvvesZW2xOQ-xsNqO47m55DA.woff2)
+        url("https://fonts.gstatic.com/s/lora/v12/rAXKWvABQNHjPUk26ixVvvesZW2xOQ-xsNqO47m55DA.woff2")
             format("woff2"),
-        url(https://fonts.gstatic.com/s/lora/v12/5-AYViExptypIdFoLKAxTA.woff) format("woff");
+        url("https://fonts.gstatic.com/s/lora/v12/5-AYViExptypIdFoLKAxTA.woff") format("woff");
 }
 
 @font-face {
@@ -16,9 +16,9 @@
     font-style: normal;
     font-weight: 300;
     src: local("Open Sans Light"), local("OpenSans-Light"),
-        url(https://fonts.gstatic.com/s/opensans/v15/DXI1ORHCpsQm3Vp6mXoaTRampu5_7CjHW5spxoeN3Vs.woff2)
+        url("https://fonts.gstatic.com/s/opensans/v15/DXI1ORHCpsQm3Vp6mXoaTRampu5_7CjHW5spxoeN3Vs.woff2")
             format("woff2"),
-        url(https://fonts.gstatic.com/s/opensans/v15/DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff)
+        url("https://fonts.gstatic.com/s/opensans/v15/DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff")
             format("woff");
 }
 
@@ -28,9 +28,9 @@
     font-style: normal;
     font-weight: 400;
     src: local("Open Sans Regular"), local("OpenSans-Regular"),
-        url(https://fonts.gstatic.com/s/opensans/v15/cJZKeOuBrn4kERxqtaUH3ZBw1xU1rKptJj_0jans920.woff2)
+        url("https://fonts.gstatic.com/s/opensans/v15/cJZKeOuBrn4kERxqtaUH3ZBw1xU1rKptJj_0jans920.woff2")
             format("woff2"),
-        url(https://fonts.gstatic.com/s/opensans/v15/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff)
+        url("https://fonts.gstatic.com/s/opensans/v15/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff")
             format("woff");
 }
 
@@ -64,6 +64,7 @@ h3,
 .title3 {
     font-size: ms(2);
 }
+
 h4,
 .title4 {
     font-size: ms(1);
@@ -73,6 +74,7 @@ p,
 .p-default {
     font-size: ms(0);
 }
+
 .p-small {
     font-size: ms(-1);
 }
@@ -94,6 +96,7 @@ b,
 strong {
     font-weight: 700;
 }
+
 i,
 em {
     font-style: italic;

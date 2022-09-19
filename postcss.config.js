@@ -1,7 +1,6 @@
 module.exports = {
   plugins: {
-    'autoprefixer': { cascade: false },
-    'css-mqpacker': { sort: true },
-    'cssnano': { zindex: false, reduceIdents: false }
+    'postcss-sort-media-queries': { sort: 'mobile-first' },
+    'autoprefixer': { cascade: false }
   }
 };
