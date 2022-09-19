@@ -50,9 +50,6 @@
     "cweagans/composer-patches": {
         "version": "1.7.0"
     },
-    "deployer/dist": {
-        "version": "v6.8.0"
-    },
     "dflydev/dot-access-data": {
         "version": "v1.1.0"
     },

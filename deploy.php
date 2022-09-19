@@ -16,7 +16,7 @@ set('clear_paths', ['assets', 'doc', '.docker', 'node_modules', 'tests']);
 set('default_timeout', null);
 set('allow_anonymous_stats', false);
 set('drush', 'vendor/bin/drush');
-set('composer_options', '{{composer_action}} --apcu-autoloader --no-progress --no-interaction --no-dev');
+set('composer_options', '--apcu-autoloader --no-progress --no-interaction --no-dev');
 
 set('bin/npm', function () {
     return run('. ~/.nvm/nvm.sh && nvm use > /dev/null 2>&1 && which npm');
@@ -30,7 +30,7 @@ task('app', function (): void {
     cd('{{release_path}}');
 
     run('{{bin/composer}} symfony:dump-env');
-})->setPrivate();
+})->hidden();
 
 task('deployment-identifier', function (): void {
     cd('{{release_path}}');
@@ -38,14 +38,14 @@ task('deployment-identifier', function (): void {
     if (!test('[ -f .deployment-identifier ]')) {
         run("echo '<?php \$deploymentIdentifier = \"{{release_name}}\";' > {{release_path}}/.deployment-identifier");
     }
-})->setPrivate();
+})->hidden();
 
 task('migrations', function (): void {
     cd('{{release_path}}');
 
     run('{{bin/php}} {{drush}} deploy --yes');
     run('{{bin/php}} {{drush}} language-import');
-})->onRoles('production');
+})->select('stage=production');
 
 task('fixtures', function (): void {
     cd('{{release_path}}');
@@ -55,14 +55,14 @@ task('fixtures', function (): void {
     run('{{bin/php}} {{drush}} config:import --yes');
     run('{{bin/php}} {{drush}} language-import');
     run('{{bin/php}} {{drush}} content-snapshot:import --yes');
-})->onRoles('staging');
+})->select('stage=staging');
 
 task('frontend:build', function (): void {
     cd('{{release_path}}');
 
     run('{{bin/npm}} clean-install');
     run('{{bin/npx}} encore production');
-})->setPrivate();
+})->hidden();
 
 after('deploy:update_code', 'deployment-identifier');
 after('deploy:vendors', 'frontend:build');
@@ -72,5 +72,4 @@ after('app', 'fixtures');
 before('deploy:symlink', 'deploy:clear_paths');
 after('deploy:failed', 'deploy:unlock');
 
-inventory('servers.yaml')
-    ->user(getenv('DEPLOYER_USER'));
+import('servers.php');

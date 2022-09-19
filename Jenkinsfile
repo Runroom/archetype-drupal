@@ -68,19 +68,19 @@ pipeline {
                 // Lint + QA
                 sh 'npx stylelint assets/scss'
                 sh 'npx eslint assets/js'
-                sh 'npx prettier --check .github assets drush webpack.config.js babel.config.js .eslintrc.js postcss.config.js prettier.config.js docker-compose.yaml servers.yaml'
+                sh 'npx prettier --check .github assets drush webpack.config.js babel.config.js .eslintrc.js postcss.config.js prettier.config.js docker-compose.yaml'
 
                 // Build
                 sh 'npx encore production'
             }
         }
 
-        stage('Deploy') {
-            when { expression { return env.BRANCH_NAME in ['main'] } }
-            steps {
-                build job: "${FOLDER_NAME}/Production Deploy", wait: false
-            }
-        }
+        // stage('Deploy') {
+        //     when { expression { return env.BRANCH_NAME in ['main'] } }
+        //     steps {
+        //         build job: "${FOLDER_NAME}/Production Deploy", wait: false
+        //     }
+        // }
     }
 
     post {
