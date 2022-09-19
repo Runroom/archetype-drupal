@@ -105,6 +105,7 @@ blockquote,
 q {
     quotes: none;
 }
+
 ol,
 ul {
     list-style: none;
@@ -124,7 +125,9 @@ iframe {
 img {
     display: block;
     height: auto;
+    /* stylelint-disable */
     -ms-interpolation-mode: bicubic;
+    /* stylelint-enable */
     max-width: 100%;
     width: auto;
 }
@@ -137,15 +140,13 @@ table {
 *,
 *::before,
 *::after {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     /* stylelint-disable */
     -webkit-font-smoothing: antialiased !important;
     font-smoothing: antialiased !important;
     -moz-osx-font-smoothing: grayscale !important;
     /* stylelint-enable */
-    text-rendering: optimizeLegibility !important;
+    text-rendering: optimizelegibility !important;
 }
 
 html,

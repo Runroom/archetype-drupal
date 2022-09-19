@@ -1,6 +1,8 @@
+@use "sass:math";
+
 @function strip-unit($number) {
     @if type-of($number) == "number" and not unitless($number) {
-        @return $number / ($number * 0 + 1);
+        @return math.div($number, $number * 0 + 1);
     }
 
     @return $number;
@@ -8,7 +10,7 @@
 
 @function get-relative-value($size, $ratio: $min-font-size) {
     @if unit($size) == "px" {
-        @return (strip-unit($size) / strip-unit($ratio));
+        @return math.div(strip-unit($size), strip-unit($ratio));
     } @else {
         @return strip-unit($size);
     }
@@ -38,7 +40,7 @@
     @return $vertical-rhythm * $times;
 }
 
-@function ms($exponent, $ratio: $msBase) {
+@function ms($exponent, $ratio: $ms-base) {
     $value: 1;
 
     @if $exponent > 0 {
@@ -47,7 +49,7 @@
         }
     } @else if $exponent < 0 {
         @for $i from 1 through -$exponent {
-            $value: $value / $ratio;
+            $value: math.div($value, $ratio);
         }
     }
 

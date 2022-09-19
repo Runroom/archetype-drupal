@@ -1,18 +1,23 @@
 .u-noscroll {
     overflow: hidden;
 }
+
 .u-align-center {
     text-align: center;
 }
+
 .u-uppercase {
     text-transform: uppercase;
 }
+
 .u-sr-only {
     @include visually-hidden;
 }
+
 .visually-hidden {
     @include visually-hidden;
 }
+
 .u-reading {
     max-width: get-maxrems($max-reading-width);
 }
@@ -22,7 +27,7 @@
 
     svg {
         display: block;
-        fill: currentColor;
+        fill: currentcolor;
         height: get-rems(32px);
         width: get-rems(32px);
     }

@@ -14,8 +14,10 @@ const modal = () => {
       element.remove();
     });
 
-    element.addEventListener('click', event => {
-      if (!event.target.closest(`.${MODAL_BODY_CLASS}`)) {
+    element.addEventListener('click', (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+
+      if (!target.closest(`.${MODAL_BODY_CLASS}`)) {
         element.remove();
       }
     });

@@ -3,6 +3,7 @@
         .u-hide {
             display: none !important;
         }
+
         .u-show {
             display: block !important;
         }
@@ -15,6 +16,7 @@
             .u-hide--s#{$namespace} {
                 display: none !important;
             }
+
             .u-show--s#{$namespace} {
                 display: block !important;
             }

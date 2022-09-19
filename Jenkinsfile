@@ -55,7 +55,7 @@ pipeline {
         stage('Continuous Integration - Node') {
             agent {
                 docker {
-                    image 'runroom/node17'
+                    image 'runroom/node18'
                     args '-v $HOME/npm:/home/node/.npm:z'
                     reuseNode true
                 }
@@ -69,6 +69,7 @@ pipeline {
                 sh 'npx stylelint assets/scss'
                 sh 'npx eslint assets/js'
                 sh 'npx prettier --check .github assets drush webpack.config.js babel.config.js .eslintrc.js postcss.config.js prettier.config.js docker-compose.yaml'
+                sh 'npx tsc --pretty false'
 
                 // Build
                 sh 'npx encore production'

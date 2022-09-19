@@ -1,3 +1,5 @@
+@use "sass:color";
+
 $form-padding: space(0.25);
 $form-margin: space(0.25);
 $form-input-height: space(1.25);
@@ -10,7 +12,7 @@ $form-input-height: space(1.25);
     }
 
     textarea,
-    input[type]:not([type="checkbox"]):not([type="radio"]):not([type="hidden"]):not([type="submit"]) {
+    input[type]:not([type="checkbox"], [type="radio"], [type="hidden"], [type="submit"]) {
         background: $form-background;
         border: $form-border;
         border-radius: $form-radius;
@@ -19,12 +21,12 @@ $form-input-height: space(1.25);
 
         &[disabled],
         &[readonly] {
-            background: $form-background--disabled;
+            background: $form-background-disabled;
             box-shadow: none;
         }
 
         &:focus:not(.form__state--invalid) {
-            border-color: $form_border--active;
+            border-color: $form_border-active;
         }
 
         &.form__state--invalid,
@@ -43,37 +45,35 @@ $form-input-height: space(1.25);
         height: $form-input-height;
     }
 
-    &__field {
+    &__message--invalid {
+        background-color: color.adjust($c-error, $lightness: 35%);
+        display: block;
+        padding: space(0.2) space(0.5);
+    }
+}
+
+.form__field {
+    &:not(:first-child) {
+        margin: $form-margin 0 0;
+    }
+
+    &--inline {
         &:not(:first-child) {
             margin: $form-margin 0 0;
         }
 
-        &--inline {
-            &:not(:first-child) {
-                margin: $form-margin 0 0;
-            }
-
-            input[type="checkbox"],
-            input[type="radio"] {
-                margin: 0 $form-margin 0 0;
-            }
-
-            label {
-                margin: 0;
-            }
-
-            label,
-            input {
-                display: inline;
-            }
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin: 0 $form-margin 0 0;
         }
-    }
 
-    &__message {
-        &--invalid {
-            background-color: lighten($c-error, 35);
-            display: block;
-            padding: space(0.2) space(0.5);
+        label {
+            margin: 0;
+        }
+
+        label,
+        input {
+            display: inline;
         }
     }
 }

@@ -12,6 +12,17 @@
 @include flex-wrap;
 @include visibility(($s768));
 
+.form {
+    ul,
+    ol {
+        list-style: none;
+    }
+
+    li {
+        margin: 0;
+    }
+}
+
 .demo {
     background: $c-white;
 
@@ -31,7 +42,7 @@
         position: relative;
 
         &::before {
-            background: hsla(0, 100%, 0%, 0.5);
+            background: hsl(0deg 100% 0% / 50%);
             content: "";
             display: block;
             height: 100%;
@@ -45,29 +56,6 @@
         .u-wrapper {
             position: relative;
             z-index: 1;
-        }
-    }
-
-    &__grid {
-        [class^="u-flex--"] {
-            background-clip: content-box;
-
-            @include breakpoint-max($s480) {
-                background: hsla(0, 100%, 0%, 0.1);
-            }
-
-            @include breakpoint-minmax($s480, $s768) {
-                background: hsla(0, 100%, 0%, 0.2);
-            }
-
-            @include breakpoint($s768) {
-                &:nth-child(odd) {
-                    background: hsla(0, 100%, 0%, 0.2);
-                }
-                &:nth-child(even) {
-                    background: hsla(0, 100%, 0%, 0.1);
-                }
-            }
         }
     }
 
@@ -92,6 +80,7 @@
     ul {
         list-style: disc;
     }
+
     ol {
         list-style: decimal;
     }
@@ -113,14 +102,28 @@
     p + ol {
         margin: space(1.5) 0 0;
     }
+}
 
-    .form {
-        ul,
-        ol {
-            list-style: none;
+.demo__grid {
+    [class^="u-flex--"] {
+        background-clip: content-box;
+
+        @include breakpoint-max($s480) {
+            background: hsl(0deg 100% 0% / 10%);
         }
-        li {
-            margin: 0;
+
+        @include breakpoint-minmax($s480, $s768) {
+            background: hsl(0deg 100% 0% / 20%);
+        }
+
+        @include breakpoint($s768) {
+            &:nth-child(odd) {
+                background: hsl(0deg 100% 0% / 20%);
+            }
+
+            &:nth-child(even) {
+                background: hsl(0deg 100% 0% / 10%);
+            }
         }
     }
 }

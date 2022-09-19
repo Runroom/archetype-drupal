@@ -7,23 +7,23 @@
     .u-icon {
         fill: $c-primary500;
     }
+}
 
-    &__pages {
-        li {
-            display: inline-block;
-            padding-right: space(0.25);
+.footer__pages {
+    li {
+        display: inline-block;
+        padding-right: space(0.25);
 
-            &:last-child {
-                padding-right: 0;
-            }
+        &:last-child {
+            padding-right: 0;
+        }
+    }
 
-            a {
-                color: currentColor;
+    a {
+        color: currentcolor;
 
-                @include hover {
-                    opacity: 0.75;
-                }
-            }
+        @include hover {
+            opacity: 0.75;
         }
     }
 }

@@ -40,54 +40,54 @@ USER www-data
 WORKDIR /usr/app
 
 # NODE-PROD
-FROM node:17.9 as node-prod
+# FROM node:18.9-slim as node-prod
 
-ARG UID=1000
-ARG GID=1000
+# ARG UID=1000
+# ARG GID=1000
 
-RUN usermod --uid $UID node
-RUN groupmod --non-unique --gid $GID node
-USER node
+# RUN usermod --uid $UID node
+# RUN groupmod --non-unique --gid $GID node
+# USER node
 
-WORKDIR /usr/app
+# WORKDIR /usr/app
 
-COPY --chown=$UID:$GID package.json /usr/app/package.json
-COPY --chown=$UID:$GID package-lock.json /usr/app/package-lock.json
+# COPY --chown=$UID:$GID package.json /usr/app/package.json
+# COPY --chown=$UID:$GID package-lock.json /usr/app/package-lock.json
 
-RUN npm clean-install
+# RUN npm clean-install
 
-COPY --chown=$UID:$GID webpack.config.js /usr/app/webpack.config.js
-COPY --chown=$UID:$GID babel.config.js /usr/app/babel.config.js
-COPY --chown=$UID:$GID .browserslistrc /usr/app/.browserslistrc
-COPY --chown=$UID:$GID .eslintrc.js /usr/app/.eslintrc.js
-COPY --chown=$UID:$GID .stylelintrc /usr/app/.stylelintrc
-COPY --chown=$UID:$GID postcss.config.js /usr/app/postcss.config.js
-COPY --chown=$UID:$GID prettier.config.js /usr/app/prettier.config.js
+# COPY --chown=$UID:$GID webpack.config.js /usr/app/webpack.config.js
+# COPY --chown=$UID:$GID babel.config.js /usr/app/babel.config.js
+# COPY --chown=$UID:$GID .browserslistrc /usr/app/.browserslistrc
+# COPY --chown=$UID:$GID .eslintrc.js /usr/app/.eslintrc.js
+# COPY --chown=$UID:$GID .stylelintrc /usr/app/.stylelintrc
+# COPY --chown=$UID:$GID postcss.config.js /usr/app/postcss.config.js
+# COPY --chown=$UID:$GID prettier.config.js /usr/app/prettier.config.js
 
-COPY --chown=$UID:$GID assets /usr/app/assets
+# COPY --chown=$UID:$GID assets /usr/app/assets
 
-RUN npx encore production
+# RUN npx encore production
 
 # FPM-PROD
-FROM fpm-base as fpm-prod
+# FROM fpm-base as fpm-prod
 
-COPY .env /usr/app/.env
+# COPY .env /usr/app/.env
 
-COPY --chown=$UID:$GID patches /usr/app/patches
-COPY --chown=$UID:$GID composer.json /usr/app/composer.json
-COPY --chown=$UID:$GID composer.lock /usr/app/composer.lock
-COPY --chown=$UID:$GID symfony.lock /usr/app/symfony.lock
+# COPY --chown=$UID:$GID patches /usr/app/patches
+# COPY --chown=$UID:$GID composer.json /usr/app/composer.json
+# COPY --chown=$UID:$GID composer.lock /usr/app/composer.lock
+# COPY --chown=$UID:$GID symfony.lock /usr/app/symfony.lock
 
-RUN composer install --prefer-dist --no-progress --no-interaction --no-dev
+# RUN composer install --prefer-dist --no-progress --no-interaction --no-dev
 
-COPY --chown=$UID:$GID . /usr/app
+# COPY --chown=$UID:$GID . /usr/app
 
-RUN composer dump-autoload --apcu
-RUN composer symfony:dump-env prod
+# RUN composer dump-autoload --apcu
+# RUN composer symfony:dump-env prod
 
-COPY --chown=$UID:$GID --from=node-prod /usr/app/web/themes/custom/runroom/build /usr/app/web/themes/custom/runroom/build
+# COPY --chown=$UID:$GID --from=node-prod /usr/app/web/themes/custom/runroom/build /usr/app/web/themes/custom/runroom/build
 
-ENTRYPOINT ["bash", "/usr/app/.docker/app-prod/php-fpm.sh"]
+# ENTRYPOINT ["bash", "/usr/app/.docker/app-prod/php-fpm.sh"]
 
 # FPM-DEV
 FROM fpm-base as fpm-dev
@@ -108,7 +108,7 @@ RUN usermod --uid $UID nginx
 RUN groupmod --non-unique --gid $GID nginx
 
 # NGINX-PROD
-FROM nginx-base as nginx-prod
+# FROM nginx-base as nginx-prod
 
-COPY --chown=$UID:$GID --from=fpm-prod /usr/app/web /usr/app/web
-COPY .docker/nginx-prod/nginx.conf /etc/nginx/nginx.conf
+# COPY --chown=$UID:$GID --from=fpm-prod /usr/app/web /usr/app/web
+# COPY .docker/nginx-prod/nginx.conf /etc/nginx/nginx.conf

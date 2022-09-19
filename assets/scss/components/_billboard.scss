@@ -10,12 +10,12 @@
         font-size: ms(4);
 
         @include breakpoint($s1024) {
-            font-size: ms(4, $msDesktop);
+            font-size: ms(4, $ms-desktop);
         }
     }
 
     &::before {
-        background: hsla(0, 100%, 0%, 0.35);
+        background: hsl(0deg 100% 0% / 35%);
         content: "";
         display: block;
         height: 100%;
