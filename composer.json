@@ -27,7 +27,7 @@
         "drupal/entity_reference_revisions": "1.10.0",
         "drupal/field_group": "3.3.0",
         "drupal/gin": "3.0.0-beta5",
-        "drupal/gin_toolbar": "1.0.0-beta9",
+        "drupal/gin_toolbar": "1.0.0-beta22",
         "drupal/hreflang": "1.9.0",
         "drupal/imageapi_optimize": "4.0.0",
         "drupal/mailsystem": "4.4.0",
@@ -52,7 +52,7 @@
     },
     "require-dev": {
         "behat/mink": "1.10.0",
-        "deployer/dist": "6.8.0",
+        "deployer/deployer": "7.0.2",
         "drupal/devel": "4.1.5",
         "drupal/devel_entity_updates": "3.0.1",
         "drupal/features": "3.12.0",
