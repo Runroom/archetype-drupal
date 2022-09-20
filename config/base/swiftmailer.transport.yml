@@ -2,7 +2,7 @@ _core:
   default_config_hash: RSNbRD3ekSaZoE19f3eHhm93gKOcD2PtmaAVmV3XMes
 langcode: es
 transport: smtp
-smtp_host: mailhog
+smtp_host: mailer
 smtp_port: 1025
 smtp_encryption: '0'
 sendmail_path: /usr/sbin/sendmail
