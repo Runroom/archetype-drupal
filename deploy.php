@@ -22,10 +22,6 @@ set('bin/npm', function () {
     return run('. ~/.nvm/nvm.sh && nvm use > /dev/null 2>&1 && which npm');
 });
 
-set('bin/npx', function () {
-    return run('. ~/.nvm/nvm.sh && nvm use > /dev/null 2>&1 && which npx');
-});
-
 task('app', function (): void {
     cd('{{release_path}}');
 
@@ -61,7 +57,7 @@ task('frontend:build', function (): void {
     cd('{{release_path}}');
 
     run('{{bin/npm}} clean-install');
-    run('{{bin/npx}} encore production');
+    run('{{bin/npm}} run build');
 })->hidden();
 
 after('deploy:update_code', 'deployment-identifier');

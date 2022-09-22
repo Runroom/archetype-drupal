@@ -10,8 +10,14 @@
   },
   "private": true,
   "scripts": {
+    "build": "encore production",
     "start": "encore dev",
-    "watch": "yarn encore dev --watch"
+    "watch": "encore dev --watch",
+    "lint": "run-p lint:*",
+    "lint:eslint": "eslint assets/js",
+    "lint:prettier": "prettier --check .github assets drush webpack.config.js babel.config.js .eslintrc.js postcss.config.js prettier.config.js docker-compose.yaml",
+    "lint:stylelint": "stylelint assets/scss",
+    "lint:tsc": "tsc --noEmit --pretty false"
   },
   "engines": {
     "node": ">=18"
@@ -19,8 +25,7 @@
   "dependencies": {
     "@runroom/purejs": "3.1.1",
     "jquery": "3.6.1",
-    "js-cookie": "3.0.1",
-    "picturefill": "3.0.3"
+    "js-cookie": "3.0.1"
   },
   "devDependencies": {
     "@babel/core": "7.19.1",
@@ -39,11 +44,12 @@
     "eslint-webpack-plugin": "3.2.0",
     "file-loader": "6.2.0",
     "fork-ts-checker-webpack-plugin": "7.2.13",
-    "sass-embedded": "1.54.9",
+    "npm-run-all": "4.1.5",
     "postcss": "8.4.16",
     "postcss-loader": "7.0.1",
     "postcss-sort-media-queries": "4.3.0",
     "prettier": "2.7.1",
+    "sass-embedded": "1.54.9",
     "sass-loader": "13.0.2",
     "stylelint": "14.12.1",
     "stylelint-config-prettier": "9.0.3",
