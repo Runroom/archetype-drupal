@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "12a0ce5e3451053b689678105de2d5aa",
+    "content-hash": "69464fcddac5e1d0ca7328fa652cdbef",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3526,20 +3526,20 @@
         },
         {
             "name": "drupal/xmlsitemap",
-            "version": "1.3.0",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/xmlsitemap.git",
-                "reference": "8.x-1.3"
+                "reference": "8.x-1.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/xmlsitemap-8.x-1.3.zip",
-                "reference": "8.x-1.3",
-                "shasum": "a2a20c5aab5682cc369d095cd2e21d67fc46df9b"
+                "url": "https://ftp.drupal.org/files/projects/xmlsitemap-8.x-1.4.zip",
+                "reference": "8.x-1.4",
+                "shasum": "cd010ebdfbdb5b4d51d9fa96bbebd3b310021a1f"
             },
             "require": {
-                "drupal/core": "^9",
+                "drupal/core": "^9.3 || ^10",
                 "ext-xmlwriter": "*"
             },
             "require-dev": {
@@ -3553,8 +3553,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.3",
-                    "datestamp": "1658327425",
+                    "version": "8.x-1.4",
+                    "datestamp": "1663795747",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3562,7 +3562,7 @@
                 },
                 "drush": {
                     "services": {
-                        "drush.services.yml": "^9 || ^10"
+                        "drush.services.yml": "^10 || ^11"
                     }
                 }
             },
