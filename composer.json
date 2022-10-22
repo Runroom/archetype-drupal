@@ -43,7 +43,7 @@
         "drupal/swiftmailer": "2.2.0",
         "drupal/twig_field_value": "2.0.0",
         "drupal/twig_tweak": "3.2.0",
-        "drupal/vbo_export": "4.1.0",
+        "drupal/vbo_export": "4.1.2",
         "drupal/views_bulk_operations": "4.2.0",
         "drupal/xmlsitemap": "1.4.0",
         "drush/drush": "11.2.1",
