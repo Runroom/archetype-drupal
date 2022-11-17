@@ -56,7 +56,7 @@ services:
         #     test: service nginx status || exit 1
         #     start_period: 1m
     database:
-        image: postgres:14.5
+        image: postgres:14.6
         environment:
             POSTGRES_DB: drupal
             POSTGRES_USER: drupal
