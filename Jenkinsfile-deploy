@@ -8,6 +8,12 @@ pipeline {
         }
     }
 
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '5'))
+        disableConcurrentBuilds()
+        disableResume()
+    }
+
     stages {
         stage('Deploy') {
             steps {
