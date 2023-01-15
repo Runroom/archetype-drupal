@@ -40,7 +40,7 @@
         "drupal/r4032login": "2.2.0",
         "drupal/redirect": "1.8.0",
         "drupal/redis": "1.6.0",
-        "drupal/swiftmailer": "2.2.0",
+        "drupal/swiftmailer": "2.4.0",
         "drupal/twig_field_value": "2.0.1",
         "drupal/twig_tweak": "3.2.0",
         "drupal/vbo_export": "4.1.2",
