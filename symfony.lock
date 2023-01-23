@@ -65,20 +65,11 @@
             "config/routes/annotations.yaml"
         ]
     },
-    "doctrine/cache": {
-        "version": "1.10.2"
-    },
-    "doctrine/collections": {
-        "version": "1.6.7"
-    },
     "doctrine/common": {
         "version": "2.13.3"
     },
     "doctrine/event-manager": {
         "version": "1.1.1"
-    },
-    "doctrine/inflector": {
-        "version": "1.4.3"
     },
     "doctrine/instantiator": {
         "version": "1.4.0"

@@ -1,47 +1,45 @@
-uuid: d89edc62-d98d-4607-827d-1a68c1679a60
+uuid: 2f99bb00-1838-45ae-a307-7d61de8e0366
 langcode: es
 status: true
 dependencies:
   config:
     - filter.format.html_complete
   module:
-    - ckeditor
+    - ckeditor5
 format: html_complete
-editor: ckeditor
+editor: ckeditor5
 settings:
   toolbar:
-    rows:
-      -
-        -
-          name: Formato
-          items:
-            - Styles
-            - Bold
-            - Italic
-        -
-          name: Enlaces
-          items:
-            - DrupalLink
-            - DrupalUnlink
-        -
-          name: Listas
-          items:
-            - BulletedList
-            - NumberedList
-        -
-          name: Multimedia
-          items:
-            - DrupalMediaLibrary
-        -
-          name: Herramientas
-          items:
-            - ShowBlocks
-            - Maximize
+    items:
+      - heading
+      - bold
+      - italic
+      - '|'
+      - link
+      - '|'
+      - bulletedList
+      - numberedList
+      - '|'
+      - drupalMedia
   plugins:
-    stylescombo:
-      styles: "h2.t-title2|H2\r\nh3.t-title3|H3\r\nh4.t-title4|H4\r\np|Párrafo"
-    language:
-      language_list: un
+    ckeditor5_heading:
+      enabled_headings:
+        - heading2
+        - heading3
+        - heading4
+    ckeditor5_list:
+      reversed: true
+      startIndex: true
+    media_media:
+      allow_view_mode_override: false
+    editor_advanced_link_link:
+      enabled_attributes:
+        - aria-label
+        - class
+        - id
+        - rel
+        - target
+        - title
 image_upload:
   status: false
   scheme: public
