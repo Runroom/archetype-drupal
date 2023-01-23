@@ -23,7 +23,7 @@
     "node": ">=18"
   },
   "dependencies": {
-    "@runroom/purejs": "3.1.1",
+    "@runroom/purejs": "3.2.2",
     "jquery": "3.6.3",
     "js-cookie": "3.0.1"
   },
