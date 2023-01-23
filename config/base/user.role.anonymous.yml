@@ -1,7 +1,10 @@
 uuid: e1be3e0b-9e5e-443d-ba7a-fccd9872cb56
 langcode: es
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - media
+    - system
 id: anonymous
 label: 'Usuario anónimo'
 weight: 0

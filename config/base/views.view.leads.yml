@@ -96,36 +96,36 @@ display:
               action_id: vbo_export_generate_xlsx_action
               preconfiguration:
                 label_override: 'Exportar a XLSX (Microsoft Excel)'
+                strip_tags: false
                 field_override: false
                 field_config:
                   created:
+                    active: false
                     label: ''
-                    active: 0
                   name:
+                    active: false
                     label: ''
-                    active: 0
                   field_surnames:
+                    active: false
                     label: ''
-                    active: 0
                   field_email:
+                    active: false
                     label: ''
-                    active: 0
                   field_sector:
+                    active: false
                     label: ''
-                    active: 0
                   field_other_sector:
+                    active: false
                     label: ''
-                    active: 0
                   field_comment:
+                    active: false
                     label: ''
-                    active: 0
                   field_privacy_policy:
+                    active: false
                     label: ''
-                    active: 0
                   operations:
+                    active: false
                     label: ''
-                    active: 0
-                strip_tags: 0
             -
               action_id: vbo_export_generate_csv_action
               preconfiguration:
@@ -134,32 +134,32 @@ display:
                 field_override: false
                 field_config:
                   created:
+                    active: false
                     label: ''
-                    active: 0
                   name:
+                    active: false
                     label: ''
-                    active: 0
                   field_surnames:
+                    active: false
                     label: ''
-                    active: 0
                   field_email:
+                    active: false
                     label: ''
-                    active: 0
                   field_sector:
+                    active: false
                     label: ''
-                    active: 0
                   field_other_sector:
+                    active: false
                     label: ''
-                    active: 0
                   field_comment:
+                    active: false
                     label: ''
-                    active: 0
                   field_privacy_policy:
+                    active: false
                     label: ''
-                    active: 0
                   operations:
+                    active: false
                     label: ''
-                    active: 0
                 separator: ;
             -
               action_id: views_bulk_operations_delete_entity

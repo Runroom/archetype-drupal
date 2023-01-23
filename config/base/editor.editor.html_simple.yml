@@ -1,32 +1,29 @@
-uuid: 5f81793f-3921-4267-888e-0d4062eecea1
+uuid: 3dad850a-757d-4905-821f-d86ea9af7b29
 langcode: es
 status: true
 dependencies:
   config:
     - filter.format.html_simple
   module:
-    - ckeditor
+    - ckeditor5
 format: html_simple
-editor: ckeditor
+editor: ckeditor5
 settings:
   toolbar:
-    rows:
-      -
-        -
-          name: Formato
-          items:
-            - Bold
-            - Italic
-        -
-          name: Enlaces
-          items:
-            - DrupalLink
-            - DrupalUnlink
+    items:
+      - bold
+      - italic
+      - '|'
+      - link
   plugins:
-    stylescombo:
-      styles: ''
-    language:
-      language_list: un
+    editor_advanced_link_link:
+      enabled_attributes:
+        - aria-label
+        - class
+        - id
+        - rel
+        - target
+        - title
 image_upload:
   status: true
   scheme: public
