@@ -16,18 +16,14 @@ final class LeadForm extends ContentEntityForm
 
         $status = parent::save($form, $form_state);
 
-        switch ($status) {
-            case SAVED_NEW:
-                $this->messenger()->addMessage(new TranslatableMarkup('Created the %label Lead.', [
-                    '%label' => $entity->label(),
-                ]));
-
-                break;
-            default:
-                $this->messenger()->addMessage(new TranslatableMarkup('Saved the %label Lead.', [
-                    '%label' => $entity->label(),
-                ]));
-        }
+        match ($status) {
+            SAVED_NEW => $this->messenger()->addMessage(new TranslatableMarkup('Created the %label Lead.', [
+                '%label' => $entity->label(),
+            ])),
+            default => $this->messenger()->addMessage(new TranslatableMarkup('Saved the %label Lead.', [
+                '%label' => $entity->label(),
+            ])),
+        };
 
         $form_state->setRedirect('entity.lead.canonical', ['lead' => $entity->id()]);
 
