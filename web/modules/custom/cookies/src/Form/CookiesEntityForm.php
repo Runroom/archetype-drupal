@@ -18,19 +18,14 @@ final class CookiesEntityForm extends ContentEntityForm
 
         $status = parent::save($form, $form_state);
 
-        switch ($status) {
-            case SAVED_NEW:
-                $this->messenger()->addMessage(new TranslatableMarkup('Created the %label Cookies entity.', [
-                    '%label' => $entity->label(),
-                ]));
-
-                break;
-
-            default:
-                $this->messenger()->addMessage(new TranslatableMarkup('Saved the %label Cookies entity.', [
-                    '%label' => $entity->label(),
-                ]));
-        }
+        match ($status) {
+            SAVED_NEW => $this->messenger()->addMessage(new TranslatableMarkup('Created the %label Cookies entity.', [
+                '%label' => $entity->label(),
+            ])),
+            default => $this->messenger()->addMessage(new TranslatableMarkup('Saved the %label Cookies entity.', [
+                '%label' => $entity->label(),
+            ])),
+        };
 
         Cache::invalidateTags(CookiesController::COOKIES_CACHE_TAGS);
 
