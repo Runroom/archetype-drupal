@@ -23,7 +23,7 @@
     "node": ">=18"
   },
   "dependencies": {
-    "@runroom/purejs": "3.1.1",
+    "@runroom/purejs": "3.2.2",
     "jquery": "3.6.3",
     "js-cookie": "3.0.1"
   },
@@ -36,7 +36,7 @@
     "@types/jquery": "3.5.16",
     "@types/js-cookie": "3.0.2",
     "@typescript-eslint/eslint-plugin": "5.48.1",
-    "@typescript-eslint/parser": "5.48.1",
+    "@typescript-eslint/parser": "5.48.2",
     "autoprefixer": "10.4.13",
     "eslint": "8.32.0",
     "eslint-config-prettier": "8.6.0",
@@ -54,12 +54,12 @@
     "stylelint": "14.16.1",
     "stylelint-config-prettier": "9.0.4",
     "stylelint-prettier": "2.0.0",
-    "stylelint-config-standard-scss": "5.0.0",
+    "stylelint-config-standard-scss": "6.1.0",
     "stylelint-webpack-plugin": "3.3.0",
     "ts-loader": "9.4.2",
-    "typescript": "4.8.4",
+    "typescript": "4.9.4",
     "webpack": "5.75.0",
-    "webpack-cli": "4.10.0",
+    "webpack-cli": "5.0.1",
     "webpack-notifier": "1.15.0"
   }
 }
