@@ -39,3 +39,4 @@ web/themes/custom/runroom/build/*
 # NODE
 npm-debug.log
 node_modules
+tsconfig.tsbuildinfo
