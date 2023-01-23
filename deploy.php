@@ -57,7 +57,7 @@ task('frontend:build', function (): void {
     cd('{{release_path}}');
 
     run('{{bin/npm}} clean-install');
-    run('{{bin/npm}} run build');
+    run('{{bin/npm}} run build -- --progress');
 })->hidden();
 
 after('deploy:update_code', 'deployment-identifier');
