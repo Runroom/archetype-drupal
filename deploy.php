@@ -11,16 +11,12 @@ set('repository', 'git@github.com:Runroom/archetype-drupal.git');
 set('shared_dirs', ['web/sites/default/files']);
 set('shared_files', ['web/robots.txt', '.env.local']);
 set('writable_dirs', ['web/sites/default/files', 'web/sites/default/tmp', 'web/sites/default/php']);
-set('clear_paths', ['assets', 'doc', '.docker', 'node_modules', 'tests']);
+set('clear_paths', ['.docker', '.github', 'assets', 'doc', 'tests']);
 
 set('default_timeout', null);
 set('allow_anonymous_stats', false);
 set('drush', 'vendor/bin/drush');
 set('composer_options', '--apcu-autoloader --no-progress --no-interaction --no-dev');
-
-set('bin/npm', function () {
-    return run('. ~/.nvm/nvm.sh && nvm use > /dev/null 2>&1 && which npm');
-});
 
 task('app', function (): void {
     cd('{{release_path}}');
@@ -53,16 +49,15 @@ task('fixtures', function (): void {
     run('{{bin/php}} {{drush}} content-snapshot:import --yes');
 })->select('stage=staging');
 
-task('frontend:build', function (): void {
-    cd('{{release_path}}');
+task('frontend:upload', function (): void {
+    askConfirmation('Did you generate the frontend assets?');
 
-    run('{{bin/npm}} clean-install');
-    run('{{bin/npm}} run build -- --progress');
+    upload('web/themes/custom/runroom/build/', '{{release_path}}/web/themes/custom/runroom/build');
 })->hidden();
 
 after('deploy:update_code', 'deployment-identifier');
-after('deploy:vendors', 'frontend:build');
-after('frontend:build', 'app');
+after('deploy:vendors', 'frontend:upload');
+after('frontend:upload', 'app');
 after('app', 'migrations');
 after('app', 'fixtures');
 before('deploy:symlink', 'deploy:clear_paths');
