@@ -1,5 +1,5 @@
 # BASE
-FROM php:8.2-fpm as fpm-base
+FROM php:8.1-fpm as fpm-base
 
 ARG UID=1000
 ARG GID=1000
