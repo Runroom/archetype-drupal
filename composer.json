@@ -56,7 +56,7 @@
         "drupal/devel": "5.1.1",
         "drupal/devel_entity_updates": "4.1.0",
         "drupal/features": "3.12.0",
-        "ergebnis/composer-normalize": "2.29.0",
+        "ergebnis/composer-normalize": "2.30.0",
         "friendsofphp/php-cs-fixer": "3.4.0",
         "kint-php/kint": "5.0.3",
         "kint-php/kint-twig": "5.0",
