@@ -1,115 +1,138 @@
-AUTOLOAD = vendor/autoload.php
-CERTS_DIR = .certs
-MKCERT = mkcert
-UID = $(shell id -u)
-GID = $(shell id -g)
+ENV ?= dev
+NODE_MODULES_DIR = node_modules
+CERTS_DIR = .docker/traefik/certs
+UID ?= $(shell id -u)
+GID ?= $(shell id -g)
 
-docker-exec = docker compose exec app /bin/bash -c "$1"
+DOCKER_COMPOSE = docker compose --file .docker/docker-compose.yaml --file .docker/docker-compose.$(ENV).yaml
+DOCKER_EXEC = $(DOCKER_COMPOSE) exec app
+
+# Default
+default: $(NODE_MODULES_DIR) $(CERTS_DIR) build up provision
+.PHONY: default
 
 # Docker
-up: compose $(AUTOLOAD)
+up:
+	$(DOCKER_COMPOSE) up --wait
 .PHONY: up
 
+up-attach:
+	$(DOCKER_COMPOSE) up
+.PHONY: up-attach
+
 up-debug:
-	XDEBUG_MODE=debug docker compose up -d
+	XDEBUG_MODE=debug $(MAKE) up
 .PHONY: up-debug
 
-compose: $(CERTS_DIR)
-	docker compose up -d
-.PHONY: compose
-
-build: halt
-	docker compose build --build-arg UID=$(UID) --build-arg GID=$(GID)
+build:
+	$(DOCKER_COMPOSE) build --build-arg UID=$(UID) --build-arg GID=$(GID)
 .PHONY: build
 
 halt:
-	docker compose stop
+	$(DOCKER_COMPOSE) stop
 .PHONY: halt
 
 destroy:
-	docker compose down --remove-orphans --volumes
+	$(DOCKER_COMPOSE) down --remove-orphans --volumes
 .PHONY: destroy
 
+ps:
+	$(DOCKER_COMPOSE) ps
+.PHONY: ps
+
+logs:
+	$(DOCKER_COMPOSE) logs --follow
+.PHONY: logs
+
 ssh:
-	docker compose exec app /bin/bash
+	$(DOCKER_EXEC) /bin/ash
 .PHONY: ssh
+
+$(NODE_MODULES_DIR):
+	mkdir --parents $(NODE_MODULES_DIR)
 
 $(CERTS_DIR):
 	$(MAKE) certs
 
 certs:
 	mkdir -p $(CERTS_DIR)
-	$(MKCERT) -install
-	$(MKCERT) -cert-file $(CERTS_DIR)/certificate.pem -key-file $(CERTS_DIR)/certificate-key.pem localhost
+	mkcert -install
+	mkcert -cert-file $(CERTS_DIR)/cert.crt -key-file $(CERTS_DIR)/cert.key localhost
 .PHONY: certs
 
-# App
-$(AUTOLOAD):
-	$(MAKE) provision
+# Environments
+prod:
+	ENV=prod $(MAKE) build up
+.PHONY: prod
 
+dev:
+	$(MAKE) build up
+.PHONY: dev
+
+# App
 provision: composer-install database deploy language-import content-import
 .PHONY: provision
 
 composer-install:
-	$(call docker-exec,composer install --optimize-autoloader)
+	$(DOCKER_EXEC) composer install --optimize-autoloader
 .PHONY: composer-install
 
 composer-normalize:
-	$(call docker-exec,composer normalize)
+	$(DOCKER_EXEC) composer normalize
 .PHONY: composer-normalize
 
 phpstan:
-	$(call docker-exec,composer phpstan)
+	$(DOCKER_EXEC) composer phpstan
 .PHONY: phpstan
 
 php-cs-fixer:
-	$(call docker-exec,composer php-cs-fixer)
+	$(DOCKER_EXEC) composer php-cs-fixer
 .PHONY: php-cs-fixer
 
 phpunit:
-	$(call docker-exec,phpunit)
+	$(DOCKER_EXEC) phpunit
 .PHONY: phpunit
 
 phpunit-coverage:
-	$(call docker-exec,phpunit --coverage-html /usr/app/coverage)
+	$(DOCKER_EXEC) phpunit --coverage-html /usr/app/coverage
 .PHONY: phpunit-coverage
 
 # Drupal
 deploy:
-	$(call docker-exec,drush deploy --yes)
+	$(DOCKER_EXEC) drush deploy --yes
 .PHONY: deploy
 
 update: language-export config-export
 .PHONY: update
 
 config-export:
-	$(call docker-exec,drush config:export --yes)
+	$(DOCKER_EXEC) drush config:export --yes
 .PHONY: config-export
 
 config-import:
-	$(call docker-exec,drush config:import --yes)
+	$(DOCKER_EXEC) drush config:import --yes
 .PHONY: config-import
 
 content-export:
-	$(call docker-exec,drush content-snapshot:export --yes)
+	$(DOCKER_EXEC) drush content-snapshot:export --yes
 .PHONY: content-export
 
 content-import:
-	$(call docker-exec,drush content-snapshot:import --yes)
+	$(DOCKER_EXEC) drush content-snapshot:import --yes
 .PHONY: content-import
 
 language-export:
-	$(call docker-exec,drush language-export)
+	$(DOCKER_EXEC) drush language-export
 .PHONY: language-export
 
 language-import:
-	$(call docker-exec,drush language-import)
+	$(DOCKER_EXEC) drush language-import
 .PHONY: language-import
 
 cache-clear:
-	$(call docker-exec,drush cache:rebuild)
+	$(DOCKER_EXEC) drush cache:rebuild
 .PHONY: cache-clear
 
 database:
-	$(call docker-exec,drush site:install minimal --existing-config --yes)
+	$(DOCKER_EXEC) drush site:install minimal --existing-config --yes
 .PHONY: database

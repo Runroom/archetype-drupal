@@ -38,4 +38,4 @@ if [ "${ENABLE_CRON:-}" = true ]; then
     cron -f
 fi
 
-php-fpm
+php-fpm${PHP_VERSION}
