@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@runroom/purejs": "3.2.2",
-    "jquery": "3.6.3",
+    "jquery": "3.6.4",
     "js-cookie": "3.0.1"
   },
   "devDependencies": {
