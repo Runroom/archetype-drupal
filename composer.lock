@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8ea9dc806bc0b03ecb3cdccdab4978d8",
+    "content-hash": "52ed5950b2b746a98f8085cb812a1577",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -10899,16 +10899,16 @@
         },
         {
             "name": "palantirnet/drupal-rector",
-            "version": "0.15.0",
+            "version": "0.15.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/palantirnet/drupal-rector.git",
-                "reference": "09d3dc6a422483de4c7c9b17692a48252b6b0af3"
+                "reference": "85382a67a07b928f5a963d94fbca11d7be33d6ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/palantirnet/drupal-rector/zipball/09d3dc6a422483de4c7c9b17692a48252b6b0af3",
-                "reference": "09d3dc6a422483de4c7c9b17692a48252b6b0af3",
+                "url": "https://api.github.com/repos/palantirnet/drupal-rector/zipball/85382a67a07b928f5a963d94fbca11d7be33d6ca",
+                "reference": "85382a67a07b928f5a963d94fbca11d7be33d6ca",
                 "shasum": ""
             },
             "require": {
@@ -10925,7 +10925,7 @@
                 "phpstan/extension-installer": "^1.1",
                 "phpstan/phpstan": "^1.0",
                 "phpstan/phpstan-deprecation-rules": "^1.0",
-                "phpunit/phpunit": "^9.5",
+                "phpunit/phpunit": "^10.0",
                 "rector/rector-src": "dev-main",
                 "symfony/yaml": "^5 || ^6",
                 "symplify/vendor-patches": "^11.0"
@@ -10970,9 +10970,9 @@
                 "rector"
             ],
             "support": {
-                "source": "https://github.com/palantirnet/drupal-rector/tree/0.15.0"
+                "source": "https://github.com/palantirnet/drupal-rector/tree/0.15.1"
             },
-            "time": "2023-01-11T16:46:06+00:00"
+            "time": "2023-03-23T20:57:43+00:00"
         },
         {
             "name": "phar-io/manifest",
