@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c49d782c4179ad6592af29c64a6b3cda",
+    "content-hash": "224652bd96d8dda901e27788ed073de5",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -9364,16 +9364,16 @@
         },
         {
             "name": "deployer/deployer",
-            "version": "v7.2.1",
+            "version": "v7.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/deployphp/deployer.git",
-                "reference": "61314b16a776da3ba332ee0390e999a361431e52"
+                "reference": "de2367892e2475e4ad42b4d86d8cfef4f2387471"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/deployphp/deployer/zipball/61314b16a776da3ba332ee0390e999a361431e52",
-                "reference": "61314b16a776da3ba332ee0390e999a361431e52",
+                "url": "https://api.github.com/repos/deployphp/deployer/zipball/de2367892e2475e4ad42b4d86d8cfef4f2387471",
+                "reference": "de2367892e2475e4ad42b4d86d8cfef4f2387471",
                 "shasum": ""
             },
             "bin": [
@@ -9403,7 +9403,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-03-01T20:16:58+00:00"
+            "time": "2023-03-24T10:50:39+00:00"
         },
         {
             "name": "doctrine/common",
