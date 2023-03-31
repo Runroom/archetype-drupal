@@ -37,7 +37,7 @@
         "drupal/monolog": "2.2.0",
         "drupal/paragraphs": "1.15.0",
         "drupal/pathauto": "1.11.0",
-        "drupal/r4032login": "2.2.0",
+        "drupal/r4032login": "2.2.1",
         "drupal/redirect": "1.8.0",
         "drupal/redis": "1.6.0",
         "drupal/swiftmailer": "2.4.0",
