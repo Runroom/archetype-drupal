@@ -45,6 +45,7 @@ RUN adduser -u $UID -D -G $GROUP $USER
 ENV PATH="/usr/app/vendor/bin:/usr/app/bin:${PATH}" \
     PHP_VERSION=${PHP_VERSION}
 
+COPY .docker/app/base/drupal-cron.crontab /
 COPY .docker/app/base/healthcheck.sh /usr/local/bin/healthcheck
 COPY .docker/app/base/60_extra.ini /etc/php${PHP_VERSION}/conf.d/
 COPY .docker/app/base/www.conf /etc/php${PHP_VERSION}/php-fpm.d/
