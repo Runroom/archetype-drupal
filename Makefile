@@ -1,2 +1,1 @@
-.SILENT:
-include .docker/Makefile.mk
+include .docker/Makefile
