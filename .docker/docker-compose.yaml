@@ -13,6 +13,10 @@ services:
             traefik.http.routers.app.rule: Host(`localhost`)
             traefik.http.routers.app.service: app
             traefik.http.routers.app.tls: "true"
+            traefik.http.routers.app.entrypoints: web
+            traefik.http.routers.app-secure.rule: Host(`localhost`)
+            traefik.http.routers.app-secure.service: app
+            traefik.http.routers.app-secure.entrypoints: websecure
     database:
         image: postgres:14.7-alpine
         environment:

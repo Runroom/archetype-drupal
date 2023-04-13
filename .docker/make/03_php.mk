@@ -1,3 +1,7 @@
+ssh:
+	$(DOCKER_EXEC) /bin/ash
+.PHONY: ssh
+
 composer-install:
 	$(DOCKER_EXEC) composer install --optimize-autoloader
 .PHONY: composer-install

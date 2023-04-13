@@ -1,10 +1,11 @@
-default: setup build up provision
+MK_FILES := $(wildcard .docker/make/*.mk)
+MK_FILE_NAMES := $(patsubst .docker/make/%.mk,%,$(MK_FILES))
+MK_FILE_NAMES_SORTED := $(sort $(MK_FILE_NAMES))
+
+default: setup certs build up provision ## Initial setup to get the project running. Can also be run with `make`.
 .PHONY: default
 
-provision: composer-install database deploy language-import content-import
-.PHONY: provision
+help: ## Show this help.
+	@grep -Fh "##"  $(MAKEFILE_LIST) | grep -Fv grep -F | sed -e 's/\\$$//' | sed -e 's/:.* ##/: ##/' | sed -e 's/## \?//' | sed -e ''/^/s//`printf "\033[32m"`/'' | sed -e ''/:/s//`printf ":\033[00m"`/''
 
-include .docker/setup.mk
-include .docker/docker.mk
-include .docker/php.mk
-include .docker/drupal.mk
+include $(addsuffix .mk,$(addprefix .docker/make/,$(MK_FILE_NAMES_SORTED)))

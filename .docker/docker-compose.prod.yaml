@@ -8,6 +8,7 @@ services:
         environment:
             APP_ENV: staging
             RESET_DATABASE: "${RESET_DATABASE:-false}"
+            MIGRATE_DATABASE: "${MIGRATE_DATABASE:-false}"
         volumes:
             - ../web/sites/default/files:/usr/app/web/sites/default/files
         healthcheck:

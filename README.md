@@ -17,6 +17,12 @@ To run this project, you need to have:
 
 ## Setup
 
+To start the project for the first time:
+
+```bash
+    make
+```
+
 To start docker containers:
 
 ```bash
@@ -30,6 +36,7 @@ To generate build assets:
     npm clean-install
     npx encore dev
 ```
+
 
 - Open `https://localhost:8443` in your browser.
 - Open `http://localhost:8025` in your browser to access MailCatcher.

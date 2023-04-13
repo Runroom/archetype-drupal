@@ -1,11 +1,8 @@
 ENV ?= dev
 UID ?= $(shell id -u)
-GID ?= $(shell id -g)
 
 DOCKER_COMPOSE = docker compose --file .docker/docker-compose.yaml --file .docker/docker-compose.$(ENV).yaml
 DOCKER_EXEC = $(DOCKER_COMPOSE) exec app
-
-vendor
 
 up:
 	$(DOCKER_COMPOSE) up --wait
@@ -19,8 +16,8 @@ up-debug:
 	XDEBUG_MODE=debug $(MAKE) up
 .PHONY: up-debug
 
-build:
-	$(DOCKER_COMPOSE) build --build-arg UID=$(UID) --build-arg GID=$(GID)
+build: ## Build the containers.
+	$(DOCKER_COMPOSE) build --build-arg UID=$(UID)
 .PHONY: build
 
 halt:
@@ -39,9 +36,9 @@ logs:
 	$(DOCKER_COMPOSE) logs --follow
 .PHONY: logs
 
-ssh:
-	$(DOCKER_EXEC) /bin/ash
-.PHONY: ssh
+pull: ## Pull the latest images.
+	$(DOCKER_COMPOSE) pull
+.PHONY: pull
 
 prod:
 	ENV=prod $(MAKE) build up
@@ -50,3 +47,4 @@ prod:
 dev:
 	$(MAKE) build up
 .PHONY: dev
+

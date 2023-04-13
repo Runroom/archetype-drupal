@@ -2,9 +2,7 @@ FROM alpine:3.17 as fpm-base
 
 ARG PHP_VERSION=81
 ARG UID=1000
-ARG GID=1000
 ARG USER=app
-ARG GROUP=app
 
 RUN apk add --no-cache \
     php${PHP_VERSION} \
@@ -37,10 +35,10 @@ RUN apk add --no-cache \
     fcgi \
     patch \
     rsync \
-    postgresql-client
+    postgresql-client \
+    openssh
 
-RUN addgroup -g $GID $GROUP
-RUN adduser -u $UID -D -G $GROUP $USER
+RUN adduser -u $UID -D $USER
 
 ENV PATH="/usr/app/vendor/bin:/usr/app/bin:${PATH}" \
     PHP_VERSION=${PHP_VERSION}
@@ -78,11 +76,11 @@ COPY .docker/app/dev/61_extra.ini /etc/php${PHP_VERSION}/conf.d/
 
 USER ${USER}
 
-FROM node:18.14-alpine as node
+FROM node:18.15-alpine as node
 
 WORKDIR /usr/app
 
-RUN mkdir -p public
+RUN mkdir --parents public
 
 COPY package*.json .
 COPY *.config.js .
@@ -104,14 +102,14 @@ COPY .docker/app/prod/61_extra.ini /etc/php${PHP_VERSION}/conf.d/
 
 USER ${USER}
 
-COPY --chown=$UID:$GID .env .
-COPY --chown=$UID:$GID composer.json .
-COPY --chown=$UID:$GID composer.lock .
-COPY --chown=$UID:$GID symfony.lock .
+COPY --chown=$UID .env .
+COPY --chown=$UID composer.json .
+COPY --chown=$UID composer.lock .
+COPY --chown=$UID symfony.lock .
 
 RUN composer install --prefer-dist --no-progress --no-interaction --no-dev
 
-COPY --chown=$UID:$GID . .
+COPY --chown=$UID . .
 
 RUN composer dump-autoload --classmap-authoritative
 RUN composer symfony:dump-env prod
@@ -119,9 +117,10 @@ RUN composer symfony:dump-env prod
 RUN console cache:warmup
 RUN console assets:install public
 
-COPY --chown=$UID:$GID --from=node --link /usr/app/public public
+# Add --link when Docker for Mac supports it
+COPY --chown=$UID --from=node /usr/app/public public
 
-FROM nginx:1.23-alpine as nginx-base
+FROM nginx:1.24-alpine as nginx-base
 
 ARG UID=1000
 ARG GID=1000
@@ -129,11 +128,11 @@ ARG GID=1000
 RUN apk add --no-cache shadow
 
 RUN usermod --uid $UID nginx
-RUN groupmod --non-unique --gid $GID nginx
 
 COPY .docker/nginx/nginx.conf /etc/nginx/nginx.conf
 
 FROM nginx-base as nginx-dev
 FROM nginx-base as nginx-prod
 
-COPY --chown=$UID:$GID --from=fpm-prod --link /usr/app/public /usr/app/public
+# Add --link when Docker for Mac supports it
+COPY --chown=$UID --from=fpm-prod /usr/app/public /usr/app/public

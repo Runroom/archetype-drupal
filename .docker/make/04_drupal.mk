@@ -36,3 +36,6 @@ cache-clear:
 database:
 	$(DOCKER_EXEC) drush site:install minimal --existing-config --yes
 .PHONY: database
+
+provision: composer-install database deploy language-import content-import
+.PHONY: provision
