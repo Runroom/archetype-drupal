@@ -31,7 +31,7 @@ pipeline {
                     image 'runroom/php8.1-cli'
                     args '-v $HOME/composer:/home/jenkins/.composer:z'
                     reuseNode true
-                }ç
+                }
             }
 
             steps {

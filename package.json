@@ -15,7 +15,7 @@
     "watch": "encore dev --watch",
     "lint": "run-p lint:*",
     "lint:eslint": "eslint assets/js",
-    "lint:prettier": "prettier --check .github assets drush webpack.config.js babel.config.js .eslintrc.js postcss.config.js prettier.config.js .docker/docker-compose.yaml",
+    "lint:prettier": "prettier --check  .docker .github assets drush webpack.config.js babel.config.js .eslintrc.js postcss.config.js prettier.config.js",
     "lint:stylelint": "stylelint assets/scss",
     "lint:tsc": "tsc --noEmit --pretty false"
   },
