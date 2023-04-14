@@ -26,6 +26,7 @@ jobs:
         runs-on: ubuntu-latest
         env:
             ENV: prod
+            APP_ENV: staging
             RESET_DATABASE: true
         steps:
             - uses: actions/checkout@v3
