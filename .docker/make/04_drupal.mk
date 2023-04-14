@@ -1,3 +1,7 @@
+ifndef DOCKER_EXEC
+$(error DOCKER_EXEC must be defined before loading make/04_drupal.mk)
+endif
+
 deploy:
 	$(DOCKER_EXEC) drush deploy --yes
 .PHONY: deploy
