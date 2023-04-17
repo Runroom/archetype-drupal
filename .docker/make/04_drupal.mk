@@ -2,6 +2,9 @@ ifndef DOCKER_EXEC
 $(error DOCKER_EXEC must be defined before loading make/04_drupal.mk)
 endif
 
+provision: composer-install database deploy language-import content-import ## Install dependencies, clear cache, and provision database.
+.PHONY: provision
+
 deploy:
 	$(DOCKER_EXEC) drush deploy --yes
 .PHONY: deploy
@@ -40,6 +43,3 @@ cache-clear:
 database:
 	$(DOCKER_EXEC) drush site:install minimal --existing-config --yes
 .PHONY: database
-
-provision: composer-install database deploy language-import content-import
-.PHONY: provision
