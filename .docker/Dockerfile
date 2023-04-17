@@ -80,15 +80,13 @@ FROM node:18.15-slim as node
 
 WORKDIR /usr/app
 
-RUN mkdir --parents public
+RUN mkdir --parents web/themes/custom/runroom
 
 COPY package*.json .
 COPY *.config.js .
 COPY .browserslistrc .
 COPY .eslintrc.js .
 COPY tsconfig.json .
-COPY etc ./etc
-COPY templates ./templates
 COPY assets ./assets
 
 RUN npm clean-install
@@ -111,10 +109,11 @@ RUN composer install --prefer-dist --no-progress --no-interaction --no-dev
 
 COPY --chown=$UID . .
 
-RUN composer dump-autoload --classmap-authoritative
+RUN composer dump-autoload --apcu
+RUN composer symfony:dump-env prod
 
 # Add --link when Docker for Mac supports it
-COPY --chown=$UID --from=node /usr/app/public public
+COPY --chown=$UID --from=node /usr/app/web/themes/custom/runroom/build web/themes/custom/runroom/build
 
 FROM nginx:1.24-alpine as nginx-base
 
@@ -131,4 +130,4 @@ FROM nginx-base as nginx-dev
 FROM nginx-base as nginx-prod
 
 # Add --link when Docker for Mac supports it
-COPY --chown=$UID --from=fpm-prod /usr/app/public /usr/app/public
+COPY --chown=$UID --from=fpm-prod /usr/app/web /usr/app/web
