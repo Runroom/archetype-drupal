@@ -5,41 +5,41 @@ endif
 provision: composer-install database deploy language-import content-import ## Install dependencies, clear cache, and provision database.
 .PHONY: provision
 
-deploy:
+deploy: ## Execute Drush deploy.
 	$(DOCKER_EXEC) drush deploy --yes
 .PHONY: deploy
 
-update: language-export config-export
+update: language-export config-export ## Export language and configuration to files.
 .PHONY: update
 
-config-export:
+config-export: ## Export configuration to files.
 	$(DOCKER_EXEC) drush config:export --yes
 .PHONY: config-export
 
-config-import:
+config-import: ## Import configuration.
 	$(DOCKER_EXEC) drush config:import --yes
 .PHONY: config-import
 
-content-export:
+content-export: ## Generate content snapshot.
 	$(DOCKER_EXEC) drush content-snapshot:export --yes
 .PHONY: content-export
 
-content-import:
+content-import: ## Import content snapshot.
 	$(DOCKER_EXEC) drush content-snapshot:import --yes
 .PHONY: content-import
 
-language-export:
+language-export: ## Export language to files.
 	$(DOCKER_EXEC) drush language-export
 .PHONY: language-export
 
-language-import:
+language-import: ## Import language.
 	$(DOCKER_EXEC) drush language-import
 .PHONY: language-import
 
-cache-clear:
+cache-clear: ## Clear Drupal cache.
 	$(DOCKER_EXEC) drush cache:rebuild
 .PHONY: cache-clear
 
-database:
+database: ## Install Drupal database.
 	$(DOCKER_EXEC) drush site:install minimal --existing-config --yes
 .PHONY: database

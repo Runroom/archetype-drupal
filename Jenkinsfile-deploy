@@ -36,8 +36,9 @@ pipeline {
 
             steps {
                 sh 'composer install --no-progress --no-interaction'
-                sh 'mkdir -p ~/.ssh'
-                sh 'ssh-keyscan drupal.runroom.dev >> ~/.ssh/known_hosts'
+                sh 'mkdir --parents ~/.ssh'
+                sh 'echo "$SSH_KNOWN_HOSTS" >> ~/.ssh/known_hosts'
+                sh 'chmod 600 ~/.ssh/known_hosts'
 
                 sshagent([env.DEPLOYER_CREDENTIALS]) {
                     sh 'php vendor/bin/dep deploy $ENVIRONMENT --branch=$BRANCH --no-interaction -vv'
