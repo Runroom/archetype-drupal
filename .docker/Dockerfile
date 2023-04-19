@@ -76,7 +76,7 @@ COPY .docker/app/dev/61_extra.ini /etc/php${PHP_VERSION}/conf.d/
 
 USER ${USER}
 
-FROM node:18.16-slim as node
+FROM node:19.9-slim as node
 
 WORKDIR /usr/app
 
