@@ -12,6 +12,8 @@ jobs:
         strategy:
             matrix:
                 php: ["8.1"]
+        env:
+            APP_ENV: test
         steps:
             - uses: actions/checkout@v3
             - uses: shivammathur/setup-php@v2
@@ -21,7 +23,7 @@ jobs:
                   tools: cs2pr
             - uses: ramsey/composer-install@v2
             - run: composer php-cs-fixer -- --dry-run --format=checkstyle | cs2pr
-            - run: composer phpstan -- --error-format=checkstyle | cs2pr
+            - run: composer phpstan
             - run: composer rector -- --dry-run
             - run: composer normalize --dry-run
     node:
