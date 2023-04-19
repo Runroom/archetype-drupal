@@ -13,7 +13,7 @@ services:
             - ../web/sites/default/files:/usr/app/web/sites/default/files
         healthcheck:
             test: ["CMD", "healthcheck"]
-            start_period: 1m
+            start_period: 2m
             interval: 10s
     nginx:
         build:
@@ -25,7 +25,7 @@ services:
             - ../web/sites/default/files:/usr/app/web/sites/default/files
         healthcheck:
             test: ["CMD", "curl", "-f", "http://localhost"]
-            start_period: 1m
+            start_period: 2m
             interval: 10s
     database:
         healthcheck:
