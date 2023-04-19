@@ -34,8 +34,8 @@ if [ "${ENABLE_CRON:-}" = true ]; then
     # Make sure the environment variables are available for crontab tasks
     declare -p | grep -Ev 'BASHOPTS|BASH_VERSINFO|EUID|PPID|SHELLOPTS|UID' > /container.env
 
-    crontab /usr/app/.docker/app-prod/drupal-cron.crontab
+    crontab /drupal-cron.crontab
     cron -f
 fi
 
-php-fpm
+php-fpm${PHP_VERSION}
