@@ -5,6 +5,10 @@ FOLDER_NAME = env.JOB_NAME.split('/')[0]
 pipeline {
     agent any
 
+    environment {
+        APP_ENV = 'test'
+    }
+
     options {
         buildDiscarder(logRotator(numToKeepStr: '5'))
         disableConcurrentBuilds(abortPrevious: true)
@@ -73,7 +77,7 @@ pipeline {
             }
         }
 
-        // stage('Deploy') {
+        // stage('Continuous Deployment - Production') {
         //     when { expression { return env.BRANCH_NAME in ['main'] } }
         //     steps {
         //         build job: "${FOLDER_NAME}/Production Deploy", wait: false
