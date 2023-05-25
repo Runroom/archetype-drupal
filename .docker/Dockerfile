@@ -115,7 +115,7 @@ RUN composer symfony:dump-env prod
 # Add --link when Docker for Mac supports it
 COPY --chown=$UID --from=node /usr/app/web/themes/custom/runroom/build web/themes/custom/runroom/build
 
-FROM nginx:1.24-alpine as nginx-base
+FROM nginx:1.25-alpine as nginx-base
 
 ARG UID=1000
 ARG GID=1000
