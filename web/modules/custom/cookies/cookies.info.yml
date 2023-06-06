@@ -1,7 +1,7 @@
-name: 'Cookies Module'
+name: "Cookies Module"
 type: module
-description: 'Cookies Module'
-core_version_requirement: ^8.9 || ^9
+description: "Cookies Module"
+core_version_requirement: ^9 || ^10
 dependencies:
     - allowed_formats
     - content_translation

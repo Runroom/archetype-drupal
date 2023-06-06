@@ -35,6 +35,7 @@ if (null !== ($_SERVER['FILES_BASE_URL'] ?? null)) {
 
 if ((bool) ($_SERVER['REVERSE_PROXY'] ?? false)) {
     $settings['reverse_proxy'] = true;
+    // @todo: Change the default value for Drupal 10 to Request::HEADER_X_FORWARDED_TRAEFIK
     $settings['reverse_proxy_trusted_headers'] = Request::HEADER_X_FORWARDED_ALL;
 
     // In case you know the reverse proxy addresses, it is better to use them instead of the general remote_addr
