@@ -17,10 +17,7 @@ final class ClientIpMiddleware implements HttpKernelInterface
     {
     }
 
-    /**
-     * @todo: Change the value for type for Drupal 10 to self::MAIN_REQUEST and add the type hints
-     */
-    public function handle(Request $request, $type = self::MASTER_REQUEST, $catch = true): Response
+    public function handle(Request $request, int $type = self::MAIN_REQUEST, bool $catch = true): Response
     {
         $response = $this->app->handle($request, $type, $catch);
 

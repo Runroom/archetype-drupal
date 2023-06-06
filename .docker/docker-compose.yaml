@@ -25,6 +25,9 @@ services:
             POSTGRES_PASSWORD: drupal
         ports:
             - 8432:5432
+        # @todo: Remove this once Drupal auto installs extension pg_trgm.
+        volumes:
+            - ./database:/docker-entrypoint-initdb.d
     mailer:
         image: schickling/mailcatcher
         ports:
