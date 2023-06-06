@@ -50,8 +50,8 @@
         "drupal/views_bulk_operations": "4.2.4",
         "drupal/xmlsitemap": "1.4.0",
         "drush/drush": "11.5.1",
-        "symfony/dotenv": "6.0.19",
-        "symfony/flex": "2.2.5"
+        "symfony/dotenv": "6.3.0",
+        "symfony/flex": "2.3.1"
     },
     "require-dev": {
         "behat/mink": "1.10.0",
@@ -59,18 +59,18 @@
         "drupal/devel": "5.1.1",
         "drupal/devel_entity_updates": "4.1.1",
         "drupal/features": "5.0.x-dev",
-        "ergebnis/composer-normalize": "2.30.2",
-        "friendsofphp/php-cs-fixer": "3.4.0",
+        "ergebnis/composer-normalize": "2.31.0",
+        "friendsofphp/php-cs-fixer": "3.13.0",
         "kint-php/kint": "5.0.5",
         "kint-php/kint-twig": "5.0",
-        "mglaman/phpstan-drupal": "1.1.30",
+        "mglaman/phpstan-drupal": "1.1.34",
         "palantirnet/drupal-rector": "0.15.1",
         "phpspec/prophecy-phpunit": "2.0.2",
-        "phpstan/phpstan": "1.10.14",
+        "phpstan/phpstan": "1.10.16",
         "phpstan/phpstan-strict-rules": "1.5.1",
         "phpunit/phpunit": "9.6.7",
-        "rector/rector": "0.15.24",
-        "symfony/phpunit-bridge": "6.2.7"
+        "rector/rector": "0.15.25",
+        "symfony/phpunit-bridge": "6.3.0"
     },
     "replace": {
         "symfony/polyfill-ctype": "*",
