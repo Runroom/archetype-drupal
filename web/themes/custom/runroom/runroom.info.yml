@@ -2,7 +2,7 @@ name: Runroom
 type: theme
 description: 'Runroom base theme'
 version: 1.0.0
-core_version_requirement: ^8.9 || ^9
+core_version_requirement: ^9 || ^10
 base theme: stable
 libraries:
     - runroom/global-styling

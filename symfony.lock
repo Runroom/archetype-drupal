@@ -92,9 +92,6 @@
     "drupal/config_split": {
         "version": "1.7.0"
     },
-    "drupal/config_update": {
-        "version": "1.7.0"
-    },
     "drupal/content_snapshot": {
         "version": "2.0.0-beta3"
     },
@@ -127,9 +124,6 @@
     },
     "drupal/entity_reference_revisions": {
         "version": "1.8.0"
-    },
-    "drupal/features": {
-        "version": "3.12.0"
     },
     "drupal/field_group": {
         "version": "3.1.0"
@@ -260,9 +254,6 @@
     "kint-php/kint-twig": {
         "version": "3.0"
     },
-    "laminas/laminas-diactoros": {
-        "version": "2.5.0"
-    },
     "laminas/laminas-escaper": {
         "version": "2.7.0"
     },
@@ -325,9 +316,6 @@
     },
     "phar-io/version": {
         "version": "3.0.4"
-    },
-    "php-cs-fixer/diff": {
-        "version": "v1.3.1"
     },
     "phpdocumentor/reflection-common": {
         "version": "2.2.0"
