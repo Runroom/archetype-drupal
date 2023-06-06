@@ -1,7 +1,0 @@
-name: CKEditor Plugins
-type: module
-description: Custom CKEditor plugins
-core_version_requirement: ^9 || ^10
-package: 'runroom'
-depedencies:
-    - ckeditor
