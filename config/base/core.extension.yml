@@ -6,7 +6,6 @@ module:
   block_content: 0
   breakpoint: 0
   ckeditor5: 0
-  ckeditor_plugins: 0
   client_ip: 0
   clientside_validation: 0
   clientside_validation_jquery: 0

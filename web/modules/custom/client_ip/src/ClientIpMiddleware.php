@@ -6,6 +6,7 @@ namespace Drupal\client_ip;
 
 use Symfony\Component\HttpFoundation\Cookie;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
 
 final class ClientIpMiddleware implements HttpKernelInterface
@@ -16,7 +17,7 @@ final class ClientIpMiddleware implements HttpKernelInterface
     {
     }
 
-    public function handle(Request $request, $type = self::MASTER_REQUEST, $catch = true)
+    public function handle(Request $request, int $type = self::MAIN_REQUEST, bool $catch = true): Response
     {
         $response = $this->app->handle($request, $type, $catch);
 
