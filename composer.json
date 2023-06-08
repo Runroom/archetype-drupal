@@ -41,7 +41,7 @@
         "drupal/pathauto": "1.11.0",
         "drupal/r4032login": "2.2.1",
         "drupal/redirect": "1.8.0",
-        "drupal/redis": "1.6.0",
+        "drupal/redis": "1.7.0",
         "drupal/stable": "2.0.0",
         "drupal/swiftmailer": "2.4.0",
         "drupal/twig_field_value": "2.0.2",
