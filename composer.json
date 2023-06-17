@@ -61,7 +61,7 @@
         "drupal/features": "5.0.x-dev",
         "ergebnis/composer-normalize": "2.31.0",
         "friendsofphp/php-cs-fixer": "3.13.2",
-        "kint-php/kint": "5.0.5",
+        "kint-php/kint": "5.0.6",
         "kint-php/kint-twig": "5.0",
         "mglaman/phpstan-drupal": "1.1.35",
         "palantirnet/drupal-rector": "0.15.1",

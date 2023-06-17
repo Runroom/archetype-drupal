@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fc5ea039a76fb806367addcaba7afb59",
+    "content-hash": "58823b220d1c88e9f3234477fda222d4",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -10233,16 +10233,16 @@
         },
         {
             "name": "kint-php/kint",
-            "version": "5.0.5",
+            "version": "5.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kint-php/kint.git",
-                "reference": "1033fc4a5075e15b9b46be20c246069ab44bc243"
+                "reference": "efdcb5105cb2e4347549c477517f78ea4804be3a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kint-php/kint/zipball/1033fc4a5075e15b9b46be20c246069ab44bc243",
-                "reference": "1033fc4a5075e15b9b46be20c246069ab44bc243",
+                "url": "https://api.github.com/repos/kint-php/kint/zipball/efdcb5105cb2e4347549c477517f78ea4804be3a",
+                "reference": "efdcb5105cb2e4347549c477517f78ea4804be3a",
                 "shasum": ""
             },
             "require": {
@@ -10292,9 +10292,9 @@
             ],
             "support": {
                 "issues": "https://github.com/kint-php/kint/issues",
-                "source": "https://github.com/kint-php/kint/tree/5.0.5"
+                "source": "https://github.com/kint-php/kint/tree/5.0.6"
             },
-            "time": "2023-03-08T14:50:41+00:00"
+            "time": "2023-06-17T14:09:44+00:00"
         },
         {
             "name": "kint-php/kint-twig",
