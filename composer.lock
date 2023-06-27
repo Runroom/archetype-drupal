@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a98ab3c2db88ad01902ce8981888b582",
+    "content-hash": "27f70afa6ba6d67d10940e3f9987a6ff",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2067,29 +2067,30 @@
         },
         {
             "name": "drupal/editor_advanced_link",
-            "version": "2.1.2",
+            "version": "2.2.3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/editor_advanced_link.git",
-                "reference": "2.1.2"
+                "reference": "2.2.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/editor_advanced_link-2.1.2.zip",
-                "reference": "2.1.2",
-                "shasum": "d6ed48efd2eb410dcfaab03d1cc2cd80fdce899a"
+                "url": "https://ftp.drupal.org/files/projects/editor_advanced_link-2.2.3.zip",
+                "reference": "2.2.3",
+                "shasum": "f5765ce268477fc58e6b83f9af7204a823940e7d"
             },
             "require": {
                 "drupal/core": "^9.2 || ^10"
             },
             "require-dev": {
-                "drupal/ckeditor": "*"
+                "drupal/ckeditor": "*",
+                "phpro/grumphp": "^2.0"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.1.2",
-                    "datestamp": "1687777642",
+                    "version": "2.2.3",
+                    "datestamp": "1687876228",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2106,7 +2107,7 @@
                     "homepage": "https://www.drupal.org/user/931394"
                 }
             ],
-            "description": "Add title, target etc. attributes to Text Editor's link dialog if the text format allows them.",
+            "description": "Editor Advanced link",
             "homepage": "https://www.drupal.org/project/editor_advanced_link",
             "support": {
                 "source": "https://git.drupalcode.org/project/editor_advanced_link"
