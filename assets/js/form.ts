@@ -4,7 +4,9 @@ jQuery(document).on('cv-jquery-validate-options-update', (event, jQueryValidateS
   jQueryValidateSettings.errorElement = 'span';
   jQueryValidateSettings.errorClass = 'form__message--invalid';
   jQueryValidateSettings.errorPlacement = (
+    // eslint-disable-next-line no-undef
     error: JQuery<HTMLElement>,
+    // eslint-disable-next-line no-undef
     element: JQuery<HTMLElement>
   ) => {
     let el = element;
