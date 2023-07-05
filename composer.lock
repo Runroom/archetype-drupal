@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "55bed8d2efbde23babbcefdc39c88077",
+    "content-hash": "a052afaad1ed302314a64f8fbda2a167",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1560,16 +1560,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "10.0.9",
+            "version": "10.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "1299803690cf035d144c468bab6b6bf7e03aca49"
+                "reference": "f387645873271267b498e428774d1d5dd40147b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/1299803690cf035d144c468bab6b6bf7e03aca49",
-                "reference": "1299803690cf035d144c468bab6b6bf7e03aca49",
+                "url": "https://api.github.com/repos/drupal/core/zipball/f387645873271267b498e428774d1d5dd40147b0",
+                "reference": "f387645873271267b498e428774d1d5dd40147b0",
                 "shasum": ""
             },
             "require": {
@@ -1592,7 +1592,7 @@
                 "ext-tokenizer": "*",
                 "ext-xml": "*",
                 "guzzlehttp/guzzle": "^7.5",
-                "guzzlehttp/psr7": "^2.4",
+                "guzzlehttp/psr7": "^2.4.5",
                 "masterminds/html5": "^2.7",
                 "pear/archive_tar": "^1.4.14",
                 "php": ">=8.1.0",
@@ -1607,8 +1607,8 @@
                 "symfony/process": "^6.2",
                 "symfony/psr-http-message-bridge": "^2.1",
                 "symfony/routing": "^6.2",
-                "symfony/serializer": "^6.2",
-                "symfony/validator": "^6.2",
+                "symfony/serializer": "~6.2.0",
+                "symfony/validator": "~6.2.0",
                 "symfony/yaml": "^6.2",
                 "twig/twig": "^3.4.3"
             },
@@ -1712,22 +1712,22 @@
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
             "support": {
-                "source": "https://github.com/drupal/core/tree/10.0.9"
+                "source": "https://github.com/drupal/core/tree/10.0.10"
             },
-            "time": "2023-05-03T09:53:20+00:00"
+            "time": "2023-07-05T09:11:29+00:00"
         },
         {
             "name": "drupal/core-recommended",
-            "version": "10.0.9",
+            "version": "10.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-recommended.git",
-                "reference": "1584a4bbb5d72133a5ce2fd711254dea80a647dc"
+                "reference": "52761f7f6b2816089e4310c4f700c5a6c4b340e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/1584a4bbb5d72133a5ce2fd711254dea80a647dc",
-                "reference": "1584a4bbb5d72133a5ce2fd711254dea80a647dc",
+                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/52761f7f6b2816089e4310c4f700c5a6c4b340e1",
+                "reference": "52761f7f6b2816089e4310c4f700c5a6c4b340e1",
                 "shasum": ""
             },
             "require": {
@@ -1735,7 +1735,7 @@
                 "composer/semver": "~3.3.2",
                 "doctrine/annotations": "~1.13.3",
                 "doctrine/lexer": "~1.2.3",
-                "drupal/core": "10.0.9",
+                "drupal/core": "10.0.10",
                 "egulias/email-validator": "~3.2.1",
                 "guzzlehttp/guzzle": "~7.5.0",
                 "guzzlehttp/promises": "~1.5.2",
@@ -1791,9 +1791,9 @@
             ],
             "description": "Core and its dependencies with known-compatible minor versions. Require this project INSTEAD OF drupal/core.",
             "support": {
-                "source": "https://github.com/drupal/core-recommended/tree/10.0.9"
+                "source": "https://github.com/drupal/core-recommended/tree/10.0.10"
             },
-            "time": "2023-05-03T09:53:20+00:00"
+            "time": "2023-07-05T09:11:29+00:00"
         },
         {
             "name": "drupal/ctools",
