@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f4e3a514fe8baba85e0a8aeacf4da522",
+    "content-hash": "09b51af391dd75405540d231c4a82fb8",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1504,21 +1504,21 @@
         },
         {
             "name": "drupal/content_snapshot",
-            "version": "3.0.2",
+            "version": "3.0.3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/content_snapshot.git",
-                "reference": "3.0.2"
+                "reference": "3.0.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/content_snapshot-3.0.2.zip",
-                "reference": "3.0.2",
-                "shasum": "1e71601b7dcdeac1afb5aed8c931a9ca8676e6ab"
+                "url": "https://ftp.drupal.org/files/projects/content_snapshot-3.0.3.zip",
+                "reference": "3.0.3",
+                "shasum": "a45a2c169b08428201e3b8c1be09f7e54a6696a3"
             },
             "require": {
                 "drupal/core": "^9 || ^10",
-                "drush/drush": "^9 || ^10 || ^11",
+                "drush/drush": "^9 || ^10 || ^11 || ^12",
                 "php": ">=8.0.0"
             },
             "require-dev": {
@@ -1528,8 +1528,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.0.2",
-                    "datestamp": "1679348917",
+                    "version": "3.0.3",
+                    "datestamp": "1689798414",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1537,7 +1537,7 @@
                 },
                 "drush": {
                     "services": {
-                        "drush.services.yml": "^9 || ^10 || ^11"
+                        "drush.services.yml": "^9 || ^10 || ^11 || ^12"
                     }
                 }
             },
