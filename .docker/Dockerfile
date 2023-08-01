@@ -118,7 +118,6 @@ COPY --chown=$UID --from=node /usr/app/web/themes/custom/runroom/build web/theme
 FROM nginx:1.25-alpine as nginx-base
 
 ARG UID=1000
-ARG GID=1000
 
 RUN apk add --no-cache shadow
 
