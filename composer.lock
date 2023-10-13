@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0459b55d69f0a8dd65c3df692d50cc72",
+    "content-hash": "88bd15ae11f3c4b403bdfeb102aae218",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2240,17 +2240,17 @@
         },
         {
             "name": "drupal/gin",
-            "version": "3.0.0-rc6",
+            "version": "3.0.0-rc7",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/gin.git",
-                "reference": "8.x-3.0-rc6"
+                "reference": "8.x-3.0-rc7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/gin-8.x-3.0-rc6.zip",
-                "reference": "8.x-3.0-rc6",
-                "shasum": "45d1939be11592cff64e0e3fe4e17553e754175a"
+                "url": "https://ftp.drupal.org/files/projects/gin-8.x-3.0-rc7.zip",
+                "reference": "8.x-3.0-rc7",
+                "shasum": "9f91862fc82ef8b0adbf34b26caa3c42d4f1f6b2"
             },
             "require": {
                 "drupal/core": "^9 || ^10",
@@ -2259,8 +2259,8 @@
             "type": "drupal-theme",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.0-rc6",
-                    "datestamp": "1693299666",
+                    "version": "8.x-3.0-rc7",
+                    "datestamp": "1697193234",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "RC releases are not covered by Drupal security advisories."
