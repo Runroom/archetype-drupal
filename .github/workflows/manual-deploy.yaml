@@ -1,42 +1,23 @@
-name: Manual deploy
+name: Deploy
 
 on:
     workflow_dispatch:
         inputs:
             environment:
-                description: "Environment to deploy to"
+                description: "Environment to deploy"
                 required: true
                 type: environment
+            tag:
+                description: "Tag to deploy"
+                required: true
+                type: string
+                default: latest
 
 jobs:
-    manual:
-        name: ${{ inputs.environment }}
-        runs-on: ubuntu-latest
-        concurrency: ${{ inputs.environment }}
-        environment: ${{ inputs.environment }}
-        strategy:
-            matrix:
-                php: ["8.1"]
-        steps:
-            - uses: actions/checkout@3df4ab11eba7bda6032a0b82a6bb43b11571feac # v4
-            - uses: shivammathur/setup-php@v2
-              with:
-                  php-version: ${{ matrix.php }}
-                  coverage: none
-            - uses: actions/setup-node@v3
-              with:
-                  node-version: 18.x
-            - uses: ramsey/composer-install@v2
-            - uses: bahmutov/npm-install@v1
-            - run: npm run build
-            - shell: bash
-              run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-              id: extract_branch
-            - uses: deployphp/action@v1
-              with:
-                  private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-                  known-hosts: ${{ secrets.KNOWN_HOSTS }}
-                  dep: deploy drupal.runroom.dev --branch=${{ steps.extract_branch.outputs.branch }}
-              env:
-                  DEPLOYER_HOST: ${{ secrets.DEPLOYER_HOST }}
-                  DEPLOYER_USER: ${{ secrets.DEPLOYER_USER }}
+    deploy:
+        name: Deploy
+        uses: runroom/archetype-drupal/.github/workflows/deploy.yaml@main
+        with:
+            environment: ${{ inputs.environment }}
+            tag: ${{ inputs.tag }}
+        secrets: inherit

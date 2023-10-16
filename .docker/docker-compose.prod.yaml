@@ -1,7 +1,7 @@
 services:
     app:
         build:
-            target: fpm-prod
+            target: app-prod
         depends_on:
             database:
                 condition: service_healthy
@@ -12,22 +12,10 @@ services:
         volumes:
             - ../web/sites/default/files:/usr/app/web/sites/default/files
         healthcheck:
-            test: ["CMD", "healthcheck"]
-            start_period: 2m
-            interval: 10s
-    nginx:
-        build:
-            target: nginx-prod
-        depends_on:
-            app:
-                condition: service_started
-        volumes:
-            - ../web/sites/default/files:/usr/app/web/sites/default/files
-        healthcheck:
-            test: ["CMD", "curl", "-f", "http://localhost"]
+            test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost"]
             start_period: 2m
             interval: 10s
     database:
         healthcheck:
-            test: ["CMD-SHELL", "pg_isready"]
-            interval: 10s
+            test: pg_isready --username $${POSTGRES_USER}
+            interval: 5s
