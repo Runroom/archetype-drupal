@@ -1,6 +1,6 @@
 FROM alpine:3.18 as app-base
 
-ARG PHP_VERSION=82
+ARG PHP_VERSION=81
 ARG UID=1000
 ARG USER=app
 
@@ -39,9 +39,9 @@ RUN apk add --no-cache \
     postgresql-client \
     openssh
 
+RUN ln -snf /usr/bin/php${PHP_VERSION} /usr/bin/php
 
 RUN adduser -u $UID -D $USER
-
 
 ENV PATH="/usr/app/vendor/bin:/usr/app/bin:${PATH}" \
     PHP_VERSION=${PHP_VERSION}
@@ -49,12 +49,13 @@ ENV PATH="/usr/app/vendor/bin:/usr/app/bin:${PATH}" \
 COPY .docker/app/base/Caddyfile /
 COPY .docker/app/base/drupal-cron.crontab /
 COPY .docker/app/base/healthcheck.sh /usr/local/bin/healthcheck
-COPY .docker/app/base/60_extra.ini /etc/php${PHP_VERSION}/conf.d/
+COPY .docker/app/base/60_extra.ini /etc/php${PHP_VERSION}/conf.d
 COPY .docker/app/base/www.conf /etc/php${PHP_VERSION}/php-fpm.d/
-COPY .docker/app/base/php-fpm.sh /etc/php${PHP_VERSION}/
+COPY .docker/app/base/entrypoint.sh /
 COPY .docker/app/base/run.sh /
 
 RUN chmod +x /usr/local/bin/healthcheck
+RUN chmod +x /entrypoint.sh
 RUN chmod +x /run.sh
 
 COPY --from=composer:2.6 /usr/bin/composer /usr/bin/composer
@@ -65,7 +66,7 @@ WORKDIR /usr/app
 
 EXPOSE 80
 
-ENTRYPOINT ash /etc/php${PHP_VERSION}/php-fpm.sh
+ENTRYPOINT ["/entrypoint.sh"]
 
 FROM app-base as app-dev
 
@@ -82,7 +83,7 @@ COPY .docker/app/dev/61_extra.ini /etc/php${PHP_VERSION}/conf.d/
 
 USER ${USER}
 
-FROM node:18.18-alpine as asset-builder
+FROM node:18.18-slim as node
 
 WORKDIR /usr/app
 
@@ -119,6 +120,4 @@ RUN composer dump-autoload --apcu
 RUN composer symfony:dump-env prod
 
 # Add --link when Docker for Mac supports it
-COPY --chown=$UID --from=node /usr/app/web/themes/custom/runroom/build web/themes/custom/runroom/build
-
-COPY --chown=$UID --link --from=asset-builder /usr/app/public public
+COPY --chown=$UID --from=fpm-prod /usr/app/web /usr/app/web

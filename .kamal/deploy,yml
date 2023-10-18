@@ -14,32 +14,12 @@ image: ghcr.io/runroom/archetype-drupal
 
 servers:
     web:
-        hosts:
-            - SSH_HOST
-        labels:
-            traefik.http.routers.archetype-drupal-web-production.entrypoints: websecure
-            traefik.http.routers.archetype-drupal-web-production.tls: true
-            traefik.http.routers.archetype-drupal-web-production.rule: Host(`kamal.runroom.dev`)
-        env:
-            clear:
-                RESET_DATABASE: true
         healthcheck:
             cmd: wget --no-verbose --tries=1 --spider http://localhost:2019/metrics
-        volumes:
-            - ~/app/robots.txt:/usr/app/public/robots.txt
-        directories:
-            - uploads:/usr/app/public/uploads
     worker:
-        hosts:
-            - SSH_HOST
         env:
             clear:
                 CONSUME_MESSAGES: true
-
-builder:
-    multiarch: false
-    dockerfile: .docker/Dockerfile
-    context: .
 
 env:
     secret:
@@ -63,18 +43,23 @@ traefik:
         publish:
             - 443:443
         volume:
-            - ~/traefik/conf.yml:/etc/traefik/dynamic_conf/conf.yml:ro
-            - ~/traefik/certs:/certs
+            - ${HOME}/traefik/conf.yml:/etc/traefik/dynamic_conf/conf.yml:ro
+            - ${HOME}/traefik/certs:/certs
 
 accessories:
-    db:
-        image: postgres:14.9
-        host: SSH_HOST
+    database:
+        image: postgres:14.9-alpine
         port: 5432
         env:
+            clear:
+                PGDATA: /var/lib/postgresql/data/pgdata
             secret:
                 - POSTGRES_DB
                 - POSTGRES_USER
                 - POSTGRES_PASSWORD
+                - STAGING_DB
+                - STAGING_USER
+                - STAGING_PASSWORD
         directories:
-            - data:/var/lib/postgresql
+            - data:/var/lib/postgresql/data
+            - init:/docker-entrypoint-initdb.d

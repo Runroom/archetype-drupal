@@ -1,7 +1,7 @@
 :80
 
 route {
-    root * /usr/app/public
+    root * /usr/app/web
 
     php_fastcgi unix//home/app/php-fpm.sock {
         trusted_proxies private_ranges
