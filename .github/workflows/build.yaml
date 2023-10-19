@@ -1,0 +1,61 @@
+name: Build
+
+on:
+    pull_request:
+    push:
+        branches: [main]
+
+jobs:
+    docker:
+        name: Docker
+        runs-on: ubuntu-latest
+        # Needed to connect to ghcr.io registry
+        permissions:
+            contents: read
+            packages: write
+        if: |
+            (github.triggering_actor != 'renovate[bot]' &&
+            github.triggering_actor != 'dependabot[bot]') ||
+            github.ref == 'refs/heads/main'
+        steps:
+            - uses: docker/setup-buildx-action@v3
+            - uses: docker/login-action@v3
+              with:
+                  registry: ghcr.io
+                  username: ${{ github.repository_owner }}
+                  password: ${{ secrets.GITHUB_TOKEN }}
+            - id: meta
+              uses: docker/metadata-action@v5
+              with:
+                  images: ghcr.io/runroom/archetype-drupal
+                  tags: |
+                      type=raw,value=latest,enable={{is_default_branch}}
+                      type=semver,pattern={{version}}
+                      type=semver,pattern={{major}}
+                      type=semver,pattern={{major}}.{{minor}}
+                      type=ref,event=branch
+                      type=ref,event=pr
+                      type=sha
+                  # service label needed for Kamal
+                  labels: |
+                      service=archetype-drupal
+            - uses: docker/build-push-action@v5
+              with:
+                  push: true
+                  file: .docker/Dockerfile
+                  target: app-prod
+                  tags: ${{ steps.meta.outputs.tags }}
+                  labels: ${{ steps.meta.outputs.labels }}
+                  provenance: false
+                  cache-from: type=gha
+                  cache-to: type=gha,mode=max
+
+    auto-deploy:
+        name: Auto Deploy
+        needs: docker
+        if: github.ref == 'refs/heads/main'
+        uses: runroom/archetype-drupal/.github/workflows/deploy.yaml@main
+        with:
+            environment: production
+            tag: main
+        secrets: inherit
