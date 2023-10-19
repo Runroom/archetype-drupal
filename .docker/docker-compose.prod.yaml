@@ -13,9 +13,8 @@ services:
             - ../web/sites/default/files:/usr/app/web/sites/default/files
         healthcheck:
             test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost"]
-            start_period: 2m
-            interval: 10s
+            interval: 5s
     database:
         healthcheck:
-            test: pg_isready --username $${POSTGRES_USER}
+            test: ["CMD-SHELL", "pg_isready --username $${POSTGRES_USER}"]
             interval: 5s

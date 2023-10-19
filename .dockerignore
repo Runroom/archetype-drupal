@@ -1,5 +1,12 @@
+.git
+.docker/*
+!.docker/app/*
+!.docker/traefik/*
+.github
 coverage
+doc
 node_modules
+var
 vendor
 web/core
 web/modules/contrib
