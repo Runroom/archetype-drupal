@@ -34,8 +34,8 @@ jobs:
                   bundler-cache: true
             - run: gem install kamal
             - run:
-                  kamal deploy --config-file .kamal/deploy.yml --version ${{ inputs.tag }} --destination ${{ inputs.environment }}
-                  --skip-push
+                  kamal deploy --config-file .kamal/deploy.yml --version ${{ inputs.tag }}
+                  --destination ${{ inputs.environment }} --skip-push
               env:
                   DOCKER_USERNAME: ${{ github.repository_owner }}
                   DOCKER_PASSWORD: ${{ secrets.GITHUB_TOKEN }}

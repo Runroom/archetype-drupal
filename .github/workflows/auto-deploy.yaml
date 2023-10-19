@@ -32,8 +32,7 @@ jobs:
               with:
                   private-key: ${{ secrets.SSH_PRIVATE_KEY }}
                   known-hosts: ${{ secrets.KNOWN_HOSTS }}
-                  dep:
-                      deploy drupal.runroom.dev --branch=${{ steps.extract_branch.outputs.branch }}
+                  dep: deploy drupal.runroom.dev --branch=${{ steps.extract_branch.outputs.branch }}
               env:
                   DEPLOYER_HOST: ${{ secrets.DEPLOYER_HOST }}
                   DEPLOYER_USER: ${{ secrets.DEPLOYER_USER }}
