@@ -81,7 +81,7 @@ COPY .docker/app/dev/61_extra.ini /etc/php${PHP_VERSION}/conf.d/
 
 USER ${USER}
 
-FROM node:18.18-slim as node
+FROM node:18.18-slim as asset-builder
 
 WORKDIR /usr/app
 
@@ -118,4 +118,4 @@ RUN composer dump-autoload --apcu
 RUN composer symfony:dump-env prod
 
 # Add --link when Docker for Mac supports it
-COPY --chown=$UID --from=fpm-prod /usr/app/web /usr/app/web
+COPY --chown=$UID --from=asset-builder /usr/app/web /usr/app/web
