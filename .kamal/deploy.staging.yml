@@ -1,6 +1,10 @@
 ssh:
     user: SSH_USER
 
+volumes:
+    - ~/archetype-drupal-app/staging/robots.txt:/usr/app/public/robots.txt
+    - ~/archetype-drupal-app/staging/uploads:/usr/app/public/uploads
+
 servers:
     web:
         hosts:
@@ -8,7 +12,7 @@ servers:
         labels:
             traefik.http.routers.archetype-drupal-web-staging.entrypoints: websecure
             traefik.http.routers.archetype-drupal-web-staging.tls: true
-            traefik.http.routers.archetype-drupal-web-staging.rule: Host(`predrupal.runroom.dev`)
+            traefik.http.routers.archetype-drupal-web-staging.rule: Host(`prekamal.runroom.dev`)
         env:
             clear:
                 RESET_DATABASE: true
@@ -17,5 +21,5 @@ servers:
             - SSH_HOST
 
 accessories:
-    db:
+    database:
         host: SSH_HOST

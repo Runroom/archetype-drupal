@@ -1,11 +1,19 @@
 name: Deploy
 
 on:
+    workflow_dispatch:
+        inputs:
+            environment:
+                required: true
+                type: string
+            tag:
+                required: true
+                type: string
     workflow_call:
         inputs:
             environment:
                 required: true
-                type: environment
+                type: string
             tag:
                 required: true
                 type: string
@@ -14,8 +22,11 @@ jobs:
     deploy:
         name: ${{ inputs.environment }}
         runs-on: ubuntu-latest
-        environment: ${{ inputs.environment }}
+        environment:
+            name: ${{ inputs.environment }}
+            url: ${{ steps.deployment.outputs.url }}
         concurrency: ${{ inputs.environment }}
+        # Needed to connect to ghcr.io registry
         permissions:
             contents: read
             packages: read
@@ -35,8 +46,10 @@ jobs:
             - run: gem install kamal
             - run:
                   kamal deploy --config-file .kamal/deploy.yml --version ${{ inputs.tag }}
-                  --destination ${{ inputs.environment }} --destination ${{ inputs.environment }}
-                  --skip-push
+                  --destination ${{ inputs.environment }} --skip-push
               env:
                   DOCKER_USERNAME: ${{ github.repository_owner }}
                   DOCKER_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
+            - id: deployment
+              run: |
+                  echo "url=${{ vars.DEPLOYMENT_URL }}" >> $GITHUB_OUTPUT

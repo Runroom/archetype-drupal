@@ -1,6 +1,10 @@
 ssh:
     user: SSH_USER
 
+volumes:
+    - ~/archetype-drupal-app/production/robots.txt:/usr/app/public/robots.txt
+    - ~/archetype-drupal-app/production/uploads:/usr/app/public/uploads
+
 servers:
     web:
         hosts:
@@ -8,7 +12,7 @@ servers:
         labels:
             traefik.http.routers.archetype-drupal-web-production.entrypoints: websecure
             traefik.http.routers.archetype-drupal-web-production.tls: true
-            traefik.http.routers.archetype-drupal-web-production.rule: Host(`drupal.runroom.dev`)
+            traefik.http.routers.archetype-drupal-web-production.rule: Host(`kamal.runroom.dev`)
         env:
             clear:
                 MIGRATE_DATABASE: true
@@ -17,5 +21,5 @@ servers:
             - SSH_HOST
 
 accessories:
-    db:
+    database:
         host: SSH_HOST
