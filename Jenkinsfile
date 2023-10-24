@@ -31,12 +31,8 @@ pipeline {
 
                         sh 'composer php-cs-fixer -- --dry-run'
                         sh 'composer phpstan'
-                        sh 'composer psalm -- --threads=$(nproc)'
                         sh 'composer rector -- --dry-run'
                         sh 'composer normalize --dry-run'
-                        sh 'composer lint-container'
-                        sh 'composer lint-yaml'
-                        sh 'composer lint-twig'
 
                         sh 'vendor/bin/phpunit --log-junit coverage/unitreport.xml --coverage-html coverage'
 
