@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3dcc778aa302a240bb652f00fd933072",
+    "content-hash": "0da481691929a3a198efab5a6438dbec",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3641,16 +3641,16 @@
         },
         {
             "name": "drush/drush",
-            "version": "12.3.0",
+            "version": "12.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drush-ops/drush.git",
-                "reference": "a83c9ae56728dd6f99aa5d150c11e5e3656030a5"
+                "reference": "b49cc6b666279bd4582a00437bfdc4969b335612"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drush-ops/drush/zipball/a83c9ae56728dd6f99aa5d150c11e5e3656030a5",
-                "reference": "a83c9ae56728dd6f99aa5d150c11e5e3656030a5",
+                "url": "https://api.github.com/repos/drush-ops/drush/zipball/b49cc6b666279bd4582a00437bfdc4969b335612",
+                "reference": "b49cc6b666279bd4582a00437bfdc4969b335612",
                 "shasum": ""
             },
             "require": {
@@ -3773,7 +3773,7 @@
                 "issues": "https://github.com/drush-ops/drush/issues",
                 "security": "https://github.com/drush-ops/drush/security/advisories",
                 "slack": "https://drupal.slack.com/messages/C62H9CWQM",
-                "source": "https://github.com/drush-ops/drush/tree/12.3.0"
+                "source": "https://github.com/drush-ops/drush/tree/12.4.0"
             },
             "funding": [
                 {
@@ -3781,7 +3781,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-10-11T11:25:44+00:00"
+            "time": "2023-10-19T21:47:17+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -5941,16 +5941,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.11.21",
+            "version": "v0.11.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "bcb22101107f3bf770523b65630c9d547f60c540"
+                "reference": "128fa1b608be651999ed9789c95e6e2a31b5802b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/bcb22101107f3bf770523b65630c9d547f60c540",
-                "reference": "bcb22101107f3bf770523b65630c9d547f60c540",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/128fa1b608be651999ed9789c95e6e2a31b5802b",
+                "reference": "128fa1b608be651999ed9789c95e6e2a31b5802b",
                 "shasum": ""
             },
             "require": {
@@ -5979,7 +5979,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "0.11.x-dev"
+                    "dev-0.11": "0.11.x-dev"
                 },
                 "bamarni-bin": {
                     "bin-links": false,
@@ -6015,9 +6015,9 @@
             ],
             "support": {
                 "issues": "https://github.com/bobthecow/psysh/issues",
-                "source": "https://github.com/bobthecow/psysh/tree/v0.11.21"
+                "source": "https://github.com/bobthecow/psysh/tree/v0.11.22"
             },
-            "time": "2023-09-17T21:15:54+00:00"
+            "time": "2023-10-14T21:56:36+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
