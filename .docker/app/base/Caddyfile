@@ -1,0 +1,16 @@
+:80
+
+route {
+    root * /usr/app/web
+    header -Server
+
+    php_fastcgi unix//home/app/php-fpm.sock {
+        trusted_proxies private_ranges
+    }
+
+    file_server
+}
+
+log {
+    output stdout
+}

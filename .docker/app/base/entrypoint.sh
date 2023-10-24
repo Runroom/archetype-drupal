@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env ash
 
 # Can be used on staging environments to destroy the database each time you deploy
 # the application, to ensure you start with the initial data each time
@@ -38,4 +38,4 @@ if [ "${ENABLE_CRON:-}" = true ]; then
     cron -f
 fi
 
-php-fpm${PHP_VERSION}
+exec /run.sh
