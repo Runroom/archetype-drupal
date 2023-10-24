@@ -38,5 +38,4 @@ if [ "${ENABLE_CRON:-}" = true ]; then
     cron -f
 fi
 
-
 exec /run.sh

@@ -6,8 +6,7 @@ services:
             database:
                 condition: service_healthy
         environment:
-            APP_ENV: prod
-            APP_DEBUG: 0
+            APP_ENV: "${APP_ENV:-prod}"
             RESET_DATABASE: "${RESET_DATABASE:-false}"
             MIGRATE_DATABASE: "${MIGRATE_DATABASE:-false}"
         volumes:

@@ -48,7 +48,7 @@ ENV PATH="/usr/app/vendor/bin:/usr/app/bin:${PATH}" \
 
 COPY .docker/app/base/Caddyfile /
 COPY .docker/app/base/drupal-cron.crontab /
-COPY .docker/app/base/60_extra.ini /etc/php${PHP_VERSION}/conf.d
+COPY .docker/app/base/60_extra.ini /etc/php${PHP_VERSION}/conf.d/
 COPY .docker/app/base/www.conf /etc/php${PHP_VERSION}/php-fpm.d/
 COPY .docker/app/base/entrypoint.sh /
 COPY .docker/app/base/run.sh /
