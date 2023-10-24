@@ -1,6 +1,6 @@
 FROM alpine:3.18 as app-base
 
-ARG PHP_VERSION=82
+ARG PHP_VERSION=81
 ARG UID=1000
 ARG USER=app
 
