@@ -1,0 +1,57 @@
+#!groovy
+
+pipeline {
+    agent any
+
+    environment {
+        DOCKER_REGISTRY = 'https://ghcr.io'
+        DOCKER_CREDENTIALS = 'ghcr.io'
+        DOCKER_IMAGE = 'ghcr.io/runroom/archetype-drupal'
+        DOCKER_LABEL = 'service=archetype-drupal'
+
+        DOCKER_BUILDKIT = 1
+        FOLDER_NAME = "${JOB_NAME.split('/')[0]}"
+        CLEAN_BRANCH_NAME = BRANCH_NAME.replace('/', '-')
+        SHORT_COMMIT = "${GIT_COMMIT[0..7]}"
+    }
+
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '5'))
+        disableConcurrentBuilds(abortPrevious: true)
+        disableResume()
+    }
+
+    stages {
+        stage('Build') {
+            steps {
+                script {
+                    def app = docker.build(DOCKER_IMAGE, "--label ${DOCKER_LABEL} --target app-prod --file .docker/Dockerfile .")
+
+                    docker.withRegistry(DOCKER_REGISTRY, DOCKER_CREDENTIALS) {
+                        app.push("sha-${SHORT_COMMIT}")
+
+                        if (BRANCH_NAME == 'main') {
+                            app.push('main')
+                            app.push('latest')
+                        }
+
+                        if (CHANGE_ID) {
+                            app.push("pr-${CHANGE_ID}")
+                        }
+                    }
+                }
+            }
+        }
+
+        // stage('Continuous Deployment - Production') {
+        //     when { branch 'main' }
+        //     steps {
+        //         build job: "${FOLDER_NAME}/Production Deploy", wait: false
+        //     }
+        // }
+    }
+
+    post {
+        always { cleanWs() }
+    }
+}

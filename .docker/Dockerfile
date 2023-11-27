@@ -1,8 +1,10 @@
-FROM alpine:3.18 as fpm-base
+FROM alpine:3.18 as app-base
 
 ARG PHP_VERSION=81
 ARG UID=1000
 ARG USER=app
+
+COPY --from=caddy:2.7-alpine /usr/bin/caddy /usr/bin/caddy
 
 RUN apk add --no-cache \
     php${PHP_VERSION} \
@@ -31,25 +33,29 @@ RUN apk add --no-cache \
     php${PHP_VERSION}-xmlreader \
     php${PHP_VERSION}-xmlwriter \
     php${PHP_VERSION}-zip \
+    bash \
     git \
-    fcgi \
     patch \
     rsync \
     postgresql-client \
     openssh
+
+RUN ln -snf /usr/bin/php${PHP_VERSION} /usr/bin/php
 
 RUN adduser -u $UID -D $USER
 
 ENV PATH="/usr/app/vendor/bin:/usr/app/bin:${PATH}" \
     PHP_VERSION=${PHP_VERSION}
 
+COPY .docker/app/base/Caddyfile /
 COPY .docker/app/base/drupal-cron.crontab /
-COPY .docker/app/base/healthcheck.sh /usr/local/bin/healthcheck
 COPY .docker/app/base/60_extra.ini /etc/php${PHP_VERSION}/conf.d/
 COPY .docker/app/base/www.conf /etc/php${PHP_VERSION}/php-fpm.d/
-COPY .docker/app/base/php-fpm.sh /etc/php${PHP_VERSION}/
+COPY .docker/app/base/entrypoint.sh /
+COPY .docker/app/base/run.sh /
 
-RUN chmod +x /usr/local/bin/healthcheck
+RUN chmod +x /entrypoint.sh
+RUN chmod +x /run.sh
 
 COPY --from=composer:2.6 /usr/bin/composer /usr/bin/composer
 
@@ -57,17 +63,17 @@ USER ${USER}
 
 WORKDIR /usr/app
 
-EXPOSE 9000
+EXPOSE 80
 
-ENTRYPOINT ash /etc/php${PHP_VERSION}/php-fpm.sh
+ENTRYPOINT ["/entrypoint.sh"]
 
-FROM fpm-base as fpm-dev
+FROM app-base as app-dev
 
 ENV XDEBUG_MODE=off
 
 USER root
 
-RUN apk add --no-cache php${PHP_VERSION}-pecl-pcov --repository=https://dl-cdn.alpinelinux.org/alpine/edge/testing
+RUN apk add --no-cache php${PHP_VERSION}-pecl-pcov --repository=https://dl-cdn.alpinelinux.org/alpine/edge/community
 RUN apk add --no-cache \
     php${PHP_VERSION}-pdo_sqlite \
     php${PHP_VERSION}-xdebug
@@ -76,7 +82,7 @@ COPY .docker/app/dev/61_extra.ini /etc/php${PHP_VERSION}/conf.d/
 
 USER ${USER}
 
-FROM node:18.18-slim as node
+FROM node:18.18-slim as asset-builder
 
 WORKDIR /usr/app
 
@@ -92,7 +98,7 @@ COPY assets ./assets
 RUN npm clean-install
 RUN npm run build
 
-FROM fpm-base as fpm-prod
+FROM app-base as app-prod
 
 USER root
 
@@ -113,20 +119,4 @@ RUN composer dump-autoload --apcu
 RUN composer symfony:dump-env prod
 
 # Add --link when Docker for Mac supports it
-COPY --chown=$UID --from=node /usr/app/web/themes/custom/runroom/build web/themes/custom/runroom/build
-
-FROM nginx:1.25-alpine as nginx-base
-
-ARG UID=1000
-
-RUN apk add --no-cache shadow
-
-RUN usermod --uid $UID nginx
-
-COPY .docker/nginx/nginx.conf /etc/nginx/nginx.conf
-
-FROM nginx-base as nginx-dev
-FROM nginx-base as nginx-prod
-
-# Add --link when Docker for Mac supports it
-COPY --chown=$UID --from=fpm-prod /usr/app/web /usr/app/web
+COPY --chown=$UID --from=asset-builder /usr/app/web /usr/app/web

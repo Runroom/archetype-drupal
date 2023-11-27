@@ -1,9 +1,12 @@
 #!groovy
 
-FOLDER_NAME = env.JOB_NAME.split('/')[0]
-
 pipeline {
     agent any
+
+    environment {
+        APP_ENV = 'test'
+        FOLDER_NAME = "${JOB_NAME.split('/')[0]}"
+    }
 
     options {
         buildDiscarder(logRotator(numToKeepStr: '5'))
@@ -24,19 +27,15 @@ pipeline {
                     }
 
                     steps {
-                        // Install
                         sh 'composer install --no-progress --no-interaction'
 
-                        // Lint + QA
                         sh 'composer php-cs-fixer -- --dry-run'
                         sh 'composer phpstan'
                         sh 'composer rector -- --dry-run'
                         sh 'composer normalize --dry-run'
 
-                        // Tests
                         sh 'vendor/bin/phpunit --log-junit coverage/unitreport.xml --coverage-html coverage'
 
-                        // Report
                         xunit([PHPUnit(
                             deleteOutputFiles: false,
                             failIfNotNew: false,
@@ -66,27 +65,21 @@ pipeline {
 
                     steps {
                         sh 'npm clean-install'
+
                         sh 'npm run lint'
+
                         sh 'npm run build'
                     }
                 }
             }
         }
-
-        // stage('Deploy') {
-        //     when { expression { return env.BRANCH_NAME in ['main'] } }
-        //     steps {
-        //         build job: "${FOLDER_NAME}/Production Deploy", wait: false
-        //     }
-        // }
     }
 
     post {
         always { cleanWs deleteDirs: true, patterns: [
             [pattern: '**/.cache/**', type: 'EXCLUDE'],
-            [pattern: 'node_modules', type: 'EXCLUDE']
         ] }
-        fixed { slackSend(color: 'good', message: "Fixed - ${FOLDER_NAME} - ${env.BUILD_DISPLAY_NAME} (<${env.BUILD_URL}|Open>)\n${env.BRANCH_NAME}")}
-        failure { slackSend(color: 'danger', message: "Failed - ${FOLDER_NAME} - ${env.BUILD_DISPLAY_NAME} (<${env.BUILD_URL}|Open>)\n${env.BRANCH_NAME}") }
+        fixed { slackSend(color: 'good', message: "Fixed - ${FOLDER_NAME} - ${BUILD_DISPLAY_NAME} (<${BUILD_URL}|Open>)\n${BRANCH_NAME}")}
+        failure { slackSend(color: 'danger', message: "Failed - ${FOLDER_NAME} - ${BUILD_DISPLAY_NAME} (<${BUILD_URL}|Open>)\n${BRANCH_NAME}") }
     }
 }
