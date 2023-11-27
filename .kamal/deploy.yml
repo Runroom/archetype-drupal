@@ -13,10 +13,6 @@ servers:
     web:
         healthcheck:
             cmd: wget --no-verbose --tries=1 --spider http://localhost:2019/metrics
-    worker:
-        env:
-            clear:
-                CONSUME_MESSAGES: true
 
 env:
     secret:

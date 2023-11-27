@@ -36,6 +36,7 @@ RUN apk add --no-cache \
     bash \
     git \
     patch \
+    rsync \
     postgresql-client \
     openssh
 
