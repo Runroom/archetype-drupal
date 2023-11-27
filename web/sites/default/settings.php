@@ -22,7 +22,7 @@ $databases = [
             'password' => $_SERVER['DATABASE_PASSWORD'],
             'prefix' => '',
             'host' => $_SERVER['DATABASE_HOST'],
-            'port' => '',
+            'port' => $_SERVER['DATABASE_PORT'],
             'namespace' => 'Drupal\\Core\\Database\\Driver\\' . $_SERVER['DATABASE_DRIVER'],
             'driver' => $_SERVER['DATABASE_DRIVER'],
         ],
