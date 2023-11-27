@@ -290,9 +290,6 @@
     "myclabs/deep-copy": {
         "version": "1.10.2"
     },
-    "myclabs/php-enum": {
-        "version": "1.7.7"
-    },
     "nikic/php-parser": {
         "version": "v4.10.4"
     },
