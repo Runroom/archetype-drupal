@@ -6,8 +6,7 @@
 coverage
 doc
 node_modules
-var
-vendor
-web/core
-web/modules/contrib
 web/themes/custom/runroom/build
+web/sites/default/tmp/*
+web/sites/default/files/*
+vendor
