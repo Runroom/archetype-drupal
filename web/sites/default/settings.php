@@ -111,7 +111,6 @@ $settings['trusted_host_patterns'] = [$_SERVER['TRUSTED_HOST']];
 $settings['cookies_default_domain'] = $_SERVER['COOKIES_DEFAULT_DOMAIN'];
 
 // Default Settings
-$settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
 $settings['container_yamls'][] = $app_root . '/' . $site_path . '/monolog.services.yml';
 $settings['custom_translations_directory'] = 'sites/default/custom_translations';
 $settings['file_temp_path'] = 'sites/default/tmp';
@@ -120,8 +119,6 @@ $settings['php_storage']['default']['directory'] = 'sites/default/php';
 $settings['php_storage']['twig']['directory'] = 'sites/default/php';
 $settings['skip_permissions_hardening'] = true;
 $settings['rebuild_access'] = false;
-$settings['update_free_access'] = false;
-$settings['file_scan_ignore_directories'] = ['node_modules'];
 $settings['extension_discovery_scan_tests'] = false;
 
 $config['stage_file_proxy.settings']['origin'] = false;
