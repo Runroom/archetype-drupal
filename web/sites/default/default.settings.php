@@ -1,6 +1,6 @@
 <?php
 
-// phpcs:ignoreFile
+declare(strict_types=1);
 
 /**
  * @file
@@ -68,6 +68,7 @@
  *
  * One example of the simplest connection array is shown below. To use the
  * sample settings, copy and uncomment the code below between the @code and
+ *
  * @endcode lines and paste it after the $databases declaration. You will need
  * to replace the database username and password and possibly the host and port
  * with the appropriate credentials for your database system.
@@ -86,11 +87,12 @@
  *   'prefix' => '',
  *   'collation' => 'utf8mb4_general_ci',
  * ];
+ *
  * @endcode
  */
 $databases = [];
 
-/**
+/*
  * Customizing database settings.
  *
  * Many of the values of the $databases array can be customized for your
@@ -224,7 +226,7 @@ $databases = [];
  * @endcode
  */
 
-/**
+/*
  * Location of the site configuration files.
  *
  * The $settings['config_sync_directory'] specifies the location of file system
@@ -236,9 +238,9 @@ $databases = [];
  * its location.
  */
 
-# $settings['config_sync_directory'] = '/directory/outside/webroot';
+// $settings['config_sync_directory'] = '/directory/outside/webroot';
 
-/**
+/*
  * Settings:
  *
  * $settings contains environment-specific configuration, such as the files
@@ -248,7 +250,7 @@ $databases = [];
  * @see \Drupal\Core\Site\Settings::get()
  */
 
-/**
+/*
  * Salt for one-time login links, cancel links, form tokens, etc.
  *
  * This variable will be set to a random value by the installer. All one-time
@@ -268,7 +270,7 @@ $databases = [];
  */
 $settings['hash_salt'] = '';
 
-/**
+/*
  * Deployment identifier.
  *
  * Drupal's dependency injection container will be automatically invalidated and
@@ -277,9 +279,9 @@ $settings['hash_salt'] = '';
  * allow the container to be invalidated as soon as code is deployed.
  */
 
-# $settings['deployment_identifier'] = \Drupal::VERSION;
+// $settings['deployment_identifier'] = \Drupal::VERSION;
 
-/**
+/*
  * Access control for update.php script.
  *
  * If you are updating your Drupal installation using the update.php script but
@@ -290,9 +292,9 @@ $settings['hash_salt'] = '';
  * After finishing the upgrade, be sure to open this file again and change the
  * TRUE back to a FALSE!
  */
-$settings['update_free_access'] = FALSE;
+$settings['update_free_access'] = false;
 
-/**
+/*
  * Fallback to HTTP for Update Manager and for fetching security advisories.
  *
  * If your site fails to connect to updates.drupal.org over HTTPS (either when
@@ -307,9 +309,9 @@ $settings['update_free_access'] = FALSE;
  * @see \Drupal\system\SecurityAdvisories\SecurityAdvisoriesFetcher
  */
 
-# $settings['update_fetch_with_http_fallback'] = TRUE;
+// $settings['update_fetch_with_http_fallback'] = TRUE;
 
-/**
+/*
  * External access proxy settings:
  *
  * If your site must access the Internet via a web proxy then you can enter the
@@ -326,13 +328,13 @@ $settings['update_free_access'] = FALSE;
  * bypassing the proxy, in $settings['http_client_config']['proxy']['no'].
  */
 
-# $settings['http_client_config']['proxy']['http'] = 'http://proxy_user:proxy_pass@example.com:8080';
+// $settings['http_client_config']['proxy']['http'] = 'http://proxy_user:proxy_pass@example.com:8080';
 
-# $settings['http_client_config']['proxy']['https'] = 'http://proxy_user:proxy_pass@example.com:8080';
+// $settings['http_client_config']['proxy']['https'] = 'http://proxy_user:proxy_pass@example.com:8080';
 
-# $settings['http_client_config']['proxy']['no'] = ['127.0.0.1', 'localhost'];
+// $settings['http_client_config']['proxy']['no'] = ['127.0.0.1', 'localhost'];
 
-/**
+/*
  * Reverse Proxy Configuration:
  *
  * Reverse proxy servers are often used to enhance the performance
@@ -363,9 +365,9 @@ $settings['update_free_access'] = FALSE;
  * address spoofing unless more advanced precautions are taken.
  */
 
-# $settings['reverse_proxy'] = TRUE;
+// $settings['reverse_proxy'] = TRUE;
 
-/**
+/*
  * Reverse proxy addresses.
  *
  * Specify every reverse proxy IP address in your environment, as an array of
@@ -373,9 +375,9 @@ $settings['update_free_access'] = FALSE;
  * $settings['reverse_proxy'] is TRUE.
  */
 
-# $settings['reverse_proxy_addresses'] = ['a.b.c.d', 'e.f.g.h/24', ...];
+// $settings['reverse_proxy_addresses'] = ['a.b.c.d', 'e.f.g.h/24', ...];
 
-/**
+/*
  * Reverse proxy trusted headers.
  *
  * Sets which headers to trust from your reverse proxy.
@@ -410,9 +412,9 @@ $settings['update_free_access'] = FALSE;
  * @see \Symfony\Component\HttpFoundation\Request::setTrustedProxies
  */
 
-# $settings['reverse_proxy_trusted_headers'] = \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_FOR | \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_HOST | \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_PORT | \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_PROTO | \Symfony\Component\HttpFoundation\Request::HEADER_FORWARDED;
+// $settings['reverse_proxy_trusted_headers'] = \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_FOR | \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_HOST | \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_PORT | \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_PROTO | \Symfony\Component\HttpFoundation\Request::HEADER_FORWARDED;
 
-/**
+/*
  * Page caching:
  *
  * By default, Drupal sends a "Vary: Cookie" HTTP header for anonymous page
@@ -429,9 +431,9 @@ $settings['update_free_access'] = FALSE;
  * getting cached pages from the proxy.
  */
 
-# $settings['omit_vary_cookie'] = TRUE;
+// $settings['omit_vary_cookie'] = TRUE;
 
-/**
+/*
  * Cache TTL for client error (4xx) responses.
  *
  * Items cached per-URL tend to result in a large number of cache items, and
@@ -442,9 +444,9 @@ $settings['update_free_access'] = FALSE;
  * page_cache module.
  */
 
-# $settings['cache_ttl_4xx'] = 3600;
+// $settings['cache_ttl_4xx'] = 3600;
 
-/**
+/*
  * Expiration of cached forms.
  *
  * Drupal's Form API stores details of forms in a cache and these entries are
@@ -453,9 +455,9 @@ $settings['update_free_access'] = FALSE;
  * @see \Drupal\Core\Form\FormCache::setCache()
  */
 
-# $settings['form_cache_expiration'] = 21600;
+// $settings['form_cache_expiration'] = 21600;
 
-/**
+/*
  * Class Loader.
  *
  * If the APCu extension is detected, the classloader will be optimized to use
@@ -464,9 +466,9 @@ $settings['update_free_access'] = FALSE;
  * @see https://getcomposer.org/doc/articles/autoloader-optimization.md
  */
 
-# $settings['class_loader_auto_detect'] = FALSE;
+// $settings['class_loader_auto_detect'] = FALSE;
 
-/**
+/*
  * Authorized file system operations:
  *
  * The Update Manager module included with Drupal provides a mechanism for
@@ -489,19 +491,19 @@ $settings['update_free_access'] = FALSE;
  * Remove the leading hash signs to disable.
  */
 
-# $settings['allow_authorize_operations'] = FALSE;
+// $settings['allow_authorize_operations'] = FALSE;
 
-/**
+/*
  * Default mode for directories and files written by Drupal.
  *
  * Value should be in PHP Octal Notation, with leading zero.
  */
 
-# $settings['file_chmod_directory'] = 0775;
+// $settings['file_chmod_directory'] = 0775;
 
-# $settings['file_chmod_file'] = 0664;
+// $settings['file_chmod_file'] = 0664;
 
-/**
+/*
  * Optimized assets path:
  *
  * A local file system path where optimized assets will be stored. This directory
@@ -509,9 +511,9 @@ $settings['update_free_access'] = FALSE;
  * the Drupal installation directory and be accessible over the web.
  */
 
-# $settings['file_assets_path'] = 'sites/default/files';
+// $settings['file_assets_path'] = 'sites/default/files';
 
-/**
+/*
  * Public file base URL:
  *
  * An alternative base URL to be used for serving public files. This must
@@ -523,9 +525,9 @@ $settings['update_free_access'] = FALSE;
  * pointing to the same server. Do not include a trailing slash.
  */
 
-# $settings['file_public_base_url'] = 'http://downloads.example.com/files';
+// $settings['file_public_base_url'] = 'http://downloads.example.com/files';
 
-/**
+/*
  * Public file path:
  *
  * A local file system path where public files will be stored. This directory
@@ -533,9 +535,9 @@ $settings['update_free_access'] = FALSE;
  * the Drupal installation directory and be accessible over the web.
  */
 
-# $settings['file_public_path'] = 'sites/default/files';
+// $settings['file_public_path'] = 'sites/default/files';
 
-/**
+/*
  * Additional public file schemes:
  *
  * Public schemes are URI schemes that allow download access to all users for
@@ -557,9 +559,9 @@ $settings['update_free_access'] = FALSE;
  * access to all files within that scheme.
  */
 
-# $settings['file_additional_public_schemes'] = ['example'];
+// $settings['file_additional_public_schemes'] = ['example'];
 
-/**
+/*
  * File schemes whose paths should not be normalized:
  *
  * Normally, Drupal normalizes '/./' and '/../' segments in file URIs in order
@@ -577,9 +579,9 @@ $settings['update_free_access'] = FALSE;
  * directory tree.
  */
 
-# $settings['file_sa_core_2023_005_schemes'] = ['porcelain'];
+// $settings['file_sa_core_2023_005_schemes'] = ['porcelain'];
 
-/**
+/*
  * Configuration for phpinfo() admin status report.
  *
  * Drupal's admin UI includes a report at admin/reports/status/php which shows
@@ -595,9 +597,9 @@ $settings['update_free_access'] = FALSE;
  * @see https://www.php.net/manual/function.phpinfo.php
  */
 
-# $settings['sa_core_2023_004_phpinfo_flags'] = ~ (INFO_VARIABLES | INFO_ENVIRONMENT);
+// $settings['sa_core_2023_004_phpinfo_flags'] = ~ (INFO_VARIABLES | INFO_ENVIRONMENT);
 
-/**
+/*
  * Private file path:
  *
  * A local file system path where private files will be stored. This directory
@@ -611,9 +613,9 @@ $settings['update_free_access'] = FALSE;
  * about securing private files.
  */
 
-# $settings['file_private_path'] = '';
+// $settings['file_private_path'] = '';
 
-/**
+/*
  * Temporary file path:
  *
  * A local file system path where temporary files will be stored. This directory
@@ -625,18 +627,18 @@ $settings['update_free_access'] = FALSE;
  * @see \Drupal\Component\FileSystem\FileSystem::getOsTemporaryDirectory()
  */
 
-# $settings['file_temp_path'] = '/tmp';
+// $settings['file_temp_path'] = '/tmp';
 
-/**
+/*
  * Session write interval:
  *
  * Set the minimum interval between each session write to database.
  * For performance reasons it defaults to 180.
  */
 
-# $settings['session_write_interval'] = 180;
+// $settings['session_write_interval'] = 180;
 
-/**
+/*
  * String overrides:
  *
  * To override specific strings on your site with or without enabling the Locale
@@ -649,15 +651,15 @@ $settings['update_free_access'] = FALSE;
  * any added language. (eg locale_custom_strings_de for german).
  */
 
-# $settings['locale_custom_strings_en'][''] = [
+// $settings['locale_custom_strings_en'][''] = [
 
-#   'Home' => 'Front page',
+//   'Home' => 'Front page',
 
-#   '@count min' => '@count minutes',
+//   '@count min' => '@count minutes',
 
-# ];
+// ];
 
-/**
+/*
  * A custom theme for the offline page:
  *
  * This applies when the site is explicitly set to maintenance mode through the
@@ -668,9 +670,9 @@ $settings['update_free_access'] = FALSE;
  * Note: This setting does not apply to installation and update pages.
  */
 
-# $settings['maintenance_theme'] = 'claro';
+// $settings['maintenance_theme'] = 'claro';
 
-/**
+/*
  * PHP settings:
  *
  * To see what PHP settings are possible, including whether they can be set at
@@ -682,7 +684,7 @@ $settings['update_free_access'] = FALSE;
  * issues.
  */
 
-/**
+/*
  * If you encounter a situation where users post a large amount of text, and
  * the result is stripped out upon viewing but can still be edited, Drupal's
  * output filter may not have sufficient memory to process it.  If you
@@ -691,11 +693,11 @@ $settings['update_free_access'] = FALSE;
  * http://php.net/manual/pcre.configuration.php.
  */
 
-# ini_set('pcre.backtrack_limit', 200000);
+// ini_set('pcre.backtrack_limit', 200000);
 
-# ini_set('pcre.recursion_limit', 200000);
+// ini_set('pcre.recursion_limit', 200000);
 
-/**
+/*
  * Configuration overrides.
  *
  * To globally override specific configuration values for this site,
@@ -718,16 +720,16 @@ $settings['update_free_access'] = FALSE;
  * change events.
  */
 
-# $config['system.site']['name'] = 'My Drupal site';
+// $config['system.site']['name'] = 'My Drupal site';
 
-# $config['user.settings']['anonymous'] = 'Visitor';
+// $config['user.settings']['anonymous'] = 'Visitor';
 
-/**
+/*
  * Load services definition file.
  */
 $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
 
-/**
+/*
  * Override the default service container class.
  *
  * This is useful for example to trace the service container for performance
@@ -735,9 +737,9 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
  * to test a service container that throws an exception.
  */
 
-# $settings['container_base_class'] = '\Drupal\Core\DependencyInjection\Container';
+// $settings['container_base_class'] = '\Drupal\Core\DependencyInjection\Container';
 
-/**
+/*
  * Override the default yaml parser class.
  *
  * Provide a fully qualified class name here if you would like to provide an
@@ -745,9 +747,9 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
  * \Drupal\Component\Serialization\SerializationInterface interface.
  */
 
-# $settings['yaml_parser_class'] = NULL;
+// $settings['yaml_parser_class'] = NULL;
 
-/**
+/*
  * Trusted host configuration.
  *
  * Drupal core can use the Symfony trusted host mechanism to prevent HTTP Host
@@ -786,9 +788,9 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
  * @see https://www.drupal.org/docs/installing-drupal/trusted-host-settings
  */
 
-# $settings['trusted_host_patterns'] = [];
+// $settings['trusted_host_patterns'] = [];
 
-/**
+/*
  * The default list of directories that will be ignored by Drupal's file API.
  *
  * By default ignore node_modules and bower_components folders to avoid issues
@@ -803,7 +805,7 @@ $settings['file_scan_ignore_directories'] = [
     'bower_components',
 ];
 
-/**
+/*
  * The default number of entities to update in a batch process.
  *
  * This is used by update and post-update functions that need to go through and
@@ -813,16 +815,16 @@ $settings['file_scan_ignore_directories'] = [
  */
 $settings['entity_update_batch_size'] = 50;
 
-/**
+/*
  * Entity update backup.
  *
  * This is used to inform the entity storage handler that the backup tables as
  * well as the original entity type and field storage definitions should be
  * retained after a successful entity update process.
  */
-$settings['entity_update_backup'] = TRUE;
+$settings['entity_update_backup'] = true;
 
-/**
+/*
  * Node migration type.
  *
  * This is used to force the migration system to use the classic node migrations
@@ -833,9 +835,9 @@ $settings['entity_update_backup'] = TRUE;
  * complete node migrations. Set this to TRUE to force the use of the classic
  * node migrations.
  */
-$settings['migrate_node_migrate_type_classic'] = FALSE;
+$settings['migrate_node_migrate_type_classic'] = false;
 
-/**
+/*
  * The default settings for migration sources.
  *
  * These settings are used as the default settings on the Credential form at
@@ -874,15 +876,15 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
  * @endcode
  */
 
-# $settings['migrate_source_connection'] = '';
+// $settings['migrate_source_connection'] = '';
 
-# $settings['migrate_source_version'] = '';
+// $settings['migrate_source_version'] = '';
 
-# $settings['migrate_file_public_path'] = '';
+// $settings['migrate_file_public_path'] = '';
 
-# $settings['migrate_file_private_path'] = '';
+// $settings['migrate_file_private_path'] = '';
 
-/**
+/*
  * Load local development override configuration, if available.
  *
  * Create a settings.local.php file to override variables on secondary (staging,
@@ -896,6 +898,6 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
  * Keep this code block at the end of this file to take full effect.
  */
 
-# if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
-#     include $app_root . '/' . $site_path . '/settings.local.php';
-# }
+// if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+//     include $app_root . '/' . $site_path . '/settings.local.php';
+// }
