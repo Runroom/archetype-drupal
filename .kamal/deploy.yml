@@ -16,16 +16,28 @@ servers:
 
 env:
     secret:
+        - APP_ENV
         - APP_SECRET
-        - DATABASE_URL
-        - MESSENGER_TRANSPORT_DSN
-        - MESSENGER_TRANSPORT_FAILED_DSN
-        - MAILER_DSN
-        - MAILER_FROM
-        - MAILER_BCC
+        - DATABASE_NAME
+        - DATABASE_USER
+        - DATABASE_PASSWORD
+        - DATABASE_HOST
+        - DATABASE_DRIVER
         - GTM_ID
         - COOKIES_DEFAULT_DOMAIN
-        - TRUSTED_PROXIES
+        - TRUSTED_HOST
+        - REVERSE_PROXY
+        - FILES_BASE_URL
+        - SMTP_OVERRIDE
+        - SMTP_HOST
+        - SMTP_PORT
+        - SMTP_ENCRYPTION
+        - SMTP_USER
+        - SMTP_PASSWORD
+        - SYSTEM_EMAIL
+        - SYSTEM_EMAIL_NOTIFICATION
+        - ENABLE_REDIS
+        - REDIS_HOST
 
 traefik:
     args:
@@ -42,7 +54,7 @@ traefik:
 accessories:
     database:
         image: postgres:14.9-alpine
-        port: 5432
+        port: 5433:5432
         env:
             clear:
                 PGDATA: /var/lib/postgresql/data/pgdata

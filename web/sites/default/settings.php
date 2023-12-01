@@ -22,14 +22,14 @@ $databases = [
             'password' => $_SERVER['DATABASE_PASSWORD'],
             'prefix' => '',
             'host' => $_SERVER['DATABASE_HOST'],
-            'port' => $_SERVER['DATABASE_PORT'],
+            'port' => $_SERVER['DATABASE_PORT'] ?? '',
             'namespace' => 'Drupal\\Core\\Database\\Driver\\' . $_SERVER['DATABASE_DRIVER'],
             'driver' => $_SERVER['DATABASE_DRIVER'],
         ],
     ],
 ];
 
-if (null !== ($_SERVER['FILES_BASE_URL'] ?? null)) {
+if ('' !== ($_SERVER['FILES_BASE_URL'] ?? '')) {
     $settings['file_public_base_url'] = $_SERVER['FILES_BASE_URL'];
 }
 
