@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2275d560a4c16a626909f309b3405671",
+    "content-hash": "1ed1a26ac691ced2ab88e8c9bc964c90",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -10447,20 +10447,20 @@
         },
         {
             "name": "palantirnet/drupal-rector",
-            "version": "0.15.1",
+            "version": "0.19.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/palantirnet/drupal-rector.git",
-                "reference": "85382a67a07b928f5a963d94fbca11d7be33d6ca"
+                "reference": "4a2e739189b9b5605268a842485b8b6ff933c39c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/palantirnet/drupal-rector/zipball/85382a67a07b928f5a963d94fbca11d7be33d6ca",
-                "reference": "85382a67a07b928f5a963d94fbca11d7be33d6ca",
+                "url": "https://api.github.com/repos/palantirnet/drupal-rector/zipball/4a2e739189b9b5605268a842485b8b6ff933c39c",
+                "reference": "4a2e739189b9b5605268a842485b8b6ff933c39c",
                 "shasum": ""
             },
             "require": {
-                "rector/rector": "~0.15.2",
+                "rector/rector": "~0.19.0",
                 "webflo/drupal-finder": "^1.2"
             },
             "replace": {
@@ -10469,13 +10469,14 @@
             },
             "require-dev": {
                 "cweagans/composer-patches": "^1.7.2",
+                "friendsofphp/php-cs-fixer": "^3.38",
                 "php": "^8.1",
                 "phpstan/extension-installer": "^1.1",
                 "phpstan/phpstan": "^1.0",
                 "phpstan/phpstan-deprecation-rules": "^1.0",
                 "phpunit/phpunit": "^10.0",
-                "rector/rector-src": "dev-main",
                 "symfony/yaml": "^5 || ^6",
+                "symplify/rule-doc-generator": "^12.0",
                 "symplify/vendor-patches": "^11.0"
             },
             "type": "library",
@@ -10518,9 +10519,9 @@
                 "rector"
             ],
             "support": {
-                "source": "https://github.com/palantirnet/drupal-rector/tree/0.15.1"
+                "source": "https://github.com/palantirnet/drupal-rector/tree/0.19.2"
             },
-            "time": "2023-03-23T20:57:43+00:00"
+            "time": "2024-01-17T13:56:53+00:00"
         },
         {
             "name": "phar-io/manifest",
@@ -11552,21 +11553,21 @@
         },
         {
             "name": "rector/rector",
-            "version": "0.15.25",
+            "version": "0.19.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rectorphp/rector.git",
-                "reference": "015935c7ed9e48a4f5895ba974f337e20a263841"
+                "reference": "de3b3bb159abd704b144aa86fb244f7f1f4ac947"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rectorphp/rector/zipball/015935c7ed9e48a4f5895ba974f337e20a263841",
-                "reference": "015935c7ed9e48a4f5895ba974f337e20a263841",
+                "url": "https://api.github.com/repos/rectorphp/rector/zipball/de3b3bb159abd704b144aa86fb244f7f1f4ac947",
+                "reference": "de3b3bb159abd704b144aa86fb244f7f1f4ac947",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.2|^8.0",
-                "phpstan/phpstan": "^1.10.14"
+                "phpstan/phpstan": "^1.10.56"
             },
             "conflict": {
                 "rector/rector-doctrine": "*",
@@ -11578,11 +11579,6 @@
                 "bin/rector"
             ],
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-main": "0.15-dev"
-                }
-            },
             "autoload": {
                 "files": [
                     "bootstrap.php"
@@ -11601,7 +11597,7 @@
             ],
             "support": {
                 "issues": "https://github.com/rectorphp/rector/issues",
-                "source": "https://github.com/rectorphp/rector/tree/0.15.25"
+                "source": "https://github.com/rectorphp/rector/tree/0.19.8"
             },
             "funding": [
                 {
@@ -11609,7 +11605,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-04-20T16:07:39+00:00"
+            "time": "2024-02-05T10:59:13+00:00"
         },
         {
             "name": "sebastian/cli-parser",

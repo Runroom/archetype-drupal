@@ -2,43 +2,34 @@
 
 declare(strict_types=1);
 
+use DrupalFinder\DrupalFinder;
+use DrupalRector\Set\Drupal10SetList;
 use DrupalRector\Set\Drupal8SetList;
 use DrupalRector\Set\Drupal9SetList;
 use Rector\Config\RectorConfig;
-use Rector\Php71\Rector\FuncCall\CountOnNullRector;
 use Rector\Set\ValueObject\LevelSetList;
 
 return static function (RectorConfig $rectorConfig): void {
-    $rectorConfig->paths([
-        __DIR__ . '/drush',
-        __DIR__ . '/web/modules/custom',
-        __DIR__ . '/web/themes/custom',
-        __DIR__ . '/tests',
-    ]);
+    $drupalFinder = new DrupalFinder();
+    $drupalFinder->locateRoot(__DIR__);
+    $drupalRoot = $drupalFinder->getDrupalRoot();
     $rectorConfig->autoloadPaths([
-        __DIR__ . '/web/core',
-        __DIR__ . '/web/modules',
-        __DIR__ . '/web/themes',
+        $drupalRoot . '/core',
+        $drupalRoot . '/modules',
+        $drupalRoot . '/profiles',
+        $drupalRoot . '/themes'
     ]);
-    $rectorConfig->fileExtensions([
-        'php',
-        'module',
-        'theme',
-        'install',
-    ]);
+
+    $rectorConfig->skip(['*/upgrade_status/tests/modules/*']);
+    $rectorConfig->fileExtensions(['php', 'module', 'theme', 'install', 'profile', 'inc', 'engine']);
 
     $rectorConfig->importNames();
     $rectorConfig->importShortClasses(false);
-    $rectorConfig->skip([
-        CountOnNullRector::class,
-    ]);
 
     $rectorConfig->sets([
-        LevelSetList::UP_TO_PHP_81,
+        LevelSetList::UP_TO_PHP_82,
         Drupal8SetList::DRUPAL_8,
         Drupal9SetList::DRUPAL_9,
+        Drupal10SetList::DRUPAL_10,
     ]);
-
-    $parameters = $rectorConfig->parameters();
-    $parameters->set('drupal_rector_notices_as_comments', true);
 };
