@@ -10,6 +10,7 @@ use Drupal\redis\Cache\RedisCacheTagsChecksum;
 use Drupal\redis\ClientFactory;
 use Symfony\Component\Dotenv\Dotenv;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Mailer\Transport\Dsn;
 
 (new Dotenv())->bootEnv(__DIR__ . '/../../../.env');
 
@@ -39,23 +40,6 @@ if ((bool) ($_SERVER['REVERSE_PROXY'] ?? false)) {
 
     // In case you know the reverse proxy addresses, it is better to use them instead of the general remote_addr
     $settings['reverse_proxy_addresses'] = [$_SERVER['REMOTE_ADDR']];
-}
-
-if ((bool) ($_SERVER['SMTP_OVERRIDE'] ?? false)) {
-    $config['system.site']['mail'] = $_SERVER['SYSTEM_EMAIL'];
-    $config['system.site']['mail_notification'] = $_SERVER['SYSTEM_EMAIL_NOTIFICATION'];
-
-    $config['swiftmailer.transport'] = [
-        'smtp_host' => $_SERVER['SMTP_HOST'],
-        'smtp_port' => $_SERVER['SMTP_PORT'],
-        'smtp_encryption' => $_SERVER['SMTP_ENCRYPTION'],
-        'smtp_credentials' => [
-            'swiftmailer' => [
-                'username' => $_SERVER['SMTP_USER'],
-                'password' => $_SERVER['SMTP_PASSWORD'],
-            ],
-        ],
-    ];
 }
 
 if ((bool) ($_SERVER['ENABLE_REDIS'] ?? false)) {
@@ -109,6 +93,18 @@ $settings['hash_salt'] = $_SERVER['APP_SECRET'];
 $settings['gtm_id'] = $_SERVER['GTM_ID'];
 $settings['trusted_host_patterns'] = [$_SERVER['TRUSTED_HOST']];
 $settings['cookies_default_domain'] = $_SERVER['COOKIES_DEFAULT_DOMAIN'];
+
+$mailerDsn = Dsn::fromString($_SERVER['MAILER_DSN']);
+
+$config['system.mail']['mailer_dsn'] = [
+    'scheme' => $mailerDsn->getScheme(),
+    'host' => $mailerDsn->getHost(),
+    'port' => $mailerDsn->getPort(),
+    'user' => $mailerDsn->getUser(),
+    'password' => $mailerDsn->getPassword(),
+];
+$config['system.site']['mail'] = $_SERVER['SYSTEM_EMAIL'];
+$config['system.site']['mail_notification'] = $_SERVER['SYSTEM_EMAIL_NOTIFICATION'];
 
 // Default Settings
 $settings['container_yamls'][] = $app_root . '/' . $site_path . '/monolog.services.yml';
