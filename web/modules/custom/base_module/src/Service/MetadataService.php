@@ -44,7 +44,7 @@ final class MetadataService
         array &$page,
         string $title,
         string $description,
-        string $imageUrl = null
+        ?string $imageUrl = null
     ): void {
         $request = $this->requestStack->getCurrentRequest();
 

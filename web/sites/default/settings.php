@@ -82,7 +82,7 @@ if ((bool) ($_SERVER['ENABLE_REDIS'] ?? false)) {
     ];
 }
 
-$settings['deployment_identifier'] = \Drupal::VERSION;
+$settings['deployment_identifier'] = Drupal::VERSION;
 
 $diFile = $app_root . '/../.deployment-identifier';
 if (file_exists($diFile) && false !== include $diFile) {

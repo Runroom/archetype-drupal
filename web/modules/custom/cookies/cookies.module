@@ -35,18 +35,18 @@ function cookies_theme(): array
 
 function cookies_page_attachments_alter(array &$page): void
 {
-    if ('cookies.page' !== \Drupal::routeMatch()->getRouteName()) {
+    if ('cookies.page' !== Drupal::routeMatch()->getRouteName()) {
         return;
     }
 
-    $repository = \Drupal::service('cookies.repository.cookies_entity');
+    $repository = Drupal::service('cookies.repository.cookies_entity');
     $cookies = $repository->getCookiesPage();
 
     if (null === $cookies) {
         return;
     }
 
-    $service = \Drupal::service('base_module.service.metadata');
+    $service = Drupal::service('base_module.service.metadata');
     $service->attachMetadata(
         $page,
         (string) ($cookies->label() ?? ''),
@@ -64,7 +64,7 @@ function cookies_page_attachments_alter(array &$page): void
 
 function cookies_preprocess_html(array &$variables): void
 {
-    $cookiesService = \Drupal::service('cookies.service.cookies');
+    $cookiesService = Drupal::service('cookies.service.cookies');
     $variables['performanceCookies'] = $cookiesService->getCookiesByType('performance_cookies');
     $variables['targetingCookies'] = $cookiesService->getCookiesByType('targeting_cookies');
     $variables['cookiesDefaultDomain'] = Settings::get('cookies_default_domain');
