@@ -56,7 +56,6 @@ module:
   redirect: 0
   redis: 0
   shortcut: 0
-  swiftmailer: 0
   system: 0
   taxonomy: 0
   telephone: 0
