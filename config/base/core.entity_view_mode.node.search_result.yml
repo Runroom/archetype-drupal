@@ -5,6 +5,7 @@ dependencies:
   module:
     - node
 id: node.search_result
-label: 'Search result highlighting input'
+label: 'Destacar la entrada de los resultados de búsqueda'
+description: ''
 targetEntityType: node
 cache: true

@@ -5,6 +5,7 @@ dependencies:
   module:
     - user
 id: user.register
-label: Register
+label: Registro
+description: ''
 targetEntityType: user
 cache: true

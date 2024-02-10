@@ -5,6 +5,7 @@ dependencies:
   module:
     - node
 id: node.full
-label: 'Full content'
+label: 'Contenido completo'
+description: ''
 targetEntityType: node
 cache: true

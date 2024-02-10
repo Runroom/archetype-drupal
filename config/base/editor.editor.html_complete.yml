@@ -28,8 +28,10 @@ settings:
         - heading3
         - heading4
     ckeditor5_list:
-      reversed: true
-      startIndex: true
+      properties:
+        reversed: true
+        startIndex: true
+      multiBlock: true
     editor_advanced_link_link:
       enabled_attributes:
         - aria-label
