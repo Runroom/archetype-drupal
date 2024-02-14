@@ -12,6 +12,5 @@ tags:
   og_url: '[node:url]'
   og_description: '[node:summary]'
   og_title: '[node:title] | [site:name]'
-  twitter_cards_page_url: '[node:url]'
   twitter_cards_description: '[node:summary]'
   twitter_cards_title: '[node:title] | [site:name]'

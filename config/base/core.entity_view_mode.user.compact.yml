@@ -5,6 +5,7 @@ dependencies:
   module:
     - user
 id: user.compact
-label: Compact
+label: Compacto
+description: ''
 targetEntityType: user
 cache: true
