@@ -3,10 +3,5 @@ _core:
 langcode: es
 theme: runroom
 defaults:
-  sender: swiftmailer
-  formatter: swiftmailer
-modules:
-  swiftmailer:
-    none:
-      sender: swiftmailer
-      formatter: swiftmailer
+  sender: symfony_mailer
+  formatter: symfony_mailer

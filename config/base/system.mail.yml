@@ -1,3 +1,10 @@
 langcode: es
 interface:
-  default: php_mail
+  default: symfony_mailer
+mailer_dsn:
+  scheme: smtp
+  host: localhost
+  user: null
+  password: null
+  port: 1025
+  options: {  }

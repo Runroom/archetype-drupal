@@ -5,6 +5,7 @@ dependencies:
   module:
     - node
 id: node.teaser
-label: Teaser
+label: Resumen
+description: ''
 targetEntityType: node
 cache: true

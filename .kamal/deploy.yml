@@ -28,12 +28,7 @@ env:
         - TRUSTED_HOST
         - REVERSE_PROXY
         - FILES_BASE_URL
-        - SMTP_OVERRIDE
-        - SMTP_HOST
-        - SMTP_PORT
-        - SMTP_ENCRYPTION
-        - SMTP_USER
-        - SMTP_PASSWORD
+        - MAILER_DSN
         - SYSTEM_EMAIL
         - SYSTEM_EMAIL_NOTIFICATION
         - ENABLE_REDIS

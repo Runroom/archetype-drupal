@@ -170,9 +170,6 @@
     "drupal/redis": {
         "version": "1.5.0"
     },
-    "drupal/swiftmailer": {
-        "version": "2.0.0"
-    },
     "drupal/token": {
         "version": "1.9.0"
     },
@@ -241,9 +238,6 @@
     },
     "guzzlehttp/psr7": {
         "version": "1.7.0"
-    },
-    "html2text/html2text": {
-        "version": "4.3.1"
     },
     "justinrainbow/json-schema": {
         "version": "5.2.10"
@@ -448,9 +442,6 @@
     "stack/builder": {
         "version": "v1.0.6"
     },
-    "swiftmailer/swiftmailer": {
-        "version": "v6.2.7"
-    },
     "symfony-cmf/routing": {
         "version": "2.3.3"
     },
@@ -517,6 +508,18 @@
     },
     "symfony/http-kernel": {
         "version": "v4.4.16"
+    },
+    "symfony/mailer": {
+        "version": "6.4",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "4.3",
+            "ref": "df66ee1f226c46f01e85c29c2f7acce0596ba35a"
+        },
+        "files": [
+            "config/packages/mailer.yaml"
+        ]
     },
     "symfony/mime": {
         "version": "v5.1.8"
@@ -614,9 +617,6 @@
     },
     "theseer/tokenizer": {
         "version": "1.2.0"
-    },
-    "tijsverkoyen/css-to-inline-styles": {
-        "version": "2.2.3"
     },
     "twig/twig": {
         "version": "v2.14.1"

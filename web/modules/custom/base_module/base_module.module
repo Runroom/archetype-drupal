@@ -15,7 +15,7 @@ function base_module_theme(): array
 
 function base_module_language_switch_links_alter(array &$links): void
 {
-    $node = \Drupal::routeMatch()->getParameter('node');
+    $node = Drupal::routeMatch()->getParameter('node');
 
     if (null !== $node) {
         foreach ($links as $langCode => $link) {

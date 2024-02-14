@@ -36,12 +36,11 @@ $config->setRules([
     'phpdoc_align' => ['align' => 'left'],
     'phpdoc_order' => true,
     'phpdoc_to_comment' => ['ignored_tags' => ['psalm-suppress', 'phpstan-ignore-next-line', 'todo']],
-    'compact_nullable_typehint' => true,
+    'compact_nullable_type_declaration' => true,
     'void_return' => false,
     'strict_comparison' => true,
     'strict_param' => true,
     'php_unit_strict' => true,
-    'php_unit_test_annotation' => ['style' => 'annotation'],
     'php_unit_test_case_static_method_calls' => true,
 ])
 ->setRiskyAllowed(true)

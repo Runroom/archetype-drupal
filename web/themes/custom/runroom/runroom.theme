@@ -12,7 +12,7 @@ function runroom_preprocess(array &$variables): void
 
 function runroom_page_attachments_alter(array &$attachments): void
 {
-    $service = \Drupal::service('base_module.service.metadata');
+    $service = Drupal::service('base_module.service.metadata');
     $service->truncateMetadata($attachments);
 }
 
@@ -28,7 +28,7 @@ function runroom_theme_suggestions_page_alter(array &$suggestions): void
 
 function suggestTemplateByNodeType(array &$suggestions, string $templateType): void
 {
-    $node = \Drupal::routeMatch()->getParameter('node');
+    $node = Drupal::routeMatch()->getParameter('node');
 
     if (null !== $node) {
         $suggestions[] = $templateType . '__' . $node->getType();
