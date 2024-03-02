@@ -50,7 +50,7 @@
         "drupal/xmlsitemap": "1.5.0",
         "drush/drush": "12.4.3",
         "symfony/dotenv": "7.0.4",
-        "symfony/flex": "2.4.4"
+        "symfony/flex": "2.4.5"
     },
     "require-dev": {
         "behat/mink": "1.11.0",
