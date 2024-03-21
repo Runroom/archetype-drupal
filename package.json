@@ -45,7 +45,7 @@
     "file-loader": "6.2.0",
     "fork-ts-checker-webpack-plugin": "9.0.2",
     "npm-run-all2": "6.1.2",
-    "postcss": "8.4.37",
+    "postcss": "8.4.38",
     "postcss-loader": "7.3.4",
     "postcss-sort-media-queries": "5.2.0",
     "prettier": "2.8.8",
