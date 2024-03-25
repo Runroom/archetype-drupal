@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bd20acfd8066990e9bd80ea78a671a3d",
+    "content-hash": "21071f329492b5d88ceb25484a834fa2",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -9342,17 +9342,17 @@
         },
         {
             "name": "drupal/devel",
-            "version": "5.2.0",
+            "version": "5.2.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/devel.git",
-                "reference": "5.2.0"
+                "reference": "5.2.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/devel-5.2.0.zip",
-                "reference": "5.2.0",
-                "shasum": "9b7baa45a3caea3908643ef22882205ec2ed0da1"
+                "url": "https://ftp.drupal.org/files/projects/devel-5.2.1.zip",
+                "reference": "5.2.1",
+                "shasum": "793861751e01092fe8bc7c0cd47589ebea2bb8df"
             },
             "require": {
                 "doctrine/common": "^2.7 || ^3.4",
@@ -9361,6 +9361,7 @@
                 "symfony/var-dumper": "^4 || ^5 || ^6"
             },
             "conflict": {
+                "drush/drush": "<12.5.1",
                 "kint-php/kint": "<3"
             },
             "require-dev": {
@@ -9372,8 +9373,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "5.2.0",
-                    "datestamp": "1711280160",
+                    "version": "5.2.1",
+                    "datestamp": "1711328410",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
