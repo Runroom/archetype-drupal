@@ -66,7 +66,7 @@
         "phpspec/prophecy-phpunit": "2.2.0",
         "phpstan/phpstan": "1.10.66",
         "phpstan/phpstan-strict-rules": "1.5.3",
-        "phpunit/phpunit": "9.6.18",
+        "phpunit/phpunit": "9.6.19",
         "rector/rector": "0.19.8",
         "symfony/phpunit-bridge": "7.0.6"
     },
