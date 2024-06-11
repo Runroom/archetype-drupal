@@ -62,7 +62,7 @@
         "kint-php/kint": "5.1.1",
         "kint-php/kint-twig": "5.0",
         "mglaman/phpstan-drupal": "1.2.11",
-        "palantirnet/drupal-rector": "0.19.2",
+        "palantirnet/drupal-rector": "0.20.3",
         "phpspec/prophecy-phpunit": "2.2.0",
         "phpstan/phpstan": "1.11.4",
         "phpstan/phpstan-strict-rules": "1.6.0",
