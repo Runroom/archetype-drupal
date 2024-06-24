@@ -13,7 +13,7 @@
     "homepage": "https://github.com/Runroom/archetype-drupal",
     "require": {
         "php": "^8.2",
-        "composer/installers": "2.2.0",
+        "composer/installers": "2.3.0",
         "cweagans/composer-patches": "1.7.3",
         "drupal/allowed_formats": "3.0.0",
         "drupal/classy": "1.0.2",
