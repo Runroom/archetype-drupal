@@ -50,7 +50,7 @@
     "postcss-sort-media-queries": "5.2.0",
     "prettier": "2.8.8",
     "sass-embedded": "1.77.2",
-    "sass-loader": "14.2.1",
+    "sass-loader": "15.0.0",
     "stylelint": "14.16.1",
     "stylelint-config-prettier": "9.0.5",
     "stylelint-prettier": "2.0.0",
