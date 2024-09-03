@@ -42,7 +42,7 @@
         "drupal/r4032login": "2.2.1",
         "drupal/redirect": "1.9.0",
         "drupal/redis": "1.7.0",
-        "drupal/stable": "2.0.0",
+        "drupal/stable": "2.0.1",
         "drupal/twig_field_value": "2.0.2",
         "drupal/twig_tweak": "3.3.0",
         "drupal/vbo_export": "4.1.3",
