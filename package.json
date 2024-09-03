@@ -32,7 +32,7 @@
     "@babel/eslint-parser": "7.24.7",
     "@babel/preset-env": "7.24.7",
     "@runroom/npm-scripts": "1.2.10",
-    "@symfony/webpack-encore": "4.6.1",
+    "@symfony/webpack-encore": "4.7.0",
     "@types/jquery": "3.5.30",
     "@types/js-cookie": "3.0.6",
     "@typescript-eslint/eslint-plugin": "5.62.0",
