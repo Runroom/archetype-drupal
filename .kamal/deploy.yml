@@ -13,8 +13,10 @@ servers:
     web:
         healthcheck:
             cmd: wget --no-verbose --tries=1 --spider http://127.0.0.1:2019/metrics
-            interval: 60s
-            max_attempts: 20
+
+healthcheck:
+    # This will depend on how big your application is and how long it takes to start.
+    max_attempts: 20
 
 env:
     secret:
