@@ -1,6 +1,5 @@
 _core:
   default_config_hash: CEHTCpo0zzrZOJNa9_M2R_HdYKrq3v1zlRVCf66hh7U
-langcode: es
 favicon:
   use_default: true
 features:
@@ -13,11 +12,11 @@ third_party_settings:
     module_link: true
 preset_accent_color: blue
 preset_focus_color: gin
-enable_darkmode: false
+enable_darkmode: ''
 classic_toolbar: horizontal
-icon_default: true
-icon_path: ''
 high_contrast_mode: false
 accent_color: ''
 focus_color: ''
+icon_default: true
+icon_path: ''
 icon_upload: ''

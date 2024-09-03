@@ -11,7 +11,7 @@ third_party_settings:
 name: Home
 type: home
 description: 'Home de la web'
-help: ''
+help: null
 new_revision: false
 preview_mode: 0
 display_submitted: false

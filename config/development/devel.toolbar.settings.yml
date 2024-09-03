@@ -7,4 +7,3 @@ toolbar_items:
   - devel.reinstall
   - devel.route_info
   - devel.run_cron
-langcode: es
