@@ -1,7 +1,8 @@
 # Archetype Drupal
 
-![ci](https://github.com/Runroom/archetype-drupal/workflows/ci/badge.svg)
-![qa](https://github.com/Runroom/archetype-drupal/workflows/qa/badge.svg)
+[![CI](https://github.com/Runroom/archetype-drupal/actions/workflows/ci.yaml/badge.svg)](https://github.com/Runroom/archetype-drupal/actions/workflows/ci.yaml)
+[![QA](https://github.com/Runroom/archetype-drupal/actions/workflows/qa.yaml/badge.svg)](https://github.com/Runroom/archetype-drupal/actions/workflows/qa.yaml)
+[![Build](https://github.com/Runroom/archetype-drupal/actions/workflows/build.yaml/badge.svg)](https://github.com/Runroom/archetype-drupal/actions/workflows/build.yaml)
 
 ## Requirements
 
