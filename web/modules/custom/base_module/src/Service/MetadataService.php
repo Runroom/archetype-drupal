@@ -21,7 +21,7 @@ final class MetadataService
 
     public function __construct(
         private readonly RequestStack $requestStack,
-        private readonly ConfigFactory $configFactory
+        private readonly ConfigFactory $configFactory,
     ) {
     }
 
@@ -44,7 +44,7 @@ final class MetadataService
         array &$page,
         string $title,
         string $description,
-        ?string $imageUrl = null
+        ?string $imageUrl = null,
     ): void {
         $request = $this->requestStack->getCurrentRequest();
 
