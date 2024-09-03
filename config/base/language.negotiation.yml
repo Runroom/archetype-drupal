@@ -1,4 +1,3 @@
-langcode: es
 session:
   parameter: language
 url:

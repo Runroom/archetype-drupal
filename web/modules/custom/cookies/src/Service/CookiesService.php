@@ -16,7 +16,7 @@ final class CookiesService
         private readonly array $cookies,
         private readonly ConfigurableLanguageManager $languageManager,
         private readonly CookiesEntityRepository $repository,
-        private readonly FormBuilderInterface $formBuilder
+        private readonly FormBuilderInterface $formBuilder,
     ) {
     }
 

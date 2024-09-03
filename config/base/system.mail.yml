@@ -1,4 +1,3 @@
-langcode: es
 interface:
   default: symfony_mailer
 mailer_dsn:

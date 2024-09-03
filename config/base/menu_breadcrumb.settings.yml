@@ -1,4 +1,3 @@
-langcode: es
 determine_menu: true
 disable_admin_page: true
 append_current_page: true
