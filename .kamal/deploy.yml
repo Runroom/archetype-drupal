@@ -13,7 +13,7 @@ servers:
     web:
         healthcheck:
             cmd: wget --no-verbose --tries=1 --spider http://127.0.0.1:2019/metrics
-            interval: 10s
+            interval: 30s
 
 env:
     secret:
