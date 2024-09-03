@@ -1,4 +1,3 @@
-langcode: es
 module:
   allowed_formats: 0
   base_module: 0

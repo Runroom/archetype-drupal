@@ -12,7 +12,7 @@ services:
         volumes:
             - ../web/sites/default/files:/usr/app/web/sites/default/files
         healthcheck:
-            test: wget --no-verbose --tries=1 --spider http://localhost:2019/metrics
+            test: wget --no-verbose --tries=1 --spider http://127.0.0.1:2019/metrics
             start_period: 2m
             interval: 5s
     database:

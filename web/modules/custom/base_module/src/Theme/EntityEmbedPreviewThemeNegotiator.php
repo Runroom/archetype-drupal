@@ -15,7 +15,7 @@ final class EntityEmbedPreviewThemeNegotiator implements ThemeNegotiatorInterfac
     public function __construct(
         private readonly AccountInterface $user,
         private readonly ConfigFactoryInterface $configFactory,
-        private readonly EntityTypeManagerInterface $entityTypeManager
+        private readonly EntityTypeManagerInterface $entityTypeManager,
     ) {
     }
 

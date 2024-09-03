@@ -20,7 +20,7 @@ final class ContactForm extends FormBase
      */
     public function __construct(
         protected $messenger,
-        private readonly EntityFieldManager $entityFieldManager
+        private readonly EntityFieldManager $entityFieldManager,
     ) {
     }
 

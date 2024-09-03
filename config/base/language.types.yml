@@ -1,4 +1,3 @@
-langcode: es
 all:
   - language_interface
   - language_content
