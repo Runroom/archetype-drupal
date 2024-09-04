@@ -1,5 +1,4 @@
 const Encore = require('@symfony/webpack-encore');
-const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 Encore.setOutputPath('web/themes/custom/runroom/build/')
   .setPublicPath('/themes/custom/runroom/build')
@@ -19,19 +18,11 @@ Encore.setOutputPath('web/themes/custom/runroom/build/')
     options.sourceMap = true;
     options.sassOptions = { sourceComments: !Encore.isProduction() };
   }, {})
-  .enableForkedTypeScriptTypesChecking()
   .autoProvidejQuery()
   .addExternals({
     Drupal: 'Drupal',
     drupalSettings: 'drupalSettings'
   })
-  .enableEslintPlugin()
-  .addPlugin(
-    new StyleLintPlugin({
-      context: 'assets/scss',
-      emitWarning: true
-    })
-  )
   .addEntry('app', './assets/js/app.ts')
   .addEntry('form', './assets/js/form.ts')
   .addStyleEntry('styles', './assets/scss/styles.scss')
