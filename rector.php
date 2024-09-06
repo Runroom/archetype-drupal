@@ -2,16 +2,13 @@
 
 declare(strict_types=1);
 
-use DrupalFinder\DrupalFinder;
+use DrupalFinder\DrupalFinderComposerRuntime;
 use DrupalRector\Set\Drupal10SetList;
-use DrupalRector\Set\Drupal8SetList;
-use DrupalRector\Set\Drupal9SetList;
 use Rector\Config\RectorConfig;
 use Rector\Set\ValueObject\LevelSetList;
 
 return static function (RectorConfig $rectorConfig): void {
-    $drupalFinder = new DrupalFinder();
-    $drupalFinder->locateRoot(__DIR__);
+    $drupalFinder = new DrupalFinderComposerRuntime();
     $drupalRoot = $drupalFinder->getDrupalRoot();
     $rectorConfig->autoloadPaths([
         $drupalRoot . '/core',
@@ -27,9 +24,7 @@ return static function (RectorConfig $rectorConfig): void {
     $rectorConfig->importShortClasses(false);
 
     $rectorConfig->sets([
-        LevelSetList::UP_TO_PHP_82,
-        Drupal8SetList::DRUPAL_8,
-        Drupal9SetList::DRUPAL_9,
+        LevelSetList::UP_TO_PHP_83,
         Drupal10SetList::DRUPAL_10,
     ]);
 };

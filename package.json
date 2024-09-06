@@ -20,7 +20,7 @@
     "lint:tsc": "tsc --noEmit --pretty false"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
   "dependencies": {
     "@runroom/purejs": "3.2.2",
