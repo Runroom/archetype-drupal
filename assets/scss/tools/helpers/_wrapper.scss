@@ -1,13 +1,13 @@
 @mixin wrapper($middle: $s768, $max: $global-max-width) {
     .u-wrapper {
-        &:not(.u-reading) {
-            max-width: $global-max-width;
-        }
-
         height: 100%;
         margin: 0 auto;
         padding-left: space();
         padding-right: space();
+
+        &:not(.u-reading) {
+            max-width: $global-max-width;
+        }
 
         @include breakpoint($middle) {
             padding-left: space(2);

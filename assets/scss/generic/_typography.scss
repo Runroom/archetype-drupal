@@ -37,13 +37,13 @@
 /* Typography */
 html,
 body {
-    @include fluid-type($min-font-size, $max-font-size);
-
     color: $c-neutro900;
     font-family: $t-default;
     font-weight: 400;
     line-height: space();
     text-size-adjust: 100%;
+
+    @include fluid-type($min-font-size, $max-font-size);
 }
 
 /* Headings */
