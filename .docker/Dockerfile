@@ -1,6 +1,6 @@
 FROM alpine:3.20 AS app-base
 
-ARG PHP_VERSION=82
+ARG PHP_VERSION=83
 ARG UID=1000
 ARG USER=app
 
@@ -83,7 +83,7 @@ COPY .docker/app/dev/61_extra.ini /etc/php${PHP_VERSION}/conf.d/
 
 USER ${USER}
 
-FROM node:18.20-slim AS asset-builder
+FROM node:20.17-slim AS asset-builder
 
 WORKDIR /usr/app
 
