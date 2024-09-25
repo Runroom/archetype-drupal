@@ -32,7 +32,7 @@ To generate build assets:
 ```
 
 - Open `https://localhost:8443` in your browser.
-- Open `http://localhost:8025` in your browser to access MailCatcher.
+- Open `https://localhost:8425` in your browser to access Mailpit.
 
 To use xDebug, after the initial `make`, you can run:
 
@@ -64,4 +64,4 @@ Archetype and its related projects.
 - [Deployment](doc/Deployment.md)
 - [Docker](doc/Docker.md)
 - [Drupal](doc/Drupal.md)
-- [MailCatcher](doc/MailCatcher.md)
+- [Mailpit](doc/Mailpit.md)
