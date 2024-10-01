@@ -1,5 +1,7 @@
 service: archetype-drupal
 
+require_destination: true
+
 registry:
     server: ghcr.io
     username:
@@ -26,6 +28,7 @@ env:
         - DATABASE_USER
         - DATABASE_PASSWORD
         - DATABASE_HOST
+        - DATABASE_PORT
         - DATABASE_DRIVER
         - GTM_ID
         - COOKIES_DEFAULT_DOMAIN
@@ -52,7 +55,7 @@ traefik:
 
 accessories:
     database:
-        image: postgres:14.9-alpine
+        image: postgres:14.13-alpine
         port: 5433:5432
         env:
             clear:
@@ -65,5 +68,8 @@ accessories:
                 - STAGING_USER
                 - STAGING_PASSWORD
         directories:
-            - data:/var/lib/postgresql/data
-            - init:/docker-entrypoint-initdb.d
+            - postgres-data:/var/lib/postgresql/data
+        files:
+            - .kamal/init/10-create-user.sh:/docker-entrypoint-initdb.d/10-create-user.sh
+            - .kamal/init/20-create-database.sh:/docker-entrypoint-initdb.d/20-create-database.sh
+            - .kamal/init/30-install-pg-trim.sh:/docker-entrypoint-initdb.d/30-install-pg-trim.sh
