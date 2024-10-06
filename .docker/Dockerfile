@@ -83,7 +83,7 @@ COPY .docker/app/dev/61_extra.ini /etc/php${PHP_VERSION}/conf.d/
 
 USER ${USER}
 
-FROM node:20.17-slim AS asset-builder
+FROM node:20.18-slim AS asset-builder
 
 WORKDIR /usr/app
 
