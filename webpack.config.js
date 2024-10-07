@@ -8,15 +8,15 @@ Encore.setOutputPath('web/themes/custom/runroom/build/')
     { from: './assets/fonts', to: 'fonts/[name].[ext]', pattern: /\.(woff|woff2)$/ }
   ])
   .enableSingleRuntimeChunk()
-  .cleanupOutputBeforeBuild(['**/*', '!.gitignore'])
-  .enableBuildNotifications()
+  .cleanupOutputBeforeBuild(options => {
+    options.keep = '.gitignore';
+  })
   .enableSourceMaps(!Encore.isProduction())
   .enableVersioning(false) // Do not enable versioning on Drupal
   .enableTypeScriptLoader()
   .enablePostCssLoader()
-  .enableSassLoader(options => {
-    options.api = 'modern-compiler';
-  }, {})
+  .enableSassLoader()
+  .enableBuildCache({ config: [__filename] })
   .autoProvidejQuery()
   .addExternals({
     Drupal: 'Drupal',
