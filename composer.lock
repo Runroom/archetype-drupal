@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4f55a933a07fd4d6ac35e61605f24c45",
+    "content-hash": "777abd891f9e970dd2551e6b7255bb5a",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3387,17 +3387,17 @@
         },
         {
             "name": "drupal/twig_field_value",
-            "version": "2.0.4",
+            "version": "2.0.5",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/twig_field_value.git",
-                "reference": "2.0.4"
+                "reference": "2.0.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/twig_field_value-2.0.4.zip",
-                "reference": "2.0.4",
-                "shasum": "0b607167a188fb7aafe8607a68a083bf431ec223"
+                "url": "https://ftp.drupal.org/files/projects/twig_field_value-2.0.5.zip",
+                "reference": "2.0.5",
+                "shasum": "9a13925fc1f9788db65044b179871139da8a7cfd"
             },
             "require": {
                 "drupal/core": "^9 || ^10 || ^11"
@@ -3405,8 +3405,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.4",
-                    "datestamp": "1725019150",
+                    "version": "2.0.5",
+                    "datestamp": "1728385526",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
