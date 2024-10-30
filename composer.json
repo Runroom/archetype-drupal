@@ -53,7 +53,7 @@
         "symfony/flex": "2.4.7"
     },
     "require-dev": {
-        "behat/mink": "1.11.0",
+        "behat/mink": "1.12.0",
         "drupal/devel": "5.3.1",
         "drupal/devel_entity_updates": "4.2.0",
         "drupal/features": "5.0.x-dev",
