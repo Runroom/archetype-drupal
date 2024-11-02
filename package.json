@@ -46,7 +46,7 @@
     "postcss": "8.4.47",
     "postcss-loader": "8.1.1",
     "postcss-sort-media-queries": "5.2.0",
-    "prettier": "2.8.8",
+    "prettier": "3.3.3",
     "sass-embedded": "1.80.6",
     "sass-loader": "16.0.3",
     "stylelint": "14.16.1",
