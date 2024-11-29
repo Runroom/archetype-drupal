@@ -49,7 +49,7 @@
         "drupal/views_bulk_operations": "4.3.2",
         "drupal/xmlsitemap": "1.5.0",
         "drush/drush": "12.5.3",
-        "symfony/dotenv": "7.1.9",
+        "symfony/dotenv": "7.2.0",
         "symfony/flex": "2.4.7"
     },
     "require-dev": {
@@ -68,7 +68,7 @@
         "phpstan/phpstan-strict-rules": "1.6.1",
         "phpunit/phpunit": "9.6.21",
         "rector/rector": "1.2.10",
-        "symfony/phpunit-bridge": "7.1.9"
+        "symfony/phpunit-bridge": "7.2.0"
     },
     "replace": {
         "symfony/polyfill-ctype": "*",
