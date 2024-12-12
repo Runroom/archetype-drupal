@@ -67,7 +67,7 @@
         "phpstan/phpstan": "1.12.12",
         "phpstan/phpstan-strict-rules": "1.6.1",
         "phpunit/phpunit": "9.6.22",
-        "rector/rector": "1.2.10",
+        "rector/rector": "2.0.0",
         "symfony/phpunit-bridge": "7.2.0"
     },
     "replace": {
