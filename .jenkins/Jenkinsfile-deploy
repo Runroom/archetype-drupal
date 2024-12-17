@@ -11,7 +11,29 @@ pipeline {
         disableResume()
     }
 
+    environment {
+        KAMAL = 'kamal'
+    }
+
     stages {
+        stage('Prepare environment secrets') {
+            agent {
+                docker {
+                    image 'runroom/bws'
+                    reuseNode true
+                }
+            }
+
+            steps {
+                withCredentials([string(
+                    credentialsId: BWS_CREDENTIALS,
+                    variable: 'BWS_ACCESS_TOKEN'
+                )]) {
+                    sh "bws secret list $BWS_PROJECT_ID --output=env > .kamal/secrets.$DESTINATION"
+                }
+            }
+        }
+
         stage('Deploy') {
             agent {
                 docker {
@@ -22,9 +44,6 @@ pipeline {
             }
 
             steps {
-                sh 'sed -i "s/SSH_USER/$SSH_USER/g" .kamal/deploy.$ENVIRONMENT.yml'
-                sh 'sed -i "s/SSH_HOST/$SSH_HOST/g" .kamal/deploy.$ENVIRONMENT.yml'
-
                 sh 'mkdir --parents ~/.ssh'
                 sh 'echo "$SSH_KNOWN_HOSTS" >> ~/.ssh/known_hosts'
                 sh 'chmod 600 ~/.ssh/known_hosts'
@@ -35,7 +54,7 @@ pipeline {
                     passwordVariable: 'DOCKER_PASSWORD'
                 )]) {
                     sshagent([SSH_CREDENTIALS]) {
-                        sh 'kamal deploy --config-file .kamal/deploy.yml --version $TAG --destination $ENVIRONMENT --skip-push'
+                        sh 'make deploy'
                     }
                 }
             }
