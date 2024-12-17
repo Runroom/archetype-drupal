@@ -34,7 +34,7 @@ deploy-accessory-boot: ## Initialize one or all accessories.
 	$(KAMAL) accessory boot $(ACCESSORY) $(KAMAL_FLAGS)
 .PHONY: deploy-accessory-boot
 
-deploy-accessory-reboot: ## Initialize one or all accessories.
+deploy-accessory-reboot: ## Stop, remove and boot again one or all accessories.
 	$(KAMAL) accessory reboot $(ACCESSORY) $(KAMAL_FLAGS)
 .PHONY: deploy-accessory-reboot
 
