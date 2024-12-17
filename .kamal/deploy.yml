@@ -46,7 +46,7 @@ deploy_timeout: 300
 
 proxy:
     healthcheck:
-        path: /
+        path: /user/login
 
 accessories:
     database:
