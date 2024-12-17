@@ -91,7 +91,6 @@ if (file_exists($diFile) && false !== include $diFile) {
 
 $settings['hash_salt'] = $_SERVER['APP_SECRET'];
 $settings['gtm_id'] = $_SERVER['GTM_ID'];
-$settings['trusted_host_patterns'] = [$_SERVER['TRUSTED_HOST']];
 $settings['cookies_default_domain'] = $_SERVER['COOKIES_DEFAULT_DOMAIN'];
 
 $mailerDsn = Dsn::fromString($_SERVER['MAILER_DSN']);
