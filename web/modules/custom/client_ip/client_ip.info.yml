@@ -1,5 +1,0 @@
-name: Client IP
-type: module
-description: Client IP
-core_version_requirement: ^9 || ^10
-package: runroom
