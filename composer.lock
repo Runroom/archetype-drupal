@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e3e43ed0bc9dcb2f409d1e173803e9ed",
+    "content-hash": "bbf51699446a178ffe167b18bc8f6557",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2397,17 +2397,17 @@
         },
         {
             "name": "drupal/gin_toolbar",
-            "version": "1.0.0-rc7",
+            "version": "1.0.0-rc8",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/gin_toolbar.git",
-                "reference": "8.x-1.0-rc7"
+                "reference": "8.x-1.0-rc8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/gin_toolbar-8.x-1.0-rc7.zip",
-                "reference": "8.x-1.0-rc7",
-                "shasum": "9ad2bdc0f1664ff3c5fb6767986e508c92196692"
+                "url": "https://ftp.drupal.org/files/projects/gin_toolbar-8.x-1.0-rc8.zip",
+                "reference": "8.x-1.0-rc8",
+                "shasum": "bc4c199708e0f47a2893cc93d2e1cd7d9e5d21c3"
             },
             "require": {
                 "drupal/core": "^9 || ^10 || ^11"
@@ -2415,8 +2415,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.0-rc7",
-                    "datestamp": "1733734483",
+                    "version": "8.x-1.0-rc8",
+                    "datestamp": "1734527411",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "RC releases are not covered by Drupal security advisories."
