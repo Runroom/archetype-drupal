@@ -33,6 +33,7 @@ env:
         - DATABASE_DRIVER
         - GTM_ID
         - COOKIES_DEFAULT_DOMAIN
+        - TRUSTED_HOST_PATTERN
         - REVERSE_PROXY
         - FILES_BASE_URL
         - MAILER_DSN

@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-use Drupal\Component\Assertion\Handle;
 use Drupal\Component\Serialization\PhpSerialize;
 use Drupal\redis\Cache\CacheBackendFactory;
 use Drupal\redis\Cache\PhpRedis;
@@ -30,8 +29,12 @@ $databases = [
     ],
 ];
 
-if ('' !== ($_SERVER['FILES_BASE_URL'] ?? '')) {
+if ('' !== (trim($_SERVER['FILES_BASE_URL']) ?? '')) {
     $settings['file_public_base_url'] = $_SERVER['FILES_BASE_URL'];
+}
+
+if ('' !== (trim($_SERVER['TRUSTED_HOST_PATTERN']) ?? '')) {
+    $settings['trusted_host_patterns'] = [$_SERVER['TRUSTED_HOST_PATTERN']];
 }
 
 if ((bool) ($_SERVER['REVERSE_PROXY'] ?? false)) {
@@ -115,6 +118,7 @@ $settings['php_storage']['twig']['directory'] = 'sites/default/php';
 $settings['skip_permissions_hardening'] = true;
 $settings['rebuild_access'] = false;
 $settings['extension_discovery_scan_tests'] = false;
+$settings['state_cache'] = true;
 
 $config['stage_file_proxy.settings']['origin'] = false;
 $config['system.performance']['css']['preprocess'] = true;
@@ -124,8 +128,7 @@ $config['system.logging']['error_level'] = 'hide';
 
 // Development Settings
 if ('dev' === $_SERVER['APP_ENV']) {
-    assert_options(\ASSERT_ACTIVE, true);
-    Handle::register();
+    ini_set('zend.assertions', 1);
 
     $config['system.performance']['css']['preprocess'] = false;
     $config['system.performance']['js']['preprocess'] = false;
