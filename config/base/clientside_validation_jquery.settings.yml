@@ -1,6 +1,7 @@
 _core:
   default_config_hash: 3YUV4RQQ4k8drO7uzYJ7lNc5Az0iDAH5YW8KbZVxjeY
 use_cdn: true
-cdn_base_url: 'https://cdn.jsdelivr.net/npm/jquery-validation@1.21.0/dist/'
+cdn_base_url: 'https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/'
 validate_all_ajax_forms: 2
 force_validate_on_blur: 0
+cdn_integrity_attr: sha512-KFHXdr2oObHKI9w4Hv1XPKc898mE4kgYx58oqsc/JqqdLMDI4YjOLzom+EMlW8HFUd0QfjfAvxSL6sEq/a42fQ==

@@ -108,6 +108,7 @@ COPY .docker/app/prod/61_extra.ini /etc/php${PHP_VERSION}/conf.d/
 USER ${USER}
 
 COPY --chown=$UID .env .
+COPY --chown=$UID patches patches
 COPY --chown=$UID composer.json .
 COPY --chown=$UID composer.lock .
 COPY --chown=$UID symfony.lock .

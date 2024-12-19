@@ -1,0 +1,78 @@
+From 580c1a9d87c0529608d13b3fe517a2cff2952ff8 Mon Sep 17 00:00:00 2001
+From: Sudipta Kumar Pal <offi.sudipta@gmail.com>
+Date: Tue, 15 Oct 2024 08:29:19 +0000
+Subject: [PATCH] Issue #3462084: SubresourceIntegrity
+
+---
+ .../clientside_validation_jquery.module       |  8 ++++++-
+ ...ClientsideValidationjQuerySettingsForm.php | 21 +++++++++++++++++++
+ 2 files changed, 28 insertions(+), 1 deletion(-)
+
+diff --git a/clientside_validation_jquery/clientside_validation_jquery.module b/clientside_validation_jquery/clientside_validation_jquery.module
+index e598033..f42b805 100644
+--- a/clientside_validation_jquery/clientside_validation_jquery.module
++++ b/clientside_validation_jquery/clientside_validation_jquery.module
+@@ -103,7 +103,14 @@ function clientside_validation_jquery_library_info_alter(&$libraries, $extension
+ 
+     // For CDN we use the min versions as Drupal is not going to compress them.
+     unset($libraries['jquery.validate']['js'][$path_in_yml . 'jquery.validate.min.js']);
+-    $libraries['jquery.validate']['js'][$cdn_url . 'jquery.validate.min.js'] = ['type' => 'external'];
++    $libraries['jquery.validate']['js'][$cdn_url . 'jquery.validate.min.js'] = [
++      'type' => 'external',
++      'attributes' => [
++        // It is ok if the integrity attribute is empty.
++        'integrity' => $config->get('cdn_integrity_attr'),
++        'crossorigin' => 'anonymous',
++      ]
++    ];
+ 
+     // Add additional methods js only if required.
+     if (isset($libraries['jquery.validate.additional']['js'][$path_in_yml . 'additional-methods.min.js'])) {
+diff --git a/clientside_validation_jquery/src/Form/ClientsideValidationjQuerySettingsForm.php b/clientside_validation_jquery/src/Form/ClientsideValidationjQuerySettingsForm.php
+index e1464a5..9bbeaa7 100644
+--- a/clientside_validation_jquery/src/Form/ClientsideValidationjQuerySettingsForm.php
++++ b/clientside_validation_jquery/src/Form/ClientsideValidationjQuerySettingsForm.php
+@@ -49,6 +49,16 @@ class ClientsideValidationjQuerySettingsForm extends ConfigFormBase {
+       '#default_value' => $config->get('cdn_base_url'),
+     ];
+ 
++    $form['cdn_integrity_attr'] = [
++      '#type' => 'textfield',
++      '#title' => $this->t('CDN Integrity Attribute'),
++      '#description' => $this->t('Integrity attribute to use. E.g. @attr', [
++        '@attr' => 'sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=',
++      ]),
++      '#required' => FALSE,
++      '#default_value' => $config->get('cdn_integrity_attr'),
++    ];
++
+     $form['validate_all_ajax_forms'] = [
+       '#type' => 'select',
+       '#options' => [
+@@ -78,6 +88,7 @@ class ClientsideValidationjQuerySettingsForm extends ConfigFormBase {
+ 
+     $config->set('use_cdn', $form_state->getValue('use_cdn'));
+     $config->set('cdn_base_url', $form_state->getValue('cdn_base_url'));
++    $config->set('cdn_integrity_attr', $form_state->getValue('cdn_integrity_attr'));
+     $config->set('validate_all_ajax_forms', $form_state->getValue('validate_all_ajax_forms'));
+     $config->set('force_validate_on_blur', $form_state->getValue('force_validate_on_blur'));
+ 
+@@ -116,6 +127,16 @@ class ClientsideValidationjQuerySettingsForm extends ConfigFormBase {
+         '@format' => '//cdn.jsdelivr.net/npm/jquery-validation@1.20.0/dist/',
+       ]));
+     }
++
++    // Validate if integrity attribute is valid (empty or according to regex).
++    // https://w3c.github.io/webappsec-subresource-integrity/#grammardef-hash-with-options
++    $integrity_regex = '/(sha256|sha384|sha512)-([A-Za-z0-9+\/]+={0,2}(?=\s|$))( +[!-~]*)?/i';
++    $integrity_attr = $values['cdn_integrity_attr'];
++    if (!empty($integrity_attr) && !preg_match($integrity_regex, $integrity_attr)) {
++      $form_state->setErrorByName('cdn_integrity_attr', $this->t('Integrity attribute seems invalid. Valid format @format.', [
++        '@format' => 'sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=',
++      ]));
++    }
+   }
+ 
+ }
+-- 
+2.43.0
