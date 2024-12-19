@@ -35,7 +35,7 @@ jobs:
             - run: make setup build
             - run: make up
             - run: sleep 2s
-            - run: curl -f http://localhost:8080
+            - run: curl -f http://localhost:8080/user/login
     docker-dev:
         name: Docker Dev
         runs-on: ubuntu-latest
@@ -46,4 +46,4 @@ jobs:
             - run: make setup build
             - run: make up
             - run: make provision
-            - run: curl -f http://localhost:8080
+            - run: curl -f http://localhost:8080/user/login

@@ -1,14 +1,14 @@
 name: 'Contact Form'
 type: module
 description: 'Contact Form'
-core_version_requirement: ^9 || ^10
+core_version_requirement: '^9.4 || ^10'
 package: runroom
 core_incompatible: false
 dependencies:
-    - field
-    - options
-    - telephone
-    - user
-    - views
-    - views_bulk_operations
+  - 'drupal:field'
+  - 'drupal:options'
+  - 'drupal:telephone'
+  - 'drupal:user'
+  - 'drupal:views'
+  - 'views_bulk_operations:views_bulk_operations'
 version: 8.x-1.0

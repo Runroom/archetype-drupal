@@ -1,13 +1,14 @@
 name: 'Cookies Module'
 type: module
 description: 'Cookies Module'
-core_version_requirement: ^9 || ^10
+core_version_requirement: '^9.4 || ^10'
 dependencies:
-    - allowed_formats
-    - content_translation
-    - field
-    - language
-    - text
+  - 'drupal:content_translation'
+  - 'drupal:field'
+  - 'drupal:filter'
+  - 'drupal:language'
+  - 'drupal:media'
+  - 'drupal:text'
 version: 8.x-1.0
 package: runroom
 core_incompatible: false

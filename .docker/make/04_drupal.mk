@@ -2,7 +2,7 @@ ifndef DOCKER_EXEC
 $(error DOCKER_EXEC must be defined before loading make/04_drupal.mk)
 endif
 
-provision: composer-install database drush-deploy language-import content-import ## Install dependencies, clear cache, and provision database.
+provision: composer-install database drush-deploy language-import ## Install dependencies, clear cache, and provision database.
 .PHONY: provision
 
 drush-deploy: ## Execute Drush deploy.
@@ -19,14 +19,6 @@ config-export: ## Export configuration to files.
 config-import: ## Import configuration.
 	$(DOCKER_EXEC) drush config:import --yes
 .PHONY: config-import
-
-content-export: ## Generate content snapshot.
-	$(DOCKER_EXEC) drush content-snapshot:export --yes
-.PHONY: content-export
-
-content-import: ## Import content snapshot.
-	$(DOCKER_EXEC) drush content-snapshot:import --yes
-.PHONY: content-import
 
 language-export: ## Export language to files.
 	$(DOCKER_EXEC) drush language-export

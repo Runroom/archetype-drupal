@@ -8,7 +8,6 @@ if [ "${RESET_DATABASE:-}" = true ]; then
     drush site:install minimal --existing-config --yes
     drush config:import --yes
     drush language-import
-    drush content-snapshot:import --yes
 
     # If your infrastructure allows to run sidecar containers or jobs, you might want to exit here.
     # exit 0
