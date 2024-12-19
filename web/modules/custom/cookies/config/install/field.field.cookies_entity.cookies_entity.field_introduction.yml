@@ -3,14 +3,10 @@ status: true
 dependencies:
   config:
     - field.storage.cookies_entity.field_introduction
+    - filter.format.html_complete
   module:
-    - allowed_formats
     - cookies
     - text
-third_party_settings:
-  allowed_formats:
-    html_simple: '0'
-    plain_text: '0'
 id: cookies_entity.cookies_entity.field_introduction
 field_name: field_introduction
 entity_type: cookies_entity
@@ -21,5 +17,7 @@ required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
-settings: {  }
+settings:
+  allowed_formats:
+    - html_complete
 field_type: text_long

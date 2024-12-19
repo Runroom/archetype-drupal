@@ -145,7 +145,3 @@ if ('dev' === $_SERVER['APP_ENV']) {
 } else {
     $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.prod.yml';
 }
-
-if ('staging' === $_SERVER['APP_ENV']) {
-    $config['config_split.config_split.staging']['status'] = true;
-}

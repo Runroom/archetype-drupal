@@ -4,15 +4,10 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_text
+    - filter.format.html_complete
     - paragraphs.paragraphs_type.component_wysiwyg
   module:
-    - allowed_formats
     - text
-third_party_settings:
-  allowed_formats:
-    html_complete: html_complete
-    html_simple: '0'
-    plain_text: '0'
 id: paragraph.component_wysiwyg.field_text
 field_name: field_text
 entity_type: paragraph
@@ -24,5 +19,6 @@ translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  allowed_formats: {  }
+  allowed_formats:
+    - html_complete
 field_type: text_long

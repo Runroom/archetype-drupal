@@ -1,5 +1,4 @@
 module:
-  allowed_formats: 0
   base_module: 0
   block: 0
   block_content: 0
@@ -77,7 +76,6 @@ module:
   minimal: 1000
 theme:
   stable: 0
-  classy: 0
   runroom: 0
   claro: 0
   gin: 0

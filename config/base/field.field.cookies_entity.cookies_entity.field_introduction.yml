@@ -4,14 +4,10 @@ status: true
 dependencies:
   config:
     - field.storage.cookies_entity.field_introduction
+    - filter.format.html_complete
   module:
-    - allowed_formats
     - cookies
     - text
-third_party_settings:
-  allowed_formats:
-    html_simple: '0'
-    plain_text: '0'
 _core:
   default_config_hash: jxvbcMVp32sPRjf40_XD3gft3lP7RlGknRsrmr4HfB4
 id: cookies_entity.cookies_entity.field_introduction
@@ -25,5 +21,6 @@ translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  allowed_formats: {  }
+  allowed_formats:
+    - html_complete
 field_type: text_long

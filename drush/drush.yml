@@ -5,11 +5,6 @@ command:
                 structure-tables-key: common
                 skip-tables-key: common
                 extra-dump: "--no-tablespaces"
-    site:
-        install:
-            options:
-                account-mail: admin@localhost.com
-                account-pass: admin
 
 sql:
     structure-tables:

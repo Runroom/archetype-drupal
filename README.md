@@ -34,6 +34,14 @@ To generate build assets:
 - Open `https://localhost:8443` in your browser.
 - Open `https://localhost:8425` in your browser to access Mailpit.
 
+To log in to the user panel for the first time:
+
+```bash
+    make ssh
+
+    drush user:login --uri=https://localhost:8443
+```
+
 To use xDebug, after the initial `make`, you can run:
 
 ```bash
