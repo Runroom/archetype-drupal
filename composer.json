@@ -116,11 +116,11 @@
             ]
         },
         "patches": {
-            "drupal/core": {
-                "Error running config import \"Call to a member function delete() on null in Drupal\\Core\\Config\\ConfigImporter->checkOp()\" - 3198715": "https://www.drupal.org/files/issues/2021-10-27/error-running-config-import-delete-on-null-3198715-8.patch"
-            },
             "drupal/clientside_validation": {
                 "SubresourceIntegrity": "./patches/0001-Issue-3462084-SubresourceIntegrity.patch"
+            },
+            "drupal/core": {
+                "Error running config import \"Call to a member function delete() on null in Drupal\\Core\\Config\\ConfigImporter->checkOp()\" - 3198715": "https://www.drupal.org/files/issues/2021-10-27/error-running-config-import-delete-on-null-3198715-8.patch"
             }
         }
     },
