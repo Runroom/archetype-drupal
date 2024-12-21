@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9610febd7052b8d6b3957ea1972f49f5",
+    "content-hash": "70ede87051a06db9bcaffd553ae5899c",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2157,17 +2157,17 @@
         },
         {
             "name": "drupal/gin",
-            "version": "3.0.0-rc16",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/gin.git",
-                "reference": "8.x-3.0-rc16"
+                "reference": "8.x-3.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/gin-8.x-3.0-rc16.zip",
-                "reference": "8.x-3.0-rc16",
-                "shasum": "29fecc9fbcf40b77ffde6b2e5e4400ba938ab3ee"
+                "url": "https://ftp.drupal.org/files/projects/gin-8.x-3.0.zip",
+                "reference": "8.x-3.0",
+                "shasum": "bb1c660e85577d49db1deedfefe1ed3a91370aeb"
             },
             "require": {
                 "drupal/core": "^9 || ^10 || ^11",
@@ -2176,11 +2176,11 @@
             "type": "drupal-theme",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.0-rc16",
-                    "datestamp": "1734527306",
+                    "version": "8.x-3.0",
+                    "datestamp": "1734771812",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "RC releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
@@ -13570,7 +13570,6 @@
         "drupal/config_update": 15,
         "drupal/drush_language": 5,
         "drupal/features": 20,
-        "drupal/gin": 5,
         "drupal/gin_toolbar": 5,
         "drupal/menu_breadcrumb": 15
     },
