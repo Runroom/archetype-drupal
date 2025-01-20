@@ -38,7 +38,7 @@
         "drupal/pathauto": "1.13.0",
         "drupal/r4032login": "2.2.2",
         "drupal/redirect": "1.10.0",
-        "drupal/redis": "1.8.0",
+        "drupal/redis": "1.9.0",
         "drupal/stable": "2.1.0",
         "drupal/twig_field_value": "2.0.5",
         "drupal/twig_tweak": "3.4.0",
