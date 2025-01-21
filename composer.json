@@ -60,7 +60,7 @@
         "kint-php/kint-twig": "6.0",
         "mglaman/phpstan-drupal": "1.3.2",
         "palantirnet/drupal-rector": "0.20.3",
-        "phpstan/phpstan": "1.12.15",
+        "phpstan/phpstan": "1.12.16",
         "phpstan/phpstan-strict-rules": "1.6.2",
         "phpunit/phpunit": "9.6.22",
         "rector/rector": "1.2.10",
