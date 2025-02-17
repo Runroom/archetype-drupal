@@ -47,9 +47,6 @@ final class CountryHeaderMiddleware implements HttpKernelInterface
         return $response;
     }
 
-    /**
-     * Elimina registros antiguos si superan el límite especificado.
-     */
     private function cleanOldLogs(string $channel, int $limit): void
     {
         $database = \Drupal::database();
@@ -58,7 +55,7 @@ final class CountryHeaderMiddleware implements HttpKernelInterface
             ->condition('w.type', $channel)
             ->countQuery()
             ->execute()
-            ->fetchField();
+            ?->fetchField();
 
         if ($query > $limit) {
             $delete_query = $database->select('watchdog', 'w')
@@ -68,9 +65,9 @@ final class CountryHeaderMiddleware implements HttpKernelInterface
                 ->range(0, $query - $limit)
                 ->execute();
 
-            $ids_to_delete = $delete_query->fetchCol();
+            $ids_to_delete = $delete_query?->fetchCol();
 
-            if (!empty($ids_to_delete)) {
+            if (null !== $ids_to_delete) {
                 $database->delete('watchdog')
                     ->condition('wid', $ids_to_delete, 'IN')
                     ->execute();
