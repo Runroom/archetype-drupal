@@ -4,12 +4,11 @@ declare(strict_types=1);
 
 namespace Drupal\country_header;
 
-use Symfony\Component\HttpFoundation\Cookie;
+use Drupal\Core\Database\Database;
+use Drupal\Core\Logger\RfcLogLevel;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
-use Drupal\Core\Logger\RfcLogLevel;
-use Drupal\Core\Database\Database;
 
 final class CountryHeaderMiddleware implements HttpKernelInterface
 {
@@ -33,7 +32,7 @@ final class CountryHeaderMiddleware implements HttpKernelInterface
                 'uid' => \Drupal::currentUser()->id(),
                 'type' => 'cloudfront_headers',
                 'message' => '@message',
-                'variables' => serialize(['@message' => print_r($headers, TRUE)]),
+                'variables' => serialize(['@message' => print_r($headers, true)]),
                 'severity' => RfcLogLevel::NOTICE,
                 'link' => '',
                 'location' => $request->getRequestUri(),
