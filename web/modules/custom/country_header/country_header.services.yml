@@ -1,0 +1,6 @@
+services:
+  country_header.country_header_middleware:
+    class: Drupal\country_header\CountryHeaderMiddleware
+    autowire: true
+    tags:
+      - { name: http_middleware, priority: 280 }

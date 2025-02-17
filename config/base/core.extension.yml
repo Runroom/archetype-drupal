@@ -12,6 +12,7 @@ module:
   contact_form: 0
   cookies: 0
   ctools: 0
+  country_header: 0
   datetime: 0
   dblog: 0
   dis: 0
