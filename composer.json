@@ -43,7 +43,7 @@
         "drupal/twig_field_value": "2.0.5",
         "drupal/twig_tweak": "3.4.0",
         "drupal/vbo_export": "4.1.5",
-        "drupal/views_bulk_operations": "4.3.3",
+        "drupal/views_bulk_operations": "4.3.4",
         "drupal/xmlsitemap": "1.5.0",
         "drush/drush": "13.3.3",
         "symfony/dotenv": "7.2.0",
