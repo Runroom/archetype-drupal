@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e0ac30dca2e79faf59f5fcbffb658546",
+    "content-hash": "09883bad0b4c998e21ab866b7cdd4960",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2748,17 +2748,17 @@
         },
         {
             "name": "drupal/monolog",
-            "version": "3.0.4",
+            "version": "3.0.5",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/monolog.git",
-                "reference": "3.0.4"
+                "reference": "3.0.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/monolog-3.0.4.zip",
-                "reference": "3.0.4",
-                "shasum": "5e86b3598b826dca767c52bc7e63cb2c049212d3"
+                "url": "https://ftp.drupal.org/files/projects/monolog-3.0.5.zip",
+                "reference": "3.0.5",
+                "shasum": "c151d8ca5a006e0250ef0aaaca44cc1c3359cc33"
             },
             "require": {
                 "drupal/core": "^10 || ^11",
@@ -2776,8 +2776,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.0.4",
-                    "datestamp": "1723450250",
+                    "version": "3.0.5",
+                    "datestamp": "1747324419",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
