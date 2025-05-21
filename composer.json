@@ -20,7 +20,7 @@
         "drupal/config_update": "2.0.0-alpha4",
         "drupal/core-recommended": "10.4.7",
         "drupal/date_popup": "2.0.2",
-        "drupal/dis": "1.0.2",
+        "drupal/dis": "1.1.0",
         "drupal/drush_language": "1.0.0-rc5",
         "drupal/editor_advanced_link": "2.2.6",
         "drupal/entity_reference_revisions": "1.12.0",
