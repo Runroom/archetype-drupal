@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "24b4ac8738a1aea905d4104194fbefc0",
+    "content-hash": "a82a6c447086929164388be9f9a17017",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -10740,20 +10740,20 @@
         },
         {
             "name": "palantirnet/drupal-rector",
-            "version": "0.20.3",
+            "version": "0.21.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/palantirnet/drupal-rector.git",
-                "reference": "50c742a34f89e4202056e433bbb476ca1fdf3797"
+                "reference": "f5b508251c24d7f5d805a3990afa37d7f75e20b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/palantirnet/drupal-rector/zipball/50c742a34f89e4202056e433bbb476ca1fdf3797",
-                "reference": "50c742a34f89e4202056e433bbb476ca1fdf3797",
+                "url": "https://api.github.com/repos/palantirnet/drupal-rector/zipball/f5b508251c24d7f5d805a3990afa37d7f75e20b6",
+                "reference": "f5b508251c24d7f5d805a3990afa37d7f75e20b6",
                 "shasum": ""
             },
             "require": {
-                "rector/rector": "^1.0",
+                "rector/rector": "^1 || ^2",
                 "webflo/drupal-finder": "^1.2"
             },
             "replace": {
@@ -10764,9 +10764,9 @@
                 "cweagans/composer-patches": "^1.7.2",
                 "friendsofphp/php-cs-fixer": "^3.58",
                 "php": "^8.2",
-                "phpstan/extension-installer": "^1.1",
-                "phpstan/phpstan": "^1.0",
-                "phpstan/phpstan-deprecation-rules": "^1.0",
+                "phpstan/extension-installer": "^1.4.3",
+                "phpstan/phpstan": "^1.12 || ^2.0",
+                "phpstan/phpstan-deprecation-rules": "^1.2 || ^2.0",
                 "phpunit/phpunit": "^10.0",
                 "symfony/yaml": "^5 || ^6 || ^7",
                 "symplify/vendor-patches": "^11.0"
@@ -10813,15 +10813,14 @@
             "description": "Instant fixes for your Drupal code by using Rector.",
             "keywords": [
                 "Code style",
-                "Drupal 8",
                 "ast",
-                "drupal 9",
+                "drupal",
                 "rector"
             ],
             "support": {
-                "source": "https://github.com/palantirnet/drupal-rector/tree/0.20.3"
+                "source": "https://github.com/palantirnet/drupal-rector/tree/0.21.0"
             },
-            "time": "2024-06-10T19:18:13+00:00"
+            "time": "2025-05-23T16:03:52+00:00"
         },
         {
             "name": "phar-io/manifest",
