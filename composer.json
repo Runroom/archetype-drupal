@@ -64,7 +64,7 @@
         "phpstan/phpstan-strict-rules": "1.6.2",
         "phpunit/phpunit": "9.6.23",
         "rector/rector": "1.2.10",
-        "symfony/phpunit-bridge": "7.3.0"
+        "symfony/phpunit-bridge": "7.3.1"
     },
     "replace": {
         "symfony/polyfill-ctype": "*",
