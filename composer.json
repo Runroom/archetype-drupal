@@ -51,7 +51,7 @@
     },
     "require-dev": {
         "behat/mink": "1.12.0",
-        "drupal/devel": "5.3.1",
+        "drupal/devel": "5.4.0",
         "drupal/devel_entity_updates": "4.2.0",
         "drupal/features": "5.0.x-dev",
         "ergebnis/composer-normalize": "2.47.0",
