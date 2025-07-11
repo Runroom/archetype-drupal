@@ -62,7 +62,7 @@
         "palantirnet/drupal-rector": "0.21.0",
         "phpstan/phpstan": "1.12.26",
         "phpstan/phpstan-strict-rules": "1.6.2",
-        "phpunit/phpunit": "9.6.23",
+        "phpunit/phpunit": "12.2.7",
         "rector/rector": "1.2.10",
         "symfony/phpunit-bridge": "7.3.0"
     },
