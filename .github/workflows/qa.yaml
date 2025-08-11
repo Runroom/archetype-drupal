@@ -13,7 +13,7 @@ jobs:
             matrix:
                 php: ["8.3"]
         steps:
-            - uses: actions/checkout@v4
+            - uses: actions/checkout@v5
             - uses: shivammathur/setup-php@v2
               with:
                   php-version: ${{ matrix.php }}
@@ -31,7 +31,7 @@ jobs:
             matrix:
                 node: ["20.x"]
         steps:
-            - uses: actions/checkout@v4
+            - uses: actions/checkout@v5
             - uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node }}
