@@ -6,7 +6,7 @@
 
 ## Requirements
 
-To run this project, you need to have:
+In order to run this project, you will need:
 
 - [Git](https://git-scm.com/)
 - [Nvm](https://github.com/nvm-sh/nvm)
