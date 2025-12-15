@@ -44,7 +44,7 @@
         "drupal/twig_tweak": "3.4.1",
         "drupal/vbo_export": "4.1.5",
         "drupal/views_bulk_operations": "4.3.4",
-        "drupal/xmlsitemap": "1.5.0",
+        "drupal/xmlsitemap": "2.0.0",
         "drush/drush": "13.6.0",
         "symfony/dotenv": "7.3.0",
         "symfony/flex": "2.7.1"
