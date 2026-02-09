@@ -35,7 +35,7 @@
         "drupal/metatag": "2.1.0",
         "drupal/monolog": "3.0.5",
         "drupal/paragraphs": "1.19.0",
-        "drupal/pathauto": "1.13.0",
+        "drupal/pathauto": "1.14.0",
         "drupal/r4032login": "2.2.3",
         "drupal/redirect": "1.11.0",
         "drupal/redis": "1.9.0",
